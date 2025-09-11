@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 
-import BlogPost from '../../layouts/BlogPost.astro';
+import FormattedDate from '@/components/FormattedDate.astro';
+import MainLayout from '@/layouts/MainLayout.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -13,9 +15,31 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
+const { heroImage, pubDate, updatedDate, title } = post.data;
 const { Content } = await render(post);
 ---
 
-<BlogPost {...post.data}>
-  <Content />
-</BlogPost>
+<MainLayout>
+  <article>
+    <div class="hero-image">
+      {heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+    </div>
+    <div class="prose">
+      <div class="title">
+        <div class="date">
+          <FormattedDate date={pubDate} />
+          {
+            updatedDate && (
+              <div class="last-updated-on">
+                Last updated on <FormattedDate date={updatedDate} />
+              </div>
+            )
+          }
+        </div>
+        <h1>{title}</h1>
+        <hr />
+      </div>
+      <Content />
+    </div>
+  </article>
+</MainLayout>
