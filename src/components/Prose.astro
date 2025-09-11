@@ -1,0 +1,31 @@
+---
+import { cn } from '@/lib/tailwindcss/utils';
+
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<div
+  class={cn(
+    // Base
+    'prose w-full max-w-none',
+    // headings
+    'prose-headings:scroll-m-10 prose-headings:font-heading prose-h1:mt-6 prose-h3:flex prose-h3:items-center prose-h3:gap-2 prose-h3:font-bold prose-h3:text-black',
+    // Lists
+    'prose-li:marker:text-black/60',
+    // Blockquote
+    'prose-blockquote:border-black/10 prose-blockquote:border-l',
+    // Text
+    'prose-p:text-black/80 prose-li:text-black/80',
+    // Table
+    'prose-thead:border-black/10 prose-tr:border-black/10',
+    // Image
+    'prose-img:rounded-lg  prose-img:mx-auto',
+
+    className
+  )}
+>
+  <slot />
+</div>
