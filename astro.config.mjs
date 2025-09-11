@@ -5,6 +5,7 @@ import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 
+import bearstudioTypedRoutes from '@bearstudio/astro-typed-routes';
 import tailwindcss from '@tailwindcss/vite';
 
 // Relative import is required
@@ -27,7 +28,7 @@ export default defineConfig({
       }),
     },
   },
-  integrations: [mdx(), sitemap(), react()],
+  integrations: [mdx(), sitemap(), react(), bearstudioTypedRoutes()],
 
   vite: {
     plugins: [tailwindcss()],

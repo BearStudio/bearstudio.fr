@@ -12,7 +12,7 @@
     "astro": "astro",
     "pretty": "prettier --write .",
     "lint": "run-p lint:*",
-    "lint:eslint": "eslint . ./src --fix",
+    "lint:eslint": "eslint ./src --fix",
     "lint:ts": "tsc --noEmit"
   },
   "dependencies": {
@@ -20,6 +20,8 @@
     "@astrojs/react": "4.3.1",
     "@astrojs/rss": "4.0.12",
     "@astrojs/sitemap": "3.5.1",
+    "@bearstudio/astro-typed-routes": "0.1.1",
+    "@bearstudio/lunalink": "0.3.1",
     "@tailwindcss/vite": "4.1.13",
     "astro": "5.13.7",
     "class-variance-authority": "0.7.1",
@@ -27,6 +29,7 @@
     "lucide-react": "0.543.0",
     "react": "19.1.1",
     "react-dom": "19.1.1",
+    "remeda": "2.31.1",
     "sharp": "0.34.3",
     "tailwind-merge": "3.3.1",
     "tailwindcss": "4.1.13"
