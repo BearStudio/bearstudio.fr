@@ -9,10 +9,22 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.5",
-    "@astrojs/rss": "^4.0.12",
-    "@astrojs/sitemap": "^3.5.1",
-    "astro": "^5.13.7",
-    "sharp": "^0.34.3"
+    "@astrojs/mdx": "4.3.5",
+    "@astrojs/react": "4.3.1",
+    "@astrojs/rss": "4.0.12",
+    "@astrojs/sitemap": "3.5.1",
+    "astro": "5.13.7",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "sharp": "0.34.3"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
   }
 }
