@@ -1,8 +1,11 @@
 ---
+import EnvHint from '@/components/EnvHint.astro';
+
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 ---
 
+<EnvHint />
 <header>
   <nav>
     <h2><a href="/">{SITE_TITLE}</a></h2>

@@ -1,0 +1,13 @@
+---
+import { ENV_NAME } from 'astro:env/server';
+---
+
+{
+  !!ENV_NAME && (
+    <div class="bg-background pointer-events-none fixed inset-0 z-[9999] h-[2px] shadow-2xl">
+      <span class="fixed top-0 left-2 rounded-br-sm bg-yellow-400 px-1.5 py-0.5 text-xs font-medium tracking-widest text-black uppercase">
+        {ENV_NAME}
+      </span>
+    </div>
+  )
+}
