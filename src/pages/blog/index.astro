@@ -2,8 +2,11 @@
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 
+import { lunalink } from '@bearstudio/lunalink';
+
 import FormattedDate from '@/components/FormattedDate.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
+import { ROUTES } from '@/routes.gen';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -17,7 +20,11 @@ const posts = (await getCollection('blog')).sort(
       {
         posts.map((post) => (
           <li>
-            <a href={`/blog/${post.id}`}>
+            <a
+              href={lunalink(ROUTES.blog[':id'].__path, {
+                id: post.id,
+              })}
+            >
               {post.data.heroImage && (
                 <Image
                   width={720}
