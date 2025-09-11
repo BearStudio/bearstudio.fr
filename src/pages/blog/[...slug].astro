@@ -2,7 +2,9 @@
 import { Image } from 'astro:assets';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 
+import { cn } from '@/lib/tailwindcss/utils';
 import FormattedDate from '@/components/FormattedDate.astro';
+import Prose from '@/components/Prose.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
 
 export async function getStaticPaths() {
@@ -20,26 +22,41 @@ const { Content } = await render(post);
 ---
 
 <MainLayout>
-  <article>
-    <div class="hero-image">
-      {heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-    </div>
-    <div class="prose">
-      <div class="title">
-        <div class="date">
-          <FormattedDate date={pubDate} />
-          {
-            updatedDate && (
-              <div class="last-updated-on">
-                Last updated on <FormattedDate date={updatedDate} />
-              </div>
-            )
-          }
-        </div>
-        <h1>{title}</h1>
-        <hr />
+  {
+    !!heroImage && (
+      <div class="relative mx-auto w-full max-w-screen-xl px-2 lg:px-6">
+        <Image
+          src={heroImage}
+          alt={title}
+          width={895}
+          height={500}
+          class="w-full rounded-lg object-cover"
+        />
       </div>
-      <Content />
+    )
+  }
+  <div
+    class={cn(
+      'mx-auto w-full flex-1 max-w-screen-lg flex flex-col gap-8 pt-4 pb-40 relative z-10 px-8 md:px-12'
+    )}
+  >
+    <div class="flex flex-col items-center gap-4">
+      <h1
+        class="text-center text-2xl font-medium tracking-wider text-balance md:text-4xl/tight"
+      >
+        {title}
+      </h1>
+      <FormattedDate date={pubDate} />
+      {
+        updatedDate && (
+          <div class="last-updated-on">
+            Last updated on <FormattedDate date={updatedDate} />
+          </div>
+        )
+      }
     </div>
-  </article>
+    <Prose>
+      <Content />
+    </Prose>
+  </div>
 </MainLayout>
