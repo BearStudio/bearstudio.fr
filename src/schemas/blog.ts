@@ -6,6 +6,7 @@ export const zBlog = ({ image }: SchemaContext) =>
     title: z.string(),
     languages: z.array(z.string()),
     excerpt: z.string().optional(),
+    metaDescription: z.string().optional(),
     heroImage: image().optional(),
     authors: z.array(z.string()).optional(),
     date: z.date(),
