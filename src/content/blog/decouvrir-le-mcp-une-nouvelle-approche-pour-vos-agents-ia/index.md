@@ -1,6 +1,6 @@
 ---
+state: 'published'
 title: 'Découvrir le MCP : Une nouvelle approche pour vos agents IA'
-description: 'Lorem ipsum dolor sit amet'
 date: 2025-08-14
 categories:
   - 'developpement'
@@ -9,6 +9,9 @@ tags:
   - 'ia'
   - 'numerique'
 heroImage: 'images/Format-Blog-Header-3-scaled.png'
+languages:
+  - 'fr'
+excerpt: 'Avec le MCP, les agents IA se connectent à vos outils et données, agissent en autonomie et transforment votre façon de développer.'
 ---
 
 [Cet article est également disponible en anglais ! 🇬🇧](https://noe.tatoud.com/blog/what-is-mcp/)
