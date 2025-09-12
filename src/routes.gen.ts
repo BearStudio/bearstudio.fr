@@ -12,7 +12,10 @@ const ROUTES_CONFIG = {
     }
   },
   "rss.xml": {},
-  "styleguide": {}
+  "styleguide": {},
+  "team": {
+    ":id": {}
+  }
 } as const;
 
 export const ROUTES = assignPaths(ROUTES_CONFIG);

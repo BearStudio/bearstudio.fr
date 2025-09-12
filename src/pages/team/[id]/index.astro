@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render } from 'astro:content';
+
+import type { GetStaticPaths } from 'astro';
+
+import Prose from '@/components/Prose.astro';
+import MainLayout from '@/layouts/MainLayout.astro';
+
+export const getStaticPaths = (async () => {
+  const team = await getCollection('team');
+
+  return Promise.all(
+    team.map(async (person) => ({
+      params: { id: person.id },
+      props: {
+        person,
+      },
+    }))
+  );
+}) satisfies GetStaticPaths;
+
+const { person } = Astro.props;
+
+const { Content } = await render(person);
+---
+
+<MainLayout>
+  <!-- [TODO]: SEO -->
+  <div class="mx-auto flex w-full max-w-screen-sm flex-col gap-4 px-4">
+    <div class="flex flex-col items-center gap-2">
+      <span>
+        {person.data.name}
+      </span>
+      <span>
+        {person.data.job}
+      </span>
+      {
+        person.data.picture && (
+          <Image src={person.data.picture} alt={person.data.name} />
+        )
+      }
+
+      {
+        person.data.socials?.map((social) => (
+          <div class="flex flex-col items-center gap-1">
+            {social.type} - {social.href}
+          </div>
+        ))
+      }
+      {person.data.status}
+      {String(person.data.hidden)}
+    </div>
+    <Prose>
+      <Content />
+    </Prose>
+  </div>
+</MainLayout>
