@@ -1,10 +1,17 @@
 ---
+import { Schema } from 'astro-seo-schema';
 import { Image } from 'astro:assets';
+import { loadRenderers } from 'astro:container';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { experimental_AstroContainer } from 'astro/container';
+import { getContainerRenderer as mdxContainerRenderer } from '@astrojs/mdx';
+
+import dayjs from 'dayjs';
 
 import { cn } from '@/lib/tailwindcss/utils';
 import FormattedDate from '@/components/FormattedDate.astro';
 import Prose from '@/components/Prose.astro';
+import SEO from '@/components/SEO/index.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
 
 export async function getStaticPaths() {
@@ -19,9 +26,46 @@ type Props = CollectionEntry<'blog'>;
 const post = Astro.props;
 const { heroImage, date, title } = post.data;
 const { Content } = await render(post);
+const url = new URL(Astro.url.pathname, Astro.site);
+
+const renderers = await loadRenderers([mdxContainerRenderer()]);
+const container = await experimental_AstroContainer.create({ renderers });
+
+// Derive Metadata from post Data
+const articleBody = (await container.renderToString(Content))
+  // strip html tags
+  .replace(/<[^>]*>/g, '')
+  .trim();
+const wordCount = articleBody.split(' ').length;
+const authors = post.data.authors ?? []; // TODO: Get authors data when team members are added
 ---
 
 <MainLayout>
+  <!-- [TODO]: Metadata -->
+  <SEO
+    slot="seo"
+    title={post.data.title}
+    description={post.data.excerpt ?? ''}
+    url={url}
+  />
+  <Schema
+    slot="ld+json"
+    item={{
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      articleBody,
+      headline: post.data.title,
+      wordCount,
+      datePublished: dayjs(post.data.date).format('YYYY-MM-DD'),
+      abstract: post.data.excerpt ?? '',
+      isAccessibleForFree: true,
+      author: authors.map((author) => ({
+        '@type': 'Person',
+        name: author,
+      })),
+      keywords: post.data.tags ?? [],
+    }}
+  />
   {
     !!heroImage && (
       <div class="relative mx-auto w-full max-w-screen-xl px-2 lg:px-6">
