@@ -1,7 +1,7 @@
 ---
 title: 'Découvrir le MCP : Une nouvelle approche pour vos agents IA'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 2025-08-14
+date: 2025-08-14
 categories:
   - 'developpement'
 tags:

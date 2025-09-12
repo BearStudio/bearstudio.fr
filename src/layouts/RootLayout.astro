@@ -1,8 +1,12 @@
 ---
+import dayjs from 'dayjs';
+
 import EnvHint from '@/components/EnvHint.astro';
 import { SITE_TITLE } from '@/consts';
 
 import '@/styles/global.css';
+
+dayjs.locale(Astro.currentLocale);
 ---
 
 <html lang="fr">
