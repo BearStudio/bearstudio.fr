@@ -11,7 +11,7 @@ tags:
 heroImage: 'images/Brève-1.jpg'
 languages:
   - 'fr'
-excerpt: 'Vous souhaitez rendre une méthode atomique en Java en seulement 2 minutes ? On vous explique tout ici, les exemples en plus !'
+metaDescription: 'Vous souhaitez rendre une méthode atomique en Java en seulement 2 minutes ? On vous explique tout ici, les exemples en plus !'
 authors:
   - 'quentin-lerebours'
 ---

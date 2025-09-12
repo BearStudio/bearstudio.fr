@@ -10,7 +10,8 @@ tags:
 heroImage: 'images/slack-en-entreprise.png'
 languages:
   - 'fr'
-excerpt: "À la création d’une société, nous avons toujours un tas de choses à faire. Pour vous aider, voici des outils indispensables à la gestion d'entreprise."
+metaDescription: "À la création d’une société, nous avons toujours un tas de choses à faire. Pour vous aider, voici des outils indispensables à la gestion d'entreprise."
+excerpt: 'À la création d’une société, nous avons toujours un tas de choses à faire. Pour vous aider, voici des outils indispensables à la gestion d&rsquo;entreprise.'
 authors:
   - 'rudy-baer'
 ---

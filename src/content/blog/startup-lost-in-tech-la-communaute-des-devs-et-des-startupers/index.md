@@ -12,7 +12,8 @@ tags:
 heroImage: 'images/lost_in_tech_event.jpg'
 languages:
   - 'fr'
-excerpt: 'Porteurs de projet et développeurs se sont rencontrés pour prendre conscience de la difficulté du développement de projets numérique.'
+metaDescription: 'Porteurs de projet et développeurs se sont rencontrés pour prendre conscience de la difficulté du développement de projets numérique.'
+excerpt: 'Le mardi 26 novembre 2019, au Perlouse, s’est tenue la première édition de l’afterwork “Startup, Lost In Tech”. Cet événement a été créé à l’initiative de deux entrepreneurs, Carène Tchong de Twosday, réseau de mise en relation professionnel et Rudy Baer du BearStudio. Des développeurs, des porteurs de projet et un bon resto ! L’objectif [&hellip;]'
 ---
 
 Le mardi 26 novembre 2019, au [Perlouse](http://perlousepigalle.fr/), s’est tenue la première édition de l’**afterwork** “[Startup, Lost In Tech](https://www.meetup.com/fr-FR/Startup-lost-in-tech/)”. Cet événement a été créé à l’initiative de deux entrepreneurs, Carène Tchong de [Twosday](https://twosday.app/), réseau de mise en relation professionnel et Rudy Baer du BearStudio.

@@ -10,7 +10,6 @@ tags:
 heroImage: 'images/image-24.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 Le titre peut sembler bizarre, mais c’est le nom d’une méthode que beaucoup utilisent au quotidien sans vraiment le réaliser.

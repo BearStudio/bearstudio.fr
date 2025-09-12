@@ -12,7 +12,6 @@ tags:
 heroImage: 'images/Les-bases-du-design-pour-les-dev-front-baniere.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 Le design ne se résume pas à l'esthétique. Il joue un rôle crucial dans la manière dont les utilisateurs perçoivent et interagissent avec un produit ou un service, et cette [expérience utilisateur (UX) est primordiale](https://www.bearstudio.fr/blog/design-css/pourquoi-lexperience-utilisateur-est-elle-importante). En effet, un bon design facilite la compréhension et l'utilisation afin de créer une expérience positive. À l'inverse, un mauvais design peut entraîner de la confusion et pousser les utilisateurs à délaisser votre produit. Le design est par conséquent un facteur clé de succès pour toute application.

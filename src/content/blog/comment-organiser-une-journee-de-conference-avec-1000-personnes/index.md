@@ -7,7 +7,6 @@ categories:
 heroImage: 'images/image.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 ## Les différents points à gérer

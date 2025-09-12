@@ -12,7 +12,6 @@ tags:
 heroImage: 'images/Format-Blog-Header-1.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 ## Présentation du projet

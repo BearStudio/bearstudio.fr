@@ -10,7 +10,8 @@ tags:
 heroImage: 'images/mot-du-chef-2019-bearstudio.png'
 languages:
   - 'fr'
-excerpt: "2019 se termine déjà, mais pour 2020 nous avons plein de nouveaux projets et d'envies. Et c'est le chef du BearStudio qui vous en parle !"
+metaDescription: "2019 se termine déjà, mais pour 2020 nous avons plein de nouveaux projets et d'envies. Et c'est le chef du BearStudio qui vous en parle !"
+excerpt: 'Je pense que vous l’avez tous remarqué mais en 2019 nous nous sommes mis à la communication ! C’est à dire que nous avons embauché Laurie, fucking masse salariale. BearStudio style, nous avons bêta testé plein de trucs avec toujours cette touche #nobullshit et sincère qui nous caractérise. Pour 2020, on monte d’un cran en [&hellip;]'
 authors:
   - 'rudy-baer'
 ---

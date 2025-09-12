@@ -9,7 +9,8 @@ tags:
 heroImage: 'images/estimations.jpg'
 languages:
   - 'fr'
-excerpt: 'Les estimations sont une vieille tradition. Elles ont cependant des limites. Et si estimer au fur et à mesure était une meilleure solution ?'
+metaDescription: 'Les estimations sont une vieille tradition. Elles ont cependant des limites. Et si estimer au fur et à mesure était une meilleure solution ?'
+excerpt: 'Avant propos Voilà ! Après de longs mois de préparation, le Business Plan est enfin clôturé et votre premier POC (Proof of Concept) a été couronné de succès : vous êtes fin prêt à lancer votre projet ! Recruter une équipe de développement en interne ? Trop long et risqué&#8230; Vous n’avez donc plus qu’une [&hellip;]'
 ---
 
 ## Avant propos

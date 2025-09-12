@@ -10,7 +10,7 @@ tags:
 heroImage: 'images/article-FOS-visuel.png'
 languages:
   - 'fr'
-excerpt: "Retour d'expérience d'une professeure de français dans une société de développement informatique"
+metaDescription: "Retour d'expérience d'une professeure de français dans une société de développement informatique"
 ---
 
 Vous le savez déjà si vous avez lu notre article sur le remote, [on a des développeurs tunisiens](https://www.bearstudio.fr/blog/actualites-web-numerique/on-a-des-developpeurs-tunisiens). Et on ne fait pas du simple outsourcing. On travaille en remote avec une équipe de 3 développeurs totalement intégrée à la team française. 

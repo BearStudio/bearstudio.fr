@@ -10,9 +10,6 @@ tags:
 heroImage: 'images/Featured-Image-Site-MKDR.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
-authors:
-  - 'undefined'
 ---
 
 ## D'où ça vient ?

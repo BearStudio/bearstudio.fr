@@ -10,7 +10,6 @@ tags:
 heroImage: 'images/Outstatic-Format-Blog-Header.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 Il y a quelque temps, j’ai travaillé sur une landing page avec une partie blog. Deux contraintes majeures se présentaient :

@@ -10,9 +10,7 @@ tags:
 heroImage: 'images/Brève-9.jpg'
 languages:
   - 'fr'
-excerpt: "Cette brève vous livre tout ce qu'il y a à connaître à propos de la différence entre @Mock et @Mockbean qu'on utilise beaucoup avec Spring !"
-authors:
-  - 'undefined'
+metaDescription: "Cette brève vous livre tout ce qu'il y a à connaître à propos de la différence entre @Mock et @Mockbean qu'on utilise beaucoup avec Spring !"
 ---
 
 Il y a quelques jours, j’ai onboardé un nouveau développeur sur un projet Spring Boot qui a un coverage de test à 80%. N’ayant pas énormément d’expérience avec les tests d’[intégration](https://www.bearstudio.fr/prestations/integration), j’ai pris le temps de lui expliquer la différence entre l’annotation @Mock de Mockito et @MockBean de [Spring Boot](https://www.bearstudio.fr/blog/developpement/versionner-entite-jpa), je vais donc en profiter pour résumer ça dans une brève.

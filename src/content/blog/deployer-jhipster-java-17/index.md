@@ -11,7 +11,8 @@ tags:
 heroImage: 'images/visuel-breve-13.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
+metaDescription: 'Comment exécuter et déployer un projet JHipster en utilisant Java 17'
+excerpt: 'Cette brève est une traduction de l’article publié par Quentin sur dev.to.&nbsp; Dans ce court article, je vais expliquer comment exécuter et déployer un projet JHipster en utilisant une autre version de Java que la version standard utilisée par JHipster (Java 11 actuellement). Etape 1 : Faire tourner son projet JHipster sur la version Java [&hellip;]'
 ---
 
 Cette brève est une traduction de l’[article publié par Quentin sur dev.to](https://dev.to/qlerebours_/upgrade-your-jhipster-project-to-java-17-3al6). 

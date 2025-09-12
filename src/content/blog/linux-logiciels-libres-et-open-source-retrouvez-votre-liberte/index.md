@@ -11,7 +11,8 @@ tags:
 heroImage: 'images/communauté-logiciel-open-source.jpg'
 languages:
   - 'fr'
-excerpt: 'Vous avez déjà entendu parler de Linux, des logiciels libres ou encore de l’open-source ? Mais à quoi sont associés ces termes ?'
+metaDescription: 'Vous avez déjà entendu parler de Linux, des logiciels libres ou encore de l’open-source ? Mais à quoi sont associés ces termes ?'
+excerpt: 'Vous avez déjà entendu parler de Linux, des logiciels libres ou encore de l’open-source mais vous ne savez pas à quoi sont associés ces termes ? A l’inverse vous ne savez pas du tout ce que c’est ? Ou vous le savez mais ne voyez toujours pas l’intérêt ? Alors ne partez pas, cet article [&hellip;]'
 authors:
   - 'nicolas-torion'
 ---

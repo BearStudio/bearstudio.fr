@@ -7,7 +7,6 @@ categories:
 heroImage: 'images/visuel-article-JHipster-Deploy.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 Cet article est la traduction française d'un tuto réalisé par [Rudy](https://www.bearstudio.fr/team/rudy-baer), notre CTO, directement sur le [forum JHipster](https://www.jhipster.tech/clever-cloud/).

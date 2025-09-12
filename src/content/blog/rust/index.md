@@ -9,7 +9,6 @@ tags:
 heroImage: 'images/visuel-breve-min-3-1.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 Ce titre d’article est le résumé de ce que les collègues entendent avec moi presque tous les jours :

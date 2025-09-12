@@ -7,7 +7,6 @@ categories:
 heroImage: 'images/IMG_4787-scaled.jpeg'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 ## Intro...

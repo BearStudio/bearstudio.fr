@@ -11,7 +11,8 @@ tags:
 heroImage: 'images/codeurs_en_seine-1.jpg'
 languages:
   - 'fr'
-excerpt: 'Codeurs en Seine s’est tenu le 21 novembre 2019 à Rouen. Cette initiative s’est agrandie depuis 2009 pour le bonheur de notre communauté numérique'
+metaDescription: 'Codeurs en Seine s’est tenu le 21 novembre 2019 à Rouen. Cette initiative s’est agrandie depuis 2009 pour le bonheur de notre communauté numérique'
+excerpt: 'L&rsquo;événement Codeurs en Seine s’est tenu le 21 novembre dernier au Kindarena à Rouen avec près de 1000 participants. Depuis 2009, l’initiative de quelques développeurs aguerris s’est ainsi agrandie pour le bonheur de notre communauté numérique et novatrice. Une organisation rodée et efficace Depuis plusieurs années, le BearStudio a la fierté d&rsquo;être un des sponsors [&hellip;]'
 ---
 
 L'événement [Codeurs en Seine](https://www.codeursenseine.com/2019/) s’est tenu le 21 novembre dernier au Kindarena à **Rouen** avec près de 1000 participants. Depuis 2009, l’initiative de quelques développeurs aguerris s’est ainsi agrandie pour le bonheur de notre **communauté numérique** et **novatrice**.

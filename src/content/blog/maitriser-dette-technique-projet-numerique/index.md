@@ -11,7 +11,8 @@ tags:
 heroImage: 'images/maitriser-sa-dette-technique.png'
 languages:
   - 'fr'
-excerpt: 'Quelques conseils pour maîtriser la dette technique de son projet, entre anticipation et choix des bonnes technologies par les développeurs.'
+metaDescription: 'Quelques conseils pour maîtriser la dette technique de son projet, entre anticipation et choix des bonnes technologies par les développeurs.'
+excerpt: 'Dans notre précédent article sur la dette technique, je présentais le concept en prenant quelques exemples. Voici maintenant quelques conseils pour maîtriser cette dette sur son projet. Anticiper la dette technique Tout d’abord, il est important de savoir quel niveau de dette technique vous attendez. Pour cela, il faut vous demander si vous développez un [&hellip;]'
 authors:
   - 'quentin-lerebours'
 ---

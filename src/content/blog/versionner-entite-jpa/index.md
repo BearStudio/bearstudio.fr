@@ -11,7 +11,8 @@ tags:
 heroImage: 'images/visuel-breve-min-2.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
+metaDescription: 'Comment versionner une entité automatiquement grâce à une simple annotation de JPA'
+excerpt: 'Il y a quelques semaines sur un projet Spring Boot, j&rsquo;ai eu besoin qu&rsquo;une de mes entités soit versionnée pour éviter tout problème de mises à jour concurrentielles. J&rsquo;ai alors découvert l&rsquo;annotation @Version de JPA. Je profite de cette découverte pour vous la partager car elle pourrait bien vous être utile. Le besoin : Sur [&hellip;]'
 ---
 
 Il y a quelques semaines sur un projet [Spring Boot](https://spring.io/projects/spring-boot), j'ai eu besoin qu'une de mes entités soit versionnée pour éviter tout problème de mises à jour concurrentielles. J'ai alors découvert l'annotation `@Version` de JPA. Je profite de cette découverte pour vous la partager car elle pourrait bien vous être utile.

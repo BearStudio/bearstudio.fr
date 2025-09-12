@@ -7,7 +7,6 @@ categories:
 heroImage: 'images/sylius-clever-cloud-tuto-article.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 ## De Sylius à Clever Cloud, il n'y a qu'un pas...

@@ -7,9 +7,7 @@ categories:
 heroImage: 'images/header-class-record.png'
 languages:
   - 'fr'
-excerpt: 'Choisissez entre la flexibilité des Class et la simplicité des Record en Java pour optimiser votre code !'
-authors:
-  - 'undefined'
+metaDescription: 'Choisissez entre la flexibilité des Class et la simplicité des Record en Java pour optimiser votre code !'
 ---
 
 ## Différence entre une classe et un record en Java

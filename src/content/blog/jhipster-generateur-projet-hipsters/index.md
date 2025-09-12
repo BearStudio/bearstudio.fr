@@ -7,7 +7,8 @@ categories:
 heroImage: 'images/jhipster-1-tiny.png'
 languages:
   - 'fr'
-excerpt: "Pourquoi un générateur de projets ? Ce sont souvent les mêmes problématiques qui reviennent, notamment pour le développement d'applications web..."
+metaDescription: "Pourquoi un générateur de projets ? Ce sont souvent les mêmes problématiques qui reviennent, notamment pour le développement d'applications web..."
+excerpt: 'Pourquoi un générateur de projet ? Sur tous les projets techniques, notamment les applications web, les mêmes problématiques reviennent toujours. Comme la gestion des entités, la création des requêtes CRUD (Create, Read, Update, Delete) pour chaque entité, la gestion des comptes et de rôles, ou encore le développement d’une partie administration par exemple. Toutes ces [&hellip;]'
 authors:
   - 'nicolas-torion'
 ---

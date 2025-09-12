@@ -7,7 +7,8 @@ categories:
 heroImage: 'images/Untitled-design.png'
 languages:
   - 'fr'
-excerpt: "La team du BearStudio a passé une journée entière à contribuer à jHipster, un générateur de projet open-source lors d'une conférence organisée à Bordeaux."
+metaDescription: "La team du BearStudio a passé une journée entière à contribuer à jHipster, un générateur de projet open-source lors d'une conférence organisée à Bordeaux."
+excerpt: 'Jhipster c’est quoi ? Jhipster est un framework open source de développement web. Pour les non développeurs, c’est un générateur de projet qui va faire gagner énormément de temps aux développeurs. Il pose un cadre et des bonnes pratiques qui, en plus de créer de la valeur rapidement dans un projet, évite les fantaisies de [&hellip;]'
 ---
 
 ## Jhipster c’est quoi ?

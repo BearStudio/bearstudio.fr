@@ -12,7 +12,6 @@ tags:
 heroImage: 'images/tailwindnext.js.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 _On a demandé à Maxime et Delphin, respectivement alternants à l’époque en UX design et en Front-end au BearStudio, de se faire la main en totale autonomie sur le site d’une amie du BS (RaCoon & Co)… Évidemment tout ne s’est pas passé comme prévu et ils en ont chi…sué !_

@@ -11,7 +11,6 @@ tags:
 heroImage: 'images/Brève-8.jpg'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 Le saviez-vous ? Depuis février 2020, le BearStudio bénéficie d'un nouveau crédit d'impôt en faveur de l'innovation.

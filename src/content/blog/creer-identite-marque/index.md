@@ -7,7 +7,6 @@ categories:
 heroImage: 'images/visuel-branding-identity.jpg'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 *Dans cet article, je vous parlerai de branding identity (identité de marque en français) mais plus particulièrement, comment en créer une.* 

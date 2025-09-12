@@ -10,7 +10,6 @@ tags:
 heroImage: 'images/Brève-7.jpg'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 ## Kézako ?

@@ -7,7 +7,8 @@ categories:
 heroImage: 'images/photo-1511376777868-611b54f68947-11.08.22.jpeg'
 languages:
   - 'fr'
-excerpt: "Les fonctionnalités du générateur de projet JHipster vont vous faire économiser de l'argent dans le développement de votre application !"
+metaDescription: "Les fonctionnalités du générateur de projet JHipster vont vous faire économiser de l'argent dans le développement de votre application !"
+excerpt: 'Disclaimer : Cet article n’est pas orienté sur l’aspect technique de JHipster et s’adresse donc principalement aux entrepreneurs et aux startups. Cependant il permet aussi de faire un rappel de certaines idées aux développeurs, voire même aux CTO. Pour consulter une présentation technique de JHipster, vous pouvez lire cet article. Présentation de JHipster JHipster est [&hellip;]'
 authors:
   - 'quentin-lerebours'
 ---

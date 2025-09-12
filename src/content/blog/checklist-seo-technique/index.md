@@ -7,7 +7,6 @@ categories:
 heroImage: 'images/checklist-seo-technique-illustration.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 Si la création d’un site web est (presque) **indispensable** pour développer une **notoriété en ligne**, il est important de respecter certaines **règles de conception** si vous souhaitez gagner de la visibilité en vous **positionnant sur Google**.

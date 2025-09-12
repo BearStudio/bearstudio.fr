@@ -12,7 +12,8 @@ tags:
 heroImage: 'images/rudy-certifie-digital-bearstudio.jpg'
 languages:
   - 'fr'
-excerpt: 'Un jour, je me suis dit que ça pourrait être cool de faire un petit article de retour d’expérience sur l’entrepreneuriat en tant que développeur.'
+metaDescription: 'Un jour, je me suis dit que ça pourrait être cool de faire un petit article de retour d’expérience sur l’entrepreneuriat en tant que développeur.'
+excerpt: 'Un jour, je me suis dit que ça pourrait être cool de faire un petit article de retour d’expérience sur l’entrepreneuriat en tant que développeur. J’ai donc commencé à écrire un article retour d’expérience après 1 an d&rsquo;entrepreneuriat… Je n’ai jamais eu le temps de le finir et j’ai perdu la première version… Du coup [&hellip;]'
 authors:
   - 'rudy-baer'
 ---

@@ -11,7 +11,6 @@ tags:
 heroImage: 'images/peer-programming-illustration.jpg'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 _Il est arrivé à tout développeur de se retrouver coincé sur un sujet et de ne pas pouvoir avancer sur une fonctionnalité ou un correctif. Même après avoir parcouru [StackOverflow](https://stackoverflow.com/) en boucle, il n’y a aucune solution en vue !_

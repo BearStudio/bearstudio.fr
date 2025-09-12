@@ -7,7 +7,7 @@ categories:
 heroImage: 'images/java-BlogHeader.png'
 languages:
   - 'fr'
-excerpt: 'Évitez les erreurs Java fréquentes : NullPointerException, confusion ==/equals(), oubli de break, pièges courants.'
+metaDescription: 'Évitez les erreurs Java fréquentes : NullPointerException, confusion ==/equals(), oubli de break, pièges courants.'
 ---
 
 Comme vous le savez, Java est un langage qui est utilisé par plusieurs frameworks. Pour un débutant comme moi 😉, il y a beaucoup d’astuces que même les experts oublient parfois, alors qu’elles sont basiques.

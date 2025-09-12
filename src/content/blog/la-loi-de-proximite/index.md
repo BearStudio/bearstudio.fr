@@ -11,9 +11,7 @@ tags:
 heroImage: 'images/visuel-article-proximité-1.png'
 languages:
   - 'fr'
-excerpt: "La loi de proximité est d'une importance capitale pour les graphistes et UX/UI (+web) designers. On parle de regroupement automatique d'unités en ensembles."
-authors:
-  - 'undefined'
+metaDescription: "La loi de proximité est d'une importance capitale pour les graphistes et UX/UI (+web) designers. On parle de regroupement automatique d'unités en ensembles."
 ---
 
 ## Qu'est-ce que la loi de proximité en design ?

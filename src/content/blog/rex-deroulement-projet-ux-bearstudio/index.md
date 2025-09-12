@@ -7,7 +7,6 @@ categories:
 heroImage: 'images/illustration-oneprepaid-systeme-1.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 ## Introduction

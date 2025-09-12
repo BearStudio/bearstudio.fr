@@ -7,9 +7,6 @@ categories:
 heroImage: 'images/un-ours-en-finlande-1.jpg'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
-authors:
-  - 'undefined'
 ---
 
 La parole est à Nathan : jeune recrue intrépide qui ne recule devant aucune frontière pour ouvrir les horizons de la tanière!

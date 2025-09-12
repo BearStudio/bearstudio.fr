@@ -10,7 +10,8 @@ tags:
 heroImage: 'images/Brève-5.jpg'
 languages:
   - 'fr'
-excerpt: 'Le poids des images sont souvent responsables de la durée de chargement de votre site web. Heureusement, il existe de nombreux outils pour les améliorer !'
+metaDescription: 'Le poids des images sont souvent responsables de la durée de chargement de votre site web. Heureusement, il existe de nombreux outils pour les améliorer !'
+excerpt: 'Pourquoi optimiser les images de son site ? Optimiser les images d’un site web, ça sert à quoi au final ? Des juniors se sont peut être déjà posés la question. La réponse est plutôt simple : accélérer le chargement du site, et avoir un meilleur référencement. Donc l’optimisation des images n’affecte pas seulement le [&hellip;]'
 ---
 
 ## Pourquoi optimiser les images de son site ?

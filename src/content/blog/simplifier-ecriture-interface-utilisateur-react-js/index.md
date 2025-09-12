@@ -13,7 +13,8 @@ tags:
 heroImage: 'images/Brève-3.3.jpg'
 languages:
   - 'fr'
-excerpt: 'Vous souhaitez simplifier l’écriture d’interfaces utilisateurs avec React JS ? Notre UX Designer Ivan Dalmet vous indique comment faire !'
+metaDescription: 'Vous souhaitez simplifier l’écriture d’interfaces utilisateurs avec React JS ? Notre UX Designer Ivan Dalmet vous indique comment faire !'
+excerpt: '⚡ Chakra UI est un projet Open Source qui permet de simplifier l’écriture d’interfaces utilisateurs avec React JS. Dans ce domaine il existe déjà beaucoup de librairies Open Source comme Material UI ou Reactstrap Alors pourquoi ⚡ ️Chakra UI ? API de composition Chakra UI propose une approche utilitaire dans l’esprit de Tailwind CSS mais [&hellip;]'
 authors:
   - 'ivan-dalmet'
 ---

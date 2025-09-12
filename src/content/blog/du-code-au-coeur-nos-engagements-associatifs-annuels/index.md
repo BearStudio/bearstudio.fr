@@ -11,7 +11,6 @@ tags:
 heroImage: 'images/Format-Blog-Header-2-scaled.png'
 languages:
   - 'fr'
-excerpt: 'No excerpt available'
 ---
 
 ## Un engagement associatif ancré dans notre culture

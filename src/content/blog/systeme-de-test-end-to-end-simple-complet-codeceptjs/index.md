@@ -11,9 +11,8 @@ tags:
 heroImage: 'images/Brève-2.jpg'
 languages:
   - 'fr'
-excerpt: 'Vous souhaitez vérifier si votre code fonctionne comme il se doit ? Dans cette brève, nous vous expliquons comment foncitonne un système de test end-to-end.'
-authors:
-  - 'undefined'
+metaDescription: 'Vous souhaitez vérifier si votre code fonctionne comme il se doit ? Dans cette brève, nous vous expliquons comment foncitonne un système de test end-to-end.'
+excerpt: 'Qu’est-ce qu’un test end-to-end déjà ? Le système de test end-to-end est un principe de test utilisé pour vérifier si une application ou un morceau d’application se comporte comme prévu “de bout en bout”. Ces tests sont souvent détaillés en scénarios de tests, qui définissent le comportement de l’application et qui prévoit donc les différents [&hellip;]'
 ---
 
 ## **Qu’est-ce qu’un test end-to-end déjà ?**
