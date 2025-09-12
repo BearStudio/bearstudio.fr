@@ -45,7 +45,7 @@ const authors = post.data.authors ?? []; // TODO: Get authors data when team mem
   <SEO
     slot="seo"
     title={post.data.title}
-    description={post.data.excerpt ?? ''}
+    description={post.data.metaDescription ?? ''}
     url={url}
   />
   <Schema
