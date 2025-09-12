@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
-const { heroImage, pubDate, updatedDate, title } = post.data;
+const { heroImage, date, title } = post.data;
 const { Content } = await render(post);
 ---
 
@@ -46,14 +46,7 @@ const { Content } = await render(post);
       >
         {title}
       </h1>
-      <FormattedDate date={pubDate} />
-      {
-        updatedDate && (
-          <div class="last-updated-on">
-            Last updated on <FormattedDate date={updatedDate} />
-          </div>
-        )
-      }
+      <FormattedDate date={date} />
     </div>
     <Prose>
       <Content />
