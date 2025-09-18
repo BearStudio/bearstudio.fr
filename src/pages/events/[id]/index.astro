@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render } from 'astro:content';
+
+import type { GetStaticPaths } from 'astro';
+
+import Prose from '@/components/Prose.astro';
+import MainLayout from '@/layouts/MainLayout.astro';
+
+export const getStaticPaths = (async () => {
+  const events = await getCollection('events');
+  return Promise.all(
+    events.map(async (event) => ({
+      params: { id: event.id },
+      props: {
+        event,
+      },
+    }))
+  );
+}) satisfies GetStaticPaths;
+
+const { event } = Astro.props;
+const { Content } = await render(event);
+---
+
+<MainLayout>
+  <div class="mx-auto flex w-full max-w-screen-sm flex-col gap-4 px-4">
+    <div class="flex flex-col items-center gap-2">
+      <h1>
+        {event.data.title}
+      </h1>
+      <a href={event.data.link}> Lien </a>
+
+      {
+        event.data.image && (
+          <Image src={event.data.image} alt={event.data.title} />
+        )
+      }
+    </div>
+    <Prose>
+      <Content />
+    </Prose>
+  </div>
+</MainLayout>

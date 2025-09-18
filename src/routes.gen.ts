@@ -16,6 +16,9 @@ const ROUTES_CONFIG = {
       ":id": {}
     }
   },
+  "conferences": {
+    ":id": {}
+  },
   "contact": {
     "processus-candidature-bearstudio": {}
   },
@@ -39,6 +42,9 @@ const ROUTES_CONFIG = {
         "wireframes": {}
       }
     }
+  },
+  "events": {
+    ":id": {}
   },
   "mentions-legales": {},
   "periples-du-bearstudio-traveledmap": {},

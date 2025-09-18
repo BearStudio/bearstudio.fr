@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render } from 'astro:content';
+
+import type { GetStaticPaths } from 'astro';
+
+import Prose from '@/components/Prose.astro';
+import MainLayout from '@/layouts/MainLayout.astro';
+
+export const getStaticPaths = (async () => {
+  const conferences = await getCollection('conferences');
+  return Promise.all(
+    conferences.map(async (conference) => ({
+      params: { id: conference.id },
+      props: {
+        person: conference,
+      },
+    }))
+  );
+}) satisfies GetStaticPaths;
+const { person: conference } = Astro.props;
+const { Content } = await render(conference);
+---
+
+<MainLayout>
+  <div class="mx-auto flex w-full max-w-screen-sm flex-col gap-4 px-4">
+    <div class="flex flex-col items-center gap-2">
+      <h1>
+        {conference.data.title}
+      </h1>
+      <span>
+        {conference.data.description}
+      </span>
+      {
+        conference.data.image && (
+          <Image src={conference.data.image} alt={conference.data.title} />
+        )
+      }
+
+      <h2>Evenements</h2>
+      {
+        conference.data?.instances?.map((instance) => (
+          <div class="flex flex-col gap-1">
+            <h3>
+              {instance.event} - {instance.date}
+            </h3>
+
+            {instance.language && <p>Language: {instance.language}</p>}
+
+            {instance.speakers && (
+              <div>
+                <p>Speakers: {instance.speakers.map((speaker) => speaker)}</p>
+              </div>
+            )}
+
+            {instance.replayLink && <a href={instance.replayLink}>Replay</a>}
+          </div>
+        ))
+      }
+      {conference.data.state}
+    </div>
+    <Prose>
+      <Content />
+    </Prose>
+  </div>
+</MainLayout>
