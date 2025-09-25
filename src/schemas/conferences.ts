@@ -1,4 +1,4 @@
-import { z, type SchemaContext } from 'astro:content';
+import { reference, z, type SchemaContext } from 'astro:content';
 
 export type Conference = z.infer<ReturnType<typeof zConference>>;
 // Un sujet de conférence, réutilisable pour plusieurs évènements
@@ -18,7 +18,7 @@ export type ConferenceInstance = z.infer<
 >;
 export const zConferenceInstance = ({ image }: SchemaContext) =>
   z.object({
-    event: z.string().optional(), // TODO: link to event (many to one)
+    event: reference('events').optional(), // TODO: link to event (many to one)
     date: z.date(),
     language: z.string(),
     speakers: z.array(z.string()).optional(), // TODO: link to team members (many to many)

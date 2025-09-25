@@ -4,6 +4,7 @@ import { getCollection, render } from 'astro:content';
 
 import type { GetStaticPaths } from 'astro';
 
+import { getEventsFromConference } from '@/lib/conferences';
 import Prose from '@/components/Prose.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
 
@@ -13,12 +14,19 @@ export const getStaticPaths = (async () => {
     conferences.map(async (conference) => ({
       params: { id: conference.id },
       props: {
-        person: conference,
+        conference,
       },
     }))
   );
 }) satisfies GetStaticPaths;
-const { person: conference } = Astro.props;
+
+const { conference } = Astro.props;
+
+const instances = await getEventsFromConference({
+  conference: conference.data,
+});
+
+console.log({ events: instances, conference });
 const { Content } = await render(conference);
 ---
 
@@ -39,23 +47,29 @@ const { Content } = await render(conference);
 
       <h2>Evenements</h2>
       {
-        conference.data?.instances?.map((instance) => (
-          <div class="flex flex-col gap-1">
-            <h3>
-              {instance.event} - {instance.date}
-            </h3>
+        instances.map((instance) => {
+          return (
+            <div class="flex flex-col gap-1">
+              <h3>{instance.date}</h3>
 
-            {instance.language && <p>Language: {instance.language}</p>}
+              {instance.event && (
+                <a href={instance.event.link}>{instance.event.title}</a>
+              )}
 
-            {instance.speakers && (
-              <div>
-                <p>Speakers: {instance.speakers.map((speaker) => speaker)}</p>
-              </div>
-            )}
+              {instance.language && <p>Language: {instance.language}</p>}
 
-            {instance.replayLink && <a href={instance.replayLink}>Replay</a>}
-          </div>
-        ))
+              {instance.speakers && (
+                <div>
+                  <p>Speakers: {instance.speakers.map((speaker) => speaker)}</p>
+                </div>
+              )}
+
+              {instance.replayLink && (
+                <a href={instance.replayLink}>Lien du replay</a>
+              )}
+            </div>
+          );
+        })
       }
       {conference.data.state}
     </div>

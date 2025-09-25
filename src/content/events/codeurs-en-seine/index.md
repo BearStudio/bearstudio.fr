@@ -1,5 +1,5 @@
 ---
-title: Codeurs en Seine 2022
+title: Codeurs en Seine
 link: 'https://www.codeursenseine.com/2025'
 ---
 
