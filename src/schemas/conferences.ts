@@ -19,14 +19,14 @@ export type ConferenceInstance = z.infer<
 export const zConferenceInstance = ({ image }: SchemaContext) =>
   z.object({
     event: reference('events').optional(), // TODO: link to event (many to one)
-    date: z.date(),
-    language: z.string(),
+    date: z.date().optional(),
+    language: z.string().optional(),
     speakers: z.array(z.string()).optional(), // TODO: link to team members (many to many)
     replayLink: z.string().optional(),
     location: z
       .object({
-        name: z.string().optional(),
-        address: z.string(),
+        name: z.string(),
+        address: z.string().optional(),
         image: image().optional(),
       })
       .optional(),

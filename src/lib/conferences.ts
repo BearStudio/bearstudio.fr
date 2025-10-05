@@ -38,6 +38,7 @@ export async function getEventsFromConference({
     (conference.instances ?? []).map(async (instance) => {
       if (!instance || !instance.event) return instance;
       const { deletedEvent, ...clearInstance } = instance;
+
       const { data: event } = await getEntry(instance.event);
 
       return {
