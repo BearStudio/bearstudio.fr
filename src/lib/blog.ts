@@ -1,4 +1,4 @@
-import { getCollection, type CollectionEntry } from 'astro:content';
+import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 
 type Params = {
   limit?: number;
@@ -22,4 +22,13 @@ export async function getBlogCollection({ limit = undefined }: Params = {}) {
   }
 
   return posts;
+}
+
+export async function getAuthorsFromBlogPost(post: CollectionEntry<'blog'>) {
+  return await Promise.all(
+    (post.data.authors ?? []).map(async (author) => {
+      if (!author) return;
+      return await getEntry(author);
+    })
+  );
 }

@@ -24,13 +24,13 @@ const sortByOrder = (person1: TeamEntry, person2: TeamEntry) => {
 };
 
 export async function getTeamCollection({ limit = undefined }: Params = {}) {
-  const posts = (await getCollection('team'))
+  const team = (await getCollection('team'))
     .filter(isVisible)
     .sort(sortByOrder);
 
   if (limit) {
-    return posts.slice(0, limit);
+    return team.slice(0, limit);
   }
 
-  return posts;
+  return team;
 }
