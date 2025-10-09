@@ -1,0 +1,60 @@
+---
+import { SEO } from 'astro-seo';
+import type { ComponentProps } from 'astro/types';
+
+interface Props
+  extends Pick<
+    ComponentProps<typeof SEO>,
+    'title' | 'description' | 'noindex' | 'nofollow'
+  > {
+  image?: NonNullable<
+    ComponentProps<typeof SEO>['openGraph']
+  >['basic']['image'];
+  imageAlt?: string;
+  url?: NonNullable<ComponentProps<typeof SEO>['openGraph']>['basic']['url'];
+}
+// TODO: Proper Metadata
+const {
+  title,
+  description = 'BearStudio accompagne les porteurs de projet pour les aider techniquement sur le développement web ou mobile de leurs idées.',
+  image = new URL('/opengraph-image.jpg', Astro.site).toString(),
+  imageAlt,
+  noindex,
+  nofollow,
+  url = Astro.url,
+} = Astro.props;
+
+const ogImageAlt = 'BearStudio';
+const titleDefault =
+  'Studio de développement normand pour porteurs de projet numérique';
+---
+
+<SEO
+  title={title ?? ''}
+  titleTemplate="%s | BearStudio"
+  titleDefault={titleDefault}
+  description={description ?? ''}
+  noindex={noindex ?? false}
+  nofollow={nofollow ?? false}
+  openGraph={{
+    basic: {
+      title: title ?? titleDefault,
+      type: 'website',
+      image: image,
+      url: url ?? '',
+    },
+    optional: {
+      description,
+    },
+    image: {
+      alt: imageAlt ?? ogImageAlt,
+    },
+  }}
+  twitter={{
+    card: 'summary_large_image',
+    title: title ?? titleDefault ?? '',
+    description: description ?? '',
+    image: image,
+    imageAlt: imageAlt ?? ogImageAlt,
+  }}
+/>

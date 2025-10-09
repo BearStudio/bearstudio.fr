@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 import { getBlogCollection } from '@/lib/blog';
 import FormattedDate from '@/components/FormattedDate.astro';
+import SEO from '@/components/SEO/index.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
 import { ROUTES } from '@/routes.gen';
 
@@ -19,7 +20,13 @@ const { page } = Astro.props;
 ---
 
 <MainLayout>
-  <!-- TODO: Add SEO and Schema -->
+  <!-- [TODO]: Metadata -->
+  <SEO
+    slot="seo"
+    title="Blog"
+    description="Retrouvez les articles de BearStudio sur le développement web et mobile, les technologies, et bien plus encore."
+    noindex={page.data.length === 0}
+  />
   <div class="flex flex-1 flex-col">
     <div class="mx-auto w-full max-w-screen-lg pb-40">
       <div class="grid gap-4 px-6 md:grid-cols-2">
