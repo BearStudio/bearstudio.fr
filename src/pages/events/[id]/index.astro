@@ -1,29 +1,39 @@
 ---
+import { Schema } from 'astro-seo-schema';
 import { Image } from 'astro:assets';
 import { getCollection, render } from 'astro:content';
-
-import type { GetStaticPaths } from 'astro';
+import type { CollectionEntry } from 'astro:content';
 
 import Prose from '@/components/Prose.astro';
+import SEO from '@/components/SEO/index.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
 
-export const getStaticPaths = (async () => {
+export async function getStaticPaths() {
   const events = await getCollection('events');
-  return Promise.all(
-    events.map(async (event) => ({
-      params: { id: event.id },
-      props: {
-        event,
-      },
-    }))
-  );
-}) satisfies GetStaticPaths;
+  return events.map((conference) => ({
+    params: { id: conference.id },
+    props: conference,
+  }));
+}
+type Props = CollectionEntry<'events'>;
 
-const { event } = Astro.props;
+const event = Astro.props;
+const url = new URL(Astro.url.pathname, Astro.site);
 const { Content } = await render(event);
 ---
 
 <MainLayout>
+  <!-- [TODO]: Metadata -->
+  <SEO slot="seo" title={event.data.title} url={url} />
+  <Schema
+    slot="ld+json"
+    item={{
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      headline: event.data.title,
+      isAccessibleForFree: true,
+    }}
+  />
   <div class="mx-auto flex w-full max-w-screen-sm flex-col gap-4 px-4">
     <div class="flex flex-col items-center gap-2">
       <h1>

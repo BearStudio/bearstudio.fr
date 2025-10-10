@@ -1,7 +1,6 @@
 import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 
 import type { Conference, ConferenceInstance } from '@/schemas/conferences';
-import type { Event } from '@/schemas/events';
 
 type Params = {
   limit?: number;
@@ -25,26 +24,29 @@ type GetEventsFromConferenceParams = {
   conference: Conference;
 };
 
-export type InstancesWithEvent = Array<
-  ConferenceInstance & {
-    event?: Event;
+type InstanceTest = Array<
+  Omit<ConferenceInstance, 'event'> & {
+    event?: CollectionEntry<'events'> | undefined;
   }
 >;
 
 export async function getEventsFromConference({
   conference,
-}: GetEventsFromConferenceParams): Promise<InstancesWithEvent> {
+}: GetEventsFromConferenceParams): Promise<InstanceTest> {
   return await Promise.all(
-    (conference.instances ?? []).map(async (instance) => {
+    (conference?.instances ?? []).map(async (instance) => {
       if (!instance || !instance.event) return instance;
-      const { deletedEvent, ...clearInstance } = instance;
+      // eslint-disable-next-line no-unused-vars
+      const { event, ...clearInstance } = instance;
 
-      const { data: event } = await getEntry(instance.event);
+      const eventEntry = await getEntry(instance.event);
 
-      return {
+      const test = {
         ...clearInstance,
-        event,
+        event: eventEntry,
       };
+
+      return test;
     })
   );
 }

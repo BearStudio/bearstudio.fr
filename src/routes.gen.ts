@@ -17,6 +17,7 @@ const ROUTES_CONFIG = {
     }
   },
   "conferences": {
+    ":page": {},
     ":id": {}
   },
   "contact": {
