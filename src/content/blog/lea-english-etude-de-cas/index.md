@@ -9,7 +9,7 @@ tags:
   - 'etude-de-cas'
   - 'experience-utilisateur'
   - 'ux'
-heroImage: 'images/Format-Blog-Header-1.png'
+heroImage: 'images/format-blog-header-1.png'
 languages:
   - 'fr'
 ---
@@ -64,7 +64,7 @@ Pour tirer pleinement parti de la connaissance approfondie que notre cliente a d
 
 <figure>
 
-![](images/Frame-162-1-1024x752.png)
+![](images/frame-162-1-1024x752.png)
 
 <figcaption>
 
@@ -102,7 +102,7 @@ De cette analyse concurrentielle, il est ressorti que l’application à concevo
 
 Ces obstacles réduisaient significativement l’engagement et l’accessibilité. Au-delà des problématiques UX, nous avons également identifié **des failles techniques, dont des vulnérabilités de sécurité et des bugs fonctionnels récurrents**.
 
-![](images/AD_4nXfcLwak46gltvXuAjyYQdas16yLVugsJ_JjNaTzITvbotGynNR_1hmzywC7pLuudfRMr7ES1Bvz87z6Uksx9qQluOf9PwR02YwWsf3NuO5IVnmHKa_w2vgr3k3PAfqSGfW31pv8)
+![](images/old-screen.png)
 
 ![](images/old-screens-1024x585.png)
 
@@ -170,7 +170,7 @@ Lea English disposait déjà **d’une identité visuelle** claire et bien défi
 
 Les composants que nous utilisons dans Figma sont déjà implémentés dans [Start UI Native](https://www.bearstudio.fr/blog/actualites-web-numerique/start-ui). Cette bibliothèque utilise des technologies comme **TypeScript, React** et **Ficus UI.** Grâce à cela, les développeurs peuvent accélérer immédiatement la phase d’implémentation après la finalisation du design. Par ailleurs, cela garantit une cohérence pour les futures fonctionnalités à venir.
 
-![](images/AD_4nXcFViUqW7lH_dz77Nxi96M8_8Ul6tEwYLIIJdmxhR_KHxCzqJKYg0-XNGSDL1sv8HaaBXr5UydJSTHT_S95_zo2hbmnqAorPDbCtPOhl2He19z9XdZRbTrqCwzJGR2jqpseP2wz5w)
+![](images/figma.png)
 
 #### Analyse des fonctionnalités UX 
 
@@ -270,7 +270,7 @@ Les retours de la communauté ont révélé **une demande dans d’autres régio
 
 Retours sur le lancement:
 
-![](images/Frame-33.png)
+![](images/frame-33.png)
 
 #### Résultats après lancement - premier mois
 
@@ -290,15 +290,15 @@ Ce schéma de répartition des abonnements met en lumière **le succès de l’o
 
 Retours trouvés sur AppStore/ Google Play/ Trustpilot :
 
-![](images/AD_4nXcF3T1Ei0iZvTq8VjaVyGm1muaxpNsxSPDoPMnc3NkjZczvowOMOLwuq2t3U6ZGBFD3lxlRZgN9kR8c7mSL919D3yPBjm5prapV2JscpXnYWn5Dd2-4VOUVUhh4I24mvMNU4rli)
+![](images/avis-1.png)
 
-![](images/AD_4nXc10S5G5q67SOmsbGS4oEy7J8vQdF1N76otiVnRqDM7lxFSIyWyXMU7_P6IMtoBYiAlf3HH9SPPUAQErXBEU-weKyBXmyzVg18fgxqHyd93O8ktSRuNsDzyQpq5Xu1VMDR0aX_nEw)
+![](images/avis-2.png)
 
-![](images/AD_4nXfB2eC2k6sig3TLAZUhsB6PEe_jGbZVq77y7edVAztusJ86ZLaUvm1iNj-aRDcj3-IiIX332H6t1FmndV1dFiuSxK1X9nkPyTw1m_5DbvJN6do2-IRIvkdK7NoweL4f4saimTFo9w)
+![](images/avis-3.png)
 
-![](images/AD_4nXdB7yLI-TK5cevABDWX9-XWGn5sau2UjTLOVPxoD6AF2923G3c6SbrOKIVOrXxyp42ebz81Bd-3_REiIk5h4t73PasMbWuCTWzjeUt5kzX7FD9BNqwqtCEt2sWukyHLJaPZto_1)
+![](images/avis-4.png)
 
-![](images/AD_4nXfbFe0Lg6DG9-VbexuYd1BOfPOJ0bjwnj1bYdOxVDU2nTwbJ4dRfJdyyPLQFyBs05QAQjAjYO0qLqD0kxr-fPb56ndLyDq34MjkQNeUyZLYKRUe81NQrVG49fOw2QnaTiipK9SLIw)
+![](images/avis-5.png)
 
 ## Réflexions finales
 

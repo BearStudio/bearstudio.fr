@@ -62,7 +62,7 @@ C’est un bon moyen de **rencontrer des gens en activité**, qui sont dans une 
 
 Demandez aux écoles, regardez sur les réseaux sociaux. Le site : [Meetup](https://www.meetup.com/fr-FR/) est un bon moyen de trouver également (perso je l’utilise pour trouver des communautés quand je suis à l’étranger).
 
-![Trouvez la communauté qui vous ressemble.](images/Capture-du-2020-04-01-15-18-21-1024x528.png)
+![Trouvez la communauté qui vous ressemble.](images/capture-du-2020-04-01-15-18-21-1024x528.png)
 
 Toutes ces communautés ont généralement au moins un **Twitter / Facebook / LinkedIn / Youtube et un site**. N’hésitez pas à suivre leurs réseaux et surtout à regarder les précédents posts pour trouver des pistes.
 

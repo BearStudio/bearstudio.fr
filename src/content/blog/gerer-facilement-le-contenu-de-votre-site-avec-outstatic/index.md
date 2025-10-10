@@ -7,7 +7,7 @@ categories:
 tags:
   - 'developpement-web'
   - 'retour-dexperience'
-heroImage: 'images/Outstatic-Format-Blog-Header.png'
+heroImage: 'images/outstatic-format-blog-header.png'
 languages:
   - 'fr'
 ---

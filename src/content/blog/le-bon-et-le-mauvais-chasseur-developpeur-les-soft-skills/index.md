@@ -8,7 +8,7 @@ tags:
   - 'developpement'
   - 'developpement-web'
   - 'developpeur'
-heroImage: 'images/Format-Blog-Header.png'
+heroImage: 'images/format-blog-header.png'
 languages:
   - 'fr'
 ---

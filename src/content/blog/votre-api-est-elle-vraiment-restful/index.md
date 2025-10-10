@@ -9,7 +9,7 @@ tags:
   - 'backend'
   - 'http'
   - 'rest'
-heroImage: 'images/Brève-4.jpg'
+heroImage: 'images/breve-4.jpg'
 languages:
   - 'fr'
 metaDescription: 'Savez vous qu''environ 100% des API dites "REST" ne le sont pas réellement ? Le modèle de maturité de Richardson nous en apprend plus à ce propos.'
@@ -22,7 +22,7 @@ Il y a peu de temps, j'apprenais qu'environ 100% des API dites "REST" ne le sont
 
 C'est assez étonnant, mais seulement lorsqu'on ne connaît pas le **[modèle de maturité de Richardson](https://guide-api-rest.marmicode.fr/api-rest/le-modele-de-maturite-de-richardson)**. Ce modèle définit 4 niveaux de maturité pour les API REST :
 
-![niveaux-api-rest](images/guide-API-2.png)
+![niveaux-api-rest](images/guide-api-2.png)
 
 ## **Niveau 0**
 

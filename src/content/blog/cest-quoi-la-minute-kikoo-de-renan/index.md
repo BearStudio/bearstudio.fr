@@ -7,7 +7,7 @@ categories:
 tags:
   - 'minute-kikoo-de-renan'
   - 'stream'
-heroImage: 'images/Featured-Image-Site-MKDR.png'
+heroImage: 'images/featured-Image-Site-MKDR.png'
 languages:
   - 'fr'
 ---

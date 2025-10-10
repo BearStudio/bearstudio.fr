@@ -27,7 +27,7 @@ Dans cet article, je vais me concentrer sur l’**aspect technique on-site** du 
 
 ## Les critères SEO techniques on-site à respecter sur son site web
 
-![Les points clés pour une base SEO technique](images/points-clés-seo-technique-1024x690-1.webp)
+![Les points clés pour une base SEO technique](images/points-cles-seo-technique-1024x690-1.webp)
 
 ### Optimiser la performance de son site
 
@@ -114,7 +114,7 @@ Pour être efficace, la balise title doit contenir le **mot clé principal** de 
 
 Attention à ne pas confondre le titre 1 (balisé par le tag `<h1> </h1>`) qui correspond au premier titre de la page avec la balise title qui apparaît dans l’onglet du navigateur.
 
-![Différence entre un title et un H1](images/différence-title-H1-1024x381-1.webp)
+![Différence entre un title et un H1](images/difference-title-h1-1024x381-1.webp)
 
 #### La balise alt
 
@@ -136,7 +136,7 @@ Attention, contrairement aux autres balises Hn, le H1 qui est le titre principal
 
 Pour comprendre le fonctionnement, on peut prendre comme exemple la hiérarchie de cet article :
 
-![la hiérarchie des titres Hn pour l'article checklist SEO](images/hiérarchie-Hn-article-checklist-seo-1.webp)
+![la hiérarchie des titres Hn pour l'article checklist SEO](images/hierarchie-hn-article-checklist-seo-1.webp)
 
 Cette hiérarchie est primordiale pour avoir un **contenu clair et structuré** à la fois pour les utilisateurs, mais aussi pour les moteurs de recherche. C’est ce qui va leur permettre de **comprendre le contenu** de votre page pour le suggérer en résultat des recherches correspondant au besoin auquel vous répondez. 
 
@@ -203,7 +203,7 @@ On a le menu qui regroupe les pages principales du site. Si on veut découvrir l
 
 Sur la page, on retrouve 4 catégories principales. Si on choisi la catégorie [**UX design**](https://www.bearstudio.fr/prestations/ux-design) on retrouve toutes les prestations liées au Design. C’est simple, logique mais efficace. 
 
-![hiérarchie du site bearstudio](images/hiérarchie-site-web-1024x503-1.webp)
+![hiérarchie du site bearstudio](images/hierarchie-site-web-1024x503-1.webp)
 
 Pour **créer une bonne structure**, vous pouvez également vous baser sur le **parcours utilisateur**. Pour se faire, vous pouvez suivre [notre article sur la création d’un userflow](https://www.bearstudio.fr/blog/design-css/parcours-utilisateur-ux).
 

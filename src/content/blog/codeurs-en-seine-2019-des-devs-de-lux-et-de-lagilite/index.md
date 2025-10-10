@@ -37,7 +37,7 @@ La journée s’est divisée en deux formats de **conférences**. Nous saluons t
 
 <figure>
 
-![Grande salle avec des gradins pour les plénières et les conférences](images/Codeurs_en_seine_pleniere_copyright_Arnaud_Lemercier.jpg)
+![Grande salle avec des gradins pour les plénières et les conférences](images/codeurs_en_seine_pleniere_copyright_arnaud_lemercier.jpg)
 
 <figcaption>
 
@@ -55,7 +55,7 @@ Le domaine du **développement** se caractérise par sa continuelle évolution, 
 
 <figure>
 
-![Salle de conférences](images/Codeurs_en_seine_conference-1.jpg)
+![Salle de conférences](images/codeurs_en_seine_conference-1.jpg)
 
 <figcaption>
 
@@ -73,7 +73,7 @@ Du côté des sponsors, quelques animations, des goodies et de belles rencontres
 
 <figure>
 
-![Stand de l'entreprise Enovea à Codeurs en Seine](images/Codeurs_en_seine_enovea.jpg)
+![Stand de l'entreprise Enovea à Codeurs en Seine](images/codeurs_en_seine_enovea.jpg)
 
 <figcaption>
 
@@ -85,7 +85,7 @@ Stand Enovea
 
 <figure>
 
-![Stand Microsoft à Codeurs en Seine](images/Codeurs_en_seine_microsoft-1.jpg)
+![Stand Microsoft à Codeurs en Seine](images/codeurs_en_seine_microsoft-1.jpg)
 
 <figcaption>
 

@@ -10,7 +10,7 @@ tags:
   - 'js'
   - 'react'
   - 'ui'
-heroImage: 'images/Brève-3.3.jpg'
+heroImage: 'images/breve-3.3.jpg'
 languages:
   - 'fr'
 metaDescription: 'Vous souhaitez simplifier l’écriture d’interfaces utilisateurs avec React JS ? Notre UX Designer Ivan Dalmet vous indique comment faire !'

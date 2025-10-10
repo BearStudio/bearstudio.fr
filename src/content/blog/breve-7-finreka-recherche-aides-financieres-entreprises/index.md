@@ -7,7 +7,7 @@ categories:
 tags:
   - 'financement'
   - 'tips'
-heroImage: 'images/Brève-7.jpg'
+heroImage: 'images/breve-7.jpg'
 languages:
   - 'fr'
 ---

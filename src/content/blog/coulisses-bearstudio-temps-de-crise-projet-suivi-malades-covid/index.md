@@ -121,7 +121,7 @@ Une des premières tâches à exécuter consistait à détailler ce à quoi l’
 
 - <figure>
     
-    ![Maquette au bout de 6 jours](images/3-6e_CC_80me-jour_opt_37f4ed40c7e0177cea4241ecda80e1fd.png)
+    ![Maquette au bout de 6 jours](images/3-6e_cc_80me-jour_opt_37f4ed40c7e0177cea4241ecda80e1fd.png)
     
     <figcaption>
     
@@ -139,7 +139,7 @@ Le fameux Adrien qui travaille aux côtés d’Emeline se révèle finalement ê
 
 ![Erreur retournée par l'exécution du programme](images/6-code-2.png)
 
-![Adrien collecteur](images/Adrien-768x103_afb5e3ff027f4de1aa07c2831809fea8.png)
+![Adrien collecteur](images/adrien-768x103_afb5e3ff027f4de1aa07c2831809fea8.png)
 
 ![Ivan et Emeline](images/8-ivan-2-768x485_f3e2bf417164edbe4dfb5c2b4ef6c196.png)
 

@@ -38,7 +38,7 @@ Mais ces grilles d’évaluations sont-elles toujours pertinentes ? Que penser d
 
 <figure>
 
-![Les estimations de projets IT par CommitStrip](images/Strip-Supermarché-650-final.jpg)
+![Les estimations de projets IT par CommitStrip](images/strip-supermarche-650-final.jpg)
 
 <figcaption>
 
@@ -62,7 +62,7 @@ Née des débats animés des deux experts en Agilité Woody Zuill et Neil Killic
 
 <figure>
 
-![Explications du Backlog et des User Stories dans un processus sans estimation via des illustrations simplifiées](images/No-estimates.png)
+![Explications du Backlog et des User Stories dans un processus sans estimation via des illustrations simplifiées](images/no-estimates.png)
 
 <figcaption>
 

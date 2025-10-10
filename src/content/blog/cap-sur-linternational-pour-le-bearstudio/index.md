@@ -4,7 +4,7 @@ title: "Cap sur l'international pour le BearStudio !"
 date: 2021-03-23
 categories:
   - 'actualites-web-numerique'
-heroImage: 'images/IMG_4787-scaled.jpeg'
+heroImage: 'images/img_4787-scaled.jpeg'
 languages:
   - 'fr'
 ---
@@ -31,7 +31,7 @@ On sentait une certaine concurrence avec le trust indien qui propose les mêmes 
 
 <figure>
 
-![](images/EojYpK0W4AQe88r-1024x768.jpeg)
+![](images/stand.jpeg)
 
 <figcaption>
 

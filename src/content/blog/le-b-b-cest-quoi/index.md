@@ -29,7 +29,7 @@ Même si ça a lieu presque toutes les semaines, ce n’est pas un moment obliga
 
 Ça s’est vite imposé comme une tradition, même s’il n’y a rien de spécial à dire. En général, on raconte à tous ceux qui les auraient loupées, les anecdotes de bureau complètement WTF de la semaine. Et croyez moi, il y en a !
 
-![Scène culte de la série Kaamelot](images/Kaamelott-Arthur-cest-systématiquement-débile-mais-cest-toujours-inattendu.jpg)
+![Scène culte de la série Kaamelot](images/kaamelott-arthur-cest-systematiquement-debile-mais-cest-toujours-inattendu.jpg)
 
 ---
 

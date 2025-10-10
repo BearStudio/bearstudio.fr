@@ -8,7 +8,7 @@ tags:
   - 'developpement'
   - 'ia'
   - 'numerique'
-heroImage: 'images/Format-Blog-Header-3-scaled.png'
+heroImage: 'images/format-blog-header-3-scaled.png'
 languages:
   - 'fr'
 metaDescription: 'Avec le MCP, les agents IA se connectent à vos outils et données, agissent en autonomie et transforment votre façon de développer.'
