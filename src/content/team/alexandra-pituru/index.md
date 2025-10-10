@@ -1,6 +1,6 @@
 ---
 name: 'Alexandra PITURU'
-picture: './Alexandra.png'
+picture: './alexandra.png'
 job: 'UI/UX Designer'
 socials:
   - type: 'linkedin'

@@ -1,37 +1,46 @@
 ---
+import { Schema } from 'astro-seo-schema';
 import { Image } from 'astro:assets';
 import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 
 import { lunalink } from '@bearstudio/lunalink';
-import type { GetStaticPaths } from 'astro';
 
 import { getBlogCollectionLinkedToTeamMember } from '@/lib/blog';
 import Prose from '@/components/Prose.astro';
+import SEO from '@/components/SEO/index.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
 import { ROUTES } from '@/routes.gen';
 
-export const getStaticPaths = (async () => {
+export async function getStaticPaths() {
   const team = await getCollection('team');
 
-  return Promise.all(
-    team.map(async (person) => ({
-      params: { id: person.id },
-      props: {
-        person,
-      },
-    }))
-  );
-}) satisfies GetStaticPaths;
+  return team.map((person) => ({
+    params: { id: person.id },
+    props: person,
+  }));
+}
+type Props = CollectionEntry<'team'>;
 
-const { person } = Astro.props;
-
+const person = Astro.props;
 const { Content } = await render(person);
+const url = new URL(Astro.url.pathname, Astro.site);
 
 const posts = await getBlogCollectionLinkedToTeamMember({ author: person });
 ---
 
 <MainLayout>
   <!-- [TODO]: SEO -->
+  <SEO slot="seo" title={person.data.name} url={url} />
+  <Schema
+    slot="ld+json"
+    item={{
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      headline: person.data.name,
+      isAccessibleForFree: true,
+    }}
+  />
   <div class="mx-auto flex w-full max-w-screen-sm flex-col gap-4 px-4">
     <div class="flex flex-col items-center gap-2">
       <span>

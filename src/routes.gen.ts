@@ -14,6 +14,7 @@ const ROUTES_CONFIG = {
   "rss.xml": {},
   "styleguide": {},
   "team": {
+    ":page": {},
     ":id": {}
   }
 } as const;
