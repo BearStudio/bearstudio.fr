@@ -6,6 +6,7 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import { experimental_AstroContainer } from 'astro/container';
 import { getContainerRenderer as mdxContainerRenderer } from '@astrojs/mdx';
 
+import { lunalink } from '@bearstudio/lunalink';
 import dayjs from 'dayjs';
 
 import { getAuthorsFromBlogPost } from '@/lib/blog';
@@ -14,6 +15,7 @@ import FormattedDate from '@/components/FormattedDate.astro';
 import Prose from '@/components/Prose.astro';
 import SEO from '@/components/SEO/index.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
+import { ROUTES } from '@/routes.gen';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -92,7 +94,16 @@ const authors = await getAuthorsFromBlogPost(post); // TODO: Get authors data wh
         {title}
       </h1>
       <FormattedDate date={date} />
-      {authors?.map((author) => <p>{author?.id}</p>)}
+      {
+        authors?.map(
+          (author) =>
+            author && (
+              <a href={lunalink(ROUTES.team[':id'].__path, { id: author.id })}>
+                {author.data.name}
+              </a>
+            )
+        )
+      }
     </div>
     <Prose>
       <Content />
