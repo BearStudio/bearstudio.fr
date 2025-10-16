@@ -8,6 +8,7 @@ import sitemap from '@astrojs/sitemap';
 import bearstudioTypedRoutes from '@bearstudio/astro-typed-routes';
 import tailwindcss from '@tailwindcss/vite';
 
+import { remarkCustomProp } from './example-remark-plugin.ts';
 // Relative import is required
 import { getSiteUrl } from './src/lib/site/get-site-url';
 
@@ -28,7 +29,15 @@ export default defineConfig({
       }),
     },
   },
-  integrations: [mdx(), sitemap(), react(), bearstudioTypedRoutes()],
+  integrations: [
+    mdx({
+      remarkPlugins: [remarkCustomProp],
+    }),
+
+    sitemap(),
+    react(),
+    bearstudioTypedRoutes(),
+  ],
 
   vite: {
     plugins: [tailwindcss()],

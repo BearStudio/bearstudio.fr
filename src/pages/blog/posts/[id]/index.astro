@@ -16,6 +16,7 @@ import MainLayout from '@/layouts/MainLayout.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
+
   return posts.map((post) => ({
     params: { id: post.id },
     props: post,
@@ -25,7 +26,7 @@ type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 const { heroImage, date, title } = post.data;
-const { Content } = await render(post);
+const { Content, remarkPluginFrontmatter } = await render(post);
 const url = new URL(Astro.url.pathname, Astro.site);
 
 const renderers = await loadRenderers([mdxContainerRenderer()]);
@@ -91,6 +92,8 @@ const authors = post.data.authors ?? []; // TODO: Get authors data when team mem
         {title}
       </h1>
       <FormattedDate date={date} />
+
+      <p>{remarkPluginFrontmatter?.customProperty ?? 'NO CUSTOM'}</p>
     </div>
     <Prose>
       <Content />
