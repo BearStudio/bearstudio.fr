@@ -9,7 +9,7 @@ import { getContainerRenderer as mdxContainerRenderer } from '@astrojs/mdx';
 
 import { lunalink } from '@bearstudio/lunalink';
 
-import { getEventsFromConference } from '@/lib/conferences';
+import { getConferenceEvents } from '@/lib/conferences';
 import Prose from '@/components/Prose.astro';
 import SEO from '@/components/SEO/index.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
@@ -37,7 +37,7 @@ const conferenceBody = (await container.renderToString(Content))
   .replace(/<[^>]*>/g, '')
   .trim();
 
-const instances = await getEventsFromConference({
+const instances = await getConferenceEvents({
   conference: conference.data,
 });
 ---

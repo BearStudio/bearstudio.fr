@@ -4,9 +4,13 @@ import { Image } from 'astro:assets';
 import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
+import { lunalink } from '@bearstudio/lunalink';
+
+import { getConferencesLinkedToEvent } from '@/lib/conferences';
 import Prose from '@/components/Prose.astro';
 import SEO from '@/components/SEO/index.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
+import { ROUTES } from '@/routes.gen';
 
 export async function getStaticPaths() {
   const events = await getCollection('events');
@@ -20,6 +24,8 @@ type Props = CollectionEntry<'events'>;
 const event = Astro.props;
 const url = new URL(Astro.url.pathname, Astro.site);
 const { Content } = await render(event);
+
+const conferences = await getConferencesLinkedToEvent({ event });
 ---
 
 <MainLayout>
@@ -50,5 +56,24 @@ const { Content } = await render(event);
     <Prose>
       <Content />
     </Prose>
+
+    <h2>Conférences liés</h2>
+    <ul>
+      {
+        conferences.map((conference) => {
+          return (
+            <li>
+              <a
+                href={lunalink(ROUTES.conferences[':id'].__path, {
+                  id: conference.id,
+                })}
+              >
+                {conference.data.title}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
   </div>
 </MainLayout>
