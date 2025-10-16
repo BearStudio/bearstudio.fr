@@ -16,9 +16,7 @@ Le titre peut sembler bizarre, mais c’est le nom d’une méthode que beaucoup
 
 Prenons l’exemple suivant : Vous cherchez vos clés, après qu’elles aient encore disparu mystérieusement au moment de partir.
 
-[Looking For Lost Keys GIF](https://tenor.com/view/michael-scott-steve-carrell-rainn-wilson-looking-lost-key-gif-11029642)from [Michael Scott GIFs](https://tenor.com/search/michael+scott-gifs)
-
-<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<div class="tenor-gif-embed" data-postid="11029642" data-share-method="host" data-aspect-ratio="1.79137" data-width="100%"><a href="https://tenor.com/view/michael-scott-steve-carrell-rainn-wilson-looking-lost-key-gif-11029642">Looking For Lost Keys GIF</a>from <a href="https://tenor.com/search/michael+scott-gifs">Michael Scott GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
 Beaucoup retracent leur chemin de long en large et en travers sans succès. Après un moment, vous demandez de l’aide, et d’un coup, vous vous souvenez exactement où vos clés vous attendent
 
@@ -36,9 +34,7 @@ Le principe est très simple : Quand on est bloqué, et qu’on pense avoir tout
 
 Bien que le principe soit simple, il est plus difficile de l’appliquer. Notre cerveau, dans le but d’économiser de l’énergie et des maux de tête, va survoler des parties de notre raisonnement. Cette petite optimisation pour gagner du temps sur la réflexion va nous en faire perdre PLUS car notre erreur se cache dans ce qu’on survole.
 
-[Just Blame On The Algorithm GIF](https://tenor.com/view/just-blame-on-the-algorithm-gif-23420660)from [Just Blame On The Algorithm GIFs](https://tenor.com/search/just+blame+on+the+algorithm-gifs)
-
-<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<div class="tenor-gif-embed" data-postid="23420660" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/just-blame-on-the-algorithm-gif-23420660">Just Blame On The Algorithm GIF</a>from <a href="https://tenor.com/search/just+blame+on+the+algorithm-gifs">Just Blame On The Algorithm GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
 Le canard est donc là pour nous servir d’ancre. Lui, il ne connaît pas le contexte du projet, et on doit donc se forcer à tout reprendre de zéro.
 
@@ -112,9 +108,7 @@ C’est généralement le premier réflexe en tant que développeur, mais ajoute
 
 ### Why ?
 
-[Meliwhy GIF](https://tenor.com/view/meliwhy-gif-5168232340185065064)from [Meliwhy GIFs](https://tenor.com/search/meliwhy-gifs)
-
-<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<div class="tenor-gif-embed" data-postid="5168232340185065064" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/meliwhy-gif-5168232340185065064">Meliwhy GIF</a>from <a href="https://tenor.com/search/meliwhy-gifs">Meliwhy GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
 Comme un enfant de 5 ans, le but est de se demander “Pourquoi ?” à chaque problème que l’on rencontre. Si on reprend le même exemple, voilà à quoi ça pourrait ressembler :
 
