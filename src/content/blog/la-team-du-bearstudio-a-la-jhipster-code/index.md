@@ -4,7 +4,7 @@ title: 'La team du BearStudio à la JHipster Code'
 date: 2021-02-05
 categories:
   - 'actualites-web-numerique'
-heroImage: 'images/Untitled-design.png'
+heroImage: 'images/untitled-design.png'
 languages:
   - 'fr'
 metaDescription: "La team du BearStudio a passé une journée entière à contribuer à jHipster, un générateur de projet open-source lors d'une conférence organisée à Bordeaux."
@@ -46,7 +46,7 @@ Ensuite, je suis passée sur la **création d’un nouveau personnage** pour l'a
 
 <figure>
 
-![](images/Mochup-asceline-jhipster-1024x683-1.jpeg)
+![](images/mochup-asceline-jhipster-1024x683-1.jpeg)
 
 <figcaption>
 
@@ -132,8 +132,7 @@ J’ai passé du temps sur l’**amélioration de la syntaxe JDL** du générate
 
 - [Renan](https://www.bearstudio.fr/team/renan-decamps)
 - [Mathieu ABOU-AICHI](https://github.com/MathieuAA), membre de la core team
-- [Arnaud Freismuth](https://twitter.com/arnaudfreismuth), membre de la core team  
-
+- [Arnaud Freismuth](https://twitter.com/arnaudfreismuth), membre de la core team
 
 C’était extrêmement intéressant comme session de travail. D'abord sur l’apprentissage du fonctionnement de la partie gestion du JDL du générateur. Mais aussi sur la conception d’un nouveau mot clé pour simplifier l’application d’options sur les entités dans le JDL.
 
@@ -145,7 +144,7 @@ Bien entendu la journée s’est terminée avec un repas tous ensemble, très sy
 - ![](images/13-1-1024x768-1.jpg)
 - ![](images/2-1-1024x768-1.jpg)
 - ![](images/10-1-1024x768-1.jpg)
-- ![](images/Untitled-design-1.png)
+- ![](images/untitled-design-1.png)
 - ![](images/8-1-768x1024-1.jpg)
 
 ## Mon bilan

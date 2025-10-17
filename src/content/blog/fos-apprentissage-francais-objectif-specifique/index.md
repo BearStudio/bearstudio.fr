@@ -7,7 +7,7 @@ categories:
 tags:
   - 'rex'
   - 'temoignage'
-heroImage: 'images/article-FOS-visuel.png'
+heroImage: 'images/article-fos-visuel.png'
 languages:
   - 'fr'
 metaDescription: "Retour d'expérience d'une professeure de français dans une société de développement informatique"

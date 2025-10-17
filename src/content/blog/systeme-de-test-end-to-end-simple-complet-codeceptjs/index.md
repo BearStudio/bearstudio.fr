@@ -8,7 +8,7 @@ tags:
   - 'codeceptjs'
   - 'endtoend'
   - 'test'
-heroImage: 'images/Brève-2.jpg'
+heroImage: 'images/breve-2.jpg'
 languages:
   - 'fr'
 metaDescription: 'Vous souhaitez vérifier si votre code fonctionne comme il se doit ? Dans cette brève, nous vous expliquons comment foncitonne un système de test end-to-end.'

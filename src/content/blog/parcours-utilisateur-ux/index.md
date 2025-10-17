@@ -59,7 +59,7 @@ Au BearStudio, nous utilisons [Figjam](https://www.figma.com/fr/figjam/) ou [Whi
 
 En une image un userflow qu’est-ce c’est ? Et bien c’est ça ⬇️
 
-![schéma d'un userflow simple](images/schéma-user-flow-simple.png)
+![schéma d'un userflow simple](images/schema-user-flow-simple.png)
 
 Dans cet exemple il s’agit d’un petit userflow qui montre toutes les étapes que doivent accomplir l’utilisateur pour accomplir une action spécifique. 
 

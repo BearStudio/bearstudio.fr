@@ -8,7 +8,7 @@ tags:
   - 'financement'
   - 'innovation'
   - 'tips'
-heroImage: 'images/Brève-8.jpg'
+heroImage: 'images/breve-8.jpg'
 languages:
   - 'fr'
 ---

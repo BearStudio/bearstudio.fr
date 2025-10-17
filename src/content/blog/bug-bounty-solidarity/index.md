@@ -7,7 +7,7 @@ categories:
 tags:
   - 'financement'
   - 'projet'
-heroImage: 'images/Brève-6.jpg'
+heroImage: 'images/breve-6.jpg'
 languages:
   - 'fr'
 metaDescription: "Cette année, le BearStudio a souhaité exprimer son soutien auprès d'une association de la région rouennaise en accord avec ses valeurs."

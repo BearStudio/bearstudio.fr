@@ -11,7 +11,7 @@ tags:
   - 'start-ui'
   - 'ui'
   - 'web'
-heroImage: 'images/visuel-article-Start-UI-tinified.png'
+heroImage: 'images/visuel-article-start-ui-tinified.png'
 languages:
   - 'fr'
 ---

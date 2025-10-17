@@ -9,7 +9,7 @@ tags:
   - 'experience-utilisateur'
   - 'rex'
   - 'ux'
-heroImage: 'images/Format-Blog-Header.png'
+heroImage: 'images/format-blog-header.png'
 languages:
   - 'fr'
 metaDescription: "Une application mobile dépend de son apparence, de ses fonctionnalités, mais aussi de la qualité de l'expérience utilisateur !"
@@ -26,7 +26,7 @@ Dans le monde numérique d'aujourd'hui, le succès d'une application mobile/web 
 
 Contrairement à la conception graphique, la conception de l'UX design **ne** **peut pas** être une réflexion après coup, ou une couche esthétique ajoutée une fois le projet terminé. Un projet réussi va au-delà de ses fonctionnalités - **il nécessite des [user flow (flux utilisateurs)](https://www.bearstudio.fr/blog/design-css/parcours-utilisateur-ux) bien pensés** dès le départ.
 
-![L'UX Design regroupe une variété de sujets à traiter : sa fonctionnalité, l'UI Design, l'architecture de l'information; la recherche utilisateur, l'usabilité et le design d'interaction](images/Frame-783-1024x712.png)
+![L'UX Design regroupe une variété de sujets à traiter : sa fonctionnalité, l'UI Design, l'architecture de l'information; la recherche utilisateur, l'usabilité et le design d'interaction](images/frame-783-1024x712.png)
 
 ## "La forme suit la fonction" - Comment appliquer cela de nos jours au design d’interface ?
 
@@ -40,13 +40,13 @@ On peut résumer en disant que les **principes** de la conception UX soulignent 
 
 Le design de l'application doit être **intuitif** et **user-friendly**. Cela garantit que les utilisateurs peuvent comprendre et interagir facilement avec l'interface pour **accomplir leurs tâches** de manière efficace.
 
-![À gauche, un exemple de design d'interface centrée sur l'utilisateur, avec des éléments rangés de manière cohérente. À droite, un exemple de design d'interface non centrée sur l'utilisateur, avec des éléments qui ne sont pas logiquement placés.](images/Interface-1-1024x312.png)
+![À gauche, un exemple de design d'interface centrée sur l'utilisateur, avec des éléments rangés de manière cohérente. À droite, un exemple de design d'interface non centrée sur l'utilisateur, avec des éléments qui ne sont pas logiquement placés.](images/interface-1-1024x312.png)
 
 ##### L’alignement des tâches
 
 Les éléments de design (**boutons**, **menus**, **navigation**...) doivent être alignés sur les **tâches** et les **objectifs** des utilisateurs. Ils doivent être organisés et présentés de manière à suivre le **flux ou parcours** naturel de l'utilisateur afin d'aider à atteindre leurs objectifs **sans complexité inutile.**
 
-![Exemple du principe d'alignement des tâches dans le contexte d'une application web. Au lieu de donner des titres de sections et de boutons vagues comme "Section 1" ou "+ Option 1", on utilise "Shirts" comme titre de section et "+ add a shirt" pour le texte du bouton.](images/Illu2-1024x317.png)
+![Exemple du principe d'alignement des tâches dans le contexte d'une application web. Au lieu de donner des titres de sections et de boutons vagues comme "Section 1" ou "+ Option 1", on utilise "Shirts" comme titre de section et "+ add a shirt" pour le texte du bouton.](images/illu2-1024x317.png)
 
 ##### La clarté et la simplicité
 
@@ -55,31 +55,31 @@ Le design visuel ne devrait **pas** prendre le pas sur la fonctionnalité. Garde
 ![À gauche, un bouton clair : "Ajouter un t-shirt"
 
 <div></div>
-À droite, un bouton confus : "Cliquez ici pour ajouter un t-shirt à votre liste"](images/T-shirt-1-1024x156.png)
+À droite, un bouton confus : "Cliquez ici pour ajouter un t-shirt à votre liste"](images/t-shirt-1-1024x156.png)
 
 ##### La cohérence
 
 La cohérence dans les éléments de design et les patterns présents à travers l'application améliore la compréhension des utilisateurs et **réduit la charge cognitive.** Ainsi, les utilisateurs devraient être en mesure de prévoir le comportement de certaines fonctionnalités ou interactions en se basant sur leurs **expériences antérieures** au sein de l'application.
 
-![À gauche, un exemple de design consistant avec un choix restreint de couleurs et de styles de textes. À droite, un exemple de design non-consistant qui contient de multiples couleurs et styles de textes différents.](images/Illu4-1024x295.png)
+![À gauche, un exemple de design consistant avec un choix restreint de couleurs et de styles de textes. À droite, un exemple de design non-consistant qui contient de multiples couleurs et styles de textes différents.](images/illu4-1024x295.png)
 
 ##### Un design responsive
 
 Le design devrait **s'adapter** à différents appareils et tailles d'écran sans compromettre les fonctionnalités. Un **design responsive** garantit que les utilisateurs puissent interagir avec l'application quel que soit le dispositif qu'ils utilisent.
 
-![À gauche, un exemple de design responsive adapté pour les mobiles, les articles sont rangés verticalement. À droite, un exemple de design non responsive inadapté, avec des éléments trop petits pour un mobile.](images/Responsive-1024x587.png)
+![À gauche, un exemple de design responsive adapté pour les mobiles, les articles sont rangés verticalement. À droite, un exemple de design non responsive inadapté, avec des éléments trop petits pour un mobile.](images/responsive-1024x587.png)
 
 ##### L’accessibilité
 
 Le design devrait prendre en compte les **principes d'accessibilité**, et ce, afin de garantir que tous les utilisateurs, y compris ceux ayant des handicaps, puissent utiliser l'application de manière efficace. Cela confirme l'aspect fonctionnel de rendre l'application utilisable à un **public diversifié**.
 
-![À gauche, un exemple de design accessible, avec un ratio de contraste conforme et des zones facilement cliquables. À droite, un exemple de design non-accessible, avec des éléments trop petits et des valeurs de contraste trop faibles.](images/Accessible-1024x385.png)
+![À gauche, un exemple de design accessible, avec un ratio de contraste conforme et des zones facilement cliquables. À droite, un exemple de design non-accessible, avec des éléments trop petits et des valeurs de contraste trop faibles.](images/accessible-1024x385.png)
 
 ## “Pourquoi cela m'intéresserait en tant qu'entrepreneur ?”
 
 Eh bien, cela peut se résumer par "utilisateur satisfait = **entreprise prospère".** Mais creusons un peu plus le sujet.
 
-![Emoji serein qui devient effrayé après être passé sur une application avec une mauvaise expérience utilisateur.](images/Emojis-1024x249.png)
+![Emoji serein qui devient effrayé après être passé sur une application avec une mauvaise expérience utilisateur.](images/emojis-1024x249.png)
 
 Voici quelques raisons clé pour lesquelles un mauvais design UX ou l'absence de design UX peuvent avoir une influence négative sur une entreprise :
 
@@ -131,4 +131,4 @@ Pour avoir une perception **mature** d'un produit, il doit être compris comme u
 
 Toutefois, si votre produit est déjà développé et **manque de logique** UX, nous proposons un [audit UX](https://www.bearstudio.fr/prestations/ux-design/audit-ux) de votre projet. Vous pourrez ainsi connaître ses **points faibles** ainsi que nos recommandations d’action pour **l’optimiser** !
 
-![Un produit bien conçu englobe un business plan solide, une infrastructure réfléchie, un développement de qualité et un UX Design efficace.](images/Illu8-1024x767.png)
+![Un produit bien conçu englobe un business plan solide, une infrastructure réfléchie, un développement de qualité et un UX Design efficace.](images/illu8-1024x767.png)

@@ -7,7 +7,7 @@ categories:
 tags:
   - 'ux-design'
   - 'web'
-heroImage: 'images/Brève-5.jpg'
+heroImage: 'images/breve-5.jpg'
 languages:
   - 'fr'
 metaDescription: 'Le poids des images sont souvent responsables de la durée de chargement de votre site web. Heureusement, il existe de nombreux outils pour les améliorer !'
@@ -34,11 +34,11 @@ Le rapport fourni par Gtmetrix se compose de cette façon :
   - Le TBT (Total Blocking Time), qui indique combien de temps met la page à être interactive
   - Le CLS (Cumulative Layout Shift) est un score représentant la stabilité de la page pendant son chargement
 
-![Score GTmetrix](images/Gtmetrix-1-1024x143.png)
+![Score GTmetrix](images/gtmetrix-1-1024x143.png)
 
 Juste en-dessous de cet élément, on a un rapport plus détaillé, avec différents onglets.
 
-![Rapport détaillé de Gtmetrix](images/Gtmetrix-2-1024x288.png)
+![Rapport détaillé de Gtmetrix](images/gtmetrix-2-1024x288.png)
 
 ## La compression des images
 

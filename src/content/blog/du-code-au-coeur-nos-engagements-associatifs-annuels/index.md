@@ -8,7 +8,7 @@ tags:
   - 'associations'
   - 'engagement'
   - 'temoignage'
-heroImage: 'images/Format-Blog-Header-2-scaled.png'
+heroImage: 'images/format-blog-header-2-scaled.png'
 languages:
   - 'fr'
 ---

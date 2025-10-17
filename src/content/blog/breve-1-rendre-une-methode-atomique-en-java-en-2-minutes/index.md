@@ -8,7 +8,7 @@ tags:
   - 'acid'
   - 'backend'
   - 'java'
-heroImage: 'images/Brève-1.jpg'
+heroImage: 'images/breve-1.jpg'
 languages:
   - 'fr'
 metaDescription: 'Vous souhaitez rendre une méthode atomique en Java en seulement 2 minutes ? On vous explique tout ici, les exemples en plus !'

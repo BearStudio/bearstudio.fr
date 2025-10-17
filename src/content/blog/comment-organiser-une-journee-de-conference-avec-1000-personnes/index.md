@@ -137,13 +137,13 @@ Tout s’articule essentiellement autour de 3 outils :
 La veille c’est la préparation !  
 On s’occupe de se faire livrer le matériel et on installe les salles. Pour les salles de conférences, les principales tâches consistent à vérifier le travail des prestataires pour tout ce qui est logistique (chaises, pupitres, électricité) et son/vidéo (test micro, affichage).
 
-![La plus grande salle de conférence après l'installation ](images/IMG20221117071729-scaled-1-1024x768.jpg)
+![La plus grande salle de conférence après l'installation ](images/img20221117071729-scaled-1-1024x768.jpg)
 
 Pour la partie accueil des visiteurs, on organise les files, on affiche de la signalétique, on briefe les bénévoles qui seront en charge de scanner les visiteurs.
 
 Pour la partie sponsors, on vérifie les tables mises à leur disposition et tous les branchements nécessaires. On les accueille pour leur permettre d’installer leur stand en avance.
 
-![Salle réservée aux sponsors (photo de Frédéric Bisson)](images/DSC02185-scaled-1-1024x428.jpg)
+![Salle réservée aux sponsors (photo de Frédéric Bisson)](images/dsc02185-scaled-1-1024x428.jpg)
 
 On prépare également une salle à la disposition des orateurs pour qu'ils puissent s'isoler/travailler/répéter/discuter entre eux tout au long de la journée.  
 Enfin, il nous reste la partie préparation des points repas et de la logistique autour de ça (j’avoue que je connais moins cette partie donc je peux moins détailler :p).
@@ -154,7 +154,7 @@ En fin de journée, certains bénévoles vont chercher des orateurs à la gare p
 
 En plus des organisateurs présents tout au long de l’année, on renforce l’organisation avec des bénévoles jour J (qu’il faut trouver avant bien entendu). Ça commence donc par un rendez-vous vers 7h du matin afin de finir les derniers préparatifs et briefer les équipes. Ensuite tout le monde se répartie entre gestion de salle, speakers, sponsors, visiteurs, nourriture, vidéos, photos et gestion des imprévus…
 
-![L'équipe Codeurs en Seine prête à accueillir les visiteurs (photo de Frédéric Bisson)](images/DSC02192-scaled-1-1024x684.jpg)
+![L'équipe Codeurs en Seine prête à accueillir les visiteurs (photo de Frédéric Bisson)](images/dsc02192-scaled-1-1024x684.jpg)
 
 ### Après le jour J
 

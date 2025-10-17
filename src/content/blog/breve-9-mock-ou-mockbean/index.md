@@ -7,7 +7,7 @@ categories:
 tags:
   - 'java'
   - 'spring'
-heroImage: 'images/Brève-9.jpg'
+heroImage: 'images/breve-9.jpg'
 languages:
   - 'fr'
 metaDescription: "Cette brève vous livre tout ce qu'il y a à connaître à propos de la différence entre @Mock et @Mockbean qu'on utilise beaucoup avec Spring !"

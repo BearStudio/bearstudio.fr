@@ -8,7 +8,7 @@ tags:
   - 'communication'
   - 'numerique'
   - 'startup'
-heroImage: 'images/Video-second-everyday-bearstudio.png'
+heroImage: 'images/video-second-everyday-bearstudio.png'
 languages:
   - 'fr'
 metaDescription: 'Notre équipe vous propose chaque mois une courte vidéo récapitulant en 1 seconde par jour ce que nous avons vécu au sein du BearStudio.'

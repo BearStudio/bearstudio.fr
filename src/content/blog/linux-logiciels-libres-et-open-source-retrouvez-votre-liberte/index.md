@@ -8,7 +8,7 @@ tags:
   - 'linux'
   - 'numerique'
   - 'open-source'
-heroImage: 'images/communauté-logiciel-open-source.jpg'
+heroImage: 'images/communaute-logiciel-open-source.jpg'
 languages:
   - 'fr'
 metaDescription: 'Vous avez déjà entendu parler de Linux, des logiciels libres ou encore de l’open-source ? Mais à quoi sont associés ces termes ?'
@@ -126,7 +126,7 @@ Internet Explorer ne pouvait pas rivaliser face à ces concurrents en s’en ten
 
 ### Spoiler : les logiciels propriétaires vont nous coûter beaucoup plus cher que prévu
 
-![WannaCry mapmonde](images/WannaCry-mapmonde.png)
+![WannaCry mapmonde](images/wannacry-mapmonde.png)
 
 Mai 2017, panique à bord, un logiciel malveillant nommé **WannaCry** infecte plus de **300 000 ordinateurs dans plus de 150 pays**. Son mode d’action est simple : crypter les fichiers de l’ordinateur cible et demander une rançon à son propriétaire pour décrypter les fichiers (_inchallah_). Plusieurs grands groupes et institutions sont même bloqués suite à cette attaque, parmi eux : Vodafone, FedEx, Renault, Telefónica, le National Health Service, le Centre hospitalier universitaire de Liège, le ministère de l’Intérieur russe et la Deutsche Bahn.
 

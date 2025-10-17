@@ -77,7 +77,7 @@ Le CLI de **jHipster** se lance et vous demande quel type d’application vous v
 
 Les autres options concernent les micro-services. Lorsque vous commencez un projet, une architecture en micro-services est rarement nécessaire. Elle trouve plutôt son utilité lorsqu’une application doit supporter un grand nombre de requêtes à traiter, lorsqu’il y a déjà plusieurs milliers d’utilisateurs au moins.
 
-![Jhipster Name Application](images/Carbon13.png)
+![Jhipster Name Application](images/carbon13-2.png)
 
 Le CLI demande ensuite le nom de l’application à générer, vous pouvez laisser par défaut le nom du dossier créé. Choisissez aussi le nom de package pour la partie back-end.
 
@@ -85,7 +85,7 @@ Le CLI demande ensuite le nom de l’application à générer, vous pouvez laiss
 
 Vous pouvez choisir d’utiliser ou non le jHipster registry qui vous permettra d’accéder à différentes statistiques et données sur votre application.
 
-![Jhipster registry](images/carbon-15-after-Jhipster.png)
+![Jhipster registry](images/carbon-15-after-jhipster.png)
 
 ![Technology Choice](images/carbon-3.png)
 
@@ -101,7 +101,7 @@ jHipster va alors demander les types à utiliser en développement et en product
 
 Vous pouvez choisir d’utiliser un système de cache supplémentaire sur la **base de données**.
 
-![Cache choice](images/Carbon-17.png)
+![Cache choice](images/carbon-17.png)
 
 Si vous le souhaitez, vous pouvez rajouter des options spécifiques à votre projet jHipster, comme la recherche avec Elasticsearch.
 
@@ -127,7 +127,7 @@ Enfin le CLI vous demande si vous voulez rajouter un outil pour les tests unitai
 
 ![Unit Test Choice](images/carbon-14.png)
 
-![Other Jhuipster Generators](images/Carbon-16.png)
+![Other Jhuipster Generators](images/carbon-16.png)
 
 On valide et ensuite jHipster génère le projet dans le dossier courant. Il va générer tous les fichiers nécessaires au bon fonctionnement du back-end et du front-end.
 

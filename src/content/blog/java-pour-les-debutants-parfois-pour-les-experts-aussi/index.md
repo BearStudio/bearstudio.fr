@@ -4,7 +4,7 @@ title: 'Java pour les débutants : parfois pour les experts aussi !'
 date: 2025-05-28
 categories:
   - 'developpement'
-heroImage: 'images/java-BlogHeader.png'
+heroImage: 'images/java-blogheader.png'
 languages:
   - 'fr'
 metaDescription: 'Évitez les erreurs Java fréquentes : NullPointerException, confusion ==/equals(), oubli de break, pièges courants.'

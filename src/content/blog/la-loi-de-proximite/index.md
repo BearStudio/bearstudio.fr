@@ -8,7 +8,7 @@ tags:
   - 'design'
   - 'lesloisenux'
   - 'ux'
-heroImage: 'images/visuel-article-proximité-1.png'
+heroImage: 'images/visuel-article-proximite-1.png'
 languages:
   - 'fr'
 metaDescription: "La loi de proximité est d'une importance capitale pour les graphistes et UX/UI (+web) designers. On parle de regroupement automatique d'unités en ensembles."
@@ -24,7 +24,7 @@ Cela signifie tout simplement qu’en [UX design](https://www.bearstudio.fr/pres
 
 <figure>
 
-![](images/La-loi-de-proximité-intro-1024x704.png)
+![](images/la-loi-de-proximite-intro-1024x704.png)
 
 <figcaption>
 
@@ -40,7 +40,7 @@ L’utilité de cette loi prend tout son sens quand le designer l’utilise lors
 
 Dans cette première image, nous avons une liste de produits dans laquelle **la loi de proximité** n’est pas appliquée. 
 
-![](images/DontUX.png)
+![](images/dontux.png)
 
 Dans ce grand groupe d’article d’iBanana, il est **difficile** **d’identifier** en un seul coup d'œil les **différents** **groupes** **d'éléments**. Les titres, les images et les prix **se** **mélangent** et rendent le tout **confus**, voire dans certains cas, incompréhensible. L’utilisateur finira par réussir à repérer quel titre renvoi à quelle image, quel prix renvoi à quel titre etc. Néanmoins, cela lui demandera un **effort assez conséquent**. Si toute l’interface a été créée comme ça, il sortira avec un sacré mal de tête ! Tout le but de l’**UX design** est donc de **favoriser** **l’utilisation d’un produit pour l’utilisateur**. Cela passe aussi par la **mise en forme** des éléments qui constituent une **interface**. 
 
@@ -48,7 +48,7 @@ Dans ce grand groupe d’article d’iBanana, il est **difficile** **d’identif
 
 Voici la même liste de produits, mais avec une loi de proximité améliorée. Le design est plus aéré, l’utilisation des espaces blancs a été **renforcée**. Cela permet d'agrandir la place au design dans sa **t**otalité et de distinguer les éléments du même groupe. Ainsi, chaque objet de la liste est beaucoup plus identifiable et il est plus agréable de la consulter.
 
-![](images/DoUX.png)
+![](images/doux.png)
 
 Bien sûr, **la loi de proximité** ne permet pas à elle seule de designer une **interface optimisée** pour l’utilisateur. Il existe de nombreuses autres **règles**, **lois** et **tips** qui permettent de créer de “**bonnes**” interfaces “UX oriented”. Ces éléments feront sûrement l'objet d’autres articles dans le futur. ;)
 

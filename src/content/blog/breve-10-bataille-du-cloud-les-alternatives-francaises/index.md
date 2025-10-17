@@ -8,7 +8,7 @@ tags:
   - 'clevercloud'
   - 'cloud'
   - 'ovh'
-heroImage: 'images/Brève-10.jpg'
+heroImage: 'images/breve-10.jpg'
 languages:
   - 'fr'
 metaDescription: "Qui a dit que l'Europe n'était pas capable de rivaliser avec les géants américains du numérique ? On vous en dit plus sur la fameuse bataille du Cloud..."
