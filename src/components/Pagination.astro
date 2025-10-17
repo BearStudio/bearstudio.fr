@@ -1,0 +1,59 @@
+---
+import type { Page } from 'astro';
+import { PiArrowLeftBold, PiArrowRight } from 'react-icons/pi';
+
+import { cn } from '@/lib/tailwind/utils';
+
+interface Props {
+  page: Page<unknown>;
+  class?: string;
+}
+const { page, class: className = 'md:col-span-2' } = Astro.props;
+---
+
+<>
+  {
+    page.currentPage !== 1 && (
+      <div class={cn(`flex items-center`, className)}>
+        <h3 class="text-sm tracking-widest text-balance uppercase opacity-60">
+          Page {page.currentPage}
+        </h3>
+        <div class="ml-auto flex gap-2">
+          {!!page.url.next && (
+            <a href={page.url.next}>
+              <PiArrowLeftBold className="size-4" />
+              <span class="sr-only">Older articles</span>
+            </a>
+          )}
+          {!!page.url.prev && (
+            <a href={page.url.prev}>
+              <span class="sr-only">Newer articles</span>
+              <PiArrowRight className="size-4" />
+            </a>
+          )}
+        </div>
+      </div>
+    )
+  }
+
+  <slot />
+
+  <div class={cn(`flex items-center justify-between`, className)}>
+    {
+      !!page.url.prev && (
+        <a href={page.url.prev}>
+          Newer <span class="max-xs:sr-only">articles</span>
+          <PiArrowLeftBold className="size-4" />
+        </a>
+      )
+    }
+    {
+      !!page.url.next && (
+        <a href={page.url.next}>
+          <PiArrowRight className="size-4" />
+          Older <span class="max-xs:sr-only">articles</span>
+        </a>
+      )
+    }
+  </div>
+</>
