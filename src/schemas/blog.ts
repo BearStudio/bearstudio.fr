@@ -11,6 +11,7 @@ export const zBlog = ({ image }: SchemaContext) =>
     authors: z.array(reference('team')).optional(),
     date: z.date(),
     tags: z.array(z.string()).optional(),
+    skills: z.array(reference('skills')).optional(),
     categories: z.array(z.string()).optional(),
     state: z.enum(['draft', 'published']).default('draft'),
   });
