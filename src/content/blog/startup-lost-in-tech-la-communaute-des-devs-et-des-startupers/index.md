@@ -66,12 +66,12 @@ _“Nous étions inscrits sur des_ **_Meetup Entrepreneurs_** _et_ **_Développe
 
 <figure>
 
-![Capucine Abrysch, Nathalie Granchon 
-et Carène Tchong qui accueillent les participants](images/lost_in_tech_entrée.jpg)
+![Capucine Abrysch, Nathalie Granchon
+et Carène Tchong qui accueillent les participants](images/lost_in_tech_entree.jpg)
 
 <figcaption>
 
-Capucine Abrysch - Nathalie Granchon - Carène Tchong  
+Capucine Abrysch - Nathalie Granchon - Carène Tchong
 Accueil des participants - Copyright Halimé Taboye
 
 </figcaption>
