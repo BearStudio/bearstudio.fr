@@ -15,10 +15,6 @@ import { getSiteUrl } from './src/lib/site/get-site-url';
 export default defineConfig({
   site: getSiteUrl(),
   trailingSlash: 'never',
-  redirects: {
-    '/': '/blog',
-  },
-
   env: {
     schema: {
       ENV_NAME: envField.string({

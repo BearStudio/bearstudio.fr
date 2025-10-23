@@ -10,8 +10,8 @@ import tslint from 'typescript-eslint';
 export default defineConfig(
   globalIgnores(['node_modules', 'dist', '.astro', 'public']),
   // Base config
-  tslint.configs.recommended,
   eslint.configs.recommended,
+  tslint.configs.recommended,
   ...astro.configs['flat/recommended'],
 
   // For typescript and react files only
