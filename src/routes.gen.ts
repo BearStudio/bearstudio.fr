@@ -5,10 +5,12 @@
 import { assignPaths } from '@bearstudio/astro-typed-routes';
 
 const ROUTES_CONFIG = {
-  "blog": {
-    ":page": {},
-    "posts": {
-      ":id": {}
+  ":locale": {
+    "blog": {
+      ":page": {},
+      "posts": {
+        ":id": {}
+      }
     }
   },
   "rss.xml": {},

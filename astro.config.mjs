@@ -15,6 +15,15 @@ import { getSiteUrl } from './src/lib/site/get-site-url';
 export default defineConfig({
   site: getSiteUrl(),
   trailingSlash: 'never',
+  redirects: {
+    '/': '/blog',
+  },
+
+  i18n: {
+    locales: ['fr', 'en'],
+    defaultLocale: 'fr',
+  },
+
   env: {
     schema: {
       ENV_NAME: envField.string({

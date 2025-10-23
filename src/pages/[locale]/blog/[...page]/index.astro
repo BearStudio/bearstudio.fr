@@ -11,12 +11,27 @@ import SEO from '@/components/SEO/index.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
 import { ROUTES } from '@/routes.gen';
 
+// const localized = (pages) => {
+//   // Faire des copies avec "fr" et "en" dans les params
+// }
+
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const newsPages = await getBlogCollection();
-  return paginate(newsPages, { pageSize: 19 });
+  const paginated = paginate(newsPages, { pageSize: 19 });
+
+  // const localized = localized(paginated);
+
+  const testFr = paginated.map((pagin) => {
+    return { ...pagin, params: { ...pagin.params, locale: 'fr' } };
+  });
+  const testEn = paginated.map((pagin) => {
+    return { ...pagin, params: { ...pagin.params, locale: 'en' } };
+  });
+  return [...testFr, ...testEn];
 }
 
 const { page } = Astro.props;
+const { locale } = Astro.params;
 ---
 
 <MainLayout>
@@ -56,7 +71,8 @@ const { page } = Astro.props;
         {
           page.data.map((post) => (
             <a
-              href={lunalink(ROUTES.blog['posts'][':id'].__path, {
+              href={lunalink(ROUTES[':locale'].blog['posts'][':id'].__path, {
+                locale,
                 id: post.id,
               })}
             >
