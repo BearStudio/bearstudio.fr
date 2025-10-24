@@ -1,17 +1,70 @@
 ---
 import { lunalink } from '@bearstudio/lunalink';
 
+import { cn } from '@/lib/tailwind/utils';
 import { buttonVariants } from '@/components/ui/button';
+import { Logo } from '@/components/ui/logo';
+import { Scratch } from '@/components/ui/scratch';
 import RootLayout from '@/layouts/RootLayout.astro';
 import { ROUTES } from '@/routes.gen';
 ---
 
 <RootLayout>
-  <div class="bg-hero text-hero-foreground min-h-[60vh]">
-    <h1 class="font-heading text-accent text-2xl font-bold">
-      Design & dev pour vos applis web et mobile
-    </h1>
+  <div
+    class="bg-hero text-hero-foreground relative z-0 -mb-[2vw] flex flex-col"
+  >
+    <div
+      class="relative z-10 flex min-h-[70vh] flex-1 flex-col px-8 pt-24 pb-8"
+    >
+      <Logo className="mx-auto w-32 md:w-40" />
+      <div
+        class="flex flex-1 flex-col items-center justify-center gap-4 py-16 text-center"
+      >
+        <h1
+          class="font-heading text-accent max-w-[20ch] text-3xl leading-tight font-bold text-balance sm:text-4xl md:text-5xl"
+        >
+          Design & dev pour vos applis web et mobile
+        </h1>
+        <p class="max-w-[40ch] text-sm text-balance sm:text-base md:text-lg">
+          Expertise en UI/UX et développement d’applications sur mesure.De
+          l’idée à la mise en production.
+        </p>
+        <div
+          class="mx-auto flex w-full max-w-3xs flex-col gap-3 pt-6 sm:max-w-sm sm:flex-row"
+        >
+          <a
+            href={lunalink(ROUTES.blog.__path, {})}
+            class={cn(
+              buttonVariants({ size: 'xl' }),
+              'max-sm:w-full sm:flex-1'
+            )}
+          >
+            Découvrir le blog
+          </a>
+          <a
+            href={lunalink(ROUTES.styleguide.__path, {})}
+            class={cn(
+              buttonVariants({ size: 'xl', variant: 'secondaryOnDark' }),
+              'max-sm:w-full sm:flex-1'
+            )}
+          >
+            Voir le styleguide
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <img
+      src="https://images.unsplash.com/44/MIbCzcvxQdahamZSNQ26_12082014-IMG_3526.jpg?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470"
+      alt=""
+      class="absolute inset-0 z-0 h-full w-full object-cover opacity-30 mix-blend-overlay grayscale"
+    />
+    <div class="from-hero/90 to-hero/0 absolute inset-0 z-0 bg-linear-to-b">
+    </div>
+    <Scratch className="text-background relative z-10 -mt-8 -mb-px" />
   </div>
+
+  <!-- -->
 
   <div class="flex flex-col gap-4 p-4">
     <div class="flex gap-4">
