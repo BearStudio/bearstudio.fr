@@ -47,7 +47,7 @@ Vous pouvez également, juste à partir du nom de la boîte, essayer de trouver 
 
 ## Les communautés chaudes de ta région
 
-La plupart des villes de France ont une communauté IT plus ou moins active. Dans le cas de Mohamed, il y a au moins une fois par mois un [meetup Codeurs en seine](https://www.codeursenseine.com/meetups/) qui a lieu généralement à Seine Innopolis, en plus de la [grande messe annuelle de **Codeurs en seine**](https://www.bearstudio.fr/blog/actualites-web-numerique/codeurs-en-seine-2019-des-devs-de-lux-et-de-lagilite) au mois de novembre !
+La plupart des villes de France ont une communauté IT plus ou moins active. Dans le cas de Mohamed, il y a au moins une fois par mois un [meetup Codeurs en seine](https://www.codeursenseine.com/meetups/) qui a lieu généralement à Seine Innopolis, en plus de la [grande messe annuelle de **Codeurs en seine**](/blog/posts/codeurs-en-seine-2019-des-devs-de-lux-et-de-lagilite) au mois de novembre !
 
 C’est un bon moyen de **rencontrer des gens en activité**, qui sont dans une démarche de partage et de bienveillance. Voir même pour certains, en galère pour recruter.
 

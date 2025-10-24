@@ -85,7 +85,7 @@ Perso ce qui me décourage la plupart du temps, c'est toute la phase de setup n�
 
 Ptit tip: faire ton template peut aussi être une idée de side-project 😉.
 
-**Instant promo:** au Beartudio on a un starter production ready que j'utilise pour setup quelques-uns de mes side projects: [StartUI [web]](https://www.bearstudio.fr/blog/actualites-web-numerique/start-ui).  Je te recommande vivement d'y jeter un coup d'oeil si tu aimes la stack react/typescript !
+**Instant promo:** au Beartudio on a un starter production ready que j'utilise pour setup quelques-uns de mes side projects: [StartUI [web]](/blog/posts/start-ui).  Je te recommande vivement d'y jeter un coup d'oeil si tu aimes la stack react/typescript !
 
 ![start-ui](images/start-ui.png)
 

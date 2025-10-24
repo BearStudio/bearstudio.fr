@@ -177,7 +177,7 @@ Enfin, effectuez un commit. Git vous proposera un message de commit par défaut 
 
 ## Les dépots distants : l'origin du monde
 
-Si vous avez lu jusqu’ici sans vous endormir, vous savez normalement gérer votre dépôt Git local et [versionner](https://www.bearstudio.fr/blog/developpement/versionner-entite-jpa) votre travail sans en créer manuellement plusieurs copies aux noms compliqués.
+Si vous avez lu jusqu’ici sans vous endormir, vous savez normalement gérer votre dépôt Git local et [versionner](/blog/posts/versionner-entite-jpa) votre travail sans en créer manuellement plusieurs copies aux noms compliqués.
 
 Mais si vous vous déplacez et devez utiliser un autre ordinateur, vous n’avez plus accès à vos fichiers. Une solution serait d’en emporter une copie sur un support amovible. Mais ne serait-ce pas un peu saper tous les efforts effectués jusqu’ici pour éviter de multiplier les copies de votre projet ?
 

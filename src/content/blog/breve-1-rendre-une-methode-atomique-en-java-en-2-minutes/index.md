@@ -25,7 +25,7 @@ Une méthode (ou fonction) atomique, c'est une méthode qui ne pourra pas s’ex
 ## Comment rendre une méthode atomique très simplement avec Java ?
 
 La librairie `Funtom Java Utils` permet de rendre une méthode atomique en quelques lignes, à l'aide de la classe `SynchronizedExecutor`  
-Lorsque vous souhaitez rendre du code atomique, dans un service de votre application [Spring](https://www.bearstudio.fr/blog/developpement/versionner-entite-jpa) par exemple, il vous suffit :
+Lorsque vous souhaitez rendre du code atomique, dans un service de votre application [Spring](/blog/posts/versionner-entite-jpa) par exemple, il vous suffit :
 
 - D'instancier un executeur synchrone (SynchronizedExecutor) en attribut de classe: `SynchronizedExecutor atomicExecutor = new SynchronizedExecutor();`
 - Utiliser cet executor dans une méthode pour rendre du code atomique: `atomicExecutor.execute(() -> { // some code to execute });`

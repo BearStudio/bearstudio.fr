@@ -103,4 +103,4 @@ Une fois les userflows faits et validés, la suite peut commencer. Réalisation 
 
 Permettre de définir le parcours utilisateur au plus tôt dans le projet, est un excellent moyen de se donner une vision globale sur le travail à accomplir à tous moments du projet. Il est utilisable par tous les membres du projet (designers, développeurs front et back, commerciaux et clients). Il sera la clé d’une bonne expérience utilisateur et client sur toute conception, du site internet, ou encore de l’application web ou mobile. 
 
-Si vous vous intéressez à l’UX design, on vous conseille de lire notre [article sur la loi de proximité](https://www.bearstudio.fr/blog/design-css/la-loi-de-proximite).
+Si vous vous intéressez à l’UX design, on vous conseille de lire notre [article sur la loi de proximité](/blog/posts/la-loi-de-proximite).

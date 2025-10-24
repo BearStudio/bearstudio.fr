@@ -19,9 +19,9 @@ Sur tous les [projets techniques](https://www.bearstudio.fr/prestations), notamm
 
 Toutes ces mêmes problématiques ont un coût en développement non négligeable et ne font pas partie des problématiques liées au métier de l’application.
 
-Les **générateurs de projets** ont pour but d’[alléger le temps passé sur le développement](https://www.bearstudio.fr/blog/developpement/jhipster-une-technologie-qui-vous-fait-economiser-de-largent) de ces types de problématiques récurrentes. Ils vont pouvoir générer automatiquement les parties non spécifiques au métier, qui n'apportent pas de valeur ajoutée à l’application développée.
+Les **générateurs de projets** ont pour but d’[alléger le temps passé sur le développement](/blog/posts/jhipster-une-technologie-qui-vous-fait-economiser-de-largent) de ces types de problématiques récurrentes. Ils vont pouvoir générer automatiquement les parties non spécifiques au métier, qui n'apportent pas de valeur ajoutée à l’application développée.
 
-Développés par des communautés compétentes et souvent en [open-source](https://www.bearstudio.fr/blog/developpement/linux-logiciels-libres-et-open-source-retrouvez-votre-liberte), les générateurs de projets apportent aussi un cadre au projet en développement avec l’apport de normes et de standards.
+Développés par des communautés compétentes et souvent en [open-source](/blog/posts/linux-logiciels-libres-et-open-source-retrouvez-votre-liberte), les générateurs de projets apportent aussi un cadre au projet en développement avec l’apport de normes et de standards.
 
 ---
 
@@ -226,7 +226,7 @@ Le fonctionnement de Liquibase avec jHipster est simple :
 
 Lors de la génération initiale de vos entités, jHipster va créer les fichiers Liquibase (les changelogs) pour créer les tables correspondantes aux entités.
 
-Et lorsque vous allez vouloir mettre à jour une entité, jHipster va proposer de modifier les fichiers Liquibase générés à la base. Or Liquibase est un outil pour **versionner** les changements sur les bases de données. [Un peu à la manière de Git](https://www.bearstudio.fr/blog/developpement/git) avec les commits, chaque changement devra se faire dans un nouveau `changelog` et il est impossible de modifier un `changelog` précédent. Liquibase lèvera une erreur si vous autorisez jHipster à modifier les fichiers Liquibase initiaux.
+Et lorsque vous allez vouloir mettre à jour une entité, jHipster va proposer de modifier les fichiers Liquibase générés à la base. Or Liquibase est un outil pour **versionner** les changements sur les bases de données. [Un peu à la manière de Git](/blog/posts/git) avec les commits, chaque changement devra se faire dans un nouveau `changelog` et il est impossible de modifier un `changelog` précédent. Liquibase lèvera une erreur si vous autorisez jHipster à modifier les fichiers Liquibase initiaux.
 
 Pour ce point vous avez deux options possibles :
 

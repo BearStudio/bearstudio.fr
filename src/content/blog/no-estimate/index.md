@@ -58,7 +58,7 @@ Au lieu de ça, **l’accent est mis sur la déculpabilisation de chaque partie
 
 ## Et si l’alternative aux estimations était de ne pas en faire ?
 
-Née des débats animés des deux experts en Agilité Woody Zuill et Neil Killick, la philosophie **No Estimate** tente d’apporter une vision un peu plus moderne des estimations. Le principe ? Se baser sur l’évaluation non plus d’un périmètre global et fixe dès le début du projet, mais de petits lots de fonctionnalités - appelées **User Stories** - (ex.: “Se connecter via Facebook”, “Rechercher un produit par date de mise en ligne”, “Modifier les informations de tous mes collaborateurs”...). L’idée est ainsi de pouvoir mesurer régulièrement et tout au long du [développement](https://www.bearstudio.fr/prestations/dev-front) l’évolution du [projet](https://www.bearstudio.fr/blog/design-css/rex-deroulement-projet-ux-bearstudio), et de **se baser sur ce progrès pour prévoir et jauger la suite des évènements.**
+Née des débats animés des deux experts en Agilité Woody Zuill et Neil Killick, la philosophie **No Estimate** tente d’apporter une vision un peu plus moderne des estimations. Le principe ? Se baser sur l’évaluation non plus d’un périmètre global et fixe dès le début du projet, mais de petits lots de fonctionnalités - appelées **User Stories** - (ex.: “Se connecter via Facebook”, “Rechercher un produit par date de mise en ligne”, “Modifier les informations de tous mes collaborateurs”...). L’idée est ainsi de pouvoir mesurer régulièrement et tout au long du [développement](https://www.bearstudio.fr/prestations/dev-front) l’évolution du [projet](/blog/posts/rex-deroulement-projet-ux-bearstudio), et de **se baser sur ce progrès pour prévoir et jauger la suite des évènements.**
 
 <figure>
 
