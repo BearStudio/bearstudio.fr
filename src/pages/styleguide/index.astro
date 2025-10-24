@@ -1,5 +1,6 @@
 ---
 import { Button } from '@/components/ui/button';
+import { Scratch } from '@/components/ui/scratch';
 import RootLayout from '@/layouts/RootLayout.astro';
 ---
 
@@ -23,6 +24,14 @@ import RootLayout from '@/layouts/RootLayout.astro';
         <Button variant="ghostOnDark">ghost</Button>
         <Button variant="linkOnDark">link</Button>
       </div>
+    </div>
+
+    <!-- -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Scratch</h2>
+      <Scratch />
+      <Scratch className="text-accent" />
     </div>
 
     <!-- -->
