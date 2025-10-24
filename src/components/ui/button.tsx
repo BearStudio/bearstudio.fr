@@ -8,7 +8,7 @@ import { cn } from '@/lib/tailwind/utils';
 import { Spinner } from '@/components/ui/spinner';
 
 const buttonVariants = cva(
-  "relative inline-flex w-fit transition-all shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-md text-sm font-medium whitespace-nowrap outline-none  focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-40 disabled:grayscale aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:disabled:opacity-20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 [&>span]:gap-2",
+  "relative gap-2 inline-flex w-fit transition-all shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-md text-sm font-medium whitespace-nowrap outline-none  focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-40 disabled:grayscale aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:disabled:opacity-20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 [&>span]:gap-2",
   {
     variants: {
       variant: {
@@ -21,11 +21,9 @@ const buttonVariants = cva(
         ghost:
           'hover:bg-black/5  [a:hover_&]:bg-black/5 [button:hover_&]:bg-black/5 active:translate-y-[1px]',
         ghostOnDark:
-          'text-white hover:bg-white/5 [a:hover_&]:bg-white/5 [button:hover_&]:bg-white/5 active:translate-y-[1px]',
+          'hover:bg-white/5 [a:hover_&]:bg-white/5 [button:hover_&]:bg-white/5 active:translate-y-[1px]',
 
         link: 'underline-offset-4 hover:underline [a:hover_&]:underline [button:hover_&]:underline',
-        linkOnDark:
-          'text-white underline-offset-4 hover:underline [a:hover_&]:underline [button:hover_&]:underline',
       },
       size: {
         default: 'h-9 px-4 has-[>span>svg]:px-3',

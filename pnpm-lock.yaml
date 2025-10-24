@@ -59,9 +59,6 @@ importers:
       dayjs:
         specifier: 1.11.18
         version: 1.11.18
-      lucide-react:
-        specifier: 0.543.0
-        version: 0.543.0(react@19.2.0)
       radix-ui:
         specifier: 1.4.3
         version: 1.4.3(@types/react-dom@19.2.1(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -71,6 +68,9 @@ importers:
       react-dom:
         specifier: 19.2.0
         version: 19.2.0(react@19.2.0)
+      react-icons:
+        specifier: 5.5.0
+        version: 5.5.0(react@19.2.0)
       sharp:
         specifier: 0.34.3
         version: 0.34.3
@@ -3168,11 +3168,6 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lucide-react@0.543.0:
-    resolution: {integrity: sha512-fpVfuOQO0V3HBaOA1stIiP/A2fPCXHIleRZL16Mx3HmjTYwNSbimhnFBygs2CAfU1geexMX5ItUcWBGUaqw5CA==}
-    peerDependencies:
-      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
-
   magic-string@0.30.19:
     resolution: {integrity: sha512-2N21sPY9Ws53PZvsEpVtNuSW+ScYbQdp4b9qUaL+9QkHUrGFKo56Lg9Emg5s9V/qrtNBmiR01sYhUOwu3H+VOw==}
 
@@ -3704,6 +3699,11 @@ packages:
     resolution: {integrity: sha512-UlbRu4cAiGaIewkPyiRGJk0imDN2T3JjieT6spoL2UeSf5od4n5LB/mQ4ejmxhCFT1tYe8IvaFulzynWovsEFQ==}
     peerDependencies:
       react: ^19.2.0
+
+  react-icons@5.5.0:
+    resolution: {integrity: sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==}
+    peerDependencies:
+      react: '*'
 
   react-refresh@0.17.0:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
@@ -8182,10 +8182,6 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-react@0.543.0(react@19.2.0):
-    dependencies:
-      react: 19.2.0
-
   magic-string@0.30.19:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
@@ -8966,6 +8962,10 @@ snapshots:
     dependencies:
       react: 19.2.0
       scheduler: 0.27.0
+
+  react-icons@5.5.0(react@19.2.0):
+    dependencies:
+      react: 19.2.0
 
   react-refresh@0.17.0: {}
 
