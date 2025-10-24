@@ -10,9 +10,7 @@ import { ROUTES } from '@/routes.gen';
 ---
 
 <RootLayout>
-  <div
-    class="bg-hero text-hero-foreground relative z-0 -mb-[2vw] flex flex-col"
-  >
+  <div class="bg-hero text-hero-foreground relative z-0 flex flex-col">
     <div
       class="relative z-10 flex min-h-[70vh] flex-1 flex-col px-8 pt-24 pb-8"
     >
@@ -61,7 +59,11 @@ import { ROUTES } from '@/routes.gen';
     />
     <div class="from-hero/90 to-hero/0 absolute inset-0 z-0 bg-linear-to-b">
     </div>
-    <Scratch className="text-background relative z-10 -mt-8 -mb-px" />
+    <div class="text-background relative z-10 -mt-8 -mb-px flex">
+      <Scratch className="" />
+      <Scratch className="max-lg:hidden" />
+      <Scratch className="max-2xl:hidden" />
+    </div>
   </div>
 
   <!-- -->
