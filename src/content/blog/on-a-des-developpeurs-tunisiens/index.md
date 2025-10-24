@@ -25,7 +25,7 @@ De même, l'**outsourcing** est perçu comme un moyen de faire travailler des es
 
 Dans le milieu du développement, l’avenir c’est le remote ! Entendons-nous bien, ce n’est pas une philosophie ou un choix, c’est le marché qui est comme ça. A partir de là, il faut s’y préparer.
 
-Le problème c’est qu’un mauvais recrutement peut être fatal et que ça coûte cher… De la même manière qu’[au démarrage du BearStudio](https://www.bearstudio.fr/blog/entrepreneuriat/rex-4-ans-entrepreneuriat-au-bearstudio), plutôt que de me battre sur une envolée de salaires pour des développeurs toujours plus exigeants mais pas forcément plus compétents (voire même nuls et surcotés... je ferai un papier là-dessus un de ces quatre…) j’ai choisi de **créer de la valeur avec des gens qui en ont envie** et besoin !
+Le problème c’est qu’un mauvais recrutement peut être fatal et que ça coûte cher… De la même manière qu’[au démarrage du BearStudio](/blog/posts/rex-4-ans-entrepreneuriat-au-bearstudio), plutôt que de me battre sur une envolée de salaires pour des développeurs toujours plus exigeants mais pas forcément plus compétents (voire même nuls et surcotés... je ferai un papier là-dessus un de ces quatre…) j’ai choisi de **créer de la valeur avec des gens qui en ont envie** et besoin !
 
 **Donc si on essaye d’analyser ça mathématiquement :**
 

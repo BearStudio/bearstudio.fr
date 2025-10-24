@@ -96,7 +96,7 @@ Petit rappel, mais le canard en plastique est un objet, et n’importe quel autr
 
 Il est même possible, au lieu de prendre un objet, de demander à un collègue, un membre de la famille, ou n’importe qui (selon votre niveau d’anxiété sociale et possible NDA) à participer !
 
-Cette demande pourra même se transformer en session de [Peer Programming](https://www.bearstudio.fr/blog/developpement/peer-programming).
+Cette demande pourra même se transformer en session de [Peer Programming](/blog/posts/peer-programming).
 
 ## Petites astuces supplémentaires
 
@@ -132,4 +132,4 @@ Avec cette méthode, au lieu de repartir du début du code, jusqu’à trouver l
 
 > _Si la somme finale n’est pas la bonne, c’est que je n’additionne pas les bons nombres, Je vais regarder comment la somme est calculée. J’additionne un nombre que s’il est impair d’après le code. Mais c’est l’inverse dont j’ai besoin. J’inverse la condition, et ça devrait marcher !_
 
-J’espère que cet article vous sera utile, et que votre premier réflexe au prochain problème sera de trouver votre canard ! Et si votre canard n'est pas suffisant, prenez en otage un collègue pour une session de [Peer Programming](https://www.bearstudio.fr/blog/developpement/peer-programming)
+J’espère que cet article vous sera utile, et que votre premier réflexe au prochain problème sera de trouver votre canard ! Et si votre canard n'est pas suffisant, prenez en otage un collègue pour une session de [Peer Programming](/blog/posts/peer-programming)

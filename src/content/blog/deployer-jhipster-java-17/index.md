@@ -59,4 +59,4 @@ Au [BearStudio](https://www.bearstudio.fr/prestations), nous utilisons [CleverCl
 
 **C'est fait, votre projet JHipster devrait maintenant fonctionner sur Java 17 🎉**
 
-Si vous n'utilisez pas encore JHipster, vous pouvez [apprendre à générer votre premier projet ici](https://www.bearstudio.fr/blog/developpement/jhipster-generateur-projet-hipsters).
+Si vous n'utilisez pas encore JHipster, vous pouvez [apprendre à générer votre premier projet ici](/blog/posts/jhipster-generateur-projet-hipsters).

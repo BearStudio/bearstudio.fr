@@ -74,7 +74,7 @@ Esquisse générale de notre atelier en ligne avec la cliente
 
 </figure>
 
-Nous avons complété ces précieuses données fournies par la cliente par une **analyse comparative** ciblée de la concurrence (en étudiant des plateformes comme Duolingo, iTalki ou Simpler). [Ce qui nous a permis d’identifier des bonnes pratiques UX spécifiques ainsi que des axes d’amélioration.](https://www.bearstudio.fr/blog/design-css/pourquoi-lexperience-utilisateur-est-elle-importante) Cette démarche nous a permis de renforcer les bases solides posées par Léa. Nous avons combiné ses retours centrés sur les utilisateurs avec les standards du secteur. Grâce à cela, nous avons pu définir clairement une orientation forte pour notre travail de design.
+Nous avons complété ces précieuses données fournies par la cliente par une **analyse comparative** ciblée de la concurrence (en étudiant des plateformes comme Duolingo, iTalki ou Simpler). [Ce qui nous a permis d’identifier des bonnes pratiques UX spécifiques ainsi que des axes d’amélioration.](/blog/posts/pourquoi-lexperience-utilisateur-est-elle-importante) Cette démarche nous a permis de renforcer les bases solides posées par Léa. Nous avons combiné ses retours centrés sur les utilisateurs avec les standards du secteur. Grâce à cela, nous avons pu définir clairement une orientation forte pour notre travail de design.
 
 #### Détails supplémentaires sur les données initiales et la recherche
 
@@ -166,9 +166,9 @@ L’un des **ajustements** a concerné le comportement des cartes, avec l’ajou
 
 #### Branding et design system
 
-Lea English disposait déjà **d’une identité visuelle** claire et bien définie, que nous avons intégrée naturellement dans notre design system personnalisé. Nous nous sommes appuyés sur les composants issus de [Start UI Figma](https://www.bearstudio.fr/blog/actualites-web-numerique/start-ui), une bibliothèque open-source pour Figma que nous avons conçue et utilisons en interne.
+Lea English disposait déjà **d’une identité visuelle** claire et bien définie, que nous avons intégrée naturellement dans notre design system personnalisé. Nous nous sommes appuyés sur les composants issus de [Start UI Figma](/blog/posts/start-ui), une bibliothèque open-source pour Figma que nous avons conçue et utilisons en interne.
 
-Les composants que nous utilisons dans Figma sont déjà implémentés dans [Start UI Native](https://www.bearstudio.fr/blog/actualites-web-numerique/start-ui). Cette bibliothèque utilise des technologies comme **TypeScript, React** et **Ficus UI.** Grâce à cela, les développeurs peuvent accélérer immédiatement la phase d’implémentation après la finalisation du design. Par ailleurs, cela garantit une cohérence pour les futures fonctionnalités à venir.
+Les composants que nous utilisons dans Figma sont déjà implémentés dans [Start UI Native](/blog/posts/start-ui). Cette bibliothèque utilise des technologies comme **TypeScript, React** et **Ficus UI.** Grâce à cela, les développeurs peuvent accélérer immédiatement la phase d’implémentation après la finalisation du design. Par ailleurs, cela garantit une cohérence pour les futures fonctionnalités à venir.
 
 ![](images/figma.png)
 
@@ -254,7 +254,7 @@ En préparation de la sortie publique, nous avons conçu l’ensemble des élém
 
 #### Lancement itératif et intégration des fonctionnalités
 
-La sortie initiale, **en avril 2025,** a stratégiquement ciblé environ **300 utilisateurs** dès le jour du lancement, afin de constituer un environnement de test contrôlé. Ces premiers retours ont été d’une grande valeur, nous permettant d’itérer rapidement et d’améliorer [l’expérience utilisateur](https://www.bearstudio.fr/blog/design-css/pourquoi-lexperience-utilisateur-est-elle-importante) en nous appuyant sur des retours directs.
+La sortie initiale, **en avril 2025,** a stratégiquement ciblé environ **300 utilisateurs** dès le jour du lancement, afin de constituer un environnement de test contrôlé. Ces premiers retours ont été d’une grande valeur, nous permettant d’itérer rapidement et d’améliorer [l’expérience utilisateur](/blog/posts/pourquoi-lexperience-utilisateur-est-elle-importante) en nous appuyant sur des retours directs.
 
 ###### Personnalisation du rythme d’apprentissage
 

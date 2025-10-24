@@ -71,7 +71,7 @@ Malgré les avantages de cette technique, il existe des inconvénients à ne pas
 
 ### Fatigue accrue
 
-En travaillant seul, il est possible de mettre son cerveau en autopilote, pendant que notre esprit est occupé. Mais en peer programming, il faut toujours être attentif, et participer au travail du groupe. Il faut se concentrer sur une tâche sur des périodes plus longues, et donc la fatigue survient plus vite. De plus, sans pouvoir maintenir sa concentration, il est plus difficile d’[être productif](https://www.bearstudio.fr/blog/entrepreneuriat/vous-avez-dit-productivite), et de se retrouver frustré par la situation.
+En travaillant seul, il est possible de mettre son cerveau en autopilote, pendant que notre esprit est occupé. Mais en peer programming, il faut toujours être attentif, et participer au travail du groupe. Il faut se concentrer sur une tâche sur des périodes plus longues, et donc la fatigue survient plus vite. De plus, sans pouvoir maintenir sa concentration, il est plus difficile d’[être productif](/blog/posts/vous-avez-dit-productivite), et de se retrouver frustré par la situation.
 
 Le mieux pour éviter cette situation est de prendre des pauses de façon régulière pour recharger ses batteries.
 

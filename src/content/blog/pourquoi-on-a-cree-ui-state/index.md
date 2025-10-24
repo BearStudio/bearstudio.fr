@@ -179,5 +179,5 @@ Lien du github : [https://github.com/BearStudio/ui-state](https://github.com/Bea
 
 Et pour continuer sur la lancée, jetez un oeil à nos autres articles :
 
-- [Start UI [Web]](https://www.bearstudio.fr/blog/actualites-web-numerique/start-ui)
-- [Love letter aux side-projects](https://www.bearstudio.fr/blog/developpement/love-letter-aux-side-projects)
+- [Start UI [Web]](/blog/posts/start-ui)
+- [Love letter aux side-projects](/blog/posts/love-letter-aux-side-projects)

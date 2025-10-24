@@ -95,7 +95,7 @@ Concernant la ligne éditoriale, on essaye de composer une vision large de la te
 
 - quelques sujets de niveau débutant, intermédiaire et expert
 
-- quelques sujets de niche (hello [rust](https://www.bearstudio.fr/blog/developpement/rust) :p)
+- quelques sujets de niche (hello [rust](/blog/posts/rust) :p)
 
 - quelques sujets avec des têtes ou des noms connus (parce que ça attire le public…)
 

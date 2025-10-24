@@ -22,7 +22,7 @@ Un jour, je me suis dit que ça pourrait être cool de faire un petit article de
 
 ## Pourquoi j’ai monté ma boite ?
 
-Rien d’extraordinaire, j’ai commencé ma carrière en tant que **développeur Java dans une ESN** (SSII à l’époque), ensuite j’ai eu l’opportunité d’entrer dans une startup appelée **SmartPanda Network**. Je suis passé de développeur à CTO : le produit ne trouve pas son marché, trop de cash dépensé, du coup l’équipe technique passe de 5 à 1. Je monte alors une nouvelle équipe moins coûteuse et plus efficace. Quelques années plus tard, l’entreprise reçoit une proposition de rachat par **Docaposte**. C’est cool, mais par contre je suis de plus en plus en désaccord sur le [management](https://www.bearstudio.fr/blog/actualites-web-numerique/9-trucs-abstraction-quand-on-manage) avec mon CEO.
+Rien d’extraordinaire, j’ai commencé ma carrière en tant que **développeur Java dans une ESN** (SSII à l’époque), ensuite j’ai eu l’opportunité d’entrer dans une startup appelée **SmartPanda Network**. Je suis passé de développeur à CTO : le produit ne trouve pas son marché, trop de cash dépensé, du coup l’équipe technique passe de 5 à 1. Je monte alors une nouvelle équipe moins coûteuse et plus efficace. Quelques années plus tard, l’entreprise reçoit une proposition de rachat par **Docaposte**. C’est cool, mais par contre je suis de plus en plus en désaccord sur le [management](/blog/posts/9-trucs-abstraction-quand-on-manage) avec mon CEO.
 
 2 choix s’offrent à moi : 
 
