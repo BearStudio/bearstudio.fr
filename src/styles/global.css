@@ -111,7 +111,7 @@
   --popover: var(--color-white);
   --popover-foreground: var(--color-brand-800);
   --primary: var(--color-brand-700);
-  --primary-border: var(--color-brand-900);
+  --primary-border: var(--color-brand-800);
   --primary-foreground: var(--color-white);
   --secondary: var(--color-neutral-50);
   --secondary-border: var(--color-brand-200);
@@ -124,7 +124,7 @@
   --destructive: var(--color-negative-600);
   --destructive-border: var(--color-negative-700);
   --destructive-foreground: var(--color-negative-50);
-  --hero: var(--color-brand-800);
+  --hero: var(--color-brand-900);
   --hero-foreground: var(--color-brand-100);
   --input: var(--color-neutral-200);
   --ring: var(--color-neutral-300);

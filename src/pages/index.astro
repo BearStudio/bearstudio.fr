@@ -1,8 +1,9 @@
 ---
 import { lunalink } from '@bearstudio/lunalink';
+import { LucideChevronDown, LucideLanguages, LucideMail } from 'lucide-react';
 
 import { cn } from '@/lib/tailwind/utils';
-import { buttonVariants } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
 import { Scratch } from '@/components/ui/scratch';
 import RootLayout from '@/layouts/RootLayout.astro';
@@ -12,11 +13,27 @@ import { ROUTES } from '@/routes.gen';
 <RootLayout>
   <div class="bg-hero text-hero-foreground relative z-0 flex flex-col">
     <div
-      class="relative z-10 flex min-h-[70vh] flex-1 flex-col px-8 pt-24 pb-8"
+      class="relative z-10 mx-auto flex w-full max-w-5xl justify-between p-4"
     >
-      <Logo className="mx-auto w-32 md:w-40" />
+      <Button variant="ghostOnDark" className="opacity-80 hover:opacity-100">
+        <LucideLanguages className="opacity-60" />
+        Français
+        <LucideChevronDown className="opacity-60" />
+      </Button>
+      <Button variant="ghostOnDark" className="opacity-80 hover:opacity-100">
+        <LucideMail className="opacity-60" />
+        Nous contacter
+      </Button>
+    </div>
+
+    <div
+      class="relative z-10 flex min-h-[80vh] flex-1 flex-col gap-3 px-8 pt-8 pb-16"
+    >
+      <a href="/">
+        <Logo className="mx-auto w-32 sm:w-40 md:w-48" />
+      </a>
       <div
-        class="flex flex-1 flex-col items-center justify-center gap-4 py-16 text-center"
+        class="flex flex-1 flex-col items-center justify-center gap-4 pt-4 pb-4 text-center"
       >
         <h1
           class="font-heading text-accent max-w-[20ch] text-3xl leading-tight font-bold text-balance sm:text-4xl md:text-5xl"
@@ -24,11 +41,11 @@ import { ROUTES } from '@/routes.gen';
           Design & dev pour vos applis web et mobile
         </h1>
         <p class="max-w-[40ch] text-sm text-balance sm:text-base md:text-lg">
-          Expertise en UI/UX et développement d’applications sur mesure.De
+          Expertise en UI/UX et développement d’applications sur mesure. De
           l’idée à la mise en production.
         </p>
         <div
-          class="mx-auto flex w-full max-w-3xs flex-col gap-3 pt-6 sm:max-w-sm sm:flex-row"
+          class="mx-auto flex w-full max-w-3xs flex-col gap-3 pt-3 sm:max-w-sm sm:flex-row sm:gap-5 md:pt-6"
         >
           <a
             href={lunalink(ROUTES.blog.__path, {})}
@@ -68,7 +85,7 @@ import { ROUTES } from '@/routes.gen';
 
   <!-- -->
 
-  <div class="flex flex-col gap-4 p-4">
+  <div class="flex h-[2000px] flex-col gap-4 p-4">
     <div class="flex gap-4">
       <a
         href={lunalink(ROUTES.blog.__path, {})}
