@@ -8,34 +8,31 @@ import { PiArrowLeftBold, PiArrowRight } from 'react-icons/pi';
 import { getBlogCollection } from '@/lib/blog';
 import FormattedDate from '@/components/FormattedDate.astro';
 import SEO from '@/components/SEO/index.astro';
+import { defaultLocale, locales } from '@/i18n';
 import MainLayout from '@/layouts/MainLayout.astro';
 import { ROUTES } from '@/routes.gen';
 
-// const localized = (pages) => {
-//   // Faire des copies avec "fr" et "en" dans les params
-// }
-
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const newsPages = await getBlogCollection();
-  const paginated = paginate(newsPages, { pageSize: 19 });
 
-  // const localized = localized(paginated);
-
-  const testFr = paginated.map((pagin) => {
-    return { ...pagin, params: { ...pagin.params, locale: 'fr' } };
-  });
-  const testEn = paginated.map((pagin) => {
-    return { ...pagin, params: { ...pagin.params, locale: 'en' } };
-  });
-  return [...testFr, ...testEn];
+  return locales.flatMap((locale) =>
+    paginate(newsPages, {
+      pageSize: 20,
+      params: { locale },
+    })
+  );
+  // Les lien de previpus et after ne sont pas adapté, il faut créer les variantes
+  // return paginated.flatMap((page) => getAllLanguagePageVariant(page));
 }
 
 const { page } = Astro.props;
-const { locale } = Astro.params;
+
+console.log({ test: Astro.params });
+const locale = Astro.currentLocale ?? defaultLocale;
 ---
 
-<MainLayout>
-  <!-- [TODO]: Metadata -->
+<MainLayout
+  ><!-- [TODO]: Metadata -->
   <SEO
     slot="seo"
     title="Blog"

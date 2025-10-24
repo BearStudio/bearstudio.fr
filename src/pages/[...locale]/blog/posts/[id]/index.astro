@@ -8,6 +8,7 @@ import { getContainerRenderer as mdxContainerRenderer } from '@astrojs/mdx';
 
 import dayjs from 'dayjs';
 
+import { getAllLanguagePageVariant } from '@/lib/site/i18n-routing';
 import { cn } from '@/lib/tailwind/utils';
 import FormattedDate from '@/components/FormattedDate.astro';
 import Prose from '@/components/Prose.astro';
@@ -16,10 +17,13 @@ import MainLayout from '@/layouts/MainLayout.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map((post) => ({
+
+  const pages = posts.map((post) => ({
     params: { id: post.id },
     props: post,
   }));
+
+  return pages.flatMap((page) => getAllLanguagePageVariant(page));
 }
 type Props = CollectionEntry<'blog'>;
 

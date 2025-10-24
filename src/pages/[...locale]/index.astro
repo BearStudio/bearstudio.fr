@@ -10,12 +10,20 @@ import {
   PiUsersThreeDuotone,
 } from 'react-icons/pi';
 
+import { getAllLanguagePageVariant } from '@/lib/site/i18n-routing';
 import { cn } from '@/lib/tailwind/utils';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
 import { Scratch } from '@/components/ui/scratch';
+import { defaultLocale } from '@/i18n';
 import RootLayout from '@/layouts/RootLayout.astro';
 import { ROUTES } from '@/routes.gen';
+
+export async function getStaticPaths() {
+  return getAllLanguagePageVariant();
+}
+
+const locale = Astro.currentLocale ?? defaultLocale;
 ---
 
 <RootLayout>
@@ -112,7 +120,7 @@ import { ROUTES } from '@/routes.gen';
           class="mx-auto flex w-full max-w-3xs flex-col gap-3 pt-3 sm:max-w-sm sm:flex-row sm:gap-5 md:pt-6"
         >
           <a
-            href={lunalink(ROUTES.blog.__path, {})}
+            href={lunalink(ROUTES[':locale'].blog.__path, { locale })}
             class={cn(
               buttonVariants({ size: 'xl' }),
               'max-sm:w-full sm:flex-1'
@@ -148,6 +156,4 @@ import { ROUTES } from '@/routes.gen';
   </div>
 
   <!-- -->
-
-  <div class="flex h-[2000px] flex-col gap-4 p-4"></div>
 </RootLayout>
