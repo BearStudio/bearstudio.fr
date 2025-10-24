@@ -1,0 +1,28 @@
+---
+import { Button } from '@/components/ui/button';
+import RootLayout from '@/layouts/RootLayout.astro';
+---
+
+<RootLayout>
+  <div class="container mx-auto flex flex-col gap-8 p-8">
+    <h1 class="font-heading text-4xl font-bold">Styleguide</h1>
+
+    <!-- -->
+
+    <div class="flex gap-4">
+      <Button>default</Button>
+      <Button variant="secondary">secondary</Button>
+      <Button variant="ghost">ghost</Button>
+      <Button variant="link">link</Button>
+    </div>
+
+    <div class="bg-hero flex gap-4 rounded-xl p-4">
+      <Button>default</Button>
+      <Button variant="secondaryOnDark">secondaryOnDark</Button>
+      <Button variant="ghostOnDark">ghost</Button>
+      <Button variant="linkOnDark">link</Button>
+    </div>
+
+    <!-- -->
+  </div>
+</RootLayout>

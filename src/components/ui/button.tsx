@@ -8,20 +8,24 @@ import { cn } from '@/lib/tailwind/utils';
 import { Spinner } from '@/components/ui/spinner';
 
 const buttonVariants = cva(
-  "relative inline-flex w-fit transition shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-md text-sm font-medium whitespace-nowrap outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-40 disabled:grayscale aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:disabled:opacity-20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 [&>span]:gap-2",
+  "relative inline-flex w-fit transition-all shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-md text-sm font-medium whitespace-nowrap outline-none  focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-40 disabled:grayscale aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:disabled:opacity-20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 [&>span]:gap-2",
   {
     variants: {
       variant: {
         default:
-          'bg-accent text-accent-foreground border border-b-3 pb-px active:translate-y-[1px] active:pb-0 active:border-b border-accent-border hover:bg-accent/90 [a:hover_&]:bg-accent/90 [button:hover_&]:bg-accent/90',
+          'bg-accent text-accent-foreground border border-b-3 pb-px active:translate-y-[1px] active:pb-[2px] active:border-b border-accent-border hover:bg-accent/90 [a:hover_&]:bg-accent/90 [button:hover_&]:bg-accent/90',
         secondary:
-          'bg-secondary text-secondary-foreground border border-b-3 pb-px active:translate-y-[1px] active:pb-0 active:border-b border-secondary-border hover:bg-secondary/90 [a:hover_&]:bg-secondary/90 [button:hover_&]:bg-secondary/90',
+          'bg-secondary text-secondary-foreground border border-b-3 pb-px active:translate-y-[1px] active:pb-[2px] active:border-b border-secondary-border hover:bg-secondary/90 [a:hover_&]:bg-secondary/90 [button:hover_&]:bg-secondary/90',
         secondaryOnDark:
-          'bg-primary text-primary-foreground border border-b-3 pb-px active:translate-y-[1px] active:pb-0 active:border-b border-primary-border hover:bg-primary/90 [a:hover_&]:bg-primary/90 [button:hover_&]:bg-primary/90',
+          'bg-primary text-primary-foreground border border-b-3 pb-px active:translate-y-[1px] active:pb-[2px] active:border-b border-primary-border hover:bg-primary/90 [a:hover_&]:bg-primary/90 [button:hover_&]:bg-primary/90',
         ghost:
-          'hover:bg-black/5 dark:hover:bg-white/10 [a:hover_&]:bg-black/5 dark:[a:hover_&]:bg-white/10 [button:hover_&]:bg-black/5 dark:[button:hover_&]:bg-white/10',
+          'hover:bg-black/5  [a:hover_&]:bg-black/5 [button:hover_&]:bg-black/5 active:translate-y-[1px]',
+        ghostOnDark:
+          'text-white hover:bg-white/5 [a:hover_&]:bg-white/5 [button:hover_&]:bg-white/5 active:translate-y-[1px]',
 
         link: 'underline-offset-4 hover:underline [a:hover_&]:underline [button:hover_&]:underline',
+        linkOnDark:
+          'text-white underline-offset-4 hover:underline [a:hover_&]:underline [button:hover_&]:underline',
       },
       size: {
         default: 'h-9 px-4 has-[>span>svg]:px-3',

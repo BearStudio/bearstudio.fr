@@ -1,17 +1,27 @@
 ---
-import { Button } from '@/components/ui/button';
+import { lunalink } from '@bearstudio/lunalink';
+
+import { Button, buttonVariants } from '@/components/ui/button';
 import RootLayout from '@/layouts/RootLayout.astro';
+import { ROUTES } from '@/routes.gen';
 ---
 
 <RootLayout>
   <div class="flex flex-col gap-4 p-4">
     <h1 class="font-heading text-2xl font-bold">BearStudio</h1>
     <div class="flex gap-4">
-      <Button size="xl">My Button</Button>
-      <Button size="xl" variant="secondary">My Button</Button>
-      <Button size="xl" variant="secondaryOnDark">My Button</Button>
-      <Button size="xl" variant="ghost">My Button</Button>
-      <Button size="xl" variant="link">My Button</Button>
+      <a
+        href={lunalink(ROUTES.blog.__path, {})}
+        class={buttonVariants({ size: 'xl' })}
+      >
+        Blog
+      </a>
+      <a
+        href={lunalink(ROUTES.styleguide.__path, {})}
+        class={buttonVariants({ size: 'xl', variant: 'secondary' })}
+      >
+        Styleguide
+      </a>
     </div>
   </div>
 </RootLayout>

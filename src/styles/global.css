@@ -110,7 +110,7 @@
   --popover: var(--color-white);
   --popover-foreground: var(--color-brand-800);
   --primary: var(--color-brand-700);
-  --primary-border: var(--color-brand-800);
+  --primary-border: var(--color-brand-900);
   --primary-foreground: var(--color-white);
   --secondary: var(--color-neutral-50);
   --secondary-border: var(--color-brand-200);
@@ -165,6 +165,8 @@
   --color-destructive: var(--destructive);
   --color-destructive-border: var(--destructive-border);
   --color-destructive-foreground: var(--destructive-foreground);
+  --color-hero: var(--hero);
+  --color-hero-foreground: var(--hero-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);

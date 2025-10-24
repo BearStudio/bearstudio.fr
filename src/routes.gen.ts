@@ -11,7 +11,8 @@ const ROUTES_CONFIG = {
       ":id": {}
     }
   },
-  "rss.xml": {}
+  "rss.xml": {},
+  "styleguide": {}
 } as const;
 
 export const ROUTES = assignPaths(ROUTES_CONFIG);
