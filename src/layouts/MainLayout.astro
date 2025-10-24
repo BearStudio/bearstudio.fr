@@ -1,15 +1,12 @@
 ---
-import Footer from '@/components/Footer.astro';
-import Header from '@/components/Header.astro';
 import RootLayout from '@/layouts/RootLayout.astro';
 ---
 
 <RootLayout>
   <slot name="seo" slot="seo" />
   <slot name="ld+json" slot="ld+json" />
-  <Header />
+
   <main class="flex flex-1 flex-col">
     <slot />
   </main>
-  <Footer />
 </RootLayout>

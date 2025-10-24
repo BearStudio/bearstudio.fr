@@ -7,8 +7,13 @@ import { ROUTES } from '@/routes.gen';
 ---
 
 <RootLayout>
+  <div class="bg-hero text-hero-foreground min-h-[60vh]">
+    <h1 class="font-heading text-accent text-2xl font-bold">
+      Design & dev pour vos applis web et mobile
+    </h1>
+  </div>
+
   <div class="flex flex-col gap-4 p-4">
-    <h1 class="font-heading text-2xl font-bold">BearStudio</h1>
     <div class="flex gap-4">
       <a
         href={lunalink(ROUTES.blog.__path, {})}
