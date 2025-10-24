@@ -9,18 +9,20 @@ import RootLayout from '@/layouts/RootLayout.astro';
 
     <!-- -->
 
-    <div class="flex gap-4">
-      <Button>default</Button>
-      <Button variant="secondary">secondary</Button>
-      <Button variant="ghost">ghost</Button>
-      <Button variant="link">link</Button>
-    </div>
-
-    <div class="bg-hero flex gap-4 rounded-xl p-4">
-      <Button>default</Button>
-      <Button variant="secondaryOnDark">secondaryOnDark</Button>
-      <Button variant="ghostOnDark">ghost</Button>
-      <Button variant="linkOnDark">link</Button>
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Buttons</h2>
+      <div class="flex flex-wrap gap-4">
+        <Button>default</Button>
+        <Button variant="secondary">secondary</Button>
+        <Button variant="ghost">ghost</Button>
+        <Button variant="link">link</Button>
+      </div>
+      <div class="bg-hero flex flex-wrap gap-4 rounded-xl p-4">
+        <Button>default</Button>
+        <Button variant="secondaryOnDark">secondaryOnDark</Button>
+        <Button variant="ghostOnDark">ghost</Button>
+        <Button variant="linkOnDark">link</Button>
+      </div>
     </div>
 
     <!-- -->

@@ -114,7 +114,7 @@
   --primary-foreground: var(--color-white);
   --secondary: var(--color-neutral-50);
   --secondary-border: var(--color-brand-200);
-  --secondary-foreground: var(--color-brand-900);
+  --secondary-foreground: var(--color-brand-800);
   --muted: var(--color-brand-100);
   --muted-foreground: var(--color-brand-600);
   --accent: var(--color-accent-500);
