@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 
 import { lunalink } from '@bearstudio/lunalink';
 import type { GetStaticPathsOptions } from 'astro';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { PiArrowLeftBold, PiArrowRight } from 'react-icons/pi';
 
 import { getBlogCollection } from '@/lib/blog';
 import FormattedDate from '@/components/FormattedDate.astro';
@@ -39,14 +39,14 @@ const { page } = Astro.props;
               <div class="ml-auto flex gap-2">
                 {!!page.url.next && (
                   <a href={page.url.next}>
-                    <ArrowLeft className="size-4" />
+                    <PiArrowLeftBold className="size-4" />
                     <span class="sr-only">Older articles</span>
                   </a>
                 )}
                 {!!page.url.prev && (
                   <a href={page.url.prev}>
                     <span class="sr-only">Newer articles</span>
-                    <ArrowRight className="size-4" />
+                    <PiArrowRight className="size-4" />
                   </a>
                 )}
               </div>
@@ -80,14 +80,14 @@ const { page } = Astro.props;
             !!page.url.prev && (
               <a href={page.url.prev}>
                 Newer <span class="max-xs:sr-only">articles</span>
-                <ArrowLeft />
+                <PiArrowLeftBold />
               </a>
             )
           }
           {
             !!page.url.next && (
               <a href={page.url.next}>
-                <ArrowRight /> Older{' '}
+                <PiArrowRight /> Older{' '}
                 <span class="max-xs:sr-only">articles</span>
               </a>
             )

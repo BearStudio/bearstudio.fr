@@ -1,6 +1,14 @@
 ---
 import { lunalink } from '@bearstudio/lunalink';
-import { LucideChevronDown, LucideLanguages, LucideMail } from 'lucide-react';
+import {
+  PiCaretDownBold,
+  PiDotsThreeOutlineVerticalDuotone,
+  PiEnvelopeBold,
+  PiNoteBold,
+  PiSketchLogoDuotone,
+  PiTranslateDuotone,
+  PiUsersThreeDuotone,
+} from 'react-icons/pi';
 
 import { cn } from '@/lib/tailwind/utils';
 import { Button, buttonVariants } from '@/components/ui/button';
@@ -11,38 +19,94 @@ import { ROUTES } from '@/routes.gen';
 ---
 
 <RootLayout>
+  <div
+    class="pointer-events-none fixed top-0 right-0 left-0 z-20 h-20 p-3 max-lg:hidden"
+  >
+    <div
+      class="to-hero/85 from-hero/80 text-hero-foreground border-hero pointer-events-auto mx-auto flex h-full w-full max-w-5xl items-center justify-between rounded-xl border border-b-2 bg-linear-to-b pr-2 pl-4 backdrop-blur-md"
+    >
+      <div class="flex gap-8">
+        <a href="/" class="flex">
+          <Logo className="-mt-1 w-28" />
+        </a>
+        <div class="flex items-center gap-px">
+          <a href="#" class={cn(buttonVariants({ variant: 'ghostOnDark' }))}>
+            <PiSketchLogoDuotone className="opacity-60" />
+            Services
+          </a>
+          <a href="#" class={cn(buttonVariants({ variant: 'ghostOnDark' }))}>
+            <PiUsersThreeDuotone className="opacity-60" />
+            Équipe
+          </a>
+          <a href="#" class={cn(buttonVariants({ variant: 'ghostOnDark' }))}>
+            <PiNoteBold className="opacity-60" />
+            Blog
+          </a>
+          <a href="#" class={cn(buttonVariants({ variant: 'ghostOnDark' }))}>
+            <PiDotsThreeOutlineVerticalDuotone className="opacity-60" />
+            Plus
+          </a>
+        </div>
+      </div>
+      <div class="flex gap-px">
+        <a
+          href="#"
+          class={cn(
+            buttonVariants({ variant: 'ghostOnDark' }),
+            'opacity-80 hover:opacity-100'
+          )}
+        >
+          <PiEnvelopeBold className="opacity-60" />
+          Nous contacter
+        </a>
+        <Button variant="ghostOnDark" className="opacity-80 hover:opacity-100">
+          <PiTranslateDuotone className="opacity-60" />
+          Français
+          <PiCaretDownBold className="opacity-60" />
+        </Button>
+      </div>
+    </div>
+  </div>
   <div class="bg-hero text-hero-foreground relative z-0 flex flex-col">
     <div
-      class="relative z-10 mx-auto flex w-full max-w-5xl justify-between p-4"
+      class="relative z-10 mx-auto flex w-full max-w-5xl justify-between p-4 lg:hidden"
     >
       <Button variant="ghostOnDark" className="opacity-80 hover:opacity-100">
-        <LucideLanguages className="opacity-60" />
+        <PiTranslateDuotone className="opacity-60" />
         Français
-        <LucideChevronDown className="opacity-60" />
+        <PiCaretDownBold className="opacity-60" />
       </Button>
-      <Button variant="ghostOnDark" className="opacity-80 hover:opacity-100">
-        <LucideMail className="opacity-60" />
+      <a
+        href="#"
+        class={cn(
+          buttonVariants({ variant: 'ghostOnDark' }),
+          'opacity-80 hover:opacity-100'
+        )}
+      >
+        <PiEnvelopeBold className="opacity-60" />
         Nous contacter
-      </Button>
+      </a>
     </div>
 
     <div
       class="relative z-10 flex min-h-[80vh] flex-1 flex-col gap-3 px-8 pt-8 pb-16"
     >
       <a href="/">
-        <Logo className="mx-auto w-32 sm:w-40 md:w-48" />
+        <Logo className="mx-auto w-32 sm:w-40 lg:hidden" />
       </a>
       <div
         class="flex flex-1 flex-col items-center justify-center gap-4 pt-4 pb-4 text-center"
       >
         <h1
-          class="font-heading text-accent max-w-[20ch] text-3xl leading-tight font-bold text-balance sm:text-4xl md:text-5xl"
+          class="font-heading text-accent max-w-[20ch] text-3xl leading-tight font-medium text-balance sm:text-4xl md:text-5xl"
         >
           Design & dev pour vos applis web et mobile
         </h1>
-        <p class="max-w-[40ch] text-sm text-balance sm:text-base md:text-lg">
-          Expertise en UI/UX et développement d’applications sur mesure. De
-          l’idée à la mise en production.
+        <p
+          class="max-w-[40ch] text-sm leading-relaxed text-balance sm:text-base md:text-lg"
+        >
+          Expertise en UI/UX et développement d’applications sur mesure.
+          De&nbsp;l’idée à la mise en production.
         </p>
         <div
           class="mx-auto flex w-full max-w-3xs flex-col gap-3 pt-3 sm:max-w-sm sm:flex-row sm:gap-5 md:pt-6"
@@ -85,20 +149,5 @@ import { ROUTES } from '@/routes.gen';
 
   <!-- -->
 
-  <div class="flex h-[2000px] flex-col gap-4 p-4">
-    <div class="flex gap-4">
-      <a
-        href={lunalink(ROUTES.blog.__path, {})}
-        class={buttonVariants({ size: 'xl' })}
-      >
-        Blog
-      </a>
-      <a
-        href={lunalink(ROUTES.styleguide.__path, {})}
-        class={buttonVariants({ size: 'xl', variant: 'secondary' })}
-      >
-        Styleguide
-      </a>
-    </div>
-  </div>
+  <div class="flex h-[2000px] flex-col gap-4 p-4"></div>
 </RootLayout>
