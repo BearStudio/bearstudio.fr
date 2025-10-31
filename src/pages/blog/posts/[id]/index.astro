@@ -6,13 +6,16 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import { experimental_AstroContainer } from 'astro/container';
 import { getContainerRenderer as mdxContainerRenderer } from '@astrojs/mdx';
 
+import { lunalink } from '@bearstudio/lunalink';
 import dayjs from 'dayjs';
 
+import { getAuthorsFromBlogPost } from '@/lib/blog';
 import { cn } from '@/lib/tailwind/utils';
 import FormattedDate from '@/components/FormattedDate.astro';
 import Prose from '@/components/Prose.astro';
 import SEO from '@/components/SEO/index.astro';
 import MainLayout from '@/layouts/MainLayout.astro';
+import { ROUTES } from '@/routes.gen';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -37,7 +40,7 @@ const articleBody = (await container.renderToString(Content))
   .replace(/<[^>]*>/g, '')
   .trim();
 const wordCount = articleBody.split(' ').length;
-const authors = post.data.authors ?? []; // TODO: Get authors data when team members are added
+const authors = await getAuthorsFromBlogPost(post);
 ---
 
 <MainLayout>
@@ -61,7 +64,7 @@ const authors = post.data.authors ?? []; // TODO: Get authors data when team mem
       isAccessibleForFree: true,
       author: authors.map((author) => ({
         '@type': 'Person',
-        name: author,
+        name: author?.data.name ?? '',
       })),
       keywords: post.data.tags ?? [],
     }}
@@ -91,6 +94,16 @@ const authors = post.data.authors ?? []; // TODO: Get authors data when team mem
         {title}
       </h1>
       <FormattedDate date={date} />
+      {
+        authors?.map(
+          (author) =>
+            author && (
+              <a href={lunalink(ROUTES.team[':id'].__path, { id: author.id })}>
+                {author.data.name}
+              </a>
+            )
+        )
+      }
     </div>
     <Prose>
       <Content />

@@ -1,4 +1,4 @@
-import { z, type SchemaContext } from 'astro:content';
+import { reference, z, type SchemaContext } from 'astro:content';
 
 export type Blog = z.infer<ReturnType<typeof zBlog>>;
 export const zBlog = ({ image }: SchemaContext) =>
@@ -8,7 +8,7 @@ export const zBlog = ({ image }: SchemaContext) =>
     excerpt: z.string().optional(),
     metaDescription: z.string().optional(),
     heroImage: image().optional(),
-    authors: z.array(z.string()).optional(),
+    authors: z.array(reference('team')).optional(),
     date: z.date(),
     tags: z.array(z.string()).optional(),
     categories: z.array(z.string()).optional(),
