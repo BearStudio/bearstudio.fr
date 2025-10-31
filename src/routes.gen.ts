@@ -12,10 +12,6 @@ const ROUTES_CONFIG = {
     }
   },
   "rss.xml": {},
-  "skills": {
-    ":page": {},
-    ":id": {}
-  },
   "styleguide": {},
   "team": {
     ":page": {},
