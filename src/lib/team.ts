@@ -20,7 +20,7 @@ const sortByOrder = (person1: TeamEntry, person2: TeamEntry) => {
     return -1;
   }
 
-  return person1.data.order - person2.data.order > 0 ? 1 : -1;
+  return person1.data.order - person2.data.order;
 };
 
 export async function getTeamCollection({ limit = undefined }: Params = {}) {
@@ -28,9 +28,5 @@ export async function getTeamCollection({ limit = undefined }: Params = {}) {
     .filter(isVisible)
     .sort(sortByOrder);
 
-  if (limit) {
-    return team.slice(0, limit);
-  }
-
-  return team;
+  return team.slice(0, limit);
 }

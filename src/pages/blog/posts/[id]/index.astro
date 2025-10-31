@@ -40,7 +40,7 @@ const articleBody = (await container.renderToString(Content))
   .replace(/<[^>]*>/g, '')
   .trim();
 const wordCount = articleBody.split(' ').length;
-const authors = await getAuthorsFromBlogPost(post); // TODO: Get authors data when team members are added
+const authors = await getAuthorsFromBlogPost(post);
 ---
 
 <MainLayout>
