@@ -2,19 +2,16 @@
 import type { Page } from 'astro';
 import { PiArrowLeftBold, PiArrowRight } from 'react-icons/pi';
 
-import { cn } from '@/lib/tailwind/utils';
-
 interface Props {
   page: Page<unknown>;
-  class?: string;
 }
-const { page, class: className = 'md:col-span-2' } = Astro.props;
+const { page } = Astro.props;
 ---
 
 <>
   {
     page.currentPage !== 1 && (
-      <div class={cn(`flex items-center`, className)}>
+      <div class="flex py-4">
         <h3 class="text-sm tracking-widest text-balance uppercase opacity-60">
           Page {page.currentPage}
         </h3>
@@ -38,7 +35,7 @@ const { page, class: className = 'md:col-span-2' } = Astro.props;
 
   <slot />
 
-  <div class={cn(`flex items-center justify-between`, className)}>
+  <div class="flex justify-between pt-4">
     {
       !!page.url.prev && (
         <a href={page.url.prev}>

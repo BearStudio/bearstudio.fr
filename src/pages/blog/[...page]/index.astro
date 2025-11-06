@@ -27,9 +27,9 @@ const { page } = Astro.props;
     description="Retrouvez les articles de BearStudio sur le développement web et mobile, les technologies, et bien plus encore."
   />
   <div class="flex flex-1 flex-col">
-    <div class="mx-auto w-full max-w-screen-lg pb-40">
-      <div class="grid gap-4 px-6 md:grid-cols-2">
-        <Pagination page={page}>
+    <div class="mx-auto w-full max-w-screen-lg px-6 pb-40">
+      <Pagination page={page}>
+        <div class="grid gap-4 md:grid-cols-2">
           {
             page.data.map((post) => (
               <a
@@ -52,8 +52,8 @@ const { page } = Astro.props;
               </a>
             ))
           }
-        </Pagination>
-      </div>
+        </div>
+      </Pagination>
     </div>
   </div>
 </MainLayout>
