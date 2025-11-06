@@ -5,23 +5,42 @@
 import { assignPaths } from '@bearstudio/astro-typed-routes';
 
 const ROUTES_CONFIG = {
-  "_partials": {
-    "home-polaroids": {}
-  },
-  "blog": {
-    ":filter": {
-      ":page": {}
+  "en": {
+    "_partials": {
+      "home-polaroids": {}
     },
-    "posts": {
+    "blog": {
+      ":filter": {
+        ":page": {}
+      },
+      "posts": {
+        ":id": {}
+      }
+    },
+    "team": {
+      ":page": {},
+      ":id": {}
+    }
+  },
+  "fr": {
+    "_partials": {
+      "home-polaroids": {}
+    },
+    "blog": {
+      ":filter": {
+        ":page": {}
+      },
+      "posts": {
+        ":id": {}
+      }
+    },
+    "team": {
+      ":page": {},
       ":id": {}
     }
   },
   "rss.xml": {},
-  "styleguide": {},
-  "team": {
-    ":page": {},
-    ":id": {}
-  }
+  "styleguide": {}
 } as const;
 
 export const ROUTES = assignPaths(ROUTES_CONFIG);

@@ -9,12 +9,24 @@ import bearstudioTypedRoutes from '@bearstudio/astro-typed-routes';
 import tailwindcss from '@tailwindcss/vite';
 
 // Relative import is required
+import { defaultLocale, locales } from './src/i18n';
 import { getSiteUrl } from './src/lib/site/get-site-url';
 
 // https://astro.build/config
 export default defineConfig({
   site: getSiteUrl(),
   trailingSlash: 'never',
+
+  redirects: {
+    '/': '/fr',
+  },
+
+  i18n: {
+    locales,
+    defaultLocale,
+    routing: 'manual',
+  },
+
   env: {
     schema: {
       ENV_NAME: envField.string({

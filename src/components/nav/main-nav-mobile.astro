@@ -30,12 +30,12 @@ const mainNavMobileItemVariants = cva(
       {
         getMainMenuMobileItems('primary').map((item) => {
           const isActive = item.exact
-            ? item.href === Astro.url.pathname
-            : Astro.url.pathname.startsWith(item.href);
+            ? item.getHref('en') === Astro.url.pathname
+            : Astro.url.pathname.startsWith(item.getHref('en'));
           const Icon = isActive ? item.iconActive : item.icon;
           return (
             <a
-              href={item.href}
+              href={item.getHref('en')}
               class={mainNavMobileItemVariants({
                 variant: isActive ? 'active' : 'default',
               })}

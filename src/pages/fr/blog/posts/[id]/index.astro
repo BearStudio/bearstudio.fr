@@ -1,0 +1,114 @@
+---
+import { Schema } from 'astro-seo-schema';
+import { Image } from 'astro:assets';
+import { loadRenderers } from 'astro:container';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { experimental_AstroContainer } from 'astro/container';
+import { getContainerRenderer as mdxContainerRenderer } from '@astrojs/mdx';
+
+import { lunalink } from '@bearstudio/lunalink';
+import dayjs from 'dayjs';
+
+import { getAuthorsFromBlogPost } from '@/lib/blog';
+import { cn } from '@/lib/tailwind/utils';
+import FormattedDate from '@/components/formatted-date.astro';
+import Prose from '@/components/prose.astro';
+import SEO from '@/components/seo/index.astro';
+import MainLayout from '@/layouts/main-layout.astro';
+import { ROUTES } from '@/routes.gen';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: post,
+  }));
+}
+type Props = CollectionEntry<'blog'>;
+
+const post = Astro.props;
+const { heroImage, date, title } = post.data;
+const { Content } = await render(post);
+const url = new URL(Astro.url.pathname, Astro.site);
+
+const renderers = await loadRenderers([mdxContainerRenderer()]);
+const container = await experimental_AstroContainer.create({ renderers });
+
+// Derive Metadata from post Data
+const articleBody = (await container.renderToString(Content))
+  // strip html tags
+  .replace(/<[^>]*>/g, '')
+  .trim();
+const wordCount = articleBody.split(' ').length;
+const authors = await getAuthorsFromBlogPost(post);
+---
+
+<MainLayout>
+  <!-- [TODO]: Metadata -->
+  <SEO
+    slot="seo"
+    title={post.data.title}
+    description={post.data.metaDescription ?? ''}
+    url={url}
+  />
+  <Schema
+    slot="ld+json"
+    item={{
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      articleBody,
+      headline: post.data.title,
+      wordCount,
+      datePublished: dayjs(post.data.date).format('YYYY-MM-DD'),
+      abstract: post.data.excerpt ?? '',
+      isAccessibleForFree: true,
+      author: authors.map((author) => ({
+        '@type': 'Person',
+        name: author?.data.name ?? '',
+      })),
+      keywords: post.data.tags ?? [],
+    }}
+  />
+  {
+    !!heroImage && (
+      <div class="relative mx-auto w-full max-w-screen-xl px-2 lg:px-6">
+        <Image
+          src={heroImage}
+          alt={title}
+          width={895}
+          height={500}
+          class="w-full rounded-lg object-cover"
+        />
+      </div>
+    )
+  }
+  <div
+    class={cn(
+      'mx-auto w-full flex-1 max-w-screen-lg flex flex-col gap-8 pt-4 pb-40 relative z-10 px-8 md:px-12'
+    )}
+  >
+    <div class="flex flex-col items-center gap-4">
+      <h1
+        class="font-heading text-center text-2xl font-bold tracking-wider text-balance md:text-4xl/tight"
+      >
+        {title}
+      </h1>
+      <FormattedDate date={date} />
+      {
+        authors?.map(
+          (author) =>
+            author && (
+              <a
+                href={lunalink(ROUTES.fr.team[':id'].__path, { id: author.id })}
+              >
+                {author.data.name}
+              </a>
+            )
+        )
+      }
+    </div>
+    <Prose>
+      <Content />
+    </Prose>
+  </div>
+</MainLayout>

@@ -21,7 +21,7 @@ export type MenuItem = {
   icon: FC<{ className?: string }>;
   iconActive: FC<{ className?: string }>;
   label: string;
-  href: string;
+  getHref: (locale: 'en' | 'fr') => string;
   exact?: boolean;
   scope: MainMenuScope;
   level: MainMenuLevel;
@@ -30,7 +30,7 @@ export type MenuItem = {
 const MAIN_MENU: Array<MenuItem> = [
   {
     label: 'Accueil',
-    href: lunalink(ROUTES.__path, {}),
+    getHref: (locale) => lunalink(ROUTES[locale].__path, {}),
     exact: true,
     icon: PiHouseDuotone,
     iconActive: PiHouseFill,
@@ -39,7 +39,7 @@ const MAIN_MENU: Array<MenuItem> = [
   },
   {
     label: 'Services',
-    href: lunalink(ROUTES.styleguide.__path, {}),
+    getHref: () => lunalink(ROUTES.styleguide.__path, {}),
     icon: PiSketchLogoDuotone,
     iconActive: PiSketchLogoFill,
     scope: 'all',
@@ -47,7 +47,7 @@ const MAIN_MENU: Array<MenuItem> = [
   },
   {
     label: 'Équipe',
-    href: lunalink(ROUTES.styleguide.__path, {}),
+    getHref: (locale) => lunalink(ROUTES[locale].team.__path, {}),
     icon: PiUsersThreeDuotone,
     iconActive: PiUsersThreeFill,
     scope: 'all',
@@ -55,7 +55,7 @@ const MAIN_MENU: Array<MenuItem> = [
   },
   {
     label: 'Blog',
-    href: lunalink(ROUTES.blog.__path, {}),
+    getHref: (locale) => lunalink(ROUTES[locale].blog.__path, {}),
     icon: PiNoteDuotone,
     iconActive: PiNoteFill,
     scope: 'all',

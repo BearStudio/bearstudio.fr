@@ -1,0 +1,80 @@
+---
+import { Image } from 'astro:assets';
+
+import { lunalink } from '@bearstudio/lunalink';
+import type { GetStaticPathsOptions } from 'astro';
+
+import { getBlogCollection } from '@/lib/blog';
+import FormattedDate from '@/components/formatted-date.astro';
+import Pagination from '@/components/pagination.astro';
+import SEO from '@/components/seo/index.astro';
+import MainLayout from '@/layouts/main-layout.astro';
+import { ROUTES } from '@/routes.gen';
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const newsPages = await getBlogCollection();
+
+  // Get all categories
+  const categories = [
+    ...new Set(newsPages.flatMap((entry) => entry.data.categories)),
+  ];
+
+  return [
+    ...paginate(newsPages, { pageSize: 20, props: { categories } }),
+    ...categories.flatMap((category) =>
+      paginate(
+        newsPages.filter((article) =>
+          article.data.categories?.includes(category ?? '')
+        ),
+        {
+          pageSize: 20,
+          params: { filter: category },
+          props: { category, categories },
+        }
+      )
+    ),
+  ];
+}
+
+const { page, category } = Astro.props;
+---
+
+<MainLayout>
+  <!-- [TODO]: Metadata -->
+  <SEO
+    slot="seo"
+    title="Blog"
+    description="Retrouvez les articles de BearStudio sur le développement web et mobile, les technologies, et bien plus encore."
+  />
+  <div class="flex flex-1 flex-col">
+    <div class="mx-auto w-full max-w-screen-lg px-6 pb-40">
+      {category && <p>Filtre de catégorie: {category}</p>}
+      <Pagination page={page}>
+        <div class="grid gap-4 md:grid-cols-2">
+          {
+            page.data.map((post) => (
+              <a
+                href={lunalink(ROUTES.en.blog['posts'][':id'].__path, {
+                  id: post.id,
+                })}
+              >
+                {post.data.heroImage && (
+                  <Image
+                    width={720}
+                    height={360}
+                    src={post.data.heroImage}
+                    alt=""
+                  />
+                )}
+                <h4 class="title">{post.data.title}</h4>
+                <p class="date">
+                  <FormattedDate date={post.data.date} />
+                </p>
+              </a>
+            ))
+          }
+        </div>
+      </Pagination>
+    </div>
+  </div>
+</MainLayout>

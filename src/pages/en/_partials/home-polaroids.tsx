@@ -8,7 +8,7 @@ export const HomePolaroids = () => {
   return (
     <CardStack cardDimensions={{ width: 260, height: 320 }}>
       <a
-        href={lunalink(ROUTES.blog.__path, {})}
+        href={lunalink(ROUTES.fr.blog.__path, {})}
         onDragStart={(e) => e.preventDefault()}
       >
         <Polaroid src="/images/forkids-rouen-2.jpeg">
@@ -16,7 +16,7 @@ export const HomePolaroids = () => {
         </Polaroid>
       </a>
       <a
-        href={lunalink(ROUTES.blog.__path, {})}
+        href={lunalink(ROUTES.fr.blog.__path, {})}
         onDragStart={(e) => e.preventDefault()}
       >
         <Polaroid src="/images/london-25.jpeg">
@@ -24,13 +24,13 @@ export const HomePolaroids = () => {
         </Polaroid>
       </a>
       <a
-        href={lunalink(ROUTES.blog.__path, {})}
+        href={lunalink(ROUTES.fr.blog.__path, {})}
         onDragStart={(e) => e.preventDefault()}
       >
         <Polaroid src="/images/bearstudio-house.jpeg">La tanière</Polaroid>
       </a>
       <a
-        href={lunalink(ROUTES.blog.__path, {})}
+        href={lunalink(ROUTES.fr.blog.__path, {})}
         onDragStart={(e) => e.preventDefault()}
       >
         <Polaroid src="/images/ivan-talk-ces-25.jpeg">
