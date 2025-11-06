@@ -1,0 +1,24 @@
+---
+import { locales } from '@/i18n';
+
+// Cas particulier à gerer quand on aura les traductions de content avec des slugs différents à gérer
+const currentLocale = Astro.currentLocale;
+const pathName = Astro.url.pathname;
+const regex = new RegExp('^/' + currentLocale + '(/)?');
+const isInTranslationRange = pathName.match(regex);
+const curatedPathName = pathName.replace(regex, '');
+---
+
+{
+  isInTranslationRange && (
+    <ul>
+      {locales.map((locale) => (
+        <li>
+          <a href={`/${locale}${curatedPathName && '/' + curatedPathName}`}>
+            Switch {locale.toUpperCase()}
+          </a>
+        </li>
+      ))}
+    </ul>
+  )
+}

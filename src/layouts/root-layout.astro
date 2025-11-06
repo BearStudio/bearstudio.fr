@@ -6,6 +6,7 @@ import '@fontsource-variable/inter';
 import '@fontsource-variable/caveat';
 
 import EnvHint from '@/components/env-hint.astro';
+import LanguageSwitcher from '@/components/language-switcher.astro';
 import { SITE_TITLE } from '@/consts';
 
 import '@/styles/global.css';
@@ -36,6 +37,7 @@ dayjs.locale(Astro.currentLocale);
     class="bg-background text-foreground flex min-h-svh flex-col overflow-x-hidden overflow-y-scroll"
   >
     <EnvHint />
+    <LanguageSwitcher />
     <slot />
   </body>
 </html>
