@@ -1,7 +1,10 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
+import { getSlugWithoutLocale, hasSpecificLang } from '@/lib/content';
+
 type Params = {
   limit?: number;
+  lang?: string;
 };
 
 type TeamEntry = CollectionEntry<'team'>;
@@ -23,10 +26,15 @@ const sortByOrder = (person1: TeamEntry, person2: TeamEntry) => {
   return person1.data.order - person2.data.order;
 };
 
-export async function getTeamCollection({ limit = undefined }: Params = {}) {
+export async function getTeamCollection({
+  limit = undefined,
+  lang,
+}: Params = {}) {
   const team = (await getCollection('team'))
     .filter(isVisible)
-    .sort(sortByOrder);
+    .filter((post) => (lang ? hasSpecificLang({ post, lang }) : post))
+    .sort(sortByOrder)
+    .map(getSlugWithoutLocale);
 
   return team.slice(0, limit);
 }

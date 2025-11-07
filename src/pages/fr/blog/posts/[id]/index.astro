@@ -2,14 +2,14 @@
 import { Schema } from 'astro-seo-schema';
 import { Image } from 'astro:assets';
 import { loadRenderers } from 'astro:container';
-import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { render, type CollectionEntry } from 'astro:content';
 import { experimental_AstroContainer } from 'astro/container';
 import { getContainerRenderer as mdxContainerRenderer } from '@astrojs/mdx';
 
 import { lunalink } from '@bearstudio/lunalink';
 import dayjs from 'dayjs';
 
-import { getAuthorsFromBlogPost } from '@/lib/blog';
+import { getAuthorsFromBlogPost, getBlogCollection } from '@/lib/blog';
 import { cn } from '@/lib/tailwind/utils';
 import FormattedDate from '@/components/formatted-date.astro';
 import Prose from '@/components/prose.astro';
@@ -18,9 +18,9 @@ import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const posts = await getBlogCollection({ lang: 'fr' });
   return posts.map((post) => ({
-    params: { id: post.id },
+    params: { id: post.data._computed.slug },
     props: post,
   }));
 }

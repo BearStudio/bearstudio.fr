@@ -1,7 +1,10 @@
 import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 
+import { getSlugWithoutLocale, hasSpecificLang } from '@/lib/content';
+
 type Params = {
   limit?: number;
+  lang?: string;
 };
 
 const isPublished = (post: CollectionEntry<'blog'>) =>
@@ -26,10 +29,15 @@ const sortByLatest = (
   post2: CollectionEntry<'blog'>
 ) => (post2.data.date?.valueOf() ?? 0) - (post1.data.date?.valueOf() ?? 0);
 
-export async function getBlogCollection({ limit = undefined }: Params = {}) {
+export async function getBlogCollection({
+  limit = undefined,
+  lang,
+}: Params = {}) {
   const posts = (await getCollection('blog'))
     .filter(isPublished)
-    .sort(sortByLatest);
+    .filter((post) => (lang ? hasSpecificLang({ post, lang }) : post))
+    .sort(sortByLatest)
+    .map(getSlugWithoutLocale);
 
   if (limit) {
     return posts.slice(0, limit);
@@ -57,7 +65,8 @@ export async function getBlogCollectionLinkedToTeamMember({
 }: GetBlogCollectionLinkedToTeamMemberProps) {
   const posts = (await getCollection('blog'))
     .filter((post) => hasSpecificAuthor({ post, author }))
-    .filter((x) => x);
+    .filter((x) => x)
+    .map(getSlugWithoutLocale);
 
   if (limit) {
     return posts.slice(0, limit);

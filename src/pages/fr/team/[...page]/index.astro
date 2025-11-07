@@ -9,7 +9,7 @@ import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const team = await getTeamCollection();
+  const team = await getTeamCollection({ lang: 'fr' });
   return paginate(team, { pageSize: 12 });
 }
 

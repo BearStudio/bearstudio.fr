@@ -12,7 +12,7 @@ import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const newsPages = await getBlogCollection();
+  const newsPages = await getBlogCollection({ lang: 'en' });
 
   // Get all categories
   const categories = [

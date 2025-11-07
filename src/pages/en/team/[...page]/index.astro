@@ -9,7 +9,7 @@ import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const team = await getTeamCollection();
+  const team = await getTeamCollection({ lang: 'en' });
   return paginate(team, { pageSize: 12 });
 }
 
@@ -20,9 +20,9 @@ const { page } = Astro.props;
   <!-- [TODO]: SEO -->
   <SEO slot="seo" title="Team" />
   <div class="flex flex-1 flex-col">
-    <div class="mx-auto w-full max-w-screen-lg px-6 pb-40">
+    <div class="mx-auto w-full max-w-screen-lg pb-40">
       <Pagination page={page}>
-        <div class="grid gap-4 md:grid-cols-3">
+        <div class="grid gap-4 px-6 md:grid-cols-3">
           {
             page.data.map((person) => (
               <a
