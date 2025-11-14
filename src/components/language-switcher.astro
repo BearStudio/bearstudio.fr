@@ -1,12 +1,13 @@
 ---
-import { locales } from '@/i18n';
+import { getRedirectionUrl } from '@/lib/i18n';
+import { defaultLocale, locales } from '@/i18n';
 
 // Cas particulier à gerer quand on aura les traductions de content avec des slugs différents à gérer
-const currentLocale = Astro.currentLocale;
+const currentLocale = Astro.currentLocale ?? defaultLocale;
 const pathName = Astro.url.pathname;
+
 const regex = new RegExp('^/' + currentLocale + '(/)?');
 const isInTranslationRange = pathName.match(regex);
-const curatedPathName = pathName.replace(regex, '');
 ---
 
 {
@@ -14,7 +15,7 @@ const curatedPathName = pathName.replace(regex, '');
     <ul>
       {locales.map((locale) => (
         <li>
-          <a href={`/${locale}${curatedPathName && '/' + curatedPathName}`}>
+          <a href={getRedirectionUrl({ locale, pathName, currentLocale })}>
             Switch {locale.toUpperCase()}
           </a>
         </li>

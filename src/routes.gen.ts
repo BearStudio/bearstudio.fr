@@ -17,7 +17,7 @@ const ROUTES_CONFIG = {
         ":id": {}
       }
     },
-    "team": {
+    "equipe": {
       ":page": {},
       ":id": {}
     }
