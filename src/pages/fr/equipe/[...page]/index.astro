@@ -27,7 +27,7 @@ const { page } = Astro.props;
             page.data.map((person) => (
               <a
                 href={lunalink(ROUTES.fr.equipe[':id'].__path, {
-                  id: person.id,
+                  id: person.data._computed.slug,
                 })}
               >
                 {person.data.name}

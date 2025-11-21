@@ -1,6 +1,7 @@
 import { defineMiddleware } from 'astro:middleware';
 
-import { defaultLocale, locales } from '@/i18n';
+import { isLocale } from '@/lib/i18n';
+import { defaultLocale } from '@/i18n';
 
 export const onRequest = defineMiddleware((context, next) => {
   const {
@@ -10,7 +11,8 @@ export const onRequest = defineMiddleware((context, next) => {
 
   const locale = pathname.split('/').filter((x) => x)[0];
 
-  if (routePattern === '/404' && !locales.includes(locale ?? '')) {
+  // Si l'URL n'est pas reconnu, et qu'aucune locale n'est détectée, alors, on essaie de rajouter une locale à la route demandée
+  if (routePattern === '/404' && !isLocale(locale ?? '')) {
     return context.redirect(`/${defaultLocale}${pathname}`);
   }
 

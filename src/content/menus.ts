@@ -47,7 +47,12 @@ const MAIN_MENU: Array<MenuItem> = [
   },
   {
     label: 'Équipe',
-    getHref: (locale) => lunalink(ROUTES[locale].team.__path, {}),
+    getHref: (locale) => {
+      if (locale === 'en') {
+        return lunalink(ROUTES[locale].team.__path, {});
+      }
+      return lunalink(ROUTES.fr.equipe.__path, {});
+    },
     icon: PiUsersThreeDuotone,
     iconActive: PiUsersThreeFill,
     scope: 'all',
