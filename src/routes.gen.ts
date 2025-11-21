@@ -17,7 +17,7 @@ const ROUTES_CONFIG = {
         ":id": {}
       }
     },
-    "equipe": {
+    "team": {
       ":page": {},
       ":id": {}
     }
@@ -34,7 +34,7 @@ const ROUTES_CONFIG = {
         ":id": {}
       }
     },
-    "team": {
+    "equipe": {
       ":page": {},
       ":id": {}
     }

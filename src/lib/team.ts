@@ -1,6 +1,11 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
-import { getSlugWithoutLocale, hasSpecificLang } from '@/lib/content';
+import {
+  getPostsBySlug,
+  getSlugWithoutLocale,
+  hasSpecificLang,
+} from '@/lib/content';
+import { defaultLocale } from '@/i18n';
 
 type Params = {
   limit?: number;
@@ -32,9 +37,23 @@ export async function getTeamCollection({
 }: Params = {}) {
   const team = (await getCollection('team'))
     .filter(isVisible)
-    .filter((post) => (lang ? hasSpecificLang({ post, lang }) : post))
+    .filter((post) => hasSpecificLang({ post, lang: lang ?? defaultLocale }))
     .sort(sortByOrder)
-    .map(getSlugWithoutLocale);
+    .map((post) => getSlugWithoutLocale<'team'>(post));
 
   return team.slice(0, limit);
+}
+
+type GetTeamFromSlugProps = Params & {
+  slugs: Array<string>;
+};
+
+export async function getTeamBySlugs({
+  limit,
+  lang,
+  slugs,
+}: GetTeamFromSlugProps) {
+  return (await getTeamCollection({ limit, lang })).filter((post) =>
+    getPostsBySlug({ post, slugs })
+  );
 }

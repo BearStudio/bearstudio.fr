@@ -1,9 +1,9 @@
 ---
 import { getRedirectionUrl } from '@/lib/i18n';
-import { defaultLocale, locales } from '@/i18n';
+import { defaultLocale, locales, type Locales } from '@/i18n';
 
 // Cas particulier à gerer quand on aura les traductions de content avec des slugs différents à gérer
-const currentLocale = Astro.currentLocale ?? defaultLocale;
+const currentLocale = (Astro.currentLocale ?? defaultLocale) as Locales;
 const pathName = Astro.url.pathname;
 
 const regex = new RegExp('^/' + currentLocale + '(/)?');
