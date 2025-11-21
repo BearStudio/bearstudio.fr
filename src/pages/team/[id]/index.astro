@@ -7,9 +7,9 @@ import type { CollectionEntry } from 'astro:content';
 import { lunalink } from '@bearstudio/lunalink';
 
 import { getBlogCollectionLinkedToTeamMember } from '@/lib/blog';
-import Prose from '@/components/Prose.astro';
+import Prose from '@/components/_prose.astro';
 import SEO from '@/components/SEO/index.astro';
-import MainLayout from '@/layouts/MainLayout.astro';
+import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 
 export async function getStaticPaths() {

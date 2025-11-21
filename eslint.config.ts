@@ -46,6 +46,12 @@ export default defineConfig(
           ignoreRestSiblings: true,
         },
       ],
+      'unicorn/filename-case': [
+        'error',
+        {
+          case: 'kebabCase',
+        },
+      ],
     },
   }
 );

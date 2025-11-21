@@ -6,9 +6,9 @@ import type { GetStaticPathsOptions } from 'astro';
 import { PiArrowLeftBold, PiArrowRight } from 'react-icons/pi';
 
 import { getBlogCollection } from '@/lib/blog';
-import FormattedDate from '@/components/FormattedDate.astro';
+import FormattedDate from '@/components/formatted-date.astro';
 import SEO from '@/components/SEO/index.astro';
-import MainLayout from '@/layouts/MainLayout.astro';
+import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {

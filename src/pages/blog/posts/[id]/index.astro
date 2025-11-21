@@ -11,10 +11,10 @@ import dayjs from 'dayjs';
 
 import { getAuthorsFromBlogPost } from '@/lib/blog';
 import { cn } from '@/lib/tailwind/utils';
-import FormattedDate from '@/components/FormattedDate.astro';
-import Prose from '@/components/Prose.astro';
+import Prose from '@/components/_prose.astro';
+import FormattedDate from '@/components/formatted-date.astro';
 import SEO from '@/components/SEO/index.astro';
-import MainLayout from '@/layouts/MainLayout.astro';
+import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 
 export async function getStaticPaths() {
