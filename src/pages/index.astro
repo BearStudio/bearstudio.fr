@@ -4,6 +4,7 @@ import {
   PiCaretDownBold,
   PiDotsThreeOutlineVerticalDuotone,
   PiEnvelopeBold,
+  PiHouseFill,
   PiNoteBold,
   PiSketchLogoDuotone,
   PiTranslateDuotone,
@@ -19,11 +20,12 @@ import { ROUTES } from '@/routes.gen';
 ---
 
 <RootLayout>
+  <!-- Desktop nav -->
   <div
     class="pointer-events-none fixed top-0 right-0 left-0 z-20 h-20 p-3 max-lg:hidden"
   >
     <div
-      class="to-hero/85 from-hero/80 text-hero-foreground border-hero pointer-events-auto mx-auto flex h-full w-full max-w-5xl items-center justify-between rounded-xl border border-b-2 bg-linear-to-b pr-2 pl-4 backdrop-blur-md"
+      class="bg-hero/90 text-hero-foreground border-hero pointer-events-auto mx-auto flex h-full w-full max-w-5xl items-center justify-between rounded-xl border border-b-3 bg-linear-to-b pr-2 pl-4 backdrop-blur-md"
     >
       <div class="flex gap-8">
         <a href="/" class="flex">
@@ -48,6 +50,7 @@ import { ROUTES } from '@/routes.gen';
           </a>
         </div>
       </div>
+
       <div class="flex gap-px">
         <a
           href="#"
@@ -67,7 +70,65 @@ import { ROUTES } from '@/routes.gen';
       </div>
     </div>
   </div>
+  <!-- Mobile nav -->
+  <div
+    class="pointer-events-none fixed right-0 bottom-0 left-0 z-20 h-24 p-3 lg:hidden"
+  >
+    <div
+      class="bg-hero/90 border-hero text-hero-foreground pointer-events-auto mx-auto flex h-full w-full max-w-5xl items-center justify-between rounded-2xl border border-b-3 bg-linear-to-b px-2 backdrop-blur-md"
+    >
+      <div class="flex w-full gap-px">
+        <a
+          href="#"
+          class={cn(
+            'flex-1 flex flex-col items-center text-2xs gap-0.5 justify-center opacity-60',
+            true && 'opacity-100 text-accent'
+          )}
+        >
+          <PiHouseFill className="size-6" />
+          Accueil
+        </a>
+        <a
+          href="#"
+          class={cn(
+            'flex-1 flex flex-col items-center text-2xs gap-0.5 justify-center opacity-60'
+          )}
+        >
+          <PiSketchLogoDuotone className="size-6" />
+          Services
+        </a>
+        <a
+          href="#"
+          class={cn(
+            'flex-1 flex flex-col items-center text-2xs gap-0.5 justify-center opacity-60'
+          )}
+        >
+          <PiUsersThreeDuotone className="size-6" />
+          Équipe
+        </a>
+        <a
+          href="#"
+          class={cn(
+            'flex-1 flex flex-col items-center text-2xs gap-0.5 justify-center opacity-60'
+          )}
+        >
+          <PiNoteBold className="size-6" />
+          Blog
+        </a>
+        <a
+          href="#"
+          class={cn(
+            'flex-1 flex flex-col items-center text-2xs gap-0.5 justify-center opacity-60'
+          )}
+        >
+          <PiDotsThreeOutlineVerticalDuotone className="size-6" />
+          Plus
+        </a>
+      </div>
+    </div>
+  </div>
   <div class="bg-hero text-hero-foreground relative z-0 flex flex-col">
+    <!-- Mobile Top Actions -->
     <div
       class="relative z-10 mx-auto flex w-full max-w-5xl justify-between p-4 lg:hidden"
     >
@@ -88,17 +149,18 @@ import { ROUTES } from '@/routes.gen';
       </a>
     </div>
 
+    <!-- Hero -->
     <div
-      class="relative z-10 flex min-h-[80vh] flex-1 flex-col gap-3 px-8 pt-8 pb-16"
+      class="relative z-10 flex min-h-[65vh] flex-1 flex-col gap-3 px-8 pt-8 pb-16 lg:min-h-[80vh]"
     >
       <a href="/">
-        <Logo className="mx-auto w-32 sm:w-40 lg:hidden" />
+        <Logo className="mx-auto w-54 sm:w-64 lg:hidden" />
       </a>
       <div
         class="flex flex-1 flex-col items-center justify-center gap-4 pt-4 pb-4 text-center"
       >
         <h1
-          class="font-heading text-accent max-w-[20ch] text-3xl leading-tight font-medium text-balance sm:text-4xl md:text-5xl"
+          class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance sm:text-5xl md:text-6xl"
         >
           Design & dev pour vos applis web et mobile
         </h1>
@@ -132,7 +194,6 @@ import { ROUTES } from '@/routes.gen';
         </div>
       </div>
     </div>
-
     <img
       src="https://images.unsplash.com/44/MIbCzcvxQdahamZSNQ26_12082014-IMG_3526.jpg?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470"
       alt=""
@@ -148,6 +209,39 @@ import { ROUTES } from '@/routes.gen';
   </div>
 
   <!-- -->
+
+  <div class="p-4">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, earum
+      doloremque doloribus amet similique blanditiis vitae quidem, qui,
+      cupiditate atque molestiae dolores ut adipisci recusandae tempora? Saepe
+      optio nemo necessitatibus.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, earum
+      doloremque doloribus amet similique blanditiis vitae quidem, qui,
+      cupiditate atque molestiae dolores ut adipisci recusandae tempora? Saepe
+      optio nemo necessitatibus.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, earum
+      doloremque doloribus amet similique blanditiis vitae quidem, qui,
+      cupiditate atque molestiae dolores ut adipisci recusandae tempora? Saepe
+      optio nemo necessitatibus.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, earum
+      doloremque doloribus amet similique blanditiis vitae quidem, qui,
+      cupiditate atque molestiae dolores ut adipisci recusandae tempora? Saepe
+      optio nemo necessitatibus.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, earum
+      doloremque doloribus amet similique blanditiis vitae quidem, qui,
+      cupiditate atque molestiae dolores ut adipisci recusandae tempora? Saepe
+      optio nemo necessitatibus.
+    </p>
+  </div>
 
   <div class="flex h-[2000px] flex-col gap-4 p-4"></div>
 </RootLayout>
