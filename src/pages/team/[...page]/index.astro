@@ -1,9 +1,9 @@
 ---
 import { lunalink } from '@bearstudio/lunalink';
 import type { GetStaticPathsOptions } from 'astro';
-import { PiArrowLeftBold, PiArrowRight } from 'react-icons/pi';
 
 import { getTeamCollection } from '@/lib/team';
+import Pagination from '@/components/pagination.astro';
 import SEO from '@/components/seo/index.astro';
 import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
@@ -20,58 +20,18 @@ const { page } = Astro.props;
   <!-- [TODO]: SEO -->
   <SEO slot="seo" title="Team" />
   <div class="flex flex-1 flex-col">
-    <div class="mx-auto w-full max-w-screen-lg pb-40">
-      <div class="grid gap-4 px-6 md:grid-cols-3">
-        {
-          page.currentPage !== 1 && (
-            <div class="flex items-center md:col-span-3">
-              <h3 class="text-sm tracking-widest text-balance uppercase opacity-60">
-                Page {page.currentPage}
-              </h3>
-              <div class="ml-auto flex gap-2">
-                {!!page.url.next && (
-                  <a href={page.url.next}>
-                    <PiArrowLeftBold className="size-4" />
-
-                    <span class="sr-only">Older articles</span>
-                  </a>
-                )}
-                {!!page.url.prev && (
-                  <a href={page.url.prev}>
-                    <span class="sr-only">Newer articles</span>
-                    <PiArrowRight className="size-4" />
-                  </a>
-                )}
-              </div>
-            </div>
-          )
-        }
-        {
-          page.data.map((person) => (
-            <a href={lunalink(ROUTES.team[':id'].__path, { id: person.id })}>
-              {person.data.name}
-            </a>
-          ))
-        }
-      </div>
-      <div class="flex items-center justify-between md:col-span-2">
-        {
-          !!page.url.prev && (
-            <a href={page.url.prev}>
-              Newer <span class="max-xs:sr-only">articles</span>
-              <PiArrowLeftBold className="size-4" />
-            </a>
-          )
-        }
-        {
-          !!page.url.next && (
-            <a href={page.url.next}>
-              <PiArrowRight className="size-4" />
-              Older <span class="max-xs:sr-only">articles</span>
-            </a>
-          )
-        }
-      </div>
+    <div class="mx-auto w-full max-w-screen-lg px-6 pb-40">
+      <Pagination page={page}>
+        <div class="grid gap-4 md:grid-cols-3">
+          {
+            page.data.map((person) => (
+              <a href={lunalink(ROUTES.team[':id'].__path, { id: person.id })}>
+                {person.data.name}
+              </a>
+            ))
+          }
+        </div>
+      </Pagination>
     </div>
   </div>
 </MainLayout>
