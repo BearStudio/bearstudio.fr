@@ -25,11 +25,11 @@ import { ROUTES } from '@/routes.gen';
     class="pointer-events-none fixed top-0 right-0 left-0 z-20 h-20 p-3 max-lg:hidden"
   >
     <div
-      class="bg-hero/90 text-hero-foreground border-hero pointer-events-auto mx-auto flex h-full w-full max-w-5xl items-center justify-between rounded-xl border border-b-3 bg-linear-to-b pr-2 pl-4 backdrop-blur-md"
+      class="bg-hero/90 text-hero-foreground border-hero pointer-events-auto mx-auto flex h-full w-full max-w-5xl items-center justify-between rounded-2xl border border-b-3 bg-linear-to-b pr-2 pl-4 backdrop-blur-md"
     >
       <div class="flex gap-8">
         <a href="/" class="flex">
-          <Logo className="-mt-1 w-28" />
+          <Logo className="-mt-0.5 w-28" />
         </a>
         <div class="flex items-center gap-px">
           <a href="#" class={cn(buttonVariants({ variant: 'ghostOnDark' }))}>
@@ -151,13 +151,13 @@ import { ROUTES } from '@/routes.gen';
 
     <!-- Hero -->
     <div
-      class="relative z-10 flex min-h-[65vh] flex-1 flex-col gap-3 px-8 pt-8 pb-16 lg:min-h-[80vh]"
+      class="relative z-10 flex min-h-[65vh] flex-1 flex-col gap-3 overflow-hidden px-8 pt-8 pb-16 lg:min-h-[80vh]"
     >
-      <a href="/">
-        <Logo className="mx-auto w-54 sm:w-64 lg:hidden" />
+      <a href="/" class="lg:hidden">
+        <Logo className="mx-auto w-54 sm:w-64" />
       </a>
       <div
-        class="flex flex-1 flex-col items-center justify-center gap-4 pt-4 pb-4 text-center"
+        class="flex flex-1 flex-col items-center justify-center gap-4 pt-4 pb-4 text-center lg:gap-6"
       >
         <h1
           class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance sm:text-5xl md:text-6xl"
@@ -171,7 +171,7 @@ import { ROUTES } from '@/routes.gen';
           De&nbsp;l’idée à la mise en production.
         </p>
         <div
-          class="mx-auto flex w-full max-w-3xs flex-col gap-3 pt-3 sm:max-w-sm sm:flex-row sm:gap-5 md:pt-6"
+          class="mx-auto flex w-full max-w-3xs flex-col gap-3 pt-3 sm:max-w-sm sm:flex-row sm:gap-5 md:pt-6 lg:pt-8"
         >
           <a
             href={lunalink(ROUTES.blog.__path, {})}
