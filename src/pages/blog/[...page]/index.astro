@@ -5,8 +5,8 @@ import { lunalink } from '@bearstudio/lunalink';
 import type { GetStaticPathsOptions } from 'astro';
 
 import { getBlogCollection } from '@/lib/blog';
+import Pagination from '@/components/_pagination.astro';
 import FormattedDate from '@/components/formatted-date.astro';
-import Pagination from '@/components/Pagination.astro';
 import SEO from '@/components/seo/index.astro';
 import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
