@@ -13,10 +13,30 @@ import { ROUTES } from '@/routes.gen';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const newsPages = await getBlogCollection();
-  return paginate(newsPages, { pageSize: 19 });
+
+  // Get all categories
+  const categories = [
+    ...new Set(newsPages.flatMap((entry) => entry.data.categories)),
+  ];
+
+  return [
+    ...paginate(newsPages, { pageSize: 20, props: { categories } }),
+    ...categories.flatMap((category) =>
+      paginate(
+        newsPages.filter((article) =>
+          article.data.categories?.includes(category ?? '')
+        ),
+        {
+          pageSize: 20,
+          params: { filter: category },
+          props: { category, categories },
+        }
+      )
+    ),
+  ];
 }
 
-const { page } = Astro.props;
+const { page, category } = Astro.props;
 ---
 
 <MainLayout>
@@ -28,6 +48,7 @@ const { page } = Astro.props;
   />
   <div class="flex flex-1 flex-col">
     <div class="mx-auto w-full max-w-screen-lg px-6 pb-40">
+      {category && <p>Filtre de catégorie: {category}</p>}
       <Pagination page={page}>
         <div class="grid gap-4 md:grid-cols-2">
           {

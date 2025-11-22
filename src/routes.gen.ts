@@ -6,7 +6,9 @@ import { assignPaths } from '@bearstudio/astro-typed-routes';
 
 const ROUTES_CONFIG = {
   "blog": {
-    ":page": {},
+    ":filter": {
+      ":page": {}
+    },
     "posts": {
       ":id": {}
     }
