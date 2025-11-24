@@ -1,0 +1,36 @@
+---
+import type { ComponentProps, HTMLAttributes } from 'astro/types';
+
+import CurvedLoop from '@/components/ui/curved-loop';
+
+interface Props {
+  src: string;
+  imageProps?: HTMLAttributes<'img'>;
+  text: string;
+  curvedLoopProps?: ComponentProps<typeof CurvedLoop>;
+}
+
+const props = Astro.props;
+---
+
+<div
+  class="bg-brand-800 relative aspect-video w-full overflow-hidden rounded-lg"
+>
+  <img
+    class="absolute inset-0 object-cover opacity-30 mix-blend-overlay grayscale"
+    src={props.src}
+    alt=""
+    {...props.imageProps}
+  />
+  <div class="absolute inset-0 flex items-center justify-center">
+    <CurvedLoop
+      client:visible
+      marqueeText={`${props.text} ✦ `}
+      speed={0.3}
+      curveAmount={0}
+      className="absolute inset-0 fill-white"
+      interactive={false}
+      {...props.curvedLoopProps}
+    />
+  </div>
+</div>
