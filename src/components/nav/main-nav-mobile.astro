@@ -1,0 +1,55 @@
+---
+import { cva } from 'class-variance-authority';
+import { PiDotsThreeOutlineVerticalDuotone } from 'react-icons/pi';
+
+import { getMainMenuMobileItems } from '@/content/menus';
+
+const mainNavMobileItemVariants = cva(
+  'text-2xs flex flex-1 flex-col items-center justify-center gap-0.5 opacity-60 [&>svg]:size-6',
+  {
+    variants: {
+      variant: {
+        default: '',
+        active: 'text-accent opacity-100',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+    },
+  }
+);
+---
+
+<div
+  class="pointer-events-none fixed right-0 bottom-0 left-0 z-20 h-22 p-3 lg:hidden"
+>
+  <div
+    class="bg-hero/90 border-hero text-hero-foreground pointer-events-auto mx-auto flex h-full w-full max-w-5xl items-center justify-between rounded-2xl border border-b-3 bg-linear-to-b px-2 backdrop-blur-md"
+  >
+    <div class="flex w-full gap-px">
+      {
+        getMainMenuMobileItems('primary').map((item) => {
+          const isActive = item.exact
+            ? item.href === Astro.url.pathname
+            : Astro.url.pathname.startsWith(item.href);
+          const Icon = isActive ? item.iconActive : item.icon;
+          return (
+            <a
+              href={item.href}
+              class={mainNavMobileItemVariants({
+                variant: isActive ? 'active' : 'default',
+              })}
+            >
+              <Icon />
+              {item.label}
+            </a>
+          );
+        })
+      }
+      <button type="button" class={mainNavMobileItemVariants()}>
+        <PiDotsThreeOutlineVerticalDuotone />
+        Plus
+      </button>
+    </div>
+  </div>
+</div>

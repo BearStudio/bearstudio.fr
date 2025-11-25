@@ -2,131 +2,19 @@
 import { lunalink } from '@bearstudio/lunalink';
 import {
   PiCaretDownBold,
-  PiDotsThreeOutlineVerticalDuotone,
   PiEnvelopeBold,
-  PiHouseFill,
-  PiNoteBold,
-  PiSketchLogoDuotone,
   PiTranslateDuotone,
-  PiUsersThreeDuotone,
 } from 'react-icons/pi';
 
 import { cn } from '@/lib/tailwind/utils';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
 import { Scratch } from '@/components/ui/scratch';
-import RootLayout from '@/layouts/root-layout.astro';
+import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 ---
 
-<RootLayout>
-  <!-- Desktop nav -->
-  <div
-    class="pointer-events-none fixed top-0 right-0 left-0 z-20 h-20 p-3 max-lg:hidden"
-  >
-    <div
-      class="bg-hero/90 text-hero-foreground border-hero pointer-events-auto mx-auto flex h-full w-full max-w-5xl items-center justify-between rounded-2xl border border-b-3 bg-linear-to-b pr-2 pl-4 backdrop-blur-md"
-    >
-      <div class="flex gap-8">
-        <a href="/" class="flex">
-          <Logo className="-mt-0.5 w-28" />
-        </a>
-        <div class="flex items-center gap-px">
-          <a href="#" class={cn(buttonVariants({ variant: 'ghostOnDark' }))}>
-            <PiSketchLogoDuotone className="opacity-60" />
-            Services
-          </a>
-          <a href="#" class={cn(buttonVariants({ variant: 'ghostOnDark' }))}>
-            <PiUsersThreeDuotone className="opacity-60" />
-            Équipe
-          </a>
-          <a href="#" class={cn(buttonVariants({ variant: 'ghostOnDark' }))}>
-            <PiNoteBold className="opacity-60" />
-            Blog
-          </a>
-          <a href="#" class={cn(buttonVariants({ variant: 'ghostOnDark' }))}>
-            <PiDotsThreeOutlineVerticalDuotone className="opacity-60" />
-            Plus
-          </a>
-        </div>
-      </div>
-
-      <div class="flex gap-px">
-        <a
-          href="#"
-          class={cn(
-            buttonVariants({ variant: 'ghostOnDark' }),
-            'opacity-80 hover:opacity-100'
-          )}
-        >
-          <PiEnvelopeBold className="opacity-60" />
-          Nous contacter
-        </a>
-        <Button variant="ghostOnDark" className="opacity-80 hover:opacity-100">
-          <PiTranslateDuotone className="opacity-60" />
-          Français
-          <PiCaretDownBold className="opacity-60" />
-        </Button>
-      </div>
-    </div>
-  </div>
-  <!-- Mobile nav -->
-  <div
-    class="pointer-events-none fixed right-0 bottom-0 left-0 z-20 h-24 p-3 lg:hidden"
-  >
-    <div
-      class="bg-hero/90 border-hero text-hero-foreground pointer-events-auto mx-auto flex h-full w-full max-w-5xl items-center justify-between rounded-2xl border border-b-3 bg-linear-to-b px-2 backdrop-blur-md"
-    >
-      <div class="flex w-full gap-px">
-        <a
-          href="#"
-          class={cn(
-            'flex-1 flex flex-col items-center text-2xs gap-0.5 justify-center opacity-60',
-            'opacity-100 text-accent'
-          )}
-        >
-          <PiHouseFill className="size-6" />
-          Accueil
-        </a>
-        <a
-          href="#"
-          class={cn(
-            'flex-1 flex flex-col items-center text-2xs gap-0.5 justify-center opacity-60'
-          )}
-        >
-          <PiSketchLogoDuotone className="size-6" />
-          Services
-        </a>
-        <a
-          href="#"
-          class={cn(
-            'flex-1 flex flex-col items-center text-2xs gap-0.5 justify-center opacity-60'
-          )}
-        >
-          <PiUsersThreeDuotone className="size-6" />
-          Équipe
-        </a>
-        <a
-          href="#"
-          class={cn(
-            'flex-1 flex flex-col items-center text-2xs gap-0.5 justify-center opacity-60'
-          )}
-        >
-          <PiNoteBold className="size-6" />
-          Blog
-        </a>
-        <a
-          href="#"
-          class={cn(
-            'flex-1 flex flex-col items-center text-2xs gap-0.5 justify-center opacity-60'
-          )}
-        >
-          <PiDotsThreeOutlineVerticalDuotone className="size-6" />
-          Plus
-        </a>
-      </div>
-    </div>
-  </div>
+<MainLayout>
   <div class="bg-hero text-hero-foreground relative z-0 flex flex-col">
     <!-- Mobile Top Actions -->
     <div
@@ -243,4 +131,4 @@ import { ROUTES } from '@/routes.gen';
   </div>
 
   <div class="flex h-[2000px] flex-col gap-4 p-4"></div>
-</RootLayout>
+</MainLayout>
