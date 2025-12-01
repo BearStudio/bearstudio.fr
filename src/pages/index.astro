@@ -11,8 +11,11 @@ import { Button, buttonVariants } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
 import { Polaroid } from '@/components/ui/polaroid';
 import { Scratch } from '@/components/ui/scratch';
+import { TiltedCard } from '@/components/ui/tilted-card';
 import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
+
+import { HomePolaroids } from './home-polaroids';
 ---
 
 <MainLayout>
@@ -109,34 +112,50 @@ import { ROUTES } from '@/routes.gen';
             </a>
           </div>
         </div>
+
         <div
           class="relative grid flex-[0.8] grid-cols-2 flex-wrap items-center justify-center gap-x-8 gap-y-7 max-lg:hidden"
         >
-          <Polaroid
-            client:load
-            className="translate-x-2 rotate-6"
-            src="/images/ivan-talk-ces-25.jpeg"
+          <a
+            href={lunalink(ROUTES.blog.__path, {})}
+            class="flex translate-x-2 rotate-6"
           >
-            Nos conférences de Codeurs en Seine 2026
-          </Polaroid>
-          <Polaroid
-            client:load
-            className="-translate-y-2 -rotate-5"
-            src="/images/bearstudio-house.jpeg">La tanière</Polaroid
+            <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
+              <Polaroid src="/images/ivan-talk-ces-25.jpeg">
+                Nos conférences de Codeurs en Seine 2026
+              </Polaroid>
+            </TiltedCard>
+          </a>
+          <a
+            href={lunalink(ROUTES.blog.__path, {})}
+            class="flex -translate-y-2 -rotate-5"
           >
-          <Polaroid
-            client:load
-            className="translate-y-2 -rotate-4"
-            src="/images/london-25.jpeg"
-            >React Advanced Conference London 2026</Polaroid
+            <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
+              <Polaroid src="/images/bearstudio-house.jpeg">
+                La tanière
+              </Polaroid>
+            </TiltedCard>
+          </a>
+          <a
+            href={lunalink(ROUTES.blog.__path, {})}
+            class="fmex translate-y-2 -rotate-4"
           >
-
-          <Polaroid
-            client:load
-            className="-translate-x-1 -translate-y-2 rotate-3"
-            src="/images/forkids-rouen-2.jpeg"
-            >Fork it! For Kids à Rouen</Polaroid
+            <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
+              <Polaroid src="/images/london-25.jpeg">
+                React Advanced Conference London 2026
+              </Polaroid>
+            </TiltedCard>
+          </a>
+          <a
+            href={lunalink(ROUTES.blog.__path, {})}
+            class="flex -translate-x-1 -translate-y-2 rotate-3"
           >
+            <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
+              <Polaroid src="/images/forkids-rouen-2.jpeg"
+                >Fork it! For Kids à Rouen
+              </Polaroid>
+            </TiltedCard>
+          </a>
         </div>
       </div>
     </div>
@@ -152,6 +171,10 @@ import { ROUTES } from '@/routes.gen';
       <Scratch className="max-lg:hidden" />
       <Scratch className="max-2xl:hidden" />
     </div>
+  </div>
+
+  <div class="-mt-32 flex items-center justify-center pt-16 lg:hidden">
+    <HomePolaroids client:load />
   </div>
   <!-- -->
 

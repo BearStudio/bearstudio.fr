@@ -16,11 +16,11 @@ interface TiltedCardProps {
 
 const springValues: SpringOptions = {
   damping: 30,
-  stiffness: 100,
+  stiffness: 200,
   mass: 2,
 };
 
-export default function TiltedCard({
+export function TiltedCard({
   scaleOnHover = 1.05,
   rotateAmplitude = 8,
   children,

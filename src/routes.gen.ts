@@ -11,6 +11,7 @@ const ROUTES_CONFIG = {
       ":id": {}
     }
   },
+  "home-polaroids": {},
   "rss.xml": {},
   "styleguide": {},
   "team": {
