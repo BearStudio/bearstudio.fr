@@ -9,6 +9,7 @@ import {
 import { cn } from '@/lib/tailwind/utils';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
+import { Polaroid } from '@/components/ui/polaroid';
 import { Scratch } from '@/components/ui/scratch';
 import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
@@ -109,93 +110,33 @@ import { ROUTES } from '@/routes.gen';
           </div>
         </div>
         <div
-          class="relative grid flex-[0.8] grid-cols-2 flex-wrap items-center justify-center gap-x-2 gap-y-8 max-lg:hidden"
+          class="relative grid flex-[0.8] grid-cols-2 flex-wrap items-center justify-center gap-x-8 gap-y-7 max-lg:hidden"
         >
-          <a
-            href="#"
-            class={cn(
-              'text-foreground flex rotate-6 flex-col gap-2 translate-x-2 rounded-sm bg-white p-3 shadow-2xl'
-            )}
+          <Polaroid
+            client:load
+            className="translate-x-2 rotate-6"
+            src="/images/ivan-talk-ces-25.jpeg"
           >
-            <div class="relative h-fit w-fit overflow-hidden rounded-xs">
-              <img
-                class="block aspect-square object-cover"
-                alt=""
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-              <div
-                class="absolute inset-0 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]"
-              >
-              </div>
-            </div>
-            <p class="font-heading px-1 text-center text-xs">
-              La tanière des ours
-            </p>
-          </a>
+            Nos conférences de Codeurs en Seine 2026
+          </Polaroid>
+          <Polaroid
+            client:load
+            className="-translate-y-2 -rotate-5"
+            src="/images/bearstudio-house.jpeg">La tanière</Polaroid
+          >
+          <Polaroid
+            client:load
+            className="translate-y-2 -rotate-4"
+            src="/images/london-25.jpeg"
+            >React Advanced Conference London 2026</Polaroid
+          >
 
-          <a
-            href="#"
-            class={cn(
-              'text-foreground flex -rotate-5 -translate-y-2 flex-col gap-2 rounded-sm bg-white p-3 shadow-2xl'
-            )}
+          <Polaroid
+            client:load
+            className="-translate-x-1 -translate-y-2 rotate-3"
+            src="/images/forkids-rouen-2.jpeg"
+            >Fork it! For Kids à Rouen</Polaroid
           >
-            <div class="relative h-fit w-fit overflow-hidden rounded-xs">
-              <img
-                class="block aspect-square object-cover"
-                alt=""
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-              <div
-                class="absolute inset-0 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]"
-              >
-              </div>
-            </div>
-            <p class="font-heading px-1 text-center text-xs">
-              La tanière des ours
-            </p>
-          </a>
-          <a
-            href="#"
-            class={cn(
-              'text-foreground flex -rotate-4 translate-y-2 flex-col gap-2 rounded-sm bg-white p-3 shadow-2xl'
-            )}
-          >
-            <div class="relative h-fit w-fit overflow-hidden rounded-xs">
-              <img
-                class="block aspect-square object-cover"
-                alt=""
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-              <div
-                class="absolute inset-0 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]"
-              >
-              </div>
-            </div>
-            <p class="font-heading px-1 text-center text-xs">
-              La tanière des ours
-            </p>
-          </a>
-          <a
-            href="#"
-            class={cn(
-              'text-foreground flex rotate-3 flex-col gap-2 -translate-x-1 -translate-y-2 rounded-sm bg-white p-3 shadow-2xl'
-            )}
-          >
-            <div class="relative h-fit w-fit overflow-hidden rounded-xs">
-              <img
-                class="block aspect-square object-cover"
-                alt=""
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-              <div
-                class="absolute inset-0 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]"
-              >
-              </div>
-            </div>
-            <p class="font-heading px-1 text-center text-xs">
-              La tanière des ours
-            </p>
-          </a>
         </div>
       </div>
     </div>
