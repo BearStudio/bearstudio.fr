@@ -39,45 +39,162 @@ import { ROUTES } from '@/routes.gen';
 
     <!-- Hero -->
     <div
-      class="relative z-10 flex min-h-[65vh] flex-1 flex-col gap-3 overflow-hidden px-8 pt-8 pb-16 lg:min-h-[80vh]"
+      class="relative z-10 flex min-h-[65vh] flex-1 flex-col gap-3 overflow-hidden pt-8 pb-24 lg:min-h-[80vh] lg:pt-32"
     >
       <a href="/" class="lg:hidden">
         <Logo className="mx-auto w-54 sm:w-64" />
       </a>
       <div
-        class="flex flex-1 flex-col items-center justify-center gap-4 pt-4 pb-4 text-center lg:gap-6"
+        class="mx-auto flex w-full max-w-5xl flex-1 items-center justify-center gap-6 p-4 lg:p-6"
       >
-        <h1
-          class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance sm:text-5xl md:text-6xl"
-        >
-          Design & dev pour vos applis web et mobile
-        </h1>
-        <p
-          class="max-w-[40ch] text-sm leading-relaxed text-balance sm:text-base md:text-lg"
-        >
-          Expertise en UI/UX et développement d’applications sur mesure.
-          De&nbsp;l’idée à la mise en production.
-        </p>
         <div
-          class="mx-auto flex w-full max-w-3xs flex-col gap-3 pt-3 sm:max-w-sm sm:flex-row sm:gap-5 md:pt-6 lg:pt-8"
+          class="flex flex-1 flex-col justify-center gap-4 max-lg:items-center max-lg:text-center lg:gap-6"
+        >
+          <h1
+            class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance sm:text-4xl md:text-5xl"
+          >
+            Design & dev pour vos applis web et mobile
+          </h1>
+          <div
+            class="flex max-w-md flex-wrap gap-2 max-lg:items-center max-lg:justify-center"
+          >
+            <a
+              href={lunalink(ROUTES.blog.__path, {})}
+              class={cn(
+                buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
+              )}
+            >
+              UX/UI Design
+            </a>
+            <a
+              href={lunalink(ROUTES.blog.__path, {})}
+              class={cn(
+                buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
+              )}
+            >
+              Dev Web
+            </a>
+            <a
+              href={lunalink(ROUTES.blog.__path, {})}
+              class={cn(
+                buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
+              )}
+            >
+              Dev Mobile
+            </a>
+            <a
+              href={lunalink(ROUTES.blog.__path, {})}
+              class={cn(
+                buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
+              )}
+            >
+              Boost Projet
+            </a>
+            <a
+              href={lunalink(ROUTES.blog.__path, {})}
+              class={cn(
+                buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
+              )}
+            >
+              Accompagnement UX
+            </a>
+            <a
+              href={lunalink(ROUTES.blog.__path, {})}
+              class={cn(
+                buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
+              )}
+            >
+              Accompagnement CTO
+            </a>
+          </div>
+        </div>
+        <div
+          class="relative grid flex-[0.8] grid-cols-2 flex-wrap items-center justify-center gap-x-2 gap-y-8 max-lg:hidden"
         >
           <a
-            href={lunalink(ROUTES.blog.__path, {})}
+            href="#"
             class={cn(
-              buttonVariants({ size: 'xl' }),
-              'max-sm:w-full sm:flex-1'
+              'text-foreground flex rotate-6 flex-col gap-2 translate-x-2 rounded-sm bg-white p-3 shadow-2xl'
             )}
           >
-            Découvrir le blog
+            <div class="relative h-fit w-fit overflow-hidden rounded-xs">
+              <img
+                class="block aspect-square object-cover"
+                alt=""
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+              <div
+                class="absolute inset-0 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]"
+              >
+              </div>
+            </div>
+            <p class="font-heading px-1 text-center text-xs">
+              La tanière des ours
+            </p>
+          </a>
+
+          <a
+            href="#"
+            class={cn(
+              'text-foreground flex -rotate-5 -translate-y-2 flex-col gap-2 rounded-sm bg-white p-3 shadow-2xl'
+            )}
+          >
+            <div class="relative h-fit w-fit overflow-hidden rounded-xs">
+              <img
+                class="block aspect-square object-cover"
+                alt=""
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+              <div
+                class="absolute inset-0 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]"
+              >
+              </div>
+            </div>
+            <p class="font-heading px-1 text-center text-xs">
+              La tanière des ours
+            </p>
           </a>
           <a
-            href={lunalink(ROUTES.styleguide.__path, {})}
+            href="#"
             class={cn(
-              buttonVariants({ size: 'xl', variant: 'secondaryOnDark' }),
-              'max-sm:w-full sm:flex-1'
+              'text-foreground flex -rotate-4 translate-y-2 flex-col gap-2 rounded-sm bg-white p-3 shadow-2xl'
             )}
           >
-            Voir le styleguide
+            <div class="relative h-fit w-fit overflow-hidden rounded-xs">
+              <img
+                class="block aspect-square object-cover"
+                alt=""
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+              <div
+                class="absolute inset-0 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]"
+              >
+              </div>
+            </div>
+            <p class="font-heading px-1 text-center text-xs">
+              La tanière des ours
+            </p>
+          </a>
+          <a
+            href="#"
+            class={cn(
+              'text-foreground flex rotate-3 flex-col gap-2 -translate-x-1 -translate-y-2 rounded-sm bg-white p-3 shadow-2xl'
+            )}
+          >
+            <div class="relative h-fit w-fit overflow-hidden rounded-xs">
+              <img
+                class="block aspect-square object-cover"
+                alt=""
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+              <div
+                class="absolute inset-0 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]"
+              >
+              </div>
+            </div>
+            <p class="font-heading px-1 text-center text-xs">
+              La tanière des ours
+            </p>
           </a>
         </div>
       </div>

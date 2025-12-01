@@ -17,7 +17,7 @@ const buttonVariants = cva(
         secondary:
           'bg-secondary text-secondary-foreground border border-b-3 pb-px active:translate-y-0.5 active:border-b border-secondary-border hover:bg-secondary/90 [a:hover_&]:bg-secondary/90 [button:hover_&]:bg-secondary/90',
         secondaryOnDark:
-          'bg-primary text-primary-foreground border border-b-3 pb-px active:translate-y-0.5 active:border-b border-primary-border hover:bg-primary/90 [a:hover_&]:bg-primary/90 [button:hover_&]:bg-primary/90',
+          'bg-primary text-primary-foreground border border-b-3 pb-px active:translate-y-0.5 active:border-b border-primary-border hover:brightness-125 [a:hover_&]:brightness-125 [button:hover_&]:brightness-125',
         ghost:
           'hover:bg-black/5  [a:hover_&]:bg-black/5 [button:hover_&]:bg-black/5 active:translate-y-px',
         ghostOnDark:
