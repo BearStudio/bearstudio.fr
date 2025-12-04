@@ -8,21 +8,17 @@ const ROUTES_CONFIG = {
   "_partials": {
     "home-polaroids": {}
   },
-  "blog": {
-    ":filter": {
-      ":page": {}
-    },
-    "posts": {
-      ":id": {}
-    }
-  },
-  "contact": {
-    "processus-candidature-bearstudio": {}
-  },
-  "demandez-votre-mini-audit-ux-gratuit": {},
   "en": {
     "adventures-of-bearstudio-traveledmap": {},
     "ask-your-free-mini-audit-ux": {},
+    "blog": {
+      ":filter": {
+        ":page": {}
+      },
+      "posts": {
+        ":id": {}
+      }
+    },
     "contact": {
       "application-process-bearstudio": {}
     },
@@ -38,28 +34,49 @@ const ROUTES_CONFIG = {
         "moodboard": {},
         "wireframes": {}
       }
+    },
+    "team": {
+      ":page": {},
+      ":id": {}
     }
   },
-  "mentions-legales": {},
-  "periples-du-bearstudio-traveledmap": {},
-  "prestations": {
-    "dev-back": {},
-    "dev-front": {},
-    "integration": {},
-    "ux-design": {
-      "audit-ux": {},
-      "charte-graphique": {},
-      "maquettes": {},
-      "moodboard": {},
-      "wireframes": {}
+  "fr": {
+    "_partials": {
+      "home-polaroids": {}
+    },
+    "blog": {
+      ":filter": {
+        ":page": {}
+      },
+      "posts": {
+        ":id": {}
+      }
+    },
+    "contact": {
+      "processus-candidature-bearstudio": {}
+    },
+    "demandez-votre-mini-audit-ux-gratuit": {},
+    "equipe": {
+      ":page": {},
+      ":id": {}
+    },
+    "mentions-legales": {},
+    "periples-du-bearstudio-traveledmap": {},
+    "prestations": {
+      "dev-back": {},
+      "dev-front": {},
+      "integration": {},
+      "ux-design": {
+        "audit-ux": {},
+        "charte-graphique": {},
+        "maquettes": {},
+        "moodboard": {},
+        "wireframes": {}
+      }
     }
   },
   "rss.xml": {},
-  "styleguide": {},
-  "team": {
-    ":page": {},
-    ":id": {}
-  }
+  "styleguide": {}
 } as const;
 
 export const ROUTES = assignPaths(ROUTES_CONFIG);

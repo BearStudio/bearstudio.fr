@@ -12,6 +12,7 @@ import {
   PiUsersThreeFill,
 } from 'react-icons/pi';
 
+import type { Locales } from '@/i18n';
 import { ROUTES } from '@/routes.gen';
 
 type MainMenuScope = 'all' | 'mobile' | 'desktop';
@@ -21,7 +22,7 @@ export type MenuItem = {
   icon: FC<{ className?: string }>;
   iconActive: FC<{ className?: string }>;
   label: string;
-  href: string;
+  getHref: (locale: Locales) => string;
   exact?: boolean;
   scope: MainMenuScope;
   level: MainMenuLevel;
@@ -30,7 +31,7 @@ export type MenuItem = {
 const MAIN_MENU: Array<MenuItem> = [
   {
     label: 'Accueil',
-    href: lunalink(ROUTES.__path, {}),
+    getHref: (locale) => lunalink(ROUTES[locale].__path, {}),
     exact: true,
     icon: PiHouseDuotone,
     iconActive: PiHouseFill,
@@ -39,7 +40,12 @@ const MAIN_MENU: Array<MenuItem> = [
   },
   {
     label: 'Services',
-    href: lunalink(ROUTES.prestations.__path, {}),
+    getHref: (locale) => {
+      if (locale === 'en') {
+        return lunalink(ROUTES[locale].services.__path, {});
+      }
+      return lunalink(ROUTES.fr.prestations.__path, {});
+    },
     icon: PiSketchLogoDuotone,
     iconActive: PiSketchLogoFill,
     scope: 'all',
@@ -47,7 +53,12 @@ const MAIN_MENU: Array<MenuItem> = [
   },
   {
     label: 'Équipe',
-    href: lunalink(ROUTES.team.__path, {}),
+    getHref: (locale) => {
+      if (locale === 'en') {
+        return lunalink(ROUTES[locale].team.__path, {});
+      }
+      return lunalink(ROUTES.fr.equipe.__path, {});
+    },
     icon: PiUsersThreeDuotone,
     iconActive: PiUsersThreeFill,
     scope: 'all',
@@ -55,7 +66,7 @@ const MAIN_MENU: Array<MenuItem> = [
   },
   {
     label: 'Blog',
-    href: lunalink(ROUTES.blog.__path, {}),
+    getHref: (locale) => lunalink(ROUTES[locale].blog.__path, {}),
     icon: PiNoteDuotone,
     iconActive: PiNoteFill,
     scope: 'all',
