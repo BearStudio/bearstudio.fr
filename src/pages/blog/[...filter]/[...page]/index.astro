@@ -47,7 +47,7 @@ const { page, category } = Astro.props;
     description="Retrouvez les articles de BearStudio sur le développement web et mobile, les technologies, et bien plus encore."
   />
   <div class="flex flex-1 flex-col">
-    <div class="mx-auto w-full max-w-screen-lg px-6 pb-40">
+    <div class="mx-auto w-full max-w-screen-lg px-6 pb-40 lg:pt-20">
       {category && <p>Filtre de catégorie: {category}</p>}
       <Pagination page={page}>
         <div class="grid gap-4 md:grid-cols-2">
