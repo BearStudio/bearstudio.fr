@@ -1,32 +1,51 @@
 ---
 import { Schema } from 'astro-seo-schema';
 import { Image } from 'astro:assets';
-import { getCollection, render } from 'astro:content';
-import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
 
 import { lunalink } from '@bearstudio/lunalink';
 
 import { getBlogCollectionLinkedToTeamMember } from '@/lib/blog';
+import { getConferenceCollectionLinkedToTeamMember } from '@/lib/conferences';
+import type { ComputedCollectionEntry } from '@/lib/content';
+import { getTeamCollection } from '@/lib/team';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 
 export async function getStaticPaths() {
-  const team = await getCollection('team');
+  const team = await getTeamCollection({ lang: 'fr' });
 
-  return team.map((person) => ({
-    params: { id: person.id },
-    props: person,
-  }));
+  return Promise.all(
+    team.map(async (person) => {
+      const posts = await getBlogCollectionLinkedToTeamMember({
+        author: person,
+        lang: 'fr',
+      });
+
+      const conferences = await getConferenceCollectionLinkedToTeamMember({
+        speaker: person,
+        lang: 'fr',
+      });
+
+      return {
+        params: { id: person.data._computed.slug },
+        props: { person, posts, conferences },
+      };
+    })
+  );
 }
-type Props = CollectionEntry<'team'>;
 
-const person = Astro.props;
+type Props = {
+  person: ComputedCollectionEntry<'team'>;
+  posts?: Array<ComputedCollectionEntry<'blog'>>;
+  conferences?: Array<ComputedCollectionEntry<'conferences'>>;
+};
+
+const { person, posts, conferences } = Astro.props;
 const { Content } = await render(person);
 const url = new URL(Astro.url.pathname, Astro.site);
-
-const posts = await getBlogCollectionLinkedToTeamMember({ author: person });
 ---
 
 <MainLayout>
@@ -41,7 +60,9 @@ const posts = await getBlogCollectionLinkedToTeamMember({ author: person });
       isAccessibleForFree: true,
     }}
   />
-  <div class="mx-auto flex w-full max-w-screen-sm flex-col gap-4 px-4">
+  <div
+    class="mx-auto flex w-full max-w-screen-sm flex-col gap-4 px-4 pb-20 lg:pt-20 lg:pb-0"
+  >
     <div class="flex flex-col items-center gap-2">
       <span>
         {person.data.name}
@@ -70,13 +91,38 @@ const posts = await getBlogCollectionLinkedToTeamMember({ author: person });
 
     <h2>Articles liés</h2>
     {
-      posts.map((post) => {
+      posts?.map((post) => {
         return (
           <a
-            href={lunalink(ROUTES.fr.blog.posts[':id'].__path, { id: post.id })}
+            href={lunalink(ROUTES.fr.blog.posts[':id'].__path, {
+              id: post.data._computed.slug,
+            })}
           >
             {post.data.title}
           </a>
+        );
+      })
+    }
+
+    <h2>Conférences liés</h2>
+    {
+      conferences?.map((conference) => {
+        return (
+          <>
+            <h3>{conference.data.title}</h3>
+
+            {conference.data.instances && (
+              <ul class="pl-3">
+                {conference.data.instances.map((instance) => {
+                  return (
+                    (instance.speakers ?? []).some(
+                      (speaker) => speaker.id === person.data._computed.slug
+                    ) && <li>{instance.date}</li>
+                  );
+                })}
+              </ul>
+            )}
+          </>
         );
       })
     }

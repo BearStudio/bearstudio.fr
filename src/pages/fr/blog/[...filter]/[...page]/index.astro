@@ -13,7 +13,7 @@ import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const newsPages = await getBlogCollection();
+  const newsPages = await getBlogCollection({ lang: 'fr' });
 
   // Get all categories
   const categories = [
@@ -57,7 +57,7 @@ const { page, category } = Astro.props;
         Le blog des ours
       </h1>
       <p class="max-w-[60ch] text-sm text-balance opacity-80">
-        Bienvenue sur notre blog ! Vous y trouverez des articles techniques en
+        Bienvenue sur notre blog ! Vous y trouverez des articles techniques fr
         lien avec le développement web et le design. Mais aussi des articles
         plus axés autour de l'entrepreneuriat et du business. En bref, c'est le
         meilleur moyen pour vous tenir informés des actualités du BearStudio.
@@ -74,7 +74,7 @@ const { page, category } = Astro.props;
             page.data.map((post) => (
               <a
                 href={lunalink(ROUTES.fr.blog['posts'][':id'].__path, {
-                  id: post.id,
+                  id: post.data._computed.slug,
                 })}
               >
                 {post.data.heroImage && (
