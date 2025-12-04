@@ -5,7 +5,7 @@ job: 'Office manager'
 socials:
   - type: 'linkedin'
     href: 'https://linkedin.com/in/sandrine-auber-lardans-363539291'
-status: 'current'
+status: 'former'
 hidden: false
 order: 1000
 ---
