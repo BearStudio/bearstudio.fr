@@ -7,7 +7,7 @@ socials:
     href: 'https://twitter.com/qlerebours_'
   - type: 'linkedin'
     href: 'https://www.linkedin.com/in/quentin-lerebours-72027712a'
-status: 'current'
+status: 'former'
 hidden: false
 order: 10
 ---
