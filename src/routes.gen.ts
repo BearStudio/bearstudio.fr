@@ -5,6 +5,9 @@
 import { assignPaths } from '@bearstudio/astro-typed-routes';
 
 const ROUTES_CONFIG = {
+  "_partials": {
+    "home-polaroids": {}
+  },
   "blog": {
     ":filter": {
       ":page": {}
@@ -13,7 +16,6 @@ const ROUTES_CONFIG = {
       ":id": {}
     }
   },
-  "home-polaroids": {},
   "rss.xml": {},
   "styleguide": {},
   "team": {

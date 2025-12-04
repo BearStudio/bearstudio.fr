@@ -14,9 +14,9 @@ export const Polaroid = (props: {
         props.className
       )}
     >
-      <div className="relative h-fit w-fit overflow-hidden rounded-xs">
+      <div className="relative overflow-hidden rounded-xs aspect-square w-full">
         <img
-          className="block aspect-square object-cover"
+          className="block aspect-square object-cover h-full w-full"
           alt=""
           src={props.src}
         />
