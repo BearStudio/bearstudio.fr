@@ -39,7 +39,7 @@ const MAIN_MENU: Array<MenuItem> = [
   },
   {
     label: 'Services',
-    href: lunalink(ROUTES.styleguide.__path, {}),
+    href: lunalink(ROUTES.prestations.__path, {}),
     icon: PiSketchLogoDuotone,
     iconActive: PiSketchLogoFill,
     scope: 'all',
@@ -47,7 +47,7 @@ const MAIN_MENU: Array<MenuItem> = [
   },
   {
     label: 'Équipe',
-    href: lunalink(ROUTES.styleguide.__path, {}),
+    href: lunalink(ROUTES.team.__path, {}),
     icon: PiUsersThreeDuotone,
     iconActive: PiUsersThreeFill,
     scope: 'all',

@@ -16,6 +16,44 @@ const ROUTES_CONFIG = {
       ":id": {}
     }
   },
+  "contact": {
+    "processus-candidature-bearstudio": {}
+  },
+  "demandez-votre-mini-audit-ux-gratuit": {},
+  "en": {
+    "adventures-of-bearstudio-traveledmap": {},
+    "ask-your-free-mini-audit-ux": {},
+    "contact": {
+      "application-process-bearstudio": {}
+    },
+    "legal-notices": {},
+    "services": {
+      "dev-back": {},
+      "dev-front": {},
+      "integration": {},
+      "ux-design": {
+        "audit-ux": {},
+        "graphiccharter": {},
+        "mockups": {},
+        "moodboard": {},
+        "wireframes": {}
+      }
+    }
+  },
+  "mentions-legales": {},
+  "periples-du-bearstudio-traveledmap": {},
+  "prestations": {
+    "dev-back": {},
+    "dev-front": {},
+    "integration": {},
+    "ux-design": {
+      "audit-ux": {},
+      "charte-graphique": {},
+      "maquettes": {},
+      "moodboard": {},
+      "wireframes": {}
+    }
+  },
   "rss.xml": {},
   "styleguide": {},
   "team": {
