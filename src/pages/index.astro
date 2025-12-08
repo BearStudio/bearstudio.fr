@@ -83,9 +83,14 @@ import { ROUTES } from '@/routes.gen';
       >
         <a
           href={lunalink(ROUTES.blog.__path, {})}
-          class="flex translate-x-2 rotate-6"
+          class="flex w-full translate-x-2 rotate-6"
         >
-          <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
+          <TiltedCard
+            className="w-full"
+            client:load
+            scaleOnHover={1.2}
+            rotateAmplitude={20}
+          >
             <Polaroid src="/images/ivan-talk-ces-25.jpeg">
               Nos conférences de Codeurs en Seine 2026
             </Polaroid>
@@ -93,9 +98,14 @@ import { ROUTES } from '@/routes.gen';
         </a>
         <a
           href={lunalink(ROUTES.blog.__path, {})}
-          class="flex -translate-y-2 -rotate-5"
+          class="flex w-full -translate-y-2 -rotate-5"
         >
-          <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
+          <TiltedCard
+            className="w-full"
+            client:load
+            scaleOnHover={1.2}
+            rotateAmplitude={20}
+          >
             <Polaroid src="/images/bearstudio-house.jpeg">
               La tanière
             </Polaroid>
@@ -103,9 +113,14 @@ import { ROUTES } from '@/routes.gen';
         </a>
         <a
           href={lunalink(ROUTES.blog.__path, {})}
-          class="fmex translate-y-2 -rotate-4"
+          class="flex w-full translate-y-2 -rotate-4"
         >
-          <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
+          <TiltedCard
+            className="w-full"
+            client:load
+            scaleOnHover={1.2}
+            rotateAmplitude={20}
+          >
             <Polaroid src="/images/london-25.jpeg">
               React Advanced Conference London 2026
             </Polaroid>
@@ -113,11 +128,16 @@ import { ROUTES } from '@/routes.gen';
         </a>
         <a
           href={lunalink(ROUTES.blog.__path, {})}
-          class="flex -translate-x-1 -translate-y-2 rotate-3"
+          class="flex w-full -translate-x-1 -translate-y-2 rotate-3"
         >
-          <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
-            <Polaroid src="/images/forkids-rouen-2.jpeg"
-              >Fork it! For Kids à Rouen
+          <TiltedCard
+            className="w-full"
+            client:load
+            scaleOnHover={1.2}
+            rotateAmplitude={20}
+          >
+            <Polaroid src="/images/forkids-rouen-2.jpeg">
+              Fork it! For Kids à Rouen
             </Polaroid>
           </TiltedCard>
         </a>
