@@ -5,7 +5,7 @@ import { PiDotsThreeOutlineVerticalDuotone } from 'react-icons/pi';
 import { getMainMenuMobileItems } from '@/content/menus';
 
 const mainNavMobileItemVariants = cva(
-  'text-2xs flex flex-1 flex-col items-center justify-center gap-0.5 [&>svg]:size-6',
+  'text-2xs flex flex-1 flex-col items-center rounded-md py-1 justify-center gap-0.5 [&>svg]:size-6',
   {
     variants: {
       variant: {
@@ -24,7 +24,7 @@ const mainNavMobileItemVariants = cva(
   class="pointer-events-none fixed right-0 bottom-0 left-0 z-20 h-22 p-3 lg:hidden"
 >
   <div
-    class="border-hero/20 bg-hero/80 text-hero-foreground pointer-events-auto mx-auto flex h-full w-full max-w-5xl items-center justify-between rounded-2xl border border-b-3 bg-linear-to-b px-2 backdrop-blur-md"
+    class="border-hero/20 bg-hero/80 text-hero-foreground pointer-events-auto mx-auto flex h-full w-full max-w-lg items-center justify-between rounded-2xl border border-b-3 bg-linear-to-b px-2 backdrop-blur-md"
   >
     <div class="flex w-full gap-px">
       {

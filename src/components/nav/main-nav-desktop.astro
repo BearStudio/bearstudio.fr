@@ -18,7 +18,7 @@ const mainNavDesktopItemVariants = cva(
     variants: {
       variant: {
         default: '',
-        active: 'bg-white/5 [&>svg]:opacity-100',
+        active: 'bg-white/5 text-accent [&>svg]:opacity-100',
       },
     },
     defaultVariants: {
@@ -32,7 +32,7 @@ const mainNavDesktopItemVariants = cva(
   class="pointer-events-none fixed top-0 right-0 left-0 z-20 h-20 p-3 max-lg:hidden"
 >
   <div
-    class="bg-hero/90 text-hero-foreground border-hero pointer-events-auto mx-auto flex h-full w-full max-w-5xl items-center justify-between rounded-2xl border border-b-3 bg-linear-to-b pr-2 pl-4 backdrop-blur-md"
+    class="border-hero/20 bg-hero/80 text-hero-foreground pointer-events-auto mx-auto flex h-full w-full max-w-5xl items-center justify-between rounded-2xl border border-b-3 bg-linear-to-b pr-2 pl-4 backdrop-blur-md"
   >
     <div class="flex gap-8">
       <a href="/" class="flex">
