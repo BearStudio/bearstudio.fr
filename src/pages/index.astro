@@ -1,16 +1,10 @@
 ---
 import { lunalink } from '@bearstudio/lunalink';
-import {
-  PiCaretDownBold,
-  PiEnvelopeBold,
-  PiTranslateDuotone,
-} from 'react-icons/pi';
 
 import { cn } from '@/lib/tailwind/utils';
-import { Button, buttonVariants } from '@/components/ui/button';
-import { Logo } from '@/components/ui/logo';
+import { buttonVariants } from '@/components/ui/button';
+import Hero from '@/components/ui/hero.astro';
 import { Polaroid } from '@/components/ui/polaroid';
-import { Scratch } from '@/components/ui/scratch';
 import { TiltedCard } from '@/components/ui/tilted-card';
 import MainLayout from '@/layouts/main-layout.astro';
 import { HomePolaroids } from '@/pages/_partials/home-polaroids';
@@ -18,164 +12,122 @@ import { ROUTES } from '@/routes.gen';
 ---
 
 <MainLayout>
-  <div class="bg-hero text-hero-foreground relative z-0 flex flex-col">
-    <!-- Mobile Top Actions -->
+  <Hero contentClassName="min-h-[65vh] lg:min-h-[80vh">
     <div
-      class="relative z-10 mx-auto flex w-full max-w-5xl justify-between p-4 lg:hidden"
+      class="mx-auto flex w-full max-w-5xl flex-1 items-center justify-center gap-6 p-4 max-lg:pb-24 lg:p-6"
     >
-      <Button variant="ghostOnDark" className="opacity-80 hover:opacity-100">
-        <PiTranslateDuotone className="opacity-60" />
-        Français
-        <PiCaretDownBold className="opacity-60" />
-      </Button>
-      <a
-        href="#"
-        class={cn(
-          buttonVariants({ variant: 'ghostOnDark' }),
-          'opacity-80 hover:opacity-100'
-        )}
-      >
-        <PiEnvelopeBold className="opacity-60" />
-        Nous contacter
-      </a>
-    </div>
-
-    <!-- Hero -->
-    <div
-      class="relative z-10 flex min-h-[65vh] flex-1 flex-col gap-3 overflow-hidden pt-8 pb-24 lg:min-h-[80vh] lg:pt-32"
-    >
-      <a href="/" class="lg:hidden">
-        <Logo className="mx-auto w-48 sm:w-64" />
-      </a>
       <div
-        class="mx-auto flex w-full max-w-5xl flex-1 items-center justify-center gap-6 p-4 max-lg:pb-24 lg:p-6"
+        class="flex flex-1 flex-col justify-center gap-4 px-6 max-lg:items-center max-lg:text-center lg:gap-6 lg:px-0"
       >
-        <div
-          class="flex flex-1 flex-col justify-center gap-4 max-lg:items-center max-lg:text-center lg:gap-6"
+        <h1
+          class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
         >
-          <h1
-            class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance sm:text-4xl md:text-5xl"
-          >
-            Design & dev pour vos applis web et mobile
-          </h1>
-          <div
-            class="flex max-w-md flex-wrap gap-2 max-lg:items-center max-lg:justify-center"
-          >
-            <a
-              href={lunalink(ROUTES.blog.__path, {})}
-              class={cn(
-                buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
-              )}
-            >
-              UX/UI Design
-            </a>
-            <a
-              href={lunalink(ROUTES.blog.__path, {})}
-              class={cn(
-                buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
-              )}
-            >
-              Dev Web
-            </a>
-            <a
-              href={lunalink(ROUTES.blog.__path, {})}
-              class={cn(
-                buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
-              )}
-            >
-              Dev Mobile
-            </a>
-            <a
-              href={lunalink(ROUTES.blog.__path, {})}
-              class={cn(
-                buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
-              )}
-            >
-              Boost Projet
-            </a>
-            <a
-              href={lunalink(ROUTES.blog.__path, {})}
-              class={cn(
-                buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
-              )}
-            >
-              Accompagnement UX
-            </a>
-            <a
-              href={lunalink(ROUTES.blog.__path, {})}
-              class={cn(
-                buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
-              )}
-            >
-              Accompagnement CTO
-            </a>
-          </div>
-        </div>
-
+          Design & dev pour vos applis web et mobile
+        </h1>
         <div
-          class="relative -mr-12 grid flex-[0.8] grid-cols-2 flex-wrap items-center justify-center gap-x-8 gap-y-7 max-lg:hidden"
+          class="flex max-w-md flex-wrap gap-2 max-lg:items-center max-lg:justify-center"
         >
           <a
             href={lunalink(ROUTES.blog.__path, {})}
-            class="flex translate-x-2 rotate-6"
+            class={cn(
+              buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
+            )}
           >
-            <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
-              <Polaroid src="/images/ivan-talk-ces-25.jpeg">
-                Nos conférences de Codeurs en Seine 2026
-              </Polaroid>
-            </TiltedCard>
+            UX/UI Design
           </a>
           <a
             href={lunalink(ROUTES.blog.__path, {})}
-            class="flex -translate-y-2 -rotate-5"
+            class={cn(
+              buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
+            )}
           >
-            <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
-              <Polaroid src="/images/bearstudio-house.jpeg">
-                La tanière
-              </Polaroid>
-            </TiltedCard>
+            Dev Web
           </a>
           <a
             href={lunalink(ROUTES.blog.__path, {})}
-            class="fmex translate-y-2 -rotate-4"
+            class={cn(
+              buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
+            )}
           >
-            <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
-              <Polaroid src="/images/london-25.jpeg">
-                React Advanced Conference London 2026
-              </Polaroid>
-            </TiltedCard>
+            Dev Mobile
           </a>
           <a
             href={lunalink(ROUTES.blog.__path, {})}
-            class="flex -translate-x-1 -translate-y-2 rotate-3"
+            class={cn(
+              buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
+            )}
           >
-            <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
-              <Polaroid src="/images/forkids-rouen-2.jpeg"
-                >Fork it! For Kids à Rouen
-              </Polaroid>
-            </TiltedCard>
+            Boost Projet
+          </a>
+          <a
+            href={lunalink(ROUTES.blog.__path, {})}
+            class={cn(
+              buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
+            )}
+          >
+            Accompagnement UX
+          </a>
+          <a
+            href={lunalink(ROUTES.blog.__path, {})}
+            class={cn(
+              buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
+            )}
+          >
+            Accompagnement CTO
           </a>
         </div>
       </div>
+
+      <div
+        class="relative -mr-12 grid flex-[0.8] grid-cols-2 flex-wrap items-center justify-center gap-x-8 gap-y-7 max-lg:hidden"
+      >
+        <a
+          href={lunalink(ROUTES.blog.__path, {})}
+          class="flex translate-x-2 rotate-6"
+        >
+          <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
+            <Polaroid src="/images/ivan-talk-ces-25.jpeg">
+              Nos conférences de Codeurs en Seine 2026
+            </Polaroid>
+          </TiltedCard>
+        </a>
+        <a
+          href={lunalink(ROUTES.blog.__path, {})}
+          class="flex -translate-y-2 -rotate-5"
+        >
+          <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
+            <Polaroid src="/images/bearstudio-house.jpeg">
+              La tanière
+            </Polaroid>
+          </TiltedCard>
+        </a>
+        <a
+          href={lunalink(ROUTES.blog.__path, {})}
+          class="fmex translate-y-2 -rotate-4"
+        >
+          <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
+            <Polaroid src="/images/london-25.jpeg">
+              React Advanced Conference London 2026
+            </Polaroid>
+          </TiltedCard>
+        </a>
+        <a
+          href={lunalink(ROUTES.blog.__path, {})}
+          class="flex -translate-x-1 -translate-y-2 rotate-3"
+        >
+          <TiltedCard client:load scaleOnHover={1.2} rotateAmplitude={20}>
+            <Polaroid src="/images/forkids-rouen-2.jpeg"
+              >Fork it! For Kids à Rouen
+            </Polaroid>
+          </TiltedCard>
+        </a>
+      </div>
     </div>
-    <img
-      src="https://images.unsplash.com/44/MIbCzcvxQdahamZSNQ26_12082014-IMG_3526.jpg?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470"
-      alt=""
-      class="absolute inset-0 z-0 h-full w-full object-cover opacity-30 mix-blend-overlay grayscale"
-    />
-    <div class="from-hero/90 to-hero/0 absolute inset-0 z-0 bg-linear-to-b">
-    </div>
-    <div class="text-background relative z-10 -mt-8 -mb-px flex">
-      <Scratch className="" />
-      <Scratch className="max-lg:hidden" />
-      <Scratch className="max-2xl:hidden" />
-    </div>
-  </div>
+  </Hero>
 
   <div class="-mt-32 w-full lg:hidden">
     <HomePolaroids client:load />
   </div>
-  <!-- -->
 
   <div class="mx-auto max-w-5xl p-4">
     <p>
