@@ -73,7 +73,7 @@ const { page, category } = Astro.props;
           {
             page.data.map((post) => (
               <a
-                href={lunalink(ROUTES.blog['posts'][':id'].__path, {
+                href={lunalink(ROUTES.en.blog['posts'][':id'].__path, {
                   id: post.id,
                 })}
               >

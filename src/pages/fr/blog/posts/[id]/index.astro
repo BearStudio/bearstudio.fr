@@ -100,7 +100,9 @@ const authors = await getAuthorsFromBlogPost(post);
             (author) =>
               author && (
                 <a
-                  href={lunalink(ROUTES.team[':id'].__path, { id: author.id })}
+                  href={lunalink(ROUTES.fr.equipe[':id'].__path, {
+                    id: author.id,
+                  })}
                 >
                   {author.data.name}
                 </a>

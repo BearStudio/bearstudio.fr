@@ -74,7 +74,9 @@ const posts = await getBlogCollectionLinkedToTeamMember({ author: person });
     {
       posts.map((post) => {
         return (
-          <a href={lunalink(ROUTES.blog.posts[':id'].__path, { id: post.id })}>
+          <a
+            href={lunalink(ROUTES.en.blog.posts[':id'].__path, { id: post.id })}
+          >
             {post.data.title}
           </a>
         );

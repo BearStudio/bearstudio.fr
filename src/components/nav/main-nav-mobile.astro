@@ -3,6 +3,7 @@ import { cva } from 'class-variance-authority';
 import { PiDotsThreeOutlineVerticalDuotone } from 'react-icons/pi';
 
 import { getMainMenuMobileItems } from '@/content/menus';
+import { defaultLocale, type Locales } from '@/i18n';
 
 const mainNavMobileItemVariants = cva(
   'text-2xs flex flex-1 flex-col items-center rounded-md py-1 justify-center gap-0.5 [&>svg]:size-6',
@@ -18,6 +19,8 @@ const mainNavMobileItemVariants = cva(
     },
   }
 );
+
+const currentLocale = (Astro.currentLocale ?? defaultLocale) as Locales;
 ---
 
 <div
@@ -30,12 +33,12 @@ const mainNavMobileItemVariants = cva(
       {
         getMainMenuMobileItems('primary').map((item) => {
           const isActive = item.exact
-            ? item.href === Astro.url.pathname
-            : Astro.url.pathname.startsWith(item.href);
+            ? item.getHref(currentLocale) === Astro.url.pathname
+            : Astro.url.pathname.startsWith(item.getHref(currentLocale));
           const Icon = isActive ? item.iconActive : item.icon;
           return (
             <a
-              href={item.href}
+              href={item.getHref(currentLocale)}
               class={mainNavMobileItemVariants({
                 variant: isActive ? 'active' : 'default',
               })}
