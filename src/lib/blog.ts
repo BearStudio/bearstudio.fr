@@ -1,7 +1,14 @@
-import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+import {
+  getSlugWithoutLocale,
+  hasSpecificLang,
+  type ComputedCollectionEntry,
+} from '@/lib/content';
 
 type Params = {
-  limit?: number;
+  limit?: number | undefined;
+  lang?: string | undefined;
 };
 
 const isPublished = (post: CollectionEntry<'blog'>) =>
@@ -9,12 +16,12 @@ const isPublished = (post: CollectionEntry<'blog'>) =>
 
 type HasSpecificAuthorProps = {
   post: CollectionEntry<'blog'>;
-  author: CollectionEntry<'team'>;
+  author: ComputedCollectionEntry<'team'>;
 };
 
 const hasSpecificAuthor = ({ post, author }: HasSpecificAuthorProps) => {
   const selectedPost = (post.data?.authors ?? []).find(
-    (postAuthor) => postAuthor.id === author.id
+    (postAuthor) => postAuthor.id === author.data._computed.slug
   );
 
   if (selectedPost) return selectedPost;
@@ -26,10 +33,15 @@ const sortByLatest = (
   post2: CollectionEntry<'blog'>
 ) => (post2.data.date?.valueOf() ?? 0) - (post1.data.date?.valueOf() ?? 0);
 
-export async function getBlogCollection({ limit = undefined }: Params = {}) {
+export async function getBlogCollection({
+  limit = undefined,
+  lang,
+}: Params = {}) {
   const posts = (await getCollection('blog'))
     .filter(isPublished)
-    .sort(sortByLatest);
+    .filter((post) => (lang ? hasSpecificLang({ post, lang }) : post))
+    .sort(sortByLatest)
+    .map((post) => getSlugWithoutLocale<'blog'>(post));
 
   if (limit) {
     return posts.slice(0, limit);
@@ -38,30 +50,16 @@ export async function getBlogCollection({ limit = undefined }: Params = {}) {
   return posts;
 }
 
-export async function getAuthorsFromBlogPost(post: CollectionEntry<'blog'>) {
-  return await Promise.all(
-    (post.data.authors ?? []).map(async (author) => {
-      if (!author) return;
-      return await getEntry(author);
-    })
-  );
-}
-
 type GetBlogCollectionLinkedToTeamMemberProps = Params & {
-  author: CollectionEntry<'team'>;
+  author: ComputedCollectionEntry<'team'>;
 };
 
 export async function getBlogCollectionLinkedToTeamMember({
   author,
+  lang,
   limit = undefined,
 }: GetBlogCollectionLinkedToTeamMemberProps) {
-  const posts = (await getCollection('blog'))
+  return (await getBlogCollection({ limit, lang }))
     .filter((post) => hasSpecificAuthor({ post, author }))
     .filter((x) => x);
-
-  if (limit) {
-    return posts.slice(0, limit);
-  }
-
-  return posts;
 }
