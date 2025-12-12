@@ -2,5 +2,8 @@
   "nav.home": "Home",
   "nav.services": "Services",
   "nav.team": "Team",
-  "nav.blog": "Blog"
+  "nav.blog": "Blog",
+  "nav.more": "More",
+  "nav.contact": "Contact us",
+  "nav.language": "English"
 }

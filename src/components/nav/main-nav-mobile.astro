@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority';
 import { PiDotsThreeOutlineVerticalDuotone } from 'react-icons/pi';
 
 import { getMainMenuMobileItems } from '@/content/menus';
-import { defaultLocale, type Locales } from '@/i18n';
+import { defaultLocale, type Locale } from '@/i18n';
 
 const mainNavMobileItemVariants = cva(
   'text-2xs flex flex-1 flex-col items-center rounded-md py-1 justify-center gap-0.5 [&>svg]:size-6',
@@ -20,7 +20,7 @@ const mainNavMobileItemVariants = cva(
   }
 );
 
-const currentLocale = (Astro.currentLocale ?? defaultLocale) as Locales;
+const currentLocale = (Astro.currentLocale ?? defaultLocale) as Locale;
 ---
 
 <div

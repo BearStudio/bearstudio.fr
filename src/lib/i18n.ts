@@ -1,9 +1,9 @@
-import { locales, type Locales } from '@/i18n';
+import { locales, type Locale } from '@/i18n';
 import { routes } from '@/i18n/redirection';
 
 type GetRedirectionUrlProps = {
-  locale: Locales;
-  currentLocale: Locales;
+  locale: Locale;
+  currentLocale: Locale;
   pathName: string;
 };
 
@@ -37,6 +37,6 @@ export const getRedirectionUrl = ({
   return pathName.replace(redirectRegex, localeRouteRedirection);
 };
 
-export const isLocale = (value: string): value is Locales => {
-  return locales.includes(value as Locales);
+export const isLocale = (value: string): value is Locale => {
+  return locales.includes(value as Locale);
 };

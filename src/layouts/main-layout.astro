@@ -1,6 +1,7 @@
 ---
-import MainNavDesktop from '@/components/nav/main-nav-desktop.astro';
+import { MainNavDesktop } from '@/components/nav/main-nav-desktop';
 import MainNavMobile from '@/components/nav/main-nav-mobile.astro';
+import { parseAstroLocale } from '@/i18n/utils';
 import RootLayout from '@/layouts/root-layout.astro';
 ---
 
@@ -8,7 +9,10 @@ import RootLayout from '@/layouts/root-layout.astro';
   <slot name="seo" slot="seo" />
   <slot name="ld+json" slot="ld+json" />
 
-  <MainNavDesktop />
+  <MainNavDesktop
+    currentPathname={Astro.url.pathname}
+    locale={parseAstroLocale(Astro.currentLocale)}
+  />
   <MainNavMobile />
 
   <main class="flex flex-1 flex-col">

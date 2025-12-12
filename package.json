@@ -28,6 +28,7 @@
     "@fontsource-variable/caveat": "5.2.8",
     "@fontsource-variable/inter": "5.2.8",
     "@fontsource-variable/roboto-slab": "5.2.8",
+    "@radix-ui/react-navigation-menu": "1.2.14",
     "@radix-ui/react-slot": "1.2.4",
     "@tailwindcss/vite": "4.1.13",
     "astro": "5.13.7",
