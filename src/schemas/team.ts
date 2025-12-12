@@ -16,7 +16,9 @@ export const zTeamMember = ({ image }: SchemaContext) =>
         })
       )
       .optional(),
-    status: z.enum(['current', 'advisor', 'former']).default('current'),
+    status: z
+      .enum(['current', 'advisor', 'former', 'other'])
+      .default('current'),
     order: z.number().optional(),
     hidden: z.boolean().optional().default(false),
     // TODO: Add fields for conferences, projects, publications, etc.
