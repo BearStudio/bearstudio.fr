@@ -13,6 +13,7 @@ import { Button, buttonVariants } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
 import { getMainMenuDesktopItems } from '@/content/menus';
 import { defaultLocale, locales, type Locales } from '@/i18n';
+import { useTranslations } from '@/i18n/utils';
 
 const mainNavDesktopItemVariants = cva(
   'focus-visible:ring-ring/50 relative inline-flex w-fit shrink-0 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-md px-3 py-2 text-sm font-medium whitespace-nowrap transition-all outline-none hover:bg-white/5 focus-visible:ring-[3px] active:translate-y-px [&>svg]:opacity-60',
@@ -31,6 +32,8 @@ const mainNavDesktopItemVariants = cva(
 
 const currentLocale = (Astro.currentLocale ?? defaultLocale) as Locales;
 const pathName = Astro.url.pathname;
+
+const t = useTranslations(currentLocale);
 ---
 
 <div
@@ -58,7 +61,7 @@ const pathName = Astro.url.pathname;
                 })}
               >
                 <Icon />
-                {item.label}
+                {t(item.key, item.label)}
               </a>
             );
           })
