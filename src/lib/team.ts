@@ -14,6 +14,11 @@ type Params = {
 type TeamEntry = CollectionEntry<'team'>;
 const isVisible = (person: TeamEntry) => !person.data.hidden;
 
+const hasStatus = (
+  person: TeamEntry,
+  status: CollectionEntry<'team'>['data']['status']
+) => person.data.status === status;
+
 const sortByOrder = (person1: TeamEntry, person2: TeamEntry) => {
   if (person1.data.order === undefined && person2.data.order === undefined) {
     return 0;
@@ -32,11 +37,25 @@ const sortByOrder = (person1: TeamEntry, person2: TeamEntry) => {
 
 export async function getTeamCollection({
   limit = undefined,
-  lang,
+  lang = 'fr',
 }: Params = {}) {
   const team = (await getCollection('team'))
     .filter(isVisible)
-    .filter((post) => hasSpecificLang({ post, lang: lang ?? 'fr' }))
+    .filter((post) => hasSpecificLang({ post, lang }))
+    .sort(sortByOrder)
+    .map((post) => getSlugWithoutLocale<'team'>(post));
+
+  return team.slice(0, limit);
+}
+
+export async function getCurrentTeamCollection({
+  limit = undefined,
+  lang = 'fr',
+}: Params = {}) {
+  const team = (await getCollection('team'))
+    .filter(isVisible)
+    .filter((post) => hasStatus(post, 'current'))
+    .filter((post) => hasSpecificLang({ post, lang }))
     .sort(sortByOrder)
     .map((post) => getSlugWithoutLocale<'team'>(post));
 
