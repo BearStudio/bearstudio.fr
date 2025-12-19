@@ -3,7 +3,7 @@ import { useRef, useState, type ReactNode } from 'react';
 import type { SpringOptions } from 'motion/react';
 import { motion, useMotionValue, useSpring } from 'motion/react';
 
-import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { useMediaQuery } from '@/hooks/use-media-query';
 import { cn } from '@/lib/tailwind/utils';
 
 interface TiltedCardProps {
