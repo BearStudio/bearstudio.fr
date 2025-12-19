@@ -6,7 +6,7 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel';
 import { Polaroid } from '@/components/ui/polaroid';
-import type { Locale } from '@/i18n';
+import type { Locale } from '@/i18n/utils';
 import { ROUTES } from '@/routes.gen';
 
 export const HomePolaroids = (props: { locale: Locale }) => {

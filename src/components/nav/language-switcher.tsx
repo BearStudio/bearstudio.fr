@@ -1,6 +1,5 @@
 import { PiCaretDownBold, PiTranslateDuotone } from 'react-icons/pi';
 
-import { getRedirectionUrl } from '@/lib/i18n';
 import { navButtonVariants } from '@/components/nav/style';
 import {
   DropdownMenu,
@@ -8,8 +7,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { locales, type Locale } from '@/i18n';
-import { getTranslationFn } from '@/i18n/utils';
+import { locales } from '@/i18n';
+import { getRedirectionUrl, getTranslationFn, type Locale } from '@/i18n/utils';
 
 export const LanguageSwitcher = (props: {
   locale: Locale;

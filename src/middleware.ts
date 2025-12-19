@@ -1,6 +1,7 @@
 import { defineMiddleware } from 'astro:middleware';
 
-import { defaultLocale, zLocale } from '@/i18n';
+import { defaultLocale } from '@/i18n';
+import { zLocale } from '@/i18n/utils';
 
 export const onRequest = defineMiddleware((context, next) => {
   const {

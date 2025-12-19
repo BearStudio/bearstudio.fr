@@ -12,8 +12,8 @@ import {
   PiUsersThreeFill,
 } from 'react-icons/pi';
 
-import type { Locale } from '@/i18n';
-import type { translations } from '@/i18n/ui';
+import type { translations } from '@/i18n';
+import type { Locale } from '@/i18n/utils';
 import { ROUTES } from '@/routes.gen';
 
 type MainMenuScope = 'all' | 'mobile' | 'desktop';

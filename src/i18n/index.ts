@@ -1,7 +1,7 @@
-import { z } from 'astro/zod';
+import en from './en.json';
+import fr from './fr.json';
 
 export const defaultLocale = 'fr';
 export const locales = ['fr', 'en'] as const;
 
-export type Locale = z.infer<ReturnType<typeof zLocale>>;
-export const zLocale = () => z.enum(locales).catch(defaultLocale);
+export const translations = { fr, en } as const;

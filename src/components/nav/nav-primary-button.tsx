@@ -2,7 +2,7 @@ import { lunalink } from '@bearstudio/lunalink';
 import { PiEnvelopeBold } from 'react-icons/pi';
 
 import { navButtonVariants } from '@/components/nav/style';
-import type { Locale } from '@/i18n';
+import type { Locale } from '@/i18n/utils';
 import { getTranslationFn } from '@/i18n/utils';
 import { ROUTES } from '@/routes.gen';
 

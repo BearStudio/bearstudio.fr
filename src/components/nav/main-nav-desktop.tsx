@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Logo } from '@/components/ui/logo';
 import { getMainMenuDesktopItems } from '@/content/menus';
-import type { Locale } from '@/i18n';
+import type { Locale } from '@/i18n/utils';
 import { getTranslationFn } from '@/i18n/utils';
 import { ROUTES } from '@/routes.gen';
 

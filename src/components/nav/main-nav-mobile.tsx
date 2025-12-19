@@ -2,7 +2,7 @@ import { cva } from 'class-variance-authority';
 import { PiDotsThreeOutlineVerticalDuotone } from 'react-icons/pi';
 
 import { getMainMenuMobileItems } from '@/content/menus';
-import type { Locale } from '@/i18n';
+import type { Locale } from '@/i18n/utils';
 import { getTranslationFn } from '@/i18n/utils';
 
 const mainNavMobileItemVariants = cva(
