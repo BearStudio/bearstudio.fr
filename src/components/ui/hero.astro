@@ -49,7 +49,9 @@ const { contentClassName } = Astro.props;
         <Logo className="mx-auto w-38 sm:w-52" />
       </a>
 
-      <slot />
+      <div class="flex flex-1 flex-col justify-center">
+        <slot />
+      </div>
     </div>
   </div>
 
