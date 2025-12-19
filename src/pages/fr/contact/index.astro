@@ -1,9 +1,14 @@
 ---
+import SEO from '@/components/seo/index.astro';
 import Hero from '@/components/ui/hero.astro';
 import MainLayout from '@/layouts/main-layout.astro';
 ---
 
 <MainLayout>
+  <SEO
+    slot="seo"
+    title="Contacter l'équipe du BearStudio à Rouen en Normandie"
+  />
   <Hero>
     <div
       class="flex flex-col items-center justify-center gap-2 text-center lg:gap-4"
