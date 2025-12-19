@@ -10,8 +10,10 @@ import {
 
 interface CurvedLoopProps {
   marqueeText?: string;
+  /** Between 0 (fixed) and 10 (high)  */
   speed?: number;
   className?: string;
+  /** Between -400 and 400 (pixels) for the best rendering */
   curveAmount?: number;
   direction?: 'left' | 'right';
   interactive?: boolean;
