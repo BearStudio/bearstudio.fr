@@ -36,7 +36,6 @@ const ROUTES_CONFIG = {
     },
     "contact": {},
     "equipe": {
-      ":page": {},
       ":id": {}
     },
     "prestations": {

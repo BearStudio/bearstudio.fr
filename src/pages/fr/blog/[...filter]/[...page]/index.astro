@@ -9,13 +9,18 @@ import FormattedDate from '@/components/formatted-date.astro';
 import Pagination from '@/components/pagination.astro';
 import SEO from '@/components/seo/index.astro';
 import Hero from '@/components/ui/hero.astro';
+import type { Locale } from '@/i18n';
 import { parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 
-export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+export async function generateStaticPaths(
+  params: {
+    locale: Locale;
+  } & GetStaticPathsOptions
+) {
   const newsPages = await getBlogCollection({
-    lang: parseAstroLocale(Astro.currentLocale),
+    lang: params.locale,
   });
 
   // Get all categories
@@ -24,9 +29,9 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   ];
 
   return [
-    ...paginate(newsPages, { pageSize: 20, props: { categories } }),
+    ...params.paginate(newsPages, { pageSize: 20, props: { categories } }),
     ...categories.flatMap((category) =>
-      paginate(
+      params.paginate(
         newsPages.filter((article) =>
           article.data.categories?.includes(category ?? '')
         ),
@@ -38,6 +43,10 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
       )
     ),
   ];
+}
+
+export async function getStaticPaths(params: GetStaticPathsOptions) {
+  return generateStaticPaths({ ...params, locale: 'fr' });
 }
 
 const { page, category } = Astro.props;
