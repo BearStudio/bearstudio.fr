@@ -5,6 +5,8 @@ import {
   PiTranslateDuotone,
 } from 'react-icons/pi';
 
+import { LanguageSwitcher } from '@/components/nav/language-switcher';
+import { NavPrimaryButton } from '@/components/nav/nav-primary-button';
 import { navButtonVariants } from '@/components/nav/style';
 import { Logo } from '@/components/ui/logo';
 import { getMainMenuDesktopItems } from '@/content/menus';
@@ -53,18 +55,8 @@ export const MainNavDesktop = (props: {
         </div>
 
         <div className="flex gap-px">
-          <a
-            href={lunalink(ROUTES[props.locale].contact.__path, {})}
-            className={navButtonVariants()}
-          >
-            <PiEnvelopeBold className="opacity-60" />
-            {t('nav.contact')}
-          </a>
-          <button type="button" className={navButtonVariants()}>
-            <PiTranslateDuotone className="opacity-60" />
-            {t('nav.language')}
-            <PiCaretDownBold className="opacity-60" />
-          </button>
+          <NavPrimaryButton locale={props.locale} />
+          <LanguageSwitcher locale={props.locale} />
         </div>
       </div>
     </div>

@@ -1,17 +1,14 @@
 ---
 import { lunalink } from '@bearstudio/lunalink';
-import {
-  PiCaretDownBold,
-  PiEnvelopeBold,
-  PiTranslateDuotone,
-} from 'react-icons/pi';
 
 import { cn } from '@/lib/tailwind/utils';
-import { Button, buttonVariants } from '@/components/ui/button';
 import { Logo } from '@/components/ui/logo';
 import { Scratch } from '@/components/ui/scratch';
 import { parseAstroLocale } from '@/i18n/utils';
 import { ROUTES } from '@/routes.gen';
+
+import { LanguageSwitcher } from '../nav/language-switcher';
+import { NavPrimaryButton } from '../nav/nav-primary-button';
 
 interface Props {
   contentClassName?: string;
@@ -24,21 +21,11 @@ const { contentClassName } = Astro.props;
   <div
     class="relative z-10 mx-auto flex w-full max-w-5xl justify-between p-4 lg:hidden"
   >
-    <Button variant="ghostOnDark" className="opacity-80 hover:opacity-100">
-      <PiTranslateDuotone className="opacity-60" />
-      Français
-      <PiCaretDownBold className="opacity-60" />
-    </Button>
-    <a
-      href="#"
-      class={cn(
-        buttonVariants({ variant: 'ghostOnDark' }),
-        'opacity-80 hover:opacity-100'
-      )}
-    >
-      <PiEnvelopeBold className="opacity-60" />
-      Nous contacter
-    </a>
+    <LanguageSwitcher
+      client:load
+      locale={parseAstroLocale(Astro.currentLocale)}
+    />
+    <NavPrimaryButton locale={parseAstroLocale(Astro.currentLocale)} />
   </div>
 
   <!-- Content -->
