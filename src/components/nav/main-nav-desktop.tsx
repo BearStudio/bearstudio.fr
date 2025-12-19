@@ -1,23 +1,22 @@
 import { lunalink } from '@bearstudio/lunalink';
-import {
-  PiCaretDownBold,
-  PiEnvelopeBold,
-  PiTranslateDuotone,
-} from 'react-icons/pi';
+import { PiCaretDownBold } from 'react-icons/pi';
 
 import { LanguageSwitcher } from '@/components/nav/language-switcher';
 import { NavPrimaryButton } from '@/components/nav/nav-primary-button';
 import { navButtonVariants } from '@/components/nav/style';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import { Logo } from '@/components/ui/logo';
 import { getMainMenuDesktopItems } from '@/content/menus';
 import type { Locale } from '@/i18n';
 import { getTranslationFn } from '@/i18n/utils';
 import { ROUTES } from '@/routes.gen';
 
-export const MainNavDesktop = (props: {
-  currentPathname: string;
-  locale: Locale;
-}) => {
+export const MainNavDesktop = (props: { pathname: string; locale: Locale }) => {
   const t = getTranslationFn(props.locale);
   return (
     <div className="pointer-events-none fixed top-0 right-0 left-0 z-20 h-20 p-3 max-lg:hidden">
@@ -30,8 +29,8 @@ export const MainNavDesktop = (props: {
             {getMainMenuDesktopItems('primary').map((item) => {
               const href = item.getHref(props.locale);
               const isActive = item.exact
-                ? href === props.currentPathname
-                : props.currentPathname.startsWith(href);
+                ? href === props.pathname
+                : props.pathname.startsWith(href);
               const Icon = isActive ? item.iconActive : item.icon;
               return (
                 <a
@@ -47,16 +46,31 @@ export const MainNavDesktop = (props: {
               );
             })}
 
-            <button type="button" className={navButtonVariants()}>
-              {t('nav.more')}
-              <PiCaretDownBold className="opacity-60" />
-            </button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button type="button" className={navButtonVariants()}>
+                  {t('nav.more')}
+                  <PiCaretDownBold className="opacity-60" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                className="w-24 border-none bg-brand-800 text-white"
+                align="start"
+              >
+                <DropdownMenuItem asChild>
+                  <a href={'/'}>Item</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href={'/'}>Item</a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
         </div>
 
         <div className="flex gap-px">
           <NavPrimaryButton locale={props.locale} />
-          <LanguageSwitcher locale={props.locale} />
+          <LanguageSwitcher locale={props.locale} pathname={props.pathname} />
         </div>
       </div>
     </div>

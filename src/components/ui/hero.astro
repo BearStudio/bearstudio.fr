@@ -24,6 +24,7 @@ const { contentClassName } = Astro.props;
     <LanguageSwitcher
       client:load
       locale={parseAstroLocale(Astro.currentLocale)}
+      pathname={Astro.url.pathname}
     />
     <NavPrimaryButton locale={parseAstroLocale(Astro.currentLocale)} />
   </div>
