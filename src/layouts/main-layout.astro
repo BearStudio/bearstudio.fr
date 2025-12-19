@@ -10,6 +10,7 @@ import RootLayout from '@/layouts/root-layout.astro';
   <slot name="ld+json" slot="ld+json" />
 
   <MainNavDesktop
+    client:load
     currentPathname={Astro.url.pathname}
     locale={parseAstroLocale(Astro.currentLocale)}
   />
