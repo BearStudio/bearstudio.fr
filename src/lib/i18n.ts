@@ -1,4 +1,4 @@
-import { locales, type Locale } from '@/i18n';
+import { type Locale } from '@/i18n';
 import { routes } from '@/i18n/redirection';
 
 type GetRedirectionUrlProps = {
@@ -35,8 +35,4 @@ export const getRedirectionUrl = ({
 
   const redirectRegex = new RegExp('^' + routeRedirection);
   return pathName.replace(redirectRegex, localeRouteRedirection);
-};
-
-export const isLocale = (value: string): value is Locale => {
-  return locales.includes(value as Locale);
 };
