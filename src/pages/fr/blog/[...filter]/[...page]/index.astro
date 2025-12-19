@@ -9,11 +9,14 @@ import FormattedDate from '@/components/formatted-date.astro';
 import Pagination from '@/components/pagination.astro';
 import SEO from '@/components/seo/index.astro';
 import Hero from '@/components/ui/hero.astro';
+import { parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const newsPages = await getBlogCollection({ lang: 'fr' });
+  const newsPages = await getBlogCollection({
+    lang: parseAstroLocale(Astro.currentLocale),
+  });
 
   // Get all categories
   const categories = [
@@ -30,7 +33,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
         {
           pageSize: 20,
           params: { filter: category },
-          props: { category, categories },
+          props: { category },
         }
       )
     ),
@@ -73,9 +76,14 @@ const { page, category } = Astro.props;
           {
             page.data.map((post) => (
               <a
-                href={lunalink(ROUTES.fr.blog['posts'][':id'].__path, {
-                  id: post.data._computed.slug,
-                })}
+                href={lunalink(
+                  ROUTES[parseAstroLocale(Astro.currentLocale)].blog['posts'][
+                    ':id'
+                  ].__path,
+                  {
+                    id: post.data._computed.slug,
+                  }
+                )}
               >
                 {post.data.heroImage && (
                   <Image

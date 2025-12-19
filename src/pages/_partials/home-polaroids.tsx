@@ -6,16 +6,17 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel';
 import { Polaroid } from '@/components/ui/polaroid';
+import type { Locale } from '@/i18n';
 import { ROUTES } from '@/routes.gen';
 
-export const HomePolaroids = () => {
+export const HomePolaroids = (props: { locale: Locale }) => {
   return (
     <Carousel className="-my-16 w-full" opts={{ dragFree: true }}>
       <CarouselContent className="-ml-8 pl-8">
         <CarouselItem className="basis-[60%] sm:basis-[30%] md:basis-[24%] py-16 fisrt:ml-8">
           <a
             className="-rotate-2 flex"
-            href={lunalink(ROUTES.fr.blog.__path, {})}
+            href={lunalink(ROUTES[props.locale].blog.__path, {})}
             onDragStart={(e) => e.preventDefault()}
           >
             <Polaroid src="/images/ivan-talk-ces-25.jpeg">
@@ -26,7 +27,7 @@ export const HomePolaroids = () => {
         <CarouselItem className="basis-[60%] sm:basis-[30%] md:basis-[25%] py-16">
           <a
             className="rotate-1 flex"
-            href={lunalink(ROUTES.fr.blog.__path, {})}
+            href={lunalink(ROUTES[props.locale].blog.__path, {})}
             onDragStart={(e) => e.preventDefault()}
           >
             <Polaroid src="/images/bearstudio-house.jpeg">La tanière</Polaroid>
@@ -35,7 +36,7 @@ export const HomePolaroids = () => {
         <CarouselItem className="basis-[60%] sm:basis-[30%] md:basis-[25%] py-16">
           <a
             className="-rotate-3 flex"
-            href={lunalink(ROUTES.fr.blog.__path, {})}
+            href={lunalink(ROUTES[props.locale].blog.__path, {})}
             onDragStart={(e) => e.preventDefault()}
           >
             <Polaroid src="/images/london-25.jpeg">
@@ -46,7 +47,7 @@ export const HomePolaroids = () => {
         <CarouselItem className="basis-[60%] sm:basis-[30%] md:basis-[24%] py-16 last:mr-8">
           <a
             className="rotate-2 flex"
-            href={lunalink(ROUTES.fr.blog.__path, {})}
+            href={lunalink(ROUTES[props.locale].blog.__path, {})}
             onDragStart={(e) => e.preventDefault()}
           >
             <Polaroid src="/images/forkids-rouen-2.jpeg">

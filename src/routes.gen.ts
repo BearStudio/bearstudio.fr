@@ -9,8 +9,6 @@ const ROUTES_CONFIG = {
     "home-polaroids": {}
   },
   "en": {
-    "adventures-of-bearstudio-traveledmap": {},
-    "ask-your-free-mini-audit-ux": {},
     "blog": {
       ":filter": {
         ":page": {}
@@ -19,31 +17,15 @@ const ROUTES_CONFIG = {
         ":id": {}
       }
     },
-    "contact": {
-      "application-process-bearstudio": {}
-    },
-    "legal-notices": {},
+    "contact": {},
     "services": {
-      "dev-back": {},
-      "dev-front": {},
-      "integration": {},
-      "ux-design": {
-        "audit-ux": {},
-        "graphiccharter": {},
-        "mockups": {},
-        "moodboard": {},
-        "wireframes": {}
-      }
+      "ux-design": {}
     },
     "team": {
-      ":page": {},
       ":id": {}
     }
   },
   "fr": {
-    "_partials": {
-      "home-polaroids": {}
-    },
     "blog": {
       ":filter": {
         ":page": {}
@@ -52,27 +34,13 @@ const ROUTES_CONFIG = {
         ":id": {}
       }
     },
-    "contact": {
-      "processus-candidature-bearstudio": {}
-    },
-    "demandez-votre-mini-audit-ux-gratuit": {},
+    "contact": {},
     "equipe": {
       ":page": {},
       ":id": {}
     },
-    "mentions-legales": {},
-    "periples-du-bearstudio-traveledmap": {},
     "prestations": {
-      "dev-back": {},
-      "dev-front": {},
-      "integration": {},
-      "ux-design": {
-        "audit-ux": {},
-        "charte-graphique": {},
-        "maquettes": {},
-        "moodboard": {},
-        "wireframes": {}
-      }
+      "ux-design": {}
     }
   },
   "rss.xml": {},
