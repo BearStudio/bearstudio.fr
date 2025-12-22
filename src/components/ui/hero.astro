@@ -1,19 +1,23 @@
 ---
+import { Image } from 'astro:assets';
+
 import { lunalink } from '@bearstudio/lunalink';
 
 import { cn } from '@/lib/tailwind/utils';
+import { LanguageSwitcher } from '@/components/nav/language-switcher';
+import { NavPrimaryButton } from '@/components/nav/nav-primary-button';
 import { Logo } from '@/components/ui/logo';
 import { Scratch } from '@/components/ui/scratch';
 import { parseAstroLocale } from '@/i18n/utils';
 import { ROUTES } from '@/routes.gen';
 
-import { LanguageSwitcher } from '../nav/language-switcher';
-import { NavPrimaryButton } from '../nav/nav-primary-button';
+import defaultBg from './hero-bg.jpeg';
 
 interface Props {
   contentClassName?: string;
+  image?: ImageMetadata | undefined;
 }
-const { contentClassName } = Astro.props;
+const { image, contentClassName } = Astro.props;
 ---
 
 <div class="bg-hero text-hero-foreground relative z-0 flex flex-col">
@@ -56,8 +60,8 @@ const { contentClassName } = Astro.props;
   </div>
 
   <!-- Background -->
-  <img
-    src="https://images.unsplash.com/44/MIbCzcvxQdahamZSNQ26_12082014-IMG_3526.jpg?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470"
+  <Image
+    src={image ?? defaultBg}
     alt=""
     class="absolute inset-0 z-0 h-full w-full object-cover opacity-30 mix-blend-overlay grayscale"
   />

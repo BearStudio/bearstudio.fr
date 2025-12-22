@@ -1,6 +1,9 @@
+import { useEffect, useState } from 'react';
+
 import { lunalink } from '@bearstudio/lunalink';
 import { PiCaretDownBold } from 'react-icons/pi';
 
+import { cn } from '@/lib/tailwind/utils';
 import { LanguageSwitcher } from '@/components/nav/language-switcher';
 import { NavPrimaryButton } from '@/components/nav/nav-primary-button';
 import { navButtonVariants } from '@/components/nav/style';
@@ -23,9 +26,26 @@ export const MainNavDesktop = (props: { pathname: string; locale: Locale }) => {
     scope: 'desktop',
     level: 'secondary',
   });
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 60);
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+
   return (
     <div className="pointer-events-none fixed top-0 right-0 left-0 z-20 h-20 p-3 max-lg:hidden">
-      <div className="border-hero/20 bg-hero/80 text-hero-foreground pointer-events-auto mx-auto flex h-full w-full max-w-5xl items-center justify-between rounded-2xl border border-b-3 bg-linear-to-b pr-2 pl-4 backdrop-blur-md">
+      <div
+        className={cn(
+          'bg-transparent text-hero-foreground pointer-events-auto mx-auto flex h-full w-full max-w-5xl items-center justify-between rounded-2xl border border-transparent border-b-3 bg-linear-to-b pr-2 pl-4 transition-all duration-500',
+          isScrolled && 'border-hero/20 bg-hero/80 backdrop-blur-md'
+        )}
+      >
         <div className="flex gap-8">
           <a href={lunalink(ROUTES[props.locale].__path, {})} className="flex">
             <Logo className="-mt-0.5 w-28" />
