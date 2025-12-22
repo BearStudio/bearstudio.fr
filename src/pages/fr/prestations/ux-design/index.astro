@@ -9,9 +9,12 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import Hero from '@/components/ui/hero.astro';
-import { parseAstroLocale } from '@/i18n/utils';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
 ---
 
 <MainLayout>
@@ -19,23 +22,27 @@ import { ROUTES } from '@/routes.gen';
     <div
       class="flex flex-col items-center justify-center gap-2 text-center lg:gap-4"
     >
-      <BreadcrumbBase locale={parseAstroLocale(Astro.currentLocale)}>
+      <BreadcrumbBase locale={locale}>
         <BreadcrumbItem>
-          <BreadcrumbLink href={lunalink(ROUTES.fr.prestations.__path, {})}>
-            Prestations
+          <BreadcrumbLink href={lunalink(ROUTES['fr'].prestations.__path, {})}>
+            {t('services.root.hero.breadcrumb')}
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage>UX Design</BreadcrumbPage>
+          <BreadcrumbPage
+            >{t('services.uxDesign.hero.breadcrumb')}</BreadcrumbPage
+          >
         </BreadcrumbItem>
       </BreadcrumbBase>
       <h1
         class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
       >
-        UX Design
+        {t('services.uxDesign.hero.title')}
       </h1>
+      <p class="max-w-[60ch] text-sm text-balance opacity-80">
+        {t('services.uxDesign.hero.description')}
+      </p>
     </div>
   </Hero>
-  <div class="lg:pt-20">PLACEHOLDER</div>
 </MainLayout>

@@ -1,1 +1,16 @@
-{}
+{
+  "root": {
+    "hero": {
+      "breadcrumb": "Services",
+      "title": "Our Services",
+      "description": "UX design and TypeScript development for high-performance web & mobile applications."
+    }
+  },
+  "uxDesign": {
+    "hero": {
+      "breadcrumb": "UX Design",
+      "title": "UX Design",
+      "description": "Design of intuitive and high-performance user experiences, focused on your business goals and user needs."
+    }
+  }
+}

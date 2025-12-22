@@ -1,1 +1,16 @@
-{}
+{
+  "root": {
+    "hero": {
+      "breadcrumb": "Prestations",
+      "title": "Nos prestations",
+      "description": "Conception UX et développement TypeScript pour des applis web & mobile performantes."
+    }
+  },
+  "uxDesign": {
+    "hero": {
+      "breadcrumb": "UX Design",
+      "title": "UX Design",
+      "description": "Conception d'expériences utilisateur intuitives et performantes, centrées sur vos objectifs business et les besoins de vos utilisateurs."
+    }
+  }
+}

@@ -1,15 +1,15 @@
 ---
-import { lunalink } from '@bearstudio/lunalink';
-
 import {
   BreadcrumbBase,
   BreadcrumbItem,
   BreadcrumbPage,
 } from '@/components/ui/breadcrumb';
 import Hero from '@/components/ui/hero.astro';
-import { parseAstroLocale } from '@/i18n/utils';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
-import { ROUTES } from '@/routes.gen';
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
 ---
 
 <MainLayout>
@@ -17,25 +17,19 @@ import { ROUTES } from '@/routes.gen';
     <div
       class="flex flex-col items-center justify-center gap-2 text-center lg:gap-4"
     >
-      <BreadcrumbBase locale={parseAstroLocale(Astro.currentLocale)}>
+      <BreadcrumbBase locale={locale}>
         <BreadcrumbItem>
-          <BreadcrumbPage>Prestations </BreadcrumbPage>
+          <BreadcrumbPage>{t('services.root.hero.breadcrumb')}</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbBase>
       <h1
         class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
       >
-        Nos prestations
+        {t('services.root.hero.title')}
       </h1>
       <p class="max-w-[60ch] text-sm text-balance opacity-80">
-        Conception UX et développement TypeScript pour des applis web & mobile
-        performantes.
+        {t('services.root.hero.description')}
       </p>
     </div>
   </Hero>
-  <div>
-    <a href={lunalink(ROUTES.fr.prestations['ux-design'].__path, {})}>
-      UX Design
-    </a>
-  </div>
 </MainLayout>
