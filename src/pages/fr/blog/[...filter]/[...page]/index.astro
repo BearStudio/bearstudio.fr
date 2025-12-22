@@ -7,9 +7,14 @@ import type { GetStaticPathsOptions } from 'astro';
 import { getBlogCollection } from '@/lib/blog';
 import FormattedDate from '@/components/formatted-date.astro';
 import Pagination from '@/components/pagination.astro';
+import {
+  BreadcrumbBase,
+  BreadcrumbItem,
+  BreadcrumbPage,
+} from '@/components/ui/breadcrumb';
 import Hero from '@/components/ui/hero.astro';
 import type { Locale } from '@/i18n/utils';
-import { parseAstroLocale } from '@/i18n/utils';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 
@@ -48,6 +53,9 @@ export async function getStaticPaths(params: GetStaticPathsOptions) {
   return generateStaticPaths({ ...params, locale: 'fr' });
 }
 
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
+
 const { page, category } = Astro.props;
 ---
 
@@ -60,25 +68,32 @@ const { page, category } = Astro.props;
   /> -->
   <Hero>
     <div
-      class="flex flex-col items-center justify-center gap-2 text-center lg:gap-4"
+      class="flex flex-col items-center justify-center gap-2 text-center lg:items-start lg:gap-4 lg:text-left"
     >
+      <BreadcrumbBase locale={locale}>
+        <BreadcrumbItem>
+          <BreadcrumbPage>{t('blog.root.hero.breadcrumb')}</BreadcrumbPage>
+        </BreadcrumbItem>
+      </BreadcrumbBase>
       <h1
         class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
       >
-        Le blog des ours
+        {t('blog.root.hero.title')}
       </h1>
       <p class="max-w-[60ch] text-sm text-balance opacity-80">
-        Bienvenue sur notre blog ! Vous y trouverez des articles techniques fr
-        lien avec le développement web et le design. Mais aussi des articles
-        plus axés autour de l'entrepreneuriat et du business. En bref, c'est le
-        meilleur moyen pour vous tenir informés des actualités du BearStudio.
-        Bonne lecture !
+        {t('blog.root.hero.description')}
       </p>
     </div>
   </Hero>
   <div class="flex flex-1 flex-col">
     <div class="mx-auto w-full max-w-screen-lg px-6 pb-40 lg:pt-20">
-      {category && <p>Filtre de catégorie: {category}</p>}
+      {
+        category && (
+          <p>
+            {t('blog.root.categoryFilter')?.replace('{category}', category)}
+          </p>
+        )
+      }
       <Pagination page={page}>
         <div class="grid gap-4 md:grid-cols-2">
           {
