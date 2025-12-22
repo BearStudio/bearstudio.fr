@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import { lunalink } from '@bearstudio/lunalink';
 import { Slot } from '@radix-ui/react-slot';
 import { PiCaretRight, PiDotsThree, PiHouseDuotone } from 'react-icons/pi';
 
+import { getLink } from '@/lib/link';
 import { cn } from '@/lib/tailwind/utils';
 import type { Locale } from '@/i18n/utils';
-import { ROUTES } from '@/routes.gen';
 
 function Breadcrumb({ ...props }: React.ComponentProps<'nav'>) {
   return <nav aria-label="breadcrumb" data-slot="breadcrumb" {...props} />;
@@ -114,7 +113,7 @@ const BreadcrumbBase = (props: {
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink
-            href={lunalink(ROUTES[props.locale].__path, {})}
+            href={getLink('/fr', props.locale, {})}
             className="p-4 -m-4"
           >
             <PiHouseDuotone />

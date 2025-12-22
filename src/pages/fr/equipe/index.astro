@@ -3,11 +3,18 @@ import { lunalink } from '@bearstudio/lunalink';
 
 import { getCurrentTeamCollection } from '@/lib/team';
 import SEO from '@/components/seo/index.astro';
+import {
+  BreadcrumbBase,
+  BreadcrumbItem,
+  BreadcrumbPage,
+} from '@/components/ui/breadcrumb';
 import Hero from '@/components/ui/hero.astro';
-import { parseAstroLocale } from '@/i18n/utils';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
 const team = await getCurrentTeamCollection({
   lang: parseAstroLocale(Astro.currentLocale),
 });
@@ -27,10 +34,15 @@ const team = await getCurrentTeamCollection({
     <div
       class="flex flex-col items-center justify-center gap-2 text-center lg:gap-4"
     >
+      <BreadcrumbBase locale={locale}>
+        <BreadcrumbItem>
+          <BreadcrumbPage>{t('team.root.hero.breadcrumb')}</BreadcrumbPage>
+        </BreadcrumbItem>
+      </BreadcrumbBase>
       <h1
         class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
       >
-        Équipe
+        {t('team.root.hero.title')}
       </h1>
     </div>
   </Hero>

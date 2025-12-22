@@ -1,6 +1,15 @@
 ---
+import {
+  BreadcrumbBase,
+  BreadcrumbItem,
+  BreadcrumbPage,
+} from '@/components/ui/breadcrumb';
 import Hero from '@/components/ui/hero.astro';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
 ---
 
 <MainLayout>
@@ -8,10 +17,15 @@ import MainLayout from '@/layouts/main-layout.astro';
     <div
       class="flex flex-col items-center justify-center gap-2 text-center lg:gap-4"
     >
+      <BreadcrumbBase locale={locale}>
+        <BreadcrumbItem>
+          <BreadcrumbPage>{t('contact.root.hero.breadcrumb')}</BreadcrumbPage>
+        </BreadcrumbItem>
+      </BreadcrumbBase>
       <h1
         class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
       >
-        Contact
+        {t('contact.root.hero.title')}
       </h1>
     </div>
   </Hero>

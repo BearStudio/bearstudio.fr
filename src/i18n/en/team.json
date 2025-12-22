@@ -1,1 +1,8 @@
-{}
+{
+  "root": {
+    "hero": {
+      "breadcrumb": "Team",
+      "title": "Team"
+    }
+  }
+}

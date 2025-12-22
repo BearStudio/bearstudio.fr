@@ -1,6 +1,5 @@
 ---
-import { lunalink } from '@bearstudio/lunalink';
-
+import { getLink } from '@/lib/link';
 import {
   BreadcrumbBase,
   BreadcrumbItem,
@@ -11,7 +10,6 @@ import {
 import Hero from '@/components/ui/hero.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
-import { ROUTES } from '@/routes.gen';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
@@ -24,7 +22,7 @@ const t = getTranslationFn(locale);
     >
       <BreadcrumbBase locale={locale}>
         <BreadcrumbItem>
-          <BreadcrumbLink href={lunalink(ROUTES['fr'].prestations.__path, {})}>
+          <BreadcrumbLink href={getLink('/fr/prestations', locale, {})}>
             {t('services.root.hero.breadcrumb')}
           </BreadcrumbLink>
         </BreadcrumbItem>
