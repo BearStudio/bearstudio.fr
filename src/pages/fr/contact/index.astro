@@ -1,4 +1,6 @@
 ---
+import SEO from '@/components/seo/index.astro';
+import { getAlternates } from '@/components/seo/utils';
 import {
   BreadcrumbBase,
   BreadcrumbItem,
@@ -13,6 +15,10 @@ const t = getTranslationFn(locale);
 ---
 
 <MainLayout>
+  <SEO
+    alternates={getAlternates('/fr/contact', {})}
+    title="Contacter l'équipe du BearStudio à Rouen en Normandie"
+  />
   <Hero>
     <div
       class="flex flex-col items-center justify-center gap-2 text-center lg:items-start lg:gap-4 lg:text-left"

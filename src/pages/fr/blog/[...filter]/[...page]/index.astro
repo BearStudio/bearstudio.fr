@@ -7,6 +7,8 @@ import type { GetStaticPathsOptions } from 'astro';
 import { getBlogCollection } from '@/lib/blog';
 import FormattedDate from '@/components/formatted-date.astro';
 import Pagination from '@/components/pagination.astro';
+import SEO from '@/components/seo/index.astro';
+import { getAlternates } from '@/components/seo/utils';
 import {
   BreadcrumbBase,
   BreadcrumbItem,
@@ -60,12 +62,15 @@ const { page, category } = Astro.props;
 ---
 
 <MainLayout>
-  <!-- [TODO]: Metadata -->
-  <!-- <SEO
+  <SEO
     slot="seo"
-    title="Blog"
+    title="Blog du BearStudio, studio de développement web à Rouen"
     description="Retrouvez les articles de BearStudio sur le développement web et mobile, les technologies, et bien plus encore."
-  /> -->
+    alternates={getAlternates(ROUTES.fr.blog[':filter'][':page'].__path, {
+      filter: category ?? '',
+      page: page.currentPage.toString(),
+    })}
+  />
   <Hero>
     <div
       class="flex flex-col items-center justify-center gap-2 text-center lg:items-start lg:gap-4 lg:text-left"
