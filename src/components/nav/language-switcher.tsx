@@ -8,7 +8,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { locales } from '@/i18n';
-import { getRedirectionUrl, getTranslationFn, type Locale } from '@/i18n/utils';
+import { getTranslationFn, type Locale } from '@/i18n/utils';
 
 export const LanguageSwitcher = (props: {
   locale: Locale;
@@ -36,13 +36,7 @@ export const LanguageSwitcher = (props: {
               key={locale}
               className="text-center items-center justify-center"
             >
-              <a
-                href={getRedirectionUrl({
-                  locale,
-                  pathName: props.pathname,
-                  currentLocale: props.locale,
-                })}
-              >
+              <a href={`/${locale}`}>
                 {t(`common.nav.languageSwitch.${locale}`)}
               </a>
             </DropdownMenuItem>
