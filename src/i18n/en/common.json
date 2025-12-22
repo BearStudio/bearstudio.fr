@@ -6,6 +6,9 @@
     "blog": "Blog",
     "more": "More",
     "contact": "Contact us",
-    "language": "English"
+    "languageSwitch": {
+      "fr": "Français",
+      "en": "English"
+    }
   }
 }

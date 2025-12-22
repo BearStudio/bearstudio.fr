@@ -20,27 +20,33 @@ export const LanguageSwitcher = (props: {
       <DropdownMenuTrigger asChild>
         <button type="button" className={navButtonVariants()}>
           <PiTranslateDuotone className="opacity-60" />
-          {t('common.nav.language')}
+          {t(`common.nav.languageSwitch.${props.locale}`)}
           <PiCaretDownBold className="opacity-60" />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="w-24 border-none bg-brand-800 text-white"
-        align="start"
+        className="w-30 min-w-0 border-none bg-brand-800 text-white"
+        align="center"
       >
-        {locales.map((locale) => (
-          <DropdownMenuItem asChild key={locale}>
-            <a
-              href={getRedirectionUrl({
-                locale,
-                pathName: props.pathname,
-                currentLocale: props.locale,
-              })}
+        {locales
+          .filter((locale) => locale !== props.locale)
+          .map((locale) => (
+            <DropdownMenuItem
+              asChild
+              key={locale}
+              className="text-center items-center justify-center"
             >
-              Switch {locale.toUpperCase()}
-            </a>
-          </DropdownMenuItem>
-        ))}
+              <a
+                href={getRedirectionUrl({
+                  locale,
+                  pathName: props.pathname,
+                  currentLocale: props.locale,
+                })}
+              >
+                {t(`common.nav.languageSwitch.${locale}`)}
+              </a>
+            </DropdownMenuItem>
+          ))}
       </DropdownMenuContent>
     </DropdownMenu>
   );
