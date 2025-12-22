@@ -1,9 +1,10 @@
 ---
 import { lunalink } from '@bearstudio/lunalink';
 
-import { getLink, link } from '@/lib/link';
+import { getLink } from '@/lib/link';
 import { cn } from '@/lib/tailwind/utils';
 import SEO from '@/components/seo/index.astro';
+import { getAlternates } from '@/components/seo/utils';
 import { buttonVariants } from '@/components/ui/button';
 import Hero from '@/components/ui/hero.astro';
 import { Polaroid } from '@/components/ui/polaroid';
@@ -18,13 +19,7 @@ const t = getTranslationFn(locale);
 ---
 
 <MainLayout>
-  <SEO
-    slot="seo"
-    alternates={{
-      fr: link(ROUTES.fr.__path, {}),
-      en: link(ROUTES.en.__path, {}),
-    }}
-  />
+  <SEO slot="seo" alternates={getAlternates(ROUTES.fr.__path, {})} />
   <Hero contentClassName="lg:py-24">
     <div
       class="mx-auto flex w-full max-w-5xl flex-1 items-center justify-center gap-6 max-lg:pb-24 lg:gap-12"

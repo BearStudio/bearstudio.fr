@@ -20,9 +20,12 @@ export type LocalesWithoutDefault = Exclude<Locale, typeof defaultLocale>;
 export function getLink<Path extends DefaultLocaleRoutePaths, L extends Locale>(
   url: Path,
   locale: L,
-  params: ExtractParams<ReturnType<typeof i18nPath<Path, L>>>
+  params: ExtractParams<ReturnType<typeof i18nPath<Path, L>>>,
+  absolute?: boolean
 ) {
-  return lunalink(i18nPath(url, locale), params);
+  return lunalink(i18nPath(url, locale), params, {
+    baseURL: absolute ? getSiteUrl() : '',
+  });
 }
 
 /**

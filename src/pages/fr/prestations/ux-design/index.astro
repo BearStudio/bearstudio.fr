@@ -1,5 +1,7 @@
 ---
 import { getLink } from '@/lib/link';
+import SEO from '@/components/seo/index.astro';
+import { getAlternates } from '@/components/seo/utils';
 import {
   BreadcrumbBase,
   BreadcrumbItem,
@@ -10,12 +12,17 @@ import {
 import Hero from '@/components/ui/hero.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
+import { ROUTES } from '@/routes.gen';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
 ---
 
 <MainLayout>
+  <SEO
+    slot="seo"
+    alternates={getAlternates(ROUTES.fr.prestations['ux-design'].__path, {})}
+  />
   <Hero>
     <div
       class="flex flex-col items-center justify-center gap-2 text-center lg:items-start lg:gap-4 lg:text-left"

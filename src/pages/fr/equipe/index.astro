@@ -3,6 +3,7 @@ import { lunalink } from '@bearstudio/lunalink';
 
 import { getCurrentTeamCollection } from '@/lib/team';
 import SEO from '@/components/seo/index.astro';
+import { getAlternates } from '@/components/seo/utils';
 import {
   BreadcrumbBase,
   BreadcrumbItem,
@@ -21,14 +22,10 @@ const team = await getCurrentTeamCollection({
 ---
 
 <MainLayout>
-  <!-- [TODO]: SEO -->
   <SEO
     slot="seo"
     title="Team"
-    alternates={{
-      fr: Astro.url.toString(),
-      en: lunalink(ROUTES.en.team.__path, {}, { baseURL: Astro.url.origin }),
-    }}
+    alternates={getAlternates(ROUTES.fr.equipe.__path, {})}
   />
   <Hero>
     <div
