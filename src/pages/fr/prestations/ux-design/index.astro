@@ -1,6 +1,19 @@
 ---
+import { lunalink } from '@bearstudio/lunalink';
+import { PiHouseDuotone } from 'react-icons/pi';
+
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
 import Hero from '@/components/ui/hero.astro';
+import { parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
+import { ROUTES } from '@/routes.gen';
 ---
 
 <MainLayout>
@@ -8,6 +21,31 @@ import MainLayout from '@/layouts/main-layout.astro';
     <div
       class="flex flex-col items-center justify-center gap-2 text-center lg:gap-4"
     >
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink
+              href={lunalink(
+                ROUTES[parseAstroLocale(Astro.currentLocale)].__path,
+                {}
+              )}
+            >
+              <PiHouseDuotone />
+              <span class="sr-only">Accueil</span>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbLink href={lunalink(ROUTES.fr.prestations.__path, {})}>
+              Prestations
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>UX Design</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
       <h1
         class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
       >
