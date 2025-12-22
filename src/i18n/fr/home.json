@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "title": "De l'idée à la mise en production"
+  },
+  "services": {
+    "uxUiDesign": "UX/UI Design",
+    "webDev": "Dev Web",
+    "mobileDev": "Dev Mobile",
+    "projectBoost": "Boost Projet",
+    "ctoSupport": "Accompagnement CTO"
+  }
+}

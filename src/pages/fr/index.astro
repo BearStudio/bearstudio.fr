@@ -1,17 +1,20 @@
 ---
 import { lunalink } from '@bearstudio/lunalink';
 
-import { link } from '@/lib/link';
+import { getLink, link } from '@/lib/link';
 import { cn } from '@/lib/tailwind/utils';
 import SEO from '@/components/seo/index.astro';
 import { buttonVariants } from '@/components/ui/button';
 import Hero from '@/components/ui/hero.astro';
 import { Polaroid } from '@/components/ui/polaroid';
 import { TiltedCard } from '@/components/ui/tilted-card';
-import { parseAstroLocale } from '@/i18n/utils';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 import { HomePolaroids } from '@/pages/_partials/home-polaroids';
 import { ROUTES } from '@/routes.gen';
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
 ---
 
 <MainLayout>
@@ -24,7 +27,7 @@ import { ROUTES } from '@/routes.gen';
   />
   <Hero contentClassName="min-h-[65vh] lg:min-h-[80vh">
     <div
-      class="mx-auto flex w-full max-w-5xl flex-1 items-center justify-center gap-6 max-lg:pb-24"
+      class="mx-auto flex w-full max-w-5xl flex-1 items-center justify-center gap-6 max-lg:pb-24 lg:gap-12"
     >
       <div
         class="flex flex-1 flex-col justify-center gap-4 max-lg:items-center max-lg:text-center lg:gap-6"
@@ -32,58 +35,50 @@ import { ROUTES } from '@/routes.gen';
         <h1
           class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
         >
-          De l’idée à la mise en production
+          {t('home.hero.title')}
         </h1>
         <div
-          class="flex max-w-md flex-wrap gap-2 max-lg:items-center max-lg:justify-center"
+          class="flex max-w-sm flex-wrap gap-2 max-lg:items-center max-lg:justify-center"
         >
           <a
-            href={lunalink(ROUTES.en.blog.__path, {})}
+            href={getLink('/fr/prestations/ux-design', locale, {})}
             class={cn(
               buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
             )}
           >
-            UX/UI Design
+            {t('home.services.uxUiDesign')}
           </a>
           <a
-            href={lunalink(ROUTES.en.blog.__path, {})}
+            href={getLink('/fr/prestations', locale, {})}
             class={cn(
               buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
             )}
           >
-            Dev Web
+            {t('home.services.webDev')}
           </a>
           <a
-            href={lunalink(ROUTES.en.blog.__path, {})}
+            href={getLink('/fr/prestations', locale, {})}
             class={cn(
               buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
             )}
           >
-            Dev Mobile
+            {t('home.services.mobileDev')}
           </a>
           <a
-            href={lunalink(ROUTES.en.blog.__path, {})}
+            href={getLink('/fr/prestations', locale, {})}
             class={cn(
               buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
             )}
           >
-            Boost Projet
+            {t('home.services.projectBoost')}
           </a>
           <a
-            href={lunalink(ROUTES.en.blog.__path, {})}
+            href={getLink('/fr/prestations', locale, {})}
             class={cn(
               buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
             )}
           >
-            Accompagnement UX
-          </a>
-          <a
-            href={lunalink(ROUTES.en.blog.__path, {})}
-            class={cn(
-              buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
-            )}
-          >
-            Accompagnement CTO
+            {t('home.services.ctoSupport')}
           </a>
         </div>
       </div>
@@ -156,7 +151,7 @@ import { ROUTES } from '@/routes.gen';
   </Hero>
 
   <div class="-mt-32 w-full lg:hidden">
-    <HomePolaroids client:load locale={parseAstroLocale(Astro.currentLocale)} />
+    <HomePolaroids client:load locale={locale} />
   </div>
 
   <div class="mx-auto max-w-5xl p-4">
