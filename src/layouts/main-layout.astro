@@ -11,13 +11,13 @@ import RootLayout from '@/layouts/root-layout.astro';
 
   <MainNavDesktop
     client:load
-    pathname={Astro.url.pathname}
     locale={parseAstroLocale(Astro.currentLocale)}
+    pathname={Astro.url.pathname}
   />
   <MainNavMobile
     client:load
-    pathname={Astro.url.pathname}
     locale={parseAstroLocale(Astro.currentLocale)}
+    pathname={Astro.url.pathname}
   />
 
   <main class="flex flex-1 flex-col">

@@ -1,5 +1,6 @@
 import { PiCaretDownBold, PiTranslateDuotone } from 'react-icons/pi';
 
+import { getLink } from '@/lib/link';
 import { navButtonVariants } from '@/components/nav/style';
 import {
   DropdownMenu,
@@ -10,10 +11,7 @@ import {
 import { locales } from '@/i18n';
 import { getTranslationFn, type Locale } from '@/i18n/utils';
 
-export const LanguageSwitcher = (props: {
-  locale: Locale;
-  pathname: string;
-}) => {
+export const LanguageSwitcher = (props: { locale: Locale }) => {
   const t = getTranslationFn(props.locale);
   return (
     <DropdownMenu>
@@ -30,14 +28,14 @@ export const LanguageSwitcher = (props: {
       >
         {locales
           .filter((locale) => locale !== props.locale)
-          .map((locale) => (
+          .map((toLocale) => (
             <DropdownMenuItem
               asChild
-              key={locale}
+              key={toLocale}
               className="text-center items-center justify-center"
             >
-              <a href={`/${locale}`}>
-                {t(`common.nav.languageSwitch.${locale}`)}
+              <a href={getLink('/fr', toLocale, {})}>
+                {t(`common.nav.languageSwitch.${toLocale}`)}
               </a>
             </DropdownMenuItem>
           ))}

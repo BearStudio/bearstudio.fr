@@ -104,7 +104,7 @@ export const MainNavDesktop = (props: { pathname: string; locale: Locale }) => {
 
         <div className="flex gap-px">
           <NavPrimaryButton locale={props.locale} />
-          <LanguageSwitcher locale={props.locale} pathname={props.pathname} />
+          <LanguageSwitcher locale={props.locale} />
         </div>
       </div>
     </div>
