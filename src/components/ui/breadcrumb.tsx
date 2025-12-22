@@ -47,7 +47,7 @@ function BreadcrumbLink({
     <Comp
       data-slot="breadcrumb-link"
       className={cn(
-        'hover:opacity-100 opacity-80 transition-colors cursor-pointer',
+        'hover:opacity-100 opacity-80 font-medium transition-colors cursor-pointer',
         className
       )}
       {...props}

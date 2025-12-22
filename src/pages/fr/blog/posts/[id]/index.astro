@@ -10,14 +10,21 @@ import dayjs from 'dayjs';
 
 import { getBlogCollection } from '@/lib/blog';
 import type { ComputedCollectionEntry } from '@/lib/content';
-import { link } from '@/lib/link';
+import { getLink, link } from '@/lib/link';
 import { cn } from '@/lib/tailwind/utils';
 import { getTeamBySlugs } from '@/lib/team';
 import FormattedDate from '@/components/formatted-date.astro';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
+import {
+  BreadcrumbBase,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
 import Hero from '@/components/ui/hero.astro';
-import type { Locale } from '@/i18n/utils';
+import { getTranslationFn, parseAstroLocale, type Locale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
 
@@ -53,6 +60,8 @@ const { date, title } = post.data;
 const { Content } = await render(post);
 const url = new URL(Astro.url.pathname, Astro.site);
 
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
 const renderers = await loadRenderers([mdxContainerRenderer()]);
 const container = await experimental_AstroContainer.create({ renderers });
 
@@ -98,15 +107,23 @@ const wordCount = articleBody.split(' ').length;
       keywords: post.data.tags ?? [],
     }}
   />
-  <Hero
-    image={post.data.heroImage}
-    contentClassName="min-h-[40vh] lg:min-h-[60vh]"
-  >
+  <Hero image={post.data.heroImage}>
     <div
-      class="flex flex-col items-center justify-center gap-2 text-center lg:gap-4"
+      class="flex flex-col items-center justify-center gap-2 text-center lg:items-start lg:gap-4 lg:text-left"
     >
+      <BreadcrumbBase locale={locale}>
+        <BreadcrumbItem>
+          <BreadcrumbLink href={getLink('/fr/blog', locale, {})}>
+            {t('blog.root.hero.breadcrumb')}
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <BreadcrumbPage>{title}</BreadcrumbPage>
+        </BreadcrumbItem>
+      </BreadcrumbBase>
       <h1
-        class="font-heading text-accent max-w-[30ch] text-3xl leading-tight font-bold text-balance md:text-4xl"
+        class="font-heading text-accent max-w-[30ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
       >
         {title}
       </h1>
