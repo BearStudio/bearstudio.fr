@@ -3,6 +3,7 @@ import { lunalink } from '@bearstudio/lunalink';
 
 import { getCurrentTeamCollection } from '@/lib/team';
 import SEO from '@/components/seo/index.astro';
+import Hero from '@/components/ui/hero.astro';
 import { parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
@@ -15,6 +16,17 @@ const team = await getCurrentTeamCollection({
 <MainLayout>
   <!-- [TODO]: SEO -->
   <SEO slot="seo" title="Team" />
+  <Hero>
+    <div
+      class="flex flex-col items-center justify-center gap-2 text-center lg:gap-4"
+    >
+      <h1
+        class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
+      >
+        Contact
+      </h1>
+    </div>
+  </Hero>
   <div class="flex flex-1 flex-col lg:pt-20">
     <div class="mx-auto w-full max-w-screen-lg px-6 pb-20 lg:pt-20 lg:pb-0">
       <div class="grid gap-4 px-6 md:grid-cols-3">

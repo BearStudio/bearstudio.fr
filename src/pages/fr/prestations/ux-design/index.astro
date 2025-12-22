@@ -1,7 +1,19 @@
 ---
+import Hero from '@/components/ui/hero.astro';
 import MainLayout from '@/layouts/main-layout.astro';
 ---
 
 <MainLayout>
+  <Hero>
+    <div
+      class="flex flex-col items-center justify-center gap-2 text-center lg:gap-4"
+    >
+      <h1
+        class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
+      >
+        UX Design
+      </h1>
+    </div>
+  </Hero>
   <div class="lg:pt-20">PLACEHOLDER</div>
 </MainLayout>
