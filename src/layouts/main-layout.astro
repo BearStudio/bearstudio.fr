@@ -15,6 +15,7 @@ import RootLayout from '@/layouts/root-layout.astro';
     locale={parseAstroLocale(Astro.currentLocale)}
   />
   <MainNavMobile
+    client:load
     pathname={Astro.url.pathname}
     locale={parseAstroLocale(Astro.currentLocale)}
   />

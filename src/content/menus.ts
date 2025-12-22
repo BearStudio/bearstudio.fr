@@ -16,8 +16,7 @@ import type { translations } from '@/i18n';
 import type { Locale } from '@/i18n/utils';
 import { ROUTES } from '@/routes.gen';
 
-type MainMenuScope = 'all' | 'mobile' | 'desktop';
-type MainMenuLevel = 'primary' | 'secondary';
+type MainMenuLevel = 'primary' | 'secondary' | false;
 
 export type MenuItem = {
   icon: FC<{ className?: string }>;
@@ -25,8 +24,8 @@ export type MenuItem = {
   iconActive: FC<{ className?: string }>;
   getHref: (locale: Locale) => string;
   exact?: boolean;
-  scope: MainMenuScope;
-  level: MainMenuLevel;
+  desktop: MainMenuLevel;
+  mobile: MainMenuLevel;
 };
 
 const MAIN_MENU: Array<MenuItem> = [
@@ -36,8 +35,8 @@ const MAIN_MENU: Array<MenuItem> = [
     exact: true,
     icon: PiHouseDuotone,
     iconActive: PiHouseFill,
-    scope: 'mobile',
-    level: 'primary',
+    desktop: false,
+    mobile: 'primary',
   },
   {
     getHref: (locale) => {
@@ -49,8 +48,8 @@ const MAIN_MENU: Array<MenuItem> = [
     i18nKey: 'nav.services',
     icon: PiSketchLogoDuotone,
     iconActive: PiSketchLogoFill,
-    scope: 'all',
-    level: 'primary',
+    desktop: 'primary',
+    mobile: 'primary',
   },
   {
     getHref: (locale) => {
@@ -62,33 +61,22 @@ const MAIN_MENU: Array<MenuItem> = [
     i18nKey: 'nav.team',
     icon: PiUsersThreeDuotone,
     iconActive: PiUsersThreeFill,
-    scope: 'all',
-    level: 'primary',
+    desktop: 'primary',
+    mobile: 'primary',
   },
   {
     getHref: (locale) => lunalink(ROUTES[locale].blog.__path, {}),
     i18nKey: 'nav.blog',
     icon: PiNoteDuotone,
     iconActive: PiNoteFill,
-    scope: 'all',
-    level: 'primary',
+    desktop: 'primary',
+    mobile: 'primary',
   },
 ];
 
-export function getMainMenuMobileItems(level: MainMenuLevel) {
-  return MAIN_MENU.filter(
-    (item) =>
-      (item.scope === 'all' || item.scope === 'mobile') && item.level === level
-  );
-}
-
-export function getMainMenuDesktopItems(level: MainMenuLevel) {
-  return MAIN_MENU.filter(
-    (item) =>
-      (item.scope === 'all' || item.scope === 'desktop') && item.level === level
-  );
-}
-
-export function getMainMenuItems() {
-  return MAIN_MENU;
+export function getMainMenuItems(params: {
+  scope: 'desktop' | 'mobile';
+  level: MainMenuLevel;
+}) {
+  return MAIN_MENU.filter((item) => item[params.scope] === params.level);
 }
