@@ -12,15 +12,14 @@ import {
   PiUsersThreeFill,
 } from 'react-icons/pi';
 
-import type { translations } from '@/i18n';
-import type { Locale } from '@/i18n/utils';
+import type { Locale, TranslationKeys } from '@/i18n/utils';
 import { ROUTES } from '@/routes.gen';
 
 type MainMenuLevel = 'primary' | 'secondary' | false;
 
 export type MenuItem = {
   icon: FC<{ className?: string }>;
-  i18nKey: keyof (typeof translations)['fr'];
+  i18nKey: TranslationKeys;
   iconActive: FC<{ className?: string }>;
   getHref: (locale: Locale) => string;
   exact?: boolean;
@@ -31,7 +30,7 @@ export type MenuItem = {
 const MAIN_MENU: Array<MenuItem> = [
   {
     getHref: (locale) => lunalink(ROUTES[locale].__path, {}),
-    i18nKey: 'nav.home',
+    i18nKey: 'common.nav.home',
     exact: true,
     icon: PiHouseDuotone,
     iconActive: PiHouseFill,
@@ -45,7 +44,7 @@ const MAIN_MENU: Array<MenuItem> = [
       }
       return lunalink(ROUTES.fr.prestations.__path, {});
     },
-    i18nKey: 'nav.services',
+    i18nKey: 'common.nav.services',
     icon: PiSketchLogoDuotone,
     iconActive: PiSketchLogoFill,
     desktop: 'primary',
@@ -58,7 +57,7 @@ const MAIN_MENU: Array<MenuItem> = [
       }
       return lunalink(ROUTES.fr.equipe.__path, {});
     },
-    i18nKey: 'nav.team',
+    i18nKey: 'common.nav.team',
     icon: PiUsersThreeDuotone,
     iconActive: PiUsersThreeFill,
     desktop: 'primary',
@@ -66,7 +65,7 @@ const MAIN_MENU: Array<MenuItem> = [
   },
   {
     getHref: (locale) => lunalink(ROUTES[locale].blog.__path, {}),
-    i18nKey: 'nav.blog',
+    i18nKey: 'common.nav.blog',
     icon: PiNoteDuotone,
     iconActive: PiNoteFill,
     desktop: 'primary',

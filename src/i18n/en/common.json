@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "team": "Team",
+    "blog": "Blog",
+    "more": "More",
+    "contact": "Contact us",
+    "language": "English"
+  }
+}

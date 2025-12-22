@@ -1,5 +1,5 @@
-import en from './en.json';
-import fr from './fr.json';
+import en from './en';
+import fr from './fr';
 
 export const defaultLocale = 'fr';
 export const locales = ['fr', 'en'] as const;

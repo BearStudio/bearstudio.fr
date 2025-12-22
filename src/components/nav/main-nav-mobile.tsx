@@ -7,9 +7,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { getMainMenuItems } from '@/content/menus';
 import type { Locale } from '@/i18n/utils';
 import { getTranslationFn } from '@/i18n/utils';
+
+import { getMainMenuItems } from './menus';
 
 const mainNavMobileItemVariants = cva(
   'text-2xs flex flex-1 flex-col items-center rounded-md py-1 justify-center gap-0.5 [&>svg]:size-6',
@@ -62,7 +63,7 @@ export const MainNavMobile = (props: { pathname: string; locale: Locale }) => {
               <DropdownMenuTrigger asChild>
                 <button type="button" className={mainNavMobileItemVariants()}>
                   <PiDotsThreeOutlineVerticalDuotone />
-                  {t('nav.more')}
+                  {t('common.nav.more')}
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent

@@ -20,7 +20,7 @@ export const LanguageSwitcher = (props: {
       <DropdownMenuTrigger asChild>
         <button type="button" className={navButtonVariants()}>
           <PiTranslateDuotone className="opacity-60" />
-          {t('nav.language')}
+          {t('common.nav.language')}
           <PiCaretDownBold className="opacity-60" />
         </button>
       </DropdownMenuTrigger>

@@ -14,7 +14,7 @@ export const NavPrimaryButton = (props: { locale: Locale }) => {
       className={navButtonVariants()}
     >
       <PiEnvelopeBold className="opacity-60" />
-      {t('nav.contact')}
+      {t('common.nav.contact')}
     </a>
   );
 };

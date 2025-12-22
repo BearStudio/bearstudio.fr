@@ -14,10 +14,11 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Logo } from '@/components/ui/logo';
-import { getMainMenuItems } from '@/content/menus';
 import type { Locale } from '@/i18n/utils';
 import { getTranslationFn } from '@/i18n/utils';
 import { ROUTES } from '@/routes.gen';
+
+import { getMainMenuItems } from './menus';
 
 export const MainNavDesktop = (props: { pathname: string; locale: Locale }) => {
   const t = getTranslationFn(props.locale);
@@ -75,7 +76,7 @@ export const MainNavDesktop = (props: { pathname: string; locale: Locale }) => {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button type="button" className={navButtonVariants()}>
-                    {t('nav.more')}
+                    {t('common.nav.more')}
                     <PiCaretDownBold className="opacity-60" />
                   </button>
                 </DropdownMenuTrigger>

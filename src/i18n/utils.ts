@@ -1,11 +1,15 @@
 import { z } from 'astro/zod';
 
+import { prop, stringToPath } from 'remeda';
+
 import { defaultLocale, locales } from '@/i18n';
 import { routes } from '@/i18n/redirection';
 
 import { translations } from '.';
 
-type TranslationKeys = keyof (typeof translations)[typeof defaultLocale];
+export type TranslationKeys = DeepKeysOnly<
+  (typeof translations)[typeof defaultLocale]
+>;
 
 export type Locale = z.infer<ReturnType<typeof zLocale>>;
 export const zLocale = () => z.enum(locales).catch(defaultLocale);
@@ -13,7 +17,11 @@ export const zLocale = () => z.enum(locales).catch(defaultLocale);
 export function getTranslationFn(lang: Locale = defaultLocale) {
   return function t(key?: TranslationKeys, fallback?: string) {
     if (!key) return fallback;
-    return translations?.[lang]?.[key] || fallback;
+    return (
+      // @ts-expect-error Don't know why there is an error here 😭 TODO
+      (prop(translations[lang], ...stringToPath(key)) as unknown as string) ||
+      fallback
+    );
   };
 }
 

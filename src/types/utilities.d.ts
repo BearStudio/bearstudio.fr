@@ -34,3 +34,11 @@ type StrictUnion<T> = StrictUnionHelper<T, T>;
 type Prettify<T> = {
   [K in keyof T]: T[K];
 } & {};
+
+type DeepKeysOnly<T> = T extends object
+  ? {
+      [K in keyof T & (string | number)]: T[K] extends object
+        ? `${K}.${DeepKeysOnly<T[K]>}`
+        : `${K}`;
+    }[keyof T & (string | number)]
+  : never;
