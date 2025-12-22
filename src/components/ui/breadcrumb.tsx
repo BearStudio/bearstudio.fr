@@ -1,9 +1,12 @@
 import * as React from 'react';
 
+import { lunalink } from '@bearstudio/lunalink';
 import { Slot } from '@radix-ui/react-slot';
-import { PiCaretRight, PiDotsThree } from 'react-icons/pi';
+import { PiCaretRight, PiDotsThree, PiHouseDuotone } from 'react-icons/pi';
 
 import { cn } from '@/lib/tailwind/utils';
+import type { Locale } from '@/i18n/utils';
+import { ROUTES } from '@/routes.gen';
 
 function Breadcrumb({ ...props }: React.ComponentProps<'nav'>) {
   return <nav aria-label="breadcrumb" data-slot="breadcrumb" {...props} />;
@@ -45,7 +48,7 @@ function BreadcrumbLink({
     <Comp
       data-slot="breadcrumb-link"
       className={cn(
-        'hover:opacity-100 opacity-80 transition-colors',
+        'hover:opacity-100 opacity-80 transition-colors cursor-pointer',
         className
       )}
       {...props}
@@ -102,6 +105,29 @@ function BreadcrumbEllipsis({
   );
 }
 
+const BreadcrumbBase = (props: {
+  locale: Locale;
+  children: React.ReactNode;
+}) => {
+  return (
+    <Breadcrumb>
+      <BreadcrumbList>
+        <BreadcrumbItem>
+          <BreadcrumbLink
+            href={lunalink(ROUTES[props.locale].__path, {})}
+            className="p-4 -m-4"
+          >
+            <PiHouseDuotone />
+            <span className="sr-only">Accueil</span>
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        {props.children}
+      </BreadcrumbList>
+    </Breadcrumb>
+  );
+};
+
 export {
   Breadcrumb,
   BreadcrumbList,
@@ -110,4 +136,5 @@ export {
   BreadcrumbPage,
   BreadcrumbSeparator,
   BreadcrumbEllipsis,
+  BreadcrumbBase,
 };

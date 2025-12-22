@@ -1,6 +1,15 @@
 ---
+import { lunalink } from '@bearstudio/lunalink';
+
+import {
+  BreadcrumbBase,
+  BreadcrumbItem,
+  BreadcrumbPage,
+} from '@/components/ui/breadcrumb';
 import Hero from '@/components/ui/hero.astro';
+import { parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
+import { ROUTES } from '@/routes.gen';
 ---
 
 <MainLayout>
@@ -8,6 +17,11 @@ import MainLayout from '@/layouts/main-layout.astro';
     <div
       class="flex flex-col items-center justify-center gap-2 text-center lg:gap-4"
     >
+      <BreadcrumbBase locale={parseAstroLocale(Astro.currentLocale)}>
+        <BreadcrumbItem>
+          <BreadcrumbPage>Prestations </BreadcrumbPage>
+        </BreadcrumbItem>
+      </BreadcrumbBase>
       <h1
         class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
       >
@@ -19,4 +33,9 @@ import MainLayout from '@/layouts/main-layout.astro';
       </p>
     </div>
   </Hero>
+  <div>
+    <a href={lunalink(ROUTES.fr.prestations['ux-design'].__path, {})}>
+      UX Design
+    </a>
+  </div>
 </MainLayout>
