@@ -14,6 +14,12 @@ export type TranslationKeys = DeepKeysOnly<
 export type Locale = z.infer<ReturnType<typeof zLocale>>;
 export const zLocale = () => z.enum(locales).catch(defaultLocale);
 
+// Mostly used for OpenGraph og:locale and alternates
+export const LOCALE_TERRITORY_MAP = {
+  en: 'en_US',
+  fr: 'fr_FR',
+} as const satisfies Record<Locale, `${Locale}_${string}`>;
+
 export function getTranslationFn(lang: Locale = defaultLocale) {
   return function t(key?: TranslationKeys, fallback?: string) {
     if (!key) return fallback;

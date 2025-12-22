@@ -1,7 +1,9 @@
 ---
 import { lunalink } from '@bearstudio/lunalink';
 
+import { link } from '@/lib/link';
 import { cn } from '@/lib/tailwind/utils';
+import SEO from '@/components/seo/index.astro';
 import { buttonVariants } from '@/components/ui/button';
 import Hero from '@/components/ui/hero.astro';
 import { Polaroid } from '@/components/ui/polaroid';
@@ -13,6 +15,13 @@ import { ROUTES } from '@/routes.gen';
 ---
 
 <MainLayout>
+  <SEO
+    slot="seo"
+    alternates={{
+      fr: link(ROUTES.fr.__path, {}),
+      en: link(ROUTES.en.__path, {}),
+    }}
+  />
   <Hero contentClassName="min-h-[65vh] lg:min-h-[80vh">
     <div
       class="mx-auto flex w-full max-w-5xl flex-1 items-center justify-center gap-6 max-lg:pb-24"

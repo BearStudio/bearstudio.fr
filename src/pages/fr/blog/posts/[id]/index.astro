@@ -10,6 +10,7 @@ import dayjs from 'dayjs';
 
 import { getBlogCollection } from '@/lib/blog';
 import type { ComputedCollectionEntry } from '@/lib/content';
+import { link } from '@/lib/link';
 import { cn } from '@/lib/tailwind/utils';
 import { getTeamBySlugs } from '@/lib/team';
 import FormattedDate from '@/components/formatted-date.astro';
@@ -70,6 +71,14 @@ const wordCount = articleBody.split(' ').length;
     title={post.data.title}
     description={post.data.metaDescription ?? ''}
     url={url}
+    alternates={{
+      fr: link(ROUTES.fr.blog.posts[':id'].__path, {
+        id: post.data._computed.slug,
+      }),
+      en: link(ROUTES.en.blog.posts[':id'].__path, {
+        id: post.data._computed.slug,
+      }),
+    }}
   />
   <Schema
     slot="ld+json"

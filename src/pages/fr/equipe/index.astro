@@ -15,7 +15,14 @@ const team = await getCurrentTeamCollection({
 
 <MainLayout>
   <!-- [TODO]: SEO -->
-  <SEO slot="seo" title="Équipe" />
+  <SEO
+    slot="seo"
+    title="Team"
+    alternates={{
+      fr: Astro.url.toString(),
+      en: lunalink(ROUTES.en.team.__path, {}, { baseURL: Astro.url.origin }),
+    }}
+  />
   <Hero>
     <div
       class="flex flex-col items-center justify-center gap-2 text-center lg:gap-4"

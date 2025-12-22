@@ -2,16 +2,26 @@
 import { SEO } from 'astro-seo';
 import type { ComponentProps } from 'astro/types';
 
+import { entries, filter, isNonNullish, map, pipe } from 'remeda';
+
+import { defaultLocale } from '@/i18n';
+import {
+  LOCALE_TERRITORY_MAP,
+  parseAstroLocale,
+  type Locale,
+} from '@/i18n/utils';
+
 interface Props
   extends Pick<
     ComponentProps<typeof SEO>,
-    'title' | 'description' | 'noindex' | 'nofollow'
+    'title' | 'description' | 'noindex' | 'nofollow' | 'openGraph'
   > {
   image?: NonNullable<
     ComponentProps<typeof SEO>['openGraph']
   >['basic']['image'];
   imageAlt?: string;
   url?: NonNullable<ComponentProps<typeof SEO>['openGraph']>['basic']['url'];
+  alternates: Required<Record<Locale, string | null>>;
 }
 // TODO: Proper Metadata
 const {
@@ -22,11 +32,23 @@ const {
   noindex,
   nofollow,
   url = Astro.url,
+  alternates,
+  openGraph,
 } = Astro.props;
 
 const ogImageAlt = 'BearStudio';
 const titleDefault =
   'Studio de développement normand pour porteurs de projet numérique';
+
+const languageAlternates = pipe(
+  alternates,
+  entries(),
+  filter(([, href]) => isNonNullish(href)),
+  map(([hrefLang, href]) => ({
+    hrefLang,
+    href: href!, // using !, we filtered before
+  }))
+);
 ---
 
 <SEO
@@ -36,15 +58,23 @@ const titleDefault =
   description={description ?? ''}
   noindex={noindex ?? false}
   nofollow={nofollow ?? false}
+  languageAlternates={languageAlternates}
   openGraph={{
     basic: {
-      title: title ?? titleDefault,
+      title: openGraph?.basic.title ?? title ?? titleDefault,
       type: 'website',
       image: image,
       url: url ?? '',
     },
     optional: {
       description,
+      locale:
+        LOCALE_TERRITORY_MAP[
+          parseAstroLocale(Astro.currentLocale) ?? defaultLocale
+        ],
+      localeAlternate: languageAlternates
+        .filter((item) => item.hrefLang !== Astro.currentLocale)
+        .map((item) => LOCALE_TERRITORY_MAP[item.hrefLang]),
     },
     image: {
       alt: imageAlt ?? ogImageAlt,
