@@ -24,6 +24,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
+import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
 import { getTranslationFn, parseAstroLocale, type Locale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
@@ -103,10 +104,8 @@ const wordCount = articleBody.split(' ').length;
     }}
   />
   <Hero image={post.data.heroImage}>
-    <div
-      class="flex flex-col items-center justify-center gap-2 text-center lg:items-start lg:gap-4 lg:text-left"
-    >
-      <BreadcrumbBase locale={locale}>
+    <HeroContent>
+      <BreadcrumbBase slot="breadcrumb" locale={locale}>
         <BreadcrumbItem>
           <BreadcrumbLink href={getLink('/fr/blog', locale, {})}>
             {t('blog.root.hero.breadcrumb')}
@@ -122,7 +121,7 @@ const wordCount = articleBody.split(' ').length;
       >
         {title}
       </h1>
-    </div>
+    </HeroContent>
   </Hero>
   <div class="pb-20 lg:pt-20 lg:pb-0">
     <div

@@ -1,16 +1,15 @@
 ---
 import { Image } from 'astro:assets';
 
-import { lunalink } from '@bearstudio/lunalink';
 import type { ImageMetadata } from 'astro';
 
+import { getLink } from '@/lib/link';
 import { cn } from '@/lib/tailwind/utils';
 import { LanguageSwitcher } from '@/components/nav/language-switcher';
 import { NavPrimaryButton } from '@/components/nav/nav-primary-button';
 import { Logo } from '@/components/ui/logo';
 import { Scratch } from '@/components/ui/scratch';
 import { parseAstroLocale } from '@/i18n/utils';
-import { ROUTES } from '@/routes.gen';
 
 import defaultBg from './hero-bg.jpeg';
 
@@ -19,6 +18,7 @@ interface Props {
   image?: ImageMetadata | undefined;
 }
 const { image, contentClassName } = Astro.props;
+const locale = parseAstroLocale(Astro.currentLocale);
 ---
 
 <div class="bg-hero text-hero-foreground relative z-0 flex flex-col">
@@ -36,20 +36,14 @@ const { image, contentClassName } = Astro.props;
   <!-- Content -->
   <div
     class={cn(
-      'relative z-10 flex flex-1 flex-col gap-10 overflow-hidden pt-8 pb-24 lg:pt-32 lg:pb-36',
+      'relative z-10 flex flex-1 flex-col gap-10 overflow-hidden pt-8 pb-24 lg:pt-32 lg:pb-34',
       contentClassName
     )}
   >
     <div
-      class="mx-auto flex w-full max-w-5xl flex-1 flex-col justify-center gap-6 px-4 lg:px-6"
+      class="mx-auto flex w-full max-w-5xl flex-1 flex-col justify-center gap-12 px-6"
     >
-      <a
-        href={lunalink(
-          ROUTES[parseAstroLocale(Astro.currentLocale)].__path,
-          {}
-        )}
-        class="lg:hidden"
-      >
+      <a href={getLink('/fr', locale, {})} class="lg:hidden">
         <Logo className="mx-auto w-38 sm:w-52" />
       </a>
 
