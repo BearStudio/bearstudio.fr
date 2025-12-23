@@ -7,6 +7,7 @@ import { PiArrowLeftBold, PiArrowRight } from 'react-icons/pi';
 import { getBlogCollection } from '@/lib/blog';
 import { getLink } from '@/lib/link';
 import SEO from '@/components/seo/index.astro';
+import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
 import { getAlternates } from '@/components/seo/utils';
 import {
   BreadcrumbBase,
@@ -72,6 +73,43 @@ const { page, category } = Astro.props;
       filter: category ?? '',
       page: page.currentPage.toString(),
     })}
+  />
+  <SchemaBreadcrumb
+    slot="breadcrumb"
+    items={[
+      {
+        id: getLink('/fr/blog', locale, {}, true),
+        name: t('blog.root.hero.breadcrumb'),
+      },
+      !!category && page.currentPage === 1
+        ? {
+            id: getLink('/fr/blog/:filter', locale, { filter: category }, true),
+            name: t('blog.root.hero.breadcrumb'),
+          }
+        : undefined,
+      page.currentPage > 1
+        ? {
+            id: getLink(
+              '/fr/blog/:filter/:page',
+              locale,
+              { filter: category ?? '', page: page.currentPage.toString() },
+              true
+            ),
+            name: `Page ${page.currentPage}`,
+          }
+        : undefined,
+      !!category && page.currentPage > 1
+        ? {
+            id: getLink(
+              '/fr/blog/:filter/:page',
+              locale,
+              { filter: category ?? '', page: page.currentPage.toString() },
+              true
+            ),
+            name: `Page ${page.currentPage}`,
+          }
+        : undefined,
+    ]}
   />
   <Hero>
     <HeroContent>

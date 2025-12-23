@@ -9,6 +9,7 @@ import RootLayout from '@/layouts/root-layout.astro';
 <RootLayout>
   <slot name="seo" slot="seo" />
   <slot name="ld+json" slot="ld+json" />
+  <slot name="breadcrumb" slot="breadcrumb" />
   <MainNavDesktop
     client:load
     locale={parseAstroLocale(Astro.currentLocale)}

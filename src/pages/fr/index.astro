@@ -4,6 +4,7 @@ import { lunalink } from '@bearstudio/lunalink';
 import { getLink } from '@/lib/link';
 import { cn } from '@/lib/tailwind/utils';
 import SEO from '@/components/seo/index.astro';
+import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
 import { getAlternates } from '@/components/seo/utils';
 import { buttonVariants } from '@/components/ui/button';
 import Hero from '@/components/ui/hero.astro';
@@ -20,6 +21,8 @@ const t = getTranslationFn(locale);
 
 <MainLayout>
   <SEO slot="seo" alternates={getAlternates(ROUTES.fr.__path, {})} />
+  <SchemaBreadcrumb slot="breadcrumb" items={[]} />
+
   <Hero contentClassName="lg:py-24">
     <div
       class="mx-auto flex w-full max-w-5xl flex-1 items-center justify-center gap-6 max-lg:pb-24 lg:gap-12"

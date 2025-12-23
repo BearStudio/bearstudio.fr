@@ -1,5 +1,7 @@
 ---
+import { getLink } from '@/lib/link';
 import SEO from '@/components/seo/index.astro';
+import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
 import { getAlternates } from '@/components/seo/utils';
 import {
   BreadcrumbBase,
@@ -20,6 +22,16 @@ const t = getTranslationFn(locale);
     alternates={getAlternates('/fr/contact', {})}
     title="Contacter l'équipe du BearStudio à Rouen en Normandie"
   />
+  <SchemaBreadcrumb
+    slot="breadcrumb"
+    items={[
+      {
+        id: getLink('/fr/contact', locale, {}, true),
+        name: t('contact.root.hero.breadcrumb'),
+      },
+    ]}
+  />
+
   <Hero>
     <HeroContent>
       <BreadcrumbBase slot="breadcrumb" locale={locale}>

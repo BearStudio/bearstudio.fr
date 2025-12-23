@@ -1,6 +1,7 @@
 ---
 import { getLink } from '@/lib/link';
 import SEO from '@/components/seo/index.astro';
+import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
 import { getAlternates } from '@/components/seo/utils';
 import {
   BreadcrumbBase,
@@ -24,6 +25,20 @@ const t = getTranslationFn(locale);
     slot="seo"
     alternates={getAlternates(ROUTES.fr.prestations['ux-design'].__path, {})}
   />
+  <SchemaBreadcrumb
+    slot="breadcrumb"
+    items={[
+      {
+        id: getLink('/fr/prestations', locale, {}, true),
+        name: t('services.root.hero.breadcrumb'),
+      },
+      {
+        id: getLink('/fr/prestations/ux-design', locale, {}, true),
+        name: t('services.uxDesign.hero.breadcrumb'),
+      },
+    ]}
+  />
+
   <Hero>
     <HeroContent>
       <BreadcrumbBase slot="breadcrumb" locale={locale}>
@@ -39,6 +54,7 @@ const t = getTranslationFn(locale);
           >
         </BreadcrumbItem>
       </BreadcrumbBase>
+
       <h1
         class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
       >

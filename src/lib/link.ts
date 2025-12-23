@@ -1,6 +1,7 @@
 import type { ExtractParams } from '@bearstudio/lunalink';
 import { lunalink } from '@bearstudio/lunalink';
-import { find, keys, pipe } from 'remeda';
+import { find, isEmpty, isNonNullish, isNot, keys, pipe } from 'remeda';
+import { match } from 'ts-pattern';
 
 import { getSiteUrl } from '@/lib/site/get-site-url';
 import { defaultLocale } from '@/i18n';
@@ -17,15 +18,30 @@ export function link<Path extends string>(
 
 export type LocalesWithoutDefault = Exclude<Locale, typeof defaultLocale>;
 
+function removeDoubleSlash(str: string) {
+  // Removing double `//` from pathname. Not a fan, but have to go quick on that one.
+  return str.split('/').filter(isNonNullish).filter(isNot(isEmpty)).join('/');
+}
+
 export function getLink<Path extends DefaultLocaleRoutePaths, L extends Locale>(
   url: Path,
   locale: L,
   params: ExtractParams<ReturnType<typeof i18nPath<Path, L>>>,
   absolute?: boolean
 ) {
-  return lunalink(i18nPath(url, locale), params, {
+  const value = lunalink(i18nPath(url, locale), params, {
     baseURL: absolute ? getSiteUrl() : '',
   });
+
+  return match(absolute)
+    .with(false, undefined, () => removeDoubleSlash(value))
+    .with(true, () => {
+      const u = new URL(value);
+      u.pathname = removeDoubleSlash(u.pathname);
+
+      return u.toString();
+    })
+    .exhaustive();
 }
 
 /**

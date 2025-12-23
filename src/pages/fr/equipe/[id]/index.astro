@@ -12,6 +12,7 @@ import { getLink } from '@/lib/link';
 import { getCurrentTeamCollection } from '@/lib/team';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
+import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
 import { getAlternates } from '@/components/seo/utils';
 import {
   BreadcrumbBase,
@@ -72,6 +73,24 @@ const url = new URL(Astro.url.pathname, Astro.site);
     alternates={getAlternates(ROUTES.fr.equipe[':id'].__path, {
       id: person.data._computed.slug,
     })}
+  />
+  <SchemaBreadcrumb
+    slot="breadcrumb"
+    items={[
+      {
+        id: getLink('/fr/equipe', locale, {}, true),
+        name: t('team.root.hero.breadcrumb'),
+      },
+      {
+        id: getLink(
+          '/fr/equipe/:id',
+          locale,
+          { id: person.data._computed.slug },
+          true
+        ),
+        name: person.data.name,
+      },
+    ]}
   />
   <Schema
     slot="ld+json"
