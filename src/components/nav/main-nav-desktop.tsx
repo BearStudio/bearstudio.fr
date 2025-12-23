@@ -36,9 +36,12 @@ export const MainNavDesktop = (props: { pathname: string; locale: Locale }) => {
 
   useEffect(() => {
     const onScroll = () => {
+      // eslint-disable-next-line @eslint-react/hooks-extra/no-direct-set-state-in-use-effect
       setIsScrolled(window.scrollY > 60);
     };
+
     window.addEventListener('scroll', onScroll);
+    onScroll();
     return () => {
       window.removeEventListener('scroll', onScroll);
     };
