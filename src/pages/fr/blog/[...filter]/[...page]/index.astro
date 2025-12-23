@@ -12,13 +12,14 @@ import { getAlternates } from '@/components/seo/utils';
 import {
   BreadcrumbBase,
   BreadcrumbItem,
+  BreadcrumbLink,
   BreadcrumbPage,
+  BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import Hero from '@/components/ui/hero.astro';
 import type { Locale } from '@/i18n/utils';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
-import { ROUTES } from '@/routes.gen';
 
 export async function generateStaticPaths(
   params: {
@@ -66,7 +67,7 @@ const { page, category } = Astro.props;
     slot="seo"
     title="Blog du BearStudio, studio de développement web à Rouen"
     description="Retrouvez les articles de BearStudio sur le développement web et mobile, les technologies, et bien plus encore."
-    alternates={getAlternates(ROUTES.fr.blog[':filter'][':page'].__path, {
+    alternates={getAlternates('/fr/blog/:filter/:page', {
       filter: category ?? '',
       page: page.currentPage.toString(),
     })}
@@ -77,8 +78,46 @@ const { page, category } = Astro.props;
     >
       <BreadcrumbBase locale={locale}>
         <BreadcrumbItem>
-          <BreadcrumbPage>{t('blog.root.hero.breadcrumb')}</BreadcrumbPage>
+          {
+            page.currentPage > 1 || category ? (
+              <BreadcrumbLink href={getLink('/fr/blog', locale, {})}>
+                {t('blog.root.hero.breadcrumb')}
+              </BreadcrumbLink>
+            ) : (
+              <BreadcrumbPage>{t('blog.root.hero.breadcrumb')}</BreadcrumbPage>
+            )
+          }
         </BreadcrumbItem>
+        {
+          !!category && (
+            <>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                {page.currentPage > 1 ? (
+                  <BreadcrumbLink
+                    href={getLink('/fr/blog/:filter', locale, {
+                      filter: category,
+                    })}
+                  >
+                    {category}
+                  </BreadcrumbLink>
+                ) : (
+                  <BreadcrumbPage>{category}</BreadcrumbPage>
+                )}
+              </BreadcrumbItem>
+            </>
+          )
+        }
+        {
+          page.currentPage > 1 && (
+            <>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Page {page.currentPage}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </>
+          )
+        }
       </BreadcrumbBase>
       <h1
         class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
