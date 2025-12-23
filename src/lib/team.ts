@@ -1,10 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
-import {
-  existsInLocale,
-  getPostsBySlug,
-  getSlugWithoutLocale,
-} from '@/lib/content';
+import { getPostsBySlug, getSlugWithoutLocale } from '@/lib/content';
 import type { Locale } from '@/i18n/utils';
 
 type TeamEntry = CollectionEntry<'team'>;
@@ -43,7 +39,10 @@ export async function getTeamCollection({
     .filter((post) =>
       status === undefined ? true : post.data.status === status
     )
-    .filter((post) => existsInLocale({ idWithLocale: post.id, locale }))
+    .filter((item) => {
+      const [, itemLocale] = item.id.split('/');
+      return itemLocale === locale;
+    })
     .sort(sortByOrder)
     .map((post) => getSlugWithoutLocale<'team'>(post));
 
