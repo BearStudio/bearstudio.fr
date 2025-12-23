@@ -17,6 +17,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import { FormattedDate } from '@/components/ui/formatted-date';
+import defaultImage from '@/components/ui/hero-bg.jpeg';
 import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
 import type { Locale } from '@/i18n/utils';
@@ -28,6 +29,7 @@ export async function generateStaticPaths(
     locale: Locale;
   } & GetStaticPathsOptions
 ) {
+  const PAGE_SIZE = 24;
   const newsPages = await getBlogCollection({
     lang: params.locale,
   });
@@ -38,14 +40,17 @@ export async function generateStaticPaths(
   ];
 
   return [
-    ...params.paginate(newsPages, { pageSize: 20, props: { categories } }),
+    ...params.paginate(newsPages, {
+      pageSize: PAGE_SIZE,
+      props: { categories },
+    }),
     ...categories.flatMap((category) =>
       params.paginate(
         newsPages.filter((article) =>
           article.data.categories?.includes(category ?? '')
         ),
         {
-          pageSize: 20,
+          pageSize: PAGE_SIZE,
           params: { filter: category },
           props: { category },
         }
@@ -166,74 +171,57 @@ const { page, category } = Astro.props;
       </p>
     </HeroContent>
   </Hero>
-  <div class="mx-auto w-full max-w-5xl px-6">
-    <div class="max-w-prose">
-      {
-        page.currentPage !== 1 && (
-          <div class="flex py-4">
-            <h3 class="text-sm tracking-widest text-balance uppercase opacity-60">
-              Page {page.currentPage}
-            </h3>
-            <div class="ml-auto flex gap-2">
-              {!!page.url.next && (
-                <a href={page.url.next}>
-                  <PiArrowLeftBold className="size-4" />
-                  <span class="sr-only">Older articles</span>
-                </a>
-              )}
-              {!!page.url.prev && (
-                <a href={page.url.prev}>
-                  <span class="sr-only">Newer articles</span>
-                  <PiArrowRight className="size-4" />
-                </a>
-              )}
-            </div>
-          </div>
-        )
-      }
-
-      <div class="grid gap-4 md:grid-cols-2">
+  <div class="-mt-16 lg:-mt-24">
+    <div class="mx-auto w-full max-w-5xl px-6">
+      <div class="xs:grid-cols-2 relative grid gap-4 py-4 md:grid-cols-3">
         {
           page.data.map((post) => (
             <a
               href={getLink('/fr/blog/posts/:id', locale, {
                 id: post.data._computed.slug,
               })}
+              class="bg-card border-card-border flex flex-col gap-2 overflow-hidden rounded-md border border-b-3 p-2"
             >
-              {post.data.heroImage && (
+              <div class="bg-brand-900 relative aspect-[1.2] w-full overflow-hidden rounded-sm">
                 <Image
-                  width={720}
-                  height={360}
-                  src={post.data.heroImage}
+                  src={post.data.heroImage ?? defaultImage}
                   alt=""
+                  class="absolute inset-0 h-full w-full object-cover"
+                  width={1200}
+                  height={800}
                 />
-              )}
-              <h4 class="title">{post.data.title}</h4>
-              <p class="date">
-                <FormattedDate date={post.data.date} locale={locale} />
-              </p>
+              </div>
+              <div class="flex flex-1 flex-col gap-1 px-1">
+                <h2 class="font-heading flex-1 leading-tight font-bold">
+                  {post.data.title}
+                </h2>
+                <FormattedDate
+                  date={post.data.date}
+                  locale={locale}
+                  className="text-xs opacity-60"
+                />
+              </div>
             </a>
           ))
         }
-
-        <div class="flex justify-between pt-4">
-          {
-            !!page.url.prev && (
-              <a href={page.url.prev}>
-                Newer <span class="max-xs:sr-only">articles</span>
-                <PiArrowLeftBold className="size-4" />
-              </a>
-            )
-          }
-          {
-            !!page.url.next && (
-              <a href={page.url.next}>
-                <PiArrowRight className="size-4" />
-                Older <span class="max-xs:sr-only">articles</span>
-              </a>
-            )
-          }
-        </div>
+      </div>
+      <div class="flex justify-between pt-4">
+        {
+          !!page.url.prev && (
+            <a href={page.url.prev}>
+              Newer <span class="max-xs:sr-only">articles</span>
+              <PiArrowLeftBold className="size-4" />
+            </a>
+          )
+        }
+        {
+          !!page.url.next && (
+            <a href={page.url.next}>
+              <PiArrowRight className="size-4" />
+              Older <span class="max-xs:sr-only">articles</span>
+            </a>
+          )
+        }
       </div>
     </div>
   </div>
