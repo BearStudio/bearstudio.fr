@@ -1,6 +1,5 @@
 import type { FC } from 'react';
 
-import { lunalink } from '@bearstudio/lunalink';
 import {
   PiHouseDuotone,
   PiHouseFill,
@@ -12,25 +11,25 @@ import {
   PiUsersThreeFill,
 } from 'react-icons/pi';
 
+import { getLink } from '@/lib/link';
 import type { Locale, TranslationKeys } from '@/i18n/utils';
-import { ROUTES } from '@/routes.gen';
 
-type MainMenuLevel = 'primary' | 'secondary' | false;
+type NavLevel = 'primary' | 'secondary' | false;
 
-export type MenuItem = {
+type NavItem = {
   icon: FC<{ className?: string }>;
   i18nKey: TranslationKeys;
   iconActive: FC<{ className?: string }>;
   getHref: (locale: Locale) => string;
   exact?: boolean;
-  desktop: MainMenuLevel;
-  mobile: MainMenuLevel;
+  desktop: NavLevel;
+  mobile: NavLevel;
   locales?: Array<Locale>;
 };
 
-const MAIN_MENU: Array<MenuItem> = [
+const MAIN_NAV: Array<NavItem> = [
   {
-    getHref: (locale) => lunalink(ROUTES[locale].__path, {}),
+    getHref: (locale) => getLink('/fr', locale, {}),
     i18nKey: 'common.nav.home',
     exact: true,
     icon: PiHouseDuotone,
@@ -39,12 +38,7 @@ const MAIN_MENU: Array<MenuItem> = [
     mobile: 'primary',
   },
   {
-    getHref: (locale) => {
-      if (locale === 'en') {
-        return lunalink(ROUTES[locale].services.__path, {});
-      }
-      return lunalink(ROUTES.fr.prestations.__path, {});
-    },
+    getHref: (locale) => getLink('/fr/prestations', locale, {}),
     i18nKey: 'common.nav.services',
     icon: PiSketchLogoDuotone,
     iconActive: PiSketchLogoFill,
@@ -52,12 +46,7 @@ const MAIN_MENU: Array<MenuItem> = [
     mobile: 'primary',
   },
   {
-    getHref: (locale) => {
-      if (locale === 'en') {
-        return lunalink(ROUTES[locale].team.__path, {});
-      }
-      return lunalink(ROUTES.fr.equipe.__path, {});
-    },
+    getHref: (locale) => getLink('/fr/equipe', locale, {}),
     i18nKey: 'common.nav.team',
     icon: PiUsersThreeDuotone,
     iconActive: PiUsersThreeFill,
@@ -65,7 +54,7 @@ const MAIN_MENU: Array<MenuItem> = [
     mobile: 'primary',
   },
   {
-    getHref: (locale) => lunalink(ROUTES[locale].blog.__path, {}),
+    getHref: (locale) => getLink('/fr/blog', locale, {}),
     i18nKey: 'common.nav.blog',
     icon: PiNoteDuotone,
     iconActive: PiNoteFill,
@@ -75,12 +64,12 @@ const MAIN_MENU: Array<MenuItem> = [
   },
 ];
 
-export function getMainMenuItems(params: {
+export function getMainNavItems(params: {
   locale: Locale;
   scope: 'desktop' | 'mobile';
-  level: MainMenuLevel;
+  level: NavLevel;
 }) {
-  return MAIN_MENU.filter((item) => item[params.scope] === params.level).filter(
+  return MAIN_NAV.filter((item) => item[params.scope] === params.level).filter(
     (item) => (item.locales ? item.locales.includes(params.locale) : item)
   );
 }

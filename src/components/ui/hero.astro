@@ -8,7 +8,7 @@ import { cn } from '@/lib/tailwind/utils';
 import { LanguageSwitcher } from '@/components/nav/language-switcher';
 import { NavPrimaryButton } from '@/components/nav/nav-primary-button';
 import { Logo } from '@/components/ui/logo';
-import { Scratch } from '@/components/ui/scratch';
+import { ScratchFull } from '@/components/ui/scratch';
 import { parseAstroLocale } from '@/i18n/utils';
 
 import defaultBg from './hero-bg.jpeg';
@@ -62,10 +62,5 @@ const locale = parseAstroLocale(Astro.currentLocale);
   />
   <div class="from-hero/90 to-hero/0 absolute inset-0 z-0 bg-linear-to-b"></div>
 
-  <!-- Scratch -->
-  <div class="text-background relative z-10 -mt-8 -mb-px flex">
-    <Scratch className="" />
-    <Scratch className="max-lg:hidden" />
-    <Scratch className="max-2xl:hidden" />
-  </div>
+  <ScratchFull className="text-background -mt-8 -mb-px" />
 </div>

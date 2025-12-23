@@ -10,7 +10,7 @@ import {
 import type { Locale } from '@/i18n/utils';
 import { getTranslationFn } from '@/i18n/utils';
 
-import { getMainMenuItems } from './menus';
+import { getMainNavItems } from './main-nav';
 
 const mainNavMobileItemVariants = cva(
   'text-2xs flex flex-1 flex-col items-center rounded-md py-1 justify-center gap-0.5 [&>svg]:size-6',
@@ -29,12 +29,12 @@ const mainNavMobileItemVariants = cva(
 
 export const MainNavMobile = (props: { pathname: string; locale: Locale }) => {
   const t = getTranslationFn(props.locale);
-  const primaryItems = getMainMenuItems({
+  const primaryItems = getMainNavItems({
     locale: props.locale,
     scope: 'mobile',
     level: 'primary',
   });
-  const secondaryItems = getMainMenuItems({
+  const secondaryItems = getMainNavItems({
     locale: props.locale,
     scope: 'mobile',
     level: 'secondary',

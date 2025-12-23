@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets';
+
+import { getLink } from '@/lib/link';
+import { Logo } from '@/components/ui/logo';
+import { ScratchFull } from '@/components/ui/scratch';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
+
+import { getFooterNavItems } from './footer-nav';
+import LogoRegion from './logo-region.svg';
+import { SOCIALS } from './socials';
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
+---
+
+<footer
+  class="bg-brand-950 text-brand-300 mt-32 flex flex-col gap-4 pb-32 md:gap-8"
+>
+  <ScratchFull className="text-brand-950 -mb-px -translate-y-[90%]" />
+  <div
+    class="mx-auto flex w-full max-w-5xl flex-col gap-6 px-6 md:flex-row md:items-start md:gap-12"
+  >
+    <div class="flex flex-1 flex-col gap-4">
+      <a href={getLink('/fr', locale, {})}>
+        <Logo className="text-accent w-24 sm:w-32" />
+      </a>
+      <address class="text-xs not-italic">
+        1900 Route de Cailly<br />
+        76690 Saint-André-sur-Cailly<br />
+        Normandie, FRANCE
+      </address>
+    </div>
+    <div class="-mx-2 flex-2 columns-2 flex-col text-xs md:pt-10">
+      {
+        getFooterNavItems({ locale }).map((item) => {
+          const href = item.getHref(locale);
+          return (
+            <a
+              href={href}
+              class="flex w-fit rounded px-2 py-1.5 hover:bg-white/5"
+            >
+              {t(item.i18nKey)}
+            </a>
+          );
+        })
+      }
+    </div>
+    <div class="-mx-1.5 flex flex-1 flex-col gap-2 text-xs md:pt-10">
+      <div class="px-1.5">Suivez nous sur...</div>
+      <div class="flex max-w-42 flex-wrap">
+        {
+          SOCIALS.map((item) => {
+            const Icon = item.icon;
+            return (
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-accent flex items-center justify-center p-1.5"
+                title={item.label}
+              >
+                <Icon className="size-6" />
+                <span class="sr-only">{item.label}</span>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto flex w-full max-w-5xl flex-col gap-2 pt-12">
+    <div class="flex flex-col gap-6 px-6 md:flex-row md:items-center md:gap-12">
+      <div class="flex flex-1 flex-col gap-1">
+        <p class="text-2xs">Le BearStudio est supporté par la</p>
+        <Image src={LogoRegion} alt="Region Normandie" class="w-48" />
+      </div>
+      <p class="text-2xs flex-2 text-balance">
+        Créé en 2016, le BearStudio est un studio d'accompagnement de projets en
+        R&D : développement sur-mesure Web et mobile, études de faisabilité et
+        audit technologique, rien ne nous effraie !
+      </p>
+      <div
+        class="flex flex-1 items-center gap-4 md:flex-col md:items-start md:gap-2"
+      >
+        <Logo className="-mt-1 w-24 flex-none opacity-80" />
+        <p class="text-2xs flex-none opacity-60">© Tous droits réservés</p>
+      </div>
+    </div>
+  </div>
+</footer>

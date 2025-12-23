@@ -18,16 +18,16 @@ import type { Locale } from '@/i18n/utils';
 import { getTranslationFn } from '@/i18n/utils';
 import { ROUTES } from '@/routes.gen';
 
-import { getMainMenuItems } from './menus';
+import { getMainNavItems } from './main-nav';
 
 export const MainNavDesktop = (props: { pathname: string; locale: Locale }) => {
   const t = getTranslationFn(props.locale);
-  const primaryItems = getMainMenuItems({
+  const primaryItems = getMainNavItems({
     locale: props.locale,
     scope: 'desktop',
     level: 'primary',
   });
-  const secondaryItems = getMainMenuItems({
+  const secondaryItems = getMainNavItems({
     locale: props.locale,
     scope: 'desktop',
     level: 'secondary',

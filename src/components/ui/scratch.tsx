@@ -2,7 +2,7 @@ import type { SVGProps } from 'react';
 
 import { cn } from '@/lib/tailwind/utils';
 
-export const Scratch = (props: SVGProps<SVGSVGElement>) => (
+export const ScratchSvg = (props: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 511 27"
     fill="none"
@@ -15,3 +15,13 @@ export const Scratch = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
+
+export const ScratchFull = (props: { className?: string }) => {
+  return (
+    <div className={cn('relative z-10  flex', props.className)}>
+      <ScratchSvg className="" />
+      <ScratchSvg className="max-lg:hidden" />
+      <ScratchSvg className="max-2xl:hidden" />
+    </div>
+  );
+};

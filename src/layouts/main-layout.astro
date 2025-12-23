@@ -1,4 +1,5 @@
 ---
+import Footer from '@/components/footer/index.astro';
 import { MainNavDesktop } from '@/components/nav/main-nav-desktop';
 import { MainNavMobile } from '@/components/nav/main-nav-mobile';
 import { parseAstroLocale } from '@/i18n/utils';
@@ -8,7 +9,6 @@ import RootLayout from '@/layouts/root-layout.astro';
 <RootLayout>
   <slot name="seo" slot="seo" />
   <slot name="ld+json" slot="ld+json" />
-
   <MainNavDesktop
     client:load
     locale={parseAstroLocale(Astro.currentLocale)}
@@ -23,4 +23,5 @@ import RootLayout from '@/layouts/root-layout.astro';
   <main class="flex flex-1 flex-col">
     <slot />
   </main>
+  <Footer />
 </RootLayout>
