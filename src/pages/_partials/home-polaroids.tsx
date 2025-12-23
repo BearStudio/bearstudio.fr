@@ -1,5 +1,6 @@
-import { lunalink } from '@bearstudio/lunalink';
+import type { CollectionEntry } from 'astro:content';
 
+import { cn } from '@/lib/tailwind/utils';
 import {
   Carousel,
   CarouselContent,
@@ -7,54 +8,36 @@ import {
 } from '@/components/ui/carousel';
 import { Polaroid } from '@/components/ui/polaroid';
 import type { Locale } from '@/i18n/utils';
-import { ROUTES } from '@/routes.gen';
 
-export const HomePolaroids = (props: { locale: Locale }) => {
+export const HomePolaroids = (props: {
+  locale: Locale;
+  polaroids: Array<CollectionEntry<'polaroids'>>;
+}) => {
   return (
     <Carousel className="-my-16 w-full" opts={{ dragFree: true }}>
       <CarouselContent className="-ml-8 pl-8">
-        <CarouselItem className="basis-[60%] sm:basis-[30%] md:basis-[24%] py-16 fisrt:ml-8">
-          <a
-            className="-rotate-2 flex"
-            href={lunalink(ROUTES[props.locale].blog.__path, {})}
-            onDragStart={(e) => e.preventDefault()}
+        {props.polaroids.map((polaroid, index) => (
+          <CarouselItem
+            key={polaroid.id}
+            className="basis-[60%] sm:basis-[30%] md:basis-[25%] py-16 fisrt:ml-8 last:mr-8"
           >
-            <Polaroid src="/images/ivan-talk-ces-25.jpeg">
-              Nos conférences de Codeurs en Seine 2026
-            </Polaroid>
-          </a>
-        </CarouselItem>
-        <CarouselItem className="basis-[60%] sm:basis-[30%] md:basis-[25%] py-16">
-          <a
-            className="rotate-1 flex"
-            href={lunalink(ROUTES[props.locale].blog.__path, {})}
-            onDragStart={(e) => e.preventDefault()}
-          >
-            <Polaroid src="/images/bearstudio-house.jpeg">La tanière</Polaroid>
-          </a>
-        </CarouselItem>
-        <CarouselItem className="basis-[60%] sm:basis-[30%] md:basis-[25%] py-16">
-          <a
-            className="-rotate-3 flex"
-            href={lunalink(ROUTES[props.locale].blog.__path, {})}
-            onDragStart={(e) => e.preventDefault()}
-          >
-            <Polaroid src="/images/london-25.jpeg">
-              React Advanced Conference London 2026
-            </Polaroid>
-          </a>
-        </CarouselItem>
-        <CarouselItem className="basis-[60%] sm:basis-[30%] md:basis-[24%] py-16 last:mr-8">
-          <a
-            className="rotate-2 flex"
-            href={lunalink(ROUTES[props.locale].blog.__path, {})}
-            onDragStart={(e) => e.preventDefault()}
-          >
-            <Polaroid src="/images/forkids-rouen-2.jpeg">
-              Fork it! For Kids à Rouen
-            </Polaroid>
-          </a>
-        </CarouselItem>
+            <a
+              className={cn(
+                'flex',
+                index === 0 && '-rotate-2',
+                index === 1 && 'rotate-1',
+                index === 2 && '-rotate-3',
+                index === 3 && 'rotate-2'
+              )}
+              href={polaroid.data.href}
+              onDragStart={(e) => e.preventDefault()}
+            >
+              <Polaroid src={polaroid.data.src}>
+                {polaroid.data.title[props.locale]}
+              </Polaroid>
+            </a>
+          </CarouselItem>
+        ))}
       </CarouselContent>
     </Carousel>
   );
