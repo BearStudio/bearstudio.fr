@@ -20,7 +20,9 @@ export type LocalesWithoutDefault = Exclude<Locale, typeof defaultLocale>;
 
 function removeDoubleSlash(str: string) {
   // Removing double `//` from pathname. Not a fan, but have to go quick on that one.
-  return str.split('/').filter(isNonNullish).filter(isNot(isEmpty)).join('/');
+  return (
+    '/' + str.split('/').filter(isNonNullish).filter(isNot(isEmpty)).join('/')
+  );
 }
 
 export function getLink<Path extends DefaultLocaleRoutePaths, L extends Locale>(
