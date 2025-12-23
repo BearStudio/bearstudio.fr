@@ -5,7 +5,6 @@ import { render } from 'astro:content';
 import { experimental_AstroContainer } from 'astro/container';
 import { getContainerRenderer as mdxContainerRenderer } from '@astrojs/mdx';
 
-import { lunalink } from '@bearstudio/lunalink';
 import dayjs from 'dayjs';
 
 import { getBlogCollection } from '@/lib/blog';
@@ -121,10 +120,10 @@ const wordCount = articleBody.split(' ').length;
       >
         {title}
       </h1>
-      <div class="flex flex-col gap-0 text-sm lg:flex-row lg:gap-2">
+      <div class="flex flex-col gap-0 text-sm lg:flex-row lg:gap-1">
         <div class="opacity-60">
           Le
-          <FormattedDate date={date} locale={locale} />
+          <FormattedDate date={date} locale={locale} className="font-medium" />
         </div>
         <div>
           <span class="opacity-60">par</span>
@@ -136,6 +135,7 @@ const wordCount = articleBody.split(' ').length;
                     href={getLink('/fr/equipe/:id', locale, {
                       id: author.data._computed.slug,
                     })}
+                    class="op80 font-medium opacity-80 hover:opacity-100"
                   >
                     {author.data.name}
                   </a>
@@ -146,32 +146,9 @@ const wordCount = articleBody.split(' ').length;
       </div>
     </HeroContent>
   </Hero>
-  <div class="pb-20 lg:pt-20 lg:pb-0">
-    <div
-      class={cn(
-        'mx-auto w-full flex-1 max-w-screen-lg flex flex-col gap-8 pt-4 pb-40 relative z-10 px-8 md:px-12'
-      )}
-    >
-      <div class="flex flex-col items-center gap-4">
-        <FormattedDate date={date} locale={locale} />
-        {
-          authors?.map(
-            (author) =>
-              author && (
-                <a
-                  href={lunalink(ROUTES.fr.equipe[':id'].__path, {
-                    id: author.data._computed.slug,
-                  })}
-                >
-                  {author.data.name}
-                </a>
-              )
-          )
-        }
-      </div>
-      <Prose>
-        <Content />
-      </Prose>
-    </div>
+  <div class="mx-auto w-full max-w-5xl px-6 py-12">
+    <Prose>
+      <Content />
+    </Prose>
   </div>
 </MainLayout>
