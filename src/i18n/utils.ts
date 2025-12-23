@@ -1,6 +1,6 @@
 import { z } from 'astro/zod';
 
-import { entries, map, pipe, prop, reduce, stringToPath } from 'remeda';
+import { entries, pipe, prop, reduce, stringToPath } from 'remeda';
 
 import { defaultLocale, locales } from '@/i18n';
 
