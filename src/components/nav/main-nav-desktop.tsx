@@ -22,8 +22,13 @@ import { getMainMenuItems } from './menus';
 
 export const MainNavDesktop = (props: { pathname: string; locale: Locale }) => {
   const t = getTranslationFn(props.locale);
-  const primaryItems = getMainMenuItems({ scope: 'desktop', level: 'primary' });
+  const primaryItems = getMainMenuItems({
+    locale: props.locale,
+    scope: 'desktop',
+    level: 'primary',
+  });
   const secondaryItems = getMainMenuItems({
+    locale: props.locale,
     scope: 'desktop',
     level: 'secondary',
   });

@@ -25,6 +25,7 @@ export type MenuItem = {
   exact?: boolean;
   desktop: MainMenuLevel;
   mobile: MainMenuLevel;
+  locales?: Array<Locale>;
 };
 
 const MAIN_MENU: Array<MenuItem> = [
@@ -70,12 +71,16 @@ const MAIN_MENU: Array<MenuItem> = [
     iconActive: PiNoteFill,
     desktop: 'primary',
     mobile: 'primary',
+    locales: ['fr'],
   },
 ];
 
 export function getMainMenuItems(params: {
+  locale: Locale;
   scope: 'desktop' | 'mobile';
   level: MainMenuLevel;
 }) {
-  return MAIN_MENU.filter((item) => item[params.scope] === params.level);
+  return MAIN_MENU.filter((item) => item[params.scope] === params.level).filter(
+    (item) => (item.locales ? item.locales.includes(params.locale) : item)
+  );
 }

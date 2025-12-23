@@ -29,8 +29,13 @@ const mainNavMobileItemVariants = cva(
 
 export const MainNavMobile = (props: { pathname: string; locale: Locale }) => {
   const t = getTranslationFn(props.locale);
-  const primaryItems = getMainMenuItems({ scope: 'mobile', level: 'primary' });
+  const primaryItems = getMainMenuItems({
+    locale: props.locale,
+    scope: 'mobile',
+    level: 'primary',
+  });
   const secondaryItems = getMainMenuItems({
+    locale: props.locale,
     scope: 'mobile',
     level: 'secondary',
   });
