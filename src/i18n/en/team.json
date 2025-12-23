@@ -2,7 +2,8 @@
   "root": {
     "hero": {
       "breadcrumb": "Team",
-      "title": "Team"
+      "title": "Team",
+      "description": "Meet the BearStudio team, a passionate team of developers and designers who bring your web and mobile projects to life."
     }
   }
 }
