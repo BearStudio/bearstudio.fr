@@ -155,7 +155,7 @@ const wordCount = articleBody.split(' ').length;
                     href={getLink('/fr/equipe/:id', locale, {
                       id: author.data._computed.slug,
                     })}
-                    class="op80 font-medium opacity-80 hover:opacity-100"
+                    class="font-medium opacity-80 hover:opacity-100"
                   >
                     {author.data.name}
                   </a>
@@ -170,5 +170,29 @@ const wordCount = articleBody.split(' ').length;
     <Prose>
       <Content />
     </Prose>
+    <div class="flex flex-col gap-0 pt-12 text-sm lg:flex-row lg:gap-1">
+      <div>
+        Publié le
+        <FormattedDate date={date} locale={locale} className="font-medium" />
+      </div>
+      <div>
+        <span>par</span>
+        {
+          authors?.map(
+            (author) =>
+              author && (
+                <a
+                  href={getLink('/fr/equipe/:id', locale, {
+                    id: author.data._computed.slug,
+                  })}
+                  class="font-medium hover:underline"
+                >
+                  {author.data.name}
+                </a>
+              )
+          )
+        }
+      </div>
+    </div>
   </div>
 </MainLayout>
