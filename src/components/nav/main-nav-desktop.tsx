@@ -32,7 +32,7 @@ export const MainNavDesktop = (props: { pathname: string; locale: Locale }) => {
     scope: 'desktop',
     level: 'secondary',
   });
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(true);
 
   useEffect(() => {
     const onScroll = () => {
