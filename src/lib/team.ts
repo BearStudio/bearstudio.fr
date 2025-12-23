@@ -1,23 +1,14 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 import {
+  existsInLocale,
   getPostsBySlug,
   getSlugWithoutLocale,
-  hasSpecificLang,
 } from '@/lib/content';
-
-type Params = {
-  limit?: number | undefined;
-  lang?: string | undefined;
-};
+import type { Locale } from '@/i18n/utils';
 
 type TeamEntry = CollectionEntry<'team'>;
 const isVisible = (person: TeamEntry) => !person.data.hidden;
-
-const hasStatus = (
-  person: TeamEntry,
-  status: CollectionEntry<'team'>['data']['status']
-) => person.data.status === status;
 
 const sortByOrder = (person1: TeamEntry, person2: TeamEntry) => {
   if (person1.data.order === undefined && person2.data.order === undefined) {
@@ -36,42 +27,32 @@ const sortByOrder = (person1: TeamEntry, person2: TeamEntry) => {
 };
 
 export async function getTeamCollection({
-  limit = undefined,
-  lang = 'fr',
-}: Params = {}) {
-  const team = (await getCollection('team'))
-    .filter(isVisible)
-    .filter((post) => hasSpecificLang({ post, lang }))
-    .sort(sortByOrder)
-    .map((post) => getSlugWithoutLocale<'team'>(post));
-
-  return team.slice(0, limit);
-}
-
-export async function getCurrentTeamCollection({
-  limit = undefined,
-  lang = 'fr',
-}: Params = {}) {
-  const team = (await getCollection('team'))
-    .filter(isVisible)
-    .filter((post) => hasStatus(post, 'current'))
-    .filter((post) => hasSpecificLang({ post, lang }))
-    .sort(sortByOrder)
-    .map((post) => getSlugWithoutLocale<'team'>(post));
-
-  return team.slice(0, limit);
-}
-
-type GetTeamFromSlugProps = Params & {
-  slugs: Array<string>;
-};
-
-export async function getTeamBySlugs({
+  locale,
+  status,
   limit,
-  lang,
-  slugs,
-}: GetTeamFromSlugProps) {
-  return (await getTeamCollection({ limit, lang })).filter((post) =>
-    getPostsBySlug({ post, slugs })
-  );
+}: {
+  locale: Locale;
+  status?: TeamEntry['data']['status'];
+  limit?: number | undefined;
+}) {
+  const team = (await getCollection('team'))
+    .filter(isVisible)
+    .filter((post) =>
+      status === undefined ? true : post.data.status === status
+    )
+    .filter((post) => existsInLocale({ idWithLocale: post.id, locale }))
+    .sort(sortByOrder)
+    .map((post) => getSlugWithoutLocale<'team'>(post));
+
+  return team.slice(0, limit);
+}
+
+export async function getTeamBySlugs(params: {
+  locale: Locale;
+  slugs: Array<string>;
+  limit?: number | undefined;
+}) {
+  return (
+    await getTeamCollection({ locale: params.locale, limit: params.limit })
+  ).filter((post) => getPostsBySlug({ post, slugs: params.slugs }));
 }

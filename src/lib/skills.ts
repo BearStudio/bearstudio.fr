@@ -1,18 +1,19 @@
 import { getCollection } from 'astro:content';
 
-import { getSlugWithoutLocale, hasSpecificLang } from '@/lib/content';
+import { existsInLocale, getSlugWithoutLocale } from '@/lib/content';
+import type { Locale } from '@/i18n/utils';
 
 type Params = {
   limit?: number | undefined;
-  lang?: string | undefined;
+  locale: Locale;
 };
 
 export async function getSkillsCollection({
   limit = undefined,
-  lang = 'fr',
-}: Params = {}) {
+  locale,
+}: Params) {
   const skills = (await getCollection('skills'))
-    .filter((post) => hasSpecificLang({ post, lang }))
+    .filter((post) => existsInLocale({ idWithLocale: post.id, locale }))
     .map((post) => getSlugWithoutLocale<'skills'>(post));
 
   return skills.slice(0, limit);

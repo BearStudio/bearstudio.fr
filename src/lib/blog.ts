@@ -1,14 +1,15 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 import {
+  existsInLocale,
   getSlugWithoutLocale,
-  hasSpecificLang,
   type ComputedCollectionEntry,
 } from '@/lib/content';
+import type { Locale } from '@/i18n/utils';
 
 type Params = {
   limit?: number | undefined;
-  lang?: string | undefined;
+  locale: Locale;
 };
 
 const isPublished = (post: CollectionEntry<'blog'>) =>
@@ -33,13 +34,12 @@ const sortByLatest = (
   post2: CollectionEntry<'blog'>
 ) => (post2.data.date?.valueOf() ?? 0) - (post1.data.date?.valueOf() ?? 0);
 
-export async function getBlogCollection({
-  limit = undefined,
-  lang,
-}: Params = {}) {
+export async function getBlogCollection({ limit = undefined, locale }: Params) {
   const posts = (await getCollection('blog'))
     .filter(isPublished)
-    .filter((post) => (lang ? hasSpecificLang({ post, lang }) : post))
+    .filter((post) =>
+      locale ? existsInLocale({ idWithLocale: post.id, locale }) : post
+    )
     .sort(sortByLatest)
     .map((post) => getSlugWithoutLocale<'blog'>(post));
 
@@ -56,10 +56,10 @@ type GetBlogCollectionLinkedToTeamMemberProps = Params & {
 
 export async function getBlogCollectionLinkedToTeamMember({
   author,
-  lang,
+  locale,
   limit = undefined,
 }: GetBlogCollectionLinkedToTeamMemberProps) {
-  return (await getBlogCollection({ limit, lang }))
+  return (await getBlogCollection({ limit, locale }))
     .filter((post) => hasSpecificAuthor({ post, author }))
     .filter((x) => x);
 }

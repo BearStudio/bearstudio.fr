@@ -31,7 +31,7 @@ export async function generateStaticPaths(
 ) {
   const PAGE_SIZE = 24;
   const newsPages = await getBlogCollection({
-    lang: params.locale,
+    locale: params.locale,
   });
 
   // Get all categories
@@ -180,7 +180,7 @@ const { page, category } = Astro.props;
               href={getLink('/fr/blog/posts/:id', locale, {
                 id: post.data._computed.slug,
               })}
-              class="bg-card border-card-border flex flex-col gap-2 overflow-hidden rounded-md border border-b-3 p-2"
+              class="bg-card border-card-border flex flex-col gap-2 overflow-hidden rounded-md border border-b-3 p-2 transition-all hover:-translate-y-1.5 hover:shadow-xl"
             >
               <div class="bg-brand-900 relative aspect-[1.2] w-full overflow-hidden rounded-sm">
                 <Image

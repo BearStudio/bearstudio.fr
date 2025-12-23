@@ -1,21 +1,18 @@
 import type { CollectionEntry, CollectionKey } from 'astro:content';
 
+import type { Locale } from '@/i18n/utils';
+
 export type ComputedCollectionEntry<T extends CollectionKey> =
   CollectionEntry<T> & {
     data: { _computed: { slug: string } };
   };
 
-type HasSpecificLangProps<T extends CollectionKey> = {
-  post: CollectionEntry<T>;
-  lang: string;
-};
-
-export const hasSpecificLang = <T extends CollectionKey>({
-  post,
-  lang,
-}: HasSpecificLangProps<T>) => {
-  const [postLang] = post.id.split('/');
-  return postLang === lang;
+export const existsInLocale = (params: {
+  idWithLocale: string;
+  locale: Locale;
+}) => {
+  const [postLang] = params.idWithLocale.split('/');
+  return postLang === params.locale;
 };
 
 export const getSlugWithoutLocale = <T extends CollectionKey>(

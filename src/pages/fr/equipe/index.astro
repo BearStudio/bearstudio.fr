@@ -1,8 +1,10 @@
 ---
+import { Image } from 'astro:assets';
+
 import { lunalink } from '@bearstudio/lunalink';
 
 import { getLink } from '@/lib/link';
-import { getCurrentTeamCollection } from '@/lib/team';
+import { getTeamCollection } from '@/lib/team';
 import SEO from '@/components/seo/index.astro';
 import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
 import { getAlternates } from '@/components/seo/utils';
@@ -19,8 +21,9 @@ import { ROUTES } from '@/routes.gen';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
-const team = await getCurrentTeamCollection({
-  lang: parseAstroLocale(Astro.currentLocale),
+const teamCurrent = await getTeamCollection({
+  locale,
+  status: 'current',
 });
 ---
 
@@ -57,16 +60,33 @@ const team = await getCurrentTeamCollection({
     </HeroContent>
   </Hero>
 
-  <div class="mx-auto w-full max-w-5xl px-6">
-    <div class="grid gap-4 px-6 md:grid-cols-3">
+  <div class="relative mx-auto -mt-16 w-full max-w-5xl p-6 md:-mt-24">
+    <div class="xs:grid-cols-2 grid gap-4 md:grid-cols-3 lg:grid-cols-4">
       {
-        team.map((person) => (
+        teamCurrent.map((person) => (
           <a
-            href={lunalink(ROUTES.fr.equipe[':id'].__path, {
+            href={getLink('/fr/equipe/:id', locale, {
               id: person.data._computed.slug,
             })}
+            class="bg-card border-card-border flex flex-col gap-2 overflow-hidden rounded-md border border-b-3 p-2 transition-all hover:-translate-y-1.5 hover:shadow-xl"
           >
-            {person.data.name}
+            <div class="from-brand-900 to-brand-800 relative aspect-square w-full overflow-hidden rounded-sm bg-gradient-to-b">
+              {!!person.data.picture && (
+                <Image
+                  src={person.data.picture}
+                  alt=""
+                  class="absolute inset-0 h-full w-full object-cover drop-shadow-lg"
+                  width={1200}
+                  height={1200}
+                />
+              )}
+            </div>
+            <div class="flex flex-1 flex-col gap-1 px-1">
+              <h2 class="font-heading text-lg leading-tight font-bold">
+                {person.data.name}
+              </h2>
+              <p class="text-xs">{person.data.job}</p>
+            </div>
           </a>
         ))
       }
