@@ -53,11 +53,12 @@ const locale = parseAstroLocale(Astro.currentLocale);
     </div>
   </div>
 
-  <!-- Background -->
+  <!-- Background (translate3d is for safari to apply mix-blend-overlay) -->
   <Image
     src={image ?? defaultBg}
     alt=""
     class="absolute inset-0 z-0 h-full w-full object-cover opacity-30 mix-blend-overlay grayscale"
+    style={{ transform: 'translate3d(0, 0, 0)' }}
   />
   <div class="from-hero/90 to-hero/0 absolute inset-0 z-0 bg-linear-to-b"></div>
 
