@@ -1,10 +1,7 @@
-import { getCollection, type CollectionEntry } from 'astro:content';
+import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 
-import {
-  existsInLocale,
-  getSlugWithoutLocale,
-  type ComputedCollectionEntry,
-} from '@/lib/content';
+import { existsInLocale, type ComputedCollectionEntry } from '@/lib/content';
+import { teamMemberWithComputed } from '@/lib/team';
 import type { Locale } from '@/i18n/utils';
 
 type Params = {
@@ -35,13 +32,17 @@ const sortByLatest = (
 ) => (post2.data.date?.valueOf() ?? 0) - (post1.data.date?.valueOf() ?? 0);
 
 export async function getBlogCollection({ limit = undefined, locale }: Params) {
-  const posts = (await getCollection('blog'))
-    .filter(isPublished)
-    .filter((post) =>
-      locale ? existsInLocale({ idWithLocale: post.id, locale }) : post
-    )
-    .sort(sortByLatest)
-    .map((post) => getSlugWithoutLocale<'blog'>(post));
+  const posts = await Promise.all(
+    (await getCollection('blog'))
+      .filter(isPublished)
+      .filter((post) => {
+        if (!locale) return post;
+        const [postLocale] = post.id.split('/');
+        return postLocale === locale;
+      })
+      .sort(sortByLatest)
+      .map(blogPostWithComputed)
+  );
 
   if (limit) {
     return posts.slice(0, limit);
@@ -49,6 +50,30 @@ export async function getBlogCollection({ limit = undefined, locale }: Params) {
 
   return posts;
 }
+
+export type BlogPostWithComputed = Awaited<
+  ReturnType<typeof blogPostWithComputed>
+>;
+const blogPostWithComputed = async (item: CollectionEntry<'blog'>) => {
+  const [locale, ...slugArray] = item.id.split('/');
+  const slug = slugArray.join('/');
+  const authors = await Promise.all(
+    (item.data.authors ?? [])?.map(async (author) => {
+      const data = await getEntry('team', `${author.id}/${locale}`);
+      return data ? teamMemberWithComputed(data) : undefined;
+    })
+  );
+  return {
+    ...item,
+    data: {
+      ...item.data,
+      _computed: {
+        slug,
+        authors,
+      },
+    },
+  };
+};
 
 type GetBlogCollectionLinkedToTeamMemberProps = Params & {
   author: ComputedCollectionEntry<'team'>;

@@ -1,15 +1,11 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
-import { getPostsBySlug, getSlugWithoutLocale } from '@/lib/content';
 import type { Locale } from '@/i18n/utils';
 
-type TeamEntry = CollectionEntry<'team'>;
-const isVisible = (person: TeamEntry) => !person.data.hidden;
-export type TeamMemberWithComputed = ReturnType<
-  typeof getSlugWithoutLocale<'team'>
->;
-
-const sortByOrder = (person1: TeamEntry, person2: TeamEntry) => {
+const sortByOrder = (
+  person1: CollectionEntry<'team'>,
+  person2: CollectionEntry<'team'>
+) => {
   if (person1.data.order === undefined && person2.data.order === undefined) {
     return 0;
   }
@@ -31,30 +27,26 @@ export async function getTeamCollection({
   limit,
 }: {
   locale: Locale;
-  status?: TeamEntry['data']['status'];
+  status?: CollectionEntry<'team'>['data']['status'];
   limit?: number | undefined;
 }) {
   const team = (await getCollection('team'))
-    .filter(isVisible)
-    .filter((post) =>
-      status === undefined ? true : post.data.status === status
+    .filter((item) => !item.data.hidden)
+    .filter((item) =>
+      status === undefined ? true : item.data.status === status
     )
     .filter((item) => {
       const [, itemLocale] = item.id.split('/');
       return itemLocale === locale;
     })
     .sort(sortByOrder)
-    .map((post) => getSlugWithoutLocale<'team'>(post));
+    .map(teamMemberWithComputed);
 
   return team.slice(0, limit);
 }
 
-export async function getTeamBySlugs(params: {
-  locale: Locale;
-  slugs: Array<string>;
-  limit?: number | undefined;
-}) {
-  return (
-    await getTeamCollection({ locale: params.locale, limit: params.limit })
-  ).filter((post) => getPostsBySlug({ post, slugs: params.slugs }));
-}
+export type TeamMemberWithComputed = ReturnType<typeof teamMemberWithComputed>;
+export const teamMemberWithComputed = (item: CollectionEntry<'team'>) => {
+  const [slug] = item.id.split('/');
+  return { ...item, data: { ...item.data, _computed: { slug: slug ?? '' } } };
+};
