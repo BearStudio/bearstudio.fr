@@ -8,6 +8,14 @@ import { cn } from '@/lib/tailwind/utils';
 function DropdownMenu({
   ...props
 }: React.ComponentProps<typeof DropdownMenuPrimitive.Root>) {
+  // iOS Safari hack: trigger pointer system once.
+  React.useEffect(() => {
+    const handlePointerDown = () => {};
+    document.body.addEventListener('pointerdown', handlePointerDown);
+    return () => {
+      document.body.removeEventListener('pointerdown', handlePointerDown);
+    };
+  }, []);
   return (
     <DropdownMenuPrimitive.Root
       modal={false}
