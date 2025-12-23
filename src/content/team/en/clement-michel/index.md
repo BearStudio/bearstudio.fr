@@ -9,5 +9,5 @@ socials:
     href: 'https://www.linkedin.com/in/clementmic/'
 status: 'advisor'
 hidden: false
-order: 1000
+order: 2000
 ---

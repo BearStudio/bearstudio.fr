@@ -9,6 +9,9 @@ import type { Locale } from '@/i18n/utils';
 
 type TeamEntry = CollectionEntry<'team'>;
 const isVisible = (person: TeamEntry) => !person.data.hidden;
+export type TeamMemberWithComputed = ReturnType<
+  typeof getSlugWithoutLocale<'team'>
+>;
 
 const sortByOrder = (person1: TeamEntry, person2: TeamEntry) => {
   if (person1.data.order === undefined && person2.data.order === undefined) {

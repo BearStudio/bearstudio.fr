@@ -9,5 +9,5 @@ socials:
     href: 'https://fr.linkedin.com/in/david-endico-401291a0'
 status: 'advisor'
 hidden: false
-order: 1000
+order: 4000
 ---

@@ -7,5 +7,5 @@ socials:
     href: 'https://twitter.com/Luis_Rubiera'
 status: 'advisor'
 hidden: false
-order: 1000
+order: 3000
 ---

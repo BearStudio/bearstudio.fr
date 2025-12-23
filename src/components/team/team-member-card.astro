@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+
+import { getLink } from '@/lib/link';
+import type { TeamMemberWithComputed } from '@/lib/team';
+import { parseAstroLocale } from '@/i18n/utils';
+
+interface Props {
+  member: TeamMemberWithComputed;
+}
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const { member } = Astro.props;
+---
+
+<a
+  href={getLink('/fr/equipe/:id', locale, {
+    id: member.data._computed.slug,
+  })}
+  class="bg-card group border-card-border flex flex-col gap-2 overflow-hidden rounded-md border border-b-3 p-2 transition-all hover:-translate-y-1.5 hover:shadow-xl"
+>
+  <div
+    class="from-brand-900 to-brand-800 relative aspect-square w-full overflow-hidden rounded-sm bg-gradient-to-b"
+  >
+    {
+      !!member.data.picture && (
+        <Image
+          src={member.data.picture}
+          alt=""
+          class="absolute inset-0 h-full w-full object-cover drop-shadow-lg transition-all group-hover:-translate-y-1 group-hover:scale-105"
+          width={1200}
+          height={1200}
+        />
+      )
+    }
+  </div>
+  <div class="flex flex-1 flex-col gap-1 px-1">
+    <h2 class="font-heading text-lg leading-tight font-bold">
+      {member.data.name}
+    </h2>
+    {!!member.data.job && <p class="text-xs">{member.data.job}</p>}
+  </div>
+</a>
