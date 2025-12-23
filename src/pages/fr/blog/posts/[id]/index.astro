@@ -13,7 +13,6 @@ import type { ComputedCollectionEntry } from '@/lib/content';
 import { getLink } from '@/lib/link';
 import { cn } from '@/lib/tailwind/utils';
 import { getTeamBySlugs } from '@/lib/team';
-import FormattedDate from '@/components/formatted-date.astro';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
@@ -24,6 +23,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
+import { FormattedDate } from '@/components/ui/formatted-date';
 import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
 import { getTranslationFn, parseAstroLocale, type Locale } from '@/i18n/utils';
@@ -121,6 +121,29 @@ const wordCount = articleBody.split(' ').length;
       >
         {title}
       </h1>
+      <div class="flex flex-col gap-0 text-sm lg:flex-row lg:gap-2">
+        <div class="opacity-60">
+          Le
+          <FormattedDate date={date} locale={locale} />
+        </div>
+        <div>
+          <span class="opacity-60">par</span>
+          {
+            authors?.map(
+              (author) =>
+                author && (
+                  <a
+                    href={getLink('/fr/equipe/:id', locale, {
+                      id: author.data._computed.slug,
+                    })}
+                  >
+                    {author.data.name}
+                  </a>
+                )
+            )
+          }
+        </div>
+      </div>
     </HeroContent>
   </Hero>
   <div class="pb-20 lg:pt-20 lg:pb-0">
@@ -130,7 +153,7 @@ const wordCount = articleBody.split(' ').length;
       )}
     >
       <div class="flex flex-col items-center gap-4">
-        <FormattedDate date={date} />
+        <FormattedDate date={date} locale={locale} />
         {
           authors?.map(
             (author) =>

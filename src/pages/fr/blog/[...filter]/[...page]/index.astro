@@ -6,7 +6,6 @@ import { PiArrowLeftBold, PiArrowRight } from 'react-icons/pi';
 
 import { getBlogCollection } from '@/lib/blog';
 import { getLink } from '@/lib/link';
-import FormattedDate from '@/components/formatted-date.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import {
@@ -16,6 +15,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
+import { FormattedDate } from '@/components/ui/formatted-date';
 import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
 import type { Locale } from '@/i18n/utils';
@@ -172,7 +172,7 @@ const { page, category } = Astro.props;
               )}
               <h4 class="title">{post.data.title}</h4>
               <p class="date">
-                <FormattedDate date={post.data.date} />
+                <FormattedDate date={post.data.date} locale={locale} />
               </p>
             </a>
           ))
