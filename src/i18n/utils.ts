@@ -1,6 +1,6 @@
 import { z } from 'astro/zod';
 
-import { prop, stringToPath } from 'remeda';
+import { entries, map, pipe, prop, reduce, stringToPath } from 'remeda';
 
 import { defaultLocale, locales } from '@/i18n';
 
@@ -20,12 +20,19 @@ export const LOCALE_TERRITORY_MAP = {
 } as const satisfies Record<Locale, `${Locale}_${string}`>;
 
 export function getTranslationFn(lang: Locale = defaultLocale) {
-  return function t(key?: TranslationKeys, fallback?: string) {
-    if (!key) return fallback;
-    return (
+  return function t(key: TranslationKeys, params?: Record<string, string>) {
+    const translationString =
       // @ts-expect-error Don't know why there is an error here 😭 TODO
-      (prop(translations[lang], ...stringToPath(key)) as unknown as string) ||
-      fallback
+      (prop(translations[lang], ...stringToPath(key)) as unknown as string) ??
+      '';
+
+    return pipe(
+      params ?? {},
+      entries(),
+      reduce(
+        (t, [key, string]) => t.replaceAll(`{{${key}}}`, string),
+        translationString
+      )
     );
   };
 }

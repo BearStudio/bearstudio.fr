@@ -46,21 +46,20 @@ const team = await getCurrentTeamCollection({
       </p>
     </div>
   </Hero>
-  <div class="flex flex-1 flex-col lg:pt-20">
-    <div class="mx-auto w-full max-w-screen-lg px-6 pb-20 lg:pt-20 lg:pb-0">
-      <div class="grid gap-4 px-6 md:grid-cols-3">
-        {
-          team.map((person) => (
-            <a
-              href={lunalink(ROUTES.fr.equipe[':id'].__path, {
-                id: person.data._computed.slug,
-              })}
-            >
-              {person.data.name}
-            </a>
-          ))
-        }
-      </div>
+
+  <div class="mx-auto w-full max-w-5xl">
+    <div class="grid gap-4 px-6 md:grid-cols-3">
+      {
+        team.map((person) => (
+          <a
+            href={lunalink(ROUTES.fr.equipe[':id'].__path, {
+              id: person.data._computed.slug,
+            })}
+          >
+            {person.data.name}
+          </a>
+        ))
+      }
     </div>
   </div>
 </MainLayout>

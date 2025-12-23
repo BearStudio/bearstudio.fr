@@ -4,7 +4,6 @@
       "breadcrumb": "Blog",
       "title": "Le blog des ours",
       "description": "Bienvenue sur notre blog ! Vous y trouverez des articles techniques en lien avec le développement web et le design. Mais aussi des articles plus axés autour de l'entrepreneuriat et du business. En bref, c'est le meilleur moyen pour vous tenir informés des actualités du BearStudio. Bonne lecture !"
-    },
-    "categoryFilter": "Filtre de catégorie: {category}"
+    }
   }
 }
