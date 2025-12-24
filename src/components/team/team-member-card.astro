@@ -15,7 +15,7 @@ const { member } = Astro.props;
 
 <a
   href={getLink('/fr/equipe/:id', locale, {
-    id: member.data._computed.slug,
+    id: member.data._computed.slug ?? '#',
   })}
   class="bg-card group border-card-border flex flex-col gap-2 overflow-hidden rounded-md border border-b-3 p-2 transition-all hover:-translate-y-1.5 hover:shadow-xl"
 >

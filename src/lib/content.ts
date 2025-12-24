@@ -4,7 +4,7 @@ import type { Locale } from '@/i18n/utils';
 
 export type ComputedCollectionEntry<T extends CollectionKey> =
   CollectionEntry<T> & {
-    data: { _computed: { slug: string } };
+    data: { _computed: { slug: string | null } };
   };
 
 export const existsInLocale = (params: {
@@ -28,16 +28,4 @@ export const getSlugWithoutLocale = <T extends CollectionKey>(
       },
     },
   };
-};
-
-type GetPostFromSlugProps<T extends CollectionKey> = {
-  post: ComputedCollectionEntry<T>;
-  slugs: string[];
-};
-
-export const getPostsBySlug = <T extends CollectionKey>({
-  post,
-  slugs,
-}: GetPostFromSlugProps<T>) => {
-  return slugs?.includes(post.data._computed.slug);
 };

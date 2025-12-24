@@ -63,6 +63,10 @@ const t = getTranslationFn(locale);
 const { person, posts, conferences } = Astro.props;
 const { Content } = await render(person);
 const url = new URL(Astro.url.pathname, Astro.site);
+
+if (!person.data._computed.slug) {
+  return new Response(null, { status: 404 });
+}
 ---
 
 <MainLayout>
@@ -141,7 +145,6 @@ const url = new URL(Astro.url.pathname, Astro.site);
       }
 
       {person.data.status}
-      {String(person.data.hidden)}
     </div>
     <Prose>
       <Content />
@@ -150,6 +153,7 @@ const url = new URL(Astro.url.pathname, Astro.site);
     <h2>Articles liés</h2>
     {
       posts?.map((post) => {
+        if (!post.data._computed.slug) return null;
         return (
           <a
             href={lunalink(ROUTES.fr.blog.posts[':id'].__path, {

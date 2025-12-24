@@ -134,29 +134,27 @@ const wordCount = articleBody.split(' ').length;
       <div class="flex flex-col gap-0 text-sm lg:flex-row lg:gap-1">
         <div class="opacity-60">
           Le
-          <FormattedDate
-            date={post.data.date}
-            locale={locale}
-            className="font-medium"
-          />
+          <FormattedDate date={post.data.date} locale={locale} />
         </div>
         {
           !!post.data._computed.authors.length && (
             <div>
               <span class="opacity-60">par</span>
-              {post.data._computed.authors?.map(
-                (author) =>
-                  author && (
-                    <a
-                      href={getLink('/fr/equipe/:id', locale, {
-                        id: author.data._computed.slug,
-                      })}
-                      class="font-medium opacity-80 hover:opacity-100"
-                    >
-                      {author.data.name}
-                    </a>
-                  )
-              )}
+              {post.data._computed.authors?.map((author) => {
+                if (!author) return null;
+                return author.data._computed.slug ? (
+                  <a
+                    href={getLink('/fr/equipe/:id', locale, {
+                      id: author.data._computed.slug,
+                    })}
+                    class="font-medium opacity-80 hover:opacity-100"
+                  >
+                    {author.data.name}
+                  </a>
+                ) : (
+                  <span class="opacity-60">{author.data.name}</span>
+                );
+              })}
             </div>
           )
         }
@@ -170,29 +168,27 @@ const wordCount = articleBody.split(' ').length;
     <div class="flex flex-col gap-0 pt-12 text-sm lg:flex-row lg:gap-1">
       <div>
         Publié le
-        <FormattedDate
-          date={post.data.date}
-          locale={locale}
-          className="font-medium"
-        />
+        <FormattedDate date={post.data.date} locale={locale} />
       </div>
       {
         !!post.data._computed.authors.length && (
           <div>
             <span>par</span>
-            {post.data._computed.authors?.map(
-              (author) =>
-                author && (
-                  <a
-                    href={getLink('/fr/equipe/:id', locale, {
-                      id: author.data._computed.slug,
-                    })}
-                    class="font-medium hover:underline"
-                  >
-                    {author.data.name}
-                  </a>
-                )
-            )}
+            {post.data._computed.authors?.map((author) => {
+              if (!author) return null;
+              return author.data._computed.slug ? (
+                <a
+                  href={getLink('/fr/equipe/:id', locale, {
+                    id: author.data._computed.slug,
+                  })}
+                  class="font-medium hover:underline"
+                >
+                  {author.data.name}
+                </a>
+              ) : (
+                <span>{author.data.name}</span>
+              );
+            })}
           </div>
         )
       }

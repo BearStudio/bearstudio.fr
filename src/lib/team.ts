@@ -31,7 +31,7 @@ export async function getTeamCollection({
   limit?: number | undefined;
 }) {
   const team = (await getCollection('team'))
-    .filter((item) => !item.data.hidden)
+    .filter((item) => !!item.data.status)
     .filter((item) =>
       status === undefined ? true : item.data.status === status
     )
@@ -48,5 +48,11 @@ export async function getTeamCollection({
 export type TeamMemberWithComputed = ReturnType<typeof teamMemberWithComputed>;
 export const teamMemberWithComputed = (item: CollectionEntry<'team'>) => {
   const [slug] = item.id.split('/');
-  return { ...item, data: { ...item.data, _computed: { slug: slug ?? '' } } };
+  return {
+    ...item,
+    data: {
+      ...item.data,
+      _computed: { slug: item.data.status ? (slug ?? null) : null },
+    },
+  };
 };
