@@ -107,7 +107,7 @@ if (!person.data._computed.slug) {
     }}
   />
   <Hero>
-    <HeroContent>
+    <HeroContent class="sm:pr-80">
       <BreadcrumbBase slot="breadcrumb" locale={locale}>
         <BreadcrumbItem>
           <BreadcrumbLink href={getLink('/fr/equipe', locale, {})}
@@ -121,14 +121,22 @@ if (!person.data._computed.slug) {
           </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbBase>
-      <div class="flex">
-        <div class="flex-1">
-          <h1
-            class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
-          >
-            {person.data.name}
-          </h1>
-          {!!person.data.job && <span>{person.data.job}</span>}
+      <div class="relative flex flex-col sm:-mb-12">
+        <div class="flex flex-1 flex-col gap-6">
+          <div class="flex flex-col gap-0">
+            <h1
+              class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
+            >
+              {person.data.name}
+            </h1>
+            {
+              !!person.data.job && (
+                <span class="text-xl font-light opacity-80">
+                  {person.data.job}
+                </span>
+              )
+            }
+          </div>
           {
             !!person.data.socials?.length && (
               <div class="-m-1.5 flex flex-wrap">
@@ -145,7 +153,7 @@ if (!person.data._computed.slug) {
                       class="hover:text-accent flex items-center justify-center p-1.5"
                       title={socialConfig?.label ?? social.type}
                     >
-                      {!!Icon && <Icon className="size-6" />}
+                      {!!Icon && <Icon className="size-7" />}
                       <span class="sr-only">
                         {socialConfig?.label ?? social.type}
                       </span>
@@ -158,9 +166,9 @@ if (!person.data._computed.slug) {
         </div>
         {
           !!person.data.picture && (
-            <div class="-mt-20 -mb-32 w-80 flex-none">
+            <div class="-mt-8 -mb-24 flex-none overflow-hidden sm:absolute sm:-right-80 sm:bottom-0 sm:mt-0 sm:-mb-16 sm:w-80 lg:-right-64 lg:-mb-24">
               <Image
-                class=""
+                class="mx-auto w-64 drop-shadow-2xl sm:w-full"
                 src={person.data.picture}
                 alt={person.data.name}
               />
@@ -170,7 +178,7 @@ if (!person.data._computed.slug) {
       </div>
     </HeroContent>
   </Hero>
-  <div class="mx-auto w-full max-w-5xl px-6">
+  <div class="mx-auto flex w-full max-w-5xl flex-col gap-12 px-6 py-8">
     <Prose>
       <Content />
     </Prose>

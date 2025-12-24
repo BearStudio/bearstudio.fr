@@ -21,7 +21,9 @@ const { image, contentClassName } = Astro.props;
 const locale = parseAstroLocale(Astro.currentLocale);
 ---
 
-<div class="bg-hero text-hero-foreground relative z-0 flex flex-col">
+<div
+  class="bg-hero text-hero-foreground relative z-0 flex flex-col overflow-hidden"
+>
   <!-- Mobile Top Actions -->
   <div
     class="relative z-10 mx-auto flex w-full max-w-5xl justify-between p-4 lg:hidden"
