@@ -3,6 +3,7 @@ import { getImage } from 'astro:assets';
 import { getCollection } from 'astro:content';
 
 import { getLink } from '@/lib/link';
+import { getPolaroidHref } from '@/lib/polaroids';
 import { cn } from '@/lib/tailwind/utils';
 import SEO from '@/components/seo/index.astro';
 import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
@@ -103,7 +104,7 @@ const polaroids = await Promise.all(
         {
           polaroids.map(async (polaroid, index) => (
             <a
-              href={polaroid.data.href[locale]}
+              href={getPolaroidHref(polaroid, locale)}
               class={cn(
                 'flex w-full',
                 index === 0 && 'translate-x-2 rotate-6',

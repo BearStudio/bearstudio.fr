@@ -7,8 +7,7 @@
     },
     "src": "./ivan-talk-ces-25.jpeg",
     "href": {
-      "fr": "https://www.codeursenseine.com/2025/programme",
-      "en": "https://www.codeursenseine.com/2025/programme"
+      "fr": "https://www.codeursenseine.com/2025/programme"
     }
   },
   {
@@ -28,8 +27,7 @@
     },
     "src": "./london-25.jpeg",
     "href": {
-      "fr": "https://www.forkit.community/news/article/2025-12-05-react-advanced-london",
-      "en": "https://www.forkit.community/news/article/2025-12-05-react-advanced-london"
+      "fr": "https://www.forkit.community/news/article/2025-12-05-react-advanced-london"
     }
   },
   {
@@ -39,9 +37,6 @@
       "en": "Fork it! For Kids Rouen edition"
     },
     "src": "./forkids-rouen-2.jpeg",
-    "href": {
-      "fr": "https://www.forkit.community/news/article/2025-12-05-react-advanced-london",
-      "en": "https://www.forkit.community/news/article/2025-12-05-react-advanced-london"
-    }
+    "href": "https://www.forkit.community/news/article/2025-12-05-react-advanced-london"
   }
 ]

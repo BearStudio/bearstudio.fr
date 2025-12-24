@@ -6,5 +6,8 @@ export const zPolaroid = ({ image }: SchemaContext) =>
     id: z.string(),
     title: z.object({ fr: z.string(), en: z.string() }),
     src: image(),
-    href: z.object({ fr: z.string(), en: z.string() }),
+    href: z.union([
+      z.string(),
+      z.object({ fr: z.string(), en: z.string().optional() }),
+    ]),
   });

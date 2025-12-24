@@ -2,6 +2,7 @@ import type { CollectionEntry } from 'astro:content';
 
 import type { GetImageResult } from 'astro';
 
+import { getPolaroidHref } from '@/lib/polaroids';
 import { cn } from '@/lib/tailwind/utils';
 import {
   Carousel,
@@ -22,28 +23,30 @@ export const HomePolaroids = (props: {
   return (
     <Carousel className="-my-16 w-full" opts={{ dragFree: true }}>
       <CarouselContent className="-ml-8 pl-8">
-        {props.polaroids.map((polaroid, index) => (
-          <CarouselItem
-            key={polaroid.id}
-            className="basis-[60%] sm:basis-[30%] md:basis-[25%] py-16 fisrt:ml-8 last:mr-8"
-          >
-            <a
-              className={cn(
-                'flex',
-                index === 0 && '-rotate-2',
-                index === 1 && 'rotate-1',
-                index === 2 && '-rotate-3',
-                index === 3 && 'rotate-2'
-              )}
-              href={polaroid.data.href[props.locale]}
-              onDragStart={(e) => e.preventDefault()}
+        {props.polaroids.map((polaroid, index) => {
+          return (
+            <CarouselItem
+              key={polaroid.id}
+              className="basis-[60%] sm:basis-[30%] md:basis-[25%] py-16 fisrt:ml-8 last:mr-8"
             >
-              <Polaroid image={polaroid.data.image}>
-                {polaroid.data.title[props.locale]}
-              </Polaroid>
-            </a>
-          </CarouselItem>
-        ))}
+              <a
+                className={cn(
+                  'flex',
+                  index === 0 && '-rotate-2',
+                  index === 1 && 'rotate-1',
+                  index === 2 && '-rotate-3',
+                  index === 3 && 'rotate-2'
+                )}
+                href={getPolaroidHref(polaroid, props.locale)}
+                onDragStart={(e) => e.preventDefault()}
+              >
+                <Polaroid image={polaroid.data.image}>
+                  {polaroid.data.title[props.locale]}
+                </Polaroid>
+              </a>
+            </CarouselItem>
+          );
+        })}
       </CarouselContent>
     </Carousel>
   );
