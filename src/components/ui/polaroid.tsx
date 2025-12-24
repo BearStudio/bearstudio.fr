@@ -1,10 +1,13 @@
 import type { ReactNode } from 'react';
 
+import type { GetImageResult } from 'astro';
+import { omit } from 'remeda';
+
 import { cn } from '@/lib/tailwind/utils';
 
 export const Polaroid = (props: {
   className?: string;
-  src?: string;
+  image?: GetImageResult;
   children?: ReactNode;
 }) => {
   return (
@@ -18,7 +21,11 @@ export const Polaroid = (props: {
         <img
           className="block aspect-square object-cover h-full w-full"
           alt=""
-          src={props.src}
+          src={props.image?.src}
+          srcSet={props.image?.srcSet.attribute}
+          // Making sure fetchpriority attribute is correctly formatted for JSX
+          {...omit(props.image?.attributes ?? {}, ['fetchpriority'])}
+          fetchPriority={props.image?.attributes.fetchpriority}
         />
         <div className="absolute inset-0 shadow-[inset_0_0_10px_rgba(0,0,0,.3)]"></div>
       </div>

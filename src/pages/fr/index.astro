@@ -1,7 +1,9 @@
 ---
-import { lunalink } from '@bearstudio/lunalink';
+import { getImage } from 'astro:assets';
+import { getCollection } from 'astro:content';
 
 import { getLink } from '@/lib/link';
+import { getPolaroidHref } from '@/lib/polaroids';
 import { cn } from '@/lib/tailwind/utils';
 import SEO from '@/components/seo/index.astro';
 import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
@@ -17,6 +19,21 @@ import { ROUTES } from '@/routes.gen';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
+
+const polaroids = await Promise.all(
+  (await getCollection('polaroids')).map(async (polaroid) => ({
+    ...polaroid,
+    data: {
+      ...polaroid.data,
+      image: await getImage({
+        src: polaroid.data.src,
+        width: 400,
+        height: 200,
+        format: 'webp',
+      }),
+    },
+  }))
+);
 ---
 
 <MainLayout>
@@ -84,72 +101,37 @@ const t = getTranslationFn(locale);
       <div
         class="relative -mr-12 grid flex-[0.8] grid-cols-2 flex-wrap items-center justify-center gap-x-8 gap-y-7 max-lg:hidden"
       >
-        <a
-          href={lunalink(ROUTES.en.blog.__path, {})}
-          class="flex w-full translate-x-2 rotate-6"
-        >
-          <TiltedCard
-            className="w-full"
-            client:load
-            scaleOnHover={1.2}
-            rotateAmplitude={20}
-          >
-            <Polaroid src="/images/ivan-talk-ces-25.jpeg">
-              Nos conférences de Codeurs en Seine 2026
-            </Polaroid>
-          </TiltedCard>
-        </a>
-        <a
-          href={lunalink(ROUTES.en.blog.__path, {})}
-          class="flex w-full -translate-y-2 -rotate-5"
-        >
-          <TiltedCard
-            className="w-full"
-            client:load
-            scaleOnHover={1.2}
-            rotateAmplitude={20}
-          >
-            <Polaroid src="/images/bearstudio-house.jpeg">
-              La tanière
-            </Polaroid>
-          </TiltedCard>
-        </a>
-        <a
-          href={lunalink(ROUTES.en.blog.__path, {})}
-          class="flex w-full translate-y-2 -rotate-4"
-        >
-          <TiltedCard
-            className="w-full"
-            client:load
-            scaleOnHover={1.2}
-            rotateAmplitude={20}
-          >
-            <Polaroid src="/images/london-25.jpeg">
-              React Advanced Conference London 2026
-            </Polaroid>
-          </TiltedCard>
-        </a>
-        <a
-          href={lunalink(ROUTES.en.blog.__path, {})}
-          class="flex w-full -translate-x-1 -translate-y-2 rotate-3"
-        >
-          <TiltedCard
-            className="w-full"
-            client:load
-            scaleOnHover={1.2}
-            rotateAmplitude={20}
-          >
-            <Polaroid src="/images/forkids-rouen-2.jpeg">
-              Fork it! For Kids à Rouen
-            </Polaroid>
-          </TiltedCard>
-        </a>
+        {
+          polaroids.map(async (polaroid, index) => (
+            <a
+              href={getPolaroidHref(polaroid, locale)}
+              class={cn(
+                'flex w-full',
+                index === 0 && 'translate-x-2 rotate-6',
+                index === 1 && '-translate-y-2 -rotate-5',
+                index === 2 && 'translate-y-2 -rotate-4',
+                index === 3 && '-translate-x-1 -translate-y-2 rotate-3'
+              )}
+            >
+              <TiltedCard
+                className="w-full"
+                client:load
+                scaleOnHover={1.2}
+                rotateAmplitude={20}
+              >
+                <Polaroid image={polaroid.data.image}>
+                  {polaroid.data.title[locale]}
+                </Polaroid>
+              </TiltedCard>
+            </a>
+          ))
+        }
       </div>
     </div>
   </Hero>
 
   <div class="-mt-32 w-full lg:hidden">
-    <HomePolaroids client:load locale={locale} />
+    <HomePolaroids client:load locale={locale} polaroids={polaroids} />
   </div>
 
   <div class="mx-auto max-w-5xl p-4">
