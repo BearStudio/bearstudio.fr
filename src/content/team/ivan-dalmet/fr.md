@@ -1,7 +1,7 @@
 ---
 name: 'Ivan Dalmet'
 picture: './ivan.png'
-job: 'Lead Designer UI/UX'
+job: 'Co-founder & Lead Designer UI/UX'
 socials:
   - type: 'x'
     href: 'https://twitter.com/ivandalmet?lang=fr'

@@ -9,5 +9,4 @@ socials:
     href: 'https://www.linkedin.com/in/zouhair-mkassmi-759746131/'
 status: 'current'
 hidden: false
-order: 50
 ---
