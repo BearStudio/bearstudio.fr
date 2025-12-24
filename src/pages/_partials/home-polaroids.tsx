@@ -1,5 +1,7 @@
 import type { CollectionEntry } from 'astro:content';
 
+import type { GetImageResult } from 'astro';
+
 import { cn } from '@/lib/tailwind/utils';
 import {
   Carousel,
@@ -11,7 +13,11 @@ import type { Locale } from '@/i18n/utils';
 
 export const HomePolaroids = (props: {
   locale: Locale;
-  polaroids: Array<CollectionEntry<'polaroids'>>;
+  polaroids: Array<
+    Omit<CollectionEntry<'polaroids'>, 'data'> & {
+      data: CollectionEntry<'polaroids'>['data'] & { image: GetImageResult };
+    }
+  >;
 }) => {
   return (
     <Carousel className="-my-16 w-full" opts={{ dragFree: true }}>
@@ -29,10 +35,10 @@ export const HomePolaroids = (props: {
                 index === 2 && '-rotate-3',
                 index === 3 && 'rotate-2'
               )}
-              href={polaroid.data.href}
+              href={polaroid.data.href[props.locale]}
               onDragStart={(e) => e.preventDefault()}
             >
-              <Polaroid src={polaroid.data.src}>
+              <Polaroid image={polaroid.data.image}>
                 {polaroid.data.title[props.locale]}
               </Polaroid>
             </a>

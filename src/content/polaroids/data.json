@@ -1,0 +1,47 @@
+[
+  {
+    "id": "conference-codeurs-en-seine",
+    "title": {
+      "fr": "Nos conférences de Codeurs en Seine 2026",
+      "en": "Our Codeurs en Seine 2026 talks"
+    },
+    "src": "./ivan-talk-ces-25.jpeg",
+    "href": {
+      "fr": "https://www.codeursenseine.com/2025/programme",
+      "en": "https://www.codeursenseine.com/2025/programme"
+    }
+  },
+  {
+    "id": "taverne-des-3-ours",
+    "title": { "fr": "La tanière", "en": "The Den" },
+    "src": "./bearstudio-house.jpeg",
+    "href": {
+      "fr": "/fr/equipe",
+      "en": "/en/team"
+    }
+  },
+  {
+    "id": "conference-react-london",
+    "title": {
+      "fr": "React Advanced Conference London 2026",
+      "en": "React Advanced Conference London 2026"
+    },
+    "src": "./london-25.jpeg",
+    "href": {
+      "fr": "https://www.forkit.community/news/article/2025-12-05-react-advanced-london",
+      "en": "https://www.forkit.community/news/article/2025-12-05-react-advanced-london"
+    }
+  },
+  {
+    "id": "fork-it-for-kids",
+    "title": {
+      "fr": "Fork it! For Kids à Rouen",
+      "en": "Fork it! For Kids Rouen edition"
+    },
+    "src": "./forkids-rouen-2.jpeg",
+    "href": {
+      "fr": "https://www.forkit.community/news/article/2025-12-05-react-advanced-london",
+      "en": "https://www.forkit.community/news/article/2025-12-05-react-advanced-london"
+    }
+  }
+]

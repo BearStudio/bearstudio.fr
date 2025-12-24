@@ -1,4 +1,5 @@
 ---
+import { getImage } from 'astro:assets';
 import { getCollection } from 'astro:content';
 
 import { getLink } from '@/lib/link';
@@ -18,7 +19,20 @@ import { ROUTES } from '@/routes.gen';
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
 
-const polaroids = await getCollection('polaroids');
+const polaroids = await Promise.all(
+  (await getCollection('polaroids')).map(async (polaroid) => ({
+    ...polaroid,
+    data: {
+      ...polaroid.data,
+      image: await getImage({
+        src: polaroid.data.src,
+        width: 400,
+        height: 200,
+        format: 'webp',
+      }),
+    },
+  }))
+);
 ---
 
 <MainLayout>
@@ -87,9 +101,9 @@ const polaroids = await getCollection('polaroids');
         class="relative -mr-12 grid flex-[0.8] grid-cols-2 flex-wrap items-center justify-center gap-x-8 gap-y-7 max-lg:hidden"
       >
         {
-          polaroids.map((polaroid, index) => (
+          polaroids.map(async (polaroid, index) => (
             <a
-              href={polaroid.data.href}
+              href={polaroid.data.href[locale]}
               class={cn(
                 'flex w-full',
                 index === 0 && 'translate-x-2 rotate-6',
@@ -104,7 +118,7 @@ const polaroids = await getCollection('polaroids');
                 scaleOnHover={1.2}
                 rotateAmplitude={20}
               >
-                <Polaroid src={polaroid.data.src}>
+                <Polaroid image={polaroid.data.image}>
                   {polaroid.data.title[locale]}
                 </Polaroid>
               </TiltedCard>

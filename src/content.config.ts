@@ -36,7 +36,7 @@ export const collections = {
     schema: zEvent,
   }),
   polaroids: defineCollection({
-    loader: file('src/content/polaroids.json'),
+    loader: file('src/content/polaroids/data.json'),
     schema: zPolaroid,
   }),
 };

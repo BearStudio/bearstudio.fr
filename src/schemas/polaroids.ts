@@ -1,9 +1,10 @@
+import type { SchemaContext } from 'astro:content';
 import { z } from 'astro/zod';
 
-export const zPolaroid = () =>
+export const zPolaroid = ({ image }: SchemaContext) =>
   z.object({
     id: z.string(),
     title: z.object({ fr: z.string(), en: z.string() }),
-    src: z.string(),
-    href: z.string(),
+    src: image(),
+    href: z.object({ fr: z.string(), en: z.string() }),
   });
