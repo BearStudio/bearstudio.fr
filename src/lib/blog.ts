@@ -1,6 +1,6 @@
 import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 
-import { existsInLocale, type ComputedCollectionEntry } from '@/lib/content';
+import { type ComputedCollectionEntry } from '@/lib/content';
 import { teamMemberWithComputed } from '@/lib/team';
 import type { Locale } from '@/i18n/utils';
 
