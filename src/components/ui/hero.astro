@@ -45,7 +45,7 @@ const locale = parseAstroLocale(Astro.currentLocale);
     <div
       class="mx-auto flex w-full max-w-5xl flex-1 flex-col justify-center gap-12 px-6"
     >
-      <a href={getLink('/fr', locale, {})} class="lg:hidden">
+      <a href={getLink('/fr', locale, {})} class="relative z-10 lg:hidden">
         <Logo className="mx-auto w-38 sm:w-52" />
       </a>
 
