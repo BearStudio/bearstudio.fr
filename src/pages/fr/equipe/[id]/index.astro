@@ -3,8 +3,6 @@ import { Schema } from 'astro-seo-schema';
 import { Image } from 'astro:assets';
 import { render } from 'astro:content';
 
-import { lunalink } from '@bearstudio/lunalink';
-
 import { getBlogCollectionLinkedToTeamMember } from '@/lib/blog';
 import { getConferenceCollectionLinkedToTeamMember } from '@/lib/conferences';
 import type { ComputedCollectionEntry } from '@/lib/content';
@@ -26,7 +24,6 @@ import Hero from '@/components/ui/hero.astro';
 import { SOCIALS } from '@/content/socials';
 import { getTranslationFn, parseAstroLocale, type Locale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
-import { ROUTES } from '@/routes.gen';
 
 export async function generateStaticPaths(params: { locale: Locale }) {
   const team = await getTeamCollection({ locale: params.locale });
@@ -75,7 +72,7 @@ if (!person.data._computed.slug) {
     slot="seo"
     title={person.data.name}
     url={url}
-    alternates={getAlternates(ROUTES.fr.equipe[':id'].__path, {
+    alternates={getAlternates('/fr/equipe/:id', {
       id: person.data._computed.slug,
     })}
   />
@@ -189,7 +186,7 @@ if (!person.data._computed.slug) {
         if (!post.data._computed.slug) return null;
         return (
           <a
-            href={lunalink(ROUTES.fr.blog.posts[':id'].__path, {
+            href={getLink('/fr/blog/posts/:id', locale, {
               id: post.data._computed.slug,
             })}
           >

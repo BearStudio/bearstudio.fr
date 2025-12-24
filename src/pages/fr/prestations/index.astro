@@ -12,17 +12,13 @@ import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
-import { ROUTES } from '@/routes.gen';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
 ---
 
 <MainLayout>
-  <SEO
-    slot="seo"
-    alternates={getAlternates(ROUTES.fr.prestations.__path, {})}
-  />
+  <SEO slot="seo" alternates={getAlternates('/fr/prestations', {})} />
   <SchemaBreadcrumb
     slot="breadcrumb"
     items={[

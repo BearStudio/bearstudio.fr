@@ -15,7 +15,6 @@ import { TiltedCard } from '@/components/ui/tilted-card';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 import { HomePolaroids } from '@/pages/_partials/home-polaroids';
-import { ROUTES } from '@/routes.gen';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
@@ -37,7 +36,7 @@ const polaroids = await Promise.all(
 ---
 
 <MainLayout>
-  <SEO slot="seo" alternates={getAlternates(ROUTES.fr.__path, {})} />
+  <SEO slot="seo" alternates={getAlternates('/fr', {})} />
   <SchemaBreadcrumb slot="breadcrumb" items={[]} />
 
   <Hero contentClassName="lg:py-24">

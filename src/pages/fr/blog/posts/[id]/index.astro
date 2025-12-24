@@ -25,7 +25,6 @@ import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
 import { getTranslationFn, parseAstroLocale, type Locale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
-import { ROUTES } from '@/routes.gen';
 
 export async function generateStaticPaths(params: { locale: Locale }) {
   const posts = await getBlogCollection({ locale: params.locale });
@@ -71,7 +70,7 @@ const wordCount = articleBody.split(' ').length;
     title={post.data.title}
     description={post.data.metaDescription ?? ''}
     url={url}
-    alternates={getAlternates(ROUTES.fr.blog.posts[':id'].__path, {
+    alternates={getAlternates('/fr/blog/posts/:id', {
       id: post.data._computed.slug,
     })}
   />
