@@ -88,7 +88,7 @@ const wordCount = articleBody.split(' ').length;
       isAccessibleForFree: true,
       author: post.data._computed.authors.map((author) => ({
         '@type': 'Person',
-        name: author?.data.name ?? '',
+        name: author.data.name,
       })),
       keywords: post.data.tags ?? [],
     }}
@@ -140,8 +140,7 @@ const wordCount = articleBody.split(' ').length;
           !!post.data._computed.authors.length && (
             <div>
               <span class="opacity-60">par</span>
-              {post.data._computed.authors?.map((author) => {
-                if (!author) return null;
+              {post.data._computed.authors.map((author) => {
                 return author.data._computed.slug ? (
                   <a
                     href={getLink('/fr/equipe/:id', locale, {
@@ -174,8 +173,7 @@ const wordCount = articleBody.split(' ').length;
         !!post.data._computed.authors.length && (
           <div>
             <span>par</span>
-            {post.data._computed.authors?.map((author) => {
-              if (!author) return null;
+            {post.data._computed.authors.map((author) => {
               return author.data._computed.slug ? (
                 <a
                   href={getLink('/fr/equipe/:id', locale, {

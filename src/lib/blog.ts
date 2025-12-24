@@ -1,5 +1,7 @@
 import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 
+import { filter, isNonNullish } from 'remeda';
+
 import { type ComputedCollectionEntry } from '@/lib/content';
 import { teamMemberWithComputed } from '@/lib/team';
 import type { Locale } from '@/i18n/utils';
@@ -69,7 +71,7 @@ const blogPostWithComputed = async (item: CollectionEntry<'blog'>) => {
       ...item.data,
       _computed: {
         slug,
-        authors,
+        authors: filter(authors, isNonNullish),
       },
     },
   };
