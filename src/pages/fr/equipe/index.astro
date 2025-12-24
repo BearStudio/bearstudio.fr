@@ -64,7 +64,7 @@ const teamAdvisor = await getTeamCollection({
   <div
     class="relative mx-auto -mt-16 flex w-full max-w-5xl flex-col gap-12 p-6 md:-mt-24"
   >
-    <div class="xs:grid-cols-2 grid gap-4 md:grid-cols-3 lg:grid-cols-4">
+    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
       {teamCurrent.map((member) => <TeamMemberCard member={member} />)}
     </div>
     <div class="flex flex-col gap-4">

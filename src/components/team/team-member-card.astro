@@ -35,7 +35,7 @@ const { member } = Astro.props;
     }
   </div>
   <div class="flex flex-1 flex-col gap-1 px-1">
-    <h2 class="font-heading text-lg leading-tight font-bold">
+    <h2 class="font-heading leading-tight font-bold sm:text-lg">
       {member.data.name}
     </h2>
     {!!member.data.job && <p class="text-xs">{member.data.job}</p>}
