@@ -9,6 +9,8 @@ export const zSocialTypes = z.enum([
   'bluesky',
   'mastodon',
   'facebook',
+  'youtube',
+  'twitch',
   'website',
 ]);
 

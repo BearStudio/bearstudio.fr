@@ -4,11 +4,11 @@ import { Image } from 'astro:assets';
 import { getLink } from '@/lib/link';
 import { Logo } from '@/components/ui/logo';
 import { ScratchFull } from '@/components/ui/scratch';
+import { SOCIALS } from '@/content/socials';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 
 import { getFooterNavItems } from './footer-nav';
 import LogoRegion from './logo-region.svg';
-import { SOCIALS } from './socials';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);

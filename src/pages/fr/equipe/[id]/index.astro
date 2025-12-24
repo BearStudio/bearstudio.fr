@@ -23,6 +23,7 @@ import {
 } from '@/components/ui/breadcrumb';
 import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
+import { SOCIALS } from '@/content/socials';
 import { getTranslationFn, parseAstroLocale, type Locale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 import { ROUTES } from '@/routes.gen';
@@ -120,32 +121,56 @@ if (!person.data._computed.slug) {
           </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbBase>
-      <h1
-        class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
-      >
-        {person.data.name}
-      </h1>
+      <div class="flex">
+        <div class="flex-1">
+          <h1
+            class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
+          >
+            {person.data.name}
+          </h1>
+          {!!person.data.job && <span>{person.data.job}</span>}
+          {
+            !!person.data.socials?.length && (
+              <div class="-m-1.5 flex flex-wrap">
+                {person.data.socials.map((social) => {
+                  const socialConfig = SOCIALS.find(
+                    (i) => i.type === social.type
+                  );
+                  const Icon = socialConfig?.icon;
+                  return (
+                    <a
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:text-accent flex items-center justify-center p-1.5"
+                      title={socialConfig?.label ?? social.type}
+                    >
+                      {!!Icon && <Icon className="size-6" />}
+                      <span class="sr-only">
+                        {socialConfig?.label ?? social.type}
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
+            )
+          }
+        </div>
+        {
+          !!person.data.picture && (
+            <div class="-mt-20 -mb-32 w-80 flex-none">
+              <Image
+                class=""
+                src={person.data.picture}
+                alt={person.data.name}
+              />
+            </div>
+          )
+        }
+      </div>
     </HeroContent>
   </Hero>
   <div class="mx-auto w-full max-w-5xl px-6">
-    <div class="flex flex-col items-center gap-2">
-      <span>
-        {person.data.job}
-      </span>
-      {
-        person.data.picture && (
-          <Image src={person.data.picture} alt={person.data.name} />
-        )
-      }
-
-      {
-        person.data.socials?.map((social) => (
-          <a href={social.href}>{social.type}</a>
-        ))
-      }
-
-      {person.data.status}
-    </div>
     <Prose>
       <Content />
     </Prose>
