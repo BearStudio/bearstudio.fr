@@ -5,12 +5,23 @@
     "team": "Team",
     "blog": "Blog",
     "legals": "Legal Notice",
-    "career": "Career",
+    "career": "Apply",
     "more": "More",
     "contact": "Contact us",
     "languageSwitch": {
       "fr": "Français",
       "en": "English"
     }
+  },
+  "footer": {
+    "address": {
+      "street": "1900 Route de Cailly",
+      "city": "76690 Saint-André-sur-Cailly",
+      "region": "Normandie, FRANCE"
+    },
+    "followUs": "Follow us on...",
+    "supportedBy": "BearStudio is supported by",
+    "description": "Founded in 2016, BearStudio is a R&D project support studio: custom web and mobile development, feasibility studies and technological audits, nothing scares us!",
+    "copyright": "© All rights reserved"
   }
 }
