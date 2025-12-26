@@ -4,6 +4,10 @@
       "breadcrumb": "Blog",
       "title": "The bears' blog",
       "description": "Welcome to our blog! You'll find technical articles related to web development and design. But also articles more focused on entrepreneurship and business. In short, it's the best way to stay informed about BearStudio news. Enjoy your reading!"
+    },
+    "metadata": {
+      "title": "BearStudio blog, web development studio in Rouen",
+      "description": "Find BearStudio articles about web and mobile development, technologies, and much more."
     }
   }
 }

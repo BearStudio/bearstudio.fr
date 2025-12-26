@@ -69,8 +69,8 @@ const { page, category } = Astro.props;
 <MainLayout>
   <SEO
     slot="seo"
-    title="Blog du BearStudio, studio de développement web à Rouen"
-    description="Retrouvez les articles de BearStudio sur le développement web et mobile, les technologies, et bien plus encore."
+    title={t('blog.root.metadata.title')}
+    description={t('blog.root.metadata.description')}
     alternates={getAlternates('/fr/blog/:filter/:page', {
       filter: category ?? '',
       page: page.currentPage.toString(),
