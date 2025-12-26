@@ -1,7 +1,7 @@
 import { reference, z, type SchemaContext } from 'astro:content';
 
-export type Blog = z.infer<ReturnType<typeof zBlog>>;
-export const zBlog = ({ image }: SchemaContext) =>
+export type Post = z.infer<ReturnType<typeof zPost>>;
+export const zPost = ({ image }: SchemaContext) =>
   z.object({
     title: z.string(),
     languages: z.array(z.string()),

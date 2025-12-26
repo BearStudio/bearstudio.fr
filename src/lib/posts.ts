@@ -11,11 +11,11 @@ type Params = {
   locale: Locale;
 };
 
-const isPublished = (post: CollectionEntry<'blog'>) =>
+const isPublished = (post: CollectionEntry<'posts'>) =>
   post.data.state === 'published' || !import.meta.env.PROD;
 
 type HasSpecificAuthorProps = {
-  post: CollectionEntry<'blog'>;
+  post: CollectionEntry<'posts'>;
   author: ComputedCollectionEntry<'people'>;
 };
 
@@ -29,13 +29,16 @@ const hasSpecificAuthor = ({ post, author }: HasSpecificAuthorProps) => {
 };
 
 const sortByLatest = (
-  post1: CollectionEntry<'blog'>,
-  post2: CollectionEntry<'blog'>
+  post1: CollectionEntry<'posts'>,
+  post2: CollectionEntry<'posts'>
 ) => (post2.data.date?.valueOf() ?? 0) - (post1.data.date?.valueOf() ?? 0);
 
-export async function getBlogCollection({ limit = undefined, locale }: Params) {
+export async function getPostsCollection({
+  limit = undefined,
+  locale,
+}: Params) {
   const posts = await Promise.all(
-    (await getCollection('blog'))
+    (await getCollection('posts'))
       .filter(isPublished)
       .filter((post) => {
         if (!locale) return post;
@@ -43,7 +46,7 @@ export async function getBlogCollection({ limit = undefined, locale }: Params) {
         return postLocale === locale;
       })
       .sort(sortByLatest)
-      .map(blogPostWithComputed)
+      .map(postWithComputed)
   );
 
   if (limit) {
@@ -53,10 +56,8 @@ export async function getBlogCollection({ limit = undefined, locale }: Params) {
   return posts;
 }
 
-export type BlogPostWithComputed = Awaited<
-  ReturnType<typeof blogPostWithComputed>
->;
-const blogPostWithComputed = async (item: CollectionEntry<'blog'>) => {
+export type PostWithComputed = Awaited<ReturnType<typeof postWithComputed>>;
+const postWithComputed = async (item: CollectionEntry<'posts'>) => {
   const [locale, ...slugArray] = item.id.split('/');
   const slug = slugArray.join('/');
   const authors = await Promise.all(
@@ -77,20 +78,24 @@ const blogPostWithComputed = async (item: CollectionEntry<'blog'>) => {
   };
 };
 
-type GetBlogCollectionLinkedToPersonProps = Params & {
+type GetPostsCollectionLinkedToPersonProps = Params & {
   author: ComputedCollectionEntry<'people'>;
 };
 
-export async function getBlogCollectionLinkedToPerson({
+export async function getPostsCollectionLinkedToPerson({
   author,
   locale,
   limit = undefined,
-}: GetBlogCollectionLinkedToPersonProps) {
-  return (await getBlogCollection({ limit, locale }))
+}: GetPostsCollectionLinkedToPersonProps) {
+  return (await getPostsCollection({ limit, locale }))
     .filter((post) => hasSpecificAuthor({ post, author }))
     .filter((x) => x);
 }
 
-// Legacy export for backward compatibility
+// Legacy exports for backward compatibility
+export const getBlogCollection = getPostsCollection;
+export const getBlogCollectionLinkedToPerson = getPostsCollectionLinkedToPerson;
 export const getBlogCollectionLinkedToTeamMember =
-  getBlogCollectionLinkedToPerson;
+  getPostsCollectionLinkedToPerson;
+export type BlogPostWithComputed = PostWithComputed;
+export const blogPostWithComputed = postWithComputed;

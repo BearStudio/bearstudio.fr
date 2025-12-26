@@ -3,11 +3,11 @@ import { Schema } from 'astro-seo-schema';
 import { Image } from 'astro:assets';
 import { render } from 'astro:content';
 
-import { getBlogCollectionLinkedToTeamMember } from '@/lib/blog';
 import { getConferencesCollectionByPerson } from '@/lib/conferences';
 import type { ComputedCollectionEntry } from '@/lib/content';
 import { getLink } from '@/lib/link';
 import { getPeopleCollection } from '@/lib/people';
+import { getPostsCollectionLinkedToPerson } from '@/lib/posts';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
@@ -42,13 +42,13 @@ export async function getStaticPaths() {
 
 type Props = {
   person: ComputedCollectionEntry<'people'>;
-  posts?: Array<ComputedCollectionEntry<'blog'>>;
+  posts?: Array<ComputedCollectionEntry<'posts'>>;
   conferences?: Array<ComputedCollectionEntry<'conferences'>>;
 };
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const { person } = Astro.props;
-const posts = await getBlogCollectionLinkedToTeamMember({
+const posts = await getPostsCollectionLinkedToPerson({
   author: person,
   locale: locale,
 });

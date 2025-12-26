@@ -4,8 +4,8 @@ import { Image } from 'astro:assets';
 import type { GetStaticPathsOptions } from 'astro';
 import { PiArrowLeftBold, PiArrowRight } from 'react-icons/pi';
 
-import { getBlogCollection } from '@/lib/blog';
 import { getLink } from '@/lib/link';
+import { getPostsCollection } from '@/lib/posts';
 import SEO from '@/components/seo/index.astro';
 import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
 import { getAlternates } from '@/components/seo/utils';
@@ -30,7 +30,7 @@ export async function generateStaticPaths(
   } & GetStaticPathsOptions
 ) {
   const PAGE_SIZE = 24;
-  const newsPages = await getBlogCollection({
+  const newsPages = await getPostsCollection({
     locale: params.locale,
   });
 
