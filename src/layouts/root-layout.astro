@@ -13,6 +13,7 @@ import '@/styles/global.css';
 import { Schema } from 'astro-seo-schema';
 
 import { getSiteUrl } from '@/lib/site/get-site-url';
+import { getId } from '@/components/seo/utils';
 import { SOCIALS } from '@/content/socials';
 import { parseAstroLocale } from '@/i18n/utils';
 
@@ -50,12 +51,12 @@ dayjs.locale(Astro.currentLocale);
       item={{
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        '@id': `${getSiteUrl()}/#website`,
+        '@id': getId('website'),
         url: `${getSiteUrl()}/`,
         name: 'BearStudio',
         description: '',
         publisher: {
-          '@id': `${getSiteUrl()}/#organization`,
+          '@id': getId('organization'),
         },
         inLanguage: locale,
       }}
@@ -64,7 +65,7 @@ dayjs.locale(Astro.currentLocale);
       item={{
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        '@id': `${getSiteUrl()}/#organization`,
+        '@id': getId('organization'),
         name: 'BearStudio',
         url: `${getSiteUrl()}/`,
         sameAs: SOCIALS.map((s) => s.href),
