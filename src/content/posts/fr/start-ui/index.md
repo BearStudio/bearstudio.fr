@@ -14,6 +14,8 @@ tags:
 heroImage: 'images/visuel-article-start-ui-tinified.png'
 languages:
   - 'fr'
+authors:
+  - yoann-fleury
 ---
 
 When using User Interface (UI) starters in the past, we found ourselves faced with deciding which technology would be best for us to use. From UI framework, HTTP Client, Routing Library, Style Library, Form Library, to downloading all the configurations and dependencies needed can be very time consuming. To put everything in one place and streamline how we choose these options, we decided to dive into creating our own User Interface Starter called **_Start UI_**_._

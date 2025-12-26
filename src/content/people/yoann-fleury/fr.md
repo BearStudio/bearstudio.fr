@@ -7,7 +7,8 @@ socials:
     href: 'https://twitter.com/YoannFleuryDev'
   - type: 'linkedin'
     href: 'https://www.linkedin.com/in/yoannfleurydev/'
+  - type: 'website'
+    href: 'https://www.yoannfleury.dev/'
 status: 'current'
-hidden: false
 order: 20
 ---
