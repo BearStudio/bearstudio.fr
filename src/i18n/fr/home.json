@@ -2,6 +2,10 @@
   "hero": {
     "title": "De l'idée à la mise en production"
   },
+  "metadata": {
+    "title": "Studio de développement normand pour porteurs de projet numérique",
+    "description": "BearStudio accompagne les porteurs de projet pour les aider techniquement sur le développement web ou mobile de leurs idées."
+  },
   "services": {
     "uxUiDesign": "UX/UI Design",
     "webDev": "Dev Web",

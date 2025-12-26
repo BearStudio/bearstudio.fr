@@ -68,6 +68,7 @@ const languageAlternates = pipe(
     },
     optional: {
       description,
+      siteName: 'BearStudio',
       locale:
         LOCALE_TERRITORY_MAP[
           parseAstroLocale(Astro.currentLocale) ?? defaultLocale
@@ -78,6 +79,8 @@ const languageAlternates = pipe(
     },
     image: {
       alt: imageAlt ?? ogImageAlt,
+      width: 2560,
+      height: 1280,
     },
   }}
   twitter={{
@@ -86,5 +89,6 @@ const languageAlternates = pipe(
     description: description ?? '',
     image: image,
     imageAlt: imageAlt ?? ogImageAlt,
+    site: '@_BearStudio',
   }}
 />

@@ -2,6 +2,10 @@
   "hero": {
     "title": "Project from idea to production"
   },
+  "metadata": {
+    "title": "French development studio for digital project founders",
+    "description": "BearStudio supports project founders by providing technical assistance with the web or mobile development of their ideas."
+  },
   "services": {
     "uxUiDesign": "UX/UI Design",
     "webDev": "Web Dev",

@@ -5,4 +5,11 @@ import home from './home.json';
 import services from './services.json';
 import team from './team.json';
 
-export default { common, blog, home, services, team, contact } as const;
+export default {
+  common,
+  blog,
+  home,
+  services,
+  team,
+  contact,
+} as const;

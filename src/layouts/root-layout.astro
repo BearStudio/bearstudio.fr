@@ -10,6 +10,13 @@ import { SITE_TITLE } from '@/consts';
 
 import '@/styles/global.css';
 
+import { Schema } from 'astro-seo-schema';
+
+import { getSiteUrl } from '@/lib/site/get-site-url';
+import { SOCIALS } from '@/content/socials';
+import { parseAstroLocale } from '@/i18n/utils';
+
+const locale = parseAstroLocale(Astro.currentLocale);
 dayjs.locale(Astro.currentLocale);
 ---
 
@@ -27,10 +34,42 @@ dayjs.locale(Astro.currentLocale);
       title={SITE_TITLE}
       href={new URL('rss.xml', Astro.site)}
     />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
     <meta name="generator" content={Astro.generator} />
+    <link rel="shortlink" href="https://www.bearstudio.fr/" />
+
     <slot name="seo" />
     <slot name="ld+json" />
     <slot name="breadcrumb" />
+
+    <Schema
+      item={{
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        '@id': `${getSiteUrl()}/#website`,
+        url: `${getSiteUrl()}/`,
+        name: 'BearStudio',
+        description: '',
+        publisher: {
+          '@id': `${getSiteUrl()}/#organization`,
+        },
+        inLanguage: locale,
+      }}
+    />
+    <Schema
+      item={{
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        '@id': `${getSiteUrl()}/#organization`,
+        name: 'BearStudio',
+        url: `${getSiteUrl()}/`,
+        sameAs: SOCIALS.map((s) => s.href),
+      }}
+    />
   </head>
 
   <body

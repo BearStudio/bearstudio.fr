@@ -1,4 +1,5 @@
 ---
+import { Schema } from 'astro-seo-schema';
 import { getImage } from 'astro:assets';
 import { getCollection } from 'astro:content';
 
@@ -36,7 +37,23 @@ const polaroids = await Promise.all(
 ---
 
 <MainLayout>
-  <SEO slot="seo" alternates={getAlternates('/fr', {})} />
+  <SEO
+    slot="seo"
+    alternates={getAlternates('/fr', {})}
+    title={t('home.metadata.title')}
+    description={t('home.metadata.description')}
+  />
+  <Schema
+    slot="ld+json"
+    item={{
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': Astro.url.toString(),
+      url: Astro.url.toString(),
+      name: t('home.metadata.title'),
+      description: t('home.metadata.description'),
+    }}
+  />
   <SchemaBreadcrumb slot="breadcrumb" items={[]} />
 
   <Hero contentClassName="lg:py-24">
