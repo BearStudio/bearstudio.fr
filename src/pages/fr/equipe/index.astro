@@ -47,12 +47,12 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     />
   </Hero>
 
-  <Container overlapHero>
+  <Container overlapHero class="gap-12">
     <PeopleGrid>
       {peopleCurrent.map((person) => <PersonCard person={person} />)}
     </PeopleGrid>
     <div class="flex flex-col gap-4">
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-1">
         <h2 class="font-heading text-2xl font-bold">
           Les conseillers du BearStudio
         </h2>

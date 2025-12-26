@@ -7,11 +7,6 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<div
-  class={cn(
-    'xs:grid-cols-2 relative grid gap-4 py-4 md:grid-cols-3',
-    className
-  )}
->
+<div class={cn('xs:grid-cols-2 relative grid gap-4 md:grid-cols-3', className)}>
   <slot />
 </div>
