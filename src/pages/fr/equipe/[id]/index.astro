@@ -16,18 +16,18 @@ import {
   getPostsCollectionLinkedToPerson,
   type PostWithComputed,
 } from '@/lib/posts';
-import PostCard from '@/components/posts/post-card.astro';
-import Prose from '@/components/prose.astro';
-import SEO from '@/components/seo/index.astro';
-import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
-import { getAlternates, getId } from '@/components/seo/utils';
 import {
   BreadcrumbBase,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
+} from '@/components/breadcrumb/ui';
+import PostCard from '@/components/posts/post-card.astro';
+import Prose from '@/components/prose.astro';
+import SEO from '@/components/seo/index.astro';
+import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
+import { getAlternates, getId } from '@/components/seo/utils';
 import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
 import { SOCIALS } from '@/content/socials';

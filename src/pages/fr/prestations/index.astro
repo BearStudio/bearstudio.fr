@@ -1,13 +1,13 @@
 ---
 import { getLink } from '@/lib/link';
-import SEO from '@/components/seo/index.astro';
-import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
-import { getAlternates } from '@/components/seo/utils';
 import {
   BreadcrumbBase,
   BreadcrumbItem,
   BreadcrumbPage,
-} from '@/components/ui/breadcrumb';
+} from '@/components/breadcrumb/ui';
+import SEO from '@/components/seo/index.astro';
+import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
+import { getAlternates } from '@/components/seo/utils';
 import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';

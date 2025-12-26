@@ -4,17 +4,17 @@ import { PiArrowLeftBold, PiArrowRight } from 'react-icons/pi';
 
 import { getLink } from '@/lib/link';
 import { getPostsCollection } from '@/lib/posts';
-import PostCard from '@/components/posts/post-card.astro';
-import SEO from '@/components/seo/index.astro';
-import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
-import { getAlternates } from '@/components/seo/utils';
 import {
   BreadcrumbBase,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
+} from '@/components/breadcrumb/ui';
+import PostCard from '@/components/posts/post-card.astro';
+import SEO from '@/components/seo/index.astro';
+import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
+import { getAlternates } from '@/components/seo/utils';
 import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
 import type { Locale } from '@/i18n/utils';
@@ -31,28 +31,10 @@ export async function generateStaticPaths(
     locale: params.locale,
   });
 
-  // Get all categories
-  const categories = [
-    ...new Set(newsPages.flatMap((entry) => entry.data.categories)),
-  ];
-
   return [
     ...params.paginate(newsPages, {
       pageSize: PAGE_SIZE,
-      props: { categories },
     }),
-    ...categories.flatMap((category) =>
-      params.paginate(
-        newsPages.filter((article) =>
-          article.data.categories?.includes(category ?? '')
-        ),
-        {
-          pageSize: PAGE_SIZE,
-          params: { filter: category },
-          props: { category },
-        }
-      )
-    ),
   ];
 }
 
@@ -63,7 +45,22 @@ export async function getStaticPaths(params: GetStaticPathsOptions) {
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
 
-const { page, category } = Astro.props;
+const { page } = Astro.props;
+
+// const breadcrumb = breadcrumbEntries(locale)((entry) => [
+//   entry({
+//     path: '/fr/blog',
+//     params: {},
+//     label: t('blog.root.hero.breadcrumb'),
+//   }),
+//   page.currentPage > 1
+//     ? entry({
+//         path: '/fr/blog',
+//         params: {},
+//         label: t('blog.root.hero.breadcrumb'),
+//       })
+//     : null,
+// ]);
 ---
 
 <MainLayout>
@@ -71,8 +68,7 @@ const { page, category } = Astro.props;
     slot="seo"
     title={t('blog.root.metadata.title')}
     description={t('blog.root.metadata.description')}
-    alternates={getAlternates('/fr/blog/:filter/:page', {
-      filter: category ?? '',
+    alternates={getAlternates('/fr/blog/:page', {
       page: page.currentPage.toString(),
     })}
   />
@@ -83,29 +79,12 @@ const { page, category } = Astro.props;
         id: getLink('/fr/blog', locale, {}, true),
         name: t('blog.root.hero.breadcrumb'),
       },
-      !!category && page.currentPage === 1
-        ? {
-            id: getLink('/fr/blog/:filter', locale, { filter: category }, true),
-            name: t('blog.root.hero.breadcrumb'),
-          }
-        : undefined,
       page.currentPage > 1
         ? {
             id: getLink(
-              '/fr/blog/:filter/:page',
+              '/fr/blog/:page',
               locale,
-              { filter: category ?? '', page: page.currentPage.toString() },
-              true
-            ),
-            name: `Page ${page.currentPage}`,
-          }
-        : undefined,
-      !!category && page.currentPage > 1
-        ? {
-            id: getLink(
-              '/fr/blog/:filter/:page',
-              locale,
-              { filter: category ?? '', page: page.currentPage.toString() },
+              { page: page.currentPage.toString() },
               true
             ),
             name: `Page ${page.currentPage}`,
@@ -118,7 +97,7 @@ const { page, category } = Astro.props;
       <BreadcrumbBase slot="breadcrumb" locale={locale}>
         <BreadcrumbItem>
           {
-            page.currentPage > 1 || category ? (
+            page.currentPage > 1 ? (
               <BreadcrumbLink href={getLink('/fr/blog', locale, {})}>
                 {t('blog.root.hero.breadcrumb')}
               </BreadcrumbLink>
@@ -127,26 +106,6 @@ const { page, category } = Astro.props;
             )
           }
         </BreadcrumbItem>
-        {
-          !!category && (
-            <>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                {page.currentPage > 1 ? (
-                  <BreadcrumbLink
-                    href={getLink('/fr/blog/:filter', locale, {
-                      filter: category,
-                    })}
-                  >
-                    {category}
-                  </BreadcrumbLink>
-                ) : (
-                  <BreadcrumbPage>{category}</BreadcrumbPage>
-                )}
-              </BreadcrumbItem>
-            </>
-          )
-        }
         {
           page.currentPage > 1 && (
             <>

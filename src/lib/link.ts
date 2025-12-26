@@ -17,6 +17,10 @@ export function link<Path extends string>(
 }
 
 export type LocalesWithoutDefault = Exclude<Locale, typeof defaultLocale>;
+export type LinkParams<
+  Path extends DefaultLocaleRoutePaths,
+  L extends Locale,
+> = ExtractParams<ReturnType<typeof i18nPath<Path, L>>>;
 
 function removeDoubleSlash(str: string) {
   // Removing double `//` from pathname. Not a fan, but have to go quick on that one.
@@ -28,7 +32,7 @@ function removeDoubleSlash(str: string) {
 export function getLink<Path extends DefaultLocaleRoutePaths, L extends Locale>(
   url: Path,
   locale: L,
-  params: ExtractParams<ReturnType<typeof i18nPath<Path, L>>>,
+  params: LinkParams<Path, L>,
   absolute?: boolean
 ) {
   const value = lunalink(i18nPath(url, locale), params, {
