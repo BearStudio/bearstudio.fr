@@ -30,7 +30,8 @@ const FOOTER_NAV: Array<NavItem> = [
     locales: ['fr'],
   },
   {
-    getHref: (locale) => getLink('/fr/blog', locale, {}),
+    getHref: (locale) =>
+      getLink('/fr/contact/processus-candidature-bearstudio', locale, {}),
     i18nKey: 'common.nav.career',
   },
   {

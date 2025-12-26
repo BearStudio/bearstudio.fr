@@ -1,0 +1,51 @@
+---
+import { match } from 'ts-pattern';
+
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import HeroContent from '@/components/hero/hero-content.astro';
+import Hero from '@/components/hero/hero.astro';
+import SEO from '@/components/seo/index.astro';
+import { getAlternates } from '@/components/seo/utils';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
+import MainLayout from '@/layouts/main-layout.astro';
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
+
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    label: 'Nous contacter', // TODO Translation,
+    path: '/fr/contact',
+    params: {},
+  }),
+  entry({
+    label: 'Processus de recrutement au BearStudio', // TODO Translation
+    path: '/fr/contact/processus-candidature-bearstudio',
+    params: {},
+  }),
+]);
+---
+
+<MainLayout>
+  <SEO
+    title={t('legal.root.hero.title')}
+    alternates={getAlternates(
+      '/fr/contact/processus-candidature-bearstudio',
+      {}
+    )}
+    breadcrumb={breadcrumb}
+  />
+  <Hero>
+    <HeroContent
+      title={t('legal.root.hero.title')}
+      description={t('legal.root.hero.description')}
+      breadcrumb={breadcrumb}
+    />
+  </Hero>
+  {
+    match(locale)
+      .with('fr', () => 'fr')
+      .with('en', () => 'en')
+      .exhaustive()
+  }
+</MainLayout>

@@ -20,6 +20,9 @@ export const ROUTE_MAPPINGS = {
   '/fr/blog/:page': { en: null },
   '/fr/blog/posts': { en: null },
   '/fr/mentions-legales': { en: '/en/legal-notice' },
+  '/fr/contact/processus-candidature-bearstudio': {
+    en: '/en/contact/application-process-bearstudio',
+  },
 } as const satisfies Record<
   DefaultLocaleRoutePaths,
   Record<LocalesWithoutDefault, RoutePaths | null>

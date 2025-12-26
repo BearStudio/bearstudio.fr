@@ -2,5 +2,14 @@
   "root": {
     "breadcrumb": "Contact",
     "title": "Nous contacter"
+  },
+  "application-process": {
+    "breadcrumb": "Processus de recrutement au BearStudio",
+    "title": "Que faire pour rejoindre les ours ?",
+    "description": "Si tu veux avoir une chance de rejoindre le BearStudio et devenir un ourson, lis cette doc ! #RTFM",
+    "metadata": {
+      "title": "Le processsus de candidature et recrutement",
+      "description": "Au BearStudio, le processus de candidature ne se fait que d'une seule façon. Grâce à cette page, tu sauras comment rejoindre l'antre des ours."
+    }
   }
 }

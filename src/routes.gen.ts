@@ -5,7 +5,9 @@ import { assignPaths } from '@bearstudio/astro-typed-routes';
 
 const ROUTES_CONFIG = {
   en: {
-    contact: {},
+    contact: {
+      'application-process-bearstudio': {},
+    },
     'legal-notice': {},
     services: {
       'ux-design': {},
@@ -26,7 +28,9 @@ const ROUTES_CONFIG = {
         ':id': {},
       },
     },
-    contact: {},
+    contact: {
+      'processus-candidature-bearstudio': {},
+    },
     equipe: {
       ':id': {},
     },
