@@ -26,7 +26,7 @@ interface Props
   >['basic']['image'];
   imageAlt?: string;
   url?: NonNullable<ComponentProps<typeof SEO>['openGraph']>['basic']['url'];
-  alternates: Required<Record<Locale, string | null>>;
+  alternates: Required<Record<Locale, string | null>> | null;
   breadcrumb: Array<BreadcrumbEntry> | null;
 }
 // TODO: Proper Metadata
@@ -50,15 +50,17 @@ const ogImageAlt = 'BearStudio';
 const titleDefault =
   'Studio de développement normand pour porteurs de projet numérique';
 
-const languageAlternates = pipe(
-  alternates,
-  entries(),
-  filter(([, href]) => isNonNullish(href)),
-  map(([hrefLang, href]) => ({
-    hrefLang,
-    href: href!, // using !, we filtered before
-  }))
-);
+const languageAlternates = isNonNullish(alternates)
+  ? pipe(
+      alternates,
+      entries(),
+      filter(([, href]) => isNonNullish(href)),
+      map(([hrefLang, href]) => ({
+        hrefLang,
+        href: href!, // using !, we filtered before
+      }))
+    )
+  : [];
 ---
 
 <SEO

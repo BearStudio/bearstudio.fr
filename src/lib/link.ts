@@ -9,13 +9,6 @@ import { ROUTE_MAPPINGS } from '@/i18n/routes-map';
 import type { Locale } from '@/i18n/utils';
 import { ROUTES } from '@/routes.gen';
 
-export function link<Path extends string>(
-  url: Path,
-  params: ExtractParams<Path>
-): string {
-  return lunalink(url, params, { baseURL: getSiteUrl() });
-}
-
 export type LocalesWithoutDefault = Exclude<Locale, typeof defaultLocale>;
 export type LinkParams<
   Path extends DefaultLocaleRoutePaths,
