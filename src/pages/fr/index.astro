@@ -153,38 +153,25 @@ const polaroids = await Promise.all(
     <HomePolaroids client:load locale={locale} polaroids={polaroids} />
   </div>
 
-  <Container>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, earum
-      doloremque doloribus amet similique blanditiis vitae quidem, qui,
-      cupiditate atque molestiae dolores ut adipisci recusandae tempora? Saepe
-      optio nemo necessitatibus.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, earum
-      doloremque doloribus amet similique blanditiis vitae quidem, qui,
-      cupiditate atque molestiae dolores ut adipisci recusandae tempora? Saepe
-      optio nemo necessitatibus.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, earum
-      doloremque doloribus amet similique blanditiis vitae quidem, qui,
-      cupiditate atque molestiae dolores ut adipisci recusandae tempora? Saepe
-      optio nemo necessitatibus.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, earum
-      doloremque doloribus amet similique blanditiis vitae quidem, qui,
-      cupiditate atque molestiae dolores ut adipisci recusandae tempora? Saepe
-      optio nemo necessitatibus.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, earum
-      doloremque doloribus amet similique blanditiis vitae quidem, qui,
-      cupiditate atque molestiae dolores ut adipisci recusandae tempora? Saepe
-      optio nemo necessitatibus.
-    </p>
-  </Container>
+  <Container class="gap-12">
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-1">
+        <h2 class="font-heading text-2xl font-bold">Notre équipe</h2>
+        <p class="max-w-[70ch] text-sm text-balance opacity-80">
+          Rencontrez les ours passionnés qui donnent vie à vos projets
+          numériques avec expertise et créativité.
+        </p>
+      </div>
+    </div>
 
-  <div class="flex h-[2000px] flex-col gap-4 p-4"></div>
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-1">
+        <h2 class="font-heading text-2xl font-bold">Le blog</h2>
+        <p class="max-w-[70ch] text-sm text-balance opacity-80">
+          Découvrez nos articles, retours d'expérience et réflexions sur le
+          développement web, mobile et les bonnes pratiques du numérique.
+        </p>
+      </div>
+    </div>
+  </Container>
 </MainLayout>
