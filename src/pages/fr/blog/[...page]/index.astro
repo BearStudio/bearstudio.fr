@@ -4,11 +4,11 @@ import { PiArrowLeftBold, PiArrowRight } from 'react-icons/pi';
 
 import { getPostsCollection } from '@/lib/posts';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import HeroContent from '@/components/hero/hero-content.astro';
+import Hero from '@/components/hero/hero.astro';
 import PostCard from '@/components/posts/post-card.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
-import HeroContent from '@/components/ui/hero-content.astro';
-import Hero from '@/components/ui/hero.astro';
 import type { Locale } from '@/i18n/utils';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
@@ -66,16 +66,11 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     breadcrumb={breadcrumb}
   />
   <Hero>
-    <HeroContent breadcrumb={breadcrumb}>
-      <h1
-        class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
-      >
-        {t('blog.root.hero.title')}
-      </h1>
-      <p class="max-w-[60ch] text-sm text-balance opacity-80">
-        {t('blog.root.hero.description')}
-      </p>
-    </HeroContent>
+    <HeroContent
+      breadcrumb={breadcrumb}
+      title={t('blog.root.hero.title')}
+      description={t('blog.root.hero.description')}
+    />
   </Hero>
   <div class="-mt-16 lg:-mt-24">
     <div class="mx-auto w-full max-w-5xl px-6">

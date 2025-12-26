@@ -1,4 +1,6 @@
 ---
+import type { ReactNode } from 'react';
+
 import { cn } from '@/lib/tailwind/utils';
 import { Breadcrumb } from '@/components/breadcrumb/ui';
 import { parseAstroLocale } from '@/i18n/utils';
@@ -8,8 +10,10 @@ import type { BreadcrumbEntry } from '../breadcrumb/utils';
 interface Props {
   class?: string;
   breadcrumb: Array<BreadcrumbEntry> | null;
+  title?: ReactNode;
+  description?: ReactNode;
 }
-const { class: className, breadcrumb } = Astro.props;
+const { class: className, breadcrumb, title, description } = Astro.props;
 const locale = parseAstroLocale(Astro.currentLocale);
 ---
 
@@ -25,6 +29,20 @@ const locale = parseAstroLocale(Astro.currentLocale);
     )
   }
   <div class="flex w-full flex-col gap-2">
+    {
+      !!title && (
+        <h1 class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl">
+          {title}
+        </h1>
+      )
+    }
+    {
+      !!description && (
+        <p class="max-w-[60ch] text-sm text-balance opacity-80">
+          {description}
+        </p>
+      )
+    }
     <slot />
   </div>
 </div>

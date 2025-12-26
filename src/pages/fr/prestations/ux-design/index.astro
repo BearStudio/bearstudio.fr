@@ -1,9 +1,9 @@
 ---
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import HeroContent from '@/components/hero/hero-content.astro';
+import Hero from '@/components/hero/hero.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
-import HeroContent from '@/components/ui/hero-content.astro';
-import Hero from '@/components/ui/hero.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
@@ -32,15 +32,10 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
   />
 
   <Hero>
-    <HeroContent breadcrumb={breadcrumb}>
-      <h1
-        class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
-      >
-        {t('services.uxDesign.hero.title')}
-      </h1>
-      <p class="max-w-[60ch] text-sm text-balance opacity-80">
-        {t('services.uxDesign.hero.description')}
-      </p>
-    </HeroContent>
+    <HeroContent
+      breadcrumb={breadcrumb}
+      title={t('services.uxDesign.hero.title')}
+      description={t('services.uxDesign.hero.description')}
+    />
   </Hero>
 </MainLayout>

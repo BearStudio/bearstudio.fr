@@ -6,15 +6,15 @@ import { getCollection } from 'astro:content';
 import { getLink } from '@/lib/link';
 import { getPolaroidHref } from '@/lib/polaroids';
 import { cn } from '@/lib/tailwind/utils';
+import Hero from '@/components/hero/hero.astro';
+import { HomePolaroids } from '@/components/home/home-polaroids';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import { buttonVariants } from '@/components/ui/button';
-import Hero from '@/components/ui/hero.astro';
 import { Polaroid } from '@/components/ui/polaroid';
 import { TiltedCard } from '@/components/ui/tilted-card';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
-import { HomePolaroids } from '@/pages/_partials/home-polaroids';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
