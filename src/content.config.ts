@@ -4,7 +4,7 @@ import { file, glob } from 'astro/loaders';
 import { zBlog } from '@/schemas/blog';
 import { zConference } from '@/schemas/conferences';
 import { zEvent } from '@/schemas/events';
-import { zPerson } from '@/schemas/person';
+import { zPerson } from '@/schemas/people';
 import { zPolaroid } from '@/schemas/polaroids';
 import { zSkills } from '@/schemas/skills';
 
