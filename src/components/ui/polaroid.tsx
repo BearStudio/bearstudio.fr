@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
 
 import type { GetImageResult } from 'astro';
-import { omit } from 'remeda';
 
 import { cn } from '@/lib/tailwind/utils';
+import { ImgAstroReact } from '@/components/ui/img-astro-react';
 
 export const Polaroid = (props: {
   className?: string;
@@ -18,15 +18,13 @@ export const Polaroid = (props: {
       )}
     >
       <div className="relative overflow-hidden rounded-xs aspect-square w-full">
-        <img
-          className="block aspect-square object-cover h-full w-full"
-          alt=""
-          src={props.image?.src}
-          srcSet={props.image?.srcSet.attribute}
-          // Making sure fetchpriority attribute is correctly formatted for JSX
-          {...omit(props.image?.attributes ?? {}, ['fetchpriority'])}
-          fetchPriority={props.image?.attributes.fetchpriority}
-        />
+        {!!props.image && (
+          <ImgAstroReact
+            className="block aspect-square object-cover h-full w-full"
+            alt=""
+            image={props.image}
+          />
+        )}
         <div className="absolute inset-0 shadow-[inset_0_0_10px_rgba(0,0,0,.3)]"></div>
       </div>
       <p className="font-handwritten text-base leading-none flex w-full justify-center place-items-center text-balance h-8 px-1 text-center">

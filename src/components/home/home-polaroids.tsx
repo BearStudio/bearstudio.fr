@@ -20,6 +20,7 @@ export const HomePolaroids = (props: {
     }
   >;
 }) => {
+  if (!props.polaroids.length) return null;
   return (
     <Carousel className="-my-16 w-full" opts={{ dragFree: true }}>
       <CarouselContent className="-ml-8 pl-8">
@@ -27,7 +28,7 @@ export const HomePolaroids = (props: {
           return (
             <CarouselItem
               key={polaroid.id}
-              className="basis-[60%] sm:basis-[30%] md:basis-[25%] py-16 fisrt:ml-8 last:mr-8"
+              className="basis-[60%] 2xs:basis-[40%] sm:basis-[30%] md:basis-[25%] py-16 fisrt:ml-8 last:mr-8"
             >
               <a
                 className={cn(

@@ -77,6 +77,8 @@ dayjs.locale(Astro.currentLocale);
     class="bg-background text-foreground flex min-h-svh flex-col overflow-x-hidden overflow-y-scroll"
   >
     <EnvHint />
-    <slot />
+    <div class="flex flex-1 flex-col overflow-x-hidden">
+      <slot />
+    </div>
   </body>
 </html>

@@ -1,6 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
-import { sortBy } from 'remeda';
+import { isNonNullish, sortBy } from 'remeda';
 
 import type { Locale } from '@/i18n/utils';
 
@@ -14,7 +14,7 @@ export async function getPeopleCollection({
   limit?: number | undefined;
 }) {
   const people = (await getCollection('people'))
-    .filter((item) => !!item.data.status)
+    .filter((item) => isNonNullish(item.data.status))
     .filter((item) =>
       status === undefined ? true : item.data.status === status
     )
