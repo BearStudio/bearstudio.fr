@@ -44,7 +44,7 @@ export const conferencesMemberWithComputed = (
 export async function getConferencesCollectionByPerson(params: {
   locale: Locale;
   limit?: number | undefined;
-  person: ComputedCollectionEntry<'team'>;
+  person: ComputedCollectionEntry<'people'>;
 }) {
   return (await getConferencesCollection(params))
     .filter((item) =>

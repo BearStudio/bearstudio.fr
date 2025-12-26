@@ -3,7 +3,7 @@ import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 import { filter, isNonNullish } from 'remeda';
 
 import { type ComputedCollectionEntry } from '@/lib/content';
-import { teamMemberWithComputed } from '@/lib/team';
+import { personWithComputed } from '@/lib/people';
 import type { Locale } from '@/i18n/utils';
 
 type Params = {
@@ -16,7 +16,7 @@ const isPublished = (post: CollectionEntry<'blog'>) =>
 
 type HasSpecificAuthorProps = {
   post: CollectionEntry<'blog'>;
-  author: ComputedCollectionEntry<'team'>;
+  author: ComputedCollectionEntry<'people'>;
 };
 
 const hasSpecificAuthor = ({ post, author }: HasSpecificAuthorProps) => {
@@ -61,8 +61,8 @@ const blogPostWithComputed = async (item: CollectionEntry<'blog'>) => {
   const slug = slugArray.join('/');
   const authors = await Promise.all(
     (item.data.authors ?? [])?.map(async (author) => {
-      const data = await getEntry('team', `${author.id}/${locale}`);
-      return data ? teamMemberWithComputed(data) : undefined;
+      const data = await getEntry('people', `${author.id}/${locale}`);
+      return data ? personWithComputed(data) : undefined;
     })
   );
   return {
@@ -77,16 +77,20 @@ const blogPostWithComputed = async (item: CollectionEntry<'blog'>) => {
   };
 };
 
-type GetBlogCollectionLinkedToTeamMemberProps = Params & {
-  author: ComputedCollectionEntry<'team'>;
+type GetBlogCollectionLinkedToPersonProps = Params & {
+  author: ComputedCollectionEntry<'people'>;
 };
 
-export async function getBlogCollectionLinkedToTeamMember({
+export async function getBlogCollectionLinkedToPerson({
   author,
   locale,
   limit = undefined,
-}: GetBlogCollectionLinkedToTeamMemberProps) {
+}: GetBlogCollectionLinkedToPersonProps) {
   return (await getBlogCollection({ limit, locale }))
     .filter((post) => hasSpecificAuthor({ post, author }))
     .filter((x) => x);
 }
+
+// Legacy export for backward compatibility
+export const getBlogCollectionLinkedToTeamMember =
+  getBlogCollectionLinkedToPerson;

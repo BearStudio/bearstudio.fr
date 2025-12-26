@@ -4,18 +4,18 @@ import { file, glob } from 'astro/loaders';
 import { zBlog } from '@/schemas/blog';
 import { zConference } from '@/schemas/conferences';
 import { zEvent } from '@/schemas/events';
+import { zPerson } from '@/schemas/person';
 import { zPolaroid } from '@/schemas/polaroids';
 import { zSkills } from '@/schemas/skills';
-import { zTeamMember } from '@/schemas/team';
 
 export const collections = {
   blog: defineCollection({
     loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
     schema: zBlog,
   }),
-  team: defineCollection({
-    loader: glob({ base: './src/content/team', pattern: '**/*.{md,mdx}' }),
-    schema: zTeamMember,
+  people: defineCollection({
+    loader: glob({ base: './src/content/people', pattern: '**/*.{md,mdx}' }),
+    schema: zPerson,
   }),
   skills: defineCollection({
     loader: glob({ base: './src/content/skills', pattern: '**/*.{md,mdx}' }),

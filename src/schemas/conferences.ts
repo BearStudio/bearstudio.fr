@@ -24,7 +24,7 @@ export const zConferenceInstance = ({ image }: SchemaContext) =>
     link: z.string().optional(),
     date: z.date().optional(),
     language: z.string().optional(),
-    speakers: z.array(reference('team')).optional(),
+    speakers: z.array(reference('people')).optional(),
     replay: z.union([z.string(), zVideoIntegration()]).optional(),
     location: z
       .object({

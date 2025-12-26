@@ -4,16 +4,16 @@ import { sortBy } from 'remeda';
 
 import type { Locale } from '@/i18n/utils';
 
-export async function getTeamCollection({
+export async function getPeopleCollection({
   locale,
   status,
   limit,
 }: {
   locale: Locale;
-  status?: CollectionEntry<'team'>['data']['status'];
+  status?: CollectionEntry<'people'>['data']['status'];
   limit?: number | undefined;
 }) {
-  const team = (await getCollection('team'))
+  const people = (await getCollection('people'))
     .filter((item) => !!item.data.status)
     .filter((item) =>
       status === undefined ? true : item.data.status === status
@@ -23,18 +23,18 @@ export async function getTeamCollection({
       const itemLocale = item.id.split('/')[1]?.replace('.md', '');
       return itemLocale === locale;
     })
-    .map(teamMemberWithComputed);
+    .map(personWithComputed);
 
-  const teamSorted = sortBy(team, [
+  const peopleSorted = sortBy(people, [
     (item) => item.data.order ?? Infinity,
     'asc',
   ]);
 
-  return teamSorted.slice(0, limit);
+  return peopleSorted.slice(0, limit);
 }
 
-export type TeamMemberWithComputed = ReturnType<typeof teamMemberWithComputed>;
-export const teamMemberWithComputed = (item: CollectionEntry<'team'>) => {
+export type PersonWithComputed = ReturnType<typeof personWithComputed>;
+export const personWithComputed = (item: CollectionEntry<'people'>) => {
   // item.id format is: "slug/locale.md" (e.g., "ivan-dalmet/fr.md")
   const slug = item.id.split('/')[0];
   return {

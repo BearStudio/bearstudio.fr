@@ -7,7 +7,7 @@ import { getBlogCollectionLinkedToTeamMember } from '@/lib/blog';
 import { getConferencesCollectionByPerson } from '@/lib/conferences';
 import type { ComputedCollectionEntry } from '@/lib/content';
 import { getLink } from '@/lib/link';
-import { getTeamCollection } from '@/lib/team';
+import { getPeopleCollection } from '@/lib/people';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
@@ -26,9 +26,9 @@ import { getTranslationFn, parseAstroLocale, type Locale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
 export async function generateStaticPaths(params: { locale: Locale }) {
-  const team = await getTeamCollection({ locale: params.locale });
+  const people = await getPeopleCollection({ locale: params.locale });
   return Promise.all(
-    team.map(async (person) => {
+    people.map(async (person) => {
       return {
         params: { id: person.data._computed.slug },
         props: { person },
@@ -41,7 +41,7 @@ export async function getStaticPaths() {
 }
 
 type Props = {
-  person: ComputedCollectionEntry<'team'>;
+  person: ComputedCollectionEntry<'people'>;
   posts?: Array<ComputedCollectionEntry<'blog'>>;
   conferences?: Array<ComputedCollectionEntry<'conferences'>>;
 };

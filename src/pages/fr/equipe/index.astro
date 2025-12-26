@@ -1,10 +1,10 @@
 ---
 import { getLink } from '@/lib/link';
-import { getTeamCollection } from '@/lib/team';
+import { getPeopleCollection } from '@/lib/people';
+import PersonCard from '@/components/people/person-card.astro';
 import SEO from '@/components/seo/index.astro';
 import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
 import { getAlternates } from '@/components/seo/utils';
-import TeamMemberCard from '@/components/team/team-member-card.astro';
 import {
   BreadcrumbBase,
   BreadcrumbItem,
@@ -17,11 +17,11 @@ import MainLayout from '@/layouts/main-layout.astro';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
-const teamCurrent = await getTeamCollection({
+const peopleCurrent = await getPeopleCollection({
   locale,
   status: 'current',
 });
-const teamAdvisor = await getTeamCollection({
+const peopleAdvisor = await getPeopleCollection({
   locale,
   status: 'advisor',
 });
@@ -60,7 +60,7 @@ const teamAdvisor = await getTeamCollection({
     class="relative mx-auto -mt-16 flex w-full max-w-5xl flex-col gap-12 p-6 md:-mt-24"
   >
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-      {teamCurrent.map((member) => <TeamMemberCard member={member} />)}
+      {peopleCurrent.map((person) => <PersonCard member={person} />)}
     </div>
     <div class="flex flex-col gap-4">
       <div class="flex flex-col gap-2">
@@ -74,7 +74,7 @@ const teamAdvisor = await getTeamCollection({
         </p>
       </div>
       <div class="xs:grid-cols-2 grid gap-4 md:grid-cols-3 lg:grid-cols-4">
-        {teamAdvisor.map((member) => <TeamMemberCard member={member} />)}
+        {peopleAdvisor.map((person) => <PersonCard member={person} />)}
       </div>
     </div>
   </div>
