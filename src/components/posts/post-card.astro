@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+
+import { getLink } from '@/lib/link';
+import type { PostWithComputed } from '@/lib/posts';
+import { FormattedDate } from '@/components/ui/formatted-date';
+import { parseAstroLocale } from '@/i18n/utils';
+
+import defaultImage from './default.jpeg';
+
+interface Props {
+  post: PostWithComputed;
+}
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const { post } = Astro.props;
+---
+
+<a
+  href={getLink('/fr/blog/posts/:id', locale, {
+    id: post.data._computed.slug,
+  })}
+  class="bg-card border-card-border flex flex-col gap-2.5 overflow-hidden rounded-md border border-b-3 p-2 transition-all hover:-translate-y-1.5 hover:shadow-xl"
+>
+  <div
+    class="bg-brand-900 relative aspect-[1.2] w-full overflow-hidden rounded-sm"
+  >
+    <Image
+      src={post.data.heroImage ?? defaultImage}
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover"
+      width={1200}
+      height={800}
+    />
+  </div>
+  <div class="flex flex-1 flex-col gap-2 px-1">
+    <h2 class="font-heading flex-1 text-lg leading-tight font-bold">
+      {post.data.title}
+    </h2>
+    <FormattedDate
+      date={post.data.date}
+      locale={locale}
+      className="text-xs opacity-60"
+    />
+  </div>
+</a>

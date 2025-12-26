@@ -91,11 +91,3 @@ export async function getPostsCollectionLinkedToPerson({
     .filter((post) => hasSpecificAuthor({ post, author }))
     .filter((x) => x);
 }
-
-// Legacy exports for backward compatibility
-export const getBlogCollection = getPostsCollection;
-export const getBlogCollectionLinkedToPerson = getPostsCollectionLinkedToPerson;
-export const getBlogCollectionLinkedToTeamMember =
-  getPostsCollectionLinkedToPerson;
-export type BlogPostWithComputed = PostWithComputed;
-export const blogPostWithComputed = postWithComputed;

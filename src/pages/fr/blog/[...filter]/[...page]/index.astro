@@ -6,6 +6,7 @@ import { PiArrowLeftBold, PiArrowRight } from 'react-icons/pi';
 
 import { getLink } from '@/lib/link';
 import { getPostsCollection } from '@/lib/posts';
+import PostCard from '@/components/posts/post-card.astro';
 import SEO from '@/components/seo/index.astro';
 import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
 import { getAlternates } from '@/components/seo/utils';
@@ -17,7 +18,6 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import { FormattedDate } from '@/components/ui/formatted-date';
-import defaultImage from '@/components/ui/hero-bg.jpeg';
 import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
 import type { Locale } from '@/i18n/utils';
@@ -174,36 +174,7 @@ const { page, category } = Astro.props;
   <div class="-mt-16 lg:-mt-24">
     <div class="mx-auto w-full max-w-5xl px-6">
       <div class="xs:grid-cols-2 relative grid gap-4 py-4 md:grid-cols-3">
-        {
-          page.data.map((post) => (
-            <a
-              href={getLink('/fr/blog/posts/:id', locale, {
-                id: post.data._computed.slug,
-              })}
-              class="bg-card border-card-border flex flex-col gap-2.5 overflow-hidden rounded-md border border-b-3 p-2 transition-all hover:-translate-y-1.5 hover:shadow-xl"
-            >
-              <div class="bg-brand-900 relative aspect-[1.2] w-full overflow-hidden rounded-sm">
-                <Image
-                  src={post.data.heroImage ?? defaultImage}
-                  alt=""
-                  class="absolute inset-0 h-full w-full object-cover"
-                  width={1200}
-                  height={800}
-                />
-              </div>
-              <div class="flex flex-1 flex-col gap-2 px-1">
-                <h2 class="font-heading flex-1 text-lg leading-tight font-bold">
-                  {post.data.title}
-                </h2>
-                <FormattedDate
-                  date={post.data.date}
-                  locale={locale}
-                  className="text-xs opacity-60"
-                />
-              </div>
-            </a>
-          ))
-        }
+        {page.data.map((post) => <PostCard post={post} />)}
       </div>
       <div class="flex justify-between pt-4">
         {

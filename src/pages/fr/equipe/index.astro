@@ -60,7 +60,7 @@ const peopleAdvisor = await getPeopleCollection({
     class="relative mx-auto -mt-16 flex w-full max-w-5xl flex-col gap-12 p-6 md:-mt-24"
   >
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-      {peopleCurrent.map((person) => <PersonCard member={person} />)}
+      {peopleCurrent.map((person) => <PersonCard person={person} />)}
     </div>
     <div class="flex flex-col gap-4">
       <div class="flex flex-col gap-2">
@@ -74,7 +74,7 @@ const peopleAdvisor = await getPeopleCollection({
         </p>
       </div>
       <div class="xs:grid-cols-2 grid gap-4 md:grid-cols-3 lg:grid-cols-4">
-        {peopleAdvisor.map((person) => <PersonCard member={person} />)}
+        {peopleAdvisor.map((person) => <PersonCard person={person} />)}
       </div>
     </div>
   </div>

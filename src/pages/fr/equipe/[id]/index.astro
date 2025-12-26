@@ -8,6 +8,7 @@ import type { ComputedCollectionEntry } from '@/lib/content';
 import { getLink } from '@/lib/link';
 import { getPeopleCollection } from '@/lib/people';
 import { getPostsCollectionLinkedToPerson } from '@/lib/posts';
+import PostCard from '@/components/posts/post-card.astro';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
@@ -181,22 +182,6 @@ if (!person.data._computed.slug) {
       <Content />
     </Prose>
 
-    <h2>Articles liés</h2>
-    {
-      posts?.map((post) => {
-        if (!post.data._computed.slug) return null;
-        return (
-          <a
-            href={getLink('/fr/blog/posts/:id', locale, {
-              id: post.data._computed.slug,
-            })}
-          >
-            {post.data.title}
-          </a>
-        );
-      })
-    }
-
     <h2>Conférences liés</h2>
     {
       conferences?.map((conference) => {
@@ -218,6 +203,21 @@ if (!person.data._computed.slug) {
           </>
         );
       })
+    }
+
+    {
+      !!posts.length && (
+        <div class="flex flex-col gap-4">
+          <h2 class="font-heading text-xl font-bold">
+            Sur le blog par {person.data.name}
+          </h2>
+          <div class="xs:grid-cols-2 relative grid gap-4 md:grid-cols-3">
+            {posts.map((post) => {
+              return <PostCard post={post} />;
+            })}
+          </div>
+        </div>
+      )
     }
   </div>
 </MainLayout>

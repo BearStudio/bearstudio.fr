@@ -18,16 +18,16 @@ export async function getConferencesCollection({
       const itemLocale = item.id.split('/')[1]?.replace('.md', '');
       return itemLocale === locale;
     })
-    .map(conferencesMemberWithComputed);
+    .map(conferencesPersonWithComputed);
 
   // TODO sort conferences
   return conferences.slice(0, limit);
 }
 
-export type ConferencesMemberWithComputed = ReturnType<
-  typeof conferencesMemberWithComputed
+export type ConferencesPersonWithComputed = ReturnType<
+  typeof conferencesPersonWithComputed
 >;
-export const conferencesMemberWithComputed = (
+export const conferencesPersonWithComputed = (
   item: CollectionEntry<'conferences'>
 ) => {
   // item.id format is: "slug/locale.md" (e.g., "ivan-dalmet/fr.md")
