@@ -1,14 +1,8 @@
 ---
-import { getLink } from '@/lib/link';
 import { getPeopleCollection } from '@/lib/people';
-import {
-  BreadcrumbBase,
-  BreadcrumbItem,
-  BreadcrumbPage,
-} from '@/components/breadcrumb/ui';
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import PersonCard from '@/components/people/person-card.astro';
 import SEO from '@/components/seo/index.astro';
-import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
 import { getAlternates } from '@/components/seo/utils';
 import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
@@ -25,26 +19,26 @@ const peopleAdvisor = await getPeopleCollection({
   locale,
   status: 'advisor',
 });
+
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    label: t('team.root.hero.breadcrumb'),
+    path: '/fr/equipe',
+    params: {},
+  }),
+]);
 ---
 
 <MainLayout>
-  <SEO slot="seo" title="Team" alternates={getAlternates('/fr/equipe', {})} />
-  <SchemaBreadcrumb
-    slot="breadcrumb"
-    items={[
-      {
-        id: getLink('/fr/equipe', locale, {}, true),
-        name: t('team.root.hero.breadcrumb'),
-      },
-    ]}
+  <SEO
+    slot="seo"
+    title="Team"
+    alternates={getAlternates('/fr/equipe', {})}
+    breadcrumb={breadcrumb}
   />
+
   <Hero>
-    <HeroContent>
-      <BreadcrumbBase slot="breadcrumb" locale={locale}>
-        <BreadcrumbItem>
-          <BreadcrumbPage>{t('team.root.hero.breadcrumb')}</BreadcrumbPage>
-        </BreadcrumbItem>
-      </BreadcrumbBase>
+    <HeroContent breadcrumb={breadcrumb}>
       <h1
         class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
       >

@@ -5,9 +5,10 @@ import { PiCaretRight, PiDotsThree, PiHouseDuotone } from 'react-icons/pi';
 
 import { getLink } from '@/lib/link';
 import { cn } from '@/lib/tailwind/utils';
+import type { BreadcrumbEntry } from '@/components/breadcrumb/utils';
 import type { Locale } from '@/i18n/utils';
 
-function Breadcrumb({ ...props }: React.ComponentProps<'nav'>) {
+function BreadcrumbRoot({ ...props }: React.ComponentProps<'nav'>) {
   return <nav aria-label="breadcrumb" data-slot="breadcrumb" {...props} />;
 }
 
@@ -104,12 +105,12 @@ function BreadcrumbEllipsis({
   );
 }
 
-const BreadcrumbBase = (props: {
+const Breadcrumb = (props: {
   locale: Locale;
-  children: React.ReactNode;
+  entries: Array<BreadcrumbEntry>;
 }) => {
   return (
-    <Breadcrumb>
+    <BreadcrumbRoot>
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink
@@ -120,20 +121,41 @@ const BreadcrumbBase = (props: {
             <span className="sr-only">Accueil</span>
           </BreadcrumbLink>
         </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        {props.children}
+        {props.entries.map((entry, index) => {
+          return (
+            // eslint-disable-next-line @eslint-react/no-array-index-key
+            <React.Fragment key={index}>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                {index === props.entries.length - 1 ? (
+                  <BreadcrumbPage>{entry.label}</BreadcrumbPage>
+                ) : (
+                  <BreadcrumbLink
+                    href={getLink(
+                      entry.link.path,
+                      entry.locale,
+                      entry.link.params
+                    )}
+                  >
+                    {entry.label}
+                  </BreadcrumbLink>
+                )}
+              </BreadcrumbItem>
+            </React.Fragment>
+          );
+        })}
       </BreadcrumbList>
-    </Breadcrumb>
+    </BreadcrumbRoot>
   );
 };
 
 export {
-  Breadcrumb,
+  BreadcrumbRoot,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbPage,
   BreadcrumbSeparator,
   BreadcrumbEllipsis,
-  BreadcrumbBase,
+  Breadcrumb,
 };

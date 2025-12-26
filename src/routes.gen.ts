@@ -5,14 +5,6 @@ import { assignPaths } from '@bearstudio/astro-typed-routes';
 
 const ROUTES_CONFIG = {
   en: {
-    blog: {
-      ':filter': {
-        ':page': {},
-      },
-      posts: {
-        ':id': {},
-      },
-    },
     contact: {},
     services: {
       'ux-design': {},

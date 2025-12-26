@@ -1,15 +1,20 @@
 ---
 import { SEO } from 'astro-seo';
+import { Schema } from 'astro-seo-schema';
 import type { ComponentProps } from 'astro/types';
 
 import { entries, filter, isNonNullish, map, pipe } from 'remeda';
 
+import { getLink } from '@/lib/link';
 import { defaultLocale } from '@/i18n';
 import {
+  getTranslationFn,
   LOCALE_TERRITORY_MAP,
   parseAstroLocale,
   type Locale,
 } from '@/i18n/utils';
+
+import type { BreadcrumbEntry } from '../breadcrumb/utils';
 
 interface Props
   extends Pick<
@@ -22,6 +27,7 @@ interface Props
   imageAlt?: string;
   url?: NonNullable<ComponentProps<typeof SEO>['openGraph']>['basic']['url'];
   alternates: Required<Record<Locale, string | null>>;
+  breadcrumb: Array<BreadcrumbEntry> | null;
 }
 // TODO: Proper Metadata
 const {
@@ -34,7 +40,11 @@ const {
   url = Astro.url,
   alternates,
   openGraph,
+  breadcrumb,
 } = Astro.props;
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
 
 const ogImageAlt = 'BearStudio';
 const titleDefault =
@@ -69,10 +79,7 @@ const languageAlternates = pipe(
     optional: {
       description,
       siteName: 'BearStudio',
-      locale:
-        LOCALE_TERRITORY_MAP[
-          parseAstroLocale(Astro.currentLocale) ?? defaultLocale
-        ],
+      locale: LOCALE_TERRITORY_MAP[locale ?? defaultLocale],
       localeAlternate: languageAlternates
         .filter((item) => item.hrefLang !== Astro.currentLocale)
         .map((item) => LOCALE_TERRITORY_MAP[item.hrefLang]),
@@ -92,3 +99,37 @@ const languageAlternates = pipe(
     site: '@_BearStudio',
   }}
 />
+
+{
+  !!breadcrumb?.length && (
+    <Schema
+      item={{
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            item: {
+              '@id': getLink('/fr', locale, {}, true),
+              name: t('common.nav.home'),
+            },
+          },
+          ...breadcrumb.map((item, index) => ({
+            '@type': 'ListItem' as const,
+            position: index + 2,
+            item: {
+              '@id': getLink(
+                item.link.path,
+                item.locale,
+                item.link.params,
+                true
+              ),
+              name: item.label,
+            },
+          })),
+        ],
+      }}
+    />
+  )
+}

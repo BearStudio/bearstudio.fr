@@ -2,18 +2,10 @@
 import type { GetStaticPathsOptions } from 'astro';
 import { PiArrowLeftBold, PiArrowRight } from 'react-icons/pi';
 
-import { getLink } from '@/lib/link';
 import { getPostsCollection } from '@/lib/posts';
-import {
-  BreadcrumbBase,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from '@/components/breadcrumb/ui';
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import PostCard from '@/components/posts/post-card.astro';
 import SEO from '@/components/seo/index.astro';
-import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
 import { getAlternates } from '@/components/seo/utils';
 import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
@@ -47,20 +39,20 @@ const t = getTranslationFn(locale);
 
 const { page } = Astro.props;
 
-// const breadcrumb = breadcrumbEntries(locale)((entry) => [
-//   entry({
-//     path: '/fr/blog',
-//     params: {},
-//     label: t('blog.root.hero.breadcrumb'),
-//   }),
-//   page.currentPage > 1
-//     ? entry({
-//         path: '/fr/blog',
-//         params: {},
-//         label: t('blog.root.hero.breadcrumb'),
-//       })
-//     : null,
-// ]);
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    path: '/fr/blog',
+    params: {},
+    label: t('blog.root.hero.breadcrumb'),
+  }),
+  page.currentPage > 1
+    ? entry({
+        path: '/fr/blog/:page',
+        params: { page: page.currentPage.toString() },
+        label: `Page ${page.currentPage}`,
+      })
+    : undefined,
+]);
 ---
 
 <MainLayout>
@@ -71,52 +63,10 @@ const { page } = Astro.props;
     alternates={getAlternates('/fr/blog/:page', {
       page: page.currentPage.toString(),
     })}
-  />
-  <SchemaBreadcrumb
-    slot="breadcrumb"
-    items={[
-      {
-        id: getLink('/fr/blog', locale, {}, true),
-        name: t('blog.root.hero.breadcrumb'),
-      },
-      page.currentPage > 1
-        ? {
-            id: getLink(
-              '/fr/blog/:page',
-              locale,
-              { page: page.currentPage.toString() },
-              true
-            ),
-            name: `Page ${page.currentPage}`,
-          }
-        : undefined,
-    ]}
+    breadcrumb={breadcrumb}
   />
   <Hero>
-    <HeroContent>
-      <BreadcrumbBase slot="breadcrumb" locale={locale}>
-        <BreadcrumbItem>
-          {
-            page.currentPage > 1 ? (
-              <BreadcrumbLink href={getLink('/fr/blog', locale, {})}>
-                {t('blog.root.hero.breadcrumb')}
-              </BreadcrumbLink>
-            ) : (
-              <BreadcrumbPage>{t('blog.root.hero.breadcrumb')}</BreadcrumbPage>
-            )
-          }
-        </BreadcrumbItem>
-        {
-          page.currentPage > 1 && (
-            <>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Page {page.currentPage}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </>
-          )
-        }
-      </BreadcrumbBase>
+    <HeroContent breadcrumb={breadcrumb}>
       <h1
         class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
       >

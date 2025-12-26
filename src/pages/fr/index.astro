@@ -7,7 +7,6 @@ import { getLink } from '@/lib/link';
 import { getPolaroidHref } from '@/lib/polaroids';
 import { cn } from '@/lib/tailwind/utils';
 import SEO from '@/components/seo/index.astro';
-import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
 import { getAlternates } from '@/components/seo/utils';
 import { buttonVariants } from '@/components/ui/button';
 import Hero from '@/components/ui/hero.astro';
@@ -42,6 +41,7 @@ const polaroids = await Promise.all(
     alternates={getAlternates('/fr', {})}
     title={t('home.metadata.title')}
     description={t('home.metadata.description')}
+    breadcrumb={null}
   />
   <Schema
     slot="ld+json"
@@ -54,7 +54,6 @@ const polaroids = await Promise.all(
       description: t('home.metadata.description'),
     }}
   />
-  <SchemaBreadcrumb slot="breadcrumb" items={[]} />
 
   <Hero contentClassName="lg:py-24">
     <div

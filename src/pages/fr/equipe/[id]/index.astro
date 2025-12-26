@@ -10,23 +10,15 @@ import {
   getConferencesCollectionByPerson,
   type ConferenceWithComputed,
 } from '@/lib/conferences';
-import { getLink } from '@/lib/link';
 import { getPeopleCollection, type PersonWithComputed } from '@/lib/people';
 import {
   getPostsCollectionLinkedToPerson,
   type PostWithComputed,
 } from '@/lib/posts';
-import {
-  BreadcrumbBase,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from '@/components/breadcrumb/ui';
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import PostCard from '@/components/posts/post-card.astro';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
-import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
 import { getAlternates, getId } from '@/components/seo/utils';
 import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
@@ -77,10 +69,26 @@ const conferencesWithContent = await Promise.all(
 const t = getTranslationFn(locale);
 const { Content } = await render(person);
 const url = new URL(Astro.url.pathname, Astro.site);
+const slug = person.data._computed.slug;
 
-if (!person.data._computed.slug) {
+if (!slug) {
   return new Response(null, { status: 404 });
 }
+
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    label: t('team.root.hero.breadcrumb'),
+    path: '/fr/equipe',
+    params: {},
+  }),
+  entry({
+    label: person.data.name,
+    path: '/fr/equipe/:id',
+    params: {
+      id: slug,
+    },
+  }),
+]);
 ---
 
 <MainLayout>
@@ -89,27 +97,11 @@ if (!person.data._computed.slug) {
     title={person.data.name}
     url={url}
     alternates={getAlternates('/fr/equipe/:id', {
-      id: person.data._computed.slug,
+      id: slug,
     })}
+    breadcrumb={breadcrumb}
   />
-  <SchemaBreadcrumb
-    slot="breadcrumb"
-    items={[
-      {
-        id: getLink('/fr/equipe', locale, {}, true),
-        name: t('team.root.hero.breadcrumb'),
-      },
-      {
-        id: getLink(
-          '/fr/equipe/:id',
-          locale,
-          { id: person.data._computed.slug },
-          true
-        ),
-        name: person.data.name,
-      },
-    ]}
-  />
+
   <Schema
     slot="ld+json"
     item={{
@@ -124,20 +116,7 @@ if (!person.data._computed.slug) {
     }}
   />
   <Hero>
-    <HeroContent class="sm:pr-80">
-      <BreadcrumbBase slot="breadcrumb" locale={locale}>
-        <BreadcrumbItem>
-          <BreadcrumbLink href={getLink('/fr/equipe', locale, {})}
-            >{t('team.root.hero.breadcrumb')}</BreadcrumbLink
-          >
-        </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <BreadcrumbPage>
-            {person.data.name}
-          </BreadcrumbPage>
-        </BreadcrumbItem>
-      </BreadcrumbBase>
+    <HeroContent class="sm:pr-80" breadcrumb={breadcrumb}>
       <div class="relative flex flex-col sm:-mb-12">
         <div class="relative z-10 flex flex-1 flex-col gap-6">
           <div class="flex flex-col gap-0">

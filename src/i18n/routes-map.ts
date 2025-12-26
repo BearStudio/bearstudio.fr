@@ -7,20 +7,15 @@ import type {
 // Route mapping between French and other locales
 export const ROUTE_MAPPINGS = {
   '/fr': { en: '/en' },
-  '/fr/equipe': { en: '/en/team' },
   '/fr/prestations': { en: '/en/services' },
-  '/fr/blog': { en: '/en/blog' },
-  '/fr/contact': { en: '/en/contact' },
-  '/fr/blog/:filter': { en: '/en/blog/:filter' },
-  '/fr/blog/:filter/:page': {
-    en: '/en/blog/:filter/:page',
-  },
-  '/fr/blog/posts': { en: '/en/blog/posts' },
-  '/fr/blog/posts/:id': { en: '/en/blog/posts/:id' },
+  '/fr/prestations/ux-design': { en: '/en/services/ux-design' },
+  '/fr/equipe': { en: '/en/team' },
   '/fr/equipe/:id': { en: '/en/team/:id' },
-  '/fr/prestations/ux-design': {
-    en: '/en/services/ux-design',
-  },
+  '/fr/contact': { en: '/en/contact' },
+  '/fr/blog/posts/:id': { en: null },
+  '/fr/blog': { en: null },
+  '/fr/blog/:page': { en: null },
+  '/fr/blog/posts': { en: null },
 } as const satisfies Record<
   DefaultLocaleRoutePaths,
   Record<LocalesWithoutDefault, RoutePaths | null>

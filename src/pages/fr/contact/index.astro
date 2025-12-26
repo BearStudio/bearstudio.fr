@@ -1,12 +1,6 @@
 ---
-import { getLink } from '@/lib/link';
-import {
-  BreadcrumbBase,
-  BreadcrumbItem,
-  BreadcrumbPage,
-} from '@/components/breadcrumb/ui';
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import SEO from '@/components/seo/index.astro';
-import SchemaBreadcrumb from '@/components/seo/schema-breadcrumb.astro';
 import { getAlternates } from '@/components/seo/utils';
 import HeroContent from '@/components/ui/hero-content.astro';
 import Hero from '@/components/ui/hero.astro';
@@ -15,30 +9,24 @@ import MainLayout from '@/layouts/main-layout.astro';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
+
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    path: '/fr/contact',
+    params: {},
+    label: t('contact.root.hero.breadcrumb'),
+  }),
+]);
 ---
 
 <MainLayout>
   <SEO
     alternates={getAlternates('/fr/contact', {})}
     title="Contacter l'équipe du BearStudio à Rouen en Normandie"
+    breadcrumb={breadcrumb}
   />
-  <SchemaBreadcrumb
-    slot="breadcrumb"
-    items={[
-      {
-        id: getLink('/fr/contact', locale, {}, true),
-        name: t('contact.root.hero.breadcrumb'),
-      },
-    ]}
-  />
-
   <Hero>
-    <HeroContent>
-      <BreadcrumbBase slot="breadcrumb" locale={locale}>
-        <BreadcrumbItem>
-          <BreadcrumbPage>{t('contact.root.hero.breadcrumb')}</BreadcrumbPage>
-        </BreadcrumbItem>
-      </BreadcrumbBase>
+    <HeroContent breadcrumb={breadcrumb}>
       <h1
         class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
       >
