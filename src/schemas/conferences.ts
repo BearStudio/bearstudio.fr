@@ -3,7 +3,6 @@ import { reference, z, type SchemaContext } from 'astro:content';
 import { zVideoIntegration } from '@/schemas/utils';
 
 export type Conference = z.infer<ReturnType<typeof zConference>>;
-// Un sujet de conférence, réutilisable pour plusieurs évènements
 export const zConference = ({ image }: SchemaContext) =>
   z.object({
     title: z.string(),
