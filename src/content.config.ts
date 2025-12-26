@@ -6,7 +6,7 @@ import { zEvent } from '@/schemas/events';
 import { zPerson } from '@/schemas/people';
 import { zPolaroid } from '@/schemas/polaroids';
 import { zPost } from '@/schemas/posts';
-import { zSkills } from '@/schemas/skills';
+import { zSkill } from '@/schemas/skills';
 
 export const collections = {
   posts: defineCollection({
@@ -19,7 +19,7 @@ export const collections = {
   }),
   skills: defineCollection({
     loader: glob({ base: './src/content/skills', pattern: '**/*.{md,mdx}' }),
-    schema: zSkills,
+    schema: zSkill,
   }),
   conferences: defineCollection({
     loader: glob({

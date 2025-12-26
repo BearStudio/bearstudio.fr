@@ -1,7 +1,7 @@
 import { z, type SchemaContext } from 'astro:content';
 
-export type Skills = z.infer<ReturnType<typeof zSkills>>;
-export const zSkills = ({ image }: SchemaContext) =>
+export type Skill = z.infer<ReturnType<typeof zSkill>>;
+export const zSkill = ({ image }: SchemaContext) =>
   z.object({
     name: z.string(),
     logo: image().optional(),
