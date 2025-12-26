@@ -1,6 +1,6 @@
 ---
 state: 'published'
-title: 'Découvrir le MCP : Une nouvelle approche pour vos agents IA'
+title: 'Découvrir le MCP : Une nouvelle approche pour vos agents IA'
 date: 2025-08-14
 categories:
   - 'developpement'
