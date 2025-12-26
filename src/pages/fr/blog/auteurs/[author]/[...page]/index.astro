@@ -1,4 +1,6 @@
 ---
+import { getEntry } from 'astro:content';
+
 import type { GetStaticPathsOptions } from 'astro';
 
 import { getPostsCollection } from '@/lib/posts';
@@ -25,8 +27,20 @@ export async function generateStaticPaths(
     locale: params.locale,
   });
 
-  return params.paginate(allPosts, {
-    pageSize: PAGE_SIZE,
+  const allAuthorsIds = [
+    ...new Set(
+      allPosts.flatMap((p) => (p.data.authors ?? []).map((a) => a.id))
+    ),
+  ];
+
+  return allAuthorsIds.flatMap((authorId) => {
+    const filteredPosts = allPosts.filter((post) =>
+      (post.data.authors ?? []).some((a) => a.id === authorId)
+    );
+    return params.paginate(filteredPosts, {
+      pageSize: PAGE_SIZE,
+      params: { author: authorId },
+    });
   });
 }
 
@@ -38,12 +52,22 @@ const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
 
 const { page } = Astro.props;
+const params = Astro.params;
+
+const author = await getEntry('people', `${params.author}/${locale}`); // TODO with computed
 
 const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({
     path: '/fr/blog',
     params: {},
     label: t('blog.root.breadcrumb'),
+  }),
+  entry({
+    path: '/fr/blog/auteurs/:author',
+    params: {
+      author: params.author,
+    },
+    label: author?.data.name ?? '',
   }),
   page.currentPage > 1
     ? entry({
