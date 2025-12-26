@@ -1,13 +1,11 @@
 ---
-import { getImage } from 'astro:assets';
-
 import { getPeopleCollection } from '@/lib/people';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
 import PeopleGrid from '@/components/people/people-grid.astro';
-import { PersonCard } from '@/components/people/person-card';
+import PersonCard from '@/components/people/person-card.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
@@ -53,16 +51,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     <PeopleGrid>
       {
         peopleCurrent.map(async (person) => (
-          <PersonCard
-            hover="hard"
-            person={person}
-            locale={locale}
-            image={await getImage({
-              src: person.data.picture ?? '',
-              width: 500,
-              height: 600,
-            })}
-          />
+          <PersonCard hover="hard" person={person} />
         ))
       }
     </PeopleGrid>
@@ -80,16 +69,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       <PeopleGrid>
         {
           peopleAdvisor.map(async (person) => (
-            <PersonCard
-              hover="hard"
-              person={person}
-              locale={locale}
-              image={await getImage({
-                src: person.data.picture ?? '',
-                width: 500,
-                height: 600,
-              })}
-            />
+            <PersonCard hover="hard" person={person} />
           ))
         }
       </PeopleGrid>

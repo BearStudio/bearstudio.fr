@@ -1,0 +1,21 @@
+---
+import { getImage } from 'astro:assets';
+import type { ComponentProps } from 'astro/types';
+
+import { parseAstroLocale } from '@/i18n/utils';
+
+import { PersonCard as PersonCardUI } from './person-card';
+
+type Props = Omit<ComponentProps<typeof PersonCardUI>, 'image' | 'locale'>;
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const props = Astro.props;
+
+const image = await getImage({
+  src: props.person.data.picture ?? '',
+  width: 500,
+  height: 600,
+});
+---
+
+<PersonCardUI locale={locale} image={image} {...props} />

@@ -39,7 +39,7 @@ export const PersonCard = (props: {
               match(props.hover)
                 .with(
                   'hard',
-                  () => 'group-hover:-translate-y-[10.4%] group-hover:scale-120'
+                  () => 'group-hover:-translate-y-[8%] group-hover:scale-115'
                 )
                 .with(
                   'soft',
