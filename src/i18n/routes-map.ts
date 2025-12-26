@@ -16,6 +16,7 @@ export const ROUTE_MAPPINGS = {
   '/fr/blog': { en: null },
   '/fr/blog/:page': { en: null },
   '/fr/blog/posts': { en: null },
+  '/fr/mentions-legales': { en: '/en/legal-notice' },
 } as const satisfies Record<
   DefaultLocaleRoutePaths,
   Record<LocalesWithoutDefault, RoutePaths | null>

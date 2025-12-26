@@ -1,0 +1,132 @@
+---
+import { match } from 'ts-pattern';
+
+import { getLink } from '@/lib/link';
+import { getSiteUrl } from '@/lib/site/get-site-url';
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import HeroContent from '@/components/hero/hero-content.astro';
+import Hero from '@/components/hero/hero.astro';
+import Prose from '@/components/prose.astro';
+import SEO from '@/components/seo/index.astro';
+import { getAlternates } from '@/components/seo/utils';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
+import MainLayout from '@/layouts/main-layout.astro';
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
+
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    label: t('legal.root.hero.title'),
+    path: '/fr/mentions-legales',
+    params: {},
+  }),
+]);
+---
+
+<MainLayout>
+  <SEO
+    title={t('legal.root.hero.title')}
+    alternates={getAlternates('/fr/mentions-legales', {})}
+    breadcrumb={breadcrumb}
+  />
+  <Hero>
+    <HeroContent
+      title={t('legal.root.hero.title')}
+      description={t('legal.root.hero.description')}
+      breadcrumb={breadcrumb}
+    />
+  </Hero>
+  <Prose>
+    {
+      match(locale)
+        .with('fr', () => (
+          <>
+            <section>
+              <h2>Propriétaire</h2>
+              <p>
+                Le site <strong> {getSiteUrl()}</strong> est édité par le{' '}
+                <strong>BearStudio</strong>, SAS au capital social de 10 000 €
+              </p>
+              <p>
+                Inscrite au registre du commerce et des sociétés sous le numéro
+                <strong>SIRET 819 733 759 00016</strong>
+              </p>
+              <p>
+                dont le siège social se situe au 1900 Route de Cailly,
+                Saint-André-sur-Cailly 76690.
+              </p>
+              <ul>
+                <li>Téléphone : 07 49 36 04 36</li>
+                <li>Mail : contact@bearstudio.fr</li>
+              </ul>
+              <p>
+                Le directeur de la publication est{' '}
+                <a
+                  href={getLink('/fr/equipe/:id', locale, { id: 'rudy-baer' })}
+                >
+                  Rudy Baer
+                </a>
+              </p>
+            </section>
+            <section>
+              <h2>Hébergeur</h2>
+              <p>
+                Le site est hébergé par la société <strong>Vercel</strong>
+              </p>
+              <p>
+                dont le siège social se situe à 440 N Barranca Avenue #4133
+                Covina, CA 91723 United States
+              </p>
+            </section>
+          </>
+        ))
+        .with('en', () => (
+          <>
+            <section>
+              <h2>Owner</h2>
+              <p>
+                This site <strong> {getSiteUrl()}</strong> is published by{' '}
+                <strong>BearStudio</strong>, a simplified joint-stock company
+                (SAS) with a share capital of €10,000
+              </p>
+              <p>
+                Registered with the Trade and Companies Register under the
+                number
+                <strong>SIRET 819 733 759 00016</strong>
+              </p>
+              <p>
+                with its registered office located at 1900 Route de Cailly,
+                Saint-André-sur-Cailly 76690.
+              </p>
+              <ul>
+                <li>Phone: 07 49 36 04 36</li>
+                <li>Email: contact@bearstudio.fr</li>
+              </ul>
+              <p>
+                The publication director is{' '}
+                <a
+                  href={getLink('/fr/equipe/:id', locale, { id: 'rudy-baer' })}
+                >
+                  Rudy Baer
+                </a>
+              </p>
+            </section>
+
+            <section>
+              <h2>Hosting</h2>
+              <p>
+                This website is hosted by the <strong>Vercel Inc</strong>{' '}
+                company
+              </p>
+              <p>
+                Headquarters are located at 440 N Barranca Avenue #4133 Covina,
+                CA 91723 United States
+              </p>
+            </section>
+          </>
+        ))
+        .exhaustive()
+    }
+  </Prose>
+</MainLayout>

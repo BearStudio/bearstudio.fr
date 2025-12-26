@@ -34,7 +34,7 @@ const FOOTER_NAV: Array<NavItem> = [
     i18nKey: 'common.nav.career',
   },
   {
-    getHref: (locale) => getLink('/fr/blog', locale, {}),
+    getHref: (locale) => getLink('/fr/mentions-legales', locale, {}),
     i18nKey: 'common.nav.legals',
   },
 ];
