@@ -74,7 +74,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       description={t('blog.root.description')}
     />
   </Hero>
-  <Container class="-mt-16 py-0 lg:-mt-24">
+  <Container overlapHero>
     <PostsGrid>
       {page.data.map((post) => <PostCard post={post} />)}
     </PostsGrid>

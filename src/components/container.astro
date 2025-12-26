@@ -3,13 +3,15 @@ import { cn } from '@/lib/tailwind/utils';
 
 interface Props {
   class?: string;
+  overlapHero?: boolean;
 }
-const { class: className } = Astro.props;
+const { class: className, overlapHero } = Astro.props;
 ---
 
 <div
   class={cn(
     'relative mx-auto w-full flex flex-col max-w-5xl px-6 py-12 gap-4',
+    overlapHero && '-mt-16 pt-0 lg:-mt-24',
     className
   )}
 >

@@ -47,7 +47,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     />
   </Hero>
 
-  <Container class="-mt-16 gap-12 py-0 lg:-mt-24">
+  <Container overlapHero>
     <PeopleGrid>
       {peopleCurrent.map((person) => <PersonCard person={person} />)}
     </PeopleGrid>
