@@ -2,7 +2,7 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 import { isNonNullish } from 'remeda';
 
-import type { ComputedCollectionEntry } from '@/lib/content';
+import type { PersonWithComputed } from '@/lib/people';
 import type { Locale } from '@/i18n/utils';
 
 export async function getConferencesCollection({
@@ -18,16 +18,14 @@ export async function getConferencesCollection({
       const itemLocale = item.id.split('/')[1]?.replace('.md', '');
       return itemLocale === locale;
     })
-    .map(conferencesPersonWithComputed);
+    .map(conferenceWithComputed);
 
   // TODO sort conferences
   return conferences.slice(0, limit);
 }
 
-export type ConferencesPersonWithComputed = ReturnType<
-  typeof conferencesPersonWithComputed
->;
-export const conferencesPersonWithComputed = (
+export type ConferenceWithComputed = ReturnType<typeof conferenceWithComputed>;
+export const conferenceWithComputed = (
   item: CollectionEntry<'conferences'>
 ) => {
   // item.id format is: "slug/locale.md" (e.g., "ivan-dalmet/fr.md")
@@ -44,7 +42,7 @@ export const conferencesPersonWithComputed = (
 export async function getConferencesCollectionByPerson(params: {
   locale: Locale;
   limit?: number | undefined;
-  person: ComputedCollectionEntry<'people'>;
+  person: PersonWithComputed;
 }) {
   return (await getConferencesCollection(params))
     .filter((item) =>

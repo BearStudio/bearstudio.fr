@@ -1,47 +1,32 @@
 ---
 title: 'React Native : React pour développer des apps mobiles iOS et Android'
-description: "React s’est imposé depuis plusieurs années comme une référence dans le développement d’applications web dynamiques. Après le web, le projet Open-Source s’est étendu en 2015 au mobile avec React Native et avec pour objectif de simplifier le développement d’applications mobiles natives Android et iOS et de permettre aux développeurs d’avoir un unique projet fonctionnel sur les deux plateformes. Ce talk sera donc un retour d’expérience sur React Native et présentera tout ce qu’il faut connaitre pour démarrer un projet React Native :\r\n\r\n<br>\r\n<br>\r\n<div class=\"text-left\"><img class=\"alignleft\" src=\"https://www.bearstudio.fr/wp-content/uploads/2022/05/conference-devfest-react-native-nicolas.jpg\" alt=\"Conférence de Nicolas Torion sur React Native au Dev Fest\" width=\"500\" height=\"250\"  /></div> "
+
 instances:
-  - location:
-      name: 'Volcamp'
-    event: 'volcamp'
+  - eventName: 'Volcamp'
     date: 2022-10-21
     speakers: ['nicolas-torion']
-  - location:
-      name: 'DevFest Strasbourg'
-    event: 'devfest-strasbourg'
+  - eventName: 'DevFest Strasbourg'
     date: 2021-11-09
     speakers: ['nicolas-torion']
-  - location:
-      name: 'JSSophia #10'
-    event: 'jssophia'
+  - eventName: 'JSSophia #9'
     date: 2021-04-01
     speakers: ['nicolas-torion']
-  - location:
-      name: ' DevFest Strasbourg '
-    event: 'devfest-strasbourg'
+  - eventName: 'DevFest Strasbourg'
     date: 2019-11-14
     speakers: ['nicolas-torion']
-  - location:
-      name: 'Codeurs en seine'
-    event: 'codeurs-en-seine'
+  - eventName: 'Codeurs en Seine'
     date: 2019-09-01
     speakers: ['nicolas-torion']
-  - location:
-      name: 'Dubai - Astrolabs'
-    event: 'dubai-astrolabs'
+  - eventName: 'Dubai - Astrolabs'
     date: 2022-02-09
     speakers: ['quentin-lerebours']
-  - location:
-      name: 'Abu Dhabi - Hub71'
-    event: 'abu-dhabi-hub71'
+  - eventName: 'Abu Dhabi - Hub71'
     date: 2022-02-09
     speakers: ['quentin-lerebours']
-state: 'published'
 ---
 
-JSON contenant toute les données du Wordpress (utile ou pas, elles sont toutes là pour vérification des données)
-{"speaker":"Nicolas Torion","title":"React Native : React pour développer des apps mobiles iOS et Android","date_and_location_0_location":"Volcamp","date_and_location_0_date":"20221021","date_and_location_1_location":"DevFest Strasbourg","date_and_location_1_date":"20211109","date_and_location_2_location":"JSSophia #10","date_and_location_2_date":"20210401","date_and_location_3_location":" DevFest Strasbourg ","date_and_location_3_date":"20191114","date_and_location_4_location":"Codeurs en seine","date_and_location_4_date":"20190901","date_and_location":"5","description":"React s’est imposé depuis plusieurs années comme une référence dans le développement d’applications web dynamiques. Après le web, le projet Open-Source s’est étendu en 2015 au mobile avec React Native et avec pour objectif de simplifier le développement d’applications mobiles natives Android et iOS et de permettre aux développeurs d’avoir un unique projet fonctionnel sur les deux plateformes. Ce talk sera donc un retour d’expérience sur React Native et présentera tout ce qu’il faut connaitre pour démarrer un projet React Native :\r\n\r\n<br>\r\n<br>\r\n<div class=\"text-left\"><img class=\"alignleft\" src=\"https://www.bearstudio.fr/wp-content/uploads/2022/05/conference-devfest-react-native-nicolas.jpg\" alt=\"Conférence de Nicolas Torion sur React Native au Dev Fest\" width=\"500\" height=\"250\" /></div> ","links_0_label":"Conférence Codeurs en Seine","links_0_link":"https://www.codeursenseine.com/meetups/events/react-native-obfuscation","links_1_label":"Conférence JSSophia","links_1_link":"https://www.youtube.com/watch?v=C9Yzupp3sj8","links":"2"}
+React s’est imposé depuis plusieurs années comme une référence dans le développement d’applications web dynamiques. Après le web, le projet Open-Source s’est étendu en 2015 au mobile avec React Native et avec pour objectif de simplifier le développement d’applications mobiles natives Android et iOS et de permettre aux développeurs d’avoir un unique projet fonctionnel sur les deux plateformes. Ce talk sera donc un retour d’expérience sur React Native et présentera tout ce qu’il faut connaitre pour démarrer un projet React Native :
 
-JSON contenant toute les données du Wordpress (utile ou pas, elles sont toutes là pour vérification des données)
-{"speaker":"Quentin Lerebours","title":"React Native pour développer des applications natives iOS et Android","date_and_location_0_location":"Dubai - Astrolabs","date_and_location_0_date":"20220209","date_and_location":"2","description":"L'idée de React Native est de simplifier le développement d'applications mobiles natives et de permettre aux développeurs d'avoir un seul projet pour les plateformes Android et iOS. Au BearStudio, nous utilisons React Native comme solution pour le développement de nos projets d'applications mobiles. Cette conférence sera une initiation à React Native et un retour d'expérience sur le framework.\r\n\r\n<br>\r\n<br>\r\n<div class=\"text-left\"><img class=\"alignleft\" src=\"https://www.bearstudio.fr/wp-content/uploads/2022/05/conference-abu-dhabi-hub71-react-native-quentin.jpg\" alt=\"Conférence de Quentin Lerebours sur React Native à Astrolabs à Dubai\" width=\"500\" height=\"250\" /></div>","links":"1","date_and_location_1_location":"Abu Dhabi - Hub71","date_and_location_1_date":"20220209","links_0_label":"Replay Astrolabs","links_0_link":"https://www.youtube.com/watch?v=xQtTMQJPpeM"}
+<br>
+<br>
+<div class=\"text-left\"><img class=\"alignleft\" src=\"https://www.bearstudio.fr/wp-content/uploads/2022/05/conference-devfest-react-native-nicolas.jpg\" alt=\"Conférence de Nicolas Torion sur React Native au Dev Fest\" width=\"500\" height=\"250\"  /></div>

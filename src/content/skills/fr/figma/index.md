@@ -1,5 +1,0 @@
----
-name: 'Figma'
-logo: ''
-metaDescription: ''
----

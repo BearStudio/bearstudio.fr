@@ -1,9 +1,9 @@
 ---
-title: "Cyberattaque, quelles solutions pour protéger votre entreprise ?"
-description: "Entre réglementation et engagements contractuels concernant la cybersécurité nous ne savons plus toujours où donner de la tête. L’objectif de cette intervention pour Clément MICHEL de Manika est de vous donner un axe de déploiement de votre stratégie de cyberdéfense (vision gouvernance et audits).\r\n\r\nQuant à l’intervention de Maxime GUILLAUME de ACTEMIUM et Sami MABROUK de AXIANS, ils ont pour objectif de vous présenter les solutions aux problématiques liées aux cyberattaques avec un focus particulier sur le monde industriel. Pour faire face à la cybercriminalité/cyberattaques, les solutions techniques à déployer doivent être accompagnées de mesures et procédures à suivre par tous les intervenants."
-instances: []
-state: "published"
+title: 'Cyberattaque, quelles solutions pour protéger votre entreprise ?'
 
+instances: []
 ---
-JSON contenant toute les données du Wordpress (utile ou pas, elles sont toutes là pour vérification des données)
-{"speaker":"Clément Michel","title":"Cyberattaque, quelles solutions pour protéger votre entreprise ?","date":"20200925","lieu":"Paris","description":"Entre réglementation et engagements contractuels concernant la cybersécurité nous ne savons plus toujours où donner de la tête. L’objectif de cette intervention pour Clément MICHEL de Manika est de vous donner un axe de déploiement de votre stratégie de cyberdéfense (vision gouvernance et audits).\r\n\r\nQuant à l’intervention de Maxime GUILLAUME de ACTEMIUM et Sami MABROUK de AXIANS, ils ont pour objectif de vous présenter les solutions aux problématiques liées aux cyberattaques avec un focus particulier sur le monde industriel. Pour faire face à la cybercriminalité/cyberattaques, les solutions techniques à déployer doivent être accompagnées de mesures et procédures à suivre par tous les intervenants.","lien":"https://www.nae.fr/agenda/4-0-en-pratique-la-connectivite-dans-lusine-du-futur-24-09-20/","label":"https://www.nae.fr/agenda/4-0-en-pratique-la-connectivite-dans-lusine-du-futur-24-09-20/","date_and_location":"","links":""}
+
+Entre réglementation et engagements contractuels concernant la cybersécurité nous ne savons plus toujours où donner de la tête. L’objectif de cette intervention pour Clément MICHEL de Manika est de vous donner un axe de déploiement de votre stratégie de cyberdéfense (vision gouvernance et audits).
+
+Quant à l’intervention de Maxime GUILLAUME de ACTEMIUM et Sami MABROUK de AXIANS, ils ont pour objectif de vous présenter les solutions aux problématiques liées aux cyberattaques avec un focus particulier sur le monde industriel. Pour faire face à la cybercriminalité/cyberattaques, les solutions techniques à déployer doivent être accompagnées de mesures et procédures à suivre par tous les intervenants.

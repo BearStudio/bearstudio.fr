@@ -9,28 +9,19 @@ export const zConference = ({ image }: SchemaContext) =>
     title: z.string(),
     image: image().optional(),
     excerpt: z.string().optional(),
-    description: z.string().optional(),
     metaDescription: z.string().optional(),
-    instances: z.array(zConferenceInstance({ image })).optional(),
-    state: z.enum(['draft', 'published']).default('draft'),
+    instances: z.array(zConferenceInstance()).optional(),
   });
 
 export type ConferenceInstance = z.infer<
   ReturnType<typeof zConferenceInstance>
 >;
-export const zConferenceInstance = ({ image }: SchemaContext) =>
+export const zConferenceInstance = () =>
   z.object({
-    event: reference('events').optional(),
+    date: z.date(),
+    eventName: z.string().optional(),
     link: z.string().optional(),
-    date: z.date().optional(),
     language: z.string().optional(),
     speakers: z.array(reference('people')).optional(),
     replay: z.union([z.string(), zVideoIntegration()]).optional(),
-    location: z
-      .object({
-        name: z.string(),
-        address: z.string().optional(),
-        image: image().optional(),
-      })
-      .optional(),
   });

@@ -2,8 +2,7 @@ import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 
 import { filter, isNonNullish } from 'remeda';
 
-import { type ComputedCollectionEntry } from '@/lib/content';
-import { personWithComputed } from '@/lib/people';
+import { personWithComputed, type PersonWithComputed } from '@/lib/people';
 import type { Locale } from '@/i18n/utils';
 
 type Params = {
@@ -16,7 +15,7 @@ const isPublished = (post: CollectionEntry<'posts'>) =>
 
 type HasSpecificAuthorProps = {
   post: CollectionEntry<'posts'>;
-  author: ComputedCollectionEntry<'people'>;
+  author: PersonWithComputed;
 };
 
 const hasSpecificAuthor = ({ post, author }: HasSpecificAuthorProps) => {
@@ -79,7 +78,7 @@ const postWithComputed = async (item: CollectionEntry<'posts'>) => {
 };
 
 type GetPostsCollectionLinkedToPersonProps = Params & {
-  author: ComputedCollectionEntry<'people'>;
+  author: PersonWithComputed;
 };
 
 export async function getPostsCollectionLinkedToPerson({

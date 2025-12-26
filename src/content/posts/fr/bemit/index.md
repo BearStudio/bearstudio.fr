@@ -79,20 +79,19 @@ Personnellement, j'aime à décomposer cette structure en 4 préfixes principaux
 
 - **Layout : `l-`** :  
    Il regroupe tous les éléments faisant partie de la mise en page. C'est l'une des parties générales et structurelles de votre UI, utilisée généralement sur tous les écrans de votre site.  
-   Exemple : `l-header` `l-typography` `l-sidebar` `l-contact` `...`  
+   Exemple : `l-header` `l-typography` `l-sidebar` `l-contact` `...`
 
 - **Object : `o-`** :  
    Il signifie que cet élément est un objet. C'est une partie d'UI déterminée et identifiable (_"Ceci est un bouton", "Ceci est une modale"..._) qui peut être utilisée de manière répétée dans votre projet.  
-   Exemple : `o-buttons` `o-cards` `o-panels` `o-breadcrumbs` `...`  
+   Exemple : `o-buttons` `o-cards` `o-panels` `o-breadcrumbs` `...`
 
 - **Component : `c-`** :  
    Il signifie que cet élément est un composant. C'est un élément spécifique (parfois même abstrait), qui peut être utilisé de manière ciblée, sans discernement de sa position dans le code.  
-   Exemple : `c-media` `c-input-slider` `c-checkbox` `c-avatar` `...`  
+   Exemple : `c-media` `c-input-slider` `c-checkbox` `c-avatar` `...`
 
 - **Utility : `u-`** :  
    C'est une classe utilitaire. Elle est utilisée pour écraser et modifier le comportement des éléments ciblés.  
-   Exemple : `u-text-align` `u-display` `u-spin` `u-no-margin` `...`  
-
+   Exemple : `u-text-align` `u-display` `u-spin` `u-no-margin` `...`
 
 ```
 <div class="l-grid">
@@ -109,12 +108,11 @@ Dans cet exemple, nous pouvons donc facilement identifier les différentes strat
 
 - **State : `is-` / `has-`** :  
    C'est une classe d'état.  
-   Elle sert à indiquer un changement visuel lié à une action effectuée sur la page. Exemple : `is-loading` `is-collapsed` `has-error` `has-result` `...`  
+   Elle sert à indiquer un changement visuel lié à une action effectuée sur la page. Exemple : `is-loading` `is-collapsed` `has-error` `has-result` `...`
 
 - **JavaScript : `js-`** :  
    Cette dernière classe indique la présence d'une interaction JavaScript.  
-   Exemple : `js-map` `js-slider` `...`  
-
+   Exemple : `js-map` `js-slider` `...`
 
 (Plus marginaux, d'autres préfixes peuvent également être utilisés, tels que `t-` pour les classes destinées à modifier le thème du projet, `s-` pour les éléments de pure stylisation graphique, `qa-` pour les tests ou encore `_` pour les gros hacks de guedin.)
 
