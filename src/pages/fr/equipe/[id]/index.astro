@@ -4,7 +4,7 @@ import { Image } from 'astro:assets';
 import { render } from 'astro:content';
 
 import { getBlogCollectionLinkedToTeamMember } from '@/lib/blog';
-import { getConferenceCollectionLinkedToTeamMember } from '@/lib/conferences';
+import { getConferencesCollectionByPerson } from '@/lib/conferences';
 import type { ComputedCollectionEntry } from '@/lib/content';
 import { getLink } from '@/lib/link';
 import { getTeamCollection } from '@/lib/team';
@@ -27,22 +27,11 @@ import MainLayout from '@/layouts/main-layout.astro';
 
 export async function generateStaticPaths(params: { locale: Locale }) {
   const team = await getTeamCollection({ locale: params.locale });
-
   return Promise.all(
     team.map(async (person) => {
-      const posts = await getBlogCollectionLinkedToTeamMember({
-        author: person,
-        locale: params.locale,
-      });
-
-      const conferences = await getConferenceCollectionLinkedToTeamMember({
-        speaker: person,
-        locale: params.locale,
-      });
-
       return {
         params: { id: person.data._computed.slug },
-        props: { person, posts, conferences },
+        props: { person },
       };
     })
   );
@@ -56,9 +45,19 @@ type Props = {
   posts?: Array<ComputedCollectionEntry<'blog'>>;
   conferences?: Array<ComputedCollectionEntry<'conferences'>>;
 };
+
 const locale = parseAstroLocale(Astro.currentLocale);
+const { person } = Astro.props;
+const posts = await getBlogCollectionLinkedToTeamMember({
+  author: person,
+  locale: locale,
+});
+
+const conferences = await getConferencesCollectionByPerson({
+  person,
+  locale: locale,
+});
 const t = getTranslationFn(locale);
-const { person, posts, conferences } = Astro.props;
 const { Content } = await render(person);
 const url = new URL(Astro.url.pathname, Astro.site);
 

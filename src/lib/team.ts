@@ -1,25 +1,8 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
+import { sortBy } from 'remeda';
+
 import type { Locale } from '@/i18n/utils';
-
-const sortByOrder = (
-  person1: CollectionEntry<'team'>,
-  person2: CollectionEntry<'team'>
-) => {
-  if (person1.data.order === undefined && person2.data.order === undefined) {
-    return 0;
-  }
-
-  if (person1.data.order === undefined) {
-    return 1;
-  }
-
-  if (person2.data.order === undefined) {
-    return -1;
-  }
-
-  return person1.data.order - person2.data.order;
-};
 
 export async function getTeamCollection({
   locale,
@@ -36,18 +19,24 @@ export async function getTeamCollection({
       status === undefined ? true : item.data.status === status
     )
     .filter((item) => {
-      const [, itemLocale] = item.id.split('/');
+      // item.id format is: "slug/locale.md" (e.g., "ivan-dalmet/fr.md")
+      const itemLocale = item.id.split('/')[1]?.replace('.md', '');
       return itemLocale === locale;
     })
-    .sort(sortByOrder)
     .map(teamMemberWithComputed);
 
-  return team.slice(0, limit);
+  const teamSorted = sortBy(team, [
+    (item) => item.data.order ?? Infinity,
+    'asc',
+  ]);
+
+  return teamSorted.slice(0, limit);
 }
 
 export type TeamMemberWithComputed = ReturnType<typeof teamMemberWithComputed>;
 export const teamMemberWithComputed = (item: CollectionEntry<'team'>) => {
-  const [slug] = item.id.split('/');
+  // item.id format is: "slug/locale.md" (e.g., "ivan-dalmet/fr.md")
+  const slug = item.id.split('/')[0];
   return {
     ...item,
     data: {

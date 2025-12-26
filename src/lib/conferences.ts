@@ -1,51 +1,59 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
-import {
-  existsInLocale,
-  getSlugWithoutLocale,
-  type ComputedCollectionEntry,
-} from '@/lib/content';
+import { isNonNullish } from 'remeda';
+
+import type { ComputedCollectionEntry } from '@/lib/content';
 import type { Locale } from '@/i18n/utils';
 
-type Params = {
-  limit?: number | undefined;
-  locale: Locale;
-};
-
-type HasSpecificSpeakerProps = {
-  post: CollectionEntry<'conferences'>;
-  speaker: ComputedCollectionEntry<'team'>;
-};
-
-const hasSpecificSpeaker = ({ post, speaker }: HasSpecificSpeakerProps) => {
-  return (post.data?.instances ?? []).find((conference) =>
-    (conference.speakers ?? []).some(
-      (currentSpeaker) => currentSpeaker.id === speaker.data._computed.slug
-    )
-  );
-};
-
 export async function getConferencesCollection({
-  limit = undefined,
   locale,
-}: Params) {
+  limit,
+}: {
+  locale: Locale;
+  limit?: number | undefined;
+}) {
   const conferences = (await getCollection('conferences'))
-    .filter((post) => existsInLocale({ idWithLocale: post.id, locale }))
-    .map((post) => getSlugWithoutLocale<'conferences'>(post));
+    .filter((item) => {
+      // item.id format is: "slug/locale.md" (e.g., "ivan-dalmet/fr.md")
+      const itemLocale = item.id.split('/')[1]?.replace('.md', '');
+      return itemLocale === locale;
+    })
+    .map(conferencesMemberWithComputed);
 
+  // TODO sort conferences
   return conferences.slice(0, limit);
 }
 
-type GetConferenceCollectionLinkedToTeamMemberProps = Params & {
-  speaker: ComputedCollectionEntry<'team'>;
+export type ConferencesMemberWithComputed = ReturnType<
+  typeof conferencesMemberWithComputed
+>;
+export const conferencesMemberWithComputed = (
+  item: CollectionEntry<'conferences'>
+) => {
+  // item.id format is: "slug/locale.md" (e.g., "ivan-dalmet/fr.md")
+  const slug = item.id.split('/')[0];
+  return {
+    ...item,
+    data: {
+      ...item.data,
+      _computed: { slug },
+    },
+  };
 };
 
-export async function getConferenceCollectionLinkedToTeamMember({
-  speaker,
-  locale,
-  limit = undefined,
-}: GetConferenceCollectionLinkedToTeamMemberProps) {
-  return (await getConferencesCollection({ limit, locale }))
-    .filter((post) => hasSpecificSpeaker({ post, speaker }))
-    .filter((x) => x);
+export async function getConferencesCollectionByPerson(params: {
+  locale: Locale;
+  limit?: number | undefined;
+  person: ComputedCollectionEntry<'team'>;
+}) {
+  return (await getConferencesCollection(params))
+    .filter((item) =>
+      (item.data?.instances ?? []).find((conference) =>
+        (conference.speakers ?? []).some(
+          (currentSpeaker) =>
+            currentSpeaker.id === params.person.data._computed.slug
+        )
+      )
+    )
+    .filter(isNonNullish);
 }
