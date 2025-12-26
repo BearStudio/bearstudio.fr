@@ -6,11 +6,13 @@ import { getCollection } from 'astro:content';
 import { getLink } from '@/lib/link';
 import { getPeopleCollection } from '@/lib/people';
 import { getPolaroidHref } from '@/lib/polaroids';
+import { getPostsCollection } from '@/lib/posts';
 import { cn } from '@/lib/tailwind/utils';
 import Container from '@/components/container.astro';
 import Hero from '@/components/hero/hero.astro';
 import { HomePeople } from '@/components/home/home-people';
 import { HomePolaroids } from '@/components/home/home-polaroids';
+import { HomePosts } from '@/components/home/home-posts';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import { buttonVariants } from '@/components/ui/button';
@@ -53,6 +55,29 @@ const peopleCurrent = await Promise.all(
               src: person.data.picture,
               width: 500,
               height: 600,
+            })
+          : undefined,
+      },
+    };
+  })
+);
+
+const latestPosts = await Promise.all(
+  (
+    await getPostsCollection({
+      locale,
+      limit: 6,
+    })
+  ).map(async (person) => {
+    return {
+      ...person,
+      data: {
+        ...person.data,
+        image: person.data.heroImage
+          ? await getImage({
+              src: person.data.heroImage,
+              width: 1200,
+              height: 800,
             })
           : undefined,
       },
@@ -181,7 +206,7 @@ const peopleCurrent = await Promise.all(
   <Container class="gap-12">
     <div class="flex flex-col gap-4">
       <div class="flex flex-col gap-1">
-        <h2 class="font-heading text-2xl font-bold">Notre équipe</h2>
+        <h2 class="font-heading text-2xl font-bold">Nos experts</h2>
         <p class="max-w-[70ch] text-sm text-balance opacity-80">
           Rencontrez les ours passionnés qui donnent vie à vos projets
           numériques avec expertise et créativité.
@@ -192,12 +217,13 @@ const peopleCurrent = await Promise.all(
 
     <div class="flex flex-col gap-4">
       <div class="flex flex-col gap-1">
-        <h2 class="font-heading text-2xl font-bold">Le blog</h2>
+        <h2 class="font-heading text-2xl font-bold">Nos articles</h2>
         <p class="max-w-[70ch] text-sm text-balance opacity-80">
           Découvrez nos articles, retours d'expérience et réflexions sur le
           développement web, mobile et les bonnes pratiques du numérique.
         </p>
       </div>
+      <HomePosts client:load posts={latestPosts} locale={locale} />
     </div>
   </Container>
 </MainLayout>

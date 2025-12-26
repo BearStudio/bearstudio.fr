@@ -17,7 +17,7 @@ export const PostCard = (props: {
         id: props.post.data._computed.slug,
       })}
       onDragStart={(e) => e.preventDefault()}
-      className="bg-card border-card-border flex flex-col gap-2.5 overflow-hidden rounded-md border border-b-3 p-2 transition-all hover:-translate-y-1.5 hover:shadow-xl"
+      className="bg-card flex-1 border-card-border flex flex-col gap-2.5 overflow-hidden rounded-md border border-b-3 p-2 transition-all hover:-translate-y-1.5 hover:shadow-xl"
     >
       <div className="bg-brand-900 relative aspect-[1.2] w-full overflow-hidden rounded-sm">
         {!!props.image && (
@@ -29,7 +29,7 @@ export const PostCard = (props: {
         )}
       </div>
       <div className="flex flex-1 flex-col gap-2 px-1">
-        <h2 className="font-heading flex-1 text-lg leading-tight font-bold">
+        <h2 className="font-heading flex-1 text-lg leading-tight font-bold line-clamp-2">
           {props.post.data.title}
         </h2>
         <FormattedDate
