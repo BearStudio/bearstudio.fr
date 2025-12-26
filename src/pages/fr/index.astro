@@ -61,15 +61,18 @@ const polaroids = await Promise.all(
       class="mx-auto flex w-full max-w-5xl flex-1 items-center justify-center gap-6 max-lg:pb-24 lg:gap-12"
     >
       <div
-        class="flex flex-1 flex-col justify-center gap-4 max-lg:items-center max-lg:text-center lg:gap-6"
+        class="flex flex-1 flex-col justify-center gap-4 max-lg:items-center max-lg:text-center lg:gap-4"
       >
         <h1
           class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
         >
           {t('home.hero.title')}
         </h1>
+        <p class="max-w-[60ch] text-sm text-balance opacity-80">
+          {t('home.hero.description')}
+        </p>
         <div
-          class="flex max-w-sm flex-wrap gap-2 max-lg:items-center max-lg:justify-center"
+          class="flex max-w-sm flex-wrap gap-2 pt-4 max-lg:items-center max-lg:justify-center"
         >
           <a
             href={getLink('/fr/prestations/ux-design', locale, {})}
