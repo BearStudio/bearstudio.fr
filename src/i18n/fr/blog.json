@@ -1,10 +1,8 @@
 {
   "root": {
-    "hero": {
-      "breadcrumb": "Blog",
-      "title": "Le blog des ours",
-      "description": "Bienvenue sur notre blog ! Vous y trouverez des articles techniques en lien avec le développement web et le design. Mais aussi des articles plus axés autour de l'entrepreneuriat et du business. En bref, c'est le meilleur moyen pour vous tenir informés des actualités du BearStudio. Bonne lecture !"
-    },
+    "breadcrumb": "Blog",
+    "title": "Le blog des ours",
+    "description": "Bienvenue sur notre blog ! Vous y trouverez des articles techniques en lien avec le développement web et le design. Mais aussi des articles plus axés autour de l'entrepreneuriat et du business. En bref, c'est le meilleur moyen pour vous tenir informés des actualités du BearStudio. Bonne lecture !",
     "metadata": {
       "title": "Blog du BearStudio, studio de développement web à Rouen",
       "description": "Retrouvez les articles de BearStudio sur le développement web et mobile, les technologies, et bien plus encore."

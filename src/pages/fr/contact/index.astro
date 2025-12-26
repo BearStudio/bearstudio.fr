@@ -14,7 +14,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({
     path: '/fr/contact',
     params: {},
-    label: t('contact.root.hero.breadcrumb'),
+    label: t('contact.root.breadcrumb'),
   }),
 ]);
 ---
@@ -26,7 +26,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     breadcrumb={breadcrumb}
   />
   <Hero>
-    <HeroContent breadcrumb={breadcrumb} title={t('contact.root.hero.title')} />
+    <HeroContent breadcrumb={breadcrumb} title={t('contact.root.title')} />
   </Hero>
   <div class="lg:pt-20">PLACEHOLDER</div>
 </MainLayout>

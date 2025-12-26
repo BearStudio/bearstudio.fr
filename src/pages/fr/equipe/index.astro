@@ -22,7 +22,7 @@ const peopleAdvisor = await getPeopleCollection({
 
 const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({
-    label: t('team.root.hero.breadcrumb'),
+    label: t('team.root.breadcrumb'),
     path: '/fr/equipe',
     params: {},
   }),
@@ -40,8 +40,8 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
   <Hero>
     <HeroContent
       breadcrumb={breadcrumb}
-      title={t('team.root.hero.title')}
-      description={t('team.root.hero.description')}
+      title={t('team.root.title')}
+      description={t('team.root.description')}
     />
   </Hero>
 

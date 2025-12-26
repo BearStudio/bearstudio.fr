@@ -1,9 +1,7 @@
 {
   "root": {
-    "hero": {
-      "breadcrumb": "Équipe",
-      "title": "Une tanière d'experts du numérique",
-      "description": "Toute l'équipe du BearStudio vous accompagne dans la réalisation de vos plus folles idées ! Que vous soyez entrepreneur, porteur de projet ou grand groupe, nous mettons toutes nos connaissances et nos compétences au service de vos projets."
-    }
+    "breadcrumb": "Équipe",
+    "title": "Une tanière d'experts du numérique",
+    "description": "Toute l'équipe du BearStudio vous accompagne dans la réalisation de vos plus folles idées ! Que vous soyez entrepreneur, porteur de projet ou grand groupe, nous mettons toutes nos connaissances et nos compétences au service de vos projets."
   }
 }

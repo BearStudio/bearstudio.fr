@@ -12,12 +12,12 @@ const t = getTranslationFn(locale);
 
 const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({
-    label: t('services.root.hero.breadcrumb'),
+    label: t('services.root.breadcrumb'),
     path: '/fr/prestations',
     params: {},
   }),
   entry({
-    label: t('services.uxDesign.hero.breadcrumb'),
+    label: t('services.uxDesign.breadcrumb'),
     path: '/fr/prestations/ux-design',
     params: {},
   }),
@@ -34,8 +34,8 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
   <Hero>
     <HeroContent
       breadcrumb={breadcrumb}
-      title={t('services.uxDesign.hero.title')}
-      description={t('services.uxDesign.hero.description')}
+      title={t('services.uxDesign.title')}
+      description={t('services.uxDesign.description')}
     />
   </Hero>
 </MainLayout>

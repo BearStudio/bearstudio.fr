@@ -1,8 +1,6 @@
 {
   "root": {
-    "hero": {
-      "breadcrumb": "Contact",
-      "title": "Contact Us"
-    }
+    "breadcrumb": "Contact",
+    "title": "Contact Us"
   }
 }

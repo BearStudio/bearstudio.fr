@@ -43,7 +43,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({
     path: '/fr/blog',
     params: {},
-    label: t('blog.root.hero.breadcrumb'),
+    label: t('blog.root.breadcrumb'),
   }),
   page.currentPage > 1
     ? entry({
@@ -68,8 +68,8 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
   <Hero>
     <HeroContent
       breadcrumb={breadcrumb}
-      title={t('blog.root.hero.title')}
-      description={t('blog.root.hero.description')}
+      title={t('blog.root.title')}
+      description={t('blog.root.description')}
     />
   </Hero>
   <div class="-mt-16 lg:-mt-24">

@@ -11,7 +11,7 @@ const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
 const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({
-    label: t('services.root.hero.breadcrumb'),
+    label: t('services.root.breadcrumb'),
     path: '/fr/prestations',
     params: {},
   }),
@@ -28,8 +28,8 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
   <Hero>
     <HeroContent
       breadcrumb={breadcrumb}
-      title={t('services.root.hero.title')}
-      description={t('services.root.hero.description')}
+      title={t('services.root.title')}
+      description={t('services.root.description')}
     />
   </Hero>
 </MainLayout>

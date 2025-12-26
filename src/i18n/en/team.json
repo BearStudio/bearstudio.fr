@@ -1,9 +1,7 @@
 {
   "root": {
-    "hero": {
-      "breadcrumb": "Team",
-      "title": "A den of digital experts",
-      "description": "The entire BearStudio team supports you in bringing your wildest ideas to life! Whether you're an entrepreneur, project owner, or large corporation, we put all our knowledge and skills at the service of your projects."
-    }
+    "breadcrumb": "Team",
+    "title": "A den of digital experts",
+    "description": "The entire BearStudio team supports you in bringing your wildest ideas to life! Whether you're an entrepreneur, project owner, or large corporation, we put all our knowledge and skills at the service of your projects."
   }
 }

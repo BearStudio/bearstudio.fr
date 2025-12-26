@@ -18,7 +18,7 @@ const FOOTER_NAV: Array<NavItem> = [
   },
   {
     getHref: (locale) => getLink('/fr/prestations/ux-design', locale, {}),
-    i18nKey: 'services.uxDesign.hero.breadcrumb',
+    i18nKey: 'services.uxDesign.breadcrumb',
   },
   {
     getHref: (locale) => getLink('/fr/equipe', locale, {}),

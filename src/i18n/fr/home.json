@@ -1,8 +1,6 @@
 {
-  "hero": {
-    "title": "De l'idée à la mise en production",
-    "description": "Vous avez un projet numérique innovant et ne savez pas par où commencer\u00a0? BearStudio est là pour vous\u00a0!"
-  },
+  "title": "De l'idée à la mise en production",
+  "description": "Vous avez un projet numérique innovant et ne savez pas par où commencer ? BearStudio est là pour vous !",
   "metadata": {
     "title": "Studio de développement normand pour porteurs de projet numérique",
     "description": "BearStudio accompagne les porteurs de projet pour les aider techniquement sur le développement web ou mobile de leurs idées."
