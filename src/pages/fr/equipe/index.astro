@@ -1,6 +1,7 @@
 ---
 import { getPeopleCollection } from '@/lib/people';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
 import PersonCard from '@/components/people/person-card.astro';
@@ -45,18 +46,16 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     />
   </Hero>
 
-  <div
-    class="relative mx-auto -mt-16 flex w-full max-w-5xl flex-col gap-12 p-6 md:-mt-24"
-  >
+  <Container class="-mt-16 gap-12 py-0 lg:-mt-24">
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
       {peopleCurrent.map((person) => <PersonCard person={person} />)}
     </div>
     <div class="flex flex-col gap-4">
       <div class="flex flex-col gap-2">
-        <h2 class="font-heading text-xl font-bold">
+        <h2 class="font-heading text-2xl font-bold">
           Les conseillers du BearStudio
         </h2>
-        <p>
+        <p class="max-w-[80ch] text-sm text-balance opacity-80">
           Parce qu'il est important de prendre du recul, le BearStudio a
           constitué un noyau d'advisors expérimentés dont le rôle est de
           compléter et de challenger l'équipe principale.
@@ -66,5 +65,5 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
         {peopleAdvisor.map((person) => <PersonCard person={person} />)}
       </div>
     </div>
-  </div>
+  </Container>
 </MainLayout>

@@ -7,5 +7,10 @@
       "title": "Blog du BearStudio, studio de développement web à Rouen",
       "description": "Retrouvez les articles de BearStudio sur le développement web et mobile, les technologies, et bien plus encore."
     }
+  },
+  "pagination": {
+    "newer": "Plus récents",
+    "older": "Plus anciens",
+    "page": "Page"
   }
 }

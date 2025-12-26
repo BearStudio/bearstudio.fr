@@ -1,0 +1,17 @@
+---
+import { cn } from '@/lib/tailwind/utils';
+
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<div
+  class={cn(
+    'xs:grid-cols-2 relative grid gap-4 py-4 md:grid-cols-3',
+    className
+  )}
+>
+  <slot />
+</div>

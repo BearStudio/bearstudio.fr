@@ -10,6 +10,7 @@ import dayjs from 'dayjs';
 import { getLink } from '@/lib/link';
 import { getPostsCollection, type PostWithComputed } from '@/lib/posts';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
 import Prose from '@/components/prose.astro';
@@ -137,7 +138,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       </div>
     </HeroContent>
   </Hero>
-  <div class="mx-auto w-full max-w-5xl px-6 py-12">
+  <Container>
     <Prose>
       <Content />
     </Prose>
@@ -168,5 +169,5 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
         )
       }
     </div>
-  </div>
+  </Container>
 </MainLayout>

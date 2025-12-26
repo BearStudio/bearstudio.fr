@@ -6,6 +6,7 @@ import { getCollection } from 'astro:content';
 import { getLink } from '@/lib/link';
 import { getPolaroidHref } from '@/lib/polaroids';
 import { cn } from '@/lib/tailwind/utils';
+import Container from '@/components/container.astro';
 import Hero from '@/components/hero/hero.astro';
 import { HomePolaroids } from '@/components/home/home-polaroids';
 import SEO from '@/components/seo/index.astro';
@@ -152,7 +153,7 @@ const polaroids = await Promise.all(
     <HomePolaroids client:load locale={locale} polaroids={polaroids} />
   </div>
 
-  <div class="mx-auto max-w-5xl p-4">
+  <Container>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, earum
       doloremque doloribus amet similique blanditiis vitae quidem, qui,
@@ -183,7 +184,7 @@ const polaroids = await Promise.all(
       cupiditate atque molestiae dolores ut adipisci recusandae tempora? Saepe
       optio nemo necessitatibus.
     </p>
-  </div>
+  </Container>
 
   <div class="flex h-[2000px] flex-col gap-4 p-4"></div>
 </MainLayout>

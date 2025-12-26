@@ -15,10 +15,12 @@ import {
   getPostsCollectionLinkedToPerson,
   type PostWithComputed,
 } from '@/lib/posts';
+import PostCard from '@/components/blog/post-card.astro';
+import PostsGrid from '@/components/blog/posts-grid.astro';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
-import PostCard from '@/components/posts/post-card.astro';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates, getId } from '@/components/seo/utils';
@@ -176,7 +178,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       </div>
     </HeroContent>
   </Hero>
-  <div class="mx-auto flex w-full max-w-5xl flex-col gap-12 px-6 py-8">
+  <Container class="gap-8">
     <Prose>
       <Content />
     </Prose>
@@ -248,13 +250,13 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
           <h2 class="font-heading text-2xl font-bold">
             Sur le blog par {person.data.name}
           </h2>
-          <div class="xs:grid-cols-2 relative grid gap-4 md:grid-cols-3">
+          <PostsGrid>
             {posts.map((post) => {
               return <PostCard post={post} />;
             })}
-          </div>
+          </PostsGrid>
         </div>
       )
     }
-  </div>
+  </Container>
 </MainLayout>

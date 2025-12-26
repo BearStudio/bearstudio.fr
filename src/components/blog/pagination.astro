@@ -1,0 +1,44 @@
+---
+import { PiArrowLeftBold, PiArrowRightBold } from 'react-icons/pi';
+
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
+
+import { buttonVariants } from '../ui/button';
+
+interface Props {
+  currentPage: number;
+  nextUrl: string | undefined;
+  prevUrl: string | undefined;
+}
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
+const { currentPage, nextUrl, prevUrl } = Astro.props;
+---
+
+<div class="flex items-center justify-between">
+  <div class="flex-1">
+    {
+      !!prevUrl && (
+        <a class={buttonVariants({ variant: 'secondary' })} href={prevUrl}>
+          <PiArrowLeftBold className="size-4" />
+          <span class="max-2xs:sr-only">{t('blog.pagination.newer')}</span>
+        </a>
+      )
+    }
+  </div>
+  <div class="flex-1 text-center text-xs opacity-60">
+    {t('blog.pagination.page')}
+    {currentPage}
+  </div>
+  <div class="flex flex-1 justify-end">
+    {
+      !!nextUrl && (
+        <a href={nextUrl} class={buttonVariants({ variant: 'secondary' })}>
+          <span class="max-2xs:sr-only">{t('blog.pagination.older')}</span>
+          <PiArrowRightBold className="size-4" />
+        </a>
+      )
+    }
+  </div>
+</div>
