@@ -2,7 +2,7 @@
 title: 'Veille et Roadmap Start UI'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2022-12-02
 ---
 

@@ -2,7 +2,7 @@
 title: 'Introduction à ReactJS'
 
 instances:
-  - eventName: 'Djerba - Cozi'
+  - name: 'Djerba - Cozi'
     date: 2021-09-09
 ---
 

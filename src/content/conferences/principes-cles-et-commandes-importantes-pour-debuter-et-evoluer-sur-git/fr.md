@@ -2,9 +2,9 @@
 title: 'Principes clés et commandes importantes pour débuter et évoluer sur Git'
 
 instances:
-  - eventName: 'Dubai - Astrolabs'
+  - name: 'Dubai - Astrolabs'
     date: 2022-02-09
-  - eventName: 'Abu Dhabi - Hub71'
+  - name: 'Abu Dhabi - Hub71'
     date: 2022-02-09
 ---
 

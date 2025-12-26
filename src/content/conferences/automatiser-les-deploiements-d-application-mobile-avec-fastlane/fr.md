@@ -2,7 +2,7 @@
 title: "Automatiser les déploiements d'application mobile avec Fastlane"
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2023-02-21
 ---
 

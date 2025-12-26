@@ -13,10 +13,3 @@ export const zSocialTypes = z.enum([
   'twitch',
   'website',
 ]);
-
-export type VideoIntegration = z.infer<ReturnType<typeof zVideoIntegration>>;
-export const zVideoIntegration = () =>
-  z.object({
-    type: z.enum(['youtube']),
-    youtubeId: z.string(),
-  });

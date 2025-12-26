@@ -2,7 +2,7 @@
 title: "Développement d'une vidéo avec React"
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2022-04-08
     speakers: ['hugo-perard', 'yoann-fleury']
 ---

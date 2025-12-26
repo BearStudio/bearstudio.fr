@@ -2,7 +2,7 @@
 title: 'Présentation des outils numériques du manager'
 
 instances:
-  - eventName: 'Fac de Droit de Rouen'
+  - name: 'Fac de Droit de Rouen'
     date: 2018-03-14
 ---
 

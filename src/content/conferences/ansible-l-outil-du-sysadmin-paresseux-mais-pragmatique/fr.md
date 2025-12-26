@@ -2,7 +2,7 @@
 title: 'Ansible, l’outil du sysadmin paresseux mais pragmatique'
 
 instances:
-  - eventName: 'Normandie Web Xperts'
+  - name: 'Normandie Web Xperts'
     date: 2015-10-22
 ---
 

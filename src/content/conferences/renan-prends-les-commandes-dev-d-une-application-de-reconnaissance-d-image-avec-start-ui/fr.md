@@ -2,7 +2,7 @@
 title: "Renan prends les commandes, dev d'une application de reconnaissance d'image avec Start UI"
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2023-08-04
 ---
 

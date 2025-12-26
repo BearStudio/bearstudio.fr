@@ -2,7 +2,7 @@
 title: 'Cowat: Internal product using Next.js, TypeScript, tRPC, Chakra UI'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2023-07-07
 ---
 

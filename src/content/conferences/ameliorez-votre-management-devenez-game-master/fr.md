@@ -2,7 +2,7 @@
 title: 'Améliorez votre management : devenez Game Master !'
 
 instances:
-  - eventName: 'CCI Vikin'
+  - name: 'CCI Vikin'
     date: 2019-11-04
 ---
 

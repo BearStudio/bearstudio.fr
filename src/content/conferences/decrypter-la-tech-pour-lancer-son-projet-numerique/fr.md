@@ -2,7 +2,7 @@
 title: 'Décrypter la tech pour lancer son projet numérique'
 
 instances:
-  - eventName: 'Now Coworking'
+  - name: 'Now Coworking'
     date: 2018-10-11
 ---
 

@@ -2,7 +2,7 @@
 title: 'Veille et développement d’un plugin Figma'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2022-01-01
 ---
 

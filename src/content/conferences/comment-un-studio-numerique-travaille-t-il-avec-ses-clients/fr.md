@@ -2,7 +2,7 @@
 title: 'Comment un studio numérique travaille-t-il avec ses clients ?'
 
 instances:
-  - eventName: 'Dubai - Le Wagon'
+  - name: 'Dubai - Le Wagon'
     date: 2022-02-09
     speakers: ['quentin-lerebours', 'fabien-essid']
 ---

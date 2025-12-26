@@ -2,7 +2,7 @@
 title: 'Know your setup'
 
 instances:
-  - eventName: 'Codeurs en Seine'
+  - name: 'Codeurs en Seine'
     date: 2019-02-04
 ---
 

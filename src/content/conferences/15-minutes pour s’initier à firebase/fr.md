@@ -2,7 +2,7 @@
 title: '15 minutes pour s’initier à Firebase'
 
 instances:
-  - eventName: 'Meet-Up codeur en Seine'
+  - name: 'Meet-Up codeur en Seine'
     date: 2019-10-01
 ---
 

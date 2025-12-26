@@ -2,9 +2,9 @@
 title: 'Formiz : Créez vos formulaires facilement en React avec une librairie composable, headless, avec ou sans multistep'
 
 instances:
-  - eventName: 'Codeurs en Seine'
+  - name: 'Codeurs en Seine'
     date: 2021-04-01
-  - eventName: 'JSSophia #9'
+  - name: 'JSSophia #9'
     date: 2021-03-10
 ---
 

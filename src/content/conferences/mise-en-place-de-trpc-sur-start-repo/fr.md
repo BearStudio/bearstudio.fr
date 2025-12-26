@@ -2,7 +2,7 @@
 title: 'Mise en place de tRPC sur Start Repo'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2022-03-04
     speakers: ['yoann-fleury', 'ivan-dalmet']
 ---

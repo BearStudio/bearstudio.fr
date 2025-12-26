@@ -2,7 +2,7 @@
 title: 'Retour sur l’évènement The Mist de l’association JoyStick et développement Next.js et Storyblok'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2021-08-06
 ---
 

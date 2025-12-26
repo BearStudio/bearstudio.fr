@@ -2,7 +2,7 @@
 title: "Les outils numériques de l'entrepreneur "
 
 instances:
-  - eventName: 'Normandy Web Xperts'
+  - name: 'Normandy Web Xperts'
     date: 2019-07-10
     speakers: ['nicolas-greverie', 'rudy-baer', 'claire-jeanne']
 ---

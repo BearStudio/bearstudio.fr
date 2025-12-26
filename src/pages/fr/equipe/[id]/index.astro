@@ -3,6 +3,9 @@ import { Schema } from 'astro-seo-schema';
 import { Image } from 'astro:assets';
 import { render } from 'astro:content';
 
+import dayjs from 'dayjs';
+import { PiArrowSquareOut } from 'react-icons/pi';
+
 import {
   getConferencesCollectionByPerson,
   type ConferenceWithComputed,
@@ -202,32 +205,56 @@ if (!person.data._computed.slug) {
     {
       !!conferencesWithContent.length && (
         <div class="flex flex-col gap-4">
-          <h2 class="font-heading text-xl font-bold">
+          <h2 class="font-heading text-2xl font-bold">
             Les conférences de {person.data.name}
           </h2>
-          <div class="">
+          <div class="flex flex-col gap-4">
             {conferencesWithContent.map((conference) => {
               const ConferenceContent = conference.Content;
               return (
-                <div>
-                  <h3 class="font-heading font-bold">
-                    {conference.data.title}
-                  </h3>
-                  <Prose>
-                    <ConferenceContent />
-                  </Prose>
-                  {conference.data.instances && (
-                    <div>
-                      {conference.data.instances.map((instance) => {
-                        return (
-                          (instance.speakers ?? []).some(
+                <div class="flex flex-col gap-2">
+                  <div class="flex flex-col gap-1">
+                    <h3 class="font-heading text-lg font-medium">
+                      {conference.data.title}
+                    </h3>
+                    {conference.data.instances && (
+                      <div class="flex flex-wrap gap-1.5">
+                        {conference.data.instances.map((instance) => {
+                          const isSpeaker = (instance.speakers ?? []).some(
                             (speaker) =>
                               speaker.id === person.data._computed.slug
-                          ) && <li>{instance.date}</li>
-                        );
-                      })}
-                    </div>
-                  )}
+                          );
+                          if (!isSpeaker) return null;
+                          if (instance.replay)
+                            return (
+                              <a
+                                href={instance.replay}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="bg-primary/10 flex items-center gap-1 rounded px-2 py-1 text-xs font-bold hover:underline"
+                              >
+                                {!!instance.name && `${instance.name} · `}
+                                <time datetime={instance.date.toISOString()}>
+                                  {dayjs(instance.date).format('YYYY')}
+                                </time>
+                                <PiArrowSquareOut className="size-4 opacity-60 -mt-px -mr-px" />
+                              </a>
+                            );
+                          return (
+                            <div class="bg-primary/10 rounded px-2 py-1 text-xs font-medium">
+                              {!!instance.name && `${instance.name} · `}
+                              <time datetime={instance.date.toISOString()}>
+                                {dayjs(instance.date).format('YYYY')}
+                              </time>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                  <Prose class="prose-sm text-muted-foreground">
+                    <ConferenceContent />
+                  </Prose>
                 </div>
               );
             })}
@@ -239,7 +266,7 @@ if (!person.data._computed.slug) {
     {
       !!posts.length && (
         <div class="flex flex-col gap-4">
-          <h2 class="font-heading text-xl font-bold">
+          <h2 class="font-heading text-2xl font-bold">
             Sur le blog par {person.data.name}
           </h2>
           <div class="xs:grid-cols-2 relative grid gap-4 md:grid-cols-3">

@@ -2,7 +2,7 @@
 title: 'Develop a real time chat in 40 minutes with firebase'
 
 instances:
-  - eventName: 'GDG de Almaty'
+  - name: 'GDG de Almaty'
     date: 2022-12-21
 ---
 

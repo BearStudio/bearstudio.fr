@@ -2,7 +2,7 @@
 title: 'Création d’un site avec Next.js et Tailwind UI'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2021-07-02
     speakers: ['ivan-dalmet', 'hugo-perard', 'yoann-fleury']
 ---

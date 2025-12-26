@@ -2,7 +2,7 @@
 title: "Dev d'un overlay de score de Pong Volley pour OBS"
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2022-08-05
 ---
 

@@ -2,19 +2,21 @@
 title: 'Le Starter dont je suis le héros '
 
 instances:
-  - eventName: 'Codeurs en Seine'
+  - name: 'Codeurs en Seine'
     date: 2022-11-08
     speakers: ['quentin-lerebours', 'ivan-dalmet']
-  - eventName: 'BordeauxJS'
+    replay: https://www.youtube.com/watch?v=5yk34hF40Ok
+  - name: 'BordeauxJS'
     date: 2023-07-13
     speakers: ['quentin-lerebours', 'hugo-perard']
-  - eventName: 'NantesJS'
+  - name: 'NantesJS'
     date: 2023-03-15
     speakers: ['hugo-perard', 'yoann-fleury']
-  - eventName: 'LyonJS'
+  - name: 'LyonJS'
     date: 2023-10-11
     speakers: ['yoann-fleury', 'ivan-dalmet']
-  - eventName: 'Bruxelles'
+    replay: https://www.youtube.com/watch?v=kJAH7dtytxM
+  - name: 'Bruxelles'
     date: 2023-09-14
     speakers: ['ivan-dalmet', 'fabien-essid']
 ---

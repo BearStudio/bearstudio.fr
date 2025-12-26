@@ -2,7 +2,7 @@
 title: "Retour d'expérience sur Native Base et dev React Native"
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2022-06-17
 ---
 

@@ -1,3 +1,5 @@
+import 'dayjs/locale/fr';
+
 import blog from './blog.json';
 import common from './common.json';
 import contact from './contact.json';

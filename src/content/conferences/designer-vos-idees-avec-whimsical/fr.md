@@ -2,7 +2,7 @@
 title: 'Designer vos idées avec Whimsical'
 
 instances:
-  - eventName: "Les 12 heures de l'innovation numérique"
+  - name: "Les 12 heures de l'innovation numérique"
     date: 2019-03-06
 ---
 

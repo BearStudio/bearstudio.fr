@@ -2,7 +2,7 @@
 title: "JHipster, l'histoire d'un prestataire et d'un client"
 
 instances:
-  - eventName: 'Meet-Up codeur en Seine'
+  - name: 'Meet-Up codeur en Seine'
     date: 2018-04-02
 ---
 

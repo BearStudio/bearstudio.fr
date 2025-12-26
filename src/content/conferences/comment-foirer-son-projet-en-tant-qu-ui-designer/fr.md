@@ -2,13 +2,13 @@
 title: 'Comment foirer son projet en tant qu’UI Designer ?'
 
 instances:
-  - eventName: 'Touraine Tech'
+  - name: 'Touraine Tech'
     date: 2023-01-09
     speakers: ['dorian-delorme', 'rudy-baer']
-  - eventName: 'Bangkok - BKK Web'
+  - name: 'Bangkok - BKK Web'
     date: 2022-12-29
     speakers: ['dorian-delorme', 'rudy-baer']
-  - eventName: 'Meet-Up codeur en Seine'
+  - name: 'Meet-Up codeur en Seine'
     date: 2022-11-08
     speakers: ['dorian-delorme']
 ---

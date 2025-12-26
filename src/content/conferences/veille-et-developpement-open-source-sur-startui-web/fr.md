@@ -2,7 +2,7 @@
 title: 'Veille et développement Open Source sur 🚀 Start UI [web]'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2023-03-03
 ---
 

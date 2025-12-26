@@ -2,7 +2,7 @@
 title: 'Table ronde : Intégration CSS en 2020'
 
 instances:
-  - eventName: 'Meet-Up codeur en Seine'
+  - name: 'Meet-Up codeur en Seine'
     date: 2020-03-04
 ---
 

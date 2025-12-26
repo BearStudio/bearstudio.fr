@@ -2,25 +2,25 @@
 title: 'React Native : React pour développer des apps mobiles iOS et Android'
 
 instances:
-  - eventName: 'Volcamp'
+  - name: 'Volcamp'
     date: 2022-10-21
     speakers: ['nicolas-torion']
-  - eventName: 'DevFest Strasbourg'
+  - name: 'DevFest Strasbourg'
     date: 2021-11-09
     speakers: ['nicolas-torion']
-  - eventName: 'JSSophia #9'
+  - name: 'JSSophia #9'
     date: 2021-04-01
     speakers: ['nicolas-torion']
-  - eventName: 'DevFest Strasbourg'
+  - name: 'DevFest Strasbourg'
     date: 2019-11-14
     speakers: ['nicolas-torion']
-  - eventName: 'Codeurs en Seine'
+  - name: 'Codeurs en Seine'
     date: 2019-09-01
     speakers: ['nicolas-torion']
-  - eventName: 'Dubai - Astrolabs'
+  - name: 'Dubai - Astrolabs'
     date: 2022-02-09
     speakers: ['quentin-lerebours']
-  - eventName: 'Abu Dhabi - Hub71'
+  - name: 'Abu Dhabi - Hub71'
     date: 2022-02-09
     speakers: ['quentin-lerebours']
 ---

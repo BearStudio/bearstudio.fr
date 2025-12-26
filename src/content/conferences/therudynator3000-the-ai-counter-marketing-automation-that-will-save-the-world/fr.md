@@ -2,7 +2,7 @@
 title: 'TheRudyNator3000 — the AI counter marketing automation that will save the world !'
 
 instances:
-  - eventName: 'Meet-Up codeur en Seine'
+  - name: 'Meet-Up codeur en Seine'
     date: 2023-07-18
 ---
 

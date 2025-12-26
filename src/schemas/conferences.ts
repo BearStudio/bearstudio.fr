@@ -1,7 +1,5 @@
 import { reference, z, type SchemaContext } from 'astro:content';
 
-import { zVideoIntegration } from '@/schemas/utils';
-
 export type Conference = z.infer<ReturnType<typeof zConference>>;
 export const zConference = ({ image }: SchemaContext) =>
   z.object({
@@ -18,9 +16,9 @@ export type ConferenceInstance = z.infer<
 export const zConferenceInstance = () =>
   z.object({
     date: z.date(),
-    eventName: z.string().optional(),
+    name: z.string().optional(),
     link: z.string().optional(),
     language: z.string().optional(),
     speakers: z.array(reference('people')).optional(),
-    replay: z.union([z.string(), zVideoIntegration()]).optional(),
+    replay: z.string().url().optional(),
   });

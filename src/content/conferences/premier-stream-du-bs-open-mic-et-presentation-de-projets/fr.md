@@ -2,7 +2,7 @@
 title: 'Premier stream du BS, open mic’ et présentation de projets'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2021-06-04
     speakers: ['ivan-dalmet', 'yoann-fleury']
 ---

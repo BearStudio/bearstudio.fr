@@ -2,7 +2,7 @@
 title: 'React VS VueJs'
 
 instances:
-  - eventName: 'Meet-Up codeur en Seine'
+  - name: 'Meet-Up codeur en Seine'
     date: 2020-05-07
 ---
 

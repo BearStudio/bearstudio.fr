@@ -2,7 +2,7 @@
 title: 'Migration de Start REPO en tRPC v10'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2022-10-07
 ---
 

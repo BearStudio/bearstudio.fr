@@ -2,7 +2,7 @@
 title: 'On teste Tauri'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2023-03-25
 ---
 

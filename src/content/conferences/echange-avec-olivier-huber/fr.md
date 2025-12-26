@@ -2,7 +2,7 @@
 title: 'Échange avec Olivier Huber'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2023-06-02
 ---
 

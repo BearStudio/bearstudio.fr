@@ -2,7 +2,7 @@
 title: '1er stream dans le nouveau setup. On veille, on discute, on fait des trucs'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2022-09-09
 ---
 

@@ -2,7 +2,7 @@
 title: 'Déploiement de StartUI sur différents services'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2022-02-04
     speakers: ['florian-gille', 'yoann-fleury']
 ---

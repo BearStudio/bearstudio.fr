@@ -2,7 +2,7 @@
 title: 'Contributions Open Source Start UI, tout un programme'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2023-02-03
 ---
 

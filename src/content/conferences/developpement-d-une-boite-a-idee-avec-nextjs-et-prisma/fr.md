@@ -2,7 +2,7 @@
 title: 'Développement d’une boite à idée avec Next.js et Prisma'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2022-01-07
     speakers: ['ivan-dalmet', 'yoann-fleury']
 ---

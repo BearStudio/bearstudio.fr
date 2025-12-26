@@ -11,3 +11,5 @@ status: 'current'
 hidden: false
 order: 1
 ---
+
+Responsable technique et stimulateur de projets expérimenté, Rudy a finalement choisi de vivre l'aventure d'entrepreneur. C'est en souhaitant accompagner les startupers et proposer davantage qu'un simple studio de développement qu'il a fondé le BearStudio.

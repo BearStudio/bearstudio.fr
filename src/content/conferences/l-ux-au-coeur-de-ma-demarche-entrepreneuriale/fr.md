@@ -2,7 +2,7 @@
 title: "L'UX au coeur de ma démarche entrepreneuriale"
 
 instances:
-  - eventName: 'Dayclic 2019'
+  - name: 'Dayclic 2019'
     date: 2019-11-04
     speakers: ['claire-jeanne', 'nicolas-greverie']
 ---

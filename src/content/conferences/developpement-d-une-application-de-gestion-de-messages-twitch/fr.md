@@ -2,7 +2,7 @@
 title: 'Développement d’une application de gestion de messages Twitch'
 
 instances:
-  - eventName: 'Twitch'
+  - name: 'Twitch'
     date: 2021-12-03
 ---
 

@@ -2,7 +2,7 @@
 title: 'Le bon sens au service de vos utilisateurs'
 
 instances:
-  - eventName: 'Djerba'
+  - name: 'Djerba'
     date: 2019-05-01
 ---
 

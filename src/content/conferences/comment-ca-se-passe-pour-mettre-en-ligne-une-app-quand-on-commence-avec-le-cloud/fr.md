@@ -2,11 +2,11 @@
 title: 'Comment ça se passe pour mettre en ligne une app quand on commence avec le cloud ?'
 
 instances:
-  - eventName: 'Brest - DevFest du bout du monde'
+  - name: 'Brest - DevFest du bout du monde'
     date: 2020-02-10
-  - eventName: 'Montpellier'
+  - name: 'Montpellier'
     date: 2019-11-12
-  - eventName: 'Meet-Up codeur en Seine'
+  - name: 'Meet-Up codeur en Seine'
     date: 2019-10-17
 ---
 

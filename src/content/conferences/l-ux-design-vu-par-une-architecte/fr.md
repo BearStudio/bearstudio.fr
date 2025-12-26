@@ -2,7 +2,7 @@
 title: "L'UX design vu par une architecte"
 
 instances:
-  - eventName: 'Fork it! Rouen'
+  - name: 'Fork it! Rouen'
     date: 2024-06-07
 ---
 
