@@ -1,5 +1,6 @@
 // @ts-check
 
+import robotsTxt from 'astro-robots-txt';
 import { defineConfig, envField } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
@@ -36,7 +37,21 @@ export default defineConfig({
       }),
     },
   },
-  integrations: [mdx(), sitemap(), react(), bearstudioTypedRoutes()],
+  integrations: [
+    mdx(),
+    sitemap(),
+    react(),
+    robotsTxt({
+      policy: [
+        {
+          userAgent: '*',
+          allow: '/',
+          disallow: ['/styleguide'],
+        },
+      ],
+    }),
+    bearstudioTypedRoutes(),
+  ],
 
   vite: {
     plugins: [tailwindcss()],
