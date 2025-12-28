@@ -21,14 +21,14 @@ export const HomePosts = (props: {
 }) => {
   if (!props.posts.length) return null;
   return (
-    <Carousel className="-my-16 w-full" opts={{ dragFree: true }}>
+    <Carousel className="w-full" opts={{ dragFree: true }}>
       <CarouselContent>
         {props.posts.map((post) => {
           if (!post.data.image) return null;
           return (
             <CarouselItem
               key={post.id}
-              className="basis-[90%] 2xs:basis-[70%] flex flex-col xs:basis-[60%] sm:basis-[40%] md:basis-[30%] py-16 fisrt:ml-8 last:mr-8"
+              className="basis-[90%] 2xs:basis-[70%] flex flex-col xs:basis-[60%] sm:basis-[40%] md:basis-[30%] fisrt:ml-8 last:mr-8"
             >
               <PostCard
                 post={post}

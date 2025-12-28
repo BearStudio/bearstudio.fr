@@ -19,14 +19,14 @@ export const HomePeople = (props: {
 }) => {
   if (!props.people.length) return null;
   return (
-    <Carousel className="-my-16 w-full" opts={{ dragFree: true }}>
+    <Carousel className="w-full" opts={{ dragFree: true }}>
       <CarouselContent>
         {props.people.map((person) => {
           if (!person.data.image) return null;
           return (
             <CarouselItem
               key={person.id}
-              className="basis-[60%] 2xs:basis-[40%] flex flex-col xs:basis-[30%] md:basis-[22%] py-16 fisrt:ml-8 last:mr-8"
+              className="basis-[60%] 2xs:basis-[40%] flex flex-col xs:basis-[30%] md:basis-[22%] fisrt:ml-8 last:mr-8"
             >
               <PersonCard
                 person={person}
