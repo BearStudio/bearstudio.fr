@@ -11,8 +11,8 @@ export const ImgAstroReact = (props: {
     <img
       src={props.image?.src}
       srcSet={props.image?.srcSet.attribute}
-      // Making sure fetchpriority attribute is correctly formatted for JSX
-      {...omit(props.image?.attributes ?? {}, ['fetchpriority'])}
+      // Making sure fetchpriority attribute is correctly formatted for JSX and remove style attribute
+      {...omit(props.image?.attributes ?? {}, ['fetchpriority', 'style'])}
       fetchPriority={props.image?.attributes.fetchpriority}
       {...rest}
     />

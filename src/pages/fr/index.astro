@@ -33,8 +33,9 @@ const polaroids = await Promise.all(
       ...polaroid.data,
       image: await getImage({
         src: polaroid.data.src,
-        width: 400,
-        height: 400,
+        widths: [200, 400],
+        sizes: '(min-width: 800px) 400px, 200px',
+        layout: 'constrained',
       }),
     },
   }))
@@ -55,8 +56,9 @@ const peopleCurrent = await Promise.all(
         image: person.data.picture
           ? await getImage({
               src: person.data.picture,
-              width: 500,
-              height: 600,
+              widths: [200, 500],
+              sizes: '(min-width: 800px) 500px, 200px',
+              layout: 'constrained',
             })
           : undefined,
       },
@@ -78,8 +80,9 @@ const latestPosts = await Promise.all(
         image: person.data.heroImage
           ? await getImage({
               src: person.data.heroImage,
-              width: 1200,
-              height: 800,
+              widths: [800, 1200],
+              sizes: '(min-width: 800px) 1200px, 800px',
+              layout: 'constrained',
             })
           : undefined,
       },
