@@ -34,7 +34,19 @@ export const LanguageSwitcher = (props: { locale: Locale }) => {
               key={toLocale}
               className="text-center items-center justify-center"
             >
-              <a href={getLink('/fr', toLocale, {})}>
+              <a
+                href={getLink('/fr', toLocale, {})}
+                onClick={(e) => {
+                  const alternate = document.querySelector(
+                    `head link[rel="alternate"][hrefLang="${toLocale}"]`
+                  );
+                  const href = alternate?.getAttribute('href');
+                  if (href) {
+                    e.preventDefault();
+                    window.location.href = href;
+                  }
+                }}
+              >
                 {t(`common.nav.languageSwitch.${toLocale}`)}
               </a>
             </DropdownMenuItem>
