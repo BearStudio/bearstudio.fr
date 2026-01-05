@@ -1,5 +1,16 @@
 ---
+import {
+  PiInfoDuotone,
+  PiWarningCircleDuotone,
+  PiWarningOctagonDuotone,
+} from 'react-icons/pi';
+
 import { Button } from '@/components/ui/button';
+import {
+  Callout,
+  CalloutDescription,
+  CalloutTitle,
+} from '@/components/ui/callout';
 import { ScratchFull } from '@/components/ui/scratch';
 import RootLayout from '@/layouts/root-layout.astro';
 ---
@@ -37,5 +48,31 @@ import RootLayout from '@/layouts/root-layout.astro';
     </div>
 
     <!-- -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Callout</h2>
+      <Callout>
+        <CalloutTitle>Title (default)</CalloutTitle>
+        <CalloutDescription>Description</CalloutDescription>
+      </Callout>
+
+      <Callout>
+        <PiInfoDuotone />
+        <CalloutTitle>Title (default)</CalloutTitle>
+        <CalloutDescription>Description</CalloutDescription>
+      </Callout>
+
+      <Callout variant="warning">
+        <PiWarningCircleDuotone />
+        <CalloutTitle>Title (warning)</CalloutTitle>
+        <CalloutDescription>Description</CalloutDescription>
+      </Callout>
+
+      <Callout variant="danger">
+        <PiWarningOctagonDuotone />
+        <CalloutTitle>Title (danger)</CalloutTitle>
+        <CalloutDescription>Description</CalloutDescription>
+      </Callout>
+    </div>
   </div>
 </RootLayout>
