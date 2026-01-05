@@ -1,12 +1,9 @@
 ---
-state: 'published'
 title: 'REX : Le déroulement d’un projet UX au BearStudio'
 date: 2021-07-20
 categories:
   - 'design-css'
 heroImage: 'images/illustration-oneprepaid-systeme-1.png'
-languages:
-  - 'fr'
 ---
 
 ## Introduction

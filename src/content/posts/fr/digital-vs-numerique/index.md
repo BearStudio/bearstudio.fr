@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Digital vs Numérique'
 date: 2017-06-26
 categories:
@@ -8,8 +7,6 @@ tags:
   - 'digital'
   - 'numerique'
 heroImage: 'images/digital-vs-numerique.jpg'
-languages:
-  - 'fr'
 metaDescription: "Les termes Digital et Numérique sont aujourd'hui admis par beaucoup comme synonymes. Pourtant, une guerre fait rage sur le sens de ces deux mots."
 excerpt: 'Avant propos Il n’est pas rare aujourd’hui de voir les termes Digital et Numérique se confondre en un sens admis par tous comme synonymes. Par tous&nbsp;? Pas tout à fait. Nous devrions même dire qu’une guerre fait rage sur la signification de ces deux mots. Alors avons-nous le droit de les utiliser impunément et sans [&hellip;]'
 ---

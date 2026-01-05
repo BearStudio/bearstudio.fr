@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Du code au cœur : nos engagements associatifs annuels'
 date: 2025-07-22
 categories:
@@ -9,8 +8,6 @@ tags:
   - 'engagement'
   - 'temoignage'
 heroImage: 'images/format-blog-header-2-scaled.png'
-languages:
-  - 'fr'
 ---
 
 ## Un engagement associatif ancré dans notre culture

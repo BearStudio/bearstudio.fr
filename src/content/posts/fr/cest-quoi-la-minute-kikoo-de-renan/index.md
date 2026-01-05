@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: "C'est quoi la minute kikoo de Renan ?"
 date: 2023-09-12
 categories:
@@ -8,8 +7,6 @@ tags:
   - 'minute-kikoo-de-renan'
   - 'stream'
 heroImage: 'images/featured-Image-Site-MKDR.png'
-languages:
-  - 'fr'
 ---
 
 ## D'où ça vient ?

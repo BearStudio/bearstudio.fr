@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: "Brève 7 : Finrêka!, l'outil parfait pour la recherche d'aides financières aux entreprises"
 date: 2021-02-12
 categories:
@@ -8,8 +7,6 @@ tags:
   - 'financement'
   - 'tips'
 heroImage: 'images/breve-7.jpg'
-languages:
-  - 'fr'
 ---
 
 ## Kézako ?

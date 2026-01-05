@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: "FOS : l'apprentissage du Français sur Objectif Spécifique dans le dev"
 date: 2022-06-16
 categories:
@@ -8,8 +7,6 @@ tags:
   - 'rex'
   - 'temoignage'
 heroImage: 'images/article-fos-visuel.png'
-languages:
-  - 'fr'
 metaDescription: "Retour d'expérience d'une professeure de français dans une société de développement informatique"
 ---
 

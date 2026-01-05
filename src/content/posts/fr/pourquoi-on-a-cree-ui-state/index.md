@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Pourquoi on a créé ui-state'
 date: 2025-10-16
 categories:
@@ -11,8 +10,6 @@ tags:
   - 'open-source'
   - 'projet'
 heroImage: 'images/format-blog-header.png'
-languages:
-  - 'fr'
 metaDescription: 'Pourquoi on a créé ui-state : découvrez comment gérer les états UI (loading, empty, error, success) proprement en React et TypeScript.'
 excerpt: "Pourquoi a t'on créé ui-state, une librairie TypeScript de gestion d'états ? Tout viens de la lecture d'un très bon article de Dominic Dorfmeister aka TkDodo (on vous conseille aussi de lire ses autres articles sur son blog)"
 authors:

@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Brève 8 : Et 1, et 2, et CII !'
 date: 2021-03-01
 categories:
@@ -9,8 +8,6 @@ tags:
   - 'innovation'
   - 'tips'
 heroImage: 'images/breve-8.jpg'
-languages:
-  - 'fr'
 ---
 
 Le saviez-vous ? Depuis février 2020, le BearStudio bénéficie d'un nouveau crédit d'impôt en faveur de l'innovation.

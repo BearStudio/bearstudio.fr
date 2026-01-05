@@ -1,12 +1,9 @@
 ---
-state: 'published'
 title: 'Coming-out : on a des développeurs tunisiens'
 date: 2021-03-08
 categories:
   - 'actualites-web-numerique'
 heroImage: 'images/monde.jpg'
-languages:
-  - 'fr'
 ---
 
 _Note : l'écriture de l’article a commencé avant la pandémie mondiale. Si seulement je m’étais bougé pour le sortir avant… j’aurais été tellement visionnaire !_

@@ -10,9 +10,6 @@ type Params = {
   locale: Locale;
 };
 
-const isPublished = (post: CollectionEntry<'posts'>) =>
-  post.data.state === 'published' || !import.meta.env.PROD;
-
 type HasSpecificAuthorProps = {
   post: CollectionEntry<'posts'>;
   author: PersonWithComputed;
@@ -38,7 +35,6 @@ export async function getPostsCollection({
 }: Params) {
   const posts = await Promise.all(
     (await getCollection('posts'))
-      .filter(isPublished)
       .filter((post) => {
         if (!locale) return post;
         const [postLocale] = post.id.split('/');

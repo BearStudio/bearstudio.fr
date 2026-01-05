@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Le bon et le mauvais <s>chasseur</s> développeur : Les soft skills'
 date: 2025-06-30
 categories:
@@ -9,8 +8,6 @@ tags:
   - 'developpement-web'
   - 'developpeur'
 heroImage: 'images/format-blog-header.png'
-languages:
-  - 'fr'
 ---
 
 _Le mauvais développeur c’est le gars, il a un ordinateur, on lui donne des specs et il code. Le bon développeur il a un ordinateur, on lui donne des specs et il code… mais c’est un bon développeur…_

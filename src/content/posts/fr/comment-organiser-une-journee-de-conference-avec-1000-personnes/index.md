@@ -1,12 +1,9 @@
 ---
-state: 'published'
 title: 'Comment organiser une journée de conférence avec 1000 personnes ?'
 date: 2023-02-15
 categories:
   - 'actualites-web-numerique'
 heroImage: 'images/image.png'
-languages:
-  - 'fr'
 ---
 
 ## Les différents points à gérer

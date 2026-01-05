@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Parcours utilisateur & UX : comment créer un userflow efficace'
 date: 2022-05-31
 categories:
@@ -8,8 +7,6 @@ tags:
   - 'design'
   - 'ux'
 heroImage: 'images/article-ux-miniature.png'
-languages:
-  - 'fr'
 ---
 
 Le parcours utilisateur est défini par les différents chemins et interactions que l’utilisateur va rencontrer dans une application, un site web, un logiciel métier, etc.

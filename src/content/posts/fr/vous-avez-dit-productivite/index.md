@@ -1,12 +1,9 @@
 ---
-state: 'published'
 title: 'Vous avez dit productivité ?'
 date: 2020-11-25
 categories:
   - 'entrepreneuriat'
 heroImage: 'images/ameliorer-sa-productivite.jpg'
-languages:
-  - 'fr'
 metaDescription: 'Découvrez nos conseils pour adopter les bonnes pratiques simples et efficaces qui vous aideront à améliorer votre productivité au travail !'
 excerpt: 'Améliorer sa productivité en 10 étapes L’enjeu de la productivité au travail a rarement été aussi primordial que dans la société d’aujourd’hui où tout rime avec la fameuse maxime des temps modernes : “time is money”. Pourtant, contrairement à ce qu’on pense, il ne suffit pas de comparer le temps passé sur une tâche aux [&hellip;]'
 ---

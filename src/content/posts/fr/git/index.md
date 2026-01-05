@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Git de survie en milieu hostile'
 date: 2018-02-20
 categories:
@@ -9,8 +8,6 @@ tags:
   - 'developpeur'
   - 'git'
 heroImage: 'images/git.png'
-languages:
-  - 'fr'
 metaDescription: "Git est aujourd'hui un outil incontournable pour tous les développeurs. Ce n’est pas un gestionnaire de versions, mais LE gestionnaire de version."
 excerpt: 'De quoi s’agit-il ? Outil incontournable à n’importe quel développeur, Git n’est pas un gestionnaire de versions, mais LE gestionnaire de version. Principalement pensé pour le code, il permet de gérer les différentes modifications de n’importe quel document texte, tout en étant parfaitement pensé pour le travail collaboratif. Si vous ne connaissez pas, ou que [&hellip;]'
 ---

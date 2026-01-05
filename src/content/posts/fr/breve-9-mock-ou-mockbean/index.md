@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Brève 9 : @Mock ou @MockBean, quelle différence ?'
 date: 2021-03-15
 categories:
@@ -8,8 +7,6 @@ tags:
   - 'java'
   - 'spring'
 heroImage: 'images/breve-9.jpg'
-languages:
-  - 'fr'
 metaDescription: "Cette brève vous livre tout ce qu'il y a à connaître à propos de la différence entre @Mock et @Mockbean qu'on utilise beaucoup avec Spring !"
 ---
 

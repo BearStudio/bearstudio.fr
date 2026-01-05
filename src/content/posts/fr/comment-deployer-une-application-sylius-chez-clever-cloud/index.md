@@ -1,12 +1,9 @@
 ---
-state: 'published'
 title: 'Comment déployer une application Sylius chez Clever Cloud ?'
 date: 2021-04-14
 categories:
   - 'developpement'
 heroImage: 'images/sylius-clever-cloud-tuto-article.png'
-languages:
-  - 'fr'
 ---
 
 ## De Sylius à Clever Cloud, il n'y a qu'un pas...

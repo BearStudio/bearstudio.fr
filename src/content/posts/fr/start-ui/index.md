@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Start UI'
 date: 2021-11-01
 categories:
@@ -12,8 +11,6 @@ tags:
   - 'ui'
   - 'web'
 heroImage: 'images/visuel-article-start-ui-tinified.png'
-languages:
-  - 'fr'
 authors:
   - yoann-fleury
 ---

@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Comment Tailwind & NextJS ont changé la vie de Maxime et Delphin'
 date: 2022-03-28
 categories:
@@ -10,8 +9,6 @@ tags:
   - 'projet'
   - 'rex'
 heroImage: 'images/tailwindnext.js.png'
-languages:
-  - 'fr'
 ---
 
 _On a demandé à Maxime et Delphin, respectivement alternants à l’époque en UX design et en Front-end au BearStudio, de se faire la main en totale autonomie sur le site d’une amie du BS (RaCoon & Co)… Évidemment tout ne s’est pas passé comme prévu et ils en ont chi…sué !_

@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'La loi de proximité'
 date: 2021-11-29
 categories:
@@ -9,8 +8,6 @@ tags:
   - 'lesloisenux'
   - 'ux'
 heroImage: 'images/visuel-article-proximite-1.png'
-languages:
-  - 'fr'
 metaDescription: "La loi de proximité est d'une importance capitale pour les graphistes et UX/UI (+web) designers. On parle de regroupement automatique d'unités en ensembles."
 ---
 

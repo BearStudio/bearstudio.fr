@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Les outils incontournables pour un entrepreneur'
 date: 2020-01-29
 categories:
@@ -8,8 +7,6 @@ tags:
   - 'numerique'
   - 'startup'
 heroImage: 'images/slack-en-entreprise.png'
-languages:
-  - 'fr'
 metaDescription: "À la création d’une société, nous avons toujours un tas de choses à faire. Pour vous aider, voici des outils indispensables à la gestion d'entreprise."
 excerpt: 'À la création d’une société, nous avons toujours un tas de choses à faire. Pour vous aider, voici des outils indispensables à la gestion d&rsquo;entreprise.'
 authors:

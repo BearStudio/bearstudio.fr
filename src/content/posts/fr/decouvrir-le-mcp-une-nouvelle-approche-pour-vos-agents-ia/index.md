@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Découvrir le MCP : Une nouvelle approche pour vos agents IA'
 date: 2025-08-14
 categories:
@@ -9,8 +8,6 @@ tags:
   - 'ia'
   - 'numerique'
 heroImage: 'images/format-blog-header-3-scaled.png'
-languages:
-  - 'fr'
 metaDescription: 'Avec le MCP, les agents IA se connectent à vos outils et données, agissent en autonomie et transforment votre façon de développer.'
 excerpt: 'Cet article est également disponible en anglais ! 🇬🇧 État des lieux rapide Ces derniers mois, l&rsquo;efficacité des&nbsp;LLM&nbsp;n’a cessé de croître, bouleversant nos habitudes et notre quotidien de développeur. De plus en plus sollicités pour écrire du code, débogguer, concevoir ou nous assister à chaque étape de notre travail, ces modèles sont en train de [&hellip;]'
 authors:

@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: "Comment j'ai délégué la responsabilité pour les augmentations"
 date: 2020-01-14
 categories:
@@ -8,8 +7,6 @@ tags:
   - 'bearstudio-style'
   - 'rex'
 heroImage: 'images/methodologie-augmentation.png'
-languages:
-  - 'fr'
 metaDescription: "En 2018, j'ai été confronté à la problématique des augmentations au BearStudio. Il m'a alors fallu trouver une méthode peu conventionnelle."
 excerpt: 'En 2018, pour la première fois, j&rsquo;ai été réellement confronté à la problématique des augmentations au BearStudio.'
 authors:

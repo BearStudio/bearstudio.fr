@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Brève 13 - Exécuter et déployer un projet JHipster avec Java 17'
 date: 2022-07-05
 categories:
@@ -9,8 +8,6 @@ tags:
   - 'java'
   - 'jhipster'
 heroImage: 'images/visuel-breve-13.png'
-languages:
-  - 'fr'
 metaDescription: 'Comment exécuter et déployer un projet JHipster en utilisant Java 17'
 excerpt: 'Cette brève est une traduction de l’article publié par Quentin sur dev.to.&nbsp; Dans ce court article, je vais expliquer comment exécuter et déployer un projet JHipster en utilisant une autre version de Java que la version standard utilisée par JHipster (Java 11 actuellement). Etape 1 : Faire tourner son projet JHipster sur la version Java [&hellip;]'
 ---

@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Les Ours au Camping des Speakers 2023'
 date: 2023-11-24
 categories:
@@ -10,8 +9,6 @@ tags:
   - 'temoignage'
   - 'web'
 heroImage: 'images/Image-1.png'
-languages:
-  - 'fr'
 ---
 
 Les 15 et 16 juin derniers, l'équipe du BearStudio a eu l'occasion de participer à une expérience unique : le [Camping des Speakers](https://camping-speakers.fr/). Dans cet article, nous partageons notre expérience et les moments marquants de ces deux jours de conférences techs dans un camping en Bretagne.

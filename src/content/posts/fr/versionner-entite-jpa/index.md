@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Brève 11 - Versionner une entité avec JPA'
 date: 2022-03-14
 categories:
@@ -9,8 +8,6 @@ tags:
   - 'developpement'
   - 'spring'
 heroImage: 'images/visuel-breve-min-2.png'
-languages:
-  - 'fr'
 metaDescription: 'Comment versionner une entité automatiquement grâce à une simple annotation de JPA'
 excerpt: 'Il y a quelques semaines sur un projet Spring Boot, j&rsquo;ai eu besoin qu&rsquo;une de mes entités soit versionnée pour éviter tout problème de mises à jour concurrentielles. J&rsquo;ai alors découvert l&rsquo;annotation @Version de JPA. Je profite de cette découverte pour vous la partager car elle pourrait bien vous être utile. Le besoin : Sur [&hellip;]'
 ---

@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Brève 12 - Bonjour, vous connaissez Rust ?'
 date: 2022-05-03
 categories:
@@ -7,8 +6,6 @@ categories:
 tags:
   - 'developpement'
 heroImage: 'images/visuel-breve-min-3-1.png'
-languages:
-  - 'fr'
 authors:
   - yoann-fleury
 ---

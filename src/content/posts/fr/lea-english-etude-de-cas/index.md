@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Lea English étude de cas'
 date: 2025-07-03
 categories:
@@ -10,8 +9,6 @@ tags:
   - 'experience-utilisateur'
   - 'ux'
 heroImage: 'images/format-blog-header-1.png'
-languages:
-  - 'fr'
 ---
 
 ## Présentation du projet

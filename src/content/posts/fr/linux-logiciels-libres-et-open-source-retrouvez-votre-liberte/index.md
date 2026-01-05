@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Linux, les logiciels libres et l’open-source : retrouvez votre liberté grâce à la communauté'
 date: 2020-02-04
 categories:
@@ -9,8 +8,6 @@ tags:
   - 'numerique'
   - 'open-source'
 heroImage: 'images/communaute-logiciel-open-source.jpg'
-languages:
-  - 'fr'
 metaDescription: 'Vous avez déjà entendu parler de Linux, des logiciels libres ou encore de l’open-source ? Mais à quoi sont associés ces termes ?'
 excerpt: 'Vous avez déjà entendu parler de Linux, des logiciels libres ou encore de l’open-source mais vous ne savez pas à quoi sont associés ces termes ? A l’inverse vous ne savez pas du tout ce que c’est ? Ou vous le savez mais ne voyez toujours pas l’intérêt ? Alors ne partez pas, cet article [&hellip;]'
 authors:

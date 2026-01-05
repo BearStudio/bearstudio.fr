@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Faire faire son site web : arrêtez de vous faire avoir par votre agence digitale'
 date: 2017-04-04
 categories:
@@ -10,8 +9,6 @@ tags:
   - 'digital'
   - 'web'
 heroImage: 'images/arretez-de-vous-faire-avoir-par-votre-agence-digitale.jpg'
-languages:
-  - 'fr'
 ---
 
 ## Avant propos

@@ -1,12 +1,9 @@
 ---
-state: 'published'
 title: 'Un ours en finlande'
 date: 2021-09-20
 categories:
   - 'actualites-web-numerique'
 heroImage: 'images/un-ours-en-finlande-1.jpg'
-languages:
-  - 'fr'
 ---
 
 La parole est à Nathan : jeune recrue intrépide qui ne recule devant aucune frontière pour ouvrir les horizons de la tanière!

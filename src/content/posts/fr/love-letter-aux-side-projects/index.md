@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Love letter aux side-projects'
 date: 2025-09-30
 categories:
@@ -10,8 +9,6 @@ tags:
   - 'retour-dexperience'
   - 'temoignage'
 heroImage: 'images/format-blog-header.png'
-languages:
-  - 'fr'
 metaDescription: 'Side project pour apprendre et s’amuser vous permet de tester vos idées et progresser tout en prenant du plaisir.'
 excerpt: "Faire un side project est le meilleur moyen d'apprendre et s'amuser en même temps. Laisse moi t'expliquer pourquoi !"
 authors:

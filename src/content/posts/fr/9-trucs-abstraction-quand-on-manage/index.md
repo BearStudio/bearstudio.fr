@@ -1,12 +1,9 @@
 ---
-state: 'published'
 title: '9 trucs dont il faut faire abstraction quand on manage'
 date: 2021-01-21
 categories:
   - 'actualites-web-numerique'
 heroImage: 'images/photo-1517245386807-bb43f82c33c4-11.08.22.jpeg'
-languages:
-  - 'fr'
 metaDescription: "Besoin de conseils pour manager ? Voici une liste d'éléments qui risquent de vous pourir la vie si vous ne parvenez pas à faire la part des choses..."
 excerpt: 'Nos conseils pour mieux manager une équipe Même si ça ne semble pas du tout naturel, il faut se forcer à mettre certains choses de côté pour prendre confiance&nbsp;et établir une ambiance de travail bienveillante. Attention, je ne prétends pas que ce sont là des vérités absolues ! Il est possible qu’à un moment donné [&hellip;]'
 authors:

@@ -1,5 +1,4 @@
 ---
-state: 'published'
 title: 'Brève 10 : Bataille du Cloud, quelles sont les alternatives françaises ?'
 date: 2021-03-31
 categories:
@@ -9,8 +8,6 @@ tags:
   - 'cloud'
   - 'ovh'
 heroImage: 'images/breve-10.jpg'
-languages:
-  - 'fr'
 metaDescription: "Qui a dit que l'Europe n'était pas capable de rivaliser avec les géants américains du numérique ? On vous en dit plus sur la fameuse bataille du Cloud..."
 excerpt: 'Aux origines de la bataille du Cloud&#8230; Depuis plusieurs mois on entend parler de “bataille du cloud”, bataille qu’on aurait d’ailleurs perdue en Europe face aux géants américains. Est-ce vrai ? N’avons-nous pas d’acteurs français ou européens capables de rivaliser avec les géants du cloud actuels ? Ne pouvons-nous pas héberger nos applications et services [&hellip;]'
 ---
