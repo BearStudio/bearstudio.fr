@@ -209,7 +209,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       !!posts.length && (
         <div class="flex flex-col gap-4">
           <h2 class="font-heading text-2xl font-bold">
-            {!!person.data._computed.slug ? (
+            {person.data._computed.slug ? (
               <a
                 href={getLink('/fr/blog/auteurs/:author', locale, {
                   author: person.data._computed.slug,
