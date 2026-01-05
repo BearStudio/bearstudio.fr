@@ -1,6 +1,6 @@
 ---
 name: 'Luis RUBIERA'
-picture: './luis-rubiera.jpg'
+picture: './luis.png'
 job: 'Tech Lead'
 socials:
   - type: 'x'

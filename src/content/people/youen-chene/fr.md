@@ -1,6 +1,6 @@
 ---
 name: 'Youen Chéné'
-picture: './youen.jpg'
+picture: './youen.png'
 job: 'Technical Advisor'
 socials:
   - type: 'x'
