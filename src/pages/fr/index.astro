@@ -223,21 +223,25 @@ const latestPosts = await Promise.all(
       </PeopleCarousel>
     </div>
 
-    <div class="flex flex-col gap-4">
-      <div class="flex flex-col gap-1">
-        <h2 class="font-heading text-2xl font-bold">
-          <a href={getLink('/fr/blog', locale, {})}>Nos articles</a>
-        </h2>
-        <p class="max-w-[70ch] text-sm text-balance opacity-80">
-          Découvrez nos articles, retours d'expérience et réflexions sur le
-          développement web, mobile et les bonnes pratiques du numérique.
-        </p>
-      </div>
-      <PostsCarousel client:load posts={latestPosts} locale={locale}>
-        <PostCardMore href={getLink('/fr/blog', locale, {})}>
-          Plus d'articles
-        </PostCardMore>
-      </PostsCarousel>
-    </div>
+    {
+      !!latestPosts.length && (
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-1">
+            <h2 class="font-heading text-2xl font-bold">
+              <a href={getLink('/fr/blog', locale, {})}>Nos articles</a>
+            </h2>
+            <p class="max-w-[70ch] text-sm text-balance opacity-80">
+              Découvrez nos articles, retours d'expérience et réflexions sur le
+              développement web, mobile et les bonnes pratiques du numérique.
+            </p>
+          </div>
+          <PostsCarousel client:load posts={latestPosts} locale={locale}>
+            <PostCardMore href={getLink('/fr/blog', locale, {})}>
+              Plus d'articles
+            </PostCardMore>
+          </PostsCarousel>
+        </div>
+      )
+    }
   </Container>
 </MainLayout>
