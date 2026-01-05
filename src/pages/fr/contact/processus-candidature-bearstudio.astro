@@ -388,9 +388,191 @@ const socialsToFollow = [
                 : stage@[devine la fin.fr]
               </p>
               <h2>Articles utiles</h2>
+              <p>
+                <a href="https://waxzce.medium.com/je-nembauche-jamais-de-poisson-pan%C3%A9-alors-arr%C3%AAtez-de-vous-pr%C3%A9senter-comme-tel-1eb318ee8a20">
+                  Arrêtez de vous présenter comme des poissons panés.
+                </a>{' '}
+                par Quentin Adam
+              </p>
+              <p>
+                <a href="https://codedesign.fr/candidature-manque-experience-alternance/">
+                  Avoir de l’expérience quand personne ne me donne ma chance ?
+                </a>{' '}
+                par Arnaud Lemercier
+              </p>
             </>
           ))
-          .with('en', () => 'en')
+          .with('en', () => (
+            <>
+              <p>
+                BearStudio does not take internship or apprenticeship for
+                2025-2026.
+              </p>
+              <h2>How does the application process work at BearStudio?</h2>
+              <p>
+                At BearStudio, cooperation and continuous improvement are an
+                essential aspect of our philosophy. That is why we highly
+                recommend you follow the mere pieces of advice of this page.
+                We’re hoping to meet people who are eager to join our team and
+                we want to avoid consistently receiving applications full of
+                mistakes, which makes us waste time.
+              </p>
+              <p>
+                Important point, our premises are located in
+                Saint-André-sur-Cailly, so it is important that you do not have
+                any constraints related to mobility #drivinglicence.
+              </p>
+              <h2>Be original and creative</h2>
+              <p>
+                We are curious about your path and your experiences. However,
+                save us from the generic cover letter full of ready-made
+                sentences. Nobody is interested in reading plagiarized content!
+              </p>
+              <p>
+                Don’t hesitate to be original and creative. We see a lot of
+                value in a portfolio of the projects you took part in, or a well
+                put together Twitter, LinkedIn or GitHub account. In our eyes,
+                these elements can be really telling about your personality and
+                your skills. Similarly, if you are a noob with no content to put
+                forward, get by on your own so as to show your motivation
+                through your application.
+              </p>
+              <p class="italic">
+                Whilst you write your application, we would like you to tell us
+                how you would react to a bear encounter!
+              </p>
+              <p>
+                These articles by
+                <a
+                  href="https://codedesign.fr/candidature-manque-experience-alternance/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Arnaud Lemercier
+                </a>{' '}
+                and{' '}
+                <a
+                  href="https://medium.com/@waxzce/je-nembauche-jamais-de-poisson-pan%C3%A9-alors-arr%C3%AAtez-de-vous-pr%C3%A9senter-comme-tel-1eb318ee8a20"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Quentin Adam
+                </a>{' '}
+                will help you to better understand what we are talking about.
+              </p>
+              <h2>
+                Put all the odds on your side by following us on social media
+              </h2>
+              <p>
+                As you may imagine, we receive a lot of applications. So, in
+                order to maximize your chances of joining BearStudio and catch
+                our attention, follow us on social media and check out our
+                content. You’ll get to know more about us and have some topics
+                to discuss upon during the interview.
+              </p>
+              <p class="italic">
+                For clickbait’s sake, here is a list of accounts to follow:
+              </p>
+              <div>
+                {socialsToFollow.map((social) => (
+                  <section>
+                    <h3>{social.network}</h3>
+                    <ul>
+                      {social.links.map((link) => (
+                        <li>
+                          <a href={link.href}>{link.content[locale]}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                ))}
+              </div>
+              <h2>Get acquainted with our application process workflow</h2>
+              <p>
+                As said previously, we are enormously solicited by numerous
+                applications. So, before you grumble against us, we are going to
+                explain to you the different steps of the application process at
+                BearStudio.
+              </p>
+              <h3>1. Reception of applications</h3>
+              <p>
+                When we receive applications of people willing to join
+                BearStudio, each application email is automatically added to the
+                column “to process” on our{' '}
+                <a
+                  href="https://trello.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Trello
+                </a>
+                board. All the demands are thereby visible by the entire team
+                and are displaced to the column “to study” in due time. Then, a
+                first sorting is done by our administrative assistant, which
+                eliminates the requests that will be refused in any case (due to
+                lack of place or position not matching).
+              </p>
+              <p>
+                Afterwards, the other requests are sent to the developers to be
+                studied, on a dedicated{' '}
+                <a
+                  href="https://slack.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Slack
+                </a>{' '}
+                channel.
+              </p>
+              <h3>2. Study of an application</h3>
+              <p>
+                When we study a case, we slag the Trello card to the “in
+                progress” category. Next, the applications are split according
+                to our decisions, into the columns “Yes” and “No”.
+              </p>
+              <p>
+                Finally, our administrative assistant takes note of the
+                proceedings, contacts the potential successful candidates for an
+                interview, and answers negatively to those who have
+                unfortunately not been selected.
+              </p>
+              <h3>3. Answers to applications</h3>
+              <p>
+                As you can see, it is a process, which can, depending on the
+                number of applications, take some time. All the more so as the
+                applications often flock in waves at certain periods.
+                Nevertheless, we try to take the time not to botch this step.
+              </p>
+              <p>
+                There is no reason to panic if we don’t directly respond, we
+                will do it soon. On the other hand, for those who might have
+                applied through another channel than the dedicated email
+                address, our reactivity degree may be a bit longer. Thus, it is
+                better to favour the process explained above.
+              </p>
+              <p>
+                Here you go! Now that we have revealed you the details of the
+                process made in BearStudio, you got all the keys in hand to
+                catch our attention and maybe to integrate our dream team! 😉.
+              </p>
+              <h2>To apply</h2>
+              <p>
+                For a <strong>job</strong>: job@[guess the end.fr]
+              </p>
+              <p>
+                For an <strong>internship</strong>, an{' '}
+                <strong>apprenticeship</strong> : stage@[guess the end.fr]
+              </p>
+              <h2>Helpful articles</h2>
+              <p>
+                <a href="https://waxzce.medium.com/i-never-hire-breaded-fish-sticks-so-stop-introducing-yourself-as-such-ab6808728a42">
+                  I never hire breaded fish sticks. So stop introducing yourself
+                  as such.
+                </a>{' '}
+                by Quentin Adam
+              </p>
+            </>
+          ))
           .exhaustive()
       }
     </Prose>

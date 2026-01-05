@@ -2,5 +2,14 @@
   "root": {
     "breadcrumb": "Contact",
     "title": "Contact Us"
+  },
+  "application-process": {
+    "breadcrumb": "Hiring process at BearStudio",
+    "title": "What to do to join us?",
+    "description": "If you want your shot at joining BearStudio and to become a teddy bear, read this page! #RTFM",
+    "metadata": {
+      "title": "The BearStudio application process",
+      "description": "At BearStudio, there is only one way to apply. On this page you can find out how to join the bear den."
+    }
   }
 }
