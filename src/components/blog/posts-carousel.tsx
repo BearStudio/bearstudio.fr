@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 import type { GetImageResult } from 'astro';
 
 import type { PostWithComputed } from '@/lib/posts';
@@ -18,6 +20,7 @@ export const PostsCarousel = (props: {
       };
     }
   >;
+  children?: ReactNode;
 }) => {
   if (!props.posts.length) return null;
   return (
@@ -38,6 +41,11 @@ export const PostsCarousel = (props: {
             </CarouselItem>
           );
         })}
+        {!!props.children && (
+          <CarouselItem className="basis-[70%] 2xs:basis-[60%] flex flex-col xs:basis-[50%] sm:basis-[30%] md:basis-[25%] fisrt:ml-8 last:mr-8">
+            {props.children}
+          </CarouselItem>
+        )}
       </CarouselContent>
     </Carousel>
   );

@@ -10,11 +10,13 @@ import {
   getConferencesCollectionByPerson,
   type ConferenceWithComputed,
 } from '@/lib/conferences';
+import { getLink } from '@/lib/link';
 import { getPeopleCollection, type PersonWithComputed } from '@/lib/people';
 import {
   getPostsCollectionLinkedToPerson,
   type PostWithComputed,
 } from '@/lib/posts';
+import { PostCardMore } from '@/components/blog/post-card-more';
 import { PostsCarousel } from '@/components/blog/posts-carousel';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
@@ -26,6 +28,8 @@ import { getAlternates, getId } from '@/components/seo/utils';
 import { SOCIALS } from '@/content/socials';
 import { getTranslationFn, parseAstroLocale, type Locale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
+
+const POSTS_LIMIT = 4;
 
 export async function generateStaticPaths(params: { locale: Locale }) {
   const people = await getPeopleCollection({ locale: params.locale });
@@ -51,12 +55,11 @@ type Props = {
 const locale = parseAstroLocale(Astro.currentLocale);
 const { person } = Astro.props;
 
-const latestPosts = await Promise.all(
+const posts = await Promise.all(
   (
     await getPostsCollectionLinkedToPerson({
       author: person,
       locale,
-      limit: 6,
     })
   ).map(async (person) => {
     return {
@@ -203,10 +206,45 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     </Prose>
 
     {
+      !!posts.length && (
+        <div class="flex flex-col gap-4">
+          <h2 class="font-heading text-2xl font-bold">
+            {!!person.data._computed.slug ? (
+              <a
+                href={getLink('/fr/blog/auteurs/:author', locale, {
+                  author: person.data._computed.slug,
+                })}
+              >
+                {t('team.person.blog.title', { name: person.data.name })}
+              </a>
+            ) : (
+              <>{t('team.person.blog.title', { name: person.data.name })}</>
+            )}
+          </h2>
+          <PostsCarousel
+            client:load
+            posts={posts.slice(0, POSTS_LIMIT)}
+            locale={locale}
+          >
+            {!!person.data._computed.slug && posts.length > POSTS_LIMIT && (
+              <PostCardMore
+                href={getLink('/fr/blog/auteurs/:author', locale, {
+                  author: person.data._computed.slug,
+                })}
+              >
+                {t('team.person.moreArticles')}
+              </PostCardMore>
+            )}
+          </PostsCarousel>
+        </div>
+      )
+    }
+
+    {
       !!conferencesWithContent.length && (
         <div class="flex flex-col gap-4">
           <h2 class="font-heading text-2xl font-bold">
-            Les conférences de {person.data.name}
+            {t('team.person.conferences.title', { name: person.data.name })}
           </h2>
           <div class="flex flex-col gap-4">
             {conferencesWithContent.map((conference) => {
@@ -259,17 +297,6 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
               );
             })}
           </div>
-        </div>
-      )
-    }
-
-    {
-      !!latestPosts.length && (
-        <div class="flex flex-col gap-4">
-          <h2 class="font-heading text-2xl font-bold">
-            Sur le blog par {person.data.name}
-          </h2>
-          <PostsCarousel client:load posts={latestPosts} locale={locale} />
         </div>
       )
     }

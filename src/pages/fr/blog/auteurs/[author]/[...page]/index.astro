@@ -55,6 +55,7 @@ const { page } = Astro.props;
 const params = Astro.params;
 
 const author = await getEntry('people', `${params.author}/${locale}`); // TODO with computed
+const authorName = author?.data.name ?? params.author;
 
 const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({
@@ -71,8 +72,11 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
   }),
   page.currentPage > 1
     ? entry({
-        path: '/fr/blog/:page',
-        params: { page: page.currentPage.toString() },
+        path: '/fr/blog/auteurs/:author/:page',
+        params: {
+          author: params.author,
+          page: page.currentPage.toString(),
+        },
         label: `Page ${page.currentPage}`,
       })
     : undefined,
@@ -82,9 +86,10 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
 <MainLayout>
   <SEO
     slot="seo"
-    title={t('blog.root.metadata.title')}
-    description={t('blog.root.metadata.description')}
-    alternates={getAlternates('/fr/blog/:page', {
+    title={t('blog.author.metadata.title', { name: authorName })}
+    description={t('blog.author.metadata.description', { name: authorName })}
+    alternates={getAlternates('/fr/blog/auteurs/:author/:page', {
+      author: params.author,
       page: page.currentPage.toString(),
     })}
     breadcrumb={breadcrumb}
@@ -92,8 +97,8 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
   <Hero>
     <HeroContent
       breadcrumb={breadcrumb}
-      title={t('blog.root.title')}
-      description={t('blog.root.description')}
+      title={t('blog.author.title', { name: authorName })}
+      description={t('blog.author.description', { name: authorName })}
     />
   </Hero>
   <Container overlapHero>

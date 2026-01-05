@@ -8,6 +8,14 @@
       "description": "Find BearStudio articles about web and mobile development, technologies, and much more."
     }
   },
+  "author": {
+    "title": "On the blog by {{name}}",
+    "description": "All articles by {{name}} about web and mobile development, technologies, and much more.",
+    "metadata": {
+      "title": "Articles by {{name}} on BearStudio's blog, web development studio in Rouen",
+      "description": "Find articles by {{name}} about web and mobile development, technologies, and much more."
+    }
+  },
   "pagination": {
     "newer": "Newer",
     "older": "Older",

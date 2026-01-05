@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 import type { GetImageResult } from 'astro';
 
 import type { PersonWithComputed } from '@/lib/people';
@@ -16,6 +18,7 @@ export const PeopleCarousel = (props: {
       data: PersonWithComputed['data'] & { image: GetImageResult | undefined };
     }
   >;
+  children?: ReactNode;
 }) => {
   if (!props.people.length) return null;
   return (
@@ -26,7 +29,7 @@ export const PeopleCarousel = (props: {
           return (
             <CarouselItem
               key={person.id}
-              className="basis-[60%] 2xs:basis-[40%] flex flex-col xs:basis-[30%] md:basis-[22%] fisrt:ml-8 last:mr-8"
+              className="basis-[60%] 2xs:basis-[40%] flex flex-col xs:basis-[30%] md:basis-[24%] fisrt:ml-8 last:mr-8"
             >
               <PersonCard
                 person={person}
@@ -38,6 +41,11 @@ export const PeopleCarousel = (props: {
             </CarouselItem>
           );
         })}
+        {!!props.children && (
+          <CarouselItem className="basis-[60%] 2xs:basis-[40%] flex flex-col xs:basis-[30%] md:basis-[24%] fisrt:ml-8 last:mr-8">
+            {props.children}
+          </CarouselItem>
+        )}
       </CarouselContent>
     </Carousel>
   );

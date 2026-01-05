@@ -8,11 +8,13 @@ import { getPeopleCollection } from '@/lib/people';
 import { getPolaroidHref } from '@/lib/polaroids';
 import { getPostsCollection } from '@/lib/posts';
 import { cn } from '@/lib/tailwind/utils';
+import { PostCardMore } from '@/components/blog/post-card-more';
 import { PostsCarousel } from '@/components/blog/posts-carousel';
 import Container from '@/components/container.astro';
 import Hero from '@/components/hero/hero.astro';
 import { HomePolaroids } from '@/components/home/home-polaroids';
 import { PeopleCarousel } from '@/components/people/people-carousel';
+import { PersonCardMore } from '@/components/people/person-card-more';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import { buttonVariants } from '@/components/ui/button';
@@ -66,7 +68,7 @@ const latestPosts = await Promise.all(
   (
     await getPostsCollection({
       locale,
-      limit: 6,
+      limit: 5,
     })
   ).map(async (person) => {
     return {
@@ -206,24 +208,36 @@ const latestPosts = await Promise.all(
   <Container class="gap-12">
     <div class="flex flex-col gap-4">
       <div class="flex flex-col gap-1">
-        <h2 class="font-heading text-2xl font-bold">Nos experts</h2>
+        <h2 class="font-heading text-2xl font-bold">
+          <a href={getLink('/fr/equipe', locale, {})}>Nos experts</a>
+        </h2>
         <p class="max-w-[70ch] text-sm text-balance opacity-80">
           Rencontrez les ours passionnés qui donnent vie à vos projets
           numériques avec expertise et créativité.
         </p>
       </div>
-      <PeopleCarousel client:load people={peopleCurrent} locale={locale} />
+      <PeopleCarousel client:load people={peopleCurrent} locale={locale}>
+        <PersonCardMore href={getLink('/fr/equipe', locale, {})}
+          >Plus d'experts</PersonCardMore
+        >
+      </PeopleCarousel>
     </div>
 
     <div class="flex flex-col gap-4">
       <div class="flex flex-col gap-1">
-        <h2 class="font-heading text-2xl font-bold">Nos articles</h2>
+        <h2 class="font-heading text-2xl font-bold">
+          <a href={getLink('/fr/blog', locale, {})}>Nos articles</a>
+        </h2>
         <p class="max-w-[70ch] text-sm text-balance opacity-80">
           Découvrez nos articles, retours d'expérience et réflexions sur le
           développement web, mobile et les bonnes pratiques du numérique.
         </p>
       </div>
-      <PostsCarousel client:load posts={latestPosts} locale={locale} />
+      <PostsCarousel client:load posts={latestPosts} locale={locale}>
+        <PostCardMore href={getLink('/fr/blog', locale, {})}>
+          Plus d'articles
+        </PostCardMore>
+      </PostsCarousel>
     </div>
   </Container>
 </MainLayout>

@@ -8,6 +8,14 @@
       "description": "Retrouvez les articles de BearStudio sur le développement web et mobile, les technologies, et bien plus encore."
     }
   },
+  "author": {
+    "title": "Sur le blog par {{name}}",
+    "description": "Tous les articles de {{name}} sur le développement web et mobile, les technologies, et bien plus encore.",
+    "metadata": {
+      "title": "Articles de {{name}}sur le blog du BearStudio, studio de développement web à Rouen",
+      "description": "Retrouvez les articles de {{name}}}} sur le développement web et mobile, les technologies, et bien plus encore."
+    }
+  },
   "pagination": {
     "newer": "Plus récents",
     "older": "Plus anciens",
