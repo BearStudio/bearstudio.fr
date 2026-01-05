@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/carousel';
 import type { Locale } from '@/i18n/utils';
 
-export const HomePosts = (props: {
+export const PostsCarousel = (props: {
   locale: Locale;
   posts: Array<
     Omit<PostWithComputed, 'data'> & {
