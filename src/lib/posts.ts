@@ -35,26 +35,23 @@ export async function getPostsCollection({
 }: Params) {
   const posts = await Promise.all(
     (await getCollection('posts'))
-      .filter((post) => {
-        if (!locale) return post;
-        const [postLocale] = post.id.split('/');
-        return postLocale === locale;
+      .filter((item) => {
+        // item.id format is: "id/locale.md" (e.g., "my-post/fr.md")
+        const itemLocale = item.id.split('/')[1]?.replace('.md', '');
+        return itemLocale === locale;
       })
       .sort(sortByLatest)
       .map(postWithComputed)
   );
 
-  if (limit) {
-    return posts.slice(0, limit);
-  }
-
-  return posts;
+  return posts.slice(0, limit);
 }
 
 export type PostWithComputed = Awaited<ReturnType<typeof postWithComputed>>;
 const postWithComputed = async (item: CollectionEntry<'posts'>) => {
-  const [locale, ...slugArray] = item.id.split('/');
-  const slug = slugArray.join('/');
+  // item.id format is: "slug/locale.md" (e.g., "ivan-dalmet/fr.md")
+  const slug = item.id.split('/')[0] ?? 'unknown';
+  const locale = item.id.split('/')[1]?.replace('.md', '');
   const authors = await Promise.all(
     (item.data.authors ?? [])?.map(async (author) => {
       const data = await getEntry('people', `${author.id}/${locale}`);
@@ -82,13 +79,9 @@ export async function getPostsCollectionLinkedToPerson({
   locale,
   limit = undefined,
 }: GetPostsCollectionLinkedToPersonProps) {
-  const posts = (await getPostsCollection({ locale }))
-    .filter((post) => hasSpecificAuthor({ post, author }))
-    .filter((x) => x);
+  const posts = (await getPostsCollection({ locale })).filter((post) =>
+    hasSpecificAuthor({ post, author })
+  );
 
-  if (limit) {
-    return posts.slice(0, limit);
-  }
-
-  return posts;
+  return posts.slice(0, limit);
 }

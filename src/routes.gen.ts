@@ -6,6 +6,17 @@ import { assignPaths } from '@bearstudio/astro-typed-routes';
 
 const ROUTES_CONFIG = {
   "en": {
+    "blog": {
+      ":page": {},
+      "authors": {
+        ":author": {
+          ":page": {}
+        }
+      },
+      "posts": {
+        ":id": {}
+      }
+    },
     "contact": {
       "application-process-bearstudio": {}
     },

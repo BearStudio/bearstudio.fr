@@ -60,9 +60,11 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     slot="seo"
     title={t('blog.root.metadata.title')}
     description={t('blog.root.metadata.description')}
-    alternates={getAlternates('/fr/blog/:page', {
-      page: page.currentPage.toString(),
-    })}
+    alternates={page.currentPage > 1
+      ? getAlternates('/fr/blog/:page', {
+          page: page.currentPage.toString(),
+        })
+      : getAlternates('/fr/blog', {})}
     breadcrumb={breadcrumb}
   />
   <Hero>

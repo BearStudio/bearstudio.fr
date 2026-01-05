@@ -1,0 +1,13 @@
+---
+import type { GetStaticPathsOptions } from 'astro';
+
+import Page, {
+  generateStaticPaths,
+} from '@/pages/fr/blog/[...page]/index.astro';
+
+export async function getStaticPaths(params: GetStaticPathsOptions) {
+  return generateStaticPaths({ locale: 'en', ...params });
+}
+---
+
+<Page {...Astro.props} />
