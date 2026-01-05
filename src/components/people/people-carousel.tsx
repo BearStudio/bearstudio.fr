@@ -36,7 +36,6 @@ export const PeopleCarousel = (props: {
                 locale={props.locale}
                 image={person.data.image}
                 hover="soft"
-                hideJob
               />
             </CarouselItem>
           );

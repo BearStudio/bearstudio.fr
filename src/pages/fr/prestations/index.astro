@@ -1,14 +1,22 @@
 ---
+import { getImage, Image } from 'astro:assets';
+
 import { getLink } from '@/lib/link';
+import { getPeopleCollection } from '@/lib/people';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
+import { PeopleCarousel } from '@/components/people/people-carousel';
+import { PersonCardMore } from '@/components/people/person-card-more';
+import SectionScratched from '@/components/sections/section-scratched.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import ServiceCard from '@/components/services/service-card.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
+
+import photoGroup from './_group.jpg';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
@@ -19,6 +27,31 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     params: {},
   }),
 ]);
+
+const peopleCurrent = await Promise.all(
+  (
+    await getPeopleCollection({
+      locale,
+      status: 'current',
+      limit: 6,
+    })
+  ).map(async (person) => {
+    return {
+      ...person,
+      data: {
+        ...person.data,
+        image: person.data.picture
+          ? await getImage({
+              src: person.data.picture,
+              widths: [200, 500],
+              sizes: '(min-width: 800px) 500px, 200px',
+              layout: 'constrained',
+            })
+          : undefined,
+      },
+    };
+  })
+);
 ---
 
 <MainLayout>
@@ -36,7 +69,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     />
   </Hero>
   <Container overlapHero>
-    <div class="grid grid-cols-3 gap-4">
+    <div class="xs:grid-cols-2 grid gap-4 md:grid-cols-3">
       <ServiceCard
         href={getLink('/fr/prestations/ux-design', locale, {})}
         title="UX/UI Design"
@@ -62,6 +95,72 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
         title="Accompagnement CTO"
         description="Vous avez besoin de conseils stratégiques sur votre architecture technique ou vos choix technologiques ? Nous vous accompagnons dans la prise de décisions techniques, la structuration de votre équipe de développement et la mise en place de bonnes pratiques pour faire évoluer votre produit sereinement."
       />
+    </div>
+  </Container>
+  <SectionScratched image={photoGroup}>
+    <Container class="py-12">
+      <div class="flex flex-col gap-8 sm:flex-row sm:items-center">
+        <div class="flex flex-2 flex-col gap-4">
+          <h2 class="font-heading text-2xl font-bold">
+            Qui compose l’équipe de votre projet ?
+          </h2>
+          <div class="grid gap-6">
+            <div class="flex flex-col gap-2">
+              <h3 class="font-heading text-lg font-bold">
+                Votre équipe et la notre
+              </h3>
+              <p class="text-sm">
+                Si vous choisissez cette option, notre équipe du BearStudio
+                travaillera en totale coopération avec la vôtre. Cela permettra
+                de faciliter le transfert de compétences et de former votre
+                équipe pendant la durée du projet.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="font-heading text-lg font-bold">
+                Notre équipe uniquement
+              </h3>
+              <p class="text-sm">
+                Dans ce cas, vous donnez les clés du développement de votre
+                projet à notre entreprise, tout en restant en contact avec elle
+                afin de garder un maximum de visibilité sur l’avancement de
+                votre projet. Cette formule présente l’avantage de la rapidité
+                puisque nos UX designers et développeurs sont habitués à
+                travailler en équipe.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative aspect-square w-full max-w-[300px] flex-1 overflow-hidden rounded-md bg-white/5"
+        >
+          <Image
+            src={photoGroup}
+            alt="L'équipe BearStudio"
+            width={600}
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+      </div>
+    </Container>
+  </SectionScratched>
+  <Container>
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-1">
+        <h2 class="font-heading text-2xl font-bold">
+          <a href={getLink('/fr/equipe', locale, {})}>
+            Vous cherchez un expert?
+          </a>
+        </h2>
+        <p class="max-w-[70ch] text-sm text-balance opacity-80">
+          Rencontrez nos ours passionnés
+        </p>
+      </div>
+      <PeopleCarousel client:load people={peopleCurrent} locale={locale}>
+        <PersonCardMore href={getLink('/fr/equipe', locale, {})}>
+          Plus d'experts
+        </PersonCardMore>
+      </PeopleCarousel>
     </div>
   </Container>
 </MainLayout>

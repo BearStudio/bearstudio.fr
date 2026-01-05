@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+
+import type { ImageMetadata } from 'astro';
+
+import { cn } from '@/lib/tailwind/utils';
+import { ScratchFull } from '@/components/ui/scratch';
+
+import defaultBg from './default-bg.jpeg';
+
+interface Props {
+  class?: string;
+  scratchClassName?: string;
+  scratchTopClassName?: string;
+  scratchBottomClassName?: string;
+  image?: ImageMetadata | undefined;
+}
+const props = Astro.props;
+---
+
+<div class={cn('bg-hero text-hero-foreground relative my-12', props.class)}>
+  <ScratchFull
+    className={cn(
+      'text-background -mt-px rotate-180',
+      props.scratchClassName,
+      props.scratchTopClassName
+    )}
+  />
+  <div class="relative z-10 flex flex-1 flex-col">
+    <slot />
+  </div>
+  <!-- Background (translate3d is for safari to apply mix-blend-overlay) -->
+  <Image
+    src={props.image ?? defaultBg}
+    alt=""
+    width={1600}
+    height={900}
+    layout="constrained"
+    class="absolute inset-0 z-0 h-full w-full object-cover opacity-30 mix-blend-overlay grayscale"
+    style={{ transform: 'translate3d(0, 0, 0)' }}
+  />
+  <div class="from-hero/90 to-hero/0 absolute inset-0 z-0 bg-linear-to-b"></div>
+  <ScratchFull
+    className={cn(
+      'text-background -mb-px',
+      props.scratchClassName,
+      props.scratchBottomClassName
+    )}
+  />
+</div>

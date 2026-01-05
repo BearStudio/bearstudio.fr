@@ -12,7 +12,6 @@ export const PersonCard = (props: {
   locale: Locale;
   image: GetImageResult;
   hover?: 'soft' | 'hard';
-  hideJob?: boolean;
 }) => {
   return (
     <a
@@ -55,7 +54,7 @@ export const PersonCard = (props: {
         <h2 className="font-heading leading-tight font-bold text-sm sm:text-base">
           {props.person.data.name}
         </h2>
-        {!!props.person.data.job && !props.hideJob && (
+        {!!props.person.data.job && (
           <p className="text-xs">{props.person.data.job}</p>
         )}
       </div>
