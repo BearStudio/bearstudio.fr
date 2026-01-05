@@ -32,6 +32,7 @@
     "@radix-ui/react-navigation-menu": "1.2.14",
     "@radix-ui/react-slot": "1.2.4",
     "@tailwindcss/vite": "4.1.13",
+    "@vercel/config": "0.0.24",
     "astro": "5.16.6",
     "astro-robots-txt": "1.0.0",
     "astro-seo": "0.8.4",
