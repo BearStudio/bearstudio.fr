@@ -35,7 +35,7 @@ export const PostCard = (props: {
         <FormattedDate
           locale={props.locale}
           date={props.post.data.date}
-          className="text-xs opacity-60"
+          className="text-xs opacity-80"
         />
       </div>
     </a>
