@@ -13,7 +13,7 @@ export const Polaroid = (props: {
   return (
     <div
       className={cn(
-        'text-foreground relative flex w-full overflow-hidden flex-col gap-2 rounded-sm bg-white p-3 shadow-2xl',
+        'text-foreground relative flex w-full overflow-hidden flex-col gap-2 rounded-sm bg-white p-2 shadow-2xl',
         props.className
       )}
     >

@@ -4,15 +4,15 @@ import type { GetImageResult } from 'astro';
 
 import { getPolaroidHref } from '@/lib/polaroids';
 import { cn } from '@/lib/tailwind/utils';
+import { Polaroid } from '@/components/polaroids/polaroid';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel';
-import { Polaroid } from '@/components/ui/polaroid';
 import type { Locale } from '@/i18n/utils';
 
-export const HomePolaroids = (props: {
+export const PolaroidsCarousel = (props: {
   locale: Locale;
   polaroids: Array<
     Omit<CollectionEntry<'polaroids'>, 'data'> & {
@@ -23,7 +23,7 @@ export const HomePolaroids = (props: {
   if (!props.polaroids.length) return null;
   return (
     <Carousel className="w-full" opts={{ dragFree: true }}>
-      <CarouselContent className="-ml-8 pl-8">
+      <CarouselContent>
         {props.polaroids.map((polaroid, index) => {
           return (
             <CarouselItem
