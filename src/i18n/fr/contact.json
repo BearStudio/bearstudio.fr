@@ -1,7 +1,12 @@
 {
   "root": {
     "breadcrumb": "Contact",
-    "title": "Nous contacter"
+    "title": "Contacter le BearStudio",
+    "description": "Nous sommes à votre écoute pour toute demande de renseignement et proposition de projet ! Un membre de notre équipe se fera un plaisir de vous répondre dans les plus brefs délais.",
+    "metadata": {
+      "title": "Contacter l'équipe du BearStudio à Rouen en Normandie",
+      "description": "Votre prochain CTO ou votre prochaine équipe de développement se trouve sans doute à Rouen. Contactez-nous pour que nous discutions de votre projet."
+    }
   },
   "application-process": {
     "breadcrumb": "Processus de recrutement au BearStudio",

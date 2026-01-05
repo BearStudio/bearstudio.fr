@@ -1,7 +1,12 @@
 {
   "root": {
     "breadcrumb": "Contact",
-    "title": "Contact Us"
+    "title": "Contact BearStudio",
+    "description": "We are at your service regarding any complementary information or business inquiry! A member of our team will gladly answer to you as soon as possible.",
+    "metadata": {
+      "title": "Contact the BearStudio team in Rouen, France",
+      "description": "Your next CTO or development team is probably based in Rouen. Contact us to discuss about your project."
+    }
   },
   "application-process": {
     "breadcrumb": "Hiring process at BearStudio",

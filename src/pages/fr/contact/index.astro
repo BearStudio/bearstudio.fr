@@ -1,10 +1,14 @@
 ---
+import { match } from 'ts-pattern';
+
+import { getLink } from '@/lib/link';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
+import { SOCIALS } from '@/content/socials';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
@@ -22,12 +26,114 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
 
 <MainLayout>
   <SEO
+    slot="seo"
     alternates={getAlternates('/fr/contact', {})}
-    title="Contacter l'équipe du BearStudio à Rouen en Normandie"
+    title={t('contact.root.metadata.title')}
+    description={t('contact.root.metadata.description')}
     breadcrumb={breadcrumb}
   />
   <Hero>
-    <HeroContent breadcrumb={breadcrumb} title={t('contact.root.title')} />
+    <HeroContent
+      breadcrumb={breadcrumb}
+      title={t('contact.root.title')}
+      description={t('contact.root.description')}
+    />
   </Hero>
-  <Container>PLACEHOLDER</Container>
+  <Container>
+    {
+      match(locale)
+        .with('fr', () => (
+          <>
+            <h2>Un chantier</h2>
+            <p>
+              Porteurs de projet, startup, CTO ou agence ? C'est juste ici :
+            </p>
+            <iframe
+              src="https://webforms.pipedrive.com/f/32P3fANHMFYnf2gby5LG8VZO99aC3QUUcSoCqUTos8bNYTixBOrKniBhZ2tu63jur?embeded=1&uuid=idwiv5kk"
+              name="https://www.bearstudio.fr/contact#formAnchor-idwiv5kk"
+              height="750"
+              title="Web Forms"
+            />
+
+            <h2>Un CV ?</h2>
+            <p>Stage, alternance, emploi ou freelance ?</p>
+            <a
+              href={getLink(
+                '/fr/contact/processus-candidature-bearstudio',
+                locale,
+                {}
+              )}
+            >
+              Par ici !
+            </a>
+
+            <h2>Retrouvez nous à Saint-André-sur-Cailly</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7698.582952909151!2d1.2166680317870522!3d49.56548610086764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e0de1bba92f79b%3A0xc28a52ac469f6ef5!2sBearStudio!5e0!3m2!1sen!2sfr!4v1767633040461!5m2!1sen!2sfr"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            />
+          </>
+        ))
+        .with('en', () => (
+          <>
+            <h2>A project?</h2>
+            <p>Project holders, startup, CTO or agency?</p>
+            <iframe
+              src="https://webforms.pipedrive.com/f/1teqIN7CPFfjSqp81Ae5J6PYesKeTjOqlp1mPBBU71Sb1hypeVXv7oogLCm8MInwT?embeded=1&uuid=idv1u1"
+              name="https://www.bearstudio.fr/contact#formAnchor-idv1u1"
+              height="750"
+              title="Web Forms"
+            />
+
+            <h2>A resume?</h2>
+            <p>Internship, apprenticeship, job or freelance?</p>
+            <a
+              href={getLink(
+                '/fr/contact/processus-candidature-bearstudio',
+                locale,
+                {}
+              )}
+            >
+              Click here
+            </a>
+
+            <h2>Find us at Saint-André-sur-Cailly</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7698.582952909151!2d1.2166680317870522!3d49.56548610086764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e0de1bba92f79b%3A0xc28a52ac469f6ef5!2sBearStudio!5e0!3m2!1sen!2sfr!4v1767633040461!5m2!1sen!2sfr"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            />
+          </>
+        ))
+        .exhaustive()
+    }
+
+    <a href="tel:+33749360436">+33 7 49 36 04 36</a>
+    <div class="flex flex-row gap-1">
+      {
+        SOCIALS.map((item) => {
+          const Icon = item.icon;
+          return (
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-accent flex items-center justify-center p-1.5"
+              title={item.label}
+            >
+              <Icon className="size-6" />
+              <span class="sr-only">{item.label}</span>
+            </a>
+          );
+        })
+      }
+    </div>
+  </Container>
 </MainLayout>
