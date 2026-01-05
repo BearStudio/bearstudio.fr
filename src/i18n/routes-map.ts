@@ -23,6 +23,7 @@ export const ROUTE_MAPPINGS = {
   '/fr/contact/processus-candidature-bearstudio': {
     en: '/en/contact/application-process-bearstudio',
   },
+  '/fr/blog/rss.xml': { en: null },
 } as const satisfies Record<
   DefaultLocaleRoutePaths,
   Record<LocalesWithoutDefault, RoutePaths | null>

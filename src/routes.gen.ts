@@ -27,7 +27,8 @@ const ROUTES_CONFIG = {
       },
       "posts": {
         ":id": {}
-      }
+      },
+      "rss.xml": {}
     },
     "contact": {
       "processus-candidature-bearstudio": {}
@@ -40,7 +41,6 @@ const ROUTES_CONFIG = {
       "ux-design": {}
     }
   },
-  "rss.xml": {},
   "styleguide": {}
 } as const;
 

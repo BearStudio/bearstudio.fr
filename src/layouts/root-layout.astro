@@ -6,18 +6,19 @@ import '@fontsource-variable/inter';
 import '@fontsource-variable/caveat';
 
 import EnvHint from '@/components/env-hint.astro';
-import { SITE_TITLE } from '@/consts';
 
 import '@/styles/global.css';
 
 import { Schema } from 'astro-seo-schema';
 
+import { getLink } from '@/lib/link';
 import { getSiteUrl } from '@/lib/site/get-site-url';
 import { getId } from '@/components/seo/utils';
 import { SOCIALS } from '@/content/socials';
-import { parseAstroLocale } from '@/i18n/utils';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 
 const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
 dayjs.locale(Astro.currentLocale);
 ---
 
@@ -29,12 +30,17 @@ dayjs.locale(Astro.currentLocale);
       content="width=device-width, initial-scale=1, maximum-scale=1, interactive-widget=resizes-content"
     />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title={SITE_TITLE}
-      href={new URL('rss.xml', Astro.site)}
-    />
+    {
+      locale === 'fr' && (
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title={t('blog.root.title')}
+          href={getLink('/fr/blog/rss.xml', locale, {}, true)}
+        />
+      )
+    }
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta
       name="robots"
