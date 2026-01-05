@@ -86,7 +86,13 @@ export async function getPostsCollectionLinkedToPerson({
   locale,
   limit = undefined,
 }: GetPostsCollectionLinkedToPersonProps) {
-  return (await getPostsCollection({ limit, locale }))
+  const posts = (await getPostsCollection({ locale }))
     .filter((post) => hasSpecificAuthor({ post, author }))
     .filter((x) => x);
+
+  if (limit) {
+    return posts.slice(0, limit);
+  }
+
+  return posts;
 }

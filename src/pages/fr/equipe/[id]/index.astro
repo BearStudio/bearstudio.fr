@@ -1,6 +1,6 @@
 ---
 import { Schema } from 'astro-seo-schema';
-import { Image } from 'astro:assets';
+import { getImage, Image } from 'astro:assets';
 import { render } from 'astro:content';
 
 import dayjs from 'dayjs';
@@ -15,8 +15,7 @@ import {
   getPostsCollectionLinkedToPerson,
   type PostWithComputed,
 } from '@/lib/posts';
-import PostCard from '@/components/blog/post-card.astro';
-import PostsGrid from '@/components/blog/posts-grid.astro';
+import { PostsCarousel } from '@/components/blog/posts-carousel';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
@@ -51,10 +50,30 @@ type Props = {
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const { person } = Astro.props;
-const posts = await getPostsCollectionLinkedToPerson({
-  author: person,
-  locale: locale,
-});
+
+const latestPosts = await Promise.all(
+  (
+    await getPostsCollectionLinkedToPerson({
+      author: person,
+      locale,
+      limit: 6,
+    })
+  ).map(async (person) => {
+    return {
+      ...person,
+      data: {
+        ...person.data,
+        image: person.data.heroImage
+          ? await getImage({
+              src: person.data.heroImage,
+              width: 1200,
+              height: 800,
+            })
+          : undefined,
+      },
+    };
+  })
+);
 
 const conferences = await getConferencesCollectionByPerson({
   person,
@@ -245,16 +264,12 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     }
 
     {
-      !!posts.length && (
+      !!latestPosts.length && (
         <div class="flex flex-col gap-4">
           <h2 class="font-heading text-2xl font-bold">
             Sur le blog par {person.data.name}
           </h2>
-          <PostsGrid>
-            {posts.map((post) => {
-              return <PostCard post={post} />;
-            })}
-          </PostsGrid>
+          <PostsCarousel client:load posts={latestPosts} locale={locale} />
         </div>
       )
     }
