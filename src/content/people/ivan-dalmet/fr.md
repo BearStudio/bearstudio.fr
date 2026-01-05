@@ -3,11 +3,13 @@ name: 'Ivan Dalmet'
 picture: './ivan.png'
 job: 'Co-founder & Lead Designer UX/UI'
 socials:
-  - type: 'x'
-    href: 'https://twitter.com/ivandalmet?lang=fr'
-  - type: 'linkedin'
-    href: 'https://fr.linkedin.com/in/ivandalmet'
-status: 'current'
+  - type: x
+    href: https://twitter.com/ivandalmet?lang=fr
+  - type: linkedin
+    href: https://fr.linkedin.com/in/ivandalmet
+  - type: website
+    href: https://ivan.dalmet.fr
+status: current
 hidden: false
 order: 2
 ---

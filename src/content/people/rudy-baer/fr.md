@@ -7,6 +7,8 @@ socials:
     href: 'https://twitter.com/rudybaer'
   - type: 'linkedin'
     href: 'https://fr.linkedin.com/in/rudybaer'
+  - type: website
+    href: https://rudybaer.com/
 status: 'current'
 hidden: false
 order: 1

@@ -11,6 +11,7 @@
     "conferences": {
       "title": "{{name}}'s conferences"
     },
-    "moreArticles": "More articles"
+    "moreArticles": "More articles",
+    "website": "View website"
   }
 }

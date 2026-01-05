@@ -4,7 +4,7 @@ import { getImage, Image } from 'astro:assets';
 import { render } from 'astro:content';
 
 import dayjs from 'dayjs';
-import { PiArrowSquareOut } from 'react-icons/pi';
+import { PiArrowSquareOut, PiLinkSimpleDuotone } from 'react-icons/pi';
 
 import {
   getConferencesCollectionByPerson,
@@ -164,19 +164,22 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
                   const socialConfig = SOCIALS.find(
                     (i) => i.type === social.type
                   );
-                  const Icon = socialConfig?.icon;
+                  const Icon = socialConfig?.icon ?? PiLinkSimpleDuotone;
+                  const label =
+                    socialConfig?.label ??
+                    (social.type === 'website'
+                      ? t('team.person.website')
+                      : social.type);
                   return (
                     <a
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
                       class="hover:text-accent flex items-center justify-center p-1.5"
-                      title={socialConfig?.label ?? social.type}
+                      title={label}
                     >
-                      {!!Icon && <Icon className="size-7" />}
-                      <span class="sr-only">
-                        {socialConfig?.label ?? social.type}
-                      </span>
+                      {<Icon className="size-7" />}
+                      <span class="sr-only">{label}</span>
                     </a>
                   );
                 })}

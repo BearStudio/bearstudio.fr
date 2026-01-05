@@ -11,6 +11,7 @@
     "conferences": {
       "title": "Les conférences de {{name}}"
     },
-    "moreArticles": "Plus d'articles"
+    "moreArticles": "Plus d'articles",
+    "website": "Voir le site"
   }
 }
