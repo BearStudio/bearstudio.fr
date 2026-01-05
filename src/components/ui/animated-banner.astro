@@ -1,0 +1,53 @@
+---
+import { createHash } from 'node:crypto';
+import type { ComponentProps, HTMLAttributes } from 'astro/types';
+
+import CurvedLoop from '@/components/ui/curved-loop';
+
+interface Props {
+  src: string;
+  imageProps?: HTMLAttributes<'img'>;
+  text: string;
+  curvedLoopProps?: ComponentProps<typeof CurvedLoop>;
+}
+
+const props = Astro.props;
+
+const hash = createHash('sha512').update(props.text).digest('base64');
+const numbersLength = hash
+  .split('')
+  .filter((char) => isNaN(parseInt(char))).length;
+
+// Calculate curvedAmount based on text length, bounded between -100 and 200
+const curvedAmount = Math.max(-100, Math.min(200, 200 - numbersLength * 20));
+
+// Compute the top position
+const position = Math.max(-2.5, Math.min(7, 7 - numbersLength * 0.2));
+---
+
+<div
+  class="bg-brand-800 relative aspect-video w-full overflow-hidden rounded-lg"
+>
+  <img
+    class="absolute inset-0 object-cover opacity-30 mix-blend-overlay grayscale"
+    src={props.src}
+    alt=""
+    {...props.imageProps}
+  />
+  <div
+    class={`absolute  right-0 bottom-0 left-0 flex items-center justify-center`}
+    style={{
+      top: `${position}rem`,
+    }}
+  >
+    <CurvedLoop
+      client:visible
+      marqueeText={`${props.text} ✦ `}
+      speed={1}
+      curveAmount={curvedAmount}
+      className="absolute inset-0 fill-white"
+      interactive={false}
+      {...props.curvedLoopProps}
+    />
+  </div>
+</div>

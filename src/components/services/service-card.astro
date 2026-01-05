@@ -1,0 +1,33 @@
+---
+import AnimatedBanner from '../ui/animated-banner.astro';
+import defaultImg from './default.jpeg';
+
+interface Props {
+  href: string;
+  title: string;
+  description?: string;
+}
+
+const props = Astro.props;
+---
+
+<a
+  href={props.href}
+  class="bg-card border-card-border flex flex-1 flex-col gap-2.5 overflow-hidden rounded-md border border-b-3 p-2 transition-all hover:-translate-y-1.5 hover:shadow-xl"
+>
+  <div
+    class="bg-brand-900 relative aspect-video w-full overflow-hidden rounded-sm"
+  >
+    <AnimatedBanner src={defaultImg.src} text={props.title} />
+  </div>
+  <div class="flex flex-1 flex-col gap-2 px-1.5 py-1">
+    <h2 class="font-heading line-clamp-2 text-lg leading-tight font-bold">
+      {props.title}
+    </h2>
+    <div class="text-xs leading-relaxed">
+      <p>
+        {props.description}
+      </p>
+    </div>
+  </div>
+</a>

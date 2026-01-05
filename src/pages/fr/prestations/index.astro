@@ -1,10 +1,12 @@
 ---
+import { getLink } from '@/lib/link';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
+import ServiceCard from '@/components/services/service-card.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
@@ -33,5 +35,33 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       description={t('services.root.description')}
     />
   </Hero>
-  <Container>Content</Container>
+  <Container overlapHero>
+    <div class="grid grid-cols-3 gap-4">
+      <ServiceCard
+        href={getLink('/fr/prestations/ux-design', locale, {})}
+        title="UX/UI Design"
+        description="Si vous souhaitez construire un produit adapté aux besoins et aux demandes de vos utilisateurs et clients, nous vous proposons des prestations UX design adaptées à votre contexte afin d'améliorer l'expérience utilisateur de votre produit en accentuant son ergonomie."
+      />
+      <ServiceCard
+        href={getLink('/fr/prestations/ux-design', locale, {})}
+        title="Développement Web"
+        description="Si vous souhaitez construire un produit adapté aux besoins et aux demandes de vos utilisateurs et clients, nous vous proposons des prestations UX design adaptées à votre contexte afin d'améliorer l'expérience utilisateur de votre produit en accentuant son ergonomie."
+      />
+      <ServiceCard
+        href={getLink('/fr/prestations/ux-design', locale, {})}
+        title="Développement Mobile"
+        description="Vous avez besoin d'une application mobile native ou cross-platform ? Notre équipe développe des applications iOS et Android performantes et intuitives. Nous utilisons React Native pour offrir la meilleure expérience utilisateur possible sur mobile."
+      />
+      <ServiceCard
+        href={getLink('/fr/prestations/ux-design', locale, {})}
+        title="Boost Projet"
+        description="Votre projet ralentit ou vous manquez de ressources techniques ? Nous intervenons en renfort pour accélérer le développement de votre produit. Notre équipe s'intègre rapidement à vos processus existants pour débloquer les situations complexes et maintenir votre vélocité de développement."
+      />
+      <ServiceCard
+        href={getLink('/fr/prestations/ux-design', locale, {})}
+        title="Accompagnement CTO"
+        description="Vous avez besoin de conseils stratégiques sur votre architecture technique ou vos choix technologiques ? Nous vous accompagnons dans la prise de décisions techniques, la structuration de votre équipe de développement et la mise en place de bonnes pratiques pour faire évoluer votre produit sereinement."
+      />
+    </div>
+  </Container>
 </MainLayout>
