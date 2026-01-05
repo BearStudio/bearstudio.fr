@@ -4,6 +4,7 @@ import { match } from 'ts-pattern';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
+import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
@@ -14,21 +15,185 @@ const t = getTranslationFn(locale);
 
 const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({
-    label: 'Nous contacter', // TODO Translation,
+    label: t('contact.root.title'),
     path: '/fr/contact',
     params: {},
   }),
   entry({
-    label: 'Processus de recrutement au BearStudio', // TODO Translation
+    label: t('contact.application-process.breadcrumb'),
     path: '/fr/contact/processus-candidature-bearstudio',
     params: {},
   }),
 ]);
+
+const socialsToFollow = [
+  {
+    network: '𝕏 (Twitter)',
+    links: [
+      {
+        content: { fr: 'Compte du BearStudio', en: "BearStudio's account" },
+        href: 'https://twitter.com/_BearStudio',
+      },
+      {
+        content: { fr: 'Compte de Rudy Baer', en: "Rudy Baer's account" },
+        href: 'https://twitter.com/RudyBaer',
+      },
+      {
+        content: { fr: 'Compte de Yoann Fleury', en: "Yoann Fleury's account" },
+        href: 'https://twitter.com/yoannfleurydev',
+      },
+      {
+        content: {
+          fr: 'Compte de Fork it! Community',
+          en: "Fork it! Community's account",
+        },
+        href: 'https://x.com/ForkitCommunity',
+      },
+    ],
+  },
+  {
+    network: 'LinkedIn',
+    links: [
+      {
+        content: {
+          fr: 'Profil LinkedIn du Bearstudio',
+          en: "BearStudio's LinkedIn profile",
+        },
+        href: 'https://www.linkedin.com/company/bearstudio/',
+      },
+      {
+        content: {
+          fr: 'Profil LinkedIn de Codeurs en Seine',
+          en: "Codeurs en Seine's LinkedIn profile",
+        },
+        href: 'https://fr.linkedin.com/company/codeurs-en-seine',
+      },
+      {
+        content: {
+          fr: 'Profil LinkedIn de Fork it!',
+          en: "Fork it!'s LinkedIn profile",
+        },
+        href: 'https://www.linkedin.com/company/fork-it-community',
+      },
+    ],
+  },
+  {
+    network: 'YouTube',
+    links: [
+      {
+        content: {
+          fr: 'Chaîne Youtube du Bearstudio',
+          en: "BearStudio's YouTube channel",
+        },
+        href: 'https://www.youtube.com/channel/UC-2hpnhKgU2C_OFucjEN0IA',
+      },
+      {
+        content: {
+          fr: 'Chaîne Youtube de Codeurs en Seine',
+          en: "Codeurs en Seine's YouTube channel",
+        },
+        href: 'https://www.youtube.com/channel/UCWujmG5rANxJI0nHbMFs08w',
+      },
+      {
+        content: {
+          fr: 'Chaîne Youtube de Fork it!',
+          en: "Fork it!'s YouTube channel",
+        },
+        href: 'https://www.youtube.com/channel/UCgV5zuiFWCMl7IvuZ5KbJOw',
+      },
+    ],
+  },
+  {
+    network: 'Luma',
+    links: [
+      {
+        content: {
+          fr: 'Page Luma de Fork it! Community',
+          en: "Fork it! Community's Luma page",
+        },
+        href: 'https://luma.com/forkit.community',
+      },
+    ],
+  },
+  {
+    network: 'Instagram',
+    links: [
+      {
+        content: {
+          fr: 'Instagram du Bearstudio',
+          en: "BearStudio's Instagram",
+        },
+        href: 'https://www.instagram.com/_bearstudio/',
+      },
+      {
+        content: { fr: 'Instagram de Fork it!', en: "Fork it!'s Instagram" },
+        href: 'https://www.instagram.com/forkit.community/?hl=fr',
+      },
+    ],
+  },
+  {
+    network: 'GitHub',
+    links: [
+      {
+        content: { fr: 'Star sur Formiz', en: 'Star Formiz' },
+        href: 'https://github.com/ivan-dalmet/formiz',
+      },
+      {
+        content: { fr: 'Star sur Jhipster', en: 'Star Jhipster' },
+        href: 'https://github.com/jhipster/generator-jhipster',
+      },
+      {
+        content: { fr: 'Star sur StartUI Web', en: 'Star StartUI Web' },
+        href: 'http://web.start-ui.com/',
+      },
+      {
+        content: { fr: 'Star sur StartUI Native', en: 'Star StartUI Native' },
+        href: 'http://native.start-ui.com/',
+      },
+      {
+        content: {
+          fr: 'Star sur React Native FicusUI',
+          en: 'Star React Native FicusUI',
+        },
+        href: 'https://github.com/BearStudio/react-native-ficus-ui',
+      },
+    ],
+  },
+  {
+    network: 'Twitch',
+    links: [
+      {
+        content: {
+          fr: 'Chaîne Twitch de Codeur en Seine',
+          en: "Codeurs en Seine's Twitch channel",
+        },
+        href: 'https://www.twitch.tv/codeursenseine/',
+      },
+      {
+        content: {
+          fr: 'Chaîne Twitch du Bearstudio',
+          en: "BearStudio's Twitch channel",
+        },
+        href: 'https://www.twitch.tv/bearstudiolive',
+      },
+    ],
+  },
+  {
+    network: 'Figma',
+    links: [
+      {
+        content: { fr: 'StartUI Figma', en: 'StartUI Figma' },
+        href: 'http://figma.start-ui.com/',
+      },
+    ],
+  },
+] as const;
 ---
 
 <MainLayout>
   <SEO
-    title={t('legal.root.hero.title')}
+    title={t('contact.application-process.metadata.title')}
+    description={t('contact.application-process.metadata.description')}
     alternates={getAlternates(
       '/fr/contact/processus-candidature-bearstudio',
       {}
@@ -37,15 +202,194 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
   />
   <Hero>
     <HeroContent
-      title={t('legal.root.hero.title')}
-      description={t('legal.root.hero.description')}
+      title={t('contact.application-process.title')}
+      description={t('contact.application-process.description')}
       breadcrumb={breadcrumb}
     />
   </Hero>
-  {
-    match(locale)
-      .with('fr', () => 'fr')
-      .with('en', () => 'en')
-      .exhaustive()
-  }
+  <Prose>
+    {
+      match(locale)
+        .with('fr', () => (
+          <>
+            <p>
+              BearStudio ne prend plus de stagiaires ni d’alternants pour
+              l’année 2025-2026.
+            </p>
+            <h2>
+              Comment se passe le processus de candidature au BearStudio ?
+            </h2>
+            <p>
+              Au BearStudio l’entraide et l’amélioration continue sont un aspect
+              essentiel de notre philosophie, c’est pourquoi, nous te suggérons
+              fortement de suivre les conseils présents dans cette page. Ainsi
+              nous espérons recevoir des gens qui souhaitent vraiment rejoindre
+              le BearStudio ainsi que d’éviter de recevoir systématiquement des
+              demandes pleines d’erreurs ce qui nous fait perdre du temps dans
+              notre processus de candidature…
+            </p>
+            <p>
+              Point important, nos locaux sont situés à Saint-André-sur-Cailly,
+              il est donc important que tu n’aies aucune contrainte liée à la
+              mobilité #permisdeconduire.
+            </p>
+            <h2>Sois original et créatif</h2>
+            <p>
+              Ton parcours et tes expériences nous intéressent, épargne-nous
+              cependant la traditionnelle lettre de motivation générique et
+              remplie de phrases toutes faites. Personne chez nous n’aime les
+              lettres de motivation préfabriquées !
+            </p>
+            <p>
+              N’hésite pas à être original et créatif. Nous accordons bien plus
+              de valeur à un portfolio contenant les projets auxquels tu as
+              participé, un compte Twitter, LinkedIn ou GitHub bien maîtrisé. À
+              nos yeux, ces éléments reflètent bien plus ta personnalité et tes
+              compétences, de même si tu es un noob sans contenu à mettre en
+              avant, débrouille-toi pour faire transpirer ta motivation au
+              travers de ta candidature.
+            </p>
+            <p class="italic">
+              Lors de la rédaction de ta candidature, nous aimerions que tu nous
+              racontes comment tu réagirais face à un ours !
+            </p>
+            <p>
+              Ces articles d’
+              <a
+                href="https://codedesign.fr/candidature-manque-experience-alternance/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Arnaud Lemercier
+              </a>{' '}
+              et de{' '}
+              <a
+                href="https://medium.com/@waxzce/je-nembauche-jamais-de-poisson-pan%C3%A9-alors-arr%C3%AAtez-de-vous-pr%C3%A9senter-comme-tel-1eb318ee8a20"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Quentin Adam
+              </a>{' '}
+              t’aideront à mieux comprendre ce dont nous parlons.
+            </p>
+            <h2>
+              Mets toutes les chances de ton côté en nous suivant sur les
+              réseaux.
+            </h2>
+            <p>
+              Comme tu t’en doutes, nous recevons de nombreuses candidatures,
+              afin de maximiser tes chances et d’attirer notre attention et de
+              potentiellement rejoindre le BearStudio, suis-nous sur nos
+              différents réseaux sociaux et n’hésite pas à jeter un oeil à leur
+              contenu. Cela te permettra de nous connaître davantage et d’avoir
+              un certain nombre de discussion lors de l’entretien.
+            </p>
+            <p class="italic">
+              Instant putaclic ! Voici une liste de comptes à suivre :
+            </p>
+            <div>
+              {socialsToFollow.map((social) => (
+                <section>
+                  <h3>{social.network}</h3>
+                  <ul>
+                    {social.links.map((link) => (
+                      <li>
+                        <a href={link.href}>{link.content[locale]}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              ))}
+            </div>
+            <h2>
+              Prends connaissance de notre workflow sur le processus de
+              candidature au BearStudio
+            </h2>
+            <p>
+              Comme dit précédemment, nous sommes énormément sollicités par de
+              nombreuses candidatures donc avant que tu ne nous vitupères, nous
+              allons t’expliquer les différentes étapes de notre processus de
+              candidature au BearStudio.
+            </p>
+            <h3>1. Réception des candidatures</h3>
+            <p>
+              Lorsque nous recevons des candidatures de personnes qui veulent
+              rejoindre le BearStudio, chaque mail de candidature que nous
+              recevons s’ajoute automatiquement dans la colonne «&nbsp;À
+              traiter&nbsp;» de notre board{' '}
+              <a
+                href="https://trello.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Trello
+              </a>
+              . Toutes les demandes sont donc visibles par l’ensemble de
+              l’équipe et sont déplacées dans la colonne «&nbsp;À
+              étudier&nbsp;». Puis, un premier tri écartant toutes les demandes
+              qui, de façon certaine, seront négatives (manque de place ou poste
+              qui ne correspond pas) est effectué par notre assistante
+              administrative.
+            </p>
+            <p>
+              Par la suite, les autres demandes sont transmises aux développeurs
+              sur un channel{' '}
+              <a
+                href="https://slack.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Slack
+              </a>{' '}
+              dédié où elles sont étudiées.
+            </p>
+            <h3>2. Étude d’une candidature</h3>
+            <p>
+              Quand nous étudions un cas, nous glissons la carte Trello dans la
+              catégorie « en cours ». Les demandes sont ensuite réparties selon
+              nos décisions dans les colonnes « Oui » et « Non ».
+            </p>
+            <p>
+              Notre assistante administrative prend ensuite connaissance des
+              délibérations, contacte les éventuels candidats retenus pour un
+              entretien et répond par la négative à ceux qui ne l’ont
+              malheureusement pas été.
+            </p>
+            <h3>3. Réponse aux candidatures</h3>
+            <p>
+              Comme tu peux le voir c’est un procédé qui peut, en fonction du
+              nombre de demandes, prendre un certain temps. D’autant que les
+              candidatures affluent souvent par vagues à certaines périodes.
+              Malgré tout, nous essayons de prendre le temps et de ne pas bâcler
+              cette étape.
+            </p>
+            <p>
+              Donc pas de raison de paniquer si nous ne répondons pas
+              directement, nous le ferons prochainement. En revanche, pour ceux
+              qui auraient postulé via un autre canal que l’adresse mail dédiée,
+              il est probable que notre degré de réactivité soit plus long.
+              Mieux vaut donc privilégier le processus évoqué ci-dessus.
+            </p>
+            <p>
+              Et voilà ! Maintenant que nous t’avons dévoilé les détails de la
+              procédure made in BearStudio, tu as toutes les clés en main pour
+              attirer notre attention et peut-être intégrer notre « dreamteam »
+              😉.
+            </p>
+            <h2>Pour candidater</h2>
+            <p>
+              Pour un <strong>poste</strong> (CDI, CDD, etc.) : job@[devine la
+              fin.fr]
+            </p>
+            <p>
+              Pour un <strong>stage</strong>, une <strong>alternance</strong> :
+              stage@[devine la fin.fr]
+            </p>
+            <h2>Articles utiles</h2>
+          </>
+        ))
+        .with('en', () => 'en')
+        .exhaustive()
+    }
+  </Prose>
 </MainLayout>
