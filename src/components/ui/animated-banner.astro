@@ -28,10 +28,12 @@ const position = Math.max(-2.5, Math.min(7, 7 - numbersLength * 0.2));
 <div
   class="bg-brand-800 relative aspect-video w-full overflow-hidden rounded-lg"
 >
+  <!-- Background (translate3d is for safari to apply mix-blend-overlay) -->
   <img
     class="absolute inset-0 object-cover opacity-30 mix-blend-overlay grayscale"
     src={props.src}
     alt=""
+    style={{ transform: 'translate3d(0, 0, 0)' }}
     {...props.imageProps}
   />
   <div
