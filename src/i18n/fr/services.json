@@ -2,7 +2,44 @@
   "root": {
     "breadcrumb": "Prestations",
     "title": "Nos prestations",
-    "description": "Conception UX et développement TypeScript pour des applis web & mobile performantes."
+    "description": "Conception UX et développement TypeScript pour des applis web & mobile performantes.",
+    "uxDesign": {
+      "title": "UX/UI Design",
+      "description": "Si vous souhaitez construire un produit adapté aux besoins et aux demandes de vos utilisateurs et clients, nous vous proposons des prestations UX design adaptées à votre contexte afin d'améliorer l'expérience utilisateur de votre produit en accentuant son ergonomie."
+    },
+    "webDevelopment": {
+      "title": "Développement Web",
+      "description": "Si vous souhaitez construire un produit adapté aux besoins et aux demandes de vos utilisateurs et clients, nous vous proposons des prestations UX design adaptées à votre contexte afin d'améliorer l'expérience utilisateur de votre produit en accentuant son ergonomie."
+    },
+    "mobileDevelopment": {
+      "title": "Développement Mobile",
+      "description": "Vous avez besoin d'une application mobile native ou cross-platform ? Notre équipe développe des applications iOS et Android performantes et intuitives. Nous utilisons React Native pour offrir la meilleure expérience utilisateur possible sur mobile."
+    },
+    "projectBoost": {
+      "title": "Boost Projet",
+      "description": "Votre projet ralentit ou vous manquez de ressources techniques ? Nous intervenons en renfort pour accélérer le développement de votre produit. Notre équipe s'intègre rapidement à vos processus existants pour débloquer les situations complexes et maintenir votre vélocité de développement."
+    },
+    "ctoSupport": {
+      "title": "Accompagnement CTO",
+      "description": "Vous avez besoin de conseils stratégiques sur votre architecture technique ou vos choix technologiques ? Nous vous accompagnons dans la prise de décisions techniques, la structuration de votre équipe de développement et la mise en place de bonnes pratiques pour faire évoluer votre produit sereinement."
+    },
+    "team": {
+      "title": "Qui compose l'équipe de votre projet ?",
+      "yourTeamAndOurs": {
+        "title": "Votre équipe et la notre",
+        "description": "Si vous choisissez cette option, notre équipe du BearStudio travaillera en totale coopération avec la vôtre. Cela permettra de faciliter le transfert de compétences et de former votre équipe pendant la durée du projet."
+      },
+      "ourTeamOnly": {
+        "title": "Notre équipe uniquement",
+        "description": "Dans ce cas, vous donnez les clés du développement de votre projet à notre entreprise, tout en restant en contact avec elle afin de garder un maximum de visibilité sur l'avancement de votre projet. Cette formule présente l'avantage de la rapidité puisque nos UX designers et développeurs sont habitués à travailler en équipe."
+      },
+      "imageAlt": "L'équipe BearStudio"
+    },
+    "experts": {
+      "title": "Vous cherchez un expert?",
+      "description": "Rencontrez nos ours passionnés",
+      "more": "Plus d'experts"
+    }
   },
   "uxDesign": {
     "breadcrumb": "UX/UI Design",

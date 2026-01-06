@@ -72,28 +72,28 @@ const peopleCurrent = await Promise.all(
     <div class="xs:grid-cols-2 grid gap-4 md:grid-cols-3">
       <ServiceCard
         href={getLink('/fr/prestations/ux-design', locale, {})}
-        title="UX/UI Design"
-        description="Si vous souhaitez construire un produit adapté aux besoins et aux demandes de vos utilisateurs et clients, nous vous proposons des prestations UX design adaptées à votre contexte afin d'améliorer l'expérience utilisateur de votre produit en accentuant son ergonomie."
+        title={t('services.root.uxDesign.title')}
+        description={t('services.root.uxDesign.description')}
       />
       <ServiceCard
         href={getLink('/fr/prestations/ux-design', locale, {})}
-        title="Développement Web"
-        description="Si vous souhaitez construire un produit adapté aux besoins et aux demandes de vos utilisateurs et clients, nous vous proposons des prestations UX design adaptées à votre contexte afin d'améliorer l'expérience utilisateur de votre produit en accentuant son ergonomie."
+        title={t('services.root.webDevelopment.title')}
+        description={t('services.root.webDevelopment.description')}
       />
       <ServiceCard
         href={getLink('/fr/prestations/ux-design', locale, {})}
-        title="Développement Mobile"
-        description="Vous avez besoin d'une application mobile native ou cross-platform ? Notre équipe développe des applications iOS et Android performantes et intuitives. Nous utilisons React Native pour offrir la meilleure expérience utilisateur possible sur mobile."
+        title={t('services.root.mobileDevelopment.title')}
+        description={t('services.root.mobileDevelopment.description')}
       />
       <ServiceCard
         href={getLink('/fr/prestations/ux-design', locale, {})}
-        title="Boost Projet"
-        description="Votre projet ralentit ou vous manquez de ressources techniques ? Nous intervenons en renfort pour accélérer le développement de votre produit. Notre équipe s'intègre rapidement à vos processus existants pour débloquer les situations complexes et maintenir votre vélocité de développement."
+        title={t('services.root.projectBoost.title')}
+        description={t('services.root.projectBoost.description')}
       />
       <ServiceCard
         href={getLink('/fr/prestations/ux-design', locale, {})}
-        title="Accompagnement CTO"
-        description="Vous avez besoin de conseils stratégiques sur votre architecture technique ou vos choix technologiques ? Nous vous accompagnons dans la prise de décisions techniques, la structuration de votre équipe de développement et la mise en place de bonnes pratiques pour faire évoluer votre produit sereinement."
+        title={t('services.root.ctoSupport.title')}
+        description={t('services.root.ctoSupport.description')}
       />
     </div>
   </Container>
@@ -102,31 +102,23 @@ const peopleCurrent = await Promise.all(
       <div class="flex flex-col gap-8 sm:flex-row sm:items-center">
         <div class="flex flex-2 flex-col gap-4">
           <h2 class="font-heading text-2xl font-bold">
-            Qui compose l’équipe de votre projet ?
+            {t('services.root.team.title')}
           </h2>
           <div class="grid gap-6">
             <div class="flex flex-col gap-2">
               <h3 class="font-heading text-lg font-bold">
-                Votre équipe et la notre
+                {t('services.root.team.yourTeamAndOurs.title')}
               </h3>
               <p class="text-sm">
-                Si vous choisissez cette option, notre équipe du BearStudio
-                travaillera en totale coopération avec la vôtre. Cela permettra
-                de faciliter le transfert de compétences et de former votre
-                équipe pendant la durée du projet.
+                {t('services.root.team.yourTeamAndOurs.description')}
               </p>
             </div>
             <div class="flex flex-col gap-2">
               <h3 class="font-heading text-lg font-bold">
-                Notre équipe uniquement
+                {t('services.root.team.ourTeamOnly.title')}
               </h3>
               <p class="text-sm">
-                Dans ce cas, vous donnez les clés du développement de votre
-                projet à notre entreprise, tout en restant en contact avec elle
-                afin de garder un maximum de visibilité sur l’avancement de
-                votre projet. Cette formule présente l’avantage de la rapidité
-                puisque nos UX designers et développeurs sont habitués à
-                travailler en équipe.
+                {t('services.root.team.ourTeamOnly.description')}
               </p>
             </div>
           </div>
@@ -136,7 +128,7 @@ const peopleCurrent = await Promise.all(
         >
           <Image
             src={photoGroup}
-            alt="L'équipe BearStudio"
+            alt={t('services.root.team.imageAlt')}
             width={600}
             class="absolute inset-0 h-full w-full object-cover"
           />
@@ -149,16 +141,16 @@ const peopleCurrent = await Promise.all(
       <div class="flex flex-col gap-1">
         <h2 class="font-heading text-2xl font-bold">
           <a href={getLink('/fr/equipe', locale, {})}>
-            Vous cherchez un expert?
+            {t('services.root.experts.title')}
           </a>
         </h2>
         <p class="max-w-[70ch] text-sm text-balance opacity-80">
-          Rencontrez nos ours passionnés
+          {t('services.root.experts.description')}
         </p>
       </div>
       <PeopleCarousel client:load people={peopleCurrent} locale={locale}>
         <PersonCardMore href={getLink('/fr/equipe', locale, {})}>
-          Plus d'experts
+          {t('services.root.experts.more')}
         </PersonCardMore>
       </PeopleCarousel>
     </div>
