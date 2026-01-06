@@ -34,6 +34,7 @@ export default defineConfig(
     },
     rules: {
       'no-unreachable': 'error',
+      '@eslint-react/dom/no-missing-iframe-sandbox': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
         {

@@ -6,6 +6,26 @@
     "metadata": {
       "title": "Contacter l'équipe du BearStudio à Rouen en Normandie",
       "description": "Votre prochain CTO ou votre prochaine équipe de développement se trouve sans doute à Rouen. Contactez-nous pour que nous discutions de votre projet."
+    },
+    "project": {
+      "title": "Un projet ? Besoin d'aide ?",
+      "description": "Porteurs de projet, startup, CTO ou agence ? On est là pour vous accompagner !",
+      "cta": "Contactez-nous"
+    },
+    "cv": {
+      "title": "Un CV ?",
+      "description": "Stage, alternance, emploi ou freelance ?",
+      "cta": "Par ici !"
+    },
+    "address": {
+      "title": "BearStudio",
+      "line1": "1900 Route de Cailly,",
+      "line2": "76690 Saint-André-sur-Cailly,",
+      "line3": "Normandie, France",
+      "phone": "+33 7 49 36 04 36"
+    },
+    "social": {
+      "title": "Sur les réseaux"
     }
   },
   "application-process": {
