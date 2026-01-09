@@ -9,3 +9,5 @@ status: 'current'
 hidden: false
 order: 35
 ---
+
+Hugo est un développeur passionné par le développement front-end et déterminé à faire les choses bien. Son esprit avisé saura trouver la solution adéquate pour n’importe quel problème.

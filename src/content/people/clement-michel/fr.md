@@ -11,3 +11,5 @@ status: 'advisor'
 hidden: false
 order: 2000
 ---
+
+Responsable et fondateur de Synhack, Clément s'est mis au devoir de sensibiliser et conseiller à propos de toutes les problématiques liées à la sécurité.

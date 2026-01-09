@@ -11,3 +11,5 @@ status: 'advisor'
 hidden: false
 order: 4000
 ---
+
+Co-fondateur du BearStudio, aujourd'hui Product Designer chez Owkin. Son expérience en tant que UI/UX Manager, associée à son parcours en tant que graphiste, UI/UX Designer et front-end developer lui permet d'apporter une perspective créative, polyvalente et holistique à la conception de produits.

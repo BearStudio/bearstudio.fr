@@ -10,6 +10,6 @@ hidden: false
 order: 1000
 ---
 
-Curieuse, patiente et toujours désireuse d’apprendre, Mariem s’est reconvertie afin de développer des solutions techniques utiles, aussi bien en back-end qu’en front-end. Aujourd’hui, elle poursuit son parcours dans la tech avec enthousiasme, rigueur et la volonté de progresser chaque jour.
+Curious, patient, and always eager to learn, Mariem retrained to create useful technical solutions, both back-end and front-end. Today, she continues her journey in tech with enthusiasm, rigor, and a desire to progress every day.
 
-Développeuse passionnée et curieuse, toujours prête à concevoir des solutions utiles avec rigueur.
+Passionate, curious developer, always ready to build useful solutions with rigor.

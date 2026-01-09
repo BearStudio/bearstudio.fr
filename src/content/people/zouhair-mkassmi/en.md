@@ -10,3 +10,7 @@ socials:
 status: 'current'
 hidden: false
 ---
+
+Passionate about his work, Zouhair embodies the rigour itself in what he does.
+
+Our back-end developer touches everything, even what concerns the front. Always looking for solutions, he doesn’t hesitate to devote all his time to the problem!

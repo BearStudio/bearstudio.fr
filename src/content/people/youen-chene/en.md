@@ -11,3 +11,5 @@ status: 'advisor'
 hidden: false
 order: 1000
 ---
+
+Founder of [Webvert](https://www.lewebvert.fr/). Ex-CTO / co-founder of Saagie. Activist at Codeurs en Seine, Tech Rocks and Rouen French Tech.
