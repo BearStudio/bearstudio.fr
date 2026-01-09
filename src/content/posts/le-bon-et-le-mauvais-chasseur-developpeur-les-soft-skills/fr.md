@@ -8,6 +8,7 @@ tags:
   - 'developpement-web'
   - 'developpeur'
 heroImage: 'images/format-blog-header.png'
+authors: ['hugo-perard']
 ---
 
 _Le mauvais développeur c’est le gars, il a un ordinateur, on lui donne des specs et il code. Le bon développeur il a un ordinateur, on lui donne des specs et il code… mais c’est un bon développeur…_

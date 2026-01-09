@@ -4,6 +4,8 @@ date: 2021-08-24
 categories:
   - 'developpement'
 heroImage: 'images/visuel-article-JHipster-Deploy.png'
+authors:
+  - 'rudy-baer'
 ---
 
 Cet article est la traduction française d'un tuto réalisé par [Rudy](https://www.bearstudio.fr/team/rudy-baer), notre CTO, directement sur le [forum JHipster](https://www.jhipster.tech/clever-cloud/).

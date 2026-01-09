@@ -9,6 +9,7 @@ tags:
   - 'experience-utilisateur'
   - 'ux'
 heroImage: 'images/format-blog-header-1.png'
+authors: ['alexandra-pituru']
 ---
 
 ## Présentation du projet

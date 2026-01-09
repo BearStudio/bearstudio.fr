@@ -10,6 +10,7 @@ tags:
 heroImage: 'images/video-second-everyday-bearstudio.png'
 metaDescription: 'Notre équipe vous propose chaque mois une courte vidéo récapitulant en 1 seconde par jour ce que nous avons vécu au sein du BearStudio.'
 excerpt: 'Depuis le mois de juillet 2019, notre équipe vous propose le premier de chaque mois une courte vidéo récapitulant en 1 seconde par jour ce que nous avons vécu durant le mois qui vient de s’écouler. Du fun et du #nobullshit, à notre image ! Pourquoi réaliser une vidéo du quotidien au BearStudio ? Début [&hellip;]'
+authors: ['laurie-dupuis']
 ---
 
 Depuis le mois de juillet 2019, notre équipe vous propose le premier de chaque mois une courte vidéo récapitulant en 1 seconde par jour ce que nous avons vécu durant le mois qui vient de s’écouler. Du fun et du #nobullshit, à notre image !

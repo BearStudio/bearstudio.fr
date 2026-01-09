@@ -8,6 +8,7 @@ tags:
   - 'innovation'
   - 'tips'
 heroImage: 'images/breve-8.jpg'
+authors: ['emma-monchablon']
 ---
 
 Le saviez-vous ? Depuis février 2020, le BearStudio bénéficie d'un nouveau crédit d'impôt en faveur de l'innovation.

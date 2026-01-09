@@ -4,6 +4,7 @@ date: 2022-05-16
 categories:
   - 'design-css'
 heroImage: 'images/visuel-branding-identity.jpg'
+authors: ['maxime-podgorski']
 ---
 
 *Dans cet article, je vous parlerai de branding identity (identité de marque en français) mais plus particulièrement, comment en créer une.* 

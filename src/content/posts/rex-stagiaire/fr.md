@@ -9,6 +9,7 @@ tags:
 heroImage: 'images/ourson.jpg'
 metaDescription: 'Merci à Loïk, stagiaire au BearStudio, pour ce super témoignage concernant son expérience parmi les ours du développement web !'
 excerpt: 'Avant propos Découragé par mon échec aux examens de fin d’année (en Master 1 Génie Informatique Logicielle), j’ai sérieusement songé à arrêter mes études… Mais pourquoi tout stopper, alors que j’adore ça&nbsp;? C&rsquo;est donc quelques remises en questions plus tard, redoublant d’efforts, que je décidais de reprendre de plus belle mon cursus. Contre vents, marées, [&hellip;]'
+authors: ['loick-lemarchand']
 ---
 
 ## Avant propos

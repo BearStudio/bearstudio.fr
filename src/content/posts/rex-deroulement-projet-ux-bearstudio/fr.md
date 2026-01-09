@@ -4,6 +4,7 @@ date: 2021-07-20
 categories:
   - 'design-css'
 heroImage: 'images/illustration-oneprepaid-systeme-1.png'
+authors: ['nhung-duong', 'asceline-boullen', 'fabien-essid', 'yohann-josselin']
 ---
 
 ## Introduction

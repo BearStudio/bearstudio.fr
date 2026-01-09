@@ -4,6 +4,7 @@ date: 2021-03-23
 categories:
   - 'actualites-web-numerique'
 heroImage: 'images/img_4787-scaled.jpeg'
+authors: ['nathan-lesouef']
 ---
 
 ## Intro...

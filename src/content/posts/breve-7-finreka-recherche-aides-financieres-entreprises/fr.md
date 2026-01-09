@@ -7,6 +7,8 @@ tags:
   - 'financement'
   - 'tips'
 heroImage: 'images/breve-7.jpg'
+authors:
+  - 'nhung-duong'
 ---
 
 ## Kézako ?
