@@ -20,6 +20,7 @@ export default defineConfig({
 
   redirects: {
     '/': '/fr',
+    '/en/blog/[...all]': '/en',
   },
 
   i18n: {
