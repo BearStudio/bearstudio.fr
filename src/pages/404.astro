@@ -1,0 +1,47 @@
+---
+import { getLink } from '@/lib/link';
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import Container from '@/components/container.astro';
+import HeroContent from '@/components/hero/hero-content.astro';
+import Hero from '@/components/hero/hero.astro';
+import SEO from '@/components/seo/index.astro';
+import { buttonVariants } from '@/components/ui/button';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
+import MainLayout from '@/layouts/main-layout.astro';
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
+
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    label: t('notFound.root.breadcrumb'),
+    path: '/fr',
+    params: {},
+  }),
+]);
+---
+
+<MainLayout>
+  <SEO
+    title={t('notFound.root.metadata.title')}
+    alternates={null}
+    breadcrumb={breadcrumb}
+  />
+  <Hero>
+    <HeroContent
+      breadcrumb={breadcrumb}
+      title={t('notFound.root.title')}
+      description={t('notFound.root.description')}
+    >
+      <div class="mt-4">
+        <a
+          href={getLink('/fr', locale, {})}
+          class={buttonVariants({ variant: 'default', size: 'lg' })}
+        >
+          {t('notFound.root.cta')}
+        </a>
+      </div>
+    </HeroContent>
+  </Hero>
+  <Container class="py-0" />
+</MainLayout>

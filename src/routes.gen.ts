@@ -5,6 +5,7 @@
 import { assignPaths } from '@bearstudio/astro-typed-routes';
 
 const ROUTES_CONFIG = {
+  "404": {},
   "en": {
     "blog": {
       ":page": {},

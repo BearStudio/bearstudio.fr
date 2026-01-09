@@ -1,0 +1,11 @@
+{
+  "root": {
+    "metadata": {
+      "title": "Page non trouvée"
+    },
+    "breadcrumb": "Erreur 404",
+    "title": "Page non trouvée",
+    "description": "Désolé, la page que vous recherchez n'existe pas ou a été déplacée.",
+    "cta": "Retour à l'accueil"
+  }
+}
