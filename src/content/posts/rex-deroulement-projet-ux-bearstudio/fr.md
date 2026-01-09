@@ -72,7 +72,7 @@ Ces interviews sont essentielles pour la refonte d’une plateforme ou applicati
 
 ### Création des nouveaux userflows
 
-Revenons à nos moutons (_enfin nos ours_) : dans la lignée de l’**inventaire numérique** effectué en amont, notre **équipe UX** s’est focalisée sur la **[création des nouveaux userflows](/blog/posts/parcours-utilisateur-ux)**.  
+Revenons à nos moutons (_enfin nos ours_) : dans la lignée de l’**inventaire numérique** effectué en amont, notre **équipe UX** s’est focalisée sur la **[création des nouveaux userflows](/fr/blog/articles/parcours-utilisateur-ux)**.  
 Cette pratique consiste à retracer le **parcours de l’utilisateur** de la façon la plus claire possible, en n’oubliant aucune étape.
 
 ![](images/oneprepaid-cartecadeau-revendeur-1.png)
@@ -115,7 +115,7 @@ D’un côté nous gagnons pas mal de temps, surtout au début, mais ça induit 
 Évidemment, les clients ont des **habitudes bien ancrées qu’il faut optimiser**. Nous devons alors penser à des petits **systèmes d’accompagnement au changement** afin de ne pas bouleverser leurs habitudes.  
 La refonte doit être un avantage et non une contrainte pour les clients.
 
-De plus, la **refonte d’une interface utilisateur** est toujours satisfaisante car elle permet d’apprécier l’avant-après, de voir les améliorations apportées au projet. Mais il faut faire face à des **contraintes liées à la [dette technique](/blog/posts/dette-technique-cout-sous-estime-des-projets-numeriques)**.
+De plus, la **refonte d’une interface utilisateur** est toujours satisfaisante car elle permet d’apprécier l’avant-après, de voir les améliorations apportées au projet. Mais il faut faire face à des **contraintes liées à la [dette technique](/fr/blog/articles/dette-technique-cout-sous-estime-des-projets-numeriques)**.
 
 En effet, le projet fonctionne bien depuis 15 ans avec des clients réguliers et un historique important. Le code déjà existant doit donc continuer d’opérer.
 

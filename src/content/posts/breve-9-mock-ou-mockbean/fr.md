@@ -10,7 +10,7 @@ heroImage: 'images/breve-9.jpg'
 metaDescription: "Cette brève vous livre tout ce qu'il y a à connaître à propos de la différence entre @Mock et @Mockbean qu'on utilise beaucoup avec Spring !"
 ---
 
-Il y a quelques jours, j’ai onboardé un nouveau développeur sur un projet Spring Boot qui a un coverage de test à 80%. N’ayant pas énormément d’expérience avec les tests d’[intégration](https://www.bearstudio.fr/prestations/integration), j’ai pris le temps de lui expliquer la différence entre l’annotation @Mock de Mockito et @MockBean de [Spring Boot](/blog/posts/versionner-entite-jpa), je vais donc en profiter pour résumer ça dans une brève.
+Il y a quelques jours, j’ai onboardé un nouveau développeur sur un projet Spring Boot qui a un coverage de test à 80%. N’ayant pas énormément d’expérience avec les tests d’[intégration](https://www.bearstudio.fr/prestations/integration), j’ai pris le temps de lui expliquer la différence entre l’annotation @Mock de Mockito et @MockBean de [Spring Boot](/fr/blog/articles/versionner-entite-jpa), je vais donc en profiter pour résumer ça dans une brève.
 
 Que ce soit @Mock ou @MockBean, les deux annotations permettent de mocker le comportement de vos services ou composants Spring.
 
@@ -38,4 +38,4 @@ Ici, on voit bien que ce n’est pas nous qui créons l’instance de notre serv
 
 Eh bien c’est aussi simple que d’annoter le service par @MockBean, qui est une annotation fournie par [Spring](https://spring.io), et qui va demander à Spring d’instancier l’OrderService en lui donnant notre mock.
 
-Pour tout savoir sur Java, je vous invite à lire notre [toute première brève](/blog/posts/breve-1-rendre-une-methode-atomique-en-java-en-2-minutes).
+Pour tout savoir sur Java, je vous invite à lire notre [toute première brève](/fr/blog/articles/breve-1-rendre-une-methode-atomique-en-java-en-2-minutes).

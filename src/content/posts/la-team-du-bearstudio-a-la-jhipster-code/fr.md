@@ -12,7 +12,7 @@ excerpt: 'Jhipster c’est quoi ? Jhipster est un framework open source de déve
 
 [Jhipster](https://www.jhipster.tech/) est un framework **open source** de développement web. Pour les non développeurs, c’est un générateur de projet qui va faire gagner énormément de temps aux développeurs. Il pose un cadre et des bonnes pratiques qui, en plus de créer de la valeur rapidement dans un projet, évite les fantaisies de conception et d'implémentation que peuvent faire des développeurs pas assez expérimentés au démarrage...
 
-Apprenez en plus sur Jhipster à travers [cet article](/blog/posts/jhipster-generateur-projet-hipsters) écrit par [Nicolas Torion](https://www.bearstudio.fr/team/nicolas-torion)
+Apprenez en plus sur Jhipster à travers [cet article](/fr/blog/articles/jhipster-generateur-projet-hipsters) écrit par [Nicolas Torion](https://www.bearstudio.fr/team/nicolas-torion)
 
 ## La Jhipster code c’est quoi ?
 
@@ -93,7 +93,7 @@ _Update :_ le projet a été renommé mais voici le [lien du résultat](https://
 
 ## La track API rest de la Jhipster Code
 
-Celle-ci visait principalement à améliorer les standards de JHipster en optimisant le [caractère Restful](/blog/posts/votre-api-est-elle-vraiment-restful) de son API.
+Celle-ci visait principalement à améliorer les standards de JHipster en optimisant le [caractère Restful](/fr/blog/articles/votre-api-est-elle-vraiment-restful) de son API.
 
 ### Feedback de [Quentin Lerebours](https://www.bearstudio.fr/team/quentin-lerebours)
 
@@ -158,4 +158,4 @@ Le format de conférence était également super motivant : **un hackathon de co
 
 D’un point de vue **team building**, on a commencé le week-end par une visite de Bordeaux sous 30°, avec de la nourriture, du vin… Comme nous sommes des gens simples, ils ne nous en faut pas plus pour être heureux :D
 
-Pour la communauté, 8 nouveaux contributeurs c’est pas mal. Même si forcément la motivation va peut-être baisser un peu, c’est déjà ça de pris ! De toute façon je vais continuer à forcer  motiver la team à s'impliquer. Jusqu’à la fin d’année 2020, tous les développeurs (au sens large, je ne vous oublie pas les UX Designer) ont eu une journée par semaine dédiée à de la contribution pour des [projets open source](/blog/posts/linux-logiciels-libres-et-open-source-retrouvez-votre-liberte).
+Pour la communauté, 8 nouveaux contributeurs c’est pas mal. Même si forcément la motivation va peut-être baisser un peu, c’est déjà ça de pris ! De toute façon je vais continuer à forcer  motiver la team à s'impliquer. Jusqu’à la fin d’année 2020, tous les développeurs (au sens large, je ne vous oublie pas les UX Designer) ont eu une journée par semaine dédiée à de la contribution pour des [projets open source](/fr/blog/articles/linux-logiciels-libres-et-open-source-retrouvez-votre-liberte).

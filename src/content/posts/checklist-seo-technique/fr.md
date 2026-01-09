@@ -202,7 +202,7 @@ Sur la page, on retrouve 4 catégories principales. Si on choisi la catégorie [
 
 ![hiérarchie du site bearstudio](images/hierarchie-site-web-1024x503-1.webp)
 
-Pour **créer une bonne structure**, vous pouvez également vous baser sur le **parcours utilisateur**. Pour se faire, vous pouvez suivre [notre article sur la création d’un userflow](/blog/posts/parcours-utilisateur-ux).
+Pour **créer une bonne structure**, vous pouvez également vous baser sur le **parcours utilisateur**. Pour se faire, vous pouvez suivre [notre article sur la création d’un userflow](/fr/blog/articles/parcours-utilisateur-ux).
 
 ### Vérifier l’ergonomie mobile de son site
 

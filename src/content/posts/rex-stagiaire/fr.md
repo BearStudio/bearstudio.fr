@@ -31,7 +31,7 @@ Au début, je pensais que mon intégration serait compliquée, mais l’équipe 
 
 ## Qu’est ce qui a été le plus plaisant ?
 
-Oulà ! Difficile de choisir, beaucoup de bons, voire de [très bons moments](/blog/posts/quotidien-du-bearstudio-en-video). Un événement se démarque quand même du reste. La "Starteupouïk" (ou StartupWeek pour les non-initiés), une semaine de team building organisée au mois de décembre dernier. Un escape game, une création de jeu vidéo et les batailles de Nerf...
+Oulà ! Difficile de choisir, beaucoup de bons, voire de [très bons moments](/fr/blog/articles/quotidien-du-bearstudio-en-video). Un événement se démarque quand même du reste. La "Starteupouïk" (ou StartupWeek pour les non-initiés), une semaine de team building organisée au mois de décembre dernier. Un escape game, une création de jeu vidéo et les batailles de Nerf...
 
 <figure>
 

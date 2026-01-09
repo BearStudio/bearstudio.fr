@@ -32,4 +32,4 @@ Cette fine équipe d’experts propose par ailleurs des **offres d'accompagnemen
 
 ![tableau des tarifs Finreka](images/finreka-1.png)
 
-Vous l’avez compris, Finrêka! fait définitivement partie des [outils indispensables de l'entrepreneur](/blog/posts/outils-incontournables-pour-un-entrepreneur) !
+Vous l’avez compris, Finrêka! fait définitivement partie des [outils indispensables de l'entrepreneur](/fr/blog/articles/outils-incontournables-pour-un-entrepreneur) !

@@ -11,7 +11,7 @@ tags:
 heroImage: 'images/les-bases-du-design-pour-les-dev-front-baniere.png'
 ---
 
-Le design ne se résume pas à l'esthétique. Il joue un rôle crucial dans la manière dont les utilisateurs perçoivent et interagissent avec un produit ou un service, et cette [expérience utilisateur (UX) est primordiale](/blog/posts/pourquoi-lexperience-utilisateur-est-elle-importante). En effet, un bon design facilite la compréhension et l'utilisation afin de créer une expérience positive. À l'inverse, un mauvais design peut entraîner de la confusion et pousser les utilisateurs à délaisser votre produit. Le design est par conséquent un facteur clé de succès pour toute application.
+Le design ne se résume pas à l'esthétique. Il joue un rôle crucial dans la manière dont les utilisateurs perçoivent et interagissent avec un produit ou un service, et cette [expérience utilisateur (UX) est primordiale](/fr/blog/articles/pourquoi-lexperience-utilisateur-est-elle-importante). En effet, un bon design facilite la compréhension et l'utilisation afin de créer une expérience positive. À l'inverse, un mauvais design peut entraîner de la confusion et pousser les utilisateurs à délaisser votre produit. Le design est par conséquent un facteur clé de succès pour toute application.
 
 C'est pourquoi posséder des notions de design est un véritable atout pour un dev front. En effet ces connaissances peuvent permettre d’avancer sur des features sans maquettes tout en gardant un design réfléchi ou encore de faciliter la communication avec les designers pour arriver au meilleur résultat possible. Pas besoin de devenir un expert en design pour ça : l'objectif est d'acquérir des bases applicables facilement, pas de savoir faire un design system de A à Z. 
 
@@ -27,7 +27,7 @@ Les éléments proches les uns des autres sont perçus comme appartenant à un m
 
 Exemple à gauche ici, si tout est espacé de la même façon, sauriez vous me dire si le prix est au dessus, ou en dessous de l’item qu’il concerne ? Avec les bons espacements, on voit que l’exemple de droite devient beaucoup plus clair.
 
-Je vous invite à lire [cet article qui en parle plus en détails](/blog/posts/la-loi-de-proximite) si le sujet vous intéresse
+Je vous invite à lire [cet article qui en parle plus en détails](/fr/blog/articles/la-loi-de-proximite) si le sujet vous intéresse
 
 ### Loi de similarité
 

@@ -25,7 +25,7 @@ At the moment, 🚀 Start UI is made of 3 projects: 🚀 Start UI \[web\], 🚀 
 
 ### 🚀 Start UI \[web\]
 
-... is our most advanced starter that can be used for [SEO](/blog/posts/checklist-seo-technique) (Search Engine Optimisation), PWA (Progressive Web Application), SPA (Single Page Application), SSR (Server Side Rendering). It is web ready and will boost your project setup and your productivity while ensuring code quality.
+... is our most advanced starter that can be used for [SEO](/fr/blog/articles/checklist-seo-technique) (Search Engine Optimisation), PWA (Progressive Web Application), SPA (Single Page Application), SSR (Server Side Rendering). It is web ready and will boost your project setup and your productivity while ensuring code quality.
 
 ### 🚀 Start UI \[native\]
 

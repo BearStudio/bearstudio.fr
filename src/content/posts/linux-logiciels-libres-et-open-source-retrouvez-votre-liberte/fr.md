@@ -16,7 +16,7 @@ authors:
 
 Vous avez déjà entendu parler de **Linux**, des logiciels libres ou encore de l’open-source mais vous ne savez pas à quoi sont associés ces termes ? A l’inverse vous ne savez pas du tout ce que c’est ? Ou vous le savez mais ne voyez toujours pas l’intérêt ? Alors ne partez pas, cet article s’adresse à vous tous !
 
-L’objectif de cet article est simple : vous **présenter le concept et la philosophie** du logiciel libre et de l’[open-source](/blog/posts/jhipster-generateur-projet-hipsters), les faits historiques, et par la même occasion, vous convaincre de sauter le pas.
+L’objectif de cet article est simple : vous **présenter le concept et la philosophie** du logiciel libre et de l’[open-source](/fr/blog/articles/jhipster-generateur-projet-hipsters), les faits historiques, et par la même occasion, vous convaincre de sauter le pas.
 
 ## Ce que vous connaissez : les logiciels propriétaires
 

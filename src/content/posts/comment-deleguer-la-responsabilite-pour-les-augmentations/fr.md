@@ -20,7 +20,7 @@ En 2018, pour la première fois, j'ai été réellement confronté à la problé
 Mon contexte : 
 
 - 3ème année fiscale de la boîte.
-- L'équipe s'est défoncée pour tenir les objectifs de chiffre d’affaires et de production ! Le **ratio est de x2** par rapport à l'année dernière (voir article [4 ans d'entrepreneuriat](/blog/posts/rex-4-ans-entrepreneuriat-au-bearstudio)).
+- L'équipe s'est défoncée pour tenir les objectifs de chiffre d’affaires et de production ! Le **ratio est de x2** par rapport à l'année dernière (voir article [4 ans d'entrepreneuriat](/fr/blog/articles/rex-4-ans-entrepreneuriat-au-bearstudio)).
 - Je me paie depuis le début, mais avec un salaire égal à quand j'ai commencé ma carrière il y a presque 10 ans et en tant que dirigeant, je ne cotise pas comme les autres salariés. Ce qui justifie en partie qu'un "patron" soit payé plus qu'un salarié, dans la limite du raisonnable et des possibilités de l'entreprise.
 - Un des stagiaires que nous avons accueilli est vraiment bien intégré et l'équipe veut que nous l'embauchions.
 - L'année a été intense. En terme de management, certains problèmes se sont révélés avec des membres de l'équipe. Mon ressenti et mon caractère rancunier m'inciteraient à ne pas augmenter ces derniers.
@@ -47,6 +47,6 @@ Au final, la réunion s'est super bien passée. Nous avons décidé d'augmenter 
 
 Par contre, ils ont moins rigolé quand je leur ai dit à la fin de cette soirée : “_Je viens de faire un entretien avec une super recrue... Nous allons prendre la décision ensemble, mais il y a de grande chance que nous l'embauchions_ 😁”. Mais ça, c'est une autre histoire…
 
-En 2019, il s’est avéré que **cette solution était la bonne**, puisque le chiffre d’affaires de la société a continué d’augmenter. Nous avons donc [renouvelé l’expérience](https://twitter.com/_BearStudio/status/1184732906176077824) de la réunion d’augmentation, et la nouvelle recrue est bien arrivée en février 2019 parmi les salariés. C’est d’ailleurs en partie de sa faute si la [stratégie de 2020 évolue](/blog/posts/le-mot-du-chef-rudy-baer) vers de la communication.
+En 2019, il s’est avéré que **cette solution était la bonne**, puisque le chiffre d’affaires de la société a continué d’augmenter. Nous avons donc [renouvelé l’expérience](https://twitter.com/_BearStudio/status/1184732906176077824) de la réunion d’augmentation, et la nouvelle recrue est bien arrivée en février 2019 parmi les salariés. C’est d’ailleurs en partie de sa faute si la [stratégie de 2020 évolue](/fr/blog/articles/le-mot-du-chef-rudy-baer) vers de la communication.
 
 ![Methodologie Augmentation](images/methodologie-augmentation.png)

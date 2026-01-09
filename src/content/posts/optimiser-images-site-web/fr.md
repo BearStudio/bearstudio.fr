@@ -13,7 +13,7 @@ excerpt: 'Pourquoi optimiser les images de son site ? Optimiser les images d’u
 
 ## Pourquoi optimiser les images de son site ?
 
-Optimiser les images d’un site web, ça sert à quoi au final ? Des juniors se sont peut être déjà posés la question. La réponse est plutôt simple : **accélérer le chargement du site, et [avoir un meilleur référencement](/blog/posts/checklist-seo-technique).**
+Optimiser les images d’un site web, ça sert à quoi au final ? Des juniors se sont peut être déjà posés la question. La réponse est plutôt simple : **accélérer le chargement du site, et [avoir un meilleur référencement](/fr/blog/articles/checklist-seo-technique).**
 
 Donc l’optimisation des images n’affecte pas seulement le site, mais aussi son accessibilité. De plus, sachant que les images représentent une grand partie de son poids, il est important de ne pas négliger cet aspect afin d’optimiser les performances de son site.
 
@@ -39,7 +39,7 @@ Juste en-dessous de cet élément, on a un rapport plus détaillé, avec différ
 
 ## La compression des images
 
-Une façon d’optimiser les images d’un [site web](/blog/posts/arretez-de-vous-faire-avoir-par-votre-agence-digitale), c’est de les compresser. Plusieurs sites se sont spécialisés dans ce genre de service, pour différents formats.
+Une façon d’optimiser les images d’un [site web](/fr/blog/articles/arretez-de-vous-faire-avoir-par-votre-agence-digitale), c’est de les compresser. Plusieurs sites se sont spécialisés dans ce genre de service, pour différents formats.
 
 **Fun Fact :**
 

@@ -230,7 +230,7 @@ Les consommateurs et utilisateurs accordent une grande importance à votre image
 
 Maintenant, qu’attendez-vous pour créer votre propre identité de marque ? 
 
-Pour en apprendre plus sur le design, on vous invite à lire nos [articles sur l’UX design](/blog/posts). On vous recommande l’[article sur la loi de proximité](/blog/posts/la-loi-de-proximite) !
+Pour en apprendre plus sur le design, on vous invite à lire nos [articles sur l’UX design](/fr/blog/articles). On vous recommande l’[article sur la loi de proximité](/fr/blog/articles/la-loi-de-proximite) !
 
 Pour avoir un exemple concret de branding identity, vous pouvez aussi découvrir la conception de l'identité de marque de Green Lead sur [Behance](https://www.behance.net/gallery/118561423/Green-Lead-Brand-Guidelines?tracking_source=search_projects%7Clogo%20brand).
 

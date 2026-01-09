@@ -20,7 +20,7 @@ Alors je me suis dit : _"Pas de soucis, il faut faire un point régulier pour le
 
 ## Qu'est-ce que c'est ?
 
-Tous les vendredis vers 17h30 ou 18 h, la team prend une **Bière** et fait le **Bilan**. En général je présente où en sont les chiffres : voir si nous sommes en retard ou en avance. Je leur montre également où ils peuvent trouver cette information. Et s’il y a des points particuliers à aborder en groupe c’est généralement le moment privilégié : embauches, nouvelles idées, annonce de départ 😭 (RIP Luis), présentation de side projects ([TraveledMap](/blog/posts/traveledmap-outil-indispensable-pour-vos-photos-de-voyage) par exemple). TOUT ÇA... autour d’une bière (ou d’un truc sans alcool pour ceux qui ne boivent pas).
+Tous les vendredis vers 17h30 ou 18 h, la team prend une **Bière** et fait le **Bilan**. En général je présente où en sont les chiffres : voir si nous sommes en retard ou en avance. Je leur montre également où ils peuvent trouver cette information. Et s’il y a des points particuliers à aborder en groupe c’est généralement le moment privilégié : embauches, nouvelles idées, annonce de départ 😭 (RIP Luis), présentation de side projects ([TraveledMap](/fr/blog/articles/traveledmap-outil-indispensable-pour-vos-photos-de-voyage) par exemple). TOUT ÇA... autour d’une bière (ou d’un truc sans alcool pour ceux qui ne boivent pas).
 
 Même si ça a lieu presque toutes les semaines, ce n’est pas un moment obligatoire… La récurrence fait que **tout le monde participe** forcément au moins une à deux fois par mois.
 
@@ -34,7 +34,7 @@ Même si ça a lieu presque toutes les semaines, ce n’est pas un moment obliga
 
 Le principal effet positif c’est simplement que tout le monde passe un bon moment, sans stress avec des gens que nous côtoyons tous les jours. Ça permet également de communiquer de l’information de la part de la “direction” sans avoir à faire une réunion d’agence chiante 1 fois tous les 6 mois…
 
-De plus, les informations financières (de manière générale) ont du mal à être comprises donc la fréquence et l’arrivée de nouveaux (stagiaires ou salariés) permettent d’avoir plusieurs fois l’explication et donc que chacun puisse la comprendre à son rythme. [Nous sommes passés de 3 à 15 en 4 ans](/blog/posts/rex-4-ans-entrepreneuriat-au-bearstudio) : il faut bien _onboarder_ tout le monde…
+De plus, les informations financières (de manière générale) ont du mal à être comprises donc la fréquence et l’arrivée de nouveaux (stagiaires ou salariés) permettent d’avoir plusieurs fois l’explication et donc que chacun puisse la comprendre à son rythme. [Nous sommes passés de 3 à 15 en 4 ans](/fr/blog/articles/rex-4-ans-entrepreneuriat-au-bearstudio) : il faut bien _onboarder_ tout le monde…
 
 Pour les développeurs en _remote_ permanent, nous pouvons les faire participer à ce moment de _team building_ malgré la distance. Certains vont parfois dans un bar ou fumer une chicha pour le B & B **😉**
 

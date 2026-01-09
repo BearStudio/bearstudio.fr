@@ -30,7 +30,7 @@ export const GET: APIRoute = async function get(context) {
         post.data._computed.authors
           .map((author) => `contact@bearstudio.fr (${author.data.name})`)
           .join(', ') || undefined,
-      link: getLink('/fr/blog/posts/:id', locale, {
+      link: getLink('/fr/blog/articles/:id', locale, {
         id: post.data._computed.slug,
       }),
     })),

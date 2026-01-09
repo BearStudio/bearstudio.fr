@@ -68,6 +68,6 @@ Dubaï était une super expérience ! J’ai été très surpris du voyage : la 
 
 Bien sûr, **nous comptons y retourner pour la prochaine [tech week](https://www.gitex.com/) :** du 17 au 21 octobre 2021. Mais rassurez-vous : nous tenons à rester fidèles à notre ligne de conduite et n'allons en aucun cas privilégier le business là-bas au détriment de celui en France 🇫🇷
 
-D'autre part, ce genre de projet est extrêmement bon pour le **Team** **Building**. Eh oui, des voyages d'affaires de ce genre nouent des liens étroits entre les membres d’une bonne équipe ! Pour retrouver tous nos déplacements, je vous invite d'ailleurs à lire [cet article](/blog/posts/traveledmap-outil-indispensable-pour-vos-photos-de-voyage).
+D'autre part, ce genre de projet est extrêmement bon pour le **Team** **Building**. Eh oui, des voyages d'affaires de ce genre nouent des liens étroits entre les membres d’une bonne équipe ! Pour retrouver tous nos déplacements, je vous invite d'ailleurs à lire [cet article](/fr/blog/articles/traveledmap-outil-indispensable-pour-vos-photos-de-voyage).
 
 **Auteur :** [Nathan Lesouef](https://www.linkedin.com/in/nathan-lesouef/)

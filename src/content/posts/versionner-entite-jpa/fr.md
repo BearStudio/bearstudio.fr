@@ -34,4 +34,4 @@ Mais comment est-ce qu’elle fonctionne ? Le champ annoté `@Version` sera incr
 
 Revenons-en au besoin initial, en ajoutant l'annotation `@Version` sur le champ de votre contenu non formaté, lorsque que vous ferez une mise à jour de votre entité, la vérification ci-dessus sera effectuée. Dans le cas où votre champ a été modifié parallèlement, une `OptimisticLockException` sera lancée. Sinon le numéro de version de votre champ sera incrémenté et votre entité sera bien à jour. 
 
-Découvrez aussi l'annotation `@MockBean` dans une [autre brève](/blog/posts/breve-9-mock-ou-mockbean) sur la thématique du [développement back](https://www.bearstudio.fr/prestations/dev-back).
+Découvrez aussi l'annotation `@MockBean` dans une [autre brève](/fr/blog/articles/breve-9-mock-ou-mockbean) sur la thématique du [développement back](https://www.bearstudio.fr/prestations/dev-back).

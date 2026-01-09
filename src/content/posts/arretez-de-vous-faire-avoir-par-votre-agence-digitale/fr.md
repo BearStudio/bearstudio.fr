@@ -19,7 +19,7 @@ _Cet article est illustré par des copies d’écran du nouveau site NWX lors de
 
 Depuis quelques années, on parle beaucoup d’agence de communication digitale. Enfin... En réalité, nous parlons d’agences de communication classique (papier, télévision) qui entament leur transition numérique vers le monde de l’internet. Comme toutes les structures qui commencent leur transition, elles n’ont pas encore appris les codes de ce nouveau domaine (l’industrie numérique n'ayant que 25 ans). Ces agences vont vous facturer des sites certes jolis, mais qui oublient bien trop souvent les règles de base du monde du web. Or, en 2017, et avec la course aux meilleures places dans les résultats de recherche Google, cela ne pardonne plus.
 
-> Pour être encore plus précis, ces agences françaises utilisent un terme anglais [“digital” qui se traduit correctement par numérique](/blog/posts/digital-vs-numerique). Pour la blague, quand on parle des “métiers du digital”, un développeur va penser à une esthéticienne-manucure ou à un proctologue. Je vous laisse cette dernière image pour la prochaine fois que vous entendrez digital.
+> Pour être encore plus précis, ces agences françaises utilisent un terme anglais [“digital” qui se traduit correctement par numérique](/fr/blog/articles/digital-vs-numerique). Pour la blague, quand on parle des “métiers du digital”, un développeur va penser à une esthéticienne-manucure ou à un proctologue. Je vous laisse cette dernière image pour la prochaine fois que vous entendrez digital.
 
 ## Comic sans
 
@@ -91,7 +91,7 @@ Avec la fibre, l’ADSL et la 4G, la performance peut sembler secondaire. Erreur
 
 Pour continuer, le taux de rebond et la performance sont 2 indicateurs clefs dans le calcul de votre placement sur Google. Pourquoi la performance ? Eh bien, analyser des sites lents a un coût pour Google et ralenti le rafraîchissement des résultats (Google est en compétition avec Twitter sur la recherche, les résultats doivent donc être le plus à jour possible).
 
-Enfin, mettre de belles [images](/blog/posts/optimiser-images-site-web) ou de belles vidéos, cela peut plaire au directeur marketing. Mais gardez à l'esprit que si cela met 4 secondes à charger, quasiment personne ne les verra.
+Enfin, mettre de belles [images](/fr/blog/articles/optimiser-images-site-web) ou de belles vidéos, cela peut plaire au directeur marketing. Mais gardez à l'esprit que si cela met 4 secondes à charger, quasiment personne ne les verra.
 
 Comment s’y retrouver ? Évaluer le site web réalisé par votre potentiel fournisseur ! Pour cela, voici 2 outils : [https://gtmetrix.com](https://gtmetrix.com/)et [https://testmysite.thinkwithgoogle.com](https://testmysite.thinkwithgoogle.com/).
 

@@ -60,7 +60,7 @@ Tout le monde fait des erreurs. Ne pas les avouer par peur de perdre en crédibi
 
 Personne n'est productif à 100% en permanence. En tant que manager, vous êtes tenu de **garantir un certain ratio**. Inutile donc de passer son temps à vérifier que tout est le monde donne son maximum, assurez-vous juste qu’il n’y ait pas trop d’abus. De plus, si les gens se sentent surveillés, ils vont probablement développer des techniques pour ne pas se faire griller… ce qui ne fera que vous compliquer la tâche. Au final c’est encore plus de temps et d'énergie de perdus pour tout le monde.
 
-Retrouvez un [article complet pour améliorer votre productivité au travail sur notre blog](/blog/posts/vous-avez-dit-productivite).
+Retrouvez un [article complet pour améliorer votre productivité au travail sur notre blog](/fr/blog/articles/vous-avez-dit-productivite).
 
 ### 8- Arrêter la prod pour la formation
 

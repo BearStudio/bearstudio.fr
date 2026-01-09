@@ -48,7 +48,7 @@ Je vois plusieurs conséquences directes liées à ces problèmes:
 
 - La **satisfaction client diminue** car la qualité est impactée.
 - Un turnover important se met en place, notamment chez les développeurs. Dans cette entreprise, j’ai vu des employés rester moins de 3 mois, ce qui amène la qualité de la solution à diminuer encore et encore.
-- Le **[coût des développements](/blog/posts/no-estimate) augmente**, impliquant une augmentation des tarifs ou une baisse de rentabilité.
+- Le **[coût des développements](/fr/blog/articles/no-estimate) augmente**, impliquant une augmentation des tarifs ou une baisse de rentabilité.
 
 Ces différentes conséquences entraînent un cercle vicieux qui peut durer jusqu’à la faillite de l’entreprise car les développeurs la désertent et les clients cherchent des solutions alternatives, moins coûteuses et de meilleure qualité.
 
@@ -66,4 +66,4 @@ De plus, il est important de ne pas être extrémiste concernant la dette techni
 
 ---
 
-Si vous souhaitez en savoir plus sur la dette technique, vous pouvez en lire plus dans mon article sur la [maîtrise de la dette technique](/blog/posts/maitriser-dette-technique-projet-numerique).
+Si vous souhaitez en savoir plus sur la dette technique, vous pouvez en lire plus dans mon article sur la [maîtrise de la dette technique](/fr/blog/articles/maitriser-dette-technique-projet-numerique).

@@ -26,7 +26,7 @@ On a l'habitude de se dire que ce qui est gratuit n'est pas forcément qualitati
 
 Il est certain que si nous avions 150 demandes d’audit par jour, nous ne pourrions pas les traiter ! Nous nous gardons le droit de refuser et avons une **limite de 2 mini audits UX maximum par semaine**. On ne va pas vous mentir, nous faisons ça dans un but commercial afin de générer des leads puis **vendre des** **prestation**s. L’idée étant de prouver que nous sommes compétents et que nous savons de quoi nous parlons. 
 
-Ensuite, il y a un intérêt formateur en interne : un UX designer travaille généralement sur plusieurs produits en parallèle mais son travail demande une veille constante sur les bonnes pratiques et les [règles d’ergonomie](/blog/posts/la-loi-de-proximite). Du coup, travailler sur des cas concrets lui permet d’**acquérir de l’expérience**. Surtout que les développeurs ont un don pour inventer des patterns ou des design WTF, avoir de bons exemples de choses à ne pas faire est très formateur pour expliquer les bonnes pratiques.
+Ensuite, il y a un intérêt formateur en interne : un UX designer travaille généralement sur plusieurs produits en parallèle mais son travail demande une veille constante sur les bonnes pratiques et les [règles d’ergonomie](/fr/blog/articles/la-loi-de-proximite). Du coup, travailler sur des cas concrets lui permet d’**acquérir de l’expérience**. Surtout que les développeurs ont un don pour inventer des patterns ou des design WTF, avoir de bons exemples de choses à ne pas faire est très formateur pour expliquer les bonnes pratiques.
 
 <figure>
 

@@ -14,7 +14,7 @@ authors:
   - 'quentin-lerebours'
 ---
 
-Dans notre [précédent article sur la dette technique](/blog/posts/dette-technique-cout-sous-estime-des-projets-numeriques), je présentais le concept en prenant quelques exemples. Voici maintenant quelques c**onseils pour maîtriser cette dette** sur son projet.
+Dans notre [précédent article sur la dette technique](/fr/blog/articles/dette-technique-cout-sous-estime-des-projets-numeriques), je présentais le concept en prenant quelques exemples. Voici maintenant quelques c**onseils pour maîtriser cette dette** sur son projet.
 
 ## Anticiper la dette technique
 
@@ -22,7 +22,7 @@ Tout d’abord, il est important de savoir **quel niveau de dette technique** vo
 
 En ce qui concerne une V1 ou un MVP, il faut savoir qu’il peut être amené à servir plus d’une année, il ne faut donc pas se permettre trop de liberté. Cependant, **il faut savoir prendre des décisions qui amèneront à avoir une dette technique**, si ces décisions ont un apport sur le business par exemple. Le tout est qu’il s’agisse de décisions prises consciemment.
 
-Un produit final, quant à lui, a tendance à être utilisé par un grand nombre d’utilisateurs, dans le cadre d’une entreprise avancée qui n’en est souvent plus à sa phase StartUp. Il est donc primordial de limiter la dette technique des fonctionnalités principales en ayant un process de [test](/blog/posts/systeme-de-test-end-to-end-simple-complet-codeceptjs), en **optimisant le code**, en écrivant une **documentation maintenue à jour**, et surtout en migrant le code vers de nouvelles technologies quand c’est nécessaire.
+Un produit final, quant à lui, a tendance à être utilisé par un grand nombre d’utilisateurs, dans le cadre d’une entreprise avancée qui n’en est souvent plus à sa phase StartUp. Il est donc primordial de limiter la dette technique des fonctionnalités principales en ayant un process de [test](/fr/blog/articles/systeme-de-test-end-to-end-simple-complet-codeceptjs), en **optimisant le code**, en écrivant une **documentation maintenue à jour**, et surtout en migrant le code vers de nouvelles technologies quand c’est nécessaire.
 
 ## Choisir ses technologies
 

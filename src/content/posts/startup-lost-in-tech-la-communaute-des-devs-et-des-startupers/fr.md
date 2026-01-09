@@ -33,7 +33,7 @@ L’objectif de cet événement était d'organiser la rencontre entre les porteu
 
 Un profil CTO, dans le contexte actuel, représente un véritable [coût](https://www.tech.rocks/blog/quel-salaire-pour-les-cto-et-tech-leaders-en-france-en-2019) pour une entreprise ; c’est donc une décision à prendre de façon réfléchie. Les développeurs ont ainsi pu aider les porteurs de projet à y voir plus clair sur la partie technique de leur projet. 
 
-Afin d'éviter certaines déconvenues ; perte de temps ou d’argent, les startupers doivent donc être plus avertis sur les enjeux techniques et financiers que représentent leur projet afin de faire le bon choix entre [agence digitale](/blog/posts/arretez-de-vous-faire-avoir-par-votre-agence-digitale), studio de développement et compétences internes. 
+Afin d'éviter certaines déconvenues ; perte de temps ou d’argent, les startupers doivent donc être plus avertis sur les enjeux techniques et financiers que représentent leur projet afin de faire le bon choix entre [agence digitale](/fr/blog/articles/arretez-de-vous-faire-avoir-par-votre-agence-digitale), studio de développement et compétences internes. 
 
 <figure>
 

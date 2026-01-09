@@ -269,11 +269,11 @@ Alors si vous êtes curieux, testez-le, créez vos propres serveurs, exposez vos
 
 ##### Et pour découvrir de nouveaux sujets, n'hésitez pas à consulter nos derniers articles publiés !
 
-- [Du code au coeur : nos engagements associatifs annuels](/blog/posts/du-code-au-coeur-nos-engagements-associatifs-annuels)
+- [Du code au coeur : nos engagements associatifs annuels](/fr/blog/articles/du-code-au-coeur-nos-engagements-associatifs-annuels)
 
-- [Léa English : Étude de cas UX](/blog/posts/lea-english-etude-de-cas)
+- [Léa English : Étude de cas UX](/fr/blog/articles/lea-english-etude-de-cas)
 
-- [Le bon et le mauvais développeurs : les soft skills](/blog/posts/le-bon-et-le-mauvais-chasseur-developpeur-les-soft-skills)
+- [Le bon et le mauvais développeurs : les soft skills](/fr/blog/articles/le-bon-et-le-mauvais-chasseur-developpeur-les-soft-skills)
 
 Auteur : Noé Tatoud  
 [LinkedIn](https://www.linkedin.com/in/noetatoud/) - [X](https://twitter.com/nowaytatoud) - [Github](https://github.com/ntatoud)

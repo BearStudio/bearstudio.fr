@@ -21,13 +21,13 @@ Maintenant, nous avons une stratégie (et surtout un nouveau site internet). De 
 
 - Publier plus d’articles sur notre blog : au moins 1 par mois !
 - Continuer la communication sur les réseaux sociaux mais en adaptant le contenu à chaque canal :
-  - De l’entrepreneuriat et du [management](/blog/posts/9-trucs-abstraction-quand-on-manage) sur [LinkedIn](https://www.linkedin.com/company/bearstudio/)
+  - De l’entrepreneuriat et du [management](/fr/blog/articles/9-trucs-abstraction-quand-on-manage) sur [LinkedIn](https://www.linkedin.com/company/bearstudio/)
   - De l’[UX](https://www.bearstudio.fr/prestations/ux-design) sur [Instagram](https://www.instagram.com/_bearstudio/)
   - De la tech sur [Twitter](https://twitter.com/_BearStudio)
 
 Choisissez le réseau qui vous convient ou suivez-nous partout pour ne rien louper 😁
 
-Après 4 ans d’existence, nous commençons à avoir **plein de choses à dire sur les Startups** et l’[entrepreneuriat](/blog/posts/rex-4-ans-entrepreneuriat-au-bearstudio). Du coup, nous nous sommes dit que nous allions prendre les plus bavards du BearStudio (Rudy, Ivan et Nicolas Grèverie) pour les faire parler devant une caméra afin de partager leurs connaissances ! Forcément, le tout sera à retrouver sur [notre chaine Youtube](https://www.youtube.com/channel/UC-2hpnhKgU2C_OFucjEN0IA).
+Après 4 ans d’existence, nous commençons à avoir **plein de choses à dire sur les Startups** et l’[entrepreneuriat](/fr/blog/articles/rex-4-ans-entrepreneuriat-au-bearstudio). Du coup, nous nous sommes dit que nous allions prendre les plus bavards du BearStudio (Rudy, Ivan et Nicolas Grèverie) pour les faire parler devant une caméra afin de partager leurs connaissances ! Forcément, le tout sera à retrouver sur [notre chaine Youtube](https://www.youtube.com/channel/UC-2hpnhKgU2C_OFucjEN0IA).
 
 ## Dans les autres trucs importants et en cours pour 2020
 

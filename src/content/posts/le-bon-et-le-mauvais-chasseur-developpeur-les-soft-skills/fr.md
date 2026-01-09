@@ -128,7 +128,7 @@ Pour faciliter l’aide que vous recevrez, prenez le temps de bien expliquer vot
 
 - Qu’est-ce que vous avez déjà essayé de faire pour corriger le problème ?
 
-Selon le problème il peut-être également pertinent de faire du [peer programming](/blog/posts/peer-programming) avec un développeur plus expérimenté.
+Selon le problème il peut-être également pertinent de faire du [peer programming](/fr/blog/articles/peer-programming) avec un développeur plus expérimenté.
 
 ## Tests
 
@@ -284,4 +284,4 @@ Il faut comprendre ce que propose l’IA, le questionner sur sa réflexion pour 
 
 Voici pour cette liste non exhaustive des différences entre un bon et un mauvais développeur, qui j’espère, de par des parallèles un peu absurdes, aura permis d’expliciter l’importance des soft skills. Un bon développeur, ce n’est pas seulement quelqu’un qui écrit du code propre. C’est aussi et surtout quelqu’un qui sait **communiquer**, **écouter**, **travailler en équipe, donner et recevoir du feedback**.
 
-Pour aller plus loin, vous pouvez consulter [cet article qui rappelle les bonnes pratiques sur les erreurs standards faites en Java](/blog/posts/java-pour-les-debutants-parfois-pour-les-experts-aussi).
+Pour aller plus loin, vous pouvez consulter [cet article qui rappelle les bonnes pratiques sur les erreurs standards faites en Java](/fr/blog/articles/java-pour-les-debutants-parfois-pour-les-experts-aussi).

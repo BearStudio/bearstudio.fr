@@ -22,7 +22,7 @@ Il y a ceux qui ont une mémoire à toute épreuve avec une capacité de concent
 
 C’est un des exercices les plus simple au monde. Mais il faut avouer que c’est aussi un peu enquiquinant de devoir relire ses objectifs si cela vous amène à constater que vous êtes loin d’avoir tout fait. Pour éviter de tomber dans ce sentiment de culpabilité, beaucoup de gens préfèrent ne pas relire leurs objectifs, d’autres décident carrément de ne pas les mettre par écrit. Méfiez-vous de cette fausse solution. **En effet, relire ses objectifs et ses plans d’action de manière régulière vous permet de vous concentrer sur vos priorités parce que vous les avez à l’esprit.** A l'inverse, un objectif trop longtemps mis de côté risque de vous sortir complètement de la tête pour vous revenir en pleine figure le jour où il sera devenu urgentissime...
 
-Au BearStudio par exemple on utilise [Trello](https://trello.com/fr), c’est une sorte de grand tableau interactif. Des cartes se baladent entre les différentes colonnes : to do, to test/review … Et nous avons la colonne "objectif", où chacun complète sa progression au fur et à mesure. Pour en savoir plus sur les outils qui vont révolutionner votre quotidien d'entrepreneurs, nous vous invitons à lire cet [article](/blog/posts/outils-incontournables-pour-un-entrepreneur).
+Au BearStudio par exemple on utilise [Trello](https://trello.com/fr), c’est une sorte de grand tableau interactif. Des cartes se baladent entre les différentes colonnes : to do, to test/review … Et nous avons la colonne "objectif", où chacun complète sa progression au fur et à mesure. Pour en savoir plus sur les outils qui vont révolutionner votre quotidien d'entrepreneurs, nous vous invitons à lire cet [article](/fr/blog/articles/outils-incontournables-pour-un-entrepreneur).
 
 ### **2- Garder les tâches demandant le moins d’énergie pour la fin de journée...**
 
@@ -38,7 +38,7 @@ Combien de fois avez-vous eu l’impression de ne faire qu’enchaîner les réu
 
 Chez nous, le **stand-up** est un **rendez-vous quotidien** qui permet de faire le point sur les tâches de chacun. Un peu avant midi, nous prenons ainsi une petite demi-heure pour que chacun puisse s'exprimer ou demander de l'aide. C'est aussi le moment de remercier ses collègues pour tel ou tel coup de main !
 
-Mention spéciale pour le rendez-vous tant attendu du vendredi soir : le "[B&B](/blog/posts/le-b-b-cest-quoi)".
+Mention spéciale pour le rendez-vous tant attendu du vendredi soir : le "[B&B](/fr/blog/articles/le-b-b-cest-quoi)".
 
 ### **4- Procéder par ordre de priorité** 
 

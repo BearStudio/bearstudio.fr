@@ -10,7 +10,7 @@ heroImage: 'images/article-fos-visuel.png'
 metaDescription: "Retour d'expérience d'une professeure de français dans une société de développement informatique"
 ---
 
-Vous le savez déjà si vous avez lu notre article sur le remote, [on a des développeurs tunisiens](/blog/posts/on-a-des-developpeurs-tunisiens). Et on ne fait pas du simple outsourcing. On travaille en remote avec une équipe de 3 développeurs totalement intégrée à la team française. 
+Vous le savez déjà si vous avez lu notre article sur le remote, [on a des développeurs tunisiens](/fr/blog/articles/on-a-des-developpeurs-tunisiens). Et on ne fait pas du simple outsourcing. On travaille en remote avec une équipe de 3 développeurs totalement intégrée à la team française. 
 
 Pour encore améliorer notre “**outsourcing informatique” avec la Tunisie** (qui est d’ailleurs plus proche du remote que de l’outsourcing), on a fait appel à [Hend](https://www.linkedin.com/in/hend-fellah-812976165/), une professeure de français spécialisée dans l'apprentissage de la langue pour les étrangers.
 
@@ -54,7 +54,7 @@ Cette expérience m’a d’abord parue effrayante (mes notes du lycée en infor
 
 Vous allez me dire “C’est évident, la communication !” Oui, mais non ! Dans plusieurs sociétés de développement, c’est l’anglais qui reste la langue la plus usuelle, pourquoi donc insister sur le français ? 
 
-Au BearStudio, une grande partie de la communication interne se fait en français (souvent à l’écrit sur des [outils](/blog/posts/outils-incontournables-pour-un-entrepreneur) de communication comme [Slack](https://slack.com/intl/fr-fr/)). Pour chaque projet pris en charge par la société, des réunions et des concertations doivent être faites afin d’aborder le meilleur angle de travail. Ce qui permet à toute l’équipe de comprendre de quoi il est question. 
+Au BearStudio, une grande partie de la communication interne se fait en français (souvent à l’écrit sur des [outils](/fr/blog/articles/outils-incontournables-pour-un-entrepreneur) de communication comme [Slack](https://slack.com/intl/fr-fr/)). Pour chaque projet pris en charge par la société, des réunions et des concertations doivent être faites afin d’aborder le meilleur angle de travail. Ce qui permet à toute l’équipe de comprendre de quoi il est question. 
 
 Cette tâche est d’autant plus complexe lorsque tous les membres d’une équipe ne sont pas géographiquement réunis. C’est donc primordial qu’il n’y ait aucun doute ou confusion dans la compréhension des tâches demandées, dans la capacité à remonter et à expliquer correctement un bug ou encore dans la gestion des problèmes techniques. 
 

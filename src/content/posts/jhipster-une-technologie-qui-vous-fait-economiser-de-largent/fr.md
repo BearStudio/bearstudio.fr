@@ -12,7 +12,7 @@ authors:
 
 _**Disclaimer :** Cet article n’est pas orienté sur l’aspect technique de JHipster et s’adresse donc principalement aux entrepreneurs et aux startups. Cependant il permet aussi de faire un rappel de certaines idées aux développeurs, voire même aux CTO._
 
-Pour consulter une présentation technique de JHipster, vous pouvez lire [cet article](/blog/posts/jhipster-generateur-projet-hipsters).
+Pour consulter une présentation technique de JHipster, vous pouvez lire [cet article](/fr/blog/articles/jhipster-generateur-projet-hipsters).
 
 ## Présentation de JHipster
 
@@ -34,7 +34,7 @@ Ici, je parle de sites web réactifs, qui vont grossir et sont pensés pour êtr
 
 ### **API**
 
-Ce terme n’est pas le plus évident à comprendre, mais est primordial lorsqu’on lance un projet tech. Voici ma définition simple d’une [API](/blog/posts/votre-api-est-elle-vraiment-restful) : _c’est l’ensemble du code qui assure la logique de projet que vous créez, et qu’on peut questionner simplement pour obtenir des informations comme “Quelle est la liste des utilisateurs de l’application ?” ou “Créer une nouvelle souscription pour l’utilisateur numéro 1”._
+Ce terme n’est pas le plus évident à comprendre, mais est primordial lorsqu’on lance un projet tech. Voici ma définition simple d’une [API](/fr/blog/articles/votre-api-est-elle-vraiment-restful) : _c’est l’ensemble du code qui assure la logique de projet que vous créez, et qu’on peut questionner simplement pour obtenir des informations comme “Quelle est la liste des utilisateurs de l’application ?” ou “Créer une nouvelle souscription pour l’utilisateur numéro 1”._
 
 L’avantage d’une API, c’est qu’elle est réutilisable, puisqu’elle peut être appelée depuis n’importe où : votre site web, votre application mobile, un logiciel, etc.
 
@@ -112,7 +112,7 @@ JHipster propose toute une liste d’options que je vais citer sans les détaill
 
 En plus de permettre un **démarrage très rapide de votre projet**, JHipster possède une qualité très importante à nos yeux.
 
-D’abord parce c’est un projet _Open Source_, ce qui signifie que le code est accessible à tous sur [Github](https://github.com/jhipster/generator-jhipster/). Autrement dit, **ça implique que tout le monde puisse contribuer à l’amélioration du générateur**, et donc venir ajouter de nouvelles fonctionnalités au projet. Que ce soit pour s’assurer qu’il ne possède pas de failles de sécurité, corriger de potentiels bugs, etc. Concrètement, ça nous permet d’améliorer votre projet lors de chaque mise à jour de JHipster, en ajoutant de nouvelles fonctionnalités. Nous sommes par exemple en train de travailler sur l’ajout d’une fonctionnalité permettant de visualiser des statistiques sur vos données (nombre d’utilisateurs…). Nous vous invitons d'ailleurs à lire le [témoignage de nos ours présents lors de la dernière JHipster Code de Bordeaux](/blog/posts/la-team-du-bearstudio-a-la-jhipster-code).
+D’abord parce c’est un projet _Open Source_, ce qui signifie que le code est accessible à tous sur [Github](https://github.com/jhipster/generator-jhipster/). Autrement dit, **ça implique que tout le monde puisse contribuer à l’amélioration du générateur**, et donc venir ajouter de nouvelles fonctionnalités au projet. Que ce soit pour s’assurer qu’il ne possède pas de failles de sécurité, corriger de potentiels bugs, etc. Concrètement, ça nous permet d’améliorer votre projet lors de chaque mise à jour de JHipster, en ajoutant de nouvelles fonctionnalités. Nous sommes par exemple en train de travailler sur l’ajout d’une fonctionnalité permettant de visualiser des statistiques sur vos données (nombre d’utilisateurs…). Nous vous invitons d'ailleurs à lire le [témoignage de nos ours présents lors de la dernière JHipster Code de Bordeaux](/fr/blog/articles/la-team-du-bearstudio-a-la-jhipster-code).
 
 Pour finir, je souhaitais mettre en avant le fait qu’un projet JHipster peut être déployé très rapidement sur le cloud. Un [article](https://www.jhipster.tech/clever-cloud/) de [Rudy](https://www.bearstudio.fr/team/rudy-baer) explique comment déployer sur [CleverCloud](https://www.clever-cloud.com/en/) . Cette expertise nous permet de mettre l’interface du back-office entre vos mains, sur une plateforme de pré-production, en un jour seulement (sans la logique spécifique à votre métier, évidemment).
 

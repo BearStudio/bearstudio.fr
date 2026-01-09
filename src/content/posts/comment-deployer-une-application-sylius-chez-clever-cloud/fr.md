@@ -12,7 +12,7 @@ Sylius, framework e-commerce, et Clever Cloud, spécialiste de la mise en ligne 
 
 ## Sylius : le framework open-source pour e-commerce
 
-Créé en 2016, [Sylius](https://sylius.com/) ne se définit pas comme une solution e-commerce mais bien comme étant un framework offrant aux développeurs **un environnement de [développement](https://www.bearstudio.fr/prestations/dev-back) solide pour la mise en place d’une solution de vente en ligne**. Sylius s’appuie notamment sur le framework PHP Symfony, pour offrir à ses utilisateurs une large possibilité d’évolutions et de fonctionnalités. Disponible en **open-source**, il permet à qui le souhaite d’en disposer (pour en savoir plus à propos de ce type de logiciel, je vous invite à lire cet [article](/blog/posts/linux-logiciels-libres-et-open-source-retrouvez-votre-liberte) :) ).
+Créé en 2016, [Sylius](https://sylius.com/) ne se définit pas comme une solution e-commerce mais bien comme étant un framework offrant aux développeurs **un environnement de [développement](https://www.bearstudio.fr/prestations/dev-back) solide pour la mise en place d’une solution de vente en ligne**. Sylius s’appuie notamment sur le framework PHP Symfony, pour offrir à ses utilisateurs une large possibilité d’évolutions et de fonctionnalités. Disponible en **open-source**, il permet à qui le souhaite d’en disposer (pour en savoir plus à propos de ce type de logiciel, je vous invite à lire cet [article](/fr/blog/articles/linux-logiciels-libres-et-open-source-retrouvez-votre-liberte) :) ).
 
 ## Clever Cloud : la plateforme d’automatisation pour vos projets
 
@@ -30,7 +30,7 @@ Pour vous faire **gagner un peu de temps**, sachez que la ligne de commande suiv
 
 `composer create-project sylius/sylius-standard MyFirstShop`
 
-Par la suite il vous faudra créer un nouveau dépôt Git via la commande `git init` afin de push vers Gitlab ou Github (découvrez ici le [git de survie](/blog/posts/git) du BS).
+Par la suite il vous faudra créer un nouveau dépôt Git via la commande `git init` afin de push vers Gitlab ou Github (découvrez ici le [git de survie](/fr/blog/articles/git) du BS).
 
 Après cette installation, nous vous invitons à poster le projet sur [GitLab](https://about.gitlab.com/) pour pouvoir paramétrer l’intégration continue _(Continuous Integration)_, ce qui permettra, selon sa configuration, de déployer automatiquement votre code vers votre application Clever.
 

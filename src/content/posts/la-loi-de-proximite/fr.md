@@ -33,7 +33,7 @@ Ici, nous voyons que les groupes de billes sont clairement identifiables car pro
 
 ## À quoi sert cette loi de proximité ?
 
-L’utilité de cette loi prend tout son sens quand le designer l’utilise lors de la [réalisation d’interfaces](/blog/posts/rex-deroulement-projet-ux-bearstudio). Elle permet de lier **visuellement** des éléments sémantiquement similaires. Ainsi, l’utilisateur pourra **beaucoup plus facilement** scanner les éléments de l’interface. Les objectifs finaux consistent à rendre le contenu de l’interface **plus lisible** et sa consultation plus agréable. Prenons un exemple concret pour comprendre l’utilité de cette loi. Si elle est mal appliquée, elle peut être **rédhibitoire** à l’efficacité d’une interface.
+L’utilité de cette loi prend tout son sens quand le designer l’utilise lors de la [réalisation d’interfaces](/fr/blog/articles/rex-deroulement-projet-ux-bearstudio). Elle permet de lier **visuellement** des éléments sémantiquement similaires. Ainsi, l’utilisateur pourra **beaucoup plus facilement** scanner les éléments de l’interface. Les objectifs finaux consistent à rendre le contenu de l’interface **plus lisible** et sa consultation plus agréable. Prenons un exemple concret pour comprendre l’utilité de cette loi. Si elle est mal appliquée, elle peut être **rédhibitoire** à l’efficacité d’une interface.
 
 Dans cette première image, nous avons une liste de produits dans laquelle **la loi de proximité** n’est pas appliquée. 
 
@@ -63,6 +63,6 @@ Nous avons souhaité former nos développeurs ([front](https://www.bearstudio.fr
 
 Continuez de nous suivre pour ne pas louper les prochains articles sur **les autres lois de la Gestalt** et autres sujets design. Ces sujets sont facilement compréhensible et accessible à tous pour améliorer vos connaissances et compétences sur le sujet. 
 
-On vous conseille [l'article de Maxime sur le branding identity](/blog/posts/creer-identite-marque) pour apprendre les bases de la création d'une identité de marque !
+On vous conseille [l'article de Maxime sur le branding identity](/fr/blog/articles/creer-identite-marque) pour apprendre les bases de la création d'une identité de marque !
 
 Merci d’avoir lu cet article jusqu'au bout, j'espère qu’il vous aura plu ;)

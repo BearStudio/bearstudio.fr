@@ -20,7 +20,7 @@ Ici, pas de Hello World, pas de cours sur les conditions, les boucles, le borrow
 
 ## Rust, qu’est-ce que c’est ?
 
-Rust est un langage de programmation qui commence à prendre de plus en plus de place dans le monde du développement. ([C'est le deuxième langage officiel](https://lkml.org/lkml/2021/12/6/461) du [noyau Linux](/blog/posts/linux-logiciels-libres-et-open-source-retrouvez-votre-liberte)). Il contient des concepts qu’il est intéressant d’aborder même si on ne développe pas avec tous les jours.
+Rust est un langage de programmation qui commence à prendre de plus en plus de place dans le monde du développement. ([C'est le deuxième langage officiel](https://lkml.org/lkml/2021/12/6/461) du [noyau Linux](/fr/blog/articles/linux-logiciels-libres-et-open-source-retrouvez-votre-liberte)). Il contient des concepts qu’il est intéressant d’aborder même si on ne développe pas avec tous les jours.
 
 Rust est très présent au niveau système et c’est pour cela qu’on retrouve beaucoup d’alternatives à des lignes de commandes classiques : [bat](https://github.com/sharkdp/bat) une alternative à la commande [cat](<https://en.wikipedia.org/wiki/Cat_(Unix)>), [fd](https://github.com/sharkdp/fd) une alternative à [find](<https://en.wikipedia.org/wiki/Find_(Unix)>) etc.
 

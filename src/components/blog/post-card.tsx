@@ -13,7 +13,7 @@ export const PostCard = (props: {
 }) => {
   return (
     <a
-      href={getLink('/fr/blog/posts/:id', props.locale, {
+      href={getLink('/fr/blog/articles/:id', props.locale, {
         id: props.post.data._computed.slug,
       })}
       onDragStart={(e) => e.preventDefault()}

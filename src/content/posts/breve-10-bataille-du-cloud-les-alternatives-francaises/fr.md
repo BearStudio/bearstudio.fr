@@ -34,7 +34,7 @@ Ce sont 2 acteurs avec qui nous avons l’habitude de travailler au BearStudio p
 
 - **Le support**
 
-Le support client est plus facilement accessible sur ces plateformes et aussi souvent de bien meilleure qualité. Avec **[Clever Cloud](/blog/posts/deployer-app-jhipster-sur-clever-cloud)** par exemple, vous pouvez parler directement à une personne de leur équipe quand vous le souhaitez. En tant que développeur, cela a une vraie valeur ajoutée, vous échangez avec quelqu’un qui comprend vos problématiques techniques et qui vous propose des [solutions adaptées](https://www.bearstudio.fr/prestations).
+Le support client est plus facilement accessible sur ces plateformes et aussi souvent de bien meilleure qualité. Avec **[Clever Cloud](/fr/blog/articles/deployer-app-jhipster-sur-clever-cloud)** par exemple, vous pouvez parler directement à une personne de leur équipe quand vous le souhaitez. En tant que développeur, cela a une vraie valeur ajoutée, vous échangez avec quelqu’un qui comprend vos problématiques techniques et qui vous propose des [solutions adaptées](https://www.bearstudio.fr/prestations).
 
 - **La RGPD**
 

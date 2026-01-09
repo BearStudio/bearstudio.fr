@@ -16,7 +16,7 @@ Lorsque nous voyageons, pour le travail ou par passion, nous aimons partager nos
 
 ## L’histoire de TraveledMap
 
-**Quentin Lerebours**, [employé du BearStudio](/team) depuis son lancement, s’est lancé il y a un an dans le développement d’un projet personnel. Sous le nom de TraveledMap se cache un [outil](/blog/posts/outils-incontournables-pour-un-entrepreneur) répondant à un besoin ressenti par Quentin au fur et à mesure de ses voyages : partager facilement et **sauvegarder ses photos de voyage en fonction des lieux visités**. Une cartographie précise couplée à la diffusion de photographies. 
+**Quentin Lerebours**, [employé du BearStudio](/team) depuis son lancement, s’est lancé il y a un an dans le développement d’un projet personnel. Sous le nom de TraveledMap se cache un [outil](/fr/blog/articles/outils-incontournables-pour-un-entrepreneur) répondant à un besoin ressenti par Quentin au fur et à mesure de ses voyages : partager facilement et **sauvegarder ses photos de voyage en fonction des lieux visités**. Une cartographie précise couplée à la diffusion de photographies. 
 
 BearStudio et son équipe soutiennent pleinement Quentin dans son projet et souhaitent l’aider pour son développement. 
 

@@ -44,7 +44,7 @@ Chakra arrive avec un thème de base déjà bien configuré. Mais la puissance d
 
 Cela permet de pouvoir gérer le fameux **Dark Mode** mais pas seulement.
 
-Par exemple, sur le site de [Codeurs en Seine](/blog/posts/codeurs-en-seine-2019-des-devs-de-lux-et-de-lagilite), tout le site change de thème entre la partie [conférence annuelle](https://www.codeursenseine.com/2020) et la partie [meetups](https://www.codeursenseine.com/meetups). On peut voir que l’ensemble des composants (navigation, boutons, etc…) change sans pour autant avoir à les réécrire ou devoir charger une autre feuille CSS.
+Par exemple, sur le site de [Codeurs en Seine](/fr/blog/articles/codeurs-en-seine-2019-des-devs-de-lux-et-de-lagilite), tout le site change de thème entre la partie [conférence annuelle](https://www.codeursenseine.com/2020) et la partie [meetups](https://www.codeursenseine.com/meetups). On peut voir que l’ensemble des composants (navigation, boutons, etc…) change sans pour autant avoir à les réécrire ou devoir charger une autre feuille CSS.
 
 Si vous souhaitez générer rapidement des couleurs compatibles avec Chakra UI, je ne peux que vous conseiller [Smart Swatch](https://smart-swatch.netlify.app/) 😉 (c’est d’ailleurs ce que conseille également la [documentation de Chakra](https://chakra-ui.com/docs/theming/theme) 😛).
 

@@ -32,13 +32,13 @@ const ROUTES_CONFIG = {
   "fr": {
     "blog": {
       ":page": {},
+      "articles": {
+        ":id": {}
+      },
       "auteurs": {
         ":author": {
           ":page": {}
         }
-      },
-      "posts": {
-        ":id": {}
       },
       "rss.xml": {}
     },

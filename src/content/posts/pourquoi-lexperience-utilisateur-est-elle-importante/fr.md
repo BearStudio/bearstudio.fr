@@ -21,7 +21,7 @@ Dans le monde numérique d'aujourd'hui, le succès d'une application mobile/web 
 
 ## Clarifions les enjeux
 
-Contrairement à la conception graphique, la conception de l'UX design **ne** **peut pas** être une réflexion après coup, ou une couche esthétique ajoutée une fois le projet terminé. Un projet réussi va au-delà de ses fonctionnalités - **il nécessite des [user flow (flux utilisateurs)](/blog/posts/parcours-utilisateur-ux) bien pensés** dès le départ.
+Contrairement à la conception graphique, la conception de l'UX design **ne** **peut pas** être une réflexion après coup, ou une couche esthétique ajoutée une fois le projet terminé. Un projet réussi va au-delà de ses fonctionnalités - **il nécessite des [user flow (flux utilisateurs)](/fr/blog/articles/parcours-utilisateur-ux) bien pensés** dès le départ.
 
 ![L'UX Design regroupe une variété de sujets à traiter : sa fonctionnalité, l'UI Design, l'architecture de l'information; la recherche utilisateur, l'usabilité et le design d'interaction](images/frame-783-1024x712.png)
 

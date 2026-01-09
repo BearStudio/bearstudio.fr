@@ -18,7 +18,7 @@ Mon stage s’étant très bien passé, j’ai directement intégré le BearStud
 
 Mieux que retourner chez mes parents, j’ai décidé de suivre ma copine qui partait en échange erasmus en Finlande. En résumé: faire du remote/nomadisme digital... en profitant de son erasmus à elle (win-win non ?) le temps de finir mon stage. 
 
-FYI : Le distanciel n’étant pas une nouveauté pour l’[équipe du BearStudio](https://www.bearstudio.fr/team) qui [compte dans ses rangs des tunisiens](/blog/posts/on-a-des-developpeurs-tunisiens) mais aussi un auvergnat (à vous de voir ce qui est le plus dépaysant).
+FYI : Le distanciel n’étant pas une nouveauté pour l’[équipe du BearStudio](https://www.bearstudio.fr/team) qui [compte dans ses rangs des tunisiens](/fr/blog/articles/on-a-des-developpeurs-tunisiens) mais aussi un auvergnat (à vous de voir ce qui est le plus dépaysant).
 
 Comme le BearStudio est une boîte ouverte où la confiance règne, j’ai pu m’arranger avec l’équipe en leur proposant d’essayer d’en profiter pour développer notre activité à l’international… Bref, mon aventure de 4 mois en Finlande pouvait enfin commencer !”
 

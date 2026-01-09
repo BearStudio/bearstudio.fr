@@ -41,7 +41,7 @@ Le principe de Tailwind UI est de composer une page à l’aide de “composants
 
 (L’avis de Maxime, UX designer junior)
 
-Après avoir passé une semaine à maquetter le site RaCoon & Co à l’aide de Figma, j’ai rencontré de nombreux problèmes en termes d’[UX design](https://www.bearstudio.fr/prestations/ux-design) (user experience) qui mettaient à mal la contrainte de temps et demandaient des modifications continues. En tant qu’UX designer junior, je suis formé à la [création d’une interface graphique centrée utilisateur](/blog/posts/rex-deroulement-projet-ux-bearstudio). Je me devais donc de concevoir une interface-utilisateur qui répond aux méthodologies de l’UX !
+Après avoir passé une semaine à maquetter le site RaCoon & Co à l’aide de Figma, j’ai rencontré de nombreux problèmes en termes d’[UX design](https://www.bearstudio.fr/prestations/ux-design) (user experience) qui mettaient à mal la contrainte de temps et demandaient des modifications continues. En tant qu’UX designer junior, je suis formé à la [création d’une interface graphique centrée utilisateur](/fr/blog/articles/rex-deroulement-projet-ux-bearstudio). Je me devais donc de concevoir une interface-utilisateur qui répond aux méthodologies de l’UX !
 
 Avant-après : Le résultat après la V1 du site RaCoon & Co est bluffant, nous avons passé 3 fois moins de temps à maquetter mais aussi à intégrer avec Delphin. Et nous avons eu un rendu, nettement plus professionnel et ergonomique.
 
@@ -75,7 +75,7 @@ NextJS est un framework JavaScript proche de React et beaucoup utilisé en [dév
 
 On peut aussi écrire du HTML dans Next grâce au JSX donc la transition est plus facile pour moi ! À cela on a ajouté Tailwind CSS qui permet, pour moi, d'être plus précis qu'avec Bootstrap et de faire plus de choses et avec la ressource Tailwind UI (déjà bien utilisée par les autres collègues du BS). Nous avons pu directement utiliser des composants qui ont amélioré la qualité et la vitesse de nos développements.
 
-Concrètement ? La deuxième version a avancé bien plus vite que la première et en à peine une semaine nous avons eu un résultat super professionnel. Aussi bien esthétiquement qu'en termes de performances (un score Google PageSpeed de 98% !!!! Quand même !! Pas mal pour le SEO ([référencement naturel](/blog/posts/checklist-seo-technique)) 😉 )
+Concrètement ? La deuxième version a avancé bien plus vite que la première et en à peine une semaine nous avons eu un résultat super professionnel. Aussi bien esthétiquement qu'en termes de performances (un score Google PageSpeed de 98% !!!! Quand même !! Pas mal pour le SEO ([référencement naturel](/fr/blog/articles/checklist-seo-technique)) 😉 )
 
 ## Conclusion
 

@@ -67,7 +67,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     label: t('blog.root.breadcrumb'),
   }),
   entry({
-    path: '/fr/blog/posts/:id',
+    path: '/fr/blog/articles/:id',
     params: {
       id: post.data._computed.slug,
     },
@@ -89,12 +89,12 @@ const [slugFr, slugEn] = await Promise.all([
     url={url}
     alternates={{
       fr: slugFr
-        ? getLink('/fr/blog/posts/:id', 'fr', {
+        ? getLink('/fr/blog/articles/:id', 'fr', {
             id: slugFr,
           })
         : null,
       en: slugEn
-        ? getLink('/fr/blog/posts/:id', 'en', {
+        ? getLink('/fr/blog/articles/:id', 'en', {
             id: slugEn,
           })
         : null,
