@@ -4,6 +4,7 @@ export type Post = z.infer<ReturnType<typeof zPost>>;
 export const zPost = ({ image }: SchemaContext) =>
   z.object({
     title: z.string(),
+    slug: z.string().optional(),
     excerpt: z.string().optional(),
     metaDescription: z.string().optional(),
     heroImage: image().optional(),
