@@ -1,10 +1,10 @@
 ---
-name: 'Hend FELLAH'
+name: 'Paul SMACQUE'
 picture: './paul.png'
-job: 'Manager du Camel Studio'
+job: 'Back-end Developer'
 socials:
   - type: 'linkedin'
-    href: https://www.linkedin.com/in/hend-fellah-812976165/
+    href: https://www.linkedin.com/in/paul-smacque-146686224/
 status: 'current'
 hidden: false
 order: 1000
