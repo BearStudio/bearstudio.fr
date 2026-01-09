@@ -5,6 +5,7 @@ instances:
   - name: 'Touraine Tech'
     date: 2023-01-09
     speakers: ['dorian-delorme', 'rudy-baer']
+    replay: https://youtu.be/zkZI6VqbhLw?si=P7TAAGcoVroKnBd3
   - name: 'Bangkok - BKK Web'
     date: 2022-12-29
     speakers: ['dorian-delorme', 'rudy-baer']

@@ -5,6 +5,7 @@ instances:
   - name: 'Twitch'
     date: 2021-07-02
     speakers: ['ivan-dalmet', 'hugo-perard', 'yoann-fleury']
+    replay: https://www.youtube.com/watch?v=GG5hHpMd7nw
 ---
 
 Stream présenté par Yoann dans lequel Ivan coach Hugo sur la création d’un site vitrine avec Next.JS et Tailwind CSS dans sa version pro Tailwind UI.
