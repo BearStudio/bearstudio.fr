@@ -5,19 +5,12 @@ import { filter, isNonNullish } from 'remeda';
 import { personWithComputed, type PersonWithComputed } from '@/lib/people';
 import type { Locale } from '@/i18n/utils';
 
-type Params = {
-  limit?: number | undefined;
-  locale: Locale;
-};
-
-type HasSpecificAuthorProps = {
+const hasSpecificAuthor = (params: {
   post: CollectionEntry<'posts'>;
   author: PersonWithComputed;
-};
-
-const hasSpecificAuthor = ({ post, author }: HasSpecificAuthorProps) => {
-  const selectedPost = (post.data?.authors ?? []).find(
-    (postAuthor) => postAuthor.id === author.data._computed.slug
+}) => {
+  const selectedPost = (params.post.data?.authors ?? []).find(
+    (postAuthor) => postAuthor.id === params.author.data._computed.slug
   );
 
   if (selectedPost) return selectedPost;
@@ -29,32 +22,44 @@ const sortByLatest = (
   post2: CollectionEntry<'posts'>
 ) => (post2.data.date?.valueOf() ?? 0) - (post1.data.date?.valueOf() ?? 0);
 
-export async function getPostsCollection({
-  limit = undefined,
-  locale,
-}: Params) {
+export async function getPostsCollection(params: {
+  limit?: number | undefined;
+  locale: Locale;
+}) {
   const posts = await Promise.all(
     (await getCollection('posts'))
       .filter((item) => {
-        // item.id format is: "id/locale.md" (e.g., "my-post/fr.md")
-        const itemLocale = item.id.split('/')[1]?.replace('.md', '');
-        return itemLocale === locale;
+        // Get locale from filePath
+        const itemLocale = item.filePath
+          ?.split('/')
+          .at(-1)
+          ?.replace('.mdx', '')
+          .replace('.md', '');
+        return itemLocale === params.locale;
       })
       .sort(sortByLatest)
       .map(postWithComputed)
   );
 
-  return posts.slice(0, limit);
+  return posts.slice(0, params.limit);
 }
 
 export type PostWithComputed = Awaited<ReturnType<typeof postWithComputed>>;
 const postWithComputed = async (item: CollectionEntry<'posts'>) => {
-  // item.id format is: "slug/locale.md" (e.g., "ivan-dalmet/fr.md")
-  const slug = item.id.split('/')[0] ?? 'unknown';
-  const locale = item.id.split('/')[1]?.replace('.md', '');
+  // Get slug for data or from filePath
+  const slug =
+    item.data.slug ??
+    item.filePath?.split('/').at(-2)?.replace('.mdx', '').replace('.md', '') ??
+    'unknown';
+  // Get locale from filePath
+  const itemLocale = item.filePath
+    ?.split('/')
+    .at(-1)
+    ?.replace('.mdx', '')
+    .replace('.md', '');
   const authors = await Promise.all(
     (item.data.authors ?? [])?.map(async (author) => {
-      const data = await getEntry('people', `${author.id}/${locale}`);
+      const data = await getEntry('people', `${author.id}/${itemLocale}`);
       return data ? personWithComputed(data) : undefined;
     })
   );
@@ -70,18 +75,31 @@ const postWithComputed = async (item: CollectionEntry<'posts'>) => {
   };
 };
 
-type GetPostsCollectionLinkedToPersonProps = Params & {
+export async function getPostsCollectionLinkedToPerson(params: {
+  limit?: number | undefined;
+  locale: Locale;
   author: PersonWithComputed;
-};
-
-export async function getPostsCollectionLinkedToPerson({
-  author,
-  locale,
-  limit = undefined,
-}: GetPostsCollectionLinkedToPersonProps) {
-  const posts = (await getPostsCollection({ locale })).filter((post) =>
-    hasSpecificAuthor({ post, author })
+}) {
+  const posts = (await getPostsCollection({ locale: params.locale })).filter(
+    (post) => hasSpecificAuthor({ post, author: params.author })
   );
 
-  return posts.slice(0, limit);
+  return posts.slice(0, params.limit);
+}
+
+export async function getPostSlugInOtherLocale(
+  item: PostWithComputed,
+  targetLocale: Locale
+) {
+  // Get id from filePath
+  const id = item.filePath?.split('/').at(-2);
+  const rawTargetItem = (
+    await getPostsCollection({ locale: targetLocale })
+  ).find((i) => {
+    const _id = i.filePath?.split('/').at(-2);
+    return id === _id;
+  });
+  if (!rawTargetItem) return null;
+  const targetItem = await postWithComputed(rawTargetItem);
+  return targetItem?.data._computed.slug ?? id;
 }
