@@ -1,5 +1,4 @@
 ---
-import { createHash } from 'node:crypto';
 import { Image } from 'astro:assets';
 import type { ComponentProps } from 'astro/types';
 
@@ -16,16 +15,43 @@ interface Props {
 
 const props = Astro.props;
 
-const hash = createHash('sha512').update(props.text).digest('base64');
-const numbersLength = hash
-  .split('')
-  .filter((char) => isNaN(parseInt(char))).length;
+function normalizeText(input: string) {
+  return input.normalize('NFKC').trim(); // tweak as needed
+}
 
-// Calculate curvedAmount based on text length, bounded between -100 and 200
-const curvedAmount = Math.max(-100, Math.min(200, 200 - numbersLength * 20));
+// Fowler–Noll–Vo hash algorithm 32-bit
+function fnv1a32(str: string) {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return h >>> 0; // unsigned
+}
 
-// Compute the top position
-const position = Math.max(-2.5, Math.min(7, 7 - numbersLength * 0.2));
+function mapToRange01(u32: number) {
+  return u32 / 2 ** 32; // [0,1)
+}
+
+function mapToRange(u01: number, min: number, max: number) {
+  return min + u01 * (max - min);
+}
+
+function textToValue(
+  text: string,
+  options: { min?: number; max?: number; type?: 'precise' | 'rounded' }
+) {
+  const t = normalizeText(text);
+  const u01 = mapToRange01(fnv1a32(t));
+  const value = mapToRange(u01, options.min ?? 0, options.max ?? 1);
+
+  return options.type === 'rounded' ? Math.round(value) : value;
+}
+
+// if you want to customize the boundaries of the curve value or position,
+// change the min and max
+const curveAmount = textToValue(props.text, { min: -200, max: 300 });
+const position = textToValue(props.text, { min: -5, max: 5 });
 ---
 
 <div
@@ -49,7 +75,7 @@ const position = Math.max(-2.5, Math.min(7, 7 - numbersLength * 0.2));
       client:visible
       marqueeText={`${props.text} ✦ `}
       speed={1}
-      curveAmount={curvedAmount}
+      curveAmount={curveAmount}
       className="absolute inset-0 fill-white"
       interactive={false}
       {...props.curvedLoopProps}
