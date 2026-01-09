@@ -11,5 +11,30 @@
     "mobileDev": "Dev Mobile",
     "projectBoost": "Boost Projet",
     "ctoSupport": "Accompagnement CTO"
+  },
+  "contact": {
+    "title": "Expliquez nous votre problème !",
+    "description": "Vous n'êtes pas arrivés ici par hasard et vous avez sans doute une problématique ou un contexte au sein duquel nous pouvons intervenir.",
+    "cta": "Contactez-nous",
+    "idea": {
+      "title": "J'ai une idée mais je ne sais pas par où commencer",
+      "quote": "« J'ai l'idée, la motivation, un début de cahier des charges… mais je ne sais pas quelles sont les étapes à venir. »",
+      "description": "Venez nous rencontrer directement dans nos locaux en Normandie près de Rouen ou appelez-nous, nous prendrons le temps de discuter ensemble de votre projet et des étapes à venir. Nous ne sommes pas avares en conseils et nous commençons à avoir l'habitude d'aiguiller les porteurs de projet un peu perdus."
+    },
+    "need": {
+      "title": "J'ai un besoin précis pour mon projet",
+      "quote": "« Il me manque une compétence en interne ou j'ai besoin d'un point de vue extérieur pour continuer d'avancer. »",
+      "description": "Maquettage, UX Design, développement, audit ou accompagnement : nous pouvons intervenir à plusieurs étapes de votre projet pour vous permettre de le faire évoluer. Prenons le temps de discuter ensemble de votre besoin ou envoyez-nous un petit mail avec votre demande pour avoir une estimation rapide du coût."
+    }
+  },
+  "experts": {
+    "title": "Nos experts",
+    "description": "Rencontrez les ours passionnés qui donnent vie à vos projets numériques avec expertise et créativité.",
+    "more": "Plus d'experts"
+  },
+  "blog": {
+    "title": "Nos articles",
+    "description": "Découvrez nos articles, retours d'expérience et réflexions sur le développement web, mobile et les bonnes pratiques du numérique.",
+    "more": "Plus d'articles"
   }
 }

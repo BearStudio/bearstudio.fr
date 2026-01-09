@@ -10,12 +10,14 @@ import { getPostsCollection } from '@/lib/posts';
 import { cn } from '@/lib/tailwind/utils';
 import { PostCardMore } from '@/components/blog/post-card-more';
 import { PostsCarousel } from '@/components/blog/posts-carousel';
+import { ContactFormDrawer } from '@/components/contact/contact-form-drawer';
 import Container from '@/components/container.astro';
 import Hero from '@/components/hero/hero.astro';
 import { PeopleCarousel } from '@/components/people/people-carousel';
 import { PersonCardMore } from '@/components/people/person-card-more';
 import { Polaroid } from '@/components/polaroids/polaroid';
 import { PolaroidsCarousel } from '@/components/polaroids/polaroids-carousel';
+import SectionScratched from '@/components/sections/section-scratched.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import { buttonVariants } from '@/components/ui/button';
@@ -204,25 +206,104 @@ const latestPosts = await Promise.all(
     </div>
   </Hero>
 
-  <Container class="gap-12">
+  <Container class="gap-12 pt-16">
     <div class="-mt-32 w-full lg:hidden">
       <PolaroidsCarousel client:load locale={locale} polaroids={polaroids} />
     </div>
 
+    <div class="flex flex-col gap-8 md:flex-row">
+      <div class="flex flex-1 flex-col gap-3">
+        <h2
+          class="font-heading text-2xl font-bold text-balance md:max-w-[20ch]"
+        >
+          {t('home.contact.title')}
+        </h2>
+        <p class="max-w-[70ch] text-sm text-balance">
+          {t('home.contact.description')}
+        </p>
+        <div class="flex flex-col gap-2 max-md:hidden">
+          <p>
+            <a href="tel:+33749360436" class="font-medium">
+              +33 (0)7 49 36 04 36
+            </a>
+          </p>
+          <ContactFormDrawer
+            client:load
+            className="w-fit cursor-pointer"
+            locale={locale}
+          >
+            <span class={buttonVariants({ size: 'lg' })}>
+              {t('home.contact.cta')}
+            </span>
+          </ContactFormDrawer>
+        </div>
+      </div>
+
+      <div class="xs:flex-row flex flex-2 flex-col gap-8">
+        <div class="flex flex-1 flex-col gap-2">
+          <h3 class="font-heading text-lg leading-tight font-bold text-balance">
+            {t('home.contact.idea.title')}
+          </h3>
+          <p class="max-w-[70ch] text-sm text-balance italic">
+            {t('home.contact.idea.quote')}
+          </p>
+          <p class="max-w-[70ch] text-sm text-balance">
+            {t('home.contact.idea.description')}
+          </p>
+        </div>
+
+        <div class="flex flex-1 flex-col gap-2">
+          <h3 class="font-heading text-lg leading-tight font-bold text-balance">
+            {t('home.contact.need.title')}
+          </h3>
+          <p class="max-w-[70ch] text-sm text-balance italic">
+            {t('home.contact.need.quote')}
+          </p>
+          <p class="max-w-[70ch] text-sm text-balance">
+            {t('home.contact.need.description')}
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-4 md:hidden">
+        <ContactFormDrawer
+          client:load
+          className="w-fit cursor-pointer"
+          locale={locale}
+        >
+          <span class={buttonVariants({ size: 'lg' })}>
+            {t('home.contact.cta')}
+          </span>
+        </ContactFormDrawer>
+        <p>
+          <a href="tel:+33749360436" class="font-medium">
+            +33 (0)7 49 36 04 36
+          </a>
+        </p>
+      </div>
+    </div>
+  </Container>
+
+  <SectionScratched>
+    <Container class="py-12"> WIP </Container>
+  </SectionScratched>
+
+  <Container class="gap-12 pt-6">
     <div class="flex flex-col gap-4">
       <div class="flex flex-col gap-1">
-        <h2 class="font-heading text-2xl font-bold">
-          <a href={getLink('/fr/equipe', locale, {})}>Nos experts</a>
+        <h2 class="font-heading text-2xl font-bold text-balance">
+          <a href={getLink('/fr/equipe', locale, {})}
+            >{t('home.experts.title')}</a
+          >
         </h2>
-        <p class="max-w-[70ch] text-sm text-balance opacity-80">
-          Rencontrez les ours passionnés qui donnent vie à vos projets
-          numériques avec expertise et créativité.
+        <p class="max-w-[70ch] text-sm text-balance">
+          {t('home.experts.description')}
         </p>
       </div>
       <PeopleCarousel client:load people={peopleCurrent} locale={locale}>
-        <PersonCardMore href={getLink('/fr/equipe', locale, {})}
-          >Plus d'experts</PersonCardMore
-        >
+        <PersonCardMore href={getLink('/fr/equipe', locale, {})}>
+          {t('home.experts.more')}
+        </PersonCardMore>
       </PeopleCarousel>
     </div>
 
@@ -230,17 +311,18 @@ const latestPosts = await Promise.all(
       !!latestPosts.length && (
         <div class="flex flex-col gap-4">
           <div class="flex flex-col gap-1">
-            <h2 class="font-heading text-2xl font-bold">
-              <a href={getLink('/fr/blog', locale, {})}>Nos articles</a>
+            <h2 class="font-heading text-2xl font-bold text-balance">
+              <a href={getLink('/fr/blog', locale, {})}>
+                {t('home.blog.title')}
+              </a>
             </h2>
-            <p class="max-w-[70ch] text-sm text-balance opacity-80">
-              Découvrez nos articles, retours d'expérience et réflexions sur le
-              développement web, mobile et les bonnes pratiques du numérique.
+            <p class="max-w-[70ch] text-sm text-balance">
+              {t('home.blog.description')}
             </p>
           </div>
           <PostsCarousel client:load posts={latestPosts} locale={locale}>
             <PostCardMore href={getLink('/fr/blog', locale, {})}>
-              Plus d'articles
+              {t('home.blog.more')}
             </PostCardMore>
           </PostsCarousel>
         </div>

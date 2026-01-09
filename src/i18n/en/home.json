@@ -11,5 +11,30 @@
     "mobileDev": "Mobile Dev",
     "projectBoost": "Project Boost",
     "ctoSupport": "CTO Support"
+  },
+  "contact": {
+    "title": "Tell us about your problem!",
+    "description": "You didn't end up here by chance, and you probably have a problem or context in which we can help.",
+    "cta": "Contact us",
+    "idea": {
+      "title": "I have an idea but I don't know where to start",
+      "quote": "\"I have the idea, the motivation, the beginnings of specifications... but I don't know what the next steps are.\"",
+      "description": "Come meet us directly at our offices in Normandy near Rouen, or give us a call. We'll take the time to discuss your project and the steps ahead. We're generous with advice and we're used to guiding project founders who are a bit lost."
+    },
+    "need": {
+      "title": "I have a specific need for my project",
+      "quote": "\"I'm missing a skill internally or I need an outside perspective to keep moving forward.\"",
+      "description": "Mockups, UX Design, development, audit or support: we can intervene at several stages of your project to help it evolve. Let's take the time to discuss your needs together, or send us an email with your request for a quick cost estimate."
+    }
+  },
+  "experts": {
+    "title": "Our experts",
+    "description": "Meet the passionate bears who bring your digital projects to life with expertise and creativity.",
+    "more": "More experts"
+  },
+  "blog": {
+    "title": "Our articles",
+    "description": "Discover our articles, feedback and thoughts on web and mobile development and digital best practices.",
+    "more": "More articles"
   }
 }

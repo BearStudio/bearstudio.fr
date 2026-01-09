@@ -1,6 +1,7 @@
 ---
 import { getLink } from '@/lib/link';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import { ContactFormDrawer } from '@/components/contact/contact-form-drawer';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
@@ -10,8 +11,6 @@ import { buttonVariants } from '@/components/ui/button';
 import { SOCIALS } from '@/content/socials';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
-
-import { ContactFormDrawer } from './_contact-form-drawer';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
@@ -97,7 +96,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
             {t('contact.root.address.line2')}<br />
             {t('contact.root.address.line3')}
           </p>
-          <a href="tel:+33749360436">{t('contact.root.address.phone')}</a>
+          <a href="tel:+33749360436">+33 (0)7 49 36 04 36</a>
         </address>
 
         <div class="flex flex-col gap-2">
