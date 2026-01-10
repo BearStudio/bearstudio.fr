@@ -23,4 +23,5 @@ Mais si vous voulez vraiment rater votre projet, lors de cette conférence, vous
 - Empêcher les modifications rapides
 - Ajouter des incohérences (rapidement)
 - Faire un beau design uniquement avec des données “bien pratiques”
-- Fournir une interface utilisateur mobile merdique (même si la plupart des utilisateurs sont sur mobile) Pourrir la vie des développeurs front-end
+- Fournir une interface utilisateur mobile merdique (même si la plupart des utilisateurs sont sur mobile)
+- Pourrir la vie des développeurs front-end
