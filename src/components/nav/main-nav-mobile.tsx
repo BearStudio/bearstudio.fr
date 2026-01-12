@@ -40,7 +40,7 @@ export const MainNavMobile = (props: { pathname: string; locale: Locale }) => {
     level: 'secondary',
   });
   return (
-    <div className="pointer-events-none fixed right-0 bottom-0 left-0 z-20 h-22 p-3 lg:hidden">
+    <div className="pointer-events-none fixed right-0 bottom-0 left-0 z-20 h-22 p-3 lg:hidden mb-safe-bottom">
       <div className="border-hero/20 bg-hero/80 text-hero-foreground pointer-events-auto mx-auto flex h-full w-full max-w-lg items-center justify-between rounded-2xl border border-b-3 bg-linear-to-b px-2 backdrop-blur-md">
         <div className="flex w-full gap-px">
           {primaryItems.map((item) => {
