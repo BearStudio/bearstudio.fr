@@ -21,7 +21,6 @@ import SectionScratched from '@/components/sections/section-scratched.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import { buttonVariants } from '@/components/ui/button';
-import { TiltedCard } from '@/components/ui/tilted-card';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
@@ -182,23 +181,16 @@ const latestPosts = await Promise.all(
             <a
               href={getPolaroidHref(polaroid, locale)}
               class={cn(
-                'flex w-full',
+                'flex w-full transition-all duration-500 hover:z-10 hover:scale-120 hover:rotate-0',
                 index === 0 && 'translate-x-2 rotate-6',
                 index === 1 && '-translate-y-2 -rotate-5',
                 index === 2 && 'translate-y-2 -rotate-4',
                 index === 3 && '-translate-x-1 -translate-y-2 rotate-3'
               )}
             >
-              <TiltedCard
-                className="w-full"
-                client:load
-                scaleOnHover={1.2}
-                rotateAmplitude={20}
-              >
-                <Polaroid image={polaroid.data.image}>
-                  {polaroid.data.title[locale]}
-                </Polaroid>
-              </TiltedCard>
+              <Polaroid image={polaroid.data.image}>
+                {polaroid.data.title[locale]}
+              </Polaroid>
             </a>
           ))
         }
