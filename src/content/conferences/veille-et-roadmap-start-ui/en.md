@@ -1,5 +1,5 @@
 ---
-title: 'Veille et Roadmap Start UI'
+title: 'Start UI Tech Watch and Roadmap'
 
 instances:
   - name: 'Twitch'
@@ -8,4 +8,4 @@ instances:
     replay: https://www.youtube.com/watch?v=lnSJkXIzm2g&list=PL3phsoEh8sHdy2LGSv34DMZ_jJENtkq_s&index=15
 ---
 
-Hugo et Yoann vous accompagne pour faire du Gartic Show, de la veille, discuter et préparer la roadmap 2023 pour Start UI
+Hugo and Yoann join you to play Gartic Show, do tech watch, chat, and prepare the 2023 roadmap for Start UI.

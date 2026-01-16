@@ -10,5 +10,5 @@ hidden: false
 order: 71
 ---
 
-Manuela est office manager avec plus de 20 ans d’expérience en ESN, au cœur des univers de la dématérialisation documentaire et du jeu vidéo. Toujours en mouvement, elle jongle avec les priorités, anticipe, coordonne et fait avancer les projets avec une énergie communicative.
-Fonceuse et ambitieuse, elle aime être sur tous les fronts et relever les défis sans jamais perdre le sens du collectif. Le théâtre d’improvisation, qu’elle pratique avec passion, reflète parfaitement son tempérament : réactive, audacieuse et résolument tournée vers l’action.
+Manuela is an office manager with more than 20 years of experience in IT service companies, at the heart of the worlds of document digitization and video games. Always on the move, she juggles priorities, anticipates, coordinates, and drives projects forward with infectious energy.
+Bold and ambitious, she likes to be everywhere at once and take on challenges without ever losing her sense of teamwork. The improv theater she practices with passion perfectly reflects her temperament: reactive, daring, and resolutely action-oriented.

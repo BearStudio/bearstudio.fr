@@ -12,6 +12,4 @@ hidden: false
 order: 5
 ---
 
-Hard in business, her business knack makes her an irrefutable asset for BearStudio! Self-employed person in parallel, Nhung is never running out of ideas and doesn’t hesitate to invest herself body and soul in a project close to her heart. Always smiling, she is also an enthusiastic colleague who boosts the team!
-
-As a self-employed person in parallel, Nhung does not hesitate to put her heart and soul into projects that are important to her.
+Determined and fully committed, Nhung has been applying her business acumen and energy to BearStudio since its creation. Versatile, she is involved in project management as well as HR and finance. As a thoughtful and attentive manager, she supports the teams on a daily basis and helps foster a positive work dynamic, driven by her enthusiasm and her rigor.

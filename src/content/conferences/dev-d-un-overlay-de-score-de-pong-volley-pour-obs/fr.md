@@ -4,7 +4,7 @@ title: "Dev d'un overlay de score de Pong Volley pour OBS"
 instances:
   - name: 'Twitch'
     date: 2022-08-05
-    speakers: ['yoann-fleury']
+    speakers: ['yoann-fleury', 'ivan-dalmet']
     replay: https://www.youtube.com/watch?v=c3-qDgNnAwY
 ---
 

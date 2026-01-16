@@ -1,5 +1,5 @@
 ---
-title: 'On discute et on fait de la veille et du dev sur Satori'
+title: 'Chatting, Tech Watch, and Development on Satori'
 
 instances:
   - name: 'Twitch'
@@ -8,4 +8,4 @@ instances:
     replay: https://www.youtube.com/watch?v=JkX_-py8M_Q&list=PL3phsoEh8sHdy2LGSv34DMZ_jJENtkq_s&index=24
 ---
 
-Dans cette VOD, on essaie de générer automatiquement des images avec du code !
+In this VOD, we experiment with automatically generating images using code!

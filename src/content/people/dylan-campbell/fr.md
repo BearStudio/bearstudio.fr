@@ -10,6 +10,4 @@ hidden: false
 order: 70
 ---
 
-Développeur front junior, Dylan recherche toujours les meilleures solutions pour développer vos interfaces.
-
-En tant que junior sa capacité à s’adapter et à apprendre rapidement lui permet de développer efficacement ses compétences.
+Développeur front-end, Dylan accorde une importance toute particulière à la Developer eXperience et la maintenabilité des applications. Il s'efforce de toujours trouver la meilleure solution, tant pour l'utilisateur que pour le prochain développeur.

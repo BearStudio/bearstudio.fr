@@ -12,6 +12,4 @@ hidden: false
 order: 5
 ---
 
-Dure en affaire, sa bosse du commerce en fait un atout imparable pour le BearStudio ! Auto-entrepreneuse en parallèle, Nhung n’est jamais à court d’idée et n’hésite pas à s’investir corps et âme dans un projet qui lui tient à coeur. Toujours souriante, c’est aussi une collègue enthousiaste qui dynamise cette équipe !
-
-Auto-entrepreneuse en parallèle, Nhung n’hésite pas à s’investir corps et âme dans les projets qui lui tiennent à cœur.
+Déterminée et pleinement investie, Nhung met son sens des affaires et son énergie au service de BearStudio depuis sa création.Polyvalente, elle intervient aussi bien en gestion de projet qu’en RH et en finance.Manager à l’écoute, elle accompagne les équipes au quotidien et contribue à une dynamique de travail positive, portée par son enthousiasme et sa rigueur.

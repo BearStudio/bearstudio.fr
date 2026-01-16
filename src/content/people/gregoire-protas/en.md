@@ -12,4 +12,4 @@ hidden: false
 order: 60
 ---
 
-Front developer, Grégoire started working as an intern, and eventually stayed. He will do his best to offer you a solution adapted to your needs.
+Front developer, Grégoire was thrust since the beggining of his profesionnal life into React and React Native. He will do his best to offer you a solution adapted to your needs.
