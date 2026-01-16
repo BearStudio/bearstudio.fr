@@ -1,9 +1,0 @@
----
-title: "Retour d'expérience sur Native Base et dev React Native"
-
-instances:
-  - name: 'Twitch'
-    date: 2022-06-17
----
-
-Nicolas et Yoann vous accompagne pour faire de la veille, un retour d'expérience sur Native Base et migrer une application en React Native classique avec Start UI et l'ajout d'animation Lottie.

@@ -1,5 +1,5 @@
 ---
-title: "Les outils numériques de l'entrepreneur "
+title: "Les outils numériques de l'entrepreneur"
 
 instances:
   - name: 'Normandy Web Xperts'

@@ -8,6 +8,7 @@ tags:
   - 'engagement'
   - 'temoignage'
 heroImage: 'images/format-blog-header-2-scaled.png'
+authors: ['soraya-benchakroune']
 ---
 
 ## Un engagement associatif ancré dans notre culture

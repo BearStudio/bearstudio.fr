@@ -7,6 +7,7 @@ tags:
   - 'developpement-web'
   - 'retour-dexperience'
 heroImage: 'images/outstatic-format-blog-header.png'
+authors: ['jeanne-grenet']
 ---
 
 Il y a quelque temps, j’ai travaillé sur une landing page avec une partie blog. Deux contraintes majeures se présentaient :

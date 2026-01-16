@@ -9,6 +9,7 @@ tags:
   - 'projet'
   - 'rex'
 heroImage: 'images/tailwindnext.js.png'
+authors: ['fabien-essid', 'delphin-batantou', 'yohann-josselin']
 ---
 
 _On a demandé à Maxime et Delphin, respectivement alternants à l’époque en UX design et en Front-end au BearStudio, de se faire la main en totale autonomie sur le site d’une amie du BS (RaCoon & Co)… Évidemment tout ne s’est pas passé comme prévu et ils en ont chi…sué !_

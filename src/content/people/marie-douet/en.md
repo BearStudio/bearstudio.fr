@@ -10,6 +10,6 @@ hidden: false
 order: 1000
 ---
 
-Tombée dans l'informatique au lycée lorsqu'elle a découvert la programmation, Marie privilégie la fiabilité, la simplicité et la cohérence dans ses projets. Curieuse et adaptable, elle sait tirer parti de chaque expérience pour progresser et donner vie à de nouvelles idées.
+Since discovering programming in high school, Marie has developed a passion for computer science. She focuses on reliability, simplicity, and consistency in her projects. Curious and adaptable, she makes the most of every experience to grow and bring new ideas to life.
 
-Curieuse et adaptable, Marie aime tirer le meilleur de chaque expérience.
+Curious and adaptable, Marie enjoys making the most of every experience.

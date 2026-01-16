@@ -12,3 +12,7 @@ socials:
 status: 'current'
 order: 20
 ---
+
+Issu d'un profil Full Stack, Yoann est aujourd'hui principalement développeur Front-end. Yoann aime concevoir des interfaces réactives, légères et accessibles.
+
+Avec une veille technologique accrue, il saura toujours trouver les bons outils et les bonnes pratiques pour la réussite de votre projet.

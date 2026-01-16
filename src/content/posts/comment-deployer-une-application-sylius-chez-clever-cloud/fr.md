@@ -4,6 +4,8 @@ date: 2021-04-14
 categories:
   - 'developpement'
 heroImage: 'images/sylius-clever-cloud-tuto-article.png'
+authors:
+  - 'rudy-baer'
 ---
 
 ## De Sylius à Clever Cloud, il n'y a qu'un pas...

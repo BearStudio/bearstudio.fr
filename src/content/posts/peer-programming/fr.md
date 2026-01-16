@@ -8,6 +8,7 @@ tags:
   - 'developpeur'
   - 'retour-dexperience'
 heroImage: 'images/peer-programming-illustration.jpg'
+authors: ['gregoire-protas']
 ---
 
 _Il est arrivé à tout développeur de se retrouver coincé sur un sujet et de ne pas pouvoir avancer sur une fonctionnalité ou un correctif. Même après avoir parcouru [StackOverflow](https://stackoverflow.com/) en boucle, il n’y a aucune solution en vue !_

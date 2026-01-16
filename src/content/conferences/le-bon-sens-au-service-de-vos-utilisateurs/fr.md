@@ -4,6 +4,7 @@ title: 'Le bon sens au service de vos utilisateurs'
 instances:
   - name: 'Djerba'
     date: 2019-05-01
+    speakers: ['asceline-boullen']
 ---
 
 Vous êtes un développeur acharné ? Vous êtes fier de votre dernière application, de votre dernière feature développée ? Mais alors pourquoi n’est-elle pas utilisée ou incomprise par vos utilisateurs… ?

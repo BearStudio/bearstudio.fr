@@ -10,6 +10,7 @@ tags:
 heroImage: 'images/outil-traveledmap-par-quentin.png'
 metaDescription: 'TraveledMap vous propose de partager vos photos de vacances avec vos proches, mais aussi de stocker vos photos de voyage par destination. Malin !'
 excerpt: 'Lorsque nous voyageons, pour le travail ou par passion, nous aimons partager nos aventures avec nos proches, mais les réseaux sociaux ne sont pas toujours adaptés… TraveledMap existe justement pour proposer une alternative adaptée aux voyageurs, et l&rsquo;outil est développé par un employé du BearStudio ! L’histoire de TraveledMap Quentin Lerebours, employé du BearStudio depuis [&hellip;]'
+authors: ['laurie-dupuis']
 ---
 
 Lorsque nous voyageons, pour le travail ou par passion, nous aimons partager nos aventures avec nos proches, mais les réseaux sociaux ne sont pas toujours adaptés… [TraveledMap](https://www.traveledmap.com/?bs) existe justement pour proposer une **alternative adaptée aux voyageurs**, et l'outil est développé par un employé du BearStudio !

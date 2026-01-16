@@ -11,3 +11,5 @@ status: 'current'
 hidden: false
 order: 60
 ---
+
+Développeur Front, Grégoire a été plongé dès le début de son parcours dans les technologies de front React et React Native. Il fera son maximum pour vous proposer une solution adaptée à vos besoins.

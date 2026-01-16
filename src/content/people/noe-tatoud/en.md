@@ -14,6 +14,6 @@ hidden: false
 order: 1000
 ---
 
-Développeur Full-stack, Noé est toujours partant pour apprendre ou transmettre. Il construit des interfaces accessibles et évolutives et aime les projets où l’on prend le temps de bien faire les choses.
+Full-Stack Developer, Noé is always eager to learn or share knowledge. He builds accessible, scalable interfaces and enjoys projects where there's time to do things properly.
 
-Développeur Full-stack, Noé est toujours partant pour apprendre ou transmettre.
+Full-Stack Developer, Noé is always eager to learn or share knowledge.

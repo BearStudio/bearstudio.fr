@@ -11,3 +11,7 @@ status: 'current'
 hidden: false
 order: 25
 ---
+
+Front-end developer and constantly looking for better JavaScript frameworks, Renan likes testing the newest technologies of the moment.
+
+He makes the set of mockups produced functional in order to give life to your craziest projects!

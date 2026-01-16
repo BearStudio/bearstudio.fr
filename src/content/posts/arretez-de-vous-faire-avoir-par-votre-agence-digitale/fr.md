@@ -9,6 +9,7 @@ tags:
   - 'digital'
   - 'web'
 heroImage: 'images/arretez-de-vous-faire-avoir-par-votre-agence-digitale.jpg'
+authors: ['ivan-dalmet', 'youen-chene']
 ---
 
 ## Avant propos

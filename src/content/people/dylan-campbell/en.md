@@ -9,3 +9,5 @@ status: 'current'
 hidden: false
 order: 70
 ---
+
+Front-end developer, Dylan places an emphasis on the maintainability and Developer eXperience of the applications he works on. He strives to find the best solution, be it for the user or the next developer.

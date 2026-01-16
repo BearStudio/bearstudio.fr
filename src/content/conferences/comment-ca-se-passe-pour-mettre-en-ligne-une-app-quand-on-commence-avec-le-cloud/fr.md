@@ -3,11 +3,17 @@ title: 'Comment ça se passe pour mettre en ligne une app quand on commence avec
 
 instances:
   - name: 'Brest - DevFest du bout du monde'
+    speakers: ['rudy-baer']
     date: 2020-02-10
+    replay: https://www.youtube.com/watch?v=7LZDkoEHWJM
   - name: 'Montpellier'
+    speakers: ['rudy-baer']
     date: 2019-11-12
+    replay: https://www.meetup.com/Montpellier-DevOps/events/266019150/
   - name: 'Meet-Up codeur en Seine'
+    speakers: ['rudy-baer']
     date: 2019-10-17
+    replay: https://www.codeursenseine.com/meetups/events/firebase-and-clouds
 ---
 
 Tous les cloud provider promettent la même chose :
@@ -24,4 +30,4 @@ On commencera par un tour d’horizon rapide des solutions existantes puis nous 
 
 Le but de ce talk n’est pas de déterminer quelle solution est la meilleure ni comment optimiser sa mise en ligne… Je veux simplement vous partager mon expérience et j’espère vous faire gagner un peu de temps le jour où vous serez confronté à ce genre de problématique
 
-Ce talk s’adresse principalement à 3 types de profils : * les développeurs “fullstack” ou un peu touche à tout * les étudiants qui ne savent pas comment on met en ligne une app * les managers qui doivent choisir un provider mais ne savent pas par ou commencer
+Ce talk s’adresse principalement à 3 types de profils : _ les développeurs “fullstack” ou un peu touche à tout _ les étudiants qui ne savent pas comment on met en ligne une app \* les managers qui doivent choisir un provider mais ne savent pas par ou commencer

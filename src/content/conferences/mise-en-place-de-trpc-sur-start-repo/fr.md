@@ -5,6 +5,7 @@ instances:
   - name: 'Twitch'
     date: 2022-03-04
     speakers: ['yoann-fleury', 'ivan-dalmet']
+    replay: https://www.youtube.com/watch?v=qhfmoCzamro
 ---
 
 Ivan et Yoann s’occupent d’implémenter tRPC sur Start Repo, un produit du BearStudio.

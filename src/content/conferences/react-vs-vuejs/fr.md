@@ -3,7 +3,9 @@ title: 'React VS VueJs'
 
 instances:
   - name: 'Meet-Up codeur en Seine'
+    speakers: ['ivan-dalmet']
     date: 2020-05-07
+    replay: https://www.youtube.com/watch?v=h6XYacLPpzY
 ---
 
 Aujourd’hui pour lancer un projet d’application web, qui n’est pas juste un petit prototype, on peut être amené à devoir choisir entre React ou VueJS.

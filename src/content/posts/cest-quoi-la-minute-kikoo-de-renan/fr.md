@@ -7,6 +7,7 @@ tags:
   - 'minute-kikoo-de-renan'
   - 'stream'
 heroImage: 'images/featured-Image-Site-MKDR.png'
+authors: ['renan-decamps']
 ---
 
 ## D'où ça vient ?

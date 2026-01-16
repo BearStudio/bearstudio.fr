@@ -6,6 +6,7 @@ categories:
 heroImage: 'images/medical-equipment-on-an-operation-room-3844581-scaled.jpg'
 metaDescription: "Les étapes du développement d'une interface numérique pour les patients atteints du Covid vu par deux stagiaires au BearStudio"
 excerpt: 'Sur les traces d&rsquo;un projet au coeur de l&rsquo;actualité&#8230; Nous sommes Nathan et Emma, étudiants en école de commerce, actuellement en stage au BearStudio. Voilà maintenant quelques semaines que nous avons intégré l&rsquo;équipe ! Notre première mission : retracer le développement d’une interface de monitoring pour les patients atteints du Covid-19. En effet, aucun de [&hellip;]'
+authors: ['emma-monchablon', 'nathan-lesouef']
 ---
 
 ## Sur les traces d'un projet au coeur de l'actualité...

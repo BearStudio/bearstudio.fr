@@ -5,6 +5,7 @@ instances:
   - name: 'Touraine Tech'
     date: 2023-01-09
     speakers: ['dorian-delorme', 'rudy-baer']
+    replay: https://youtu.be/zkZI6VqbhLw?si=P7TAAGcoVroKnBd3
   - name: 'Bangkok - BKK Web'
     date: 2022-12-29
     speakers: ['dorian-delorme', 'rudy-baer']
@@ -22,4 +23,5 @@ Mais si vous voulez vraiment rater votre projet, lors de cette conférence, vous
 - Empêcher les modifications rapides
 - Ajouter des incohérences (rapidement)
 - Faire un beau design uniquement avec des données “bien pratiques”
-- Fournir une interface utilisateur mobile merdique (même si la plupart des utilisateurs sont sur mobile) Pourrir la vie des développeurs front-end
+- Fournir une interface utilisateur mobile merdique (même si la plupart des utilisateurs sont sur mobile)
+- Pourrir la vie des développeurs front-end

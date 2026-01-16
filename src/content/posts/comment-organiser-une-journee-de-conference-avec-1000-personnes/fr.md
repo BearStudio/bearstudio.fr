@@ -4,6 +4,8 @@ date: 2023-02-15
 categories:
   - 'actualites-web-numerique'
 heroImage: 'images/image.png'
+authors:
+  - 'rudy-baer'
 ---
 
 ## Les différents points à gérer
