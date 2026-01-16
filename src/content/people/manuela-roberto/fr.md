@@ -1,6 +1,6 @@
 ---
 name: 'Manuela ROBERTO'
-picture: './manuela.jpg'
+picture: './manuela.png'
 job: 'Office Manager'
 socials:
   - type: 'linkedin'

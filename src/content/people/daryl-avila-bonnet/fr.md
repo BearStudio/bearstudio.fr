@@ -1,6 +1,6 @@
 ---
 name: 'Daryl AVILA BONNET'
-picture: './daryl.jpg'
+picture: './daryl.png'
 job: 'UI/UX Designer'
 socials:
   - type: 'linkedin'
