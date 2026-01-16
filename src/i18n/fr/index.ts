@@ -4,6 +4,7 @@ import blog from './blog.json';
 import brandAssets from './brandAssets.json';
 import common from './common.json';
 import contact from './contact.json';
+import events from './events.json';
 import home from './home.json';
 import legal from './legal.json';
 import notFound from './notFound.json';
@@ -13,6 +14,7 @@ import team from './team.json';
 export default {
   brandAssets,
   common,
+  events,
   blog,
   home,
   legal,
