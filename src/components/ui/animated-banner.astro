@@ -18,8 +18,8 @@ const props = Astro.props;
 
 // if you want to customize the boundaries of the curve value or position,
 // change the min and max
-const curveAmount = getValueFromText(props.text, { min: -200, max: 300 });
-const position = getValueFromText(props.text, { min: -5, max: 5 });
+const curveAmount = getValueFromText(props.text, { min: -200, max: 200 });
+const position = getValueFromText(props.text, { min: -3, max: 3 });
 const speed = getValueFromText(props.text, { min: 0.4, max: 1.3 });
 ---
 
