@@ -3,6 +3,7 @@ import 'dayjs/locale/en';
 import blog from './blog.json';
 import common from './common.json';
 import contact from './contact.json';
+import events from './events.json';
 import home from './home.json';
 import legal from './legal.json';
 import notFound from './notFound.json';
@@ -11,6 +12,7 @@ import team from './team.json';
 
 export default {
   common,
+  events,
   blog,
   home,
   legal,
