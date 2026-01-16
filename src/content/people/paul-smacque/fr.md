@@ -1,5 +1,5 @@
 ---
-name: 'Paul SMACQUE'
+name: 'Paul Smacque'
 picture: './paul.png'
 job: 'Back-end Developer'
 socials:

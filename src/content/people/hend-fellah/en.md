@@ -1,5 +1,5 @@
 ---
-name: 'Hend FELLAH'
+name: 'Hend Fellah'
 picture: './hend.png'
 job: 'Camel Studio Manager'
 socials:

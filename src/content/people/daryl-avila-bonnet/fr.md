@@ -1,5 +1,5 @@
 ---
-name: 'Daryl AVILA BONNET'
+name: 'Daryl Avila Bonnet'
 picture: './daryl.png'
 job: 'UI/UX Designer'
 socials:

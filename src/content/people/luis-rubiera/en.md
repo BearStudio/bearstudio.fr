@@ -1,5 +1,5 @@
 ---
-name: 'Luis RUBIERA'
+name: 'Luis Rubiera'
 picture: './luis.png'
 job: 'Tech Lead'
 socials:

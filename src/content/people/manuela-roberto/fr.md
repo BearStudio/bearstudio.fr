@@ -1,5 +1,5 @@
 ---
-name: 'Manuela ROBERTO'
+name: 'Manuela Roberto'
 picture: './manuela.png'
 job: 'Office Manager'
 socials:
