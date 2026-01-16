@@ -36,5 +36,9 @@
     "title": "Our articles",
     "description": "Discover our articles, feedback and thoughts on web and mobile development and digital best practices.",
     "more": "More articles"
+  },
+  "trust": {
+    "title": "They trust us",
+    "description": "Startups, SMBs, and large organizations trust us to design and develop their digital projects."
   }
 }

@@ -1,6 +1,6 @@
 ---
 import { Schema } from 'astro-seo-schema';
-import { getImage } from 'astro:assets';
+import { getImage, Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 
 import { getLink } from '@/lib/link';
@@ -277,7 +277,168 @@ const latestPosts = await Promise.all(
   </Container>
 
   <SectionScratched>
-    <Container class="py-12"> WIP </Container>
+    <Container class="gap-8 py-12">
+      <div class="flex flex-1 flex-col gap-2">
+        <h2
+          class="font-heading text-accent text-2xl font-bold text-balance md:max-w-[20ch]"
+        >
+          {t('home.trust.title')}
+        </h2>
+        <p class="max-w-[70ch] text-sm text-balance">
+          {t('home.trust.description')}
+        </p>
+      </div>
+
+      <div class="2xs:grid-cols-2 grid flex-2 gap-4 sm:grid-cols-3">
+        <a
+          href="https://www.cuisinez-pour-bebe.fr/"
+          class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
+          >
+            <Image
+              width={288}
+              height={172}
+              class="w-fit"
+              src="/logos/cuisinez-pour-bebe_bg-white@hd.png"
+              alt="Cuisinez pour bébé"
+            />
+          </div>
+          <div class="flex flex-2 flex-col gap-1 p-2">
+            <p class="text-xs opacity-80">
+              Cuisinez pour bébé aide les parents à préparer du fait-maison pour
+              leur bébé, en cultivant le plaisir d'une alimentation saine et
+              savoureuse.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://www.docaposte-agility.fr/"
+          class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
+          >
+            <Image
+              width={288}
+              height={172}
+              class="w-fit"
+              src="/logos/docaposte_bg-white@hd.png"
+              alt="Docaposte Agility"
+            />
+          </div>
+          <div class="flex flex-2 flex-col gap-1 p-2">
+            <p class="text-xs opacity-80">
+              Docaposte Agility accompagne les entreprises dans leur
+              transformation digitale avec des solutions numériques de confiance
+              et des services d'agilité.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://kernelbiomedical.com/"
+          class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
+          >
+            <Image
+              width={288}
+              height={172}
+              class="w-fit"
+              src="/logos/kernel-biomedical_bg-white@hd.png"
+              alt="Kernel Biomedical"
+            />
+          </div>
+          <div class="flex flex-2 flex-col gap-1 p-2">
+            <p class="text-xs opacity-80">
+              Kernel Biomedical conçoit des dispositifs médicaux innovants pour
+              améliorer le diagnostic et le traitement des patients.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://apps.apple.com/fr/app/l%C3%A9a-english/id6739615642"
+          class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
+          >
+            <Image
+              width={288}
+              height={172}
+              class="w-fit"
+              src="/logos/lea-english_bg-white@hd.png"
+              alt="Léa English"
+            />
+          </div>
+          <div class="flex flex-2 flex-col gap-1 p-2">
+            <p class="text-xs opacity-80">
+              Léa English est une application mobile qui aide à apprendre
+              l'anglais de manière ludique et interactive.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://trashtalk.co/"
+          class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
+          >
+            <Image
+              width={288}
+              height={172}
+              class="w-fit"
+              src="/logos/trashtalk_bg-white@hd.png"
+              alt="TrashTalk"
+            />
+          </div>
+          <div class="flex flex-2 flex-col gap-1 p-2">
+            <p class="text-xs opacity-80">
+              TrashTalk est le média de référence pour les passionnés de basket,
+              avec actualités, analyses et contenus exclusifs sur la NBA.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://campo-products.com/"
+          class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
+          >
+            <Image
+              width={288}
+              height={172}
+              class="w-fit"
+              src="/logos/campo_bg-white@hd.png"
+              alt="Campo"
+            />
+          </div>
+          <div class="flex flex-2 flex-col gap-1 p-2">
+            <p class="text-xs opacity-80">
+              Campo est un écosystème de produits aéronautiques mobiles conçus
+              par des pilotes pour des pilotes, équipages et opérateurs
+              aéronautiques.
+            </p>
+          </div>
+        </a>
+      </div>
+    </Container>
   </SectionScratched>
 
   <Container class="gap-12 pt-6">

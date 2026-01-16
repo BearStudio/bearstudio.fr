@@ -36,5 +36,9 @@
     "title": "Nos articles",
     "description": "Découvrez nos articles, retours d'expérience et réflexions sur le développement web, mobile et les bonnes pratiques du numérique.",
     "more": "Plus d'articles"
+  },
+  "trust": {
+    "title": "Ils nous font confiance",
+    "description": "Startups, PME et grands groupes nous font confiance pour concevoir et développer leurs projets numériques."
   }
 }
