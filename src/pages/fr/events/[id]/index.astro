@@ -1,0 +1,164 @@
+---
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+
+import { getEventsCollection, type EventWithComputed } from '@/lib/events';
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import Container from '@/components/container.astro';
+import HeroContent from '@/components/hero/hero-content.astro';
+import Hero from '@/components/hero/hero.astro';
+import Prose from '@/components/prose.astro';
+import SEO from '@/components/seo/index.astro';
+import { getAlternates } from '@/components/seo/utils';
+import { getTranslationFn, parseAstroLocale, type Locale } from '@/i18n/utils';
+import MainLayout from '@/layouts/main-layout.astro';
+import PeopleGrid from '@/components/people/people-grid.astro';
+import PersonCard from '@/components/people/person-card.astro';
+import { getConferencesCollectionByEvent } from '@/lib/conferences';
+
+export async function generateStaticPaths(params: { locale: Locale }) {
+  const events = await getEventsCollection({ locale: params.locale });
+
+  return Promise.all(
+    events.map((event) => {
+      return {
+        params: { id: event.data._computed.slug },
+        props: { event },
+      };
+    })
+  );
+}
+
+export async function getStaticPaths() {
+  return generateStaticPaths({ locale: 'fr' });
+}
+
+type Props = {
+  event: EventWithComputed;
+};
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const { event } = Astro.props;
+
+const t = getTranslationFn(locale);
+const { Content } = await render(event);
+const url = new URL(Astro.url.pathname, Astro.site);
+const slug = event.data._computed.slug;
+
+const conferences = await getConferencesCollectionByEvent({
+  event,
+  locale: locale,
+});
+
+const conferencesWithContent = await Promise.all(
+  conferences.map(async (conference) => {
+    const { Content } = await render(conference);
+    return { ...conference, Content };
+  })
+);
+
+if (!slug) {
+  return new Response(null, { status: 404 });
+}
+
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    label: t('events.root.breadcrumb'),
+    path: '/fr/events',
+    params: {},
+  }),
+  entry({
+    label: event.data.title,
+    path: '/fr/events/:id',
+    params: {
+      id: slug,
+    },
+  }),
+]);
+---
+
+<MainLayout>
+  <SEO
+    slot="seo"
+    title={event.data.title}
+    url={url}
+    alternates={getAlternates('/fr/events/:id', {
+      id: slug,
+    })}
+    breadcrumb={breadcrumb}
+  />
+
+  <Hero>
+    <HeroContent class="sm:pr-80" breadcrumb={breadcrumb}>
+      <div class="relative flex flex-col sm:-mb-12">
+        <div class="relative z-10 flex flex-1 flex-col gap-6">
+          <div class="flex flex-col gap-0">
+            <h1
+              class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
+            >
+              {event.data.title}
+            </h1>
+          </div>
+        </div>
+        {
+          !!event.data.image && (
+            <div class="-mt-8 -mb-24 flex-none overflow-hidden sm:absolute sm:-right-80 sm:bottom-0 sm:mt-0 sm:-mb-24 sm:w-80 lg:-right-64 lg:-mb-32">
+              <Image
+                class="mx-auto w-64 drop-shadow-2xl sm:w-full"
+                src={event.data.image}
+                alt={event.data.title}
+                width={1000}
+                height={1200}
+              />
+            </div>
+          )
+        }
+      </div>
+    </HeroContent>
+  </Hero>
+  <Container class="gap-8">
+    <Prose>
+      <Content />
+    </Prose>
+
+    <div>
+      {
+        !!event.data._computed.participants.length && (
+          <h2>Participants</h2>
+          <PeopleGrid>
+            {event.data._computed.participants.map((author) => {
+              return author.data.status ? <PersonCard hover="hard" person={author} /> : <p>{author.data.name}</p>
+            })}
+          </PeopleGrid>
+        )
+      }
+    </div>
+
+        {
+      !!conferencesWithContent.length && (
+        <div class="flex flex-col gap-4">
+          <h2 class="font-heading text-2xl font-bold">
+            Nos conférences à cet évènement
+          </h2>
+          <div class="flex flex-col gap-4">
+            {conferencesWithContent.map((conference) => {
+              const ConferenceContent = conference.Content;
+              return (
+                <div class="flex flex-col gap-2">
+                  <div class="flex flex-col gap-1">
+                    <h3 class="font-heading text-lg font-medium">
+                      {conference.data.title}
+                    </h3>
+                  </div>
+                  <Prose class="prose-sm text-muted-foreground">
+                    <ConferenceContent />
+                  </Prose>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )
+    }
+  </Container>
+</MainLayout>

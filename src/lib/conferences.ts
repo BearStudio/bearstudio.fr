@@ -2,6 +2,7 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 import { isNonNullish } from 'remeda';
 
+import type { EventWithComputed } from '@/lib/events';
 import type { PersonWithComputed } from '@/lib/people';
 import type { Locale } from '@/i18n/utils';
 
@@ -78,6 +79,21 @@ export const conferenceWithComputed = (
     },
   };
 };
+
+export async function getConferencesCollectionByEvent(params: {
+  locale: Locale;
+  limit?: number | undefined;
+  event: EventWithComputed;
+}) {
+  return (await getConferencesCollection(params))
+    .filter((item) =>
+      (item.data?.instances ?? []).some(
+        (conference) =>
+          params.event.data._computed.slug === conference.event?.id
+      )
+    )
+    .filter(isNonNullish);
+}
 
 export async function getConferencesCollectionByPerson(params: {
   locale: Locale;

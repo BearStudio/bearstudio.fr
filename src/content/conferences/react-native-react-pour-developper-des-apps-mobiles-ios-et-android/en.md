@@ -18,6 +18,7 @@ instances:
   - name: 'Codeurs en Seine'
     date: 2019-09-01
     speakers: ['nicolas-torion']
+    event: 'ces-2019'
   - name: 'Dubai - Astrolabs'
     date: 2022-02-09
     speakers: ['quentin-lerebours']

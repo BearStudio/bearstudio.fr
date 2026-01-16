@@ -21,6 +21,12 @@ const ROUTES_CONFIG = {
     "contact": {
       "application-process-bearstudio": {}
     },
+    "events": {
+      ":id": {},
+      "year": {
+        ":year": {}
+      }
+    },
     "legal-notice": {},
     "services": {
       "cto-support": {},
@@ -51,6 +57,12 @@ const ROUTES_CONFIG = {
     },
     "equipe": {
       ":id": {}
+    },
+    "events": {
+      ":id": {},
+      "annee": {
+        ":year": {}
+      }
     },
     "mentions-legales": {},
     "prestations": {
