@@ -128,7 +128,7 @@ const CurvedLoop: FC<CurvedLoopProps> = ({
     ? dragRef.current
       ? 'grabbing'
       : 'grab'
-    : 'auto';
+    : 'inherit';
 
   return (
     <div

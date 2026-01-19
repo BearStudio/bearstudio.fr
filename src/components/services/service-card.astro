@@ -2,9 +2,8 @@
 import { Image } from 'astro:assets';
 import { getEntry } from 'astro:content';
 
-import { isNonNullish, shuffle } from 'remeda';
+import { isNonNullish } from 'remeda';
 
-import { cn } from '@/lib/tailwind/utils';
 import { parseAstroLocale } from '@/i18n/utils';
 
 import AnimatedBanner from '../ui/animated-banner.astro';
@@ -32,13 +31,6 @@ const skills = (
 const icons = await Promise.all(
   skills.map(async (skill) => await getEntry(skill.data.icon))
 );
-
-const positions = shuffle([
-  '-top-9 -left-10',
-  '-bottom-8 left-25',
-  '-top-5 -right-5',
-  '-bottom-8 -right-5',
-] as const);
 ---
 
 <a
@@ -46,21 +38,20 @@ const positions = shuffle([
   class="bg-card group border-card-border relative flex flex-1 flex-col gap-2.5 rounded-md border border-b-3 p-2 transition-all hover:-translate-y-1.5 hover:shadow-xl"
 >
   <div class="bg-brand-900 relative aspect-video w-full rounded-sm">
-    {
-      icons.map((icon, index) => {
-        return (
-          <Image
-            src={icon.data.image}
-            alt="A description of my image."
-            width={100}
-            class={cn(
-              'absolute z-10 scale-70 transition-all',
-              positions[index]
-            )}
-          />
-        );
-      })
-    }
+    <div class="absolute bottom-3 left-3 z-10 flex origin-bottom-left gap-2">
+      {
+        icons.map((icon) => {
+          return (
+            <Image
+              src={icon.data.image}
+              alt={icon.data.name}
+              width={32}
+              height={32}
+            />
+          );
+        })
+      }
+    </div>
 
     <AnimatedBanner image={defaultImg} text={props.title} />
   </div>
