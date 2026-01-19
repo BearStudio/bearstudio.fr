@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 import { PiWarningCircleDuotone } from 'react-icons/pi';
 import { match } from 'ts-pattern';
 
@@ -12,6 +14,8 @@ import { getAlternates } from '@/components/seo/utils';
 import { Callout, CalloutTitle } from '@/components/ui/callout';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
+
+import RecrutementTrello from './_recrutement-trello.jpeg';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
@@ -357,6 +361,10 @@ const socialsToFollow = [
                 la catégorie « en cours ». Les demandes sont ensuite réparties
                 selon nos décisions dans les colonnes « Oui » et « Non ».
               </p>
+              <Image
+                src={RecrutementTrello}
+                alt="Tableau de recrutement BearStudio sur Trello"
+              />
               <p>
                 Notre assistante administrative prend ensuite connaissance des
                 délibérations, contacte les éventuels candidats retenus pour un
@@ -539,6 +547,10 @@ const socialsToFollow = [
                 progress” category. Next, the applications are split according
                 to our decisions, into the columns “Yes” and “No”.
               </p>
+              <Image
+                src={RecrutementTrello}
+                alt="Tableau de recrutement BearStudio sur Trello"
+              />
               <p>
                 Finally, our administrative assistant takes note of the
                 proceedings, contacts the potential successful candidates for an
