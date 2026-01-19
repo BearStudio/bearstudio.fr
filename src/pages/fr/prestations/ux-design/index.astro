@@ -1,15 +1,12 @@
 ---
-import { match } from 'ts-pattern';
-
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
-import { ContactFormDrawer } from '@/components/contact/contact-form-drawer';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
-import { buttonVariants } from '@/components/ui/button';
+import Accordion from '@/components/ui/accordion.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
@@ -45,511 +42,341 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     />
   </Hero>
   <Container>
-    <Prose>
-      {
-        match(locale)
-          .with('fr', () => (
-            <>
-              <h2>Qu’est-ce que c’est l’UX Design ?</h2>
-              <p>
-                L’UX design consiste à{' '}
-                <strong>favoriser le ressenti positif d’un utilisateur</strong>{' '}
-                face à une interface. Cela passe par plusieurs paramètres allant
-                du design graphique de l’interface jusqu’à la manière dont sont{' '}
-                <strong>pensées les fonctionnalités</strong> en passant par la
-                stratégie commerciale s’accordant à l’objectif business. Le tout
-                devant gagner en ergonomie.
-              </p>
-              <p>
-                Au BearStudio,{' '}
-                <strong>nos développeurs, graphistes et webdesigners</strong>
-                &nbsp;sont <em>féroces</em> dès qu’il s’agit d’UX. Quel que soit
-                votre projet numérique,{' '}
-                <strong>l’expérience utilisateur</strong> est au centre de nos
-                préoccupations. Nous vous proposons des{' '}
-                <strong>interfaces réfléchies</strong>, fluides, simples
-                d’utilisation et agréables pour les yeux, tout en favorisant vos{' '}
-                <strong>enjeux business.</strong>
-              </p>
-              <h3>Pourquoi s’intéresser à l’expérience utilisateur ?</h3>
-              <p>
-                Plus les utilisateurs sont satisfaits de leur expérience
-                concernant votre interface, plus les performances de votre site
-                web ou de votre application mobile augmenteront. De cette
-                manière, vous pourrez adapter votre stratégie aux besoins des
-                utilisateurs afin de générer un maximum de trafic sur votre
-                support digital. Enfin, se mettre à la place des utilisateurs
-                est un bon moyen pour placer des opportunités d’interactions à
-                des endroits idéaux.
-              </p>
-              <h2>Nos prestations d’UX design</h2>
-              <p>
-                Le travail d’UX Design se concrétise par plusieurs formats de
-                réalisations. Selon votre contexte, un moodboard sera suffisant
-                pour pitcher sommairement le projet. Alors qu’avant une phase de
-                développement, des wireframes seront indispensables.
-              </p>
-              <h3>Moodboard</h3>
-              <p>
-                Un moodboard est un assemblage d’images utilisé pour{' '}
-                <strong>exprimer le style choisi</strong> dans le cadre du
-                développement d’un projet créatif.
-                <br />
-                Les graphistes utilisent cet outil pour{' '}
-                <strong>donner une idée de l’ambiance</strong> qu’ils cherchent
-                à reproduire concernant un concept.
-              </p>
-              <h3>Wireframes</h3>
-              <p>
-                Un wireframe est une représentation visuelle de l’interface
-                d’une page web. Il est notamment utilisé pour{' '}
-                <strong>
-                  créer et disposer les composants d’une interface
-                </strong>
-                .
-                <br />
-                La réalisation de wireframes s’effectue avant toute création de
-                maquette graphique. Elle s’inscrit dans une{' '}
-                <strong>démarche de conceptualisation</strong>.
-              </p>
-              <h3>Maquettes</h3>
-              <p>
-                Une maquette est un
-                <strong> prototype&nbsp;statique de haute fidélité</strong> de
-                l’application. Elle est établie juste avant que celle-ci ne soit
-                envoyée en développement.
-                <br />
-                Le designer en charge du maquettage va se servir des wireframes
-                ainsi que de la charte graphique réalisés en amont.{' '}
-                <strong>
-                  Le client peut enfin visualiser son futur produit{' '}
-                </strong>
-                et en apprécier<strong> l’identité visuelle</strong>.
-              </p>
-              <h3>Audit UX Design</h3>
-              <p>
-                L’audit d’expérience utilisateur est une{' '}
-                <strong>méthode d’analyse qualitative</strong> qui vise à{' '}
-                <strong>évaluer la performance</strong> d’un service numérique{' '}
-                <strong>du point de vue des utilisateurs, </strong>grâce à des
-                <strong> tests utilisateurs.</strong>
-              </p>
-              <p>
-                En analysant les écrans de votre interface, l’UX designer va
-                chercher à mettre en évidence l’existence d’éventuels{' '}
-                <strong>problèmes d’utilisabilité</strong> et ce sur n’importe
-                quel type de support.
-              </p>
-              <h3>Charte Graphique</h3>
-              <p>
-                La charte graphique contient l’ensemble des règles d’utilisation
-                des éléments graphiques (logo, typographie etc.) d’un projet.
-                Elle doit être appliquée sur tous les supports de communication.
-              </p>
-              <p>
-                Ce document vous permet de conserver une
-                <strong>
-                  {' '}
-                  cohérence visuelle vis-à-vis de votre image de marque
-                </strong>
-                . En évitant de changer trop souvent d’apparence, vous vous{' '}
-                <strong>préservez de toute confusion</strong>.
-              </p>
-              <h2>Vous avez trouvé votre bonheur ?</h2>
-              <ContactFormDrawer
-                client:load
-                className="w-fit cursor-pointer"
-                locale={locale}
-              >
-                <span class={buttonVariants({ size: 'lg' })}>
-                  {t('home.contact.cta')}
-                </span>
-              </ContactFormDrawer>
-              <h2>Questions fréquentes sur l'UX Design</h2>
-              <p>
-                Pour répondre à toutes vos interrogations sur l’UX Design mais
-                aussi (et surtout) améliorer notre SEO…
-              </p>
-              <details
-                itemscope=""
-                itemprop="mainEntity"
-                itemtype="https://schema.org/Question"
-                id="0"
-                data-accordion=""
-              >
-                <summary itemprop="name">
-                  <h3>
-                    <span>Qu’est-ce que l’ergonomie d’un site web&nbsp;?</span>
-                  </h3>
-                </summary>
-                <div
-                  itemscope=""
-                  itemprop="acceptedAnswer"
-                  itemtype="https://schema.org/Answer"
-                >
-                  <div itemprop="text">
-                    <p>
-                      L’ergonomie est un pilier de l’expérience utilisateur.
-                      Pour améliorer l’expérience utilisateur des sites web,
-                      l’analyse de l’ergonomie implique l’inspection de
-                      l’ensemble des pages du site internet.
-                    </p>
-                    <p>
-                      Commençons par une définition simple de l’ergonomie :
-                      c’est l’étude et l’amélioration des interactions entre
-                      l’homme et la machine.
-                    </p>
-                    <p>
-                      Pour qu’une page soit ergonomique, elle doit respecter une
-                      bonne utilisabilité qui peut se définir en 3 grands
-                      piliers :
-                    </p>
-                    <ul>
-                      <li aria-level="1">
-                        <strong>Efficacité :</strong> l’utilisateur doit être en
-                        mesure d’atteindre l’objectif visé
-                      </li>
-                      <li aria-level="1">
-                        <strong>Efficience :</strong> le but visé doit être
-                        atteint avec un minimum de temps et d’efforts
-                      </li>
-                      <li aria-level="1">
-                        <strong>Satisfaction :</strong> l’utilisateur doit
-                        ressentir de la satisfaction pendant l’utilisation de la
-                        page, l’amélioration du ressenti utilisateur apporte
-                        forcément une meilleure expérience utilisateur pour
-                        celui-ci
-                      </li>
-                    </ul>
-                    <p>
-                      Pour qu’un site web soit ergonomique, il faut que ses
-                      pages respectent les méthodologies UX UI design (UX pour
-                      user experience et UI pour user interface) par exemple le
-                      responsive design,{' '}
-                      <a
-                        href="https://www.bearstudio.fr/blog/design-css/la-loi-de-proximite"
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        la loi de proximité
-                      </a>{' '}
-                      ou encore la hiérarchie des informations, il faut aussi
-                      procéder à des tests utilisateurs pour vérifier
-                      l’utilisabilité de la page.
-                    </p>
-                    <p>
-                      L’ergonomie permettra sur une plateforme e-commerce par
-                      exemple de réduire le taux de rebond et donc d’accroître
-                      les ventes.
-                    </p>
-                    <p>
-                      Elle permettra finalement d’améliorer l’ensemble des
-                      points qui ont pour critère la qualité de l’expérience
-                      utilisateur (référencement dans les moteurs de recherche,
-                      expérience client, taux de conversion…).
-                    </p>
-                    <p>
-                      D’où l’importance de faire appel à une agence ou un studio
-                      de développement numérique ! Afin de confronter vos
-                      interfaces à une équipe d’experts et de recevoir du
-                      conseil et de l’accompagnement qui vous permettront de
-                      répondre au mieux aux attentes de vos clients.
-                    </p>
-                    <p>
-                      En choisissant des experts dont l’UX design est le métier,
-                      vous vous assurez qu’ils connaissent tous les processus,
-                      méthodes, outils et étapes pour faire passer votre produit
-                      au niveau supérieur.
-                    </p>
-                  </div>
-                </div>
-              </details>
-              <details
-                itemscope=""
-                itemprop="mainEntity"
-                itemtype="https://schema.org/Question"
-                id="1"
-                data-accordion=""
-              >
-                <summary itemprop="name">
-                  <h3>Qu’est-ce que le responsive design en UX&nbsp;?</h3>
-                </summary>
-                <div
-                  itemscope=""
-                  itemprop="acceptedAnswer"
-                  itemtype="https://schema.org/Answer"
-                  class="content"
-                >
-                  <div itemprop="text">
-                    <p>
-                      Le “responsive design” et de manière générale, le
-                      “responsive”est une norme de conception d’interfaces
-                      utilisateurs qui consiste à adapter automatiquement les
-                      éléments à la taille de l’écran.
-                    </p>
-                    <p>
-                      Autrement dit, que vous utilisiez votre ordinateur, votre
-                      tablette, votre écran de télévision haute résolution ou
-                      votre téléphone mobile, vous devriez toujours accéder aux
-                      produits numériques et avoir une expérience qui soit la
-                      plus optimisée possible pour chaque appareil et toutes
-                      tailles d’écrans.
-                    </p>
-                    <p>
-                      Plus qu’un objectif d’optimisation pour UX designers
-                      consciencieux, il s’agit aujourd’hui d’une obligation
-                      quasi-systématique. En effet, il est possible de retrouver
-                      des produits numériques (progiciel, application mobile,
-                      etc.) qui ne sont disponibles que sur un certain type
-                      d’appareil.
-                    </p>
-                    <p>
-                      En fonction du contexte, il faut donc favoriser un certain
-                      type d’appareil, par exemple si un produit est fait pour
-                      téléphone et peut être visionné sur PC, le produit aura
-                      une conception orientée mobile mais s’adaptera bien à un
-                      écran d’ordinateur.
-                    </p>
-                  </div>
-                </div>
-              </details>
-              <details
-                itemscope=""
-                itemprop="mainEntity"
-                itemtype="https://schema.org/Question"
-                id="2"
-                data-accordion=""
-              >
-                <summary itemprop="name">
-                  <h3>
-                    Pourquoi faire des tests en UX design&nbsp;? (et dans le
-                    développement en général)
-                  </h3>
-                </summary>
-                <div
-                  itemscope=""
-                  itemprop="acceptedAnswer"
-                  itemtype="https://schema.org/Answer"
-                  class="content"
-                >
-                  <div itemprop="text">
-                    <p>
-                      Les tests utilisateurs sont indispensables dans tous les
-                      aspects du développement informatique d’un projet web ou
-                      numérique. Ils permettent d’économiser beaucoup de temps
-                      et d’argent et de développer des produits de bien
-                      meilleure qualité.
-                    </p>
-                    <p>
-                      Le test utilisateur doit intervenir le plus rapidement
-                      possible après l’ajout d’une nouvelle feature, afin de
-                      s’assurer que l’utilisation de celle-ci respecte les
-                      piliers de l’utilisabilité et ne comporte pas de
-                      bugs.&nbsp;
-                    </p>
-                    <p>
-                      Corriger les éventuels bugs et problèmes d’expérience
-                      utilisateur le plus rapidement possible permet de
-                      continuer à construire sur des produits propres et ne pas
-                      accumuler les bugs qui pourraient coûter très cher à
-                      corriger sur des produits avancés.&nbsp;
-                    </p>
-                    <p>
-                      Il est souvent difficile pour un designer ou un
-                      développeur informatique de prendre du recul sur un
-                      produit après avoir passé des heures sur sa conception, le
-                      fait de challenger son produit en interaction avec un
-                      utilisateur réel permet d’apporter un regard nouveau et
-                      “innocent” sur un produit qui sera cohérent avec celui de
-                      l’utilisateur final.&nbsp;
-                    </p>
-                    <p>
-                      C’est grâce aux tests utilisateurs que l’on peut créer une
-                      conception centrée utilisateur qui optimise
-                      l’interactivité homme-machine, ce qui permet de mettre
-                      toutes les chances de son côté de combler les attentes des
-                      utilisateurs finaux.
-                    </p>
-                  </div>
-                </div>
-              </details>
-              <>
-                <details
-                  itemscope=""
-                  itemprop="mainEntity"
-                  itemtype="https://schema.org/Question"
-                  id="3"
-                  data-accordion=""
-                >
-                  <summary itemprop="name">
-                    <h3>
-                      Comment hiérarchiser les informations dans une
-                      application&nbsp;?
-                    </h3>
-                  </summary>
-                  <div
-                    itemscope=""
-                    itemprop="acceptedAnswer"
-                    itemtype="https://schema.org/Answer"
-                    class="content"
-                  >
-                    <div itemprop="text">
-                      <p>
-                        Pour hiérarchiser les informations dans nos
-                        applications, on utilise les principes d’architecture de
-                        l’information.
-                      </p>
-                      <p>
-                        L’architecture de l’information est la science
-                        d’organisation et de structuration du contenu, elle
-                        consiste, plus simplement, à disposer les informations
-                        de la bonne façon.
-                      </p>
-                      <p>
-                        Pour ce faire, le contenu d’un projet doit être
-                        structuré en respectant une hiérarchie logique, il
-                        existe plusieurs exemples d’organisation :
-                      </p>
-                      <p>
-                        La hiérarchie visuelle, basée sur les théories
-                        psychologiques de Gestalt : l’utilisateur accorde une
-                        importance particulière à un élément en fonction de sa
-                        taille, sa couleur, son contraste….
-                      </p>
-                      <p>
-                        La hiérarchie séquentielle : la structure correspond à
-                        un chemin suivi par l’utilisateur qui accomplit une
-                        tâche étape par étape. On peut prendre l’exemple du
-                        parcours utilisateur (aussi appelé userflow ou parfois
-                        workflow) qui est une hiérarchie séquentielle.
-                      </p>
-                      <p>
-                        La création du parcours utilisateur qui inclut toutes
-                        les étapes d’un processus est indispensable dans le
-                        cadre de la création d’applications.
-                      </p>
-                      <p>
-                        La hiérarchie matricielle : l’utilisateur choisit la
-                        façon dont le contenu est structuré, dans le cas d’un
-                        bouton de filtre par exemple.
-                      </p>
-                      <p>
-                        Il existe d’autres types de hiérarchie à prendre en
-                        compte en fonction des besoins d’un projet. Il est
-                        important de passer du temps à les définir afin de
-                        fluidifier la navigation de l’utilisateur en les
-                        organisant logiquement.
-                      </p>
-                      <p>
-                        Une bonne architecture de l’information est la clé pour
-                        offrir une expérience utilisateur unique avec une
-                        navigation dans les interfaces pratique et agréable.
-                      </p>
-                    </div>
-                  </div>
-                </details>
-              </>
-            </>
-          ))
-          .with('en', () => (
-            <>
-              <h2>What is UX design?</h2>
-              <p>
-                UX design is about{' '}
-                <strong>emphasizing a user’s positive experience</strong> of an
-                interface. This involves several parameters, from the graphic
-                design of the interface to the way{' '}
-                <strong>functionalities are thought out</strong> and include the
-                commercial strategy in line with the business objectives.{' '}
-              </p>
-              <p>
-                At BearStudio <strong>our experts</strong> are fierce when it
-                comes to UX. Whatever your digital project is,{' '}
-                <strong>the user experience</strong> is at the heart of our
-                concern. We provide you with thoughtful, fluid, easy-to-use and{' '}
-                <strong>eye-pleasing interfaces</strong> that foster your{' '}
-                <strong>business challenges.</strong>
-              </p>
-              <h3>Why focus on the user experience?</h3>
-              <p>
-                The more satisfied users are with their experience of your
-                interface, the better the performance of your website or mobile
-                application will be. This way, you will be able to adapt your
-                strategy to your users’ expectations in order to generate
-                maximum traffic on your platform. Last but not least, putting
-                yourself in the user’s shoes is a good way to tie relevant
-                interactions to their ideal spots.
-              </p>
-              <h2>Our UX design services</h2>
-              <p>
-                UX Design is expressed through several formats. Depending on
-                your context, a moodboard will be sufficient to sketch out the
-                project, whereas prior to a development phase, wireframes will
-                be essential.
-              </p>
-              <h3>Moodboard</h3>
-              <p>
-                A moodboard is a collection of images used to{' '}
-                <strong>express the chosen style</strong> for the development of
-                a creative project. Graphic designers use this tool to{' '}
-                <strong>give an idea of the mood</strong> they are trying to
-                convey regarding a concept.
-              </p>
-              <h3>Wireframes</h3>
-              <p>
-                A wireframe is a visual representation of a web page’s
-                interface. It is notably used to{' '}
-                <strong>
-                  create and arrange the components of an interface
-                </strong>
-                . Wireframes are created before any graphic model prototypes. It
-                is part of a <strong>conceptualization process</strong>.
-              </p>
-              <h3>Mockups/Prototypes</h3>
-              <p>
-                A mockup is a{' '}
-                <strong>high-fidelity static representation</strong> of the
-                application. It is established right before the latter is sent
-                for development. The designer in charge of this stage will use
-                the wireframes and the graphical charter created beforehand.{' '}
-                <strong>
-                  The client can finally visualise his future product
-                </strong>
-                .
-              </p>
-              <h3>UX Design audit</h3>
-              <p>
-                User Experience Audit is a{' '}
-                <strong>qualitative analyzis method</strong> that aims to{' '}
-                <strong>evaluate the performance</strong> of a digital service
-                from the{' '}
-                <strong>
-                  users point of view.
-                  <br />
-                </strong>
-              </p>
-              <p>
-                By analyzing the screens of your interface, the UX designer will
-                try to highlight the existence of possible{' '}
-                <strong>usability problems</strong> on any type of media.
-              </p>
-              <h3>Graphic Charter</h3>
-              <p>
-                The graphic charter contains all the rules for the use of the
-                graphic elements (logo, typography etc.) of a project. It must
-                be applied to all communication media.
-              </p>
-              <p>
-                This document enables you to maintain{' '}
-                <strong>visual consistency with your brand’s image</strong>. By
-                avoiding changing your appearance too often, you will{' '}
-                <strong>avoid any confusion</strong>.
-              </p>
-            </>
-          ))
+    <>
+      <Prose>
+        <h2>Qu'est-ce que c'est l'UX Design ?</h2>
+        <p>
+          L'UX design consiste à{' '}
+          <strong>favoriser le ressenti positif d'un utilisateur</strong>{' '}
+          face à une interface. Cela passe par plusieurs paramètres allant du design
+          graphique de l'interface jusqu'à la manière dont sont{' '}
+          <strong>pensées les fonctionnalités</strong> en passant par la stratégie
+          commerciale s'accordant à l'objectif business. Le tout devant gagner en
+          ergonomie.
+        </p>
+        <p>
+          Au BearStudio,{' '}
+          <strong>nos développeurs, graphistes et webdesigners</strong>
+          &nbsp;sont <em>féroces</em> dès qu'il s'agit d'UX. Quel que soit votre
+          projet numérique,{' '}
+          <strong>l'expérience utilisateur</strong> est au centre de nos préoccupations.
+          Nous vous proposons des{' '}
+          <strong>interfaces réfléchies</strong>, fluides, simples d'utilisation
+          et agréables pour les yeux, tout en favorisant vos{' '}
+          <strong>enjeux business.</strong>
+        </p>
+        <h3>Pourquoi s'intéresser à l'expérience utilisateur ?</h3>
+      </Prose>
+      <Prose>
+        <p>
+          Plus les utilisateurs sont satisfaits de leur expérience concernant
+          votre interface, plus les performances de votre site web ou de votre
+          application mobile augmenteront. De cette manière, vous pourrez
+          adapter votre stratégie aux besoins des utilisateurs afin de générer
+          un maximum de trafic sur votre support digital. Enfin, se mettre à la
+          place des utilisateurs est un bon moyen pour placer des opportunités
+          d'interactions à des endroits idéaux.
+        </p>
+        <h2>Nos prestations d'UX design</h2>
+        <p>
+          Le travail d'UX Design se concrétise par plusieurs formats de
+          réalisations. Selon votre contexte, un moodboard sera suffisant pour
+          pitcher sommairement le projet. Alors qu'avant une phase de
+          développement, des wireframes seront indispensables.
+        </p>
+      </Prose>
+      <div class="grid gap-6 py-4 pb-12 sm:grid-cols-2 lg:grid-cols-3">
+        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+          <h3>Moodboard</h3>
+          <>
+            <p>
+              Un moodboard est un assemblage d'images utilisé pour{' '}
+              <strong>exprimer le style choisi</strong> dans le cadre du développement
+              d'un projet créatif.
+            </p>
+            <p>
+              Les graphistes utilisent cet outil pour{' '}
+              <strong>donner une idée de l'ambiance</strong> qu'ils cherchent à reproduire
+              concernant un concept.
+            </p>
+          </>
+        </Prose>
 
-          .exhaustive()
-      }
-    </Prose>
+        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+          <h3>Wireframes</h3>
+          <>
+            <p>
+              Un wireframe est une représentation visuelle de l'interface d'une
+              page web. Il est notamment utilisé pour{' '}
+              <strong>
+                créer et disposer les composants d'une interface.
+              </strong>
+            </p>
+            <p>
+              La réalisation de wireframes s'effectue avant toute création de
+              maquette graphique. Elle s'inscrit dans une{' '}
+              <strong>démarche de conceptualisation</strong>.
+            </p>
+          </>
+        </Prose>
+        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+          <h3>Maquettes</h3>
+          <>
+            <p>
+              Une maquette est un
+              <strong>
+                {' '}
+                prototype&nbsp;statique de haute fidélité
+              </strong>{' '}
+              de l'application. Elle est établie juste avant que celle-ci ne soit
+              envoyée en développement.
+            </p>
+            <p>
+              Le designer en charge du maquettage va se servir des wireframes
+              ainsi que de la charte graphique réalisés en amont.{' '}
+              <strong>
+                Le client peut enfin visualiser son futur produit{' '}
+              </strong>
+              et en apprécier<strong> l'identité visuelle</strong>.
+            </p>
+          </>
+        </Prose>
+        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+          <h3>Audit UX Design</h3>
+          <>
+            <p>
+              L'audit d'expérience utilisateur est une{' '}
+              <strong>méthode d'analyse qualitative</strong> qui vise à{' '}
+              <strong>évaluer la performance</strong> d'un service numérique{
+                ' '
+              }
+              <strong>du point de vue des utilisateurs, </strong>grâce à des
+              <strong> tests utilisateurs.</strong>
+            </p>
+            <p>
+              En analysant les écrans de votre interface, l'UX designer va
+              chercher à mettre en évidence l'existence d'éventuels{' '}
+              <strong>problèmes d'utilisabilité</strong> et ce sur n'importe quel
+              type de support.
+            </p>
+          </>
+        </Prose>
+        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+          <h3>Charte Graphique</h3>
+          <>
+            <p>
+              La charte graphique contient l'ensemble des règles d'utilisation
+              des éléments graphiques (logo, typographie etc.) d'un projet. Elle
+              doit être appliquée sur tous les supports de communication.
+            </p>
+            <p>
+              Ce document vous permet de conserver une
+              <strong>
+                {' '}
+                cohérence visuelle vis-à-vis de votre image de marque
+              </strong>
+              . En évitant de changer trop souvent d'apparence, vous vous{' '}
+              <strong>préservez de toute confusion</strong>.
+            </p>
+          </>
+        </Prose>
+      </div>
+      <Prose>
+        <h2>Questions fréquentes sur l'UX Design</h2>
+        <p>
+          Pour répondre à toutes vos interrogations sur l'UX Design mais aussi
+          (et surtout) améliorer notre SEO…
+        </p>
+
+        <div class="flex flex-col">
+          <Accordion question="Qu'est-ce que l'ergonomie d'un site web\u00a0?">
+            <p>
+              L'ergonomie est un pilier de l'expérience utilisateur. Pour
+              améliorer l'expérience utilisateur des sites web, l'analyse de
+              l'ergonomie implique l'inspection de l'ensemble des pages du site
+              internet.
+            </p>
+            <p>
+              Commençons par une définition simple de l'ergonomie : c'est
+              l'étude et l'amélioration des interactions entre l'homme et la
+              machine.
+            </p>
+            <p>
+              Pour qu'une page soit ergonomique, elle doit respecter une bonne
+              utilisabilité qui peut se définir en 3 grands piliers :
+            </p>
+            <ul>
+              <li>
+                <strong>Efficacité :</strong> l'utilisateur doit être en mesure d'atteindre
+                l'objectif visé
+              </li>
+              <li>
+                <strong>Efficience :</strong> le but visé doit être atteint avec
+                un minimum de temps et d'efforts
+              </li>
+              <li>
+                <strong>Satisfaction :</strong> l'utilisateur doit ressentir de la
+                satisfaction pendant l'utilisation de la page, l'amélioration du
+                ressenti utilisateur apporte forcément une meilleure expérience utilisateur
+                pour celui-ci
+              </li>
+            </ul>
+            <p>
+              Pour qu'un site web soit ergonomique, il faut que ses pages
+              respectent les méthodologies UX UI design (UX pour user experience
+              et UI pour user interface) par exemple le responsive design,{' '}
+              <a
+                href="https://www.bearstudio.fr/blog/design-css/la-loi-de-proximite"
+                target="_blank"
+                rel="noopener"
+              >
+                la loi de proximité
+              </a>{' '}
+              ou encore la hiérarchie des informations, il faut aussi procéder à
+              des tests utilisateurs pour vérifier l'utilisabilité de la page.
+            </p>
+            <p>
+              L'ergonomie permettra sur une plateforme e-commerce par exemple de
+              réduire le taux de rebond et donc d'accroître les ventes.
+            </p>
+            <p>
+              Elle permettra finalement d'améliorer l'ensemble des points qui
+              ont pour critère la qualité de l'expérience utilisateur
+              (référencement dans les moteurs de recherche, expérience client,
+              taux de conversion…).
+            </p>
+            <p>
+              D'où l'importance de faire appel à une agence ou un studio de
+              développement numérique ! Afin de confronter vos interfaces à une
+              équipe d'experts et de recevoir du conseil et de l'accompagnement
+              qui vous permettront de répondre au mieux aux attentes de vos
+              clients.
+            </p>
+            <p>
+              En choisissant des experts dont l'UX design est le métier, vous
+              vous assurez qu'ils connaissent tous les processus, méthodes,
+              outils et étapes pour faire passer votre produit au niveau
+              supérieur.
+            </p>
+          </Accordion>
+
+          <Accordion question="Qu'est-ce que le responsive design en UX\u00a0?">
+            <p>
+              Le "responsive design" et de manière générale, le "responsive"est
+              une norme de conception d'interfaces utilisateurs qui consiste à
+              adapter automatiquement les éléments à la taille de l'écran.
+            </p>
+            <p>
+              Autrement dit, que vous utilisiez votre ordinateur, votre
+              tablette, votre écran de télévision haute résolution ou votre
+              téléphone mobile, vous devriez toujours accéder aux produits
+              numériques et avoir une expérience qui soit la plus optimisée
+              possible pour chaque appareil et toutes tailles d'écrans.
+            </p>
+            <p>
+              Plus qu'un objectif d'optimisation pour UX designers
+              consciencieux, il s'agit aujourd'hui d'une obligation
+              quasi-systématique. En effet, il est possible de retrouver des
+              produits numériques (progiciel, application mobile, etc.) qui ne
+              sont disponibles que sur un certain type d'appareil.
+            </p>
+            <p>
+              En fonction du contexte, il faut donc favoriser un certain type
+              d'appareil, par exemple si un produit est fait pour téléphone et
+              peut être visionné sur PC, le produit aura une conception orientée
+              mobile mais s'adaptera bien à un écran d'ordinateur.
+            </p>
+          </Accordion>
+
+          <Accordion
+            question="Pourquoi faire des tests en UX design\u00a0? (et dans le développement en général)"
+          >
+            <p>
+              Les tests utilisateurs sont indispensables dans tous les aspects
+              du développement informatique d'un projet web ou numérique. Ils
+              permettent d'économiser beaucoup de temps et d'argent et de
+              développer des produits de bien meilleure qualité.
+            </p>
+            <p>
+              Le test utilisateur doit intervenir le plus rapidement possible
+              après l'ajout d'une nouvelle feature, afin de s'assurer que
+              l'utilisation de celle-ci respecte les piliers de l'utilisabilité
+              et ne comporte pas de bugs.
+            </p>
+            <p>
+              Corriger les éventuels bugs et problèmes d'expérience utilisateur
+              le plus rapidement possible permet de continuer à construire sur
+              des produits propres et ne pas accumuler les bugs qui pourraient
+              coûter très cher à corriger sur des produits avancés.
+            </p>
+            <p>
+              Il est souvent difficile pour un designer ou un développeur
+              informatique de prendre du recul sur un produit après avoir passé
+              des heures sur sa conception, le fait de challenger son produit en
+              interaction avec un utilisateur réel permet d'apporter un regard
+              nouveau et "innocent" sur un produit qui sera cohérent avec celui
+              de l'utilisateur final.
+            </p>
+            <p>
+              C'est grâce aux tests utilisateurs que l'on peut créer une
+              conception centrée utilisateur qui optimise l'interactivité
+              homme-machine, ce qui permet de mettre toutes les chances de son
+              côté de combler les attentes des utilisateurs finaux.
+            </p>
+          </Accordion>
+
+          <Accordion
+            question="Comment hiérarchiser les informations dans une application\u00a0?"
+          >
+            <p>
+              Pour hiérarchiser les informations dans nos applications, on
+              utilise les principes d'architecture de l'information.
+            </p>
+            <p>
+              L'architecture de l'information est la science d'organisation et
+              de structuration du contenu, elle consiste, plus simplement, à
+              disposer les informations de la bonne façon.
+            </p>
+            <p>
+              Pour ce faire, le contenu d'un projet doit être structuré en
+              respectant une hiérarchie logique, il existe plusieurs exemples
+              d'organisation :
+            </p>
+            <p>
+              La hiérarchie visuelle, basée sur les théories psychologiques de
+              Gestalt : l'utilisateur accorde une importance particulière à un
+              élément en fonction de sa taille, sa couleur, son contraste….
+            </p>
+            <p>
+              La hiérarchie séquentielle : la structure correspond à un chemin
+              suivi par l'utilisateur qui accomplit une tâche étape par étape.
+              On peut prendre l'exemple du parcours utilisateur (aussi appelé
+              userflow ou parfois workflow) qui est une hiérarchie séquentielle.
+            </p>
+            <p>
+              La création du parcours utilisateur qui inclut toutes les étapes
+              d'un processus est indispensable dans le cadre de la création
+              d'applications.
+            </p>
+            <p>
+              La hiérarchie matricielle : l'utilisateur choisit la façon dont le
+              contenu est structuré, dans le cas d'un bouton de filtre par
+              exemple.
+            </p>
+            <p>
+              Il existe d'autres types de hiérarchie à prendre en compte en
+              fonction des besoins d'un projet. Il est important de passer du
+              temps à les définir afin de fluidifier la navigation de
+              l'utilisateur en les organisant logiquement.
+            </p>
+            <p>
+              Une bonne architecture de l'information est la clé pour offrir une
+              expérience utilisateur unique avec une navigation dans les
+              interfaces pratique et agréable.
+            </p>
+          </Accordion>
+        </div>
+      </Prose>
+    </>
   </Container>
 </MainLayout>

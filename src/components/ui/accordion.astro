@@ -1,0 +1,46 @@
+---
+import { PiCaretDownBold, PiCaretUpBold } from 'react-icons/pi';
+
+import Prose from '../prose.astro';
+
+interface Props {
+  id?: string;
+  question: string;
+}
+
+const { id, question } = Astro.props;
+---
+
+<details
+  itemscope=""
+  itemprop="mainEntity"
+  itemtype="https://schema.org/Question"
+  id={id}
+  data-accordion=""
+  class="group m-0 max-w-prose overflow-hidden border-b last:border-none"
+>
+  <summary
+    itemprop="name"
+    class="font-heading text-foreground flex cursor-pointer list-none items-center justify-between gap-2 py-4 text-lg font-medium text-balance transition-colors marker:hidden [&::-webkit-details-marker]:hidden"
+  >
+    {question}
+    <span class="group-open:hidden">
+      <PiCaretDownBold className="size-4" />
+    </span>
+    <span class="hidden group-open:inline"
+      ><PiCaretUpBold className="size-4" /></span
+    >
+  </summary>
+  <div
+    itemscope=""
+    itemprop="acceptedAnswer"
+    itemtype="https://schema.org/Answer"
+    class=""
+  >
+    <div itemprop="text">
+      <Prose class="prose-sm pb-6">
+        <slot />
+      </Prose>
+    </div>
+  </div>
+</details>
