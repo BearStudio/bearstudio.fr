@@ -39,6 +39,14 @@
   },
   "trust": {
     "title": "They trust us",
-    "description": "Startups, SMBs, and large organizations trust us to design and develop their digital projects."
+    "description": "Startups, SMBs, and large organizations trust us to design and develop their digital projects.",
+    "clients": {
+      "cuisinezPourBebe": "Cuisinez pour bébé helps parents prepare homemade meals for their baby, cultivating the joy of healthy and delicious eating.",
+      "docaposte": "Docaposte Agility supports businesses in their digital transformation with trusted digital solutions and agility services.",
+      "kernelBiomedical": "Kernel Biomedical designs innovative medical devices to improve patient diagnosis and treatment.",
+      "leaEnglish": "Léa English is a mobile app that helps learn English in a fun and interactive way.",
+      "trashTalk": "TrashTalk is the go-to media for basketball enthusiasts, with news, analysis and exclusive content about the NBA.",
+      "campo": "Campo is an ecosystem of mobile aviation products designed by pilots for pilots, crews, and aviation operators."
+    }
   }
 }
