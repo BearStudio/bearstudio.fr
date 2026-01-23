@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Slot } from '@radix-ui/react-slot';
+import { Slot } from 'radix-ui';
 import { PiCaretRight, PiDotsThree, PiHouseDuotone } from 'react-icons/pi';
 
 import { getLink } from '@/lib/link';
@@ -42,7 +42,7 @@ function BreadcrumbLink({
 }: React.ComponentProps<'a'> & {
   asChild?: boolean;
 }) {
-  const Comp = asChild ? Slot : 'a';
+  const Comp = asChild ? Slot.Slot : 'a';
 
   return (
     <Comp

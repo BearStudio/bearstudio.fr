@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
+import { DropdownMenu as DropdownMenuPrimitive } from 'radix-ui';
 import { PiCaretRight, PiCheck, PiCircle } from 'react-icons/pi';
 
 import { cn } from '@/lib/tailwind/utils';
