@@ -17,6 +17,7 @@ import { PeopleCarousel } from '@/components/people/people-carousel';
 import { PersonCardMore } from '@/components/people/person-card-more';
 import { Polaroid } from '@/components/polaroids/polaroid';
 import { PolaroidsCarousel } from '@/components/polaroids/polaroids-carousel';
+import Prose from '@/components/prose.astro';
 import SectionScratched from '@/components/sections/section-scratched.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
@@ -450,9 +451,11 @@ const latestPosts = await Promise.all(
         </PersonCardMore>
       </PeopleCarousel>
     </div>
+  </Container>
 
-    {
-      !!latestPosts.length && (
+  {
+    !!latestPosts.length && (
+      <Container class="gap-12 pt-6">
         <div class="flex flex-col gap-4">
           <div class="flex flex-col gap-1">
             <h2 class="font-heading text-2xl font-bold text-balance">
@@ -470,7 +473,114 @@ const latestPosts = await Promise.all(
             </PostCardMore>
           </PostsCarousel>
         </div>
-      )
-    }
+      </Container>
+    )
+  }
+  <Container class="gap-4 py-12 sm:flex-row sm:gap-8">
+    <div class="flex flex-1 flex-col gap-2">
+      <h2 class="font-heading text-2xl font-bold text-balance md:max-w-[20ch]">
+        Travailler avec le bearstudio
+      </h2>
+      <p class="max-w-[70ch] text-sm text-balance">
+        Tout un panel d’offres pour assurer le développement de votre projet
+        numérique.
+      </p>
+      <div class="flex flex-col gap-2">
+        <p>
+          <a href="tel:+33749360436" class="font-medium">
+            +33 (0)7 49 36 04 36
+          </a>
+        </p>
+        <ContactFormDrawer
+          client:load
+          className="w-fit cursor-pointer"
+          locale={locale}
+        >
+          <span class={buttonVariants({ size: 'lg' })}>
+            {t('home.contact.cta')}
+          </span>
+        </ContactFormDrawer>
+      </div>
+    </div>
+    <div class="grid flex-2 gap-6 py-4 pb-12 lg:grid-cols-2">
+      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+        <h3>
+          <a
+            href={getLink('/fr/prestations/ux-design', locale, {})}
+            class="text-foreground! no-underline hover:underline"
+            >Design de vos applications</a
+          >
+        </h3>
+        <>
+          <p>
+            Nous concevons des <strong
+              >interfaces utilisateur modernes et intuitives</strong
+            >{' '}
+            qui placent l'expérience utilisateur au coeur de chaque projet.
+          </p>
+          <p>
+            Notre approche UX/UI garantit des applications{' '}
+            <strong>esthétiques, accessibles et ergonomiques</strong> pour maximiser
+            l'engagement de vos utilisateurs.
+          </p>
+        </>
+      </Prose>
+      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+        <h3>
+          <a
+            href={getLink('/fr/prestations/ux-design', locale, {})}
+            class="text-foreground! no-underline hover:underline"
+            >Développement d'application web et mobile</a
+          >
+        </h3>
+        <>
+          <p>
+            Nous développons des <strong
+              >applications performantes et évolutives</strong
+            >{' '}
+            en utilisant les technologies les plus adaptées à vos besoins.
+          </p>
+          <p>
+            Du web au mobile, nous créons des solutions{' '}
+            <strong>robustes et maintenables</strong> qui accompagnent la croissance
+            de votre activité.
+          </p>
+        </>
+      </Prose>
+      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+        <h3>
+          <a
+            href={getLink('/fr/prestations/ux-design', locale, {})}
+            class="text-foreground! no-underline hover:underline"
+            >Booster vos projets</a
+          >
+        </h3>
+        <>
+          <p>
+            Nous intervenons en <strong>renfort de vos équipes</strong> pour accélérer
+            vos développements et apporter notre expertise technique.
+          </p>
+          <p>
+            Notre accompagnement flexible permet de{' '}
+            <strong>débloquer vos projets</strong> et d'atteindre vos objectifs dans
+            les meilleurs délais.
+          </p>
+        </>
+      </Prose>
+      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+        <h3>AI Ready</h3>
+        <>
+          <p>
+            Nous intégrons l'<strong>intelligence artificielle</strong> dans vos
+            applications pour automatiser et optimiser vos processus métier.
+          </p>
+          <p>
+            Notre expertise IA vous permet de{' '}
+            <strong>tirer parti des dernières avancées</strong> technologiques pour
+            rester compétitif.
+          </p>
+        </>
+      </Prose>
+    </div>
   </Container>
 </MainLayout>
