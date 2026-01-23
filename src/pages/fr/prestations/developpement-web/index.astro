@@ -1,0 +1,46 @@
+---
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import Container from '@/components/container.astro';
+import HeroContent from '@/components/hero/hero-content.astro';
+import Hero from '@/components/hero/hero.astro';
+import Prose from '@/components/prose.astro';
+import SEO from '@/components/seo/index.astro';
+import { getAlternates } from '@/components/seo/utils';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
+import MainLayout from '@/layouts/main-layout.astro';
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
+
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    label: t('services.root.breadcrumb'),
+    path: '/fr/prestations',
+    params: {},
+  }),
+  entry({
+    label: t('services.webDevelopment.breadcrumb'),
+    path: '/fr/prestations/developpement-web',
+    params: {},
+  }),
+]);
+---
+
+<MainLayout>
+  <SEO
+    slot="seo"
+    alternates={getAlternates('/fr/prestations/developpement-web', {})}
+    breadcrumb={breadcrumb}
+  />
+
+  <Hero>
+    <HeroContent
+      breadcrumb={breadcrumb}
+      title={t('services.webDevelopment.title')}
+      description={t('services.webDevelopment.description')}
+    />
+  </Hero>
+  <Container>
+    <Prose> TODO </Prose>
+  </Container>
+</MainLayout>

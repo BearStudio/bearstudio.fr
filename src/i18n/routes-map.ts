@@ -9,6 +9,12 @@ export const ROUTE_MAPPINGS = {
   '/fr': { en: '/en' },
   '/fr/prestations': { en: '/en/services' },
   '/fr/prestations/ux-design': { en: '/en/services/ux-design' },
+  '/fr/prestations/developpement-web': { en: '/en/services/web-development' },
+  '/fr/prestations/developpement-mobile': {
+    en: '/en/services/mobile-development',
+  },
+  '/fr/prestations/boost-projet': { en: '/en/services/project-boost' },
+  '/fr/prestations/accompagnement-cto': { en: '/en/services/cto-support' },
   '/fr/equipe': { en: '/en/team' },
   '/fr/equipe/:id': { en: '/en/team/:id' },
   '/fr/contact': { en: '/en/contact' },

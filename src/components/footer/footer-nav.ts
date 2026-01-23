@@ -21,6 +21,25 @@ const FOOTER_NAV: Array<NavItem> = [
     i18nKey: 'services.uxDesign.breadcrumb',
   },
   {
+    getHref: (locale) =>
+      getLink('/fr/prestations/developpement-web', locale, {}),
+    i18nKey: 'services.webDevelopment.breadcrumb',
+  },
+  {
+    getHref: (locale) =>
+      getLink('/fr/prestations/developpement-mobile', locale, {}),
+    i18nKey: 'services.mobileDevelopment.breadcrumb',
+  },
+  {
+    getHref: (locale) => getLink('/fr/prestations/boost-projet', locale, {}),
+    i18nKey: 'services.projectBoost.breadcrumb',
+  },
+  {
+    getHref: (locale) =>
+      getLink('/fr/prestations/accompagnement-cto', locale, {}),
+    i18nKey: 'services.ctoSupport.breadcrumb',
+  },
+  {
     getHref: (locale) => getLink('/fr/equipe', locale, {}),
     i18nKey: 'common.nav.team',
   },

@@ -45,5 +45,25 @@
     "breadcrumb": "UX/UI Design",
     "title": "UX/UI Design",
     "description": "Conception d'expériences utilisateur intuitives et performantes, centrées sur vos objectifs business et les besoins de vos utilisateurs."
+  },
+  "webDevelopment": {
+    "breadcrumb": "Développement Web",
+    "title": "Développement Web",
+    "description": "Nous développons des applications web performantes et évolutives en utilisant les technologies les plus adaptées à vos besoins."
+  },
+  "mobileDevelopment": {
+    "breadcrumb": "Développement Mobile",
+    "title": "Développement Mobile",
+    "description": "Nous développons des applications iOS et Android performantes et intuitives avec React Native pour offrir la meilleure expérience utilisateur sur mobile."
+  },
+  "projectBoost": {
+    "breadcrumb": "Boost Projet",
+    "title": "Boost Projet",
+    "description": "Nous intervenons en renfort de vos équipes pour accélérer vos développements et débloquer les situations complexes."
+  },
+  "ctoSupport": {
+    "breadcrumb": "Accompagnement CTO",
+    "title": "Accompagnement CTO",
+    "description": "Nous vous accompagnons dans vos décisions techniques, la structuration de votre équipe et la mise en place de bonnes pratiques."
   }
 }

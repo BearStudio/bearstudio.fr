@@ -23,7 +23,11 @@ const ROUTES_CONFIG = {
     },
     "legal-notice": {},
     "services": {
-      "ux-design": {}
+      "cto-support": {},
+      "mobile-development": {},
+      "project-boost": {},
+      "ux-design": {},
+      "web-development": {}
     },
     "team": {
       ":id": {}
@@ -50,6 +54,10 @@ const ROUTES_CONFIG = {
     },
     "mentions-legales": {},
     "prestations": {
+      "accompagnement-cto": {},
+      "boost-projet": {},
+      "developpement-mobile": {},
+      "developpement-web": {},
       "ux-design": {}
     }
   },
