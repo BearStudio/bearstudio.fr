@@ -1,6 +1,6 @@
 ---
 name: 'David Endico'
-picture: './david-endico.jpg'
+picture: './david.png'
 job: 'CoFounder & UI/UX Manager'
 socials:
   - type: 'x'
