@@ -1,6 +1,6 @@
 ---
 name: 'Zouhair Mkassmi'
-picture: './zouhair.jpg'
+picture: './zouhair.png'
 job: 'Back-End Developer'
 socials:
   - type: 'x'
