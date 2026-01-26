@@ -583,4 +583,92 @@ const latestPosts = await Promise.all(
       </Prose>
     </div>
   </Container>
+
+  <SectionScratched>
+    <Container class="gap-12 py-16">
+      <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-4">
+          <h2 class="font-heading text-2xl font-bold text-balance">
+            {t('home.values.title')}
+          </h2>
+          <p class="max-w-[70ch] text-sm text-balance">
+            {t('home.values.intro')}
+          </p>
+        </div>
+
+        <div class="grid flex-2 gap-6 py-4 pb-12 lg:grid-cols-2">
+          <div class="flex flex-col gap-4">
+            <h3
+              class="font-heading text-lg leading-tight font-bold text-balance"
+            >
+              {t('home.values.support.title')}
+            </h3>
+            <p class="max-w-[70ch] text-sm text-balance italic">
+              {t('home.values.support.description')}
+            </p>
+            <p
+              class="font-handwritten text-2xl md:text-3xl"
+              aria-label={t('home.values.support.hashtag')}
+            >
+              {t('home.values.support.hashtag')}
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h3
+              class="font-heading text-lg leading-tight font-bold text-balance"
+            >
+              {t('home.values.quality.title')}
+            </h3>
+            <p class="max-w-[70ch] text-sm text-balance italic">
+              {t('home.values.quality.description')}
+            </p>
+            <p
+              class="font-handwritten text-2xl md:text-3xl"
+              aria-label={t('home.values.quality.hashtag')}
+            >
+              {t('home.values.quality.hashtag')}
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h3
+              class="font-heading text-lg leading-tight font-bold text-balance"
+            >
+              {t('home.values.team.title')}
+            </h3>
+            <p class="max-w-[70ch] text-sm text-balance italic">
+              {t('home.values.team.description')}
+            </p>
+            <p class="max-w-[70ch] text-sm text-balance italic">
+              {t('home.values.team.location')}
+            </p>
+            <p
+              class="font-handwritten text-2xl md:text-3xl"
+              aria-label={t('home.values.team.hashtag')}
+            >
+              {t('home.values.team.hashtag')}
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h3
+              class="font-heading text-lg leading-tight font-bold text-balance"
+            >
+              {t('home.values.conviviality.title')}
+            </h3>
+            <p class="max-w-[70ch] text-sm text-balance italic">
+              {t('home.values.conviviality.description')}
+            </p>
+            <p
+              class="font-handwritten text-2xl md:text-3xl"
+              aria-label={t('home.values.conviviality.hashtag')}
+            >
+              {t('home.values.conviviality.hashtag')}
+            </p>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </SectionScratched>
 </MainLayout>

@@ -48,5 +48,30 @@
       "trashTalk": "TrashTalk est le média de référence pour les passionnés de basket, avec actualités, analyses et contenus exclusifs sur la NBA.",
       "campo": "Campo est un écosystème de produits aéronautiques mobiles conçus par des pilotes pour des pilotes, équipages et opérateurs aéronautiques."
     }
+  },
+  "values": {
+    "title": "Accompagner les porteurs de projets",
+    "intro": "Sur la plupart des sites, les valeurs sont affichées pour faire « bien »... Mais pour nous, c'est vraiment important ! Nous savons que c'est cliché de dire cela, mais nous n'allons pas nous abstenir d'être sincères parce qu'il y a beaucoup de bullshit sur d'autres sites...",
+    "support": {
+      "title": "Un studio d'accompagnement proche de vos idées",
+      "description": "Sans confiance, aucune initiative ne peut aboutir. C'est pourquoi nous travaillons à échelle humaine et en toute transparence.",
+      "hashtag": "#BuildTogether"
+    },
+    "quality": {
+      "title": "Des développements qui privilégient la qualité",
+      "description": "Notre objectif est de vous fournir une solution efficace pour tester ou conquérir votre marché. Nous mettons l'accent sur la qualité de nos services d'accompagnement et de développement afin de permettre à votre projet de se réaliser avec succès.",
+      "hashtag": "#NoBullshit"
+    },
+    "team": {
+      "title": "Une équipe de développeurs agile et réactive",
+      "description": "Nous appliquons VRAIMENT l'agilité. Nous sommes à l'écoute de vos besoins et développons des solutions sur-mesure adaptés à votre projet numérique. Vous serez en contact permanent avec nos développeurs pour permettre d'avancer efficacement sur votre besoin.",
+      "location": "Notre studio est basé en France, mais où que vous soyez, si vous souhaitez que nous nous intégrions à votre équipe, nous pouvons nous déplacer n'importe où dans le monde.",
+      "hashtag": "#MakeItHappen"
+    },
+    "conviviality": {
+      "title": "Convivialité",
+      "description": "Il fait bon travailler au BearStudio : nous formons une équipe complémentaire qui met sa bonne humeur au service de vos projets !",
+      "hashtag": "#TrollInside"
+    }
   }
 }

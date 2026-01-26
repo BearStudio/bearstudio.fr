@@ -48,5 +48,30 @@
       "trashTalk": "TrashTalk is the go-to media for basketball enthusiasts, with news, analysis and exclusive content about the NBA.",
       "campo": "Campo is an ecosystem of mobile aviation products designed by pilots for pilots, crews, and aviation operators."
     }
+  },
+  "values": {
+    "title": "Supporting project founders",
+    "intro": "On most websites, values are displayed to look \"good\"... But for us, it's truly important! We know it's cliché to say this, but we won't refrain from being sincere just because there's a lot of bullshit on other sites...",
+    "support": {
+      "title": "A support studio close to your ideas",
+      "description": "Without trust, no initiative can succeed. That's why we work on a human scale and with complete transparency.",
+      "hashtag": "#BuildTogether"
+    },
+    "quality": {
+      "title": "Developments that prioritize quality",
+      "description": "Our goal is to provide you with an effective solution to test or conquer your market. We emphasize the quality of our support and development services to enable your project to succeed.",
+      "hashtag": "#NoBullshit"
+    },
+    "team": {
+      "title": "An agile and responsive team of developers",
+      "description": "We REALLY apply agility. We listen to your needs and develop custom solutions tailored to your digital project. You'll be in constant contact with our developers to move forward efficiently on your needs.",
+      "location": "Our studio is based in France, but wherever you are, if you want us to integrate with your team, we can travel anywhere in the world.",
+      "hashtag": "#MakeItHappen"
+    },
+    "conviviality": {
+      "title": "Conviviality",
+      "description": "It's great to work at BearStudio: we form a complementary team that puts its good mood at the service of your projects!",
+      "hashtag": "#TrollInside"
+    }
   }
 }
