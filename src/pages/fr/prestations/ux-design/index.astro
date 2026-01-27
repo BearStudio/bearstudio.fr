@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
@@ -9,6 +11,12 @@ import { getAlternates } from '@/components/seo/utils';
 import Accordion from '@/components/ui/accordion.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
+
+import imgAuditUx from './_audit-ux.jpg';
+import imgBranding from './_branding.jpg';
+import imgDesignSystem from './_design-system.jpg';
+import imgMoodboard from './_moodboard.jpg';
+import imgWireframes from './_wireframes.jpg';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
@@ -86,23 +94,17 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       </Prose>
       <div class="grid gap-6 py-4 pb-12 sm:grid-cols-2 lg:grid-cols-3">
         <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-          <h3>Moodboard & Direction Artistique</h3>
-          <>
-            <p>
-              Le moodboard définit l'<strong>identité visuelle</strong> de votre
-              projet à travers un assemblage d'images, couleurs et typographies qui{
-                ' '
-              }
-              <strong>expriment l'univers graphique</strong> souhaité.
-            </p>
-            <p>
-              Cette étape créative permet d'<strong>aligner la vision</strong> entre
-              votre équipe et nos designers avant de passer au maquettage.
-            </p>
-          </>
-        </Prose>
-
-        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+          <div
+            class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border"
+          >
+            <Image
+              src={imgWireframes}
+              width={640}
+              height={360}
+              alt=""
+              class="m-auto!"
+            />
+          </div>
           <h3>Wireframes & Prototypage</h3>
           <>
             <p>
@@ -121,6 +123,17 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
           </>
         </Prose>
         <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+          <div
+            class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border"
+          >
+            <Image
+              src={imgDesignSystem}
+              width={640}
+              height={360}
+              alt=""
+              class="m-auto!"
+            />
+          </div>
           <h3>Maquettes UI & Design System</h3>
           <>
             <p>
@@ -136,6 +149,17 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
           </>
         </Prose>
         <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+          <div
+            class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border"
+          >
+            <Image
+              src={imgAuditUx}
+              width={640}
+              height={360}
+              alt=""
+              class="m-auto!"
+            />
+          </div>
           <h3>Audit UX & Tests Utilisateurs</h3>
           <>
             <p>
@@ -150,6 +174,44 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
           </>
         </Prose>
         <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+          <div
+            class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border"
+          >
+            <Image
+              src={imgMoodboard}
+              width={640}
+              height={360}
+              alt=""
+              class="m-auto!"
+            />
+          </div>
+          <h3>Moodboard & Direction Artistique</h3>
+          <>
+            <p>
+              Le moodboard définit l'<strong>identité visuelle</strong> de votre
+              projet à travers un assemblage d'images, couleurs et typographies qui{
+                ' '
+              }
+              <strong>expriment l'univers graphique</strong> souhaité.
+            </p>
+            <p>
+              Cette étape créative permet d'<strong>aligner la vision</strong> entre
+              votre équipe et nos designers avant de passer au maquettage.
+            </p>
+          </>
+        </Prose>
+        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+          <div
+            class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border"
+          >
+            <Image
+              src={imgBranding}
+              width={640}
+              height={360}
+              alt=""
+              class="m-auto!"
+            />
+          </div>
           <h3>Charte Graphique & Branding</h3>
           <>
             <p>
@@ -162,20 +224,6 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
                 ' '
               }
               sur tous vos supports digitaux et print pour renforcer votre image.
-            </p>
-          </>
-        </Prose>
-        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-          <h3>Recherche Utilisateur</h3>
-          <>
-            <p>
-              Nos <strong>études UX</strong> (interviews, personas, user journey)
-              vous aident à comprendre les besoins réels de vos utilisateurs et à
-              <strong>prioriser les fonctionnalités</strong>.
-            </p>
-            <p>
-              Une approche <strong>data-driven</strong> qui réduit les risques et
-              maximise l'adoption de votre produit.
             </p>
           </>
         </Prose>
