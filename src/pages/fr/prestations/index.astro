@@ -17,6 +17,7 @@ import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
 import photoGroup from './_group.jpg';
+import imgUx from './ux-design/_bg.jpg';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
@@ -74,25 +75,22 @@ const peopleCurrent = await Promise.all(
         href={getLink('/fr/prestations/ux-design', locale, {})}
         title={t('services.root.uxDesign.title')}
         description={t('services.root.uxDesign.description')}
-        skills={['figma', 'ux']}
+        image={imgUx}
       />
       <ServiceCard
         href={getLink('/fr/prestations/developpement-web', locale, {})}
         title={t('services.root.webDevelopment.title')}
         description={t('services.root.webDevelopment.description')}
-        skills={['react', 'tailwind', 'start-ui']}
       />
       <ServiceCard
         href={getLink('/fr/prestations/developpement-mobile', locale, {})}
         title={t('services.root.mobileDevelopment.title')}
         description={t('services.root.mobileDevelopment.description')}
-        skills={['react-native', 'expo', 'start-ui']}
       />
       <ServiceCard
         href={getLink('/fr/prestations/boost-projet', locale, {})}
         title={t('services.root.projectBoost.title')}
         description={t('services.root.projectBoost.description')}
-        skills={['start-ui']}
       />
       <ServiceCard
         href={getLink('/fr/prestations/accompagnement-cto', locale, {})}

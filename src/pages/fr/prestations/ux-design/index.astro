@@ -1,5 +1,8 @@
 ---
 import { Image } from 'astro:assets';
+import { getEntry } from 'astro:content';
+
+import { isNonNullish } from 'remeda';
 
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
@@ -13,6 +16,7 @@ import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
 import imgAuditUx from './_audit-ux.jpg';
+import imgBg from './_bg.jpg';
 import imgBranding from './_branding.jpg';
 import imgDesignSystem from './_design-system.jpg';
 import imgMoodboard from './_moodboard.jpg';
@@ -20,6 +24,22 @@ import imgWireframes from './_wireframes.jpg';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
+
+const UX_SKILLS = ['ux', 'figma', 'design-system', 'wireframes', 'prototype'];
+
+const skills = (
+  await Promise.all(
+    UX_SKILLS.map(async (skillName) => {
+      const skill = await getEntry('skills', `${skillName}/${locale}`);
+      if (!skill) return null;
+      const icon = await getEntry(skill.data.icon);
+      return {
+        ...skill,
+        icon,
+      };
+    })
+  )
+).filter((skill) => isNonNullish(skill));
 
 const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({
@@ -42,7 +62,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     breadcrumb={breadcrumb}
   />
 
-  <Hero>
+  <Hero image={imgBg}>
     <HeroContent
       breadcrumb={breadcrumb}
       title={t('services.uxDesign.title')}
@@ -50,7 +70,29 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     />
   </Hero>
   <Container>
-    <>
+    <div class="flex flex-col gap-8 sm:flex-row-reverse">
+      <div class="flex flex-none flex-col gap-2 sm:w-[300px] sm:py-4">
+        <h4 class="font-heading font-medium">Skills</h4>
+        <div class="flex flex-wrap gap-2">
+          {
+            skills.map((skill) => (
+              <div class="flex w-fit items-center gap-0 rounded-full border bg-neutral-100 px-1.5 py-1 text-sm">
+                {!!skill.icon && (
+                  <Image
+                    src={skill.icon.data.image}
+                    alt={skill.icon.data.name}
+                    width={32}
+                    height={32}
+                    class="-my-1 size-6"
+                  />
+                )}
+                <span class="px-1.5">{skill.data.name}</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
       <Prose>
         <h2>Qu'est-ce que l'UX Design ?</h2>
         <p>
@@ -72,8 +114,6 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
           <strong> interfaces engageantes</strong>.
         </p>
         <h3>Pourquoi investir dans l'UX Design ?</h3>
-      </Prose>
-      <Prose>
         <p>
           Un <strong>bon design UX</strong> impacte directement vos indicateurs business
           :
@@ -83,374 +123,366 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
           votre site et favorisent l'engagement. Investir dans l'UX, c'est
           investir dans la <strong>croissance de votre entreprise</strong>.
         </p>
-        <h2>Nos prestations UX/UI Design</h2>
-        <p>
-          Notre <strong>studio de design</strong> propose un accompagnement complet,
-          du cadrage stratégique jusqu'au design system. Que vous ayez besoin d'un
-          <strong> audit UX</strong>, de <strong>wireframes</strong> ou de{' '}
-          <strong>maquettes haute fidélité</strong>, nous adaptons notre
-          méthodologie à votre projet et votre budget.
-        </p>
       </Prose>
-      <div class="grid gap-6 py-4 pb-12 sm:grid-cols-2 lg:grid-cols-3">
-        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-          <div
-            class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border"
-          >
-            <Image
-              src={imgWireframes}
-              width={640}
-              height={360}
-              alt=""
-              class="m-auto!"
-            />
-          </div>
-          <h3>Wireframes & Prototypage</h3>
-          <>
-            <p>
-              Les wireframes sont des <strong>maquettes fonctionnelles</strong>{
-                ' '
-              }
-              qui définissent la structure et l'<strong
-                >architecture de l'information</strong
-              >{' '}
-              de chaque écran avant le design visuel.
-            </p>
-            <p>
-              Cette phase de <strong>prototypage rapide</strong> permet de valider
-              les parcours utilisateurs et d'itérer efficacement sur l'ergonomie.
-            </p>
-          </>
-        </Prose>
-        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-          <div
-            class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border"
-          >
-            <Image
-              src={imgDesignSystem}
-              width={640}
-              height={360}
-              alt=""
-              class="m-auto!"
-            />
-          </div>
-          <h3>Maquettes UI & Design System</h3>
-          <>
-            <p>
-              Nos <strong>maquettes haute fidélité</strong> sous Figma représentent
-              le rendu final de votre application, prêtes pour le développement avec
-              tous les <strong>composants UI</strong> spécifiés.
-            </p>
-            <p>
-              Nous créons des <strong>design systems</strong> réutilisables qui garantissent
-              cohérence visuelle et <strong>scalabilité</strong> de votre produit
-              digital.
-            </p>
-          </>
-        </Prose>
-        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-          <div
-            class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border"
-          >
-            <Image
-              src={imgAuditUx}
-              width={640}
-              height={360}
-              alt=""
-              class="m-auto!"
-            />
-          </div>
-          <h3>Audit UX & Tests Utilisateurs</h3>
-          <>
-            <p>
-              Notre <strong>audit ergonomique</strong> identifie les points de friction
-              de votre interface grâce à une analyse experte et des{' '}
-              <strong>tests utilisateurs</strong> qualitatifs.
-            </p>
-            <p>
-              Nous délivrons des <strong>recommandations actionnables</strong> pour
-              améliorer la conversion, l'accessibilité et la satisfaction utilisateur.
-            </p>
-          </>
-        </Prose>
-        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-          <div
-            class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border"
-          >
-            <Image
-              src={imgMoodboard}
-              width={640}
-              height={360}
-              alt=""
-              class="m-auto!"
-            />
-          </div>
-          <h3>Moodboard & Direction Artistique</h3>
-          <>
-            <p>
-              Le moodboard définit l'<strong>identité visuelle</strong> de votre
-              projet à travers un assemblage d'images, couleurs et typographies qui{
-                ' '
-              }
-              <strong>expriment l'univers graphique</strong> souhaité.
-            </p>
-            <p>
-              Cette étape créative permet d'<strong>aligner la vision</strong> entre
-              votre équipe et nos designers avant de passer au maquettage.
-            </p>
-          </>
-        </Prose>
-        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-          <div
-            class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border"
-          >
-            <Image
-              src={imgBranding}
-              width={640}
-              height={360}
-              alt=""
-              class="m-auto!"
-            />
-          </div>
-          <h3>Charte Graphique & Branding</h3>
-          <>
-            <p>
-              La <strong>charte graphique</strong> formalise les règles d'utilisation
-              de votre identité visuelle : logo, typographies, palette de couleurs
-              et iconographie.
-            </p>
-            <p>
-              Ce guide de style assure une <strong>cohérence de marque</strong>{
-                ' '
-              }
-              sur tous vos supports digitaux et print pour renforcer votre image.
-            </p>
-          </>
-        </Prose>
-      </div>
-      <Prose>
-        <h2>Questions fréquentes sur l'UX Design</h2>
-        <p>
-          Retrouvez les réponses aux questions les plus courantes sur le{' '}
-          <strong>design d'expérience utilisateur</strong>, nos méthodologies et
-          bonnes pratiques en UX/UI design.
-        </p>
-
-        <div class="flex flex-col">
-          <Accordion
-            question="Quelle est la différence entre UX Design et UI Design\u00a0?"
-          >
-            <p>
-              L'<strong>UX Design</strong> (User Experience) se concentre sur l'expérience
-              globale de l'utilisateur : parcours, ergonomie, facilité d'utilisation
-              et satisfaction. L'<strong>UI Design</strong> (User Interface) concerne
-              l'aspect visuel : couleurs, typographies, icônes et animations.
-            </p>
-            <p>
-              Ces deux disciplines sont complémentaires. Un bon produit digital
-              nécessite à la fois une UX réfléchie (l'utilisateur trouve
-              facilement ce qu'il cherche) et une UI soignée (l'interface est
-              esthétique et cohérente avec la marque).
-            </p>
-            <p>
-              Chez BearStudio, nos designers maîtrisent les deux aspects pour
-              créer des interfaces qui sont à la fois <strong
-                >belles et fonctionnelles</strong
-              >.
-            </p>
-          </Accordion>
-
-          <Accordion
-            question="Quels outils utilisez-vous pour le design UX/UI\u00a0?"
-          >
-            <p>
-              Notre stack design s'articule autour d'outils collaboratifs et
-              performants :
-            </p>
-            <ul>
-              <li>
-                <strong>Figma :</strong> notre outil principal pour les wireframes,
-                maquettes et prototypes interactifs
-              </li>
-              <li>
-                <strong>FigJam :</strong> pour les ateliers collaboratifs et le brainstorming
-              </li>
-              <li>
-                <strong>Maze / Hotjar :</strong> pour les tests utilisateurs et l'analyse
-                comportementale
-              </li>
-              <li>
-                <strong>Notion :</strong> pour la documentation et le suivi projet
-              </li>
-            </ul>
-            <p>
-              Tous nos livrables sont partagés en temps réel, vous permettant de
-              suivre l'avancement et de commenter directement sur les maquettes.
-            </p>
-          </Accordion>
-
-          <Accordion
-            question="Comment se déroule un projet UX Design chez BearStudio\u00a0?"
-          >
-            <p>Notre méthodologie UX suit un processus éprouvé en 5 étapes :</p>
-            <ul>
-              <li>
-                <strong>1. Discovery :</strong> compréhension de vos objectifs, analyse
-                concurrentielle et définition des personas
-              </li>
-              <li>
-                <strong>2. Architecture :</strong> arborescence, user flows et architecture
-                de l'information
-              </li>
-              <li>
-                <strong>3. Wireframing :</strong> maquettes fonctionnelles pour valider
-                les parcours
-              </li>
-              <li>
-                <strong>4. UI Design :</strong> création de l'identité visuelle et
-                des maquettes haute fidélité
-              </li>
-              <li>
-                <strong>5. Prototypage :</strong> prototype interactif pour les tests
-                et la validation finale
-              </li>
-            </ul>
-            <p>
-              Chaque étape inclut des <strong>points de validation</strong> pour
-              garantir l'alignement avec votre vision. La durée moyenne d'un projet
-              complet est de 4 à 8 semaines.
-            </p>
-          </Accordion>
-
-          <Accordion
-            question="Pourquoi faire un audit UX de mon site ou application\u00a0?"
-          >
-            <p>
-              Un <strong>audit UX</strong> permet d'identifier les freins à la conversion
-              et les points de friction qui nuisent à l'expérience utilisateur. C'est
-              particulièrement pertinent si vous constatez :
-            </p>
-            <ul>
-              <li>
-                Un <strong>taux de rebond élevé</strong> sur certaines pages
-              </li>
-              <li>
-                Un <strong>taux de conversion faible</strong> malgré un bon trafic
-              </li>
-              <li>Des <strong>retours négatifs</strong> de vos utilisateurs</li>
-              <li>Une <strong>augmentation des demandes au support</strong></li>
-            </ul>
-            <p>
-              Notre audit combine analyse heuristique, tests utilisateurs et
-              analyse des données pour vous fournir un <strong
-                >plan d'action priorisé</strong
-              >{' '}
-              avec un impact mesurable sur vos KPIs.
-            </p>
-          </Accordion>
-
-          <Accordion
-            question="Qu'est-ce qu'un design system et pourquoi en créer un\u00a0?"
-          >
-            <p>
-              Un <strong>design system</strong> est une bibliothèque de composants
-              UI réutilisables (boutons, formulaires, cartes, etc.) accompagnée de
-              règles d'usage. Il garantit la <strong>cohérence visuelle</strong>
-              de votre produit et accélère considérablement le développement.
-            </p>
-            <p>Les bénéfices d'un design system sont multiples :</p>
-            <ul>
-              <li>
-                <strong>Cohérence :</strong> une expérience uniforme sur toutes les
-                pages
-              </li>
-              <li>
-                <strong>Rapidité :</strong> les développeurs réutilisent des composants
-                prêts à l'emploi
-              </li>
-              <li>
-                <strong>Scalabilité :</strong> facilite l'ajout de nouvelles fonctionnalités
-              </li>
-              <li>
-                <strong>Maintenance :</strong> un changement se propage automatiquement
-                partout
-              </li>
-            </ul>
-            <p>
-              Nous créons des design systems sous Figma parfaitement
-              synchronisés avec le code, notamment grâce à notre stack React et
-              Tailwind CSS.
-            </p>
-          </Accordion>
-
-          <Accordion
-            question="Comment l'UX Design améliore-t-il le référencement SEO\u00a0?"
-          >
-            <p>
-              Google intègre désormais l'<strong>expérience utilisateur</strong>
-              dans ses critères de classement via les <strong
-                >Core Web Vitals</strong
-              >. Une bonne UX impacte directement votre SEO :
-            </p>
-            <ul>
-              <li>
-                <strong>Temps de chargement :</strong> des interfaces optimisées
-                chargent plus vite
-              </li>
-              <li>
-                <strong>Taux de rebond :</strong> une UX soignée retient les visiteurs
-                plus longtemps
-              </li>
-              <li>
-                <strong>Mobile-first :</strong> un design responsive est indispensable
-                pour le SEO mobile
-              </li>
-              <li>
-                <strong>Accessibilité :</strong> les bonnes pratiques UX améliorent
-                l'accessibilité, valorisée par Google
-              </li>
-            </ul>
-            <p>
-              Investir dans l'UX, c'est donc aussi investir dans votre{' '}
-              <strong>visibilité sur les moteurs de recherche</strong>.
-            </p>
-          </Accordion>
-
-          <Accordion
-            question="Travaillez-vous avec des startups et des projets early-stage\u00a0?"
-          >
-            <p>
-              Absolument ! Nous accompagnons régulièrement des <strong
-                >startups</strong
-              >{' '}
-              dans la conception de leur MVP (Minimum Viable Product). Notre approche
-              lean permet de :
-            </p>
-            <ul>
-              <li>
-                <strong>Valider rapidement</strong> vos hypothèses avec des prototypes
-                testables
-              </li>
-              <li>
-                <strong>Prioriser les fonctionnalités</strong> essentielles pour
-                le lancement
-              </li>
-              <li>
-                <strong>Optimiser votre budget</strong> en évitant les développements
-                inutiles
-              </li>
-              <li>
-                <strong>Itérer efficacement</strong> en fonction des retours utilisateurs
-              </li>
-            </ul>
-            <p>
-              Nous proposons des <strong>forfaits startup</strong> adaptés aux contraintes
-              budgétaires des projets early-stage, avec la possibilité d'échelonner
-              les prestations.
-            </p>
-          </Accordion>
+    </div>
+  </Container>
+  <Container>
+    <Prose>
+      <h2>Nos prestations UX/UI Design</h2>
+      <p>
+        Notre <strong>studio de design</strong> propose un accompagnement complet,
+        du cadrage stratégique jusqu'au design system. Que vous ayez besoin d'un
+        <strong> audit UX</strong>, de <strong>wireframes</strong> ou de{' '}
+        <strong>maquettes haute fidélité</strong>, nous adaptons notre
+        méthodologie à votre projet et votre budget.
+      </p>
+    </Prose>
+    <div class="grid gap-6 py-4 pb-12 sm:grid-cols-2 lg:grid-cols-3">
+      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
+          <Image
+            src={imgWireframes}
+            width={640}
+            height={360}
+            alt=""
+            class="m-auto!"
+          />
         </div>
+        <h3>Wireframes & Prototypage</h3>
+        <>
+          <p>
+            Les wireframes sont des <strong>maquettes fonctionnelles</strong>{
+              ' '
+            }
+            qui définissent la structure et l'<strong
+              >architecture de l'information</strong
+            >{' '}
+            de chaque écran avant le design visuel.
+          </p>
+          <p>
+            Cette phase de <strong>prototypage rapide</strong> permet de valider
+            les parcours utilisateurs et d'itérer efficacement sur l'ergonomie.
+          </p>
+        </>
       </Prose>
-    </>
+      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
+          <Image
+            src={imgDesignSystem}
+            width={640}
+            height={360}
+            alt=""
+            class="m-auto!"
+          />
+        </div>
+        <h3>Maquettes UI & Design System</h3>
+        <>
+          <p>
+            Nos <strong>maquettes haute fidélité</strong> sous Figma représentent
+            le rendu final de votre application, prêtes pour le développement avec
+            tous les <strong>composants UI</strong> spécifiés.
+          </p>
+          <p>
+            Nous créons des <strong>design systems</strong> réutilisables qui garantissent
+            cohérence visuelle et <strong>scalabilité</strong> de votre produit digital.
+          </p>
+        </>
+      </Prose>
+      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
+          <Image
+            src={imgAuditUx}
+            width={640}
+            height={360}
+            alt=""
+            class="m-auto!"
+          />
+        </div>
+        <h3>Audit UX & Tests Utilisateurs</h3>
+        <>
+          <p>
+            Notre <strong>audit ergonomique</strong> identifie les points de friction
+            de votre interface grâce à une analyse experte et des{' '}
+            <strong>tests utilisateurs</strong> qualitatifs.
+          </p>
+          <p>
+            Nous délivrons des <strong>recommandations actionnables</strong> pour
+            améliorer la conversion, l'accessibilité et la satisfaction utilisateur.
+          </p>
+        </>
+      </Prose>
+      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
+          <Image
+            src={imgMoodboard}
+            width={640}
+            height={360}
+            alt=""
+            class="m-auto!"
+          />
+        </div>
+        <h3>Moodboard & Direction Artistique</h3>
+        <>
+          <p>
+            Le moodboard définit l'<strong>identité visuelle</strong> de votre projet
+            à travers un assemblage d'images, couleurs et typographies qui{' '}
+            <strong>expriment l'univers graphique</strong> souhaité.
+          </p>
+          <p>
+            Cette étape créative permet d'<strong>aligner la vision</strong> entre
+            votre équipe et nos designers avant de passer au maquettage.
+          </p>
+        </>
+      </Prose>
+      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
+          <Image
+            src={imgBranding}
+            width={640}
+            height={360}
+            alt=""
+            class="m-auto!"
+          />
+        </div>
+        <h3>Charte Graphique & Branding</h3>
+        <>
+          <p>
+            La <strong>charte graphique</strong> formalise les règles d'utilisation
+            de votre identité visuelle : logo, typographies, palette de couleurs
+            et iconographie.
+          </p>
+          <p>
+            Ce guide de style assure une <strong>cohérence de marque</strong>{
+              ' '
+            }
+            sur tous vos supports digitaux et print pour renforcer votre image.
+          </p>
+        </>
+      </Prose>
+    </div>
+  </Container>
+  <Container>
+    <Prose>
+      <h2>Questions fréquentes sur l'UX Design</h2>
+      <p>
+        Retrouvez les réponses aux questions les plus courantes sur le{' '}
+        <strong>design d'expérience utilisateur</strong>, nos méthodologies et
+        bonnes pratiques en UX/UI design.
+      </p>
+
+      <div class="flex flex-col">
+        <Accordion
+          question="Quelle est la différence entre UX Design et UI Design\u00a0?"
+        >
+          <p>
+            L'<strong>UX Design</strong> (User Experience) se concentre sur l'expérience
+            globale de l'utilisateur : parcours, ergonomie, facilité d'utilisation
+            et satisfaction. L'<strong>UI Design</strong> (User Interface) concerne
+            l'aspect visuel : couleurs, typographies, icônes et animations.
+          </p>
+          <p>
+            Ces deux disciplines sont complémentaires. Un bon produit digital
+            nécessite à la fois une UX réfléchie (l'utilisateur trouve
+            facilement ce qu'il cherche) et une UI soignée (l'interface est
+            esthétique et cohérente avec la marque).
+          </p>
+          <p>
+            Chez BearStudio, nos designers maîtrisent les deux aspects pour
+            créer des interfaces qui sont à la fois <strong
+              >belles et fonctionnelles</strong
+            >.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Quels outils utilisez-vous pour le design UX/UI\u00a0?"
+        >
+          <p>
+            Notre stack design s'articule autour d'outils collaboratifs et
+            performants :
+          </p>
+          <ul>
+            <li>
+              <strong>Figma :</strong> notre outil principal pour les wireframes,
+              maquettes et prototypes interactifs
+            </li>
+            <li>
+              <strong>FigJam :</strong> pour les ateliers collaboratifs et le brainstorming
+            </li>
+            <li>
+              <strong>Maze / Hotjar :</strong> pour les tests utilisateurs et l'analyse
+              comportementale
+            </li>
+            <li>
+              <strong>Notion :</strong> pour la documentation et le suivi projet
+            </li>
+          </ul>
+          <p>
+            Tous nos livrables sont partagés en temps réel, vous permettant de
+            suivre l'avancement et de commenter directement sur les maquettes.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Comment se déroule un projet UX Design chez BearStudio\u00a0?"
+        >
+          <p>Notre méthodologie UX suit un processus éprouvé en 5 étapes :</p>
+          <ul>
+            <li>
+              <strong>1. Discovery :</strong> compréhension de vos objectifs, analyse
+              concurrentielle et définition des personas
+            </li>
+            <li>
+              <strong>2. Architecture :</strong> arborescence, user flows et architecture
+              de l'information
+            </li>
+            <li>
+              <strong>3. Wireframing :</strong> maquettes fonctionnelles pour valider
+              les parcours
+            </li>
+            <li>
+              <strong>4. UI Design :</strong> création de l'identité visuelle et
+              des maquettes haute fidélité
+            </li>
+            <li>
+              <strong>5. Prototypage :</strong> prototype interactif pour les tests
+              et la validation finale
+            </li>
+          </ul>
+          <p>
+            Chaque étape inclut des <strong>points de validation</strong> pour garantir
+            l'alignement avec votre vision. La durée moyenne d'un projet complet
+            est de 4 à 8 semaines.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Pourquoi faire un audit UX de mon site ou application\u00a0?"
+        >
+          <p>
+            Un <strong>audit UX</strong> permet d'identifier les freins à la conversion
+            et les points de friction qui nuisent à l'expérience utilisateur. C'est
+            particulièrement pertinent si vous constatez :
+          </p>
+          <ul>
+            <li>
+              Un <strong>taux de rebond élevé</strong> sur certaines pages
+            </li>
+            <li>
+              Un <strong>taux de conversion faible</strong> malgré un bon trafic
+            </li>
+            <li>Des <strong>retours négatifs</strong> de vos utilisateurs</li>
+            <li>Une <strong>augmentation des demandes au support</strong></li>
+          </ul>
+          <p>
+            Notre audit combine analyse heuristique, tests utilisateurs et
+            analyse des données pour vous fournir un <strong
+              >plan d'action priorisé</strong
+            >{' '}
+            avec un impact mesurable sur vos KPIs.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Qu'est-ce qu'un design system et pourquoi en créer un\u00a0?"
+        >
+          <p>
+            Un <strong>design system</strong> est une bibliothèque de composants
+            UI réutilisables (boutons, formulaires, cartes, etc.) accompagnée de
+            règles d'usage. Il garantit la <strong>cohérence visuelle</strong>
+            de votre produit et accélère considérablement le développement.
+          </p>
+          <p>Les bénéfices d'un design system sont multiples :</p>
+          <ul>
+            <li>
+              <strong>Cohérence :</strong> une expérience uniforme sur toutes les
+              pages
+            </li>
+            <li>
+              <strong>Rapidité :</strong> les développeurs réutilisent des composants
+              prêts à l'emploi
+            </li>
+            <li>
+              <strong>Scalabilité :</strong> facilite l'ajout de nouvelles fonctionnalités
+            </li>
+            <li>
+              <strong>Maintenance :</strong> un changement se propage automatiquement
+              partout
+            </li>
+          </ul>
+          <p>
+            Nous créons des design systems sous Figma parfaitement synchronisés
+            avec le code, notamment grâce à notre stack React et Tailwind CSS.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Comment l'UX Design améliore-t-il le référencement SEO\u00a0?"
+        >
+          <p>
+            Google intègre désormais l'<strong>expérience utilisateur</strong>
+            dans ses critères de classement via les <strong
+              >Core Web Vitals</strong
+            >. Une bonne UX impacte directement votre SEO :
+          </p>
+          <ul>
+            <li>
+              <strong>Temps de chargement :</strong> des interfaces optimisées chargent
+              plus vite
+            </li>
+            <li>
+              <strong>Taux de rebond :</strong> une UX soignée retient les visiteurs
+              plus longtemps
+            </li>
+            <li>
+              <strong>Mobile-first :</strong> un design responsive est indispensable
+              pour le SEO mobile
+            </li>
+            <li>
+              <strong>Accessibilité :</strong> les bonnes pratiques UX améliorent
+              l'accessibilité, valorisée par Google
+            </li>
+          </ul>
+          <p>
+            Investir dans l'UX, c'est donc aussi investir dans votre{' '}
+            <strong>visibilité sur les moteurs de recherche</strong>.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Travaillez-vous avec des startups et des projets early-stage\u00a0?"
+        >
+          <p>
+            Absolument ! Nous accompagnons régulièrement des <strong
+              >startups</strong
+            >{' '}
+            dans la conception de leur MVP (Minimum Viable Product). Notre approche
+            lean permet de :
+          </p>
+          <ul>
+            <li>
+              <strong>Valider rapidement</strong> vos hypothèses avec des prototypes
+              testables
+            </li>
+            <li>
+              <strong>Prioriser les fonctionnalités</strong> essentielles pour le
+              lancement
+            </li>
+            <li>
+              <strong>Optimiser votre budget</strong> en évitant les développements
+              inutiles
+            </li>
+            <li>
+              <strong>Itérer efficacement</strong> en fonction des retours utilisateurs
+            </li>
+          </ul>
+          <p>
+            Nous proposons des <strong>forfaits startup</strong> adaptés aux contraintes
+            budgétaires des projets early-stage, avec la possibilité d'échelonner
+            les prestations.
+          </p>
+        </Accordion>
+      </div>
+    </Prose>
   </Container>
 </MainLayout>
