@@ -9,6 +9,8 @@ import { getAlternates } from '@/components/seo/utils';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
+import imgBg from './_bg.jpg';
+
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
 
@@ -33,7 +35,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     breadcrumb={breadcrumb}
   />
 
-  <Hero>
+  <Hero image={imgBg}>
     <HeroContent
       breadcrumb={breadcrumb}
       title={t('services.projectBoost.title')}
