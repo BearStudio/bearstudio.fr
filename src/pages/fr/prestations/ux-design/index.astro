@@ -1,9 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import { getEntry } from 'astro:content';
 
-import { isNonNullish } from 'remeda';
-
+import { getSkillsCollectionWithIcons } from '@/lib/skills';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
@@ -27,19 +25,7 @@ const t = getTranslationFn(locale);
 
 const UX_SKILLS = ['ux', 'figma', 'design-system', 'wireframes', 'prototype'];
 
-const skills = (
-  await Promise.all(
-    UX_SKILLS.map(async (skillName) => {
-      const skill = await getEntry('skills', `${skillName}/${locale}`);
-      if (!skill) return null;
-      const icon = await getEntry(skill.data.icon);
-      return {
-        ...skill,
-        icon,
-      };
-    })
-  )
-).filter((skill) => isNonNullish(skill));
+const skills = await getSkillsCollectionWithIcons(UX_SKILLS, locale);
 
 const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({

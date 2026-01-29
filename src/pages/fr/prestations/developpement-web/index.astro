@@ -1,4 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+
+import { getLink } from '@/lib/link';
+import { getSkillsCollectionWithIcons } from '@/lib/skills';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
@@ -6,6 +10,7 @@ import Hero from '@/components/hero/hero.astro';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
+import Accordion from '@/components/ui/accordion.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
@@ -13,6 +18,17 @@ import imgBg from './_bg.jpg';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
+
+const SKILLS = [
+  'design-system',
+  'react',
+  'start-ui',
+  'typescript',
+  'tailwind',
+  'tanstack-start',
+];
+
+const skills = await getSkillsCollectionWithIcons(SKILLS, locale);
 
 const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({
@@ -43,6 +59,313 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     />
   </Hero>
   <Container>
-    <Prose> TODO </Prose>
+    <div class="flex flex-col gap-8 sm:flex-row-reverse">
+      <div class="flex flex-none flex-col gap-2 sm:w-[300px] sm:py-4">
+        <h4 class="font-heading font-medium">Skills</h4>
+        <div class="flex flex-wrap gap-2">
+          {
+            skills.map((skill) => (
+              <div class="flex w-fit items-center gap-0 rounded-full border bg-neutral-100 px-1.5 py-1 text-sm">
+                {!!skill.icon && (
+                  <Image
+                    src={skill.icon.data.image}
+                    alt={skill.icon.data.name}
+                    width={32}
+                    height={32}
+                    class="-my-1 size-6"
+                  />
+                )}
+                <span class="px-1.5">{skill.data.name}</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <Prose>
+        <h2>Qu'est-ce que le développement web ?</h2>
+        <p>
+          Le développement web se divise aujourd'hui en deux parties majeures:
+          le développement front-end et le développement back-end.
+        </p>
+        <p>
+          Le premier correspond aux productions HTML, CSS et JavaScript d’une
+          page Internet ou d’une application qu’un utilisateur peut voir et avec
+          lesquelles il peut interagir directement.
+        </p>
+        <p>
+          Le second correspond à la <strong>gestion des bases de données</strong
+          >, la mise en place d’un <strong>serveur web</strong>, d’un
+          back-office, le <strong>branchement d’API</strong> ou d’un <strong
+            >système de paiement</strong
+          >, l’architecture technique, la sécurisation et la gestion de
+          l’ensemble de votre contenu et plus globalement, tout ce qui est lié à
+          la <strong
+            >« logique » et aux aspects fonctionnels de votre projet</strong
+          >.
+        </p>
+        <p>
+          Si l’on devait comparer un site web à un magasin, le <strong
+            >front-end serait la boutique</strong
+          >, là où l’on vend les produits et le <strong
+            >back-end serait l’arrière boutique</strong
+          >, la partie <strong>cachée aux clients</strong> (utilisateurs) où se gèrent
+          tous les stocks, les approvisionnements, où se trouvent les bureaux etc.
+          #LesMeilleuresAnalogies
+        </p>
+        <p>
+          L’<strong>équipe de développement</strong> est donc particulièrement attentive
+          à l’<a href={getLink('/fr/prestations/ux-design', locale, {})}
+            ><strong>expérience utilisateur</strong></a
+          > lors du développement front. La prise en compte des <strong
+            >besoins des utilisateurs</strong
+          > passe par le développement d’un <strong
+            >design responsive et ergonomique</strong
+          > par le <strong>concepteur</strong>.
+        </p>
+      </Prose>
+    </div>
+  </Container>
+  <Container>
+    <Prose>
+      <h2>Nos prestations de développement web</h2>
+      <p>
+        Notre <strong>studio de développement</strong> propose un accompagnement
+        complet, du cadrage stratégique jusqu'à la mise en production. Que vous ayez
+        besoin d'
+        <strong>intégration front</strong>, d'<strong>audit</strong> ou d'<strong
+          >accompagnement sur votre développement avec l'IA</strong
+        >, nous adaptons notre méthodologie à votre projet et votre budget.
+      </p>
+    </Prose>
+    <p>TODO</p>
+    <!-- <div class="grid gap-6 py-4 pb-12 sm:grid-cols-2 lg:grid-cols-3">
+      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
+          <Image
+            src={imgWireframes}
+            width={640}
+            height={360}
+            alt=""
+            class="m-auto!"
+          />
+        </div>
+        <h3>Wireframes & Prototypage</h3>
+        <>
+          <p>
+            Les wireframes sont des <strong>maquettes fonctionnelles</strong>{
+              ' '
+            }
+            qui définissent la structure et l'<strong
+              >architecture de l'information</strong
+            >{' '}
+            de chaque écran avant le design visuel.
+          </p>
+          <p>
+            Cette phase de <strong>prototypage rapide</strong> permet de valider
+            les parcours utilisateurs et d'itérer efficacement sur l'ergonomie.
+          </p>
+        </>
+      </Prose>
+      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
+          <Image
+            src={imgDesignSystem}
+            width={640}
+            height={360}
+            alt=""
+            class="m-auto!"
+          />
+        </div>
+        <h3>Maquettes UI & Design System</h3>
+        <>
+          <p>
+            Nos <strong>maquettes haute fidélité</strong> sous Figma représentent
+            le rendu final de votre application, prêtes pour le développement avec
+            tous les <strong>composants UI</strong> spécifiés.
+          </p>
+          <p>
+            Nous créons des <strong>design systems</strong> réutilisables qui garantissent
+            cohérence visuelle et <strong>scalabilité</strong> de votre produit digital.
+          </p>
+        </>
+      </Prose>
+      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
+          <Image
+            src={imgAuditUx}
+            width={640}
+            height={360}
+            alt=""
+            class="m-auto!"
+          />
+        </div>
+        <h3>Audit UX & Tests Utilisateurs</h3>
+        <>
+          <p>
+            Notre <strong>audit ergonomique</strong> identifie les points de friction
+            de votre interface grâce à une analyse experte et des{' '}
+            <strong>tests utilisateurs</strong> qualitatifs.
+          </p>
+          <p>
+            Nous délivrons des <strong>recommandations actionnables</strong> pour
+            améliorer la conversion, l'accessibilité et la satisfaction utilisateur.
+          </p>
+        </>
+      </Prose>
+      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
+          <Image
+            src={imgMoodboard}
+            width={640}
+            height={360}
+            alt=""
+            class="m-auto!"
+          />
+        </div>
+        <h3>Moodboard & Direction Artistique</h3>
+        <>
+          <p>
+            Le moodboard définit l'<strong>identité visuelle</strong> de votre projet
+            à travers un assemblage d'images, couleurs et typographies qui{' '}
+            <strong>expriment l'univers graphique</strong> souhaité.
+          </p>
+          <p>
+            Cette étape créative permet d'<strong>aligner la vision</strong> entre
+            votre équipe et nos designers avant de passer au maquettage.
+          </p>
+        </>
+      </Prose>
+      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
+          <Image
+            src={imgBranding}
+            width={640}
+            height={360}
+            alt=""
+            class="m-auto!"
+          />
+        </div>
+        <h3>Charte Graphique & Branding</h3>
+        <>
+          <p>
+            La <strong>charte graphique</strong> formalise les règles d'utilisation
+            de votre identité visuelle : logo, typographies, palette de couleurs
+            et iconographie.
+          </p>
+          <p>
+            Ce guide de style assure une <strong>cohérence de marque</strong>{
+              ' '
+            }
+            sur tous vos supports digitaux et print pour renforcer votre image.
+          </p>
+        </>
+      </Prose>
+    </div> -->
+  </Container>
+  <Container>
+    <Prose>
+      <h2>Quelles sont les technos les plus utilisées au BearStudio ?</h2>
+      <p>
+        Lorsque nous réalisons des <strong>applications web</strong>, des <strong
+          >sites web</strong
+        >, des <strong>back-office</strong> ou bien des <strong
+          >applications mobiles</strong
+        >, nous utilisons généralement des technologies telles que : <a
+          href="https://fr.react.dev/"
+          target="_blank"
+          rel="noopener">React</a
+        >, <a href="https://reactnative.dev/" target="_blank" rel="noopener"
+          >React Native</a
+        >, <a href="https://astro.build/" target="_blank" rel="noopener"
+          >Astro</a
+        >
+        ou encore notre starter de projet <a
+          href="https://start-ui.com/"
+          target="_blank"
+          rel="noopener">Start UI</a
+        >. Ces frameworks nous permettent d’<strong
+          >étoffer la couche visuelle</strong
+        > que les langages HTML,CSS et JavaScript apportent et nous offrent la possibilité
+        d’<strong>aller beaucoup plus loin</strong>, d’<strong
+          >être plus performants</strong
+        > ainsi que de nous donner des outils qui <strong>facilitent</strong> la
+        <strong>mise en place</strong> et le processus d’<strong
+          >évolution de votre projet</strong
+        >.
+      </p>
+    </Prose>
+  </Container>
+  <Container>
+    <Prose>
+      <h2>Questions fréquentes sur le développement web</h2>
+      <p>
+        Retrouvez les réponses aux questions les plus courantes sur le{' '}
+        <strong>développement web</strong>, nos méthodologies et bonnes
+        pratiques.
+      </p>
+
+      <div class="flex flex-col">
+        <Accordion
+          question="Quelle est la différence entre front office et back office\u00a0?"
+        >
+          <p>
+            Le front office est la partie visible par l'utilisateur avec
+            laquelle il pourra interagir. En prenant l'exemple du personnel
+            d'une boutique, la partie front office représente les vendeurs en
+            interaction directe avec le client.
+          </p>
+          <p>
+            Le back office, à l'inverse, est la partie cachée d'un produit qui
+            permet sa gestion et son administration et qui est uniquement
+            accessible par un administrateur. En reprenant l'exemple du
+            personnel d'une boutique, une des composantes de la partie back
+            office serait par exemple les responsables de la gestion des stocks.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Quelles sont les missions d'un développeur front end\u00a0?"
+        >
+          <p>
+            C'est grâce au développeur front que l'interface utilisateur prend
+            vie. Grâce aux différents langages de développement front, il
+            développe l'interface en prenant en compte l'accessibilité, le
+            référencement naturel (ou SEO) et l'optimisation de l'expérience
+            utilisateur en collaboration avec le designer UX et UI.
+          </p>
+          <p>
+            L'analyse des besoins du client est au cœur du métier de développeur
+            qui doit concevoir et développer des solutions techniques efficaces
+            et pertinentes.
+          </p>
+          <p>
+            Etre développeur front c'est aussi de la gestion de projet, de la
+            collaboration et de la communication avec les designers et tout le
+            reste de l'équipe mais aussi de la résolution de bugs.
+          </p>
+          <p>
+            Côté compétences techniques, le front dev doit maîtriser certains
+            langages indispensables que nous abordons dans la question suivante,
+            mais aussi une grande variété d'outils tels que des CMS (WordPress,
+            Drupal, Shopify...) ou encore des frameworks (React, Vue...).
+          </p>
+          <p>
+            Au niveau des "compétences humaines", le développeur informatique
+            doit être agile, créatif, rigoureux, curieux, avoir un bon sens du
+            relationnel et se poser des questions (sur la façon de faire et le
+            besoin du client). Etre autodidacte est un plus pour monter plus
+            facilement en compétences par la suite et continuer son
+            apprentissage.
+          </p>
+          <p>
+            Ces compétences ne sont pas réservées aux développeurs front, qu'on
+            soit chef de projet web, intégrateur web, web-designer, développeur
+            d'application (tout métier du numérique qui inclut du travail en
+            équipe en fait....) ce sont LES compétences à développer.
+          </p>
+        </Accordion>
+      </div>
+    </Prose>
   </Container>
 </MainLayout>
