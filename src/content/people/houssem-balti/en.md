@@ -8,6 +8,8 @@ socials:
 status: 'current'
 hidden: false
 order: 1000
+services:
+  - web-development
 ---
 
 Passionate about the web and finding solutions, I enjoy sharing ideas and connecting with like-minded people. Always driven by a desire to learn and grow together.

@@ -12,6 +12,12 @@ socials:
 status: current
 hidden: false
 order: 2
+services:
+  - ux-design
+  - cto-support
+  - mobile-development
+  - project-boost
+  - web-development
 ---
 
 Lead Designer, Front-End Developer, and passionate about web design and usability. For over 10 years, Ivan has been playing with design and development to offer your projects the perfect interface!

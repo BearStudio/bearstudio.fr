@@ -12,6 +12,9 @@ socials:
 status: 'current'
 hidden: false
 order: 1000
+services:
+  - web-development
+  - mobile-development
 ---
 
 Full-Stack Developer, Noé is always eager to learn or share knowledge. He builds accessible, scalable interfaces and enjoys projects where there's time to do things properly.

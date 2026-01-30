@@ -9,6 +9,8 @@ socials:
     href: 'https://www.linkedin.com/in/zouhair-mkassmi-759746131/'
 status: 'current'
 hidden: false
+services:
+  - web-development
 ---
 
 Passionate about his work, Zouhair embodies the rigour itself in what he does.

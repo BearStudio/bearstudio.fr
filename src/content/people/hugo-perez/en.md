@@ -8,6 +8,9 @@ socials:
 status: 'current'
 hidden: false
 order: 55
+services:
+  - web-development
+  - mobile-development
 ---
 
 As a back-end developer, Hugo, also known as Hub, possesses skills in Ops and cybersecurity, which he leverages at BearStudio.

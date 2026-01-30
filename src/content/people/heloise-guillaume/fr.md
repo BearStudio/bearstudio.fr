@@ -8,6 +8,9 @@ socials:
 status: 'current'
 hidden: false
 order: 85
+services:
+  - web-development
+  - mobile-development
 ---
 
 Toujours prête à rendre service, que ce soit dans le quotidien ou dans ses projets tech, Héloïse aime participer à des initiatives variées, du web au mobile. Polyvalente et organisée, elle apprécie particulièrement jongler entre plusieurs projets en parallèle et contribuer là où elle peut avoir un impact.

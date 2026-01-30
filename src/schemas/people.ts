@@ -18,4 +18,15 @@ export const zPerson = ({ image }: SchemaContext) =>
       .optional(),
     status: z.enum(['current', 'advisor', 'former']).optional(),
     order: z.number().optional(),
+    services: z
+      .array(
+        z.enum([
+          'cto-support',
+          'mobile-development',
+          'project-boost',
+          'ux-design',
+          'web-development',
+        ])
+      )
+      .optional(),
   });

@@ -8,6 +8,8 @@ socials:
 status: 'current'
 hidden: false
 order: 1000
+services:
+  - web-development
 ---
 
 Curious, patient, and always eager to learn, Mariem retrained to create useful technical solutions, both back-end and front-end. Today, she continues her journey in tech with enthusiasm, rigor, and a desire to progress every day.

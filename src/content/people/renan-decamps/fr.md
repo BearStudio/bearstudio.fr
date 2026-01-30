@@ -10,6 +10,10 @@ socials:
 status: 'current'
 hidden: false
 order: 25
+services:
+  - web-development
+  - mobile-development
+  - project-boost
 ---
 
 Développeur Front et continuellement à la recherche du meilleur framework JavaScript, Renan aime tester toutes les nouvelles technos du moment.

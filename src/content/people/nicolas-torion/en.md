@@ -10,6 +10,11 @@ socials:
 status: 'current'
 hidden: false
 order: 30
+services:
+  - web-development
+  - mobile-development
+  - cto-support
+  - project-boost
 ---
 
 Full-stack developer, Nicolas can handle the implementation of the back-end logic of your web app, their external API connection, as well as their front-end visual integration. Considering technologies and languages as tools with a specific interest depending on the type of project, he is always looking for the most suitable technical solutions to your project.

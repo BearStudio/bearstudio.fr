@@ -10,6 +10,9 @@ socials:
 status: 'current'
 hidden: false
 order: 1000
+services:
+  - web-development
+  - mobile-development
 ---
 
 Jeanne fell in love with math long before discovering the web. It was this analytical spark that naturally led her to becoming a frontend developer. Today, she brings the same curiosity and rigor to her work, building user interfaces while continuously learning and refining her craft.

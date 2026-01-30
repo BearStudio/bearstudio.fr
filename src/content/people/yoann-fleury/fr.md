@@ -11,6 +11,11 @@ socials:
     href: 'https://www.yoannfleury.dev/'
 status: 'current'
 order: 20
+services:
+  - cto-support
+  - mobile-development
+  - project-boost
+  - web-development
 ---
 
 Issu d'un profil Full Stack, Yoann est aujourd'hui principalement développeur Front-end. Yoann aime concevoir des interfaces réactives, légères et accessibles.
