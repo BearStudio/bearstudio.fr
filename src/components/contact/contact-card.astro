@@ -1,0 +1,35 @@
+---
+import { getPeopleCollection } from '@/lib/people';
+import ContactCta from '@/components/contact/contact-cta.astro';
+import type { Locale } from '@/i18n/utils';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  subtitle?: string;
+  peopleIds?: string[];
+}
+
+const { locale, title, subtitle, peopleIds } = Astro.props;
+
+const people = (await getPeopleCollection({ locale })).filter((person) => {
+  if (!person.data._computed.slug) return false;
+  return peopleIds?.includes(person.data._computed.slug);
+});
+
+console.log(people);
+---
+
+<div
+  class="bg-hero text-hero-foreground flex max-w-prose flex-col gap-4 rounded-lg border-b-3 p-6 text-center"
+>
+  <div class="flex flex-col items-center gap-2">
+    <h2
+      class="font-heading text-accent text-2xl font-bold text-balance md:max-w-[20ch]"
+    >
+      {title}
+    </h2>
+    {subtitle && <p class="max-w-[70ch] text-sm text-balance">{subtitle}</p>}
+  </div>
+  <ContactCta locale={locale} class="items-center justify-center" />
+</div>

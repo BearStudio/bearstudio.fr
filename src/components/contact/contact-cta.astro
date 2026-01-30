@@ -1,0 +1,37 @@
+---
+import { cn } from '@/lib/tailwind/utils';
+import { ContactFormDrawer } from '@/components/contact/contact-form-drawer';
+import { buttonVariants } from '@/components/ui/button';
+import type { Locale } from '@/i18n/utils';
+import { getTranslationFn } from '@/i18n/utils';
+
+interface Props {
+  locale: Locale;
+  class?: string;
+}
+
+const { locale, class: className } = Astro.props;
+const t = getTranslationFn(locale);
+---
+
+<div
+  class:list={cn(
+    'flex flex-row-reverse flex-wrap justify-end gap-x-4 gap-y-2 max-sm:items-center sm:flex-col',
+    className
+  )}
+>
+  <>
+    <p>
+      <a href="tel:+33749360436" class="font-medium"> +33 (0)7 49 36 04 36 </a>
+    </p>
+    <ContactFormDrawer
+      client:load
+      className="w-fit cursor-pointer"
+      locale={locale}
+    >
+      <span class={buttonVariants({ size: 'lg' })}>
+        {t('common.contactCta')}
+      </span>
+    </ContactFormDrawer>
+  </>
+</div>

@@ -73,7 +73,7 @@ const peopleCurrent = await Promise.all(
       description={t('services.root.description')}
     />
   </Hero>
-  <Container overlapHero>
+  <Container placement="overlapHero">
     <div class="xs:grid-cols-2 grid gap-4 md:grid-cols-3">
       <ServiceCard
         href={getLink('/fr/prestations/ux-design', locale, {})}
@@ -108,7 +108,7 @@ const peopleCurrent = await Promise.all(
     </div>
   </Container>
   <SectionScratched image={photoGroup}>
-    <Container class="py-12">
+    <Container>
       <div class="flex flex-col gap-8 sm:flex-row sm:items-center">
         <div class="flex flex-2 flex-col gap-4">
           <h2 class="font-heading text-accent text-2xl font-bold">

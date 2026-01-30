@@ -18,7 +18,7 @@ interface Props {
 const props = Astro.props;
 ---
 
-<div class={cn('bg-hero text-hero-foreground relative my-12', props.class)}>
+<div class={cn('bg-hero text-hero-foreground relative', props.class)}>
   <ScratchFull
     className={cn(
       'text-background -mt-px rotate-180',

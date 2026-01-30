@@ -3,10 +3,13 @@ import { Image } from 'astro:assets';
 
 import { getSkillsCollectionWithIcons } from '@/lib/skills';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import ContactCard from '@/components/contact/contact-card.astro';
+import ContactCta from '@/components/contact/contact-cta.astro';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
 import Prose from '@/components/prose.astro';
+import SectionScratched from '@/components/sections/section-scratched.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import Accordion from '@/components/ui/accordion.astro';
@@ -55,7 +58,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       description={t('services.uxDesign.description')}
     />
   </Hero>
-  <Container>
+  <Container class="pb-0">
     <div class="flex flex-col gap-8 sm:flex-row-reverse">
       <div class="flex flex-none flex-col gap-2 sm:w-[300px] sm:py-4">
         <h4 class="font-heading font-medium">Skills</h4>
@@ -123,7 +126,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
         méthodologie à votre projet et votre budget.
       </p>
     </Prose>
-    <div class="grid gap-6 py-4 pb-12 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
         <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
           <Image
@@ -247,6 +250,24 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       </Prose>
     </div>
   </Container>
+
+  <SectionScratched image={imgBg} class="my-12">
+    <Container>
+      <div class="flex flex-1 flex-col gap-2">
+        <h2
+          class="font-heading text-accent text-2xl font-bold text-balance md:max-w-[20ch]"
+        >
+          On est disponible
+        </h2>
+        <p class="max-w-[70ch] text-sm text-balance">
+          Discutons de votre projet et trouvons ensemble la meilleure approche
+          UX pour vos utilisateurs.
+        </p>
+      </div>
+      <ContactCta locale={locale} />
+    </Container>
+  </SectionScratched>
+
   <Container>
     <Prose>
       <h2>Questions fréquentes sur l'UX Design</h2>
@@ -470,5 +491,14 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
         </Accordion>
       </div>
     </Prose>
+  </Container>
+
+  <Container>
+    <ContactCard
+      locale={locale}
+      title="On est disponible"
+      subtitle="Discutons de votre projet et trouvons ensemble la meilleure approche UX pour vos utilisateurs."
+      peopleIds={['ivan-dalmet']}
+    />
   </Container>
 </MainLayout>

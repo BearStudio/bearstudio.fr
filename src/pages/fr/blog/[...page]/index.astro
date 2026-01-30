@@ -74,7 +74,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       description={t('blog.root.description')}
     />
   </Hero>
-  <Container overlapHero>
+  <Container placement="overlapHero">
     <PostsGrid>
       {page.data.map((post) => <PostCard post={post} />)}
     </PostsGrid>
