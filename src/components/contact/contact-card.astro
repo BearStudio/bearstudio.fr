@@ -1,5 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+
 import { getPeopleCollection } from '@/lib/people';
+import { cn } from '@/lib/tailwind/utils';
 import ContactCta from '@/components/contact/contact-cta.astro';
 import type { Locale } from '@/i18n/utils';
 
@@ -7,23 +10,32 @@ interface Props {
   locale: Locale;
   title: string;
   subtitle?: string;
-  peopleIds?: string[];
+  peopleIds?: [string, string];
 }
 
-const { locale, title, subtitle, peopleIds } = Astro.props;
+const {
+  locale,
+  title,
+  subtitle,
+  peopleIds = ['rudy-baer', 'nhung-duong'],
+} = Astro.props;
 
-const people = (await getPeopleCollection({ locale })).filter((person) => {
-  if (!person.data._computed.slug) return false;
-  return peopleIds?.includes(person.data._computed.slug);
-});
-
-console.log(people);
+const people = (await getPeopleCollection({ locale }))
+  .filter((person) => {
+    if (!person.data._computed.slug || !person.data.picture) return false;
+    return peopleIds?.includes(person.data._computed.slug);
+  })
+  .sort(
+    (a, b) =>
+      peopleIds.indexOf(a.data._computed.slug ?? '') -
+      peopleIds.indexOf(b.data._computed.slug ?? '')
+  );
 ---
 
 <div
-  class="bg-hero text-hero-foreground flex max-w-prose flex-col gap-4 rounded-lg border-b-3 p-6 text-center"
+  class="bg-brand-800 from-brand-900 to-brand-700 relative flex max-w-prose flex-col gap-4 rounded-lg bg-linear-to-br p-8 text-white max-sm:pr-16 sm:text-center"
 >
-  <div class="flex flex-col items-center gap-2">
+  <div class="relative z-10 flex flex-col gap-2 sm:items-center">
     <h2
       class="font-heading text-accent text-2xl font-bold text-balance md:max-w-[20ch]"
     >
@@ -31,5 +43,23 @@ console.log(people);
     </h2>
     {subtitle && <p class="max-w-[70ch] text-sm text-balance">{subtitle}</p>}
   </div>
-  <ContactCta locale={locale} class="items-center justify-center" />
+  <ContactCta
+    locale={locale}
+    class="relative z-10 sm:items-center sm:justify-center"
+  />
+  {
+    people
+      .slice(0, 2)
+      .map((person, index) => (
+        <Image
+          src={person.data.picture!}
+          alt={person.data.name ?? ''}
+          class={cn(
+            'absolute bottom-0 w-44',
+            index === 0 && '-right-16 sm:-left-8',
+            index === 1 && 'max-sm:hidden sm:-right-8'
+          )}
+        />
+      ))
+  }
 </div>

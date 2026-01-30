@@ -4,7 +4,6 @@ import { Image } from 'astro:assets';
 import { getSkillsCollectionWithIcons } from '@/lib/skills';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import ContactCard from '@/components/contact/contact-card.astro';
-import ContactCta from '@/components/contact/contact-cta.astro';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
@@ -115,6 +114,16 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       </Prose>
     </div>
   </Container>
+
+  <Container>
+    <ContactCard
+      locale={locale}
+      title="On est disponible"
+      subtitle="Discutons de votre projet et trouvons ensemble la meilleure approche UX pour vos utilisateurs."
+      peopleIds={['ivan-dalmet', 'daryl-avila-bonnet']}
+    />
+  </Container>
+
   <Container>
     <Prose>
       <h2>Nos prestations UX/UI Design</h2>
@@ -253,18 +262,12 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
 
   <SectionScratched image={imgBg} class="my-12">
     <Container>
-      <div class="flex flex-1 flex-col gap-2">
-        <h2
-          class="font-heading text-accent text-2xl font-bold text-balance md:max-w-[20ch]"
-        >
-          On est disponible
+      <div class="flex flex-col gap-4">
+        <h2 class="font-heading text-accent text-2xl font-bold text-balance">
+          Start UI [figma]
         </h2>
-        <p class="max-w-[70ch] text-sm text-balance">
-          Discutons de votre projet et trouvons ensemble la meilleure approche
-          UX pour vos utilisateurs.
-        </p>
+        <p class="max-w-[70ch] text-sm text-balance">TODO</p>
       </div>
-      <ContactCta locale={locale} />
     </Container>
   </SectionScratched>
 
@@ -491,14 +494,5 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
         </Accordion>
       </div>
     </Prose>
-  </Container>
-
-  <Container>
-    <ContactCard
-      locale={locale}
-      title="On est disponible"
-      subtitle="Discutons de votre projet et trouvons ensemble la meilleure approche UX pour vos utilisateurs."
-      peopleIds={['ivan-dalmet']}
-    />
   </Container>
 </MainLayout>
