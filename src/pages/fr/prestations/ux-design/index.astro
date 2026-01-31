@@ -1,8 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 
+import { getLink } from '@/lib/link';
 import { getDataForPeopleCarousel } from '@/lib/people';
 import { getSkillsCollectionWithIcons } from '@/lib/skills';
+import { cn } from '@/lib/tailwind/utils';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import ContactCard from '@/components/contact/contact-card.astro';
 import Container from '@/components/container.astro';
@@ -14,6 +16,7 @@ import SectionScratched from '@/components/sections/section-scratched.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import Accordion from '@/components/ui/accordion.astro';
+import { buttonVariants } from '@/components/ui/button';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
@@ -63,30 +66,63 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     />
   </Hero>
   <Container class="pb-0">
-    <div class="flex flex-col gap-8 sm:flex-row-reverse">
-      <div class="flex flex-none flex-col gap-2 sm:w-[300px] sm:py-4">
-        <h4 class="font-heading font-medium">Skills</h4>
-        <div class="flex flex-wrap gap-2">
-          {
-            skills.map((skill) => (
-              <div class="flex w-fit items-center gap-0 rounded-full border bg-neutral-100 px-1.5 py-1 text-sm">
-                {!!skill.icon && (
-                  <Image
-                    src={skill.icon.data.image}
-                    alt={skill.icon.data.name}
-                    width={32}
-                    height={32}
-                    class="-my-1 size-6"
-                  />
-                )}
-                <span class="px-1.5">{skill.data.name}</span>
-              </div>
-            ))
-          }
+    <div
+      class="flex flex-col gap-8 sm:flex-row-reverse sm:justify-end sm:gap-16"
+    >
+      <div class="flex flex-none flex-col gap-6 sm:w-64 sm:py-4">
+        <div class="flex flex-col gap-2">
+          <h4 class="font-heading font-medium">Skills</h4>
+          <div class="flex flex-col gap-2">
+            {
+              skills.map((skill) => (
+                <div class="flex w-fit items-center gap-0 rounded-full border bg-neutral-100 px-1.5 py-1 text-sm">
+                  {!!skill.icon && (
+                    <Image
+                      src={skill.icon.data.image}
+                      alt={skill.icon.data.name}
+                      width={32}
+                      height={32}
+                      class="-my-1 size-6"
+                    />
+                  )}
+                  <span class="px-1.5">{skill.data.name}</span>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h4 class="font-heading font-medium">Autres prestations</h4>
+          <div class="flex flex-col gap-2">
+            <a
+              class={cn(buttonVariants({ variant: 'secondary', size: 'sm' }))}
+              href={getLink('/fr/prestations/developpement-web', locale, {})}
+            >
+              {t('services.webDevelopment.breadcrumb')}
+            </a>
+            <a
+              class={cn(buttonVariants({ variant: 'secondary', size: 'sm' }))}
+              href={getLink('/fr/prestations/developpement-mobile', locale, {})}
+            >
+              {t('services.mobileDevelopment.breadcrumb')}
+            </a>
+            <a
+              class={cn(buttonVariants({ variant: 'secondary', size: 'sm' }))}
+              href={getLink('/fr/prestations/boost-projet', locale, {})}
+            >
+              {t('services.projectBoost.breadcrumb')}
+            </a>
+            <a
+              class={cn(buttonVariants({ variant: 'secondary', size: 'sm' }))}
+              href={getLink('/fr/prestations/accompagnement-cto', locale, {})}
+            >
+              {t('services.ctoSupport.breadcrumb')}
+            </a>
+          </div>
         </div>
       </div>
 
-      <Prose>
+      <Prose class="flex-1">
         <h2>Qu'est-ce que l'UX Design ?</h2>
         <p>
           L'<strong>UX Design</strong> (User Experience Design) est une discipline
