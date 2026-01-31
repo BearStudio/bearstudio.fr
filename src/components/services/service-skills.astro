@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+
+import { getSkillsCollectionWithIcons } from '@/lib/skills';
+import { cn } from '@/lib/tailwind/utils';
+import type { Locale } from '@/i18n/utils';
+
+interface Props {
+  locale: Locale;
+  skills: Array<string>;
+  class?: string;
+}
+
+const { locale, skills: skillNames, class: className } = Astro.props;
+
+const skills = await getSkillsCollectionWithIcons(skillNames, locale);
+---
+
+<div class={cn('flex flex-col gap-2', className)}>
+  <h4 class="font-heading font-medium">Skills</h4>
+  <div class="flex flex-wrap gap-2 md:flex-col">
+    {
+      skills.map((skill) => (
+        <div class="flex w-fit items-center gap-0 rounded-full border bg-neutral-100 px-1.5 py-1 text-sm">
+          {!!skill.icon && (
+            <Image
+              src={skill.icon.data.image}
+              alt={skill.icon.data.name}
+              width={32}
+              height={32}
+              class="-my-1 size-6"
+            />
+          )}
+          <span class="px-1.5">{skill.data.name}</span>
+        </div>
+      ))
+    }
+  </div>
+</div>

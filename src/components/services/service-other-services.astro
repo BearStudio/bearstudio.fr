@@ -1,0 +1,68 @@
+---
+import { getLink } from '@/lib/link';
+import { cn } from '@/lib/tailwind/utils';
+import { buttonVariants } from '@/components/ui/button';
+import { getTranslationFn, type Locale } from '@/i18n/utils';
+
+type ServiceKey =
+  | 'ux-design'
+  | 'web-development'
+  | 'mobile-development'
+  | 'project-boost'
+  | 'cto-support';
+
+interface Props {
+  locale: Locale;
+  currentService: ServiceKey;
+  class?: string;
+}
+
+const { locale, currentService, class: className } = Astro.props;
+const t = getTranslationFn(locale);
+
+const allServices = [
+  {
+    key: 'ux-design' as const,
+    label: t('services.uxDesign.breadcrumb'),
+    path: '/fr/prestations/ux-design' as const,
+  },
+  {
+    key: 'web-development' as const,
+    label: t('services.webDevelopment.breadcrumb'),
+    path: '/fr/prestations/developpement-web' as const,
+  },
+  {
+    key: 'mobile-development' as const,
+    label: t('services.mobileDevelopment.breadcrumb'),
+    path: '/fr/prestations/developpement-mobile' as const,
+  },
+  {
+    key: 'project-boost' as const,
+    label: t('services.projectBoost.breadcrumb'),
+    path: '/fr/prestations/boost-projet' as const,
+  },
+  {
+    key: 'cto-support' as const,
+    label: t('services.ctoSupport.breadcrumb'),
+    path: '/fr/prestations/accompagnement-cto' as const,
+  },
+];
+
+const otherServices = allServices.filter((s) => s.key !== currentService);
+---
+
+<div class={cn('flex flex-col gap-2 max-md:hidden', className)}>
+  <h4 class="font-heading font-medium">Autres prestations</h4>
+  <div class="flex flex-col gap-2">
+    {
+      otherServices.map((service) => (
+        <a
+          class={cn(buttonVariants({ variant: 'secondary', size: 'sm' }))}
+          href={getLink(service.path, locale, {})}
+        >
+          {service.label}
+        </a>
+      ))
+    }
+  </div>
+</div>
