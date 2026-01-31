@@ -10,6 +10,7 @@ import { getPostsCollection } from '@/lib/posts';
 import { cn } from '@/lib/tailwind/utils';
 import { PostCardMore } from '@/components/blog/post-card-more';
 import { PostsCarousel } from '@/components/blog/posts-carousel';
+import ContactCard from '@/components/contact/contact-card.astro';
 import ContactCta from '@/components/contact/contact-cta.astro';
 import Container from '@/components/container.astro';
 import Hero from '@/components/hero/hero.astro';
@@ -634,4 +635,13 @@ const latestPosts = await Promise.all(
       </div>
     </Container>
   </SectionScratched>
+  <Container>
+    <ContactCard
+      class="mx-auto my-12"
+      locale={locale}
+      title="On est disponible"
+      subtitle="Discutons de votre projet et trouvons ensemble la meilleure approche pour vos utilisateurs."
+      peopleIds={['nhung-duong', 'rudy-baer']}
+    />
+  </Container>
 </MainLayout>
