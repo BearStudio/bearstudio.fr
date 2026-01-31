@@ -2,6 +2,7 @@
 import { getLink } from '@/lib/link';
 import { getDataForPeopleCarousel } from '@/lib/people';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import ContactCard from '@/components/contact/contact-card.astro';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
@@ -119,11 +120,14 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     </div>
   </Container>
   <Container>
-    <Prose>
-      <h2>Nos experts en développement web</h2>
-    </Prose>
-    <PeopleCarousel client:load people={people} locale={locale} />
+    <ContactCard
+      locale={locale}
+      title="On est disponible"
+      subtitle="Discutons de votre projet et trouvons ensemble la meilleure approche pour le développement de vos fonctionnalités."
+      peopleIds={['yoann-fleury', 'renan-decamps']}
+    />
   </Container>
+
   <Container>
     <Prose>
       <h2>Nos prestations de développement web</h2>
@@ -260,6 +264,12 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
         </>
       </Prose>
     </div> -->
+  </Container>
+  <Container>
+    <Prose>
+      <h2>Nos experts en développement web</h2>
+    </Prose>
+    <PeopleCarousel client:load people={people} locale={locale} />
   </Container>
   <Container>
     <Prose>
@@ -401,6 +411,69 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
             existent, on peut encore citer Svelte, Angular, Ember.js, Solid,
             jQuery et bien d'autres...
           </p>
+        </Accordion>
+        <Accordion question="Quels sont les différents langages back end ?">
+          <p>
+            En fonction des besoins d’un produit numérique, l’utilisation d’un
+            langage de programmation adapté est nécessaire, il est donc
+            indispensable de maîtriser les langages principaux afin d’optimiser
+            le développement de la partie backend d’un produit. De plus, chaque
+            langage possède son lot de frameworks qui peuvent être utiles dans
+            un cadre d’utilisation précis.
+          </p>
+
+          <p>
+            Quelques langages back populaires, leurs caractéristiques et
+            frameworks :
+          </p>
+          <ul>
+            <li>
+              <strong>JavaScript</strong> (TypeScript), qui permet de rendre une
+              page web interactive et est utilisé pour les applications web, est
+              utilisé par les développeurs front mais aussi par les développeurs
+              back lorsqu’ils font du Node.JS. Il est donc possible de développer
+              une application web entière simplement à l’aide de HTML et CSS et JavaScript.
+              Avec JS on peut donc utiliser Node.JS et ainsi profiter de différents
+              frameworks comme <strong>TanStack Start</strong> ou
+              <strong>Next.js</strong> qui permettent de créer des web apps très
+              rapidement.
+            </li>
+            <li>
+              <strong>Java</strong>, un langage de programmation orienté objet
+              qui permet de compiler un langage intermédiaire pouvant être lu
+              par une machine virtuelle. Avec Java on peut utiliser <strong>
+                Spring</strong
+              > qui est adapté à la création d’API (et donc de services réutilisables
+              par votre frontend web et votre frontend mobile).
+            </li>
+            <li>
+              <strong>PHP</strong>, un langage impératif orienté objet qui
+              permet de traiter des informations issues de bases de donnés, de
+              formulaires ou de moteurs de recherche. PHP permet d’utiliser
+              <strong>Laravel</strong>, parfait pour créer des API et <strong
+                >Symfony</strong
+              >
+              qui permet de charger des pages HTML compréhensibles par Google et
+              donc optimisées pour le référencement, contrairement à Spring, plus
+              adapté aux applications.
+            </li>
+            <li>
+              <strong>Python</strong>, un langage informatique à la fois simple
+              à utiliser et qui offre un champ de possibilités très large, il
+              est notamment utilisé par Google, Uber et Reddit. Sur Python, on
+              peut utiliser le framework <strong>Django</strong> qui permet de faire
+              des API avec les spécificités du langage (simplification des calculs,
+              data science, IA…).
+            </li>
+            <li>
+              <strong>Ruby</strong>, un langage de programmation open source qui
+              permet de coder facilement et rapidement, il a été utilisé par
+              Twitter et Airbnb. Avec Ruby on peut utiliser
+              <strong>Ruby on Rails</strong>
+              qui est un framework full-stack permettant de créer des applications
+              web de A à Z.
+            </li>
+          </ul>
         </Accordion>
         <Accordion
           question="Pourquoi le BearStudio pour votre développement front ?"
