@@ -1,3 +1,4 @@
+import { getImage } from 'astro:assets';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 import { isNonNullish, sortBy } from 'remeda';
@@ -45,3 +46,37 @@ export const personWithComputed = (item: CollectionEntry<'people'>) => {
     },
   };
 };
+
+/**
+ * This function is made for carousel only as it gets the image for the person and optimise the size for the displayed ratio.
+ */
+export async function getDataForPeopleCarousel({
+  locale,
+  limit,
+  status,
+}: Parameters<typeof getPeopleCollection>[number]) {
+  return await Promise.all(
+    (
+      await getPeopleCollection({
+        locale,
+        status,
+        limit,
+      })
+    ).map(async (person) => {
+      return {
+        ...person,
+        data: {
+          ...person.data,
+          image: person.data.picture
+            ? await getImage({
+                src: person.data.picture,
+                widths: [200, 500],
+                sizes: '(min-width: 800px) 500px, 200px',
+                layout: 'constrained',
+              })
+            : undefined,
+        },
+      };
+    })
+  );
+}

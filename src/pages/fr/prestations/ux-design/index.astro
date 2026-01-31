@@ -1,12 +1,14 @@
 ---
 import { Image } from 'astro:assets';
 
+import { getDataForPeopleCarousel } from '@/lib/people';
 import { getSkillsCollectionWithIcons } from '@/lib/skills';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import ContactCard from '@/components/contact/contact-card.astro';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
+import { PeopleCarousel } from '@/components/people/people-carousel';
 import Prose from '@/components/prose.astro';
 import SectionScratched from '@/components/sections/section-scratched.astro';
 import SEO from '@/components/seo/index.astro';
@@ -28,6 +30,9 @@ const t = getTranslationFn(locale);
 const UX_SKILLS = ['ux', 'figma', 'design-system', 'wireframes', 'prototype'];
 
 const skills = await getSkillsCollectionWithIcons(UX_SKILLS, locale);
+const people = (
+  await getDataForPeopleCarousel({ locale, status: 'current' })
+).filter((people) => people.data.services?.includes('ux-design'));
 
 const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({
@@ -259,7 +264,12 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       </Prose>
     </div>
   </Container>
-
+  <Container>
+    <Prose>
+      <h2>Nos experts UX/UI Design</h2>
+    </Prose>
+    <PeopleCarousel client:load people={people} locale={locale} />
+  </Container>
   <SectionScratched image={imgBg} class="my-12">
     <Container>
       <div class="flex flex-col gap-4">
