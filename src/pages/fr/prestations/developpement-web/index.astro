@@ -20,15 +20,6 @@ import imgBg from './_bg.jpg';
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
 
-const SKILLS = [
-  'design-system',
-  'react',
-  'start-ui',
-  'typescript',
-  'tailwind',
-  'tanstack-start',
-];
-
 const people = (
   await getDataForPeopleCarousel({ locale, status: 'current' })
 ).filter((people) => people.data.services?.includes('web-development'));
@@ -66,7 +57,17 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       class="flex flex-col gap-8 sm:flex-row-reverse sm:justify-end sm:gap-16"
     >
       <div class="flex flex-none flex-col gap-6 sm:w-64 sm:py-4">
-        <ServiceSkills locale={locale} skills={SKILLS} />
+        <ServiceSkills
+          locale={locale}
+          skills={[
+            'design-system',
+            'react',
+            'start-ui',
+            'typescript',
+            'tailwind',
+            'tanstack-start',
+          ]}
+        />
         <ServiceOtherServices
           locale={locale}
           currentService="web-development"

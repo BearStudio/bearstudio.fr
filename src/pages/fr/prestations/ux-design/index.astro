@@ -28,8 +28,6 @@ import imgWireframes from './_wireframes.jpg';
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
 
-const UX_SKILLS = ['ux', 'figma', 'design-system', 'wireframes', 'prototype'];
-
 const people = (
   await getDataForPeopleCarousel({ locale, status: 'current' })
 ).filter((people) => people.data.services?.includes('ux-design'));
@@ -67,7 +65,10 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       class="flex flex-col gap-8 md:flex-row-reverse md:justify-end md:gap-16"
     >
       <div class="flex flex-none flex-col gap-6 md:w-64 md:py-4">
-        <ServiceSkills locale={locale} skills={UX_SKILLS} />
+        <ServiceSkills
+          locale={locale}
+          skills={['ux', 'figma', 'design-system', 'wireframes', 'prototype']}
+        />
         <ServiceOtherServices locale={locale} currentService="ux-design" />
       </div>
 

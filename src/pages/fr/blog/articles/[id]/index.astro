@@ -135,7 +135,7 @@ const [slugFr, slugEn] = await Promise.all([
           !!post.data._computed.authors.length && (
             <div>
               <span class="opacity-60">par</span>
-              {post.data._computed.authors.map((author) => {
+              {post.data._computed.authors.map((author, index) => {
                 return author.data._computed.slug ? (
                   <a
                     href={getLink('/fr/equipe/:id', locale, {
@@ -143,10 +143,12 @@ const [slugFr, slugEn] = await Promise.all([
                     })}
                     class="font-medium opacity-80 hover:opacity-100"
                   >
-                    {author.data.name}
+                    {`${author.data.name}${index !== post.data._computed.authors.length - 1 ? ', ' : ''}`}
                   </a>
                 ) : (
-                  <span class="opacity-60">{author.data.name}</span>
+                  <span class="opacity-60">
+                    {`${author.data.name}${index !== post.data._computed.authors.length - 1 ? ', ' : ''}`}
+                  </span>
                 );
               })}
             </div>
@@ -168,7 +170,7 @@ const [slugFr, slugEn] = await Promise.all([
         !!post.data._computed.authors.length && (
           <div>
             <span>par</span>
-            {post.data._computed.authors.map((author) => {
+            {post.data._computed.authors.map((author, index) => {
               return author.data._computed.slug ? (
                 <a
                   href={getLink('/fr/equipe/:id', locale, {
@@ -176,10 +178,12 @@ const [slugFr, slugEn] = await Promise.all([
                   })}
                   class="font-medium hover:underline"
                 >
-                  {author.data.name}
+                  {`${author.data.name}${index !== post.data._computed.authors.length - 1 ? ', ' : ''}`}
                 </a>
               ) : (
-                <span>{author.data.name}</span>
+                <span>
+                  {`${author.data.name}${index !== post.data._computed.authors.length - 1 ? ', ' : ''}`}
+                </span>
               );
             })}
           </div>
