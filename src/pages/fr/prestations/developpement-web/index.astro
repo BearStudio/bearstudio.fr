@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 import { getLink } from '@/lib/link';
 import { getDataForPeopleCarousel } from '@/lib/people';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
@@ -16,7 +18,10 @@ import Accordion from '@/components/ui/accordion.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
+import imgBackend from './_backend.jpg';
 import imgBg from './_bg.jpg';
+import imgFrontend from './_frontend.jpg';
+import imgIntegration from './_integration.jpg';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
@@ -130,140 +135,81 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
 
   <Container>
     <Prose>
-      <h2>Nos prestations de développement web</h2>
+      <h2>Développement d'application web sur mesure</h2>
       <p>
-        Notre <strong>studio de développement</strong> propose un accompagnement
-        complet, du cadrage stratégique jusqu'à la mise en production. Que vous ayez
-        besoin d'
-        <strong>intégration front</strong>, d'<strong>audit</strong> ou d'<strong
-          >accompagnement sur votre développement avec l'IA</strong
-        >, nous adaptons notre méthodologie à votre projet et votre budget.
+        Qu’il s’agisse d’un back-office, d’un intranet ou d’une application web
+        métier accessible partout, nous disposons de l’expertise technique
+        nécessaire pour intervenir sur vos projets de développement web et vous
+        libérer du temps en simplifiant la gestion de vos données.
+      </p>
+      <p>
+        Nous savons tirer parti de l’intelligence artificielle pour accélérer la
+        production d’écrans de gestion, en complément des technologies que nous
+        maîtrisons au quotidien, telles que React, Tailwind CSS, Shadcn,
+        TanStack Start, TypeScript ou encore, notre starter de projet contenant
+        la mise en place de toutes ces technologies, Start UI [web].
       </p>
     </Prose>
-    <p>TODO</p>
-    <!-- <div class="grid gap-6 py-4 pb-12 sm:grid-cols-2 lg:grid-cols-3">
+  </Container>
+  <Container>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
         <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
           <Image
-            src={imgWireframes}
+            src={imgIntegration}
             width={640}
             height={360}
             alt=""
             class="m-auto!"
           />
         </div>
-        <h3>Wireframes & Prototypage</h3>
-        <>
-          <p>
-            Les wireframes sont des <strong>maquettes fonctionnelles</strong>{
-              ' '
-            }
-            qui définissent la structure et l'<strong
-              >architecture de l'information</strong
-            >{' '}
-            de chaque écran avant le design visuel.
-          </p>
-          <p>
-            Cette phase de <strong>prototypage rapide</strong> permet de valider
-            les parcours utilisateurs et d'itérer efficacement sur l'ergonomie.
-          </p>
-        </>
+        <h3>Intégration</h3>
+        <p>
+          Vous savez déjà à quoi va ressembler votre projet et vous avez besoin
+          de transformer votre « joli » en code ? Il n’y a donc plus qu’à se
+          mettre au travail. Grâce aux <strong>compétences techniques</strong> de
+          notre équipe, nous pouvons vous aider à intégrer les <strong
+            >maquettes</strong
+          > de votre application web ou de votre site internet !
+        </p>
       </Prose>
       <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
         <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
           <Image
-            src={imgDesignSystem}
+            src={imgFrontend}
             width={640}
             height={360}
             alt=""
             class="m-auto!"
           />
         </div>
-        <h3>Maquettes UI & Design System</h3>
-        <>
-          <p>
-            Nos <strong>maquettes haute fidélité</strong> sous Figma représentent
-            le rendu final de votre application, prêtes pour le développement avec
-            tous les <strong>composants UI</strong> spécifiés.
-          </p>
-          <p>
-            Nous créons des <strong>design systems</strong> réutilisables qui garantissent
-            cohérence visuelle et <strong>scalabilité</strong> de votre produit digital.
-          </p>
-        </>
+        <h3>Développement Front</h3>
+        <p>
+          Si vous souhaitez dynamiser votre application web ou mettre rapidement
+          en place des écrans à destination de vos utilisateurs, nos
+          développeurs mettront à profit leur expertise en CSS et JavaScript
+          pour vous proposer des interfaces efficaces et soignées.
+        </p>
       </Prose>
       <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
         <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
           <Image
-            src={imgAuditUx}
+            src={imgBackend}
             width={640}
             height={360}
             alt=""
             class="m-auto!"
           />
         </div>
-        <h3>Audit UX & Tests Utilisateurs</h3>
-        <>
-          <p>
-            Notre <strong>audit ergonomique</strong> identifie les points de friction
-            de votre interface grâce à une analyse experte et des{' '}
-            <strong>tests utilisateurs</strong> qualitatifs.
-          </p>
-          <p>
-            Nous délivrons des <strong>recommandations actionnables</strong> pour
-            améliorer la conversion, l'accessibilité et la satisfaction utilisateur.
-          </p>
-        </>
+        <h3>Développement Back</h3>
+        <p>
+          Pour améliorer les performances, la fiabilité et la scalabilité de
+          votre application web, nos développeurs backend conçoivent des APIs
+          performantes, sécurisent vos données et optimisent l’architecture
+          technique afin de soutenir durablement votre activité en ligne.
+        </p>
       </Prose>
-      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
-          <Image
-            src={imgMoodboard}
-            width={640}
-            height={360}
-            alt=""
-            class="m-auto!"
-          />
-        </div>
-        <h3>Moodboard & Direction Artistique</h3>
-        <>
-          <p>
-            Le moodboard définit l'<strong>identité visuelle</strong> de votre projet
-            à travers un assemblage d'images, couleurs et typographies qui{' '}
-            <strong>expriment l'univers graphique</strong> souhaité.
-          </p>
-          <p>
-            Cette étape créative permet d'<strong>aligner la vision</strong> entre
-            votre équipe et nos designers avant de passer au maquettage.
-          </p>
-        </>
-      </Prose>
-      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
-          <Image
-            src={imgBranding}
-            width={640}
-            height={360}
-            alt=""
-            class="m-auto!"
-          />
-        </div>
-        <h3>Charte Graphique & Branding</h3>
-        <>
-          <p>
-            La <strong>charte graphique</strong> formalise les règles d'utilisation
-            de votre identité visuelle : logo, typographies, palette de couleurs
-            et iconographie.
-          </p>
-          <p>
-            Ce guide de style assure une <strong>cohérence de marque</strong>{
-              ' '
-            }
-            sur tous vos supports digitaux et print pour renforcer votre image.
-          </p>
-        </>
-      </Prose>
-    </div> -->
+    </div>
   </Container>
   <Container>
     <Prose>
@@ -515,6 +461,37 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
           </p>
 
           <p>À bientôt pour votre futur projet !</p>
+        </Accordion>
+        <Accordion
+          question="Pourquoi le BearStudio pour votre développement back ?"
+        >
+          <p>
+            Au BearStudio nous utilisons une stack que nous maîtrisons
+            parfaitement et qui nous permet de gagner beaucoup de temps tout en
+            nous offrant des possibilités quasi infinies.
+          </p>
+
+          <p>
+            Nous suivons un processus rigoureux pour réaliser des tests, et
+            lorsque c’est nécessaire et suivant la vélocité requise, nous
+            réalisons des tests unitaires et des tests d’intégration qui nous
+            permettent de livrer des produits de qualité.
+          </p>
+
+          <p>
+            Nous possédons une expérience et une expertise dans le domaine du
+            dev back, nous avons par exemple traité à plusieurs reprises des
+            problématiques de performance et branché différents services
+            externes (paiement, facturation, stockage de fichiers…) qui nous
+            permettent d’économiser du temps et de l’argent.
+          </p>
+
+          <p>
+            La gamme de compétences de notre entreprise fait de nous une équipe
+            au profil full stack, nous ne nous contentons pas de produire un
+            back end fonctionnel, nous produisons également des interfaces
+            graphiques ergonomiques et accessibles.
+          </p>
         </Accordion>
       </div>
     </Prose>
