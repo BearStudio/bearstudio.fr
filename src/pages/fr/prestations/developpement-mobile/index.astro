@@ -1,6 +1,8 @@
 ---
+import { getLink } from '@/lib/link';
 import { getDataForPeopleCarousel } from '@/lib/people';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import ContactCard from '@/components/contact/contact-card.astro';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
@@ -8,6 +10,9 @@ import { PeopleCarousel } from '@/components/people/people-carousel';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
+import ServiceOtherServices from '@/components/services/service-other-services.astro';
+import ServiceSkills from '@/components/services/service-skills.astro';
+import Accordion from '@/components/ui/accordion.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
@@ -49,9 +54,313 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     />
   </Hero>
   <Container>
+    <div
+      class="flex flex-col gap-8 sm:flex-row-reverse sm:justify-end sm:gap-16"
+    >
+      <div class="flex flex-none flex-col gap-6 sm:w-64 sm:py-4">
+        <ServiceSkills
+          locale={locale}
+          skills={[
+            'react-native',
+            'expo',
+            'typescript',
+            'tanstack-query',
+            'react',
+          ]}
+        />
+        <ServiceOtherServices
+          locale={locale}
+          currentService="mobile-development"
+        />
+      </div>
+
+      <Prose>
+        <h2>Qu'est-ce que le développement mobile ?</h2>
+        <p>
+          Le développement mobile consiste à créer des <strong
+            >applications natives ou hybrides</strong
+          > pour les plateformes iOS et Android. Il permet de tirer parti des fonctionnalités
+          spécifiques des appareils mobiles comme la géolocalisation, l'appareil
+          photo, les notifications push ou encore les capteurs.
+        </p>
+        <p>
+          Une application mobile peut être développée de plusieurs manières : en
+          <strong>natif</strong> (Swift pour iOS, Kotlin pour Android) ce qui offre
+          les meilleures performances mais nécessite deux développements distincts,
+          ou en <strong>cross-platform</strong> (<strong>React Native</strong>,
+          Flutter) permettant de partager une grande partie du code entre les
+          deux plateformes tout en conservant une expérience utilisateur native.
+        </p>
+        <p>
+          Le développement mobile ne se limite pas à la simple création d'une
+          interface. Il inclut également la <strong
+            >gestion de l'état de l'application</strong
+          >, la <strong>synchronisation des données</strong> avec un serveur, l'<strong
+            >optimisation des performances</strong
+          > pour économiser la batterie, la <strong
+            >gestion du mode hors ligne</strong
+          > et la prise en compte des différentes tailles d'écran et versions de
+          systèmes d'exploitation.
+        </p>
+        <p>
+          L'<strong>équipe de développement mobile</strong> accorde une attention
+          particulière à l'<a
+            href={getLink('/fr/prestations/ux-design', locale, {})}
+            ><strong>expérience utilisateur mobile</strong></a
+          >, qui diffère de celle du web. Les <strong
+            >interactions tactiles</strong
+          >, la <strong>navigation gestuelle</strong> et l'<strong
+            >accessibilité sur mobile</strong
+          > sont au cœur de nos préoccupations pour offrir une application intuitive
+          et performante.
+        </p>
+      </Prose>
+    </div>
+  </Container>
+  <Container>
+    <ContactCard
+      locale={locale}
+      title="On est disponible"
+      subtitle="Discutons de votre projet mobile et trouvons ensemble la meilleure approche pour développer votre application."
+      peopleIds={['nicolas-torion', 'hugo-perard']}
+    />
+  </Container>
+
+  <Container>
+    <Prose>
+      <h2>Développement d'application mobile sur mesure</h2>
+      <p>
+        Que vous ayez besoin d'une application mobile pour vos clients, vos
+        collaborateurs ou votre force de vente, nous disposons de l'expertise
+        technique nécessaire pour créer des applications mobiles performantes et
+        adaptées à vos besoins métier.
+      </p>
+      <p>
+        Nous utilisons principalement <strong>React Native</strong> et <strong
+          >Expo</strong
+        > pour développer des applications cross-platform, ce qui nous permet de
+        partager le code entre iOS et Android tout en conservant des performances
+        natives. Notre maîtrise de <strong>TypeScript</strong>, <strong
+          >TanStack Query</strong
+        > et de l'écosystème React nous permet de créer des applications robustes
+        et maintenables.
+      </p>
+      <p>
+        Nous savons également intégrer des fonctionnalités avancées comme l'<strong
+          >authentification biométrique</strong
+        >, les <strong>notifications push</strong>, la <strong
+          >géolocalisation</strong
+        >, le <strong>paiement in-app</strong> ou encore la <strong
+          >synchronisation en temps réel</strong
+        >.
+      </p>
+    </Prose>
+  </Container>
+  <Container>
     <Prose>
       <h2>Nos experts en développement mobile</h2>
     </Prose>
     <PeopleCarousel client:load people={people} locale={locale} />
+  </Container>
+  <Container>
+    <Prose>
+      <h2>Quelles sont les technos les plus utilisées au BearStudio ?</h2>
+      <p>
+        Pour le <strong>développement d'applications mobiles</strong>, nous
+        utilisons principalement <a
+          href="https://reactnative.dev/"
+          target="_blank"
+          rel="noopener">React Native</a
+        >, un framework créé par Meta qui permet de développer des applications
+        natives iOS et Android avec JavaScript. Nous l'associons à <a
+          href="https://expo.dev/"
+          target="_blank"
+          rel="noopener">Expo</a
+        >, une suite d'outils qui simplifie considérablement le développement,
+        les tests et le déploiement d'applications React Native.
+      </p>
+      <p>
+        Ces technologies nous permettent de <strong
+          >partager jusqu'à 95% du code</strong
+        > entre iOS et Android tout en offrant une <strong
+          >expérience native</strong
+        > aux utilisateurs. Nous bénéficions également de l'écosystème React que
+        nous maîtrisons déjà pour le <a
+          href={getLink('/fr/prestations/developpement-web', locale, {})}
+          >développement web</a
+        >, ce qui garantit une cohérence dans nos pratiques et notre qualité de
+        code.
+      </p>
+    </Prose>
+  </Container>
+  <Container>
+    <Prose>
+      <h2>Questions fréquentes sur le développement mobile</h2>
+      <p>
+        Retrouvez les réponses aux questions les plus courantes sur le{' '}
+        <strong>développement d'applications mobiles</strong>, nos méthodologies
+        et bonnes pratiques.
+      </p>
+
+      <div class="flex flex-col">
+        <Accordion
+          question="Quelle est la différence entre une application native et une application hybride ?"
+        >
+          <p>
+            Une <strong>application native</strong> est développée spécifiquement
+            pour une plateforme (iOS ou Android) avec les langages et outils officiels
+            (Swift/SwiftUI pour iOS, Kotlin pour Android). Elle offre les meilleures
+            performances et un accès complet aux fonctionnalités de la plateforme,
+            mais nécessite de développer et maintenir deux applications distinctes.
+          </p>
+          <p>
+            Une <strong>application hybride</strong> ou <strong
+              >cross-platform</strong
+            > est développée avec un seul code source qui fonctionne sur plusieurs
+            plateformes. Avec des technologies comme React Native ou Flutter, on
+            obtient des performances quasi-natives tout en mutualisant une grande
+            partie du développement. C'est généralement le meilleur compromis entre
+            qualité, coût et rapidité de développement.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Pourquoi choisir React Native plutôt que du natif ?"
+        >
+          <p>
+            <strong>React Native</strong> permet de développer pour iOS et Android
+            avec un seul code source, ce qui <strong
+              >réduit considérablement les coûts</strong
+            > et les délais de développement. Les mises à jour et correctifs sont
+            plus rapides car il n'y a qu'une seule base de code à maintenir.
+          </p>
+          <p>
+            Les performances de React Native sont excellentes pour la grande
+            majorité des cas d'usage. L'interface utilisateur est compilée en
+            composants natifs, offrant une expérience fluide et réactive. De
+            plus, si nécessaire, il est possible d'écrire des modules natifs en
+            Swift ou Kotlin pour des fonctionnalités spécifiques nécessitant des
+            performances maximales.
+          </p>
+          <p>
+            L'écosystème React Native est mature et très actif, avec une large
+            communauté et de nombreuses bibliothèques disponibles. Il est
+            maintenu par Meta et utilisé par des applications de premier plan
+            comme Facebook, Instagram, Discord, Shopify ou encore Microsoft
+            Office.
+          </p>
+        </Accordion>
+
+        <Accordion question="Qu'est-ce qu'Expo et pourquoi l'utiliser ?">
+          <p>
+            <strong>Expo</strong> est une plateforme qui simplifie considérablement
+            le développement avec React Native. Elle fournit un ensemble d'outils
+            et de services qui accélèrent le développement, les tests et le déploiement.
+          </p>
+          <p>
+            Expo offre un <strong>SDK complet</strong> avec accès à toutes les fonctionnalités
+            natives (caméra, géolocalisation, notifications, etc.) sans avoir à configurer
+            du code natif. Le système de <strong>build dans le cloud</strong> (EAS
+            Build) permet de compiler les applications sans avoir besoin d'un Mac
+            pour iOS.
+          </p>
+          <p>
+            Le système de <strong>mises à jour OTA</strong> (Over-The-Air) d'Expo
+            permet de déployer des correctifs et nouvelles fonctionnalités instantanément
+            sans passer par les stores, tant que les changements ne concernent pas
+            le code natif.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Comment optimiser les performances d'une application mobile ?"
+        >
+          <p>
+            Grâce à notre bibliothèque de composants <a
+              href="https://ficus-ui.com">Ficus UI</a
+            >
+            nous optimisons les rendus de votre application tout en conservant le
+            design propre à votre marque.
+          </p>
+          <p>
+            Nous optimisons également le <strong
+              >chargement et le cache des images</strong
+            >, qui sont souvent la principale source de ralentissements. Les
+            animations sont réalisées avec <strong>Reanimated</strong> qui exécute
+            le code d'animation sur le thread UI natif pour des performances optimales.
+          </p>
+          <p>
+            La <strong>taille du bundle JavaScript</strong> est minimisée grâce au
+            code-splitting et au tree-shaking. Nous surveillons également la consommation
+            mémoire et utilisons des outils de profiling pour identifier et corriger
+            les goulots d'étranglement.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Pourquoi le BearStudio pour votre développement mobile ?"
+        >
+          <p>
+            Le développement mobile est l'une des expertises clés du BearStudio.
+            Nous avons développé de nombreuses applications mobiles pour des
+            startups et des grands comptes, avec des problématiques variées
+            allant de la simple application vitrine à des applications métier
+            complexes.
+          </p>
+
+          <p>
+            Notre maîtrise de <strong>React Native et Expo</strong> nous permet de
+            livrer rapidement des applications de qualité professionnelle, tout en
+            conservant la flexibilité nécessaire pour s'adapter à vos besoins spécifiques.
+          </p>
+
+          <p>
+            Nous sommes très sensibles aux <a
+              href={getLink('/fr/prestations/ux-design', locale, {})}
+              >problématiques UI et UX</a
+            > et savons adapter les interfaces aux spécificités du mobile : interactions
+            tactiles, navigation gestuelle, adaptation aux différentes tailles d'écran.
+          </p>
+
+          <p>
+            Nous prenons en compte l'accessibilité dès la conception pour
+            garantir que vos applications soient utilisables par tous, y compris
+            les personnes en situation de handicap.
+          </p>
+
+          <p>
+            Notre approche collaborative et notre communication transparente
+            tout au long du projet garantissent que votre application mobile
+            réponde parfaitement à vos attentes et aux besoins de vos
+            utilisateurs.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Peut-on publier facilement sur les stores iOS et Android ?"
+        >
+          <p>
+            Oui, nous accompagnons nos clients dans tout le processus de
+            publication sur l'<strong>App Store</strong> (iOS) et le <strong
+              >Google Play Store</strong
+            > (Android). Cela inclut la création des comptes développeurs, la préparation
+            des assets (icônes, captures d'écran, descriptions), et la soumission
+            des applications.
+          </p>
+          <p>
+            Nous gérons également les <strong>reviews</strong> et les éventuelles
+            demandes de modifications des stores. Avec <strong
+              >EAS Submit</strong
+            > d'Expo, le processus de soumission est grandement simplifié et peut
+            même être automatisé dans un pipeline CI/CD.
+          </p>
+          <p>
+            Pour les mises à jour mineures ne nécessitant pas de changements
+            natifs, nous utilisons les <strong>mises à jour OTA</strong> qui permettent
+            de déployer instantanément sans passer par la validation des stores.
+          </p>
+        </Accordion>
+      </div>
+    </Prose>
   </Container>
 </MainLayout>
