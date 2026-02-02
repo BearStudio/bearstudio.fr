@@ -60,7 +60,6 @@ const MAIN_NAV: Array<NavItem> = [
     iconActive: PiNoteFill,
     desktop: 'primary',
     mobile: 'primary',
-    locales: ['fr'],
   },
 ];
 
