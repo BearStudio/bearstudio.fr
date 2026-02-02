@@ -1,7 +1,7 @@
 ---
 name: 'Yoann Fleury'
 picture: './yoann.png'
-job: 'Front-End Developer'
+job: 'Lead Front-End Developer'
 socials:
   - type: 'x'
     href: 'https://twitter.com/YoannFleuryDev'

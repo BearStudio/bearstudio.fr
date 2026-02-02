@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-
 import { getLink } from '@/lib/link';
 import { getDataForPeopleCarousel } from '@/lib/people';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
@@ -14,6 +12,7 @@ import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import ServiceOtherServices from '@/components/services/service-other-services.astro';
 import ServiceSkills from '@/components/services/service-skills.astro';
+import SubService from '@/components/services/sub-service.astro';
 import Accordion from '@/components/ui/accordion.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
@@ -153,17 +152,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
   </Container>
   <Container>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
-          <Image
-            src={imgIntegration}
-            width={640}
-            height={360}
-            alt=""
-            class="m-auto!"
-          />
-        </div>
-        <h3>Intégration</h3>
+      <SubService image={imgIntegration} title="Intégration">
         <p>
           Vous savez déjà à quoi va ressembler votre projet et vous avez besoin
           de transformer votre « joli » en code ? Il n’y a donc plus qu’à se
@@ -172,43 +161,23 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
             >maquettes</strong
           > de votre application web ou de votre site internet !
         </p>
-      </Prose>
-      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
-          <Image
-            src={imgFrontend}
-            width={640}
-            height={360}
-            alt=""
-            class="m-auto!"
-          />
-        </div>
-        <h3>Développement Front</h3>
+      </SubService>
+      <SubService image={imgFrontend} title="Développement Front">
         <p>
           Si vous souhaitez dynamiser votre application web ou mettre rapidement
           en place des écrans à destination de vos utilisateurs, nos
           développeurs mettront à profit leur expertise en CSS et JavaScript
           pour vous proposer des interfaces efficaces et soignées.
         </p>
-      </Prose>
-      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
-          <Image
-            src={imgBackend}
-            width={640}
-            height={360}
-            alt=""
-            class="m-auto!"
-          />
-        </div>
-        <h3>Développement Back</h3>
+      </SubService>
+      <SubService image={imgBackend} title="Développement Back">
         <p>
           Pour améliorer les performances, la fiabilité et la scalabilité de
           votre application web, nos développeurs backend conçoivent des APIs
           performantes, sécurisent vos données et optimisent l’architecture
           technique afin de soutenir durablement votre activité en ligne.
         </p>
-      </Prose>
+      </SubService>
     </div>
   </Container>
   <Container>

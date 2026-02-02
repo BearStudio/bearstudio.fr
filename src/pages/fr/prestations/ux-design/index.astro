@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-
 import { getDataForPeopleCarousel } from '@/lib/people';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import ContactCard from '@/components/contact/contact-card.astro';
@@ -14,6 +12,7 @@ import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import ServiceOtherServices from '@/components/services/service-other-services.astro';
 import ServiceSkills from '@/components/services/service-skills.astro';
+import SubService from '@/components/services/sub-service.astro';
 import Accordion from '@/components/ui/accordion.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
@@ -127,127 +126,67 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       </p>
     </Prose>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
-          <Image
-            src={imgWireframes}
-            width={640}
-            height={360}
-            alt=""
-            class="m-auto!"
-          />
-        </div>
-        <h3>Wireframes & Prototypage</h3>
-        <>
-          <p>
-            Les wireframes sont des <strong>maquettes fonctionnelles</strong>{
-              ' '
-            }
-            qui définissent la structure et l'<strong
-              >architecture de l'information</strong
-            >{' '}
-            de chaque écran avant le design visuel.
-          </p>
-          <p>
-            Cette phase de <strong>prototypage rapide</strong> permet de valider
-            les parcours utilisateurs et d'itérer efficacement sur l'ergonomie.
-          </p>
-        </>
-      </Prose>
-      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
-          <Image
-            src={imgDesignSystem}
-            width={640}
-            height={360}
-            alt=""
-            class="m-auto!"
-          />
-        </div>
-        <h3>Maquettes UI & Design System</h3>
-        <>
-          <p>
-            Nos <strong>maquettes haute fidélité</strong> sous Figma représentent
-            le rendu final de votre application, prêtes pour le développement avec
-            tous les <strong>composants UI</strong> spécifiés.
-          </p>
-          <p>
-            Nous créons des <strong>design systems</strong> réutilisables qui garantissent
-            cohérence visuelle et <strong>scalabilité</strong> de votre produit digital.
-          </p>
-        </>
-      </Prose>
-      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
-          <Image
-            src={imgAuditUx}
-            width={640}
-            height={360}
-            alt=""
-            class="m-auto!"
-          />
-        </div>
-        <h3>Audit UX & Tests Utilisateurs</h3>
-        <>
-          <p>
-            Notre <strong>audit ergonomique</strong> identifie les points de friction
-            de votre interface grâce à une analyse experte et des{' '}
-            <strong>tests utilisateurs</strong> qualitatifs.
-          </p>
-          <p>
-            Nous délivrons des <strong>recommandations actionnables</strong> pour
-            améliorer la conversion, l'accessibilité et la satisfaction utilisateur.
-          </p>
-        </>
-      </Prose>
-      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
-          <Image
-            src={imgMoodboard}
-            width={640}
-            height={360}
-            alt=""
-            class="m-auto!"
-          />
-        </div>
-        <h3>Moodboard & Direction Artistique</h3>
-        <>
-          <p>
-            Le moodboard définit l'<strong>identité visuelle</strong> de votre projet
-            à travers un assemblage d'images, couleurs et typographies qui{' '}
-            <strong>expriment l'univers graphique</strong> souhaité.
-          </p>
-          <p>
-            Cette étape créative permet d'<strong>aligner la vision</strong> entre
-            votre équipe et nos designers avant de passer au maquettage.
-          </p>
-        </>
-      </Prose>
-      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-        <div class="bg-brand-100 border-brand-200 -mb-4 flex rounded-md border">
-          <Image
-            src={imgBranding}
-            width={640}
-            height={360}
-            alt=""
-            class="m-auto!"
-          />
-        </div>
-        <h3>Charte Graphique & Branding</h3>
-        <>
-          <p>
-            La <strong>charte graphique</strong> formalise les règles d'utilisation
-            de votre identité visuelle : logo, typographies, palette de couleurs
-            et iconographie.
-          </p>
-          <p>
-            Ce guide de style assure une <strong>cohérence de marque</strong>{
-              ' '
-            }
-            sur tous vos supports digitaux et print pour renforcer votre image.
-          </p>
-        </>
-      </Prose>
+      <SubService image={imgWireframes} title="Wireframes & Prototypage">
+        <p>
+          Les wireframes sont des <strong>maquettes fonctionnelles</strong>{' '}
+          qui définissent la structure et l'<strong
+            >architecture de l'information</strong
+          >{' '}
+          de chaque écran avant le design visuel.
+        </p>
+        <p>
+          Cette phase de <strong>prototypage rapide</strong> permet de valider les
+          parcours utilisateurs et d'itérer efficacement sur l'ergonomie.
+        </p>
+      </SubService>
+
+      <SubService image={imgDesignSystem} title="Maquettes UI & Design System">
+        <p>
+          Nos <strong>maquettes haute fidélité</strong> sous Figma représentent le
+          rendu final de votre application, prêtes pour le développement avec tous
+          les <strong>composants UI</strong> spécifiés.
+        </p>
+        <p>
+          Nous créons des <strong>design systems</strong> réutilisables qui garantissent
+          cohérence visuelle et <strong>scalabilité</strong> de votre produit digital.
+        </p>
+      </SubService>
+
+      <SubService image={imgAuditUx} title="Audit UX & Tests Utilisateurs">
+        <p>
+          Notre <strong>audit ergonomique</strong> identifie les points de friction
+          de votre interface grâce à une analyse experte et des{' '}
+          <strong>tests utilisateurs</strong> qualitatifs.
+        </p>
+        <p>
+          Nous délivrons des <strong>recommandations actionnables</strong> pour améliorer
+          la conversion, l'accessibilité et la satisfaction utilisateur.
+        </p>
+      </SubService>
+
+      <SubService image={imgMoodboard} title="Moodboard & Direction Artistique">
+        <p>
+          Le moodboard définit l'<strong>identité visuelle</strong> de votre projet
+          à travers un assemblage d'images, couleurs et typographies qui{' '}
+          <strong>expriment l'univers graphique</strong> souhaité.
+        </p>
+        <p>
+          Cette étape créative permet d'<strong>aligner la vision</strong> entre
+          votre équipe et nos designers avant de passer au maquettage.
+        </p>
+      </SubService>
+
+      <SubService image={imgBranding} title="Charte Graphique & Branding">
+        <p>
+          La <strong>charte graphique</strong> formalise les règles d'utilisation
+          de votre identité visuelle : logo, typographies, palette de couleurs et
+          iconographie.
+        </p>
+        <p>
+          Ce guide de style assure une <strong>cohérence de marque</strong>{' '}
+          sur tous vos supports digitaux et print pour renforcer votre image.
+        </p>
+      </SubService>
     </div>
   </Container>
   <Container>

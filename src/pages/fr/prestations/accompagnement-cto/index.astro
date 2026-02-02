@@ -1,6 +1,8 @@
 ---
+import { getLink } from '@/lib/link';
 import { getDataForPeopleCarousel } from '@/lib/people';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import ContactCard from '@/components/contact/contact-card.astro';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
@@ -8,10 +10,16 @@ import { PeopleCarousel } from '@/components/people/people-carousel';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
+import ServiceOtherServices from '@/components/services/service-other-services.astro';
+import SubService from '@/components/services/sub-service.astro';
+import Accordion from '@/components/ui/accordion.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
+import imgAudit from './_audit.jpg';
 import imgBg from './_bg.jpg';
+import imgManagement from './_management.jpg';
+import imgStrategy from './_strategy.jpg';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
@@ -49,9 +57,387 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     />
   </Hero>
   <Container>
+    <div
+      class="flex flex-col gap-8 sm:flex-row-reverse sm:justify-end sm:gap-16"
+    >
+      <div class="flex flex-none flex-col gap-6 sm:w-64 sm:py-4">
+        <ServiceOtherServices locale={locale} currentService="cto-support" />
+      </div>
+
+      <Prose>
+        <h2>Qu'est-ce que l'accompagnement CTO ?</h2>
+        <p>
+          L'accompagnement CTO (Chief Technology Officer) consiste à vous
+          apporter une <strong>expertise technique stratégique</strong> pour guider
+          les décisions technologiques de votre entreprise ou de votre projet. Que
+          vous soyez une startup sans CTO en interne, une PME qui souhaite structurer
+          sa stratégie tech, ou une entreprise qui a besoin d'un regard externe sur
+          ses choix techniques, nous sommes là pour vous accompagner.
+        </p>
+        <p>
+          Le rôle d'un CTO ne se limite pas à la technique pure. Il englobe
+          également la <strong>gestion d'équipe</strong>, le <strong
+            >recrutement technique</strong
+          >, la <strong>définition de la roadmap produit</strong>, l'<strong
+            >architecture logicielle</strong
+          >, le <strong>choix des technologies</strong> et la mise en place de
+          <strong>bonnes pratiques de développement</strong>.
+        </p>
+        <p>
+          Notre accompagnement s'adapte à vos besoins : nous pouvons intervenir
+          de manière <strong>ponctuelle</strong> pour un audit technique ou une problématique
+          spécifique, ou de manière <strong>récurrente</strong> en tant que CTO as
+          a Service pour structurer et faire évoluer votre stratégie technique sur
+          le long terme.
+        </p>
+        <p>
+          Avec notre expérience dans le <a
+            href={getLink('/fr/prestations/developpement-web', locale, {})}
+            >développement web</a
+          >, le <a
+            href={getLink('/fr/prestations/developpement-mobile', locale, {})}
+            >développement mobile</a
+          > et l'<a href={getLink('/fr/prestations/ux-design', locale, {})}
+            >UX design</a
+          >, nous avons une vision complète du cycle de vie d'un produit
+          numérique et pouvons vous conseiller de manière holistique.
+        </p>
+      </Prose>
+    </div>
+  </Container>
+  <Container>
+    <ContactCard
+      locale={locale}
+      title="On est disponible"
+      subtitle="Discutons de vos enjeux techniques et trouvons ensemble les solutions adaptées à votre contexte."
+      peopleIds={['yoann-fleury', 'ivan-dalmet']}
+    />
+  </Container>
+
+  <Container>
     <Prose>
-      <h2>Nos experts en accompagement CTO</h2>
+      <h2>Accompagnement CTO sur mesure</h2>
+      <p>
+        Que vous ayez besoin d'un <strong>audit technique</strong>, de définir
+        votre <strong>architecture applicative</strong>, de structurer vos <strong
+          >équipes de développement</strong
+        > ou de vous faire accompagner dans vos <strong
+          >choix stratégiques</strong
+        >, nous mettons à votre disposition notre expertise de plus de 15 ans
+        dans le développement de produits numériques.
+      </p>
+      <p>
+        Nous intervenons sur des problématiques variées : <strong
+          >refonte technique</strong
+        >, <strong>optimisation des performances</strong>, <strong
+          >mise en place de processus</strong
+        > (CI/CD, tests, revue de code), <strong
+          >structuration de la dette technique</strong
+        >, <strong>choix de stack technologique</strong>, <strong
+          >recrutement et montée en compétences des équipes</strong
+        >.
+      </p>
+      <p>
+        Notre approche est pragmatique et orientée résultats. Nous ne nous
+        contentons pas de recommandations théoriques : nous vous accompagnons
+        dans la mise en œuvre concrète des solutions identifiées, en nous
+        appuyant sur notre expérience terrain du développement.
+      </p>
+    </Prose>
+  </Container>
+
+  <Container>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <SubService title="Audit technique" image={imgAudit}>
+        <p>
+          Analyse approfondie de votre <strong>code</strong>, de votre <strong
+            >architecture</strong
+          >, de vos <strong>processus</strong> et de votre <strong
+            >stack technologique</strong
+          >. Nous identifions les points d'amélioration et vous proposons un
+          plan d'action priorisé pour optimiser votre système.
+        </p>
+      </SubService>
+      <SubService image={imgStrategy} title="Stratégie technique">
+        <p>
+          Définition de votre <strong>roadmap technique</strong>, choix des <strong
+            >technologies adaptées</strong
+          > à vos enjeux, arbitrages entre <strong>time-to-market</strong> et <strong
+            >qualité</strong
+          >, alignement de la tech avec vos objectifs business.
+        </p>
+      </SubService>
+      <SubService image={imgManagement} title="Management d'équipe">
+        <p>
+          Structuration et animation de vos <strong
+            >équipes de développement</strong
+          >, mise en place de <strong>rituels agiles</strong>, accompagnement au
+          <strong>recrutement</strong>, <strong
+            >montée en compétences des développeurs</strong
+          > et création d'une culture technique saine.
+        </p>
+      </SubService>
+    </div>
+  </Container>
+
+  <Container>
+    <Prose>
+      <h2>Nos experts en accompagnement CTO</h2>
     </Prose>
     <PeopleCarousel client:load people={people} locale={locale} />
+  </Container>
+
+  <Container>
+    <Prose>
+      <h2>Notre approche de l'accompagnement CTO</h2>
+      <p>
+        Au BearStudio, nous ne sommes pas que des consultants : nous sommes des
+        <strong>praticiens</strong>. Nos CTO ont les mains dans le code au
+        quotidien sur nos projets, ce qui nous permet de vous apporter des
+        conseils concrets et réalistes, ancrés dans la pratique du développement
+        moderne.
+      </p>
+      <p>
+        Nous croyons en une approche <strong>pragmatique et itérative</strong>.
+        Plutôt que de grandes transformations théoriques, nous préférons des
+        améliorations progressives et mesurables qui apportent rapidement de la
+        valeur. Notre objectif est de vous rendre <strong>autonome</strong> sur vos
+        sujets techniques, pas de créer une dépendance.
+      </p>
+      <p>
+        Notre expertise couvre l'ensemble de l'écosystème <strong
+          >JavaScript/TypeScript</strong
+        > moderne (React, React Native, Node.js, TanStack, etc.) ainsi que les bonnes
+        pratiques de <strong>DevOps</strong>, d'<strong
+          >architecture logicielle</strong
+        > et de <strong>gestion de produit</strong>.
+      </p>
+    </Prose>
+  </Container>
+
+  <Container>
+    <Prose>
+      <h2>Questions fréquentes sur l'accompagnement CTO</h2>
+      <p>
+        Retrouvez les réponses aux questions les plus courantes sur l'<strong
+          >accompagnement CTO</strong
+        >, nos interventions et notre méthodologie.
+      </p>
+
+      <div class="flex flex-col">
+        <Accordion question="Quand faire appel à un accompagnement CTO ?">
+          <p>
+            Plusieurs situations peuvent justifier un accompagnement CTO externe
+            :
+          </p>
+          <ul>
+            <li>
+              Vous êtes une <strong>startup en phase de lancement</strong> et vous
+              n'avez pas encore de CTO en interne
+            </li>
+            <li>
+              Votre <strong>CTO actuel est surchargé</strong> et a besoin d'un soutien
+              sur certains sujets
+            </li>
+            <li>
+              Vous souhaitez un <strong>regard externe</strong> sur vos choix techniques
+              ou votre architecture
+            </li>
+            <li>
+              Vous devez prendre des <strong
+                >décisions stratégiques importantes</strong
+              > (refonte, changement de stack, scaling)
+            </li>
+            <li>
+              Vous rencontrez des <strong>problèmes de performance</strong>, de
+              qualité de code ou de dette technique
+            </li>
+            <li>
+              Vous avez besoin d'<strong
+                >accompagnement sur le recrutement</strong
+              > ou la structuration de votre équipe tech
+            </li>
+          </ul>
+        </Accordion>
+
+        <Accordion
+          question="Quelle est la différence entre un CTO et un Lead Developer ?"
+        >
+          <p>
+            Le <strong>Lead Developer</strong> (ou Tech Lead) est avant tout un développeur
+            senior qui guide l'équipe sur les aspects techniques au quotidien. Il
+            est très impliqué dans le code et prend des décisions d'architecture
+            technique sur le produit.
+          </p>
+          <p>
+            Le <strong>CTO</strong> a une vision plus stratégique et transverse.
+            Il définit la direction technique de l'entreprise, fait le lien entre
+            la tech et le business, gère les aspects budgétaires, pilote le recrutement
+            et structure les processus. Il peut coder, mais ce n'est pas son activité
+            principale.
+          </p>
+          <p>
+            Dans les petites structures, ces rôles se chevauchent souvent. Un
+            accompagnement CTO peut d'ailleurs vous aider à clarifier ces rôles
+            et à structurer votre organisation tech.
+          </p>
+        </Accordion>
+
+        <Accordion question="Comment se déroule un audit technique ?">
+          <p>
+            Un audit technique commence par une <strong
+              >phase de découverte</strong
+            > où nous échangeons avec vos équipes pour comprendre votre contexte,
+            vos enjeux et vos objectifs. Nous analysons ensuite votre code, votre
+            architecture, vos processus et vos outils.
+          </p>
+          <p>
+            Nous produisons un <strong>rapport d'audit détaillé</strong> qui identifie
+            les points forts, les axes d'amélioration et les risques techniques.
+            Chaque point est accompagné d'un <strong
+              >plan d'action concret</strong
+            > avec une estimation d'effort et une priorisation.
+          </p>
+          <p>
+            L'audit se conclut par une <strong>présentation interactive</strong>
+            où nous discutons des recommandations et ajustons les priorités en fonction
+            de vos contraintes. Nous pouvons ensuite vous accompagner dans la mise
+            en œuvre des améliorations identifiées.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Quelle est la durée d'un accompagnement CTO typique ?"
+        >
+          <p>
+            La durée dépend de vos besoins et de votre contexte. Un <strong
+              >audit technique ponctuel</strong
+            > peut se faire en quelques jours à deux semaines. Un accompagnement
+            pour une problématique spécifique (refonte, recrutement, etc.) peut durer
+            de quelques semaines à quelques mois.
+          </p>
+          <p>
+            Pour un <strong>CTO as a Service</strong>, nous recommandons
+            généralement un engagement d'au moins 3 à 6 mois pour pouvoir
+            réellement impacter votre organisation. L'intervention peut être à
+            temps partiel (1 à 2 jours par semaine) ou plus intensive selon les
+            besoins.
+          </p>
+          <p>
+            Nous privilégions les <strong>engagements flexibles</strong> qui peuvent
+            s'adapter à l'évolution de vos besoins plutôt que des contrats rigides
+            sur le long terme.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Comment gérez-vous la confidentialité et la sécurité ?"
+        >
+          <p>
+            La <strong>confidentialité</strong> est au cœur de notre démarche. Nous
+            signons systématiquement des accords de confidentialité (NDA) avant toute
+            intervention et ne partageons jamais d'informations sur nos clients sans
+            leur accord explicite.
+          </p>
+          <p>
+            Concernant la <strong>sécurité</strong>, nous suivons les bonnes
+            pratiques de l'industrie : accès sécurisés aux systèmes (MFA, VPN si
+            nécessaire), gestion stricte des accès et des credentials, respect
+            du RGPD pour les données personnelles.
+          </p>
+          <p>
+            Si votre contexte nécessite des mesures de sécurité spécifiques,
+            nous nous adaptons à vos exigences et pouvons intervenir dans des
+            environnements hautement sécurisés.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Pouvez-vous nous aider à recruter des développeurs ?"
+        >
+          <p>
+            Oui, nous accompagnons régulièrement nos clients dans leur <strong
+              >recrutement technique</strong
+            >. Nous pouvons vous aider à définir les profils recherchés, rédiger
+            les offres d'emploi, évaluer les candidatures et mener les
+            entretiens techniques.
+          </p>
+          <p>
+            Notre connaissance approfondie de l'écosystème technique et notre
+            expérience du recrutement nous permettent d'<strong
+              >identifier rapidement les bons profils</strong
+            > et d'éviter les erreurs de casting coûteuses.
+          </p>
+          <p>
+            Nous pouvons également vous conseiller sur les <strong
+              >fourchettes de salaires</strong
+            >, les arguments pour attirer les talents et la structuration de
+            votre processus de recrutement pour le rendre efficace et attractif.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Pourquoi le BearStudio pour votre accompagnement CTO ?"
+        >
+          <p>
+            Au BearStudio, nous ne sommes pas que des consultants : nous sommes
+            des <strong>builders</strong>. Nous développons nous-mêmes des
+            produits, nous maintenons des projets open source, nous sommes au
+            contact quotidien du code et des problématiques concrètes de
+            développement.
+          </p>
+
+          <p>
+            Cette <strong>expérience terrain</strong> nous permet de vous apporter
+            des conseils pragmatiques, testés et éprouvés, plutôt que des recommandations
+            théoriques déconnectées de la réalité du développement.
+          </p>
+
+          <p>
+            Nous avons accompagné des startups en phase d'amorçage comme des
+            scaleups et des grands comptes, sur des problématiques très variées.
+            Cette diversité d'expérience nous permet de nous adapter rapidement
+            à votre contexte et de vous apporter des solutions pertinentes.
+          </p>
+
+          <p>
+            Notre approche est <strong>collaborative et transparente</strong>.
+            Nous travaillons avec vos équipes, pas à leur place. Notre objectif
+            est de vous transmettre nos connaissances et de vous rendre autonome
+            sur vos enjeux techniques.
+          </p>
+
+          <p>
+            Enfin, notre expertise couvre l'ensemble du spectre du développement
+            web et mobile moderne. Que vous travailliez avec React, React
+            Native, Node.js ou d'autres technologies, nous avons l'expertise
+            pour vous guider efficacement.
+          </p>
+        </Accordion>
+
+        <Accordion
+          question="Proposez-vous de l'accompagnement pour des technologies spécifiques ?"
+        >
+          <p>
+            Notre expertise principale se concentre sur l'écosystème <strong
+              >JavaScript/TypeScript</strong
+            > : React, React Native, Node.js, Next.js, TanStack Start, Astro, et
+            l'ensemble des technologies associées (TailwindCSS, Prisma, tRPC, etc.).
+          </p>
+          <p>
+            Nous maîtrisons également les aspects <strong>DevOps</strong> modernes
+            : CI/CD, containerisation (Docker), déploiement cloud (Vercel, AWS, etc.),
+            monitoring et performance.
+          </p>
+          <p>
+            Si votre stack technique sort de notre périmètre d'expertise
+            principal, nous serons transparents avec vous et pourrons vous
+            orienter vers les bons partenaires. Nous préférons reconnaître nos
+            limites plutôt que de vous accompagner sur des sujets que nous ne
+            maîtrisons pas parfaitement.
+          </p>
+        </Accordion>
+      </div>
+    </Prose>
   </Container>
 </MainLayout>
