@@ -59,7 +59,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       description={t('services.uxDesign.description')}
     />
   </Hero>
-  <Container class="pb-0">
+  <Container>
     <div
       class="flex flex-col gap-8 md:flex-row-reverse md:justify-end md:gap-16"
     >
@@ -105,7 +105,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     </div>
   </Container>
 
-  <Container>
+  <Container class="pt-0">
     <ContactCard
       locale={locale}
       title="On est disponible"
@@ -125,7 +125,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
         méthodologie à votre projet et votre budget.
       </p>
     </Prose>
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-2 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <SubService image={imgWireframes} title="Wireframes & Prototypage">
         <p>
           Les wireframes sont des <strong>maquettes fonctionnelles</strong>{' '}
