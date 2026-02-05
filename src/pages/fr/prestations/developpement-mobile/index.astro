@@ -1,4 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+
+import { PiArrowSquareOut } from 'react-icons/pi';
+
 import { getLink } from '@/lib/link';
 import { getDataForPeopleCarousel } from '@/lib/people';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
@@ -8,15 +12,18 @@ import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
 import { PeopleCarousel } from '@/components/people/people-carousel';
 import Prose from '@/components/prose.astro';
+import SectionScratched from '@/components/sections/section-scratched.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import ServiceOtherServices from '@/components/services/service-other-services.astro';
 import ServiceSkills from '@/components/services/service-skills.astro';
 import Accordion from '@/components/ui/accordion.astro';
+import { buttonVariants } from '@/components/ui/button';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
 import imgBg from './_bg.jpg';
+import imgStartUiNative from './_start-ui-native.jpg';
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const t = getTranslationFn(locale);
@@ -162,6 +169,52 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     </Prose>
     <PeopleCarousel client:load people={people} locale={locale} />
   </Container>
+  <SectionScratched image={imgBg} class="my-12">
+    <Container class="flex-col-reverse items-center gap-8 py-20 sm:flex-row">
+      <div class="flex flex-2 flex-col gap-4">
+        <h2 class="font-heading text-accent text-2xl font-bold text-balance">
+          Start UI [native]
+        </h2>
+        <p class="max-w-[70ch] text-sm text-balance">
+          Notre <strong>starter mobile open source</strong> basé sur React Native
+          et
+          <a
+            href="https://expo.dev/"
+            class="hover:text-accent underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Expo</a
+          > offre authentification, dark mode et outils de déploiement vers les stores.
+          Aligné sur notre starter web et notre kit Figma, il permet à nos développeurs
+          de créer des applications mobiles natives partageant la même logique et
+          cohérence visuelle.
+        </p>
+        <a
+          href="http://native.start-ui.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={buttonVariants()}
+        >
+          Obtenir sur GitHub <PiArrowSquareOut />
+        </a>
+      </div>
+      <a
+        class="flex flex-2"
+        href="http://native.start-ui.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={imgStartUiNative}
+          width={640}
+          height={360}
+          alt="Start UI Native preview"
+          class="shadow-brand-700 rounded-md shadow-2xl"
+        />
+      </a>
+    </Container>
+  </SectionScratched>
   <Container>
     <Prose>
       <h2>Quelles sont les technos les plus utilisées au BearStudio ?</h2>
