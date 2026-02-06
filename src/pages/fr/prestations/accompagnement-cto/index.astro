@@ -45,6 +45,8 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
 <MainLayout>
   <SEO
     slot="seo"
+    title={t('services.ctoSupport.title')}
+    description={t('services.ctoSupport.description')}
     alternates={getAlternates('/fr/prestations/accompagnement-cto', {})}
     breadcrumb={breadcrumb}
   />

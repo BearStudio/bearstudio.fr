@@ -18,9 +18,10 @@ import type { BreadcrumbEntry } from '../breadcrumb/utils';
 
 interface Props
   extends Pick<
-    ComponentProps<typeof SEO>,
-    'title' | 'description' | 'noindex' | 'nofollow' | 'openGraph'
-  > {
+      ComponentProps<typeof SEO>,
+      'noindex' | 'nofollow' | 'openGraph'
+    >,
+    Required<Pick<ComponentProps<typeof SEO>, 'title' | 'description'>> {
   image?: NonNullable<
     ComponentProps<typeof SEO>['openGraph']
   >['basic']['image'];
