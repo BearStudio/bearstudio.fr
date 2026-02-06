@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 
 import { PiArrowSquareOut } from 'react-icons/pi';
+import { match } from 'ts-pattern';
 
 import { getDataForPeopleCarousel } from '@/lib/people';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
@@ -78,35 +79,75 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       </div>
 
       <Prose class="flex-1">
-        <h2>Qu'est-ce que l'UX Design ?</h2>
-        <p>
-          L'<strong>UX Design</strong> (User Experience Design) est une discipline
-          qui vise à <strong>optimiser l'expérience utilisateur</strong> sur les
-          interfaces numériques. Cette approche centrée utilisateur englobe l'ergonomie,
-          le design d'interface, l'architecture de l'information et la recherche
-          utilisateur pour créer des produits digitaux <strong
-            >intuitifs et performants</strong
-          >.
-        </p>
-        <p>
-          Notre <strong>agence UX Design en Normandie</strong> accompagne startups,
-          PME et grands groupes dans la conception d'<strong
-            >applications web et mobiles</strong
-          >{' '}
-          qui répondent aux attentes de leurs utilisateurs. Nos UX/UI designers combinent
-          créativité et méthodologie pour transformer vos idées en
-          <strong> interfaces engageantes</strong>.
-        </p>
-        <h3>Pourquoi investir dans l'UX Design ?</h3>
-        <p>
-          Un <strong>bon design UX</strong> impacte directement vos indicateurs business
-          :
-          <strong> taux de conversion</strong>, rétention utilisateur,
-          satisfaction client et référencement naturel. Les interfaces bien
-          conçues réduisent le taux de rebond, augmentent le temps passé sur
-          votre site et favorisent l'engagement. Investir dans l'UX, c'est
-          investir dans la <strong>croissance de votre entreprise</strong>.
-        </p>
+        {
+          match(locale)
+            .with('fr', () => (
+              <>
+                <h2>Qu'est-ce que l'UX Design ?</h2>
+                <p>
+                  L'<strong>UX Design</strong> (User Experience Design) est une
+                  discipline qui vise à{' '}
+                  <strong>optimiser l'expérience utilisateur</strong> sur les
+                  interfaces numériques. Cette approche centrée utilisateur
+                  englobe l'ergonomie, le design d'interface, l'architecture de
+                  l'information et la recherche utilisateur pour créer des
+                  produits digitaux <strong>intuitifs et performants</strong>.
+                </p>
+                <p>
+                  Notre <strong>agence UX Design en Normandie</strong>{' '}
+                  accompagne startups, PME et grands groupes dans la conception
+                  d'
+                  <strong>applications web et mobiles</strong> qui répondent aux
+                  attentes de leurs utilisateurs. Nos UX/UI designers combinent
+                  créativité et méthodologie pour transformer vos idées en
+                  <strong> interfaces engageantes</strong>.
+                </p>
+                <h3>Pourquoi investir dans l'UX Design ?</h3>
+                <p>
+                  Un <strong>bon design UX</strong> impacte directement vos
+                  indicateurs business : <strong>taux de conversion</strong>,
+                  rétention utilisateur, satisfaction client et référencement
+                  naturel. Les interfaces bien conçues réduisent le taux de
+                  rebond, augmentent le temps passé sur votre site et favorisent
+                  l'engagement. Investir dans l'UX, c'est investir dans la{' '}
+                  <strong>croissance de votre entreprise</strong>.
+                </p>
+              </>
+            ))
+            .with('en', () => (
+              <>
+                <h2>What is UX Design?</h2>
+                <p>
+                  <strong>UX Design</strong> (User Experience Design) is a
+                  discipline that aims to{' '}
+                  <strong>optimize the user experience</strong> on digital
+                  interfaces. This user-centered approach encompasses
+                  ergonomics, interface design, information architecture and
+                  user research to create{' '}
+                  <strong>intuitive and high-performing</strong> digital
+                  products.
+                </p>
+                <p>
+                  Our <strong>UX Design agency in Normandy</strong> supports
+                  startups, SMEs and large companies in designing{' '}
+                  <strong>web and mobile applications</strong> that meet their
+                  users' expectations. Our UX/UI designers combine creativity
+                  and methodology to transform your ideas into{' '}
+                  <strong>engaging interfaces</strong>.
+                </p>
+                <h3>Why invest in UX Design?</h3>
+                <p>
+                  <strong>Good UX design</strong> directly impacts your business
+                  metrics: <strong>conversion rate</strong>, user retention,
+                  customer satisfaction and organic search rankings.
+                  Well-designed interfaces reduce bounce rates, increase time
+                  spent on your site and boost engagement. Investing in UX means
+                  investing in your <strong>business growth</strong>.
+                </p>
+              </>
+            ))
+            .exhaustive()
+        }
       </Prose>
     </div>
   </Container>
@@ -114,90 +155,278 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
   <Container class="pt-0">
     <ContactCard
       locale={locale}
-      title="On est disponible"
-      subtitle="Discutons de votre projet et trouvons ensemble la meilleure approche UX pour vos utilisateurs."
+      title={match(locale)
+        .with('fr', () => 'On est disponible')
+        .with('en', () => "We're available")
+        .exhaustive()}
+      subtitle={match(locale)
+        .with(
+          'fr',
+          () =>
+            'Discutons de votre projet et trouvons ensemble la meilleure approche UX pour vos utilisateurs.'
+        )
+        .with(
+          'en',
+          () =>
+            "Let's discuss your project and find the best UX approach for your users together."
+        )
+        .exhaustive()}
       peopleIds={['ivan-dalmet', 'daryl-avila-bonnet']}
     />
   </Container>
 
   <Container>
     <Prose>
-      <h2>Nos prestations UX/UI Design</h2>
-      <p>
-        Notre <strong>studio de design</strong> propose un accompagnement complet,
-        du cadrage stratégique jusqu'au design system. Que vous ayez besoin d'un
-        <strong> audit UX</strong>, de <strong>wireframes</strong> ou de{' '}
-        <strong>maquettes haute fidélité</strong>, nous adaptons notre
-        méthodologie à votre projet et votre budget.
-      </p>
+      {
+        match(locale)
+          .with('fr', () => (
+            <>
+              <h2>Nos prestations UX/UI Design</h2>
+              <p>
+                Notre <strong>studio de design</strong> propose un
+                accompagnement complet, du cadrage stratégique jusqu'au design
+                system. Que vous ayez besoin d'un
+                <strong> audit UX</strong>, de <strong>wireframes</strong> ou de{' '}
+                <strong>maquettes haute fidélité</strong>, nous adaptons notre
+                méthodologie à votre projet et votre budget.
+              </p>
+            </>
+          ))
+          .with('en', () => (
+            <>
+              <h2>Our UX/UI Design Services</h2>
+              <p>
+                Our <strong>design studio</strong> offers end-to-end support,
+                from strategic framing to design systems. Whether you need a
+                <strong> UX audit</strong>, <strong>wireframes</strong> or{' '}
+                <strong>high-fidelity mockups</strong>, we tailor our
+                methodology to your project and budget.
+              </p>
+            </>
+          ))
+          .exhaustive()
+      }
     </Prose>
     <div class="mt-2 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <SubService image={imgWireframes} title="Wireframes & Prototypage">
-        <p>
-          Les wireframes sont des <strong>maquettes fonctionnelles</strong>{' '}
-          qui définissent la structure et l'<strong
-            >architecture de l'information</strong
-          >{' '}
-          de chaque écran avant le design visuel.
-        </p>
-        <p>
-          Cette phase de <strong>prototypage rapide</strong> permet de valider les
-          parcours utilisateurs et d'itérer efficacement sur l'ergonomie.
-        </p>
+      <SubService
+        image={imgWireframes}
+        title={match(locale)
+          .with('fr', () => 'Wireframes & Prototypage')
+          .with('en', () => 'Wireframes & Prototyping')
+          .exhaustive()}
+      >
+        {
+          match(locale)
+            .with('fr', () => (
+              <>
+                <p>
+                  Les wireframes sont des{' '}
+                  <strong>maquettes fonctionnelles</strong> qui définissent la
+                  structure et l'
+                  <strong>architecture de l'information</strong> de chaque écran
+                  avant le design visuel.
+                </p>
+                <p>
+                  Cette phase de <strong>prototypage rapide</strong> permet de
+                  valider les parcours utilisateurs et d'itérer efficacement sur
+                  l'ergonomie.
+                </p>
+              </>
+            ))
+            .with('en', () => (
+              <>
+                <p>
+                  Wireframes are <strong>functional mockups</strong> that define
+                  the structure and <strong>information architecture</strong> of
+                  each screen before visual design.
+                </p>
+                <p>
+                  This <strong>rapid prototyping</strong> phase validates user
+                  journeys and allows efficient iteration on ergonomics.
+                </p>
+              </>
+            ))
+            .exhaustive()
+        }
       </SubService>
 
-      <SubService image={imgDesignSystem} title="Maquettes UI & Design System">
-        <p>
-          Nos <strong>maquettes haute fidélité</strong> sous Figma représentent le
-          rendu final de votre application, prêtes pour le développement avec tous
-          les <strong>composants UI</strong> spécifiés.
-        </p>
-        <p>
-          Nous créons des <strong>design systems</strong> réutilisables qui garantissent
-          cohérence visuelle et <strong>scalabilité</strong> de votre produit digital.
-        </p>
+      <SubService
+        image={imgDesignSystem}
+        title={match(locale)
+          .with('fr', () => 'Maquettes UI & Design System')
+          .with('en', () => 'UI Mockups & Design System')
+          .exhaustive()}
+      >
+        {
+          match(locale)
+            .with('fr', () => (
+              <>
+                <p>
+                  Nos <strong>maquettes haute fidélité</strong> sous Figma
+                  représentent le rendu final de votre application, prêtes pour
+                  le développement avec tous les <strong>composants UI</strong>{' '}
+                  spécifiés.
+                </p>
+                <p>
+                  Nous créons des <strong>design systems</strong> réutilisables
+                  qui garantissent cohérence visuelle et{' '}
+                  <strong>scalabilité</strong> de votre produit digital.
+                </p>
+              </>
+            ))
+            .with('en', () => (
+              <>
+                <p>
+                  Our <strong>high-fidelity mockups</strong> in Figma represent
+                  the final rendering of your application, ready for development
+                  with all <strong>UI components</strong> specified.
+                </p>
+                <p>
+                  We create reusable <strong>design systems</strong> that ensure
+                  visual consistency and <strong>scalability</strong> of your
+                  digital product.
+                </p>
+              </>
+            ))
+            .exhaustive()
+        }
       </SubService>
 
-      <SubService image={imgAuditUx} title="Audit UX & Tests Utilisateurs">
-        <p>
-          Notre <strong>audit ergonomique</strong> identifie les points de friction
-          de votre interface grâce à une analyse experte et des{' '}
-          <strong>tests utilisateurs</strong> qualitatifs.
-        </p>
-        <p>
-          Nous délivrons des <strong>recommandations actionnables</strong> pour améliorer
-          la conversion, l'accessibilité et la satisfaction utilisateur.
-        </p>
+      <SubService
+        image={imgAuditUx}
+        title={match(locale)
+          .with('fr', () => 'Audit UX & Tests Utilisateurs')
+          .with('en', () => 'UX Audit & User Testing')
+          .exhaustive()}
+      >
+        {
+          match(locale)
+            .with('fr', () => (
+              <>
+                <p>
+                  Notre <strong>audit ergonomique</strong> identifie les points
+                  de friction de votre interface grâce à une analyse experte et
+                  des <strong>tests utilisateurs</strong> qualitatifs.
+                </p>
+                <p>
+                  Nous délivrons des{' '}
+                  <strong>recommandations actionnables</strong> pour améliorer
+                  la conversion, l'accessibilité et la satisfaction utilisateur.
+                </p>
+              </>
+            ))
+            .with('en', () => (
+              <>
+                <p>
+                  Our <strong>ergonomic audit</strong> identifies friction
+                  points in your interface through expert analysis and
+                  qualitative <strong>user testing</strong>.
+                </p>
+                <p>
+                  We deliver <strong>actionable recommendations</strong> to
+                  improve conversion, accessibility and user satisfaction.
+                </p>
+              </>
+            ))
+            .exhaustive()
+        }
       </SubService>
 
-      <SubService image={imgMoodboard} title="Moodboard & Direction Artistique">
-        <p>
-          Le moodboard définit l'<strong>identité visuelle</strong> de votre projet
-          à travers un assemblage d'images, couleurs et typographies qui{' '}
-          <strong>expriment l'univers graphique</strong> souhaité.
-        </p>
-        <p>
-          Cette étape créative permet d'<strong>aligner la vision</strong> entre
-          votre équipe et nos designers avant de passer au maquettage.
-        </p>
+      <SubService
+        image={imgMoodboard}
+        title={match(locale)
+          .with('fr', () => 'Moodboard & Direction Artistique')
+          .with('en', () => 'Moodboard & Art Direction')
+          .exhaustive()}
+      >
+        {
+          match(locale)
+            .with('fr', () => (
+              <>
+                <p>
+                  Le moodboard définit l'
+                  <strong>identité visuelle</strong> de votre projet à travers
+                  un assemblage d'images, couleurs et typographies qui{' '}
+                  <strong>expriment l'univers graphique</strong> souhaité.
+                </p>
+                <p>
+                  Cette étape créative permet d'
+                  <strong>aligner la vision</strong> entre votre équipe et nos
+                  designers avant de passer au maquettage.
+                </p>
+              </>
+            ))
+            .with('en', () => (
+              <>
+                <p>
+                  The moodboard defines the <strong>visual identity</strong> of
+                  your project through a collection of images, colors and
+                  typography that{' '}
+                  <strong>express the desired graphic universe</strong>.
+                </p>
+                <p>
+                  This creative step helps <strong>align the vision</strong>{' '}
+                  between your team and our designers before moving on to
+                  mockups.
+                </p>
+              </>
+            ))
+            .exhaustive()
+        }
       </SubService>
 
-      <SubService image={imgBranding} title="Charte Graphique & Branding">
-        <p>
-          La <strong>charte graphique</strong> formalise les règles d'utilisation
-          de votre identité visuelle : logo, typographies, palette de couleurs et
-          iconographie.
-        </p>
-        <p>
-          Ce guide de style assure une <strong>cohérence de marque</strong>{' '}
-          sur tous vos supports digitaux et print pour renforcer votre image.
-        </p>
+      <SubService
+        image={imgBranding}
+        title={match(locale)
+          .with('fr', () => 'Charte Graphique & Branding')
+          .with('en', () => 'Brand Guidelines & Branding')
+          .exhaustive()}
+      >
+        {
+          match(locale)
+            .with('fr', () => (
+              <>
+                <p>
+                  La <strong>charte graphique</strong> formalise les règles
+                  d'utilisation de votre identité visuelle : logo, typographies,
+                  palette de couleurs et iconographie.
+                </p>
+                <p>
+                  Ce guide de style assure une{' '}
+                  <strong>cohérence de marque</strong> sur tous vos supports
+                  digitaux et print pour renforcer votre image.
+                </p>
+              </>
+            ))
+            .with('en', () => (
+              <>
+                <p>
+                  <strong>Brand guidelines</strong> formalize the usage rules
+                  for your visual identity: logo, typography, color palette and
+                  iconography.
+                </p>
+                <p>
+                  This style guide ensures <strong>brand consistency</strong>{' '}
+                  across all your digital and print materials to strengthen your
+                  image.
+                </p>
+              </>
+            ))
+            .exhaustive()
+        }
       </SubService>
     </div>
   </Container>
   <Container>
     <Prose>
-      <h2>Nos experts UX/UI Design</h2>
+      <h2>
+        {
+          match(locale)
+            .with('fr', () => 'Nos experts UX/UI Design')
+            .with('en', () => 'Our UX/UI Design Experts')
+            .exhaustive()
+        }
+      </h2>
     </Prose>
     <PeopleCarousel client:load people={people} locale={locale} />
   </Container>
@@ -209,18 +438,46 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
           Start UI [figma]
         </h2>
         <p class="max-w-[70ch] text-sm text-balance">
-          Notre <strong>kit de design Figma open source</strong> offre une bibliothèque
-          de composants avec auto-layout et variants, alignée sur notre starter technique
-          <a
-            href="http://web.start-ui.com"
-            class="hover:text-accent underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Start UI [web]
-          </a>. Il permet à nos designers de concevoir des interfaces
-          directement implémentables par les développeurs, garantissant une
-          cohérence parfaite entre maquettes et produit final.
+          {
+            match(locale)
+              .with('fr', () => (
+                <>
+                  Notre <strong>kit de design Figma open source</strong> offre
+                  une bibliothèque de composants avec auto-layout et variants,
+                  alignée sur notre starter technique{' '}
+                  <a
+                    href="http://web.start-ui.com"
+                    class="hover:text-accent underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Start UI [web]
+                  </a>
+                  . Il permet à nos designers de concevoir des interfaces
+                  directement implémentables par les développeurs, garantissant
+                  une cohérence parfaite entre maquettes et produit final.
+                </>
+              ))
+              .with('en', () => (
+                <>
+                  Our <strong>open source Figma design kit</strong> provides a
+                  component library with auto-layout and variants, aligned with
+                  our technical starter{' '}
+                  <a
+                    href="http://web.start-ui.com"
+                    class="hover:text-accent underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Start UI [web]
+                  </a>
+                  . It enables our designers to create interfaces that are
+                  directly implementable by developers, ensuring perfect
+                  consistency between mockups and the final product.
+                </>
+              ))
+              .exhaustive()
+          }
         </p>
         <a
           href="http://figma.start-ui.com"
@@ -228,7 +485,13 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
           rel="noopener noreferrer"
           class={buttonVariants()}
         >
-          Obtenir sur Figma <PiArrowSquareOut />
+          {
+            match(locale)
+              .with('fr', () => 'Obtenir sur Figma')
+              .with('en', () => 'Get on Figma')
+              .exhaustive()
+          }
+          <PiArrowSquareOut />
         </a>
       </div>
       <a
@@ -250,224 +513,587 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
 
   <Container>
     <Prose>
-      <h2>Questions fréquentes sur l'UX Design</h2>
-      <p>
-        Retrouvez les réponses aux questions les plus courantes sur le{' '}
-        <strong>design d'expérience utilisateur</strong>, nos méthodologies et
-        bonnes pratiques en UX/UI design.
-      </p>
+      {
+        match(locale)
+          .with('fr', () => (
+            <>
+              <h2>Questions fréquentes sur l'UX Design</h2>
+              <p>
+                Retrouvez les réponses aux questions les plus courantes sur le{' '}
+                <strong>design d'expérience utilisateur</strong>, nos
+                méthodologies et bonnes pratiques en UX/UI design.
+              </p>
+            </>
+          ))
+          .with('en', () => (
+            <>
+              <h2>Frequently Asked Questions about UX Design</h2>
+              <p>
+                Find the answers to the most common questions about{' '}
+                <strong>user experience design</strong>, our methodologies and
+                UX/UI design best practices.
+              </p>
+            </>
+          ))
+          .exhaustive()
+      }
 
       <div class="flex flex-col">
         <Accordion
-          question="Quelle est la différence entre UX Design et UI Design\u00a0?"
+          question={match(locale)
+            .with(
+              'fr',
+              () =>
+                'Quelle est la différence entre UX Design et UI Design\u00a0?'
+            )
+            .with(
+              'en',
+              () => 'What is the difference between UX Design and UI Design?'
+            )
+            .exhaustive()}
         >
-          <p>
-            L'<strong>UX Design</strong> (User Experience) se concentre sur l'expérience
-            globale de l'utilisateur : parcours, ergonomie, facilité d'utilisation
-            et satisfaction. L'<strong>UI Design</strong> (User Interface) concerne
-            l'aspect visuel : couleurs, typographies, icônes et animations.
-          </p>
-          <p>
-            Ces deux disciplines sont complémentaires. Un bon produit digital
-            nécessite à la fois une UX réfléchie (l'utilisateur trouve
-            facilement ce qu'il cherche) et une UI soignée (l'interface est
-            esthétique et cohérente avec la marque).
-          </p>
-          <p>
-            Chez BearStudio, nos designers maîtrisent les deux aspects pour
-            créer des interfaces qui sont à la fois <strong
-              >belles et fonctionnelles</strong
-            >.
-          </p>
+          {
+            match(locale)
+              .with('fr', () => (
+                <>
+                  <p>
+                    L'<strong>UX Design</strong> (User Experience) se concentre
+                    sur l'expérience globale de l'utilisateur : parcours,
+                    ergonomie, facilité d'utilisation et satisfaction. L'
+                    <strong>UI Design</strong> (User Interface) concerne
+                    l'aspect visuel : couleurs, typographies, icônes et
+                    animations.
+                  </p>
+                  <p>
+                    Ces deux disciplines sont complémentaires. Un bon produit
+                    digital nécessite à la fois une UX réfléchie (l'utilisateur
+                    trouve facilement ce qu'il cherche) et une UI soignée
+                    (l'interface est esthétique et cohérente avec la marque).
+                  </p>
+                  <p>
+                    Chez BearStudio, nos designers maîtrisent les deux aspects
+                    pour créer des interfaces qui sont à la fois{' '}
+                    <strong>belles et fonctionnelles</strong>.
+                  </p>
+                </>
+              ))
+              .with('en', () => (
+                <>
+                  <p>
+                    <strong>UX Design</strong> (User Experience) focuses on the
+                    overall user experience: journeys, ergonomics, ease of use
+                    and satisfaction. <strong>UI Design</strong> (User
+                    Interface) concerns the visual aspect: colors, typography,
+                    icons and animations.
+                  </p>
+                  <p>
+                    These two disciplines are complementary. A good digital
+                    product requires both a thoughtful UX (the user easily finds
+                    what they're looking for) and a polished UI (the interface
+                    is aesthetic and consistent with the brand).
+                  </p>
+                  <p>
+                    At BearStudio, our designers master both aspects to create
+                    interfaces that are both{' '}
+                    <strong>beautiful and functional</strong>.
+                  </p>
+                </>
+              ))
+              .exhaustive()
+          }
         </Accordion>
 
         <Accordion
-          question="Quels outils utilisez-vous pour le design UX/UI\u00a0?"
+          question={match(locale)
+            .with(
+              'fr',
+              () => 'Quels outils utilisez-vous pour le design UX/UI\u00a0?'
+            )
+            .with('en', () => 'What tools do you use for UX/UI design?')
+            .exhaustive()}
         >
-          <p>
-            Notre stack design s'articule autour d'outils collaboratifs et
-            performants :
-          </p>
-          <ul>
-            <li>
-              <strong>Figma :</strong> notre outil principal pour les wireframes,
-              maquettes et prototypes interactifs
-            </li>
-            <li>
-              <strong>FigJam :</strong> pour les ateliers collaboratifs et le brainstorming
-            </li>
-            <li>
-              <strong>Maze / Hotjar :</strong> pour les tests utilisateurs et l'analyse
-              comportementale
-            </li>
-            <li>
-              <strong>Notion :</strong> pour la documentation et le suivi projet
-            </li>
-          </ul>
-          <p>
-            Tous nos livrables sont partagés en temps réel, vous permettant de
-            suivre l'avancement et de commenter directement sur les maquettes.
-          </p>
+          {
+            match(locale)
+              .with('fr', () => (
+                <>
+                  <p>
+                    Notre stack design s'articule autour d'outils collaboratifs
+                    et performants :
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Figma :</strong> notre outil principal pour les
+                      wireframes, maquettes et prototypes interactifs
+                    </li>
+                    <li>
+                      <strong>FigJam :</strong> pour les ateliers collaboratifs
+                      et le brainstorming
+                    </li>
+                    <li>
+                      <strong>Maze / Hotjar :</strong> pour les tests
+                      utilisateurs et l'analyse comportementale
+                    </li>
+                    <li>
+                      <strong>Notion :</strong> pour la documentation et le
+                      suivi projet
+                    </li>
+                  </ul>
+                  <p>
+                    Tous nos livrables sont partagés en temps réel, vous
+                    permettant de suivre l'avancement et de commenter
+                    directement sur les maquettes.
+                  </p>
+                </>
+              ))
+              .with('en', () => (
+                <>
+                  <p>
+                    Our design stack revolves around collaborative and
+                    high-performing tools:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Figma:</strong> our main tool for wireframes,
+                      mockups and interactive prototypes
+                    </li>
+                    <li>
+                      <strong>FigJam:</strong> for collaborative workshops and
+                      brainstorming
+                    </li>
+                    <li>
+                      <strong>Maze / Hotjar:</strong> for user testing and
+                      behavioral analysis
+                    </li>
+                    <li>
+                      <strong>Notion:</strong> for documentation and project
+                      tracking
+                    </li>
+                  </ul>
+                  <p>
+                    All our deliverables are shared in real time, allowing you
+                    to track progress and comment directly on the mockups.
+                  </p>
+                </>
+              ))
+              .exhaustive()
+          }
         </Accordion>
 
         <Accordion
-          question="Comment se déroule un projet UX Design chez BearStudio\u00a0?"
+          question={match(locale)
+            .with(
+              'fr',
+              () =>
+                'Comment se déroule un projet UX Design chez BearStudio\u00a0?'
+            )
+            .with(
+              'en',
+              () => 'How does a UX Design project work at BearStudio?'
+            )
+            .exhaustive()}
         >
-          <p>Notre méthodologie UX suit un processus éprouvé en 5 étapes :</p>
-          <ul>
-            <li>
-              <strong>1. Discovery :</strong> compréhension de vos objectifs, analyse
-              concurrentielle et définition des personas
-            </li>
-            <li>
-              <strong>2. Architecture :</strong> arborescence, user flows et architecture
-              de l'information
-            </li>
-            <li>
-              <strong>3. Wireframing :</strong> maquettes fonctionnelles pour valider
-              les parcours
-            </li>
-            <li>
-              <strong>4. UI Design :</strong> création de l'identité visuelle et
-              des maquettes haute fidélité
-            </li>
-            <li>
-              <strong>5. Prototypage :</strong> prototype interactif pour les tests
-              et la validation finale
-            </li>
-          </ul>
-          <p>
-            Chaque étape inclut des <strong>points de validation</strong> pour garantir
-            l'alignement avec votre vision. La durée moyenne d'un projet complet
-            est de 4 à 8 semaines.
-          </p>
+          {
+            match(locale)
+              .with('fr', () => (
+                <>
+                  <p>
+                    Notre méthodologie UX suit un processus éprouvé en 5 étapes
+                    :
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>1. Discovery :</strong> compréhension de vos
+                      objectifs, analyse concurrentielle et définition des
+                      personas
+                    </li>
+                    <li>
+                      <strong>2. Architecture :</strong> arborescence, user
+                      flows et architecture de l'information
+                    </li>
+                    <li>
+                      <strong>3. Wireframing :</strong> maquettes fonctionnelles
+                      pour valider les parcours
+                    </li>
+                    <li>
+                      <strong>4. UI Design :</strong> création de l'identité
+                      visuelle et des maquettes haute fidélité
+                    </li>
+                    <li>
+                      <strong>5. Prototypage :</strong> prototype interactif
+                      pour les tests et la validation finale
+                    </li>
+                  </ul>
+                  <p>
+                    Chaque étape inclut des{' '}
+                    <strong>points de validation</strong> pour garantir
+                    l'alignement avec votre vision. La durée moyenne d'un projet
+                    complet est de 4 à 8 semaines.
+                  </p>
+                </>
+              ))
+              .with('en', () => (
+                <>
+                  <p>Our UX methodology follows a proven 5-step process:</p>
+                  <ul>
+                    <li>
+                      <strong>1. Discovery:</strong> understanding your goals,
+                      competitive analysis and persona definition
+                    </li>
+                    <li>
+                      <strong>2. Architecture:</strong> sitemap, user flows and
+                      information architecture
+                    </li>
+                    <li>
+                      <strong>3. Wireframing:</strong> functional mockups to
+                      validate user journeys
+                    </li>
+                    <li>
+                      <strong>4. UI Design:</strong> creation of the visual
+                      identity and high-fidelity mockups
+                    </li>
+                    <li>
+                      <strong>5. Prototyping:</strong> interactive prototype for
+                      testing and final validation
+                    </li>
+                  </ul>
+                  <p>
+                    Each step includes <strong>validation checkpoints</strong>{' '}
+                    to ensure alignment with your vision. The average duration
+                    of a complete project is 4 to 8 weeks.
+                  </p>
+                </>
+              ))
+              .exhaustive()
+          }
         </Accordion>
 
         <Accordion
-          question="Pourquoi faire un audit UX de mon site ou application\u00a0?"
+          question={match(locale)
+            .with(
+              'fr',
+              () =>
+                'Pourquoi faire un audit UX de mon site ou application\u00a0?'
+            )
+            .with(
+              'en',
+              () => 'Why should I get a UX audit for my website or application?'
+            )
+            .exhaustive()}
         >
-          <p>
-            Un <strong>audit UX</strong> permet d'identifier les freins à la conversion
-            et les points de friction qui nuisent à l'expérience utilisateur. C'est
-            particulièrement pertinent si vous constatez :
-          </p>
-          <ul>
-            <li>
-              Un <strong>taux de rebond élevé</strong> sur certaines pages
-            </li>
-            <li>
-              Un <strong>taux de conversion faible</strong> malgré un bon trafic
-            </li>
-            <li>Des <strong>retours négatifs</strong> de vos utilisateurs</li>
-            <li>Une <strong>augmentation des demandes au support</strong></li>
-          </ul>
-          <p>
-            Notre audit combine analyse heuristique, tests utilisateurs et
-            analyse des données pour vous fournir un <strong
-              >plan d'action priorisé</strong
-            >{' '}
-            avec un impact mesurable sur vos KPIs.
-          </p>
+          {
+            match(locale)
+              .with('fr', () => (
+                <>
+                  <p>
+                    Un <strong>audit UX</strong> permet d'identifier les freins
+                    à la conversion et les points de friction qui nuisent à
+                    l'expérience utilisateur. C'est particulièrement pertinent
+                    si vous constatez :
+                  </p>
+                  <ul>
+                    <li>
+                      Un <strong>taux de rebond élevé</strong> sur certaines
+                      pages
+                    </li>
+                    <li>
+                      Un <strong>taux de conversion faible</strong> malgré un
+                      bon trafic
+                    </li>
+                    <li>
+                      Des <strong>retours négatifs</strong> de vos utilisateurs
+                    </li>
+                    <li>
+                      Une <strong>augmentation des demandes au support</strong>
+                    </li>
+                  </ul>
+                  <p>
+                    Notre audit combine analyse heuristique, tests utilisateurs
+                    et analyse des données pour vous fournir un{' '}
+                    <strong>plan d'action priorisé</strong> avec un impact
+                    mesurable sur vos KPIs.
+                  </p>
+                </>
+              ))
+              .with('en', () => (
+                <>
+                  <p>
+                    A <strong>UX audit</strong> identifies conversion barriers
+                    and friction points that harm the user experience. It's
+                    particularly relevant if you notice:
+                  </p>
+                  <ul>
+                    <li>
+                      A <strong>high bounce rate</strong> on certain pages
+                    </li>
+                    <li>
+                      A <strong>low conversion rate</strong> despite good
+                      traffic
+                    </li>
+                    <li>
+                      <strong>Negative feedback</strong> from your users
+                    </li>
+                    <li>
+                      An <strong>increase in support requests</strong>
+                    </li>
+                  </ul>
+                  <p>
+                    Our audit combines heuristic analysis, user testing and data
+                    analysis to provide you with a{' '}
+                    <strong>prioritized action plan</strong> with a measurable
+                    impact on your KPIs.
+                  </p>
+                </>
+              ))
+              .exhaustive()
+          }
         </Accordion>
 
         <Accordion
-          question="Qu'est-ce qu'un design system et pourquoi en créer un\u00a0?"
+          question={match(locale)
+            .with(
+              'fr',
+              () =>
+                "Qu'est-ce qu'un design system et pourquoi en créer un\u00a0?"
+            )
+            .with('en', () => 'What is a design system and why create one?')
+            .exhaustive()}
         >
-          <p>
-            Un <strong>design system</strong> est une bibliothèque de composants
-            UI réutilisables (boutons, formulaires, cartes, etc.) accompagnée de
-            règles d'usage. Il garantit la <strong>cohérence visuelle</strong>
-            de votre produit et accélère considérablement le développement.
-          </p>
-          <p>Les bénéfices d'un design system sont multiples :</p>
-          <ul>
-            <li>
-              <strong>Cohérence :</strong> une expérience uniforme sur toutes les
-              pages
-            </li>
-            <li>
-              <strong>Rapidité :</strong> les développeurs réutilisent des composants
-              prêts à l'emploi
-            </li>
-            <li>
-              <strong>Scalabilité :</strong> facilite l'ajout de nouvelles fonctionnalités
-            </li>
-            <li>
-              <strong>Maintenance :</strong> un changement se propage automatiquement
-              partout
-            </li>
-          </ul>
-          <p>
-            Nous créons des design systems sous Figma parfaitement synchronisés
-            avec le code, notamment grâce à notre stack React et Tailwind CSS.
-          </p>
+          {
+            match(locale)
+              .with('fr', () => (
+                <>
+                  <p>
+                    Un <strong>design system</strong> est une bibliothèque de
+                    composants UI réutilisables (boutons, formulaires, cartes,
+                    etc.) accompagnée de règles d'usage. Il garantit la{' '}
+                    <strong>cohérence visuelle</strong> de votre produit et
+                    accélère considérablement le développement.
+                  </p>
+                  <p>Les bénéfices d'un design system sont multiples :</p>
+                  <ul>
+                    <li>
+                      <strong>Cohérence :</strong> une expérience uniforme sur
+                      toutes les pages
+                    </li>
+                    <li>
+                      <strong>Rapidité :</strong> les développeurs réutilisent
+                      des composants prêts à l'emploi
+                    </li>
+                    <li>
+                      <strong>Scalabilité :</strong> facilite l'ajout de
+                      nouvelles fonctionnalités
+                    </li>
+                    <li>
+                      <strong>Maintenance :</strong> un changement se propage
+                      automatiquement partout
+                    </li>
+                  </ul>
+                  <p>
+                    Nous créons des design systems sous Figma parfaitement
+                    synchronisés avec le code, notamment grâce à notre stack
+                    React et Tailwind CSS.
+                  </p>
+                </>
+              ))
+              .with('en', () => (
+                <>
+                  <p>
+                    A <strong>design system</strong> is a library of reusable UI
+                    components (buttons, forms, cards, etc.) accompanied by
+                    usage rules. It ensures the{' '}
+                    <strong>visual consistency</strong> of your product and
+                    significantly accelerates development.
+                  </p>
+                  <p>The benefits of a design system are numerous:</p>
+                  <ul>
+                    <li>
+                      <strong>Consistency:</strong> a uniform experience across
+                      all pages
+                    </li>
+                    <li>
+                      <strong>Speed:</strong> developers reuse ready-made
+                      components
+                    </li>
+                    <li>
+                      <strong>Scalability:</strong> makes it easier to add new
+                      features
+                    </li>
+                    <li>
+                      <strong>Maintenance:</strong> a change automatically
+                      propagates everywhere
+                    </li>
+                  </ul>
+                  <p>
+                    We create design systems in Figma perfectly synchronized
+                    with the code, thanks to our React and Tailwind CSS stack.
+                  </p>
+                </>
+              ))
+              .exhaustive()
+          }
         </Accordion>
 
         <Accordion
-          question="Comment l'UX Design améliore-t-il le référencement SEO\u00a0?"
+          question={match(locale)
+            .with(
+              'fr',
+              () =>
+                "Comment l'UX Design améliore-t-il le référencement SEO\u00a0?"
+            )
+            .with('en', () => 'How does UX Design improve SEO?')
+            .exhaustive()}
         >
-          <p>
-            Google intègre désormais l'<strong>expérience utilisateur</strong>
-            dans ses critères de classement via les <strong
-              >Core Web Vitals</strong
-            >. Une bonne UX impacte directement votre SEO :
-          </p>
-          <ul>
-            <li>
-              <strong>Temps de chargement :</strong> des interfaces optimisées chargent
-              plus vite
-            </li>
-            <li>
-              <strong>Taux de rebond :</strong> une UX soignée retient les visiteurs
-              plus longtemps
-            </li>
-            <li>
-              <strong>Mobile-first :</strong> un design responsive est indispensable
-              pour le SEO mobile
-            </li>
-            <li>
-              <strong>Accessibilité :</strong> les bonnes pratiques UX améliorent
-              l'accessibilité, valorisée par Google
-            </li>
-          </ul>
-          <p>
-            Investir dans l'UX, c'est donc aussi investir dans votre{' '}
-            <strong>visibilité sur les moteurs de recherche</strong>.
-          </p>
+          {
+            match(locale)
+              .with('fr', () => (
+                <>
+                  <p>
+                    Google intègre désormais l'
+                    <strong>expérience utilisateur</strong> dans ses critères de
+                    classement via les <strong>Core Web Vitals</strong>. Une
+                    bonne UX impacte directement votre SEO :
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Temps de chargement :</strong> des interfaces
+                      optimisées chargent plus vite
+                    </li>
+                    <li>
+                      <strong>Taux de rebond :</strong> une UX soignée retient
+                      les visiteurs plus longtemps
+                    </li>
+                    <li>
+                      <strong>Mobile-first :</strong> un design responsive est
+                      indispensable pour le SEO mobile
+                    </li>
+                    <li>
+                      <strong>Accessibilité :</strong> les bonnes pratiques UX
+                      améliorent l'accessibilité, valorisée par Google
+                    </li>
+                  </ul>
+                  <p>
+                    Investir dans l'UX, c'est donc aussi investir dans votre{' '}
+                    <strong>visibilité sur les moteurs de recherche</strong>.
+                  </p>
+                </>
+              ))
+              .with('en', () => (
+                <>
+                  <p>
+                    Google now incorporates <strong>user experience</strong>{' '}
+                    into its ranking criteria through{' '}
+                    <strong>Core Web Vitals</strong>. Good UX directly impacts
+                    your SEO:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Loading time:</strong> optimized interfaces load
+                      faster
+                    </li>
+                    <li>
+                      <strong>Bounce rate:</strong> polished UX retains visitors
+                      longer
+                    </li>
+                    <li>
+                      <strong>Mobile-first:</strong> responsive design is
+                      essential for mobile SEO
+                    </li>
+                    <li>
+                      <strong>Accessibility:</strong> UX best practices improve
+                      accessibility, valued by Google
+                    </li>
+                  </ul>
+                  <p>
+                    Investing in UX also means investing in your{' '}
+                    <strong>search engine visibility</strong>.
+                  </p>
+                </>
+              ))
+              .exhaustive()
+          }
         </Accordion>
 
         <Accordion
-          question="Travaillez-vous avec des startups et des projets early-stage\u00a0?"
+          question={match(locale)
+            .with(
+              'fr',
+              () =>
+                'Travaillez-vous avec des startups et des projets early-stage\u00a0?'
+            )
+            .with(
+              'en',
+              () => 'Do you work with startups and early-stage projects?'
+            )
+            .exhaustive()}
         >
-          <p>
-            Absolument ! Nous accompagnons régulièrement des <strong
-              >startups</strong
-            >{' '}
-            dans la conception de leur MVP (Minimum Viable Product). Notre approche
-            lean permet de :
-          </p>
-          <ul>
-            <li>
-              <strong>Valider rapidement</strong> vos hypothèses avec des prototypes
-              testables
-            </li>
-            <li>
-              <strong>Prioriser les fonctionnalités</strong> essentielles pour le
-              lancement
-            </li>
-            <li>
-              <strong>Optimiser votre budget</strong> en évitant les développements
-              inutiles
-            </li>
-            <li>
-              <strong>Itérer efficacement</strong> en fonction des retours utilisateurs
-            </li>
-          </ul>
-          <p>
-            Nous proposons des <strong>forfaits startup</strong> adaptés aux contraintes
-            budgétaires des projets early-stage, avec la possibilité d'échelonner
-            les prestations.
-          </p>
+          {
+            match(locale)
+              .with('fr', () => (
+                <>
+                  <p>
+                    Absolument ! Nous accompagnons régulièrement des{' '}
+                    <strong>startups</strong> dans la conception de leur MVP
+                    (Minimum Viable Product). Notre approche lean permet de :
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Valider rapidement</strong> vos hypothèses avec
+                      des prototypes testables
+                    </li>
+                    <li>
+                      <strong>Prioriser les fonctionnalités</strong>{' '}
+                      essentielles pour le lancement
+                    </li>
+                    <li>
+                      <strong>Optimiser votre budget</strong> en évitant les
+                      développements inutiles
+                    </li>
+                    <li>
+                      <strong>Itérer efficacement</strong> en fonction des
+                      retours utilisateurs
+                    </li>
+                  </ul>
+                  <p>
+                    Nous proposons des <strong>forfaits startup</strong> adaptés
+                    aux contraintes budgétaires des projets early-stage, avec la
+                    possibilité d'échelonner les prestations.
+                  </p>
+                </>
+              ))
+              .with('en', () => (
+                <>
+                  <p>
+                    Absolutely! We regularly support <strong>startups</strong>{' '}
+                    in designing their MVP (Minimum Viable Product). Our lean
+                    approach allows us to:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Quickly validate</strong> your hypotheses with
+                      testable prototypes
+                    </li>
+                    <li>
+                      <strong>Prioritize the features</strong> essential for
+                      launch
+                    </li>
+                    <li>
+                      <strong>Optimize your budget</strong> by avoiding
+                      unnecessary development
+                    </li>
+                    <li>
+                      <strong>Iterate efficiently</strong> based on user
+                      feedback
+                    </li>
+                  </ul>
+                  <p>
+                    We offer <strong>startup packages</strong> tailored to the
+                    budget constraints of early-stage projects, with the option
+                    to phase the services.
+                  </p>
+                </>
+              ))
+              .exhaustive()
+          }
         </Accordion>
       </div>
     </Prose>
