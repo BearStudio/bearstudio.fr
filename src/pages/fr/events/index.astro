@@ -1,0 +1,116 @@
+---
+import dayjs from 'dayjs';
+
+import {
+  getAvailableYearsEventsCollection,
+  getPresentAndFollowingEventsCollection,
+} from '@/lib/events';
+import { getLink } from '@/lib/link';
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import Container from '@/components/container.astro';
+import HeroContent from '@/components/hero/hero-content.astro';
+import Hero from '@/components/hero/hero.astro';
+import SEO from '@/components/seo/index.astro';
+import { getAlternates } from '@/components/seo/utils';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
+import MainLayout from '@/layouts/main-layout.astro';
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
+const events = await getPresentAndFollowingEventsCollection({
+  locale,
+});
+
+const upcomingEvents = events.filter(
+  (event) => !dayjs(event.data.date).isBefore(dayjs(), 'day')
+);
+
+const pastEvents = events.filter((event) =>
+  dayjs(event.data.date).isBefore(dayjs(), 'day')
+);
+
+console.log({ upcomingEvents, pastEvents, events });
+
+const years = await getAvailableYearsEventsCollection();
+
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    label: t('events.root.breadcrumb'),
+    path: '/fr/events',
+    params: {},
+  }),
+]);
+---
+
+<MainLayout>
+  <SEO
+    slot="seo"
+    alternates={getAlternates('/fr/events', {})}
+    breadcrumb={breadcrumb}
+  />
+
+  <Hero>
+    <HeroContent breadcrumb={breadcrumb} title="Evènements" />
+  </Hero>
+
+  <Container class="gap-12">
+    <h3>Events à venir</h3>
+    {
+      !upcomingEvents || !upcomingEvents.length ? (
+        <p>Pas d'évènements à venir</p>
+      ) : (
+        <ul>
+          {upcomingEvents.map(async (event) => (
+            <li>
+              <a
+                href={getLink('/fr/events/:id', locale, {
+                  id: event.data._computed.slug,
+                })}
+              >
+                {event.data.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
+    <h3>Events passés</h3>
+    {
+      !pastEvents || !pastEvents.length ? (
+        <p>Pas d'évènements cette année</p>
+      ) : (
+        <ul>
+          {pastEvents.map(async (event) => (
+            <li>
+              <a
+                href={getLink('/fr/events/:id', locale, {
+                  id: event.data._computed.slug,
+                })}
+              >
+                {event.data.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
+    <h3>Les années précédentes</h3>
+    <ul>
+      {
+        years.map(async (year) => (
+          <li>
+            <a
+              href={getLink('/fr/events/annee/:year', locale, {
+                year: String(year),
+              })}
+            >
+              Année {year}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </Container>
+</MainLayout>

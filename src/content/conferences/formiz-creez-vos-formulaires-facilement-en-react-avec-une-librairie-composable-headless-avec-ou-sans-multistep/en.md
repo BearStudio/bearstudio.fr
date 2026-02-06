@@ -5,6 +5,7 @@ instances:
   - name: 'Codeurs en Seine'
     date: 2021-04-01
     speakers: ['fabien-essid']
+    event: ces-2021
   - name: 'JSSophia #9'
     date: 2021-03-10
     speakers: ['fabien-essid']

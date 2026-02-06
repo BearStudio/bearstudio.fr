@@ -6,6 +6,7 @@ instances:
     date: 2022-11-08
     speakers: ['quentin-lerebours', 'ivan-dalmet']
     replay: https://www.youtube.com/watch?v=5yk34hF40Ok
+    event: 'ces-2022'
   - name: 'BordeauxJS'
     date: 2023-07-13
     speakers: ['quentin-lerebours', 'hugo-perard']
