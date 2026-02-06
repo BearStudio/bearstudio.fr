@@ -11,6 +11,7 @@ import {
   type ConferenceWithComputed,
 } from '@/lib/conferences';
 import { getLink } from '@/lib/link';
+import { mdxToPlainText } from '@/lib/mdx-clean';
 import { getPeopleCollection, type PersonWithComputed } from '@/lib/people';
 import {
   getPostsCollectionLinkedToPerson,
@@ -119,6 +120,9 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
   <SEO
     slot="seo"
     title={person.data.name}
+    description={person.body
+      ? (await mdxToPlainText(person.body)).text.slice(0, 155)
+      : t('team.root.description')}
     url={url}
     alternates={getAlternates('/fr/equipe/:id', {
       id: slug,

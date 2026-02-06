@@ -62,6 +62,8 @@ const peopleCurrent = await Promise.all(
 <MainLayout>
   <SEO
     slot="seo"
+    title={t('services.root.title')}
+    description={t('services.root.description')}
     alternates={getAlternates('/fr/prestations', {})}
     breadcrumb={breadcrumb}
   />

@@ -18,9 +18,10 @@ import type { BreadcrumbEntry } from '../breadcrumb/utils';
 
 interface Props
   extends Pick<
-    ComponentProps<typeof SEO>,
-    'title' | 'description' | 'noindex' | 'nofollow' | 'openGraph'
-  > {
+      ComponentProps<typeof SEO>,
+      'noindex' | 'nofollow' | 'openGraph'
+    >,
+    Required<Pick<ComponentProps<typeof SEO>, 'title' | 'description'>> {
   image?: NonNullable<
     ComponentProps<typeof SEO>['openGraph']
   >['basic']['image'];
@@ -29,10 +30,9 @@ interface Props
   alternates: Required<Record<Locale, string | null>> | null;
   breadcrumb: Array<BreadcrumbEntry> | null;
 }
-// TODO: Proper Metadata
 const {
   title,
-  description = 'BearStudio accompagne les porteurs de projet pour les aider techniquement sur le développement web ou mobile de leurs idées.',
+  description,
   image = new URL('/opengraph-image.jpg', Astro.site).toString(),
   imageAlt,
   noindex,
@@ -64,16 +64,16 @@ const languageAlternates = isNonNullish(alternates)
 ---
 
 <SEO
-  title={title ?? ''}
+  title={title}
   titleTemplate="%s | BearStudio"
   titleDefault={titleDefault}
-  description={description ?? ''}
+  description={description}
   noindex={noindex ?? false}
   nofollow={nofollow ?? false}
   languageAlternates={languageAlternates}
   openGraph={{
     basic: {
-      title: openGraph?.basic.title ?? title ?? titleDefault,
+      title: openGraph?.basic.title ?? title,
       type: 'website',
       image: image,
       url: url ?? '',
@@ -94,9 +94,9 @@ const languageAlternates = isNonNullish(alternates)
   }}
   twitter={{
     card: 'summary_large_image',
-    title: title ?? titleDefault ?? '',
-    description: description ?? '',
-    image: image,
+    title,
+    description,
+    image,
     imageAlt: imageAlt ?? ogImageAlt,
     site: '@_BearStudio',
   }}
