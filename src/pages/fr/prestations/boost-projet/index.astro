@@ -1,4 +1,6 @@
 ---
+import { match } from 'ts-pattern';
+
 import { getLink } from '@/lib/link';
 import { getDataForPeopleCarousel } from '@/lib/people';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
@@ -79,286 +81,659 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
 
   <Container>
     <Prose>
-      <h2>Qu'est-ce que le Boost Projet ?</h2>
-      <p>
-        Le Boost Projet consiste à <strong
-          >intégrer des développeurs expérimentés</strong
-        > directement au sein de vos équipes pour accélérer la livraison de votre
-        produit. Que vous fassiez face à un pic de charge, un manque de ressources
-        techniques ou un projet qui prend du retard, nous intervenons rapidement
-        pour <strong>maintenir votre vélocité de développement</strong>.
-      </p>
-      <p>
-        Contrairement à une prestation classique de développement, le Boost
-        Projet mise sur l'<strong>intégration</strong> : nos développeurs rejoignent
-        vos rituels, utilisent vos outils et adoptent vos conventions de code. L'objectif
-        est de fonctionner comme une
-        <strong>extension naturelle de votre équipe</strong>, pas comme un
-        prestataire externe.
-      </p>
-      <p>
-        Nous intervenons sur des projets de <a
-          href={getLink('/fr/prestations/developpement-web', locale, {})}
-          >développement web</a
-        >, de <a
-          href={getLink('/fr/prestations/developpement-mobile', locale, {})}
-          >développement mobile</a
-        > et sur la mise en place de <a
-          href={getLink('/fr/prestations/ux-design', locale, {})}
-          >design systems</a
-        >, avec une expertise forte sur l'écosystème React et TypeScript.
-      </p>
-      <p>
-        Notre approche est <strong>flexible</strong> : nous pouvons intervenir à
-        temps plein ou à temps partiel, sur des missions courtes ou longues, selon
-        vos besoins et votre budget. Nous nous adaptons à votre contexte, pas l'inverse.
-      </p>
+      {
+        match(locale)
+          .with('fr', () => (
+            <>
+              <h2>Qu'est-ce que le Boost Projet ?</h2>
+              <p>
+                Le Boost Projet consiste à{' '}
+                <strong>intégrer des développeurs expérimentés</strong>{' '}
+                directement au sein de vos équipes pour accélérer la livraison
+                de votre produit. Que vous fassiez face à un pic de charge, un
+                manque de ressources techniques ou un projet qui prend du
+                retard, nous intervenons rapidement pour{' '}
+                <strong>maintenir votre vélocité de développement</strong>.
+              </p>
+              <p>
+                Contrairement à une prestation classique de développement, le
+                Boost Projet mise sur l'<strong>intégration</strong> : nos
+                développeurs rejoignent vos rituels, utilisent vos outils et
+                adoptent vos conventions de code. L'objectif est de fonctionner
+                comme une <strong>extension naturelle de votre équipe</strong>,
+                pas comme un prestataire externe.
+              </p>
+              <p>
+                Nous intervenons sur des projets de{' '}
+                <a
+                  href={getLink(
+                    '/fr/prestations/developpement-web',
+                    locale,
+                    {}
+                  )}
+                >
+                  développement web
+                </a>
+                , de{' '}
+                <a
+                  href={getLink(
+                    '/fr/prestations/developpement-mobile',
+                    locale,
+                    {}
+                  )}
+                >
+                  développement mobile
+                </a>{' '}
+                et sur la mise en place de{' '}
+                <a href={getLink('/fr/prestations/ux-design', locale, {})}>
+                  design systems
+                </a>
+                , avec une expertise forte sur l'écosystème React et TypeScript.
+              </p>
+              <p>
+                Notre approche est <strong>flexible</strong> : nous pouvons
+                intervenir à temps plein ou à temps partiel, sur des missions
+                courtes ou longues, selon vos besoins et votre budget. Nous nous
+                adaptons à votre contexte, pas l'inverse.
+              </p>
+            </>
+          ))
+          .with('en', () => (
+            <>
+              <h2>What is Project Boost?</h2>
+              <p>
+                Project Boost involves{' '}
+                <strong>integrating experienced developers</strong> directly
+                into your teams to accelerate your product delivery. Whether
+                you're facing a workload spike, a lack of technical resources or
+                a project falling behind schedule, we step in quickly to{' '}
+                <strong>maintain your development velocity</strong>.
+              </p>
+              <p>
+                Unlike traditional development services, Project Boost focuses
+                on <strong>integration</strong>: our developers join your
+                rituals, use your tools and adopt your coding conventions. The
+                goal is to function as a{' '}
+                <strong>natural extension of your team</strong>, not as an
+                external contractor.
+              </p>
+              <p>
+                We work on{' '}
+                <a
+                  href={getLink(
+                    '/fr/prestations/developpement-web',
+                    locale,
+                    {}
+                  )}
+                >
+                  web development
+                </a>
+                ,{' '}
+                <a
+                  href={getLink(
+                    '/fr/prestations/developpement-mobile',
+                    locale,
+                    {}
+                  )}
+                >
+                  mobile development
+                </a>{' '}
+                and{' '}
+                <a href={getLink('/fr/prestations/ux-design', locale, {})}>
+                  design system
+                </a>{' '}
+                projects, with strong expertise in the React and TypeScript
+                ecosystem.
+              </p>
+              <p>
+                Our approach is <strong>flexible</strong>: we can work full-time
+                or part-time, on short or long-term assignments, depending on
+                your needs and budget. We adapt to your context, not the other
+                way around.
+              </p>
+            </>
+          ))
+          .exhaustive()
+      }
     </Prose>
   </Container>
 
   <Container class="pt-0">
     <ContactCard
       locale={locale}
-      title="On est disponible"
-      subtitle="Discutons de vos besoins en renfort et trouvons ensemble la meilleure façon d'accélérer votre projet."
+      title={match(locale)
+        .with('fr', () => 'On est disponible')
+        .with('en', () => "We're available")
+        .exhaustive()}
+      subtitle={match(locale)
+        .with(
+          'fr',
+          () =>
+            "Discutons de vos besoins en renfort et trouvons ensemble la meilleure façon d'accélérer votre projet."
+        )
+        .with(
+          'en',
+          () =>
+            "Let's discuss your reinforcement needs and find the best way to accelerate your project together."
+        )
+        .exhaustive()}
       peopleIds={['yoann-fleury', 'nicolas-torion']}
     />
   </Container>
 
   <Container>
     <Prose>
-      <h2>Comment fonctionne le Boost Projet ?</h2>
-      <p>
-        Notre intervention se déroule en plusieurs phases pour garantir une
-        intégration efficace et des résultats rapides.
-      </p>
-      <h3>1. Immersion et onboarding</h3>
-      <p>
-        Nos développeurs prennent le temps de comprendre votre <strong
-          >contexte métier</strong
-        >, votre <strong>architecture technique</strong> et vos <strong
-          >processus de développement</strong
-        >. Cette phase d'immersion, généralement d'une semaine, nous permet
-        d'être opérationnels rapidement et de produire du code qui respecte vos
-        standards de qualité.
-      </p>
-      <h3>2. Montée en puissance</h3>
-      <p>
-        Une fois l'onboarding terminé, nos développeurs montent progressivement
-        en charge. Ils prennent en main des <strong>user stories</strong>,
-        participent aux <strong>code reviews</strong> et contribuent activement aux
-        sprints. Notre objectif : apporter de la valeur dès les premières semaines.
-      </p>
-      <h3>3. Transfert de compétences</h3>
-      <p>
-        Nous ne nous contentons pas de livrer du code. Nous partageons nos
-        <strong>bonnes pratiques</strong>, nos <strong
-          >retours d'expérience</strong
-        > et nos <strong>connaissances techniques</strong> avec vos équipes. L'objectif
-        est que votre équipe soit plus forte après notre intervention.
-      </p>
+      {
+        match(locale)
+          .with('fr', () => (
+            <>
+              <h2>Comment fonctionne le Boost Projet ?</h2>
+              <p>
+                Notre intervention se déroule en plusieurs phases pour garantir
+                une intégration efficace et des résultats rapides.
+              </p>
+              <h3>1. Immersion et onboarding</h3>
+              <p>
+                Nos développeurs prennent le temps de comprendre votre{' '}
+                <strong>contexte métier</strong>, votre{' '}
+                <strong>architecture technique</strong> et vos{' '}
+                <strong>processus de développement</strong>. Cette phase
+                d'immersion, généralement d'une semaine, nous permet d'être
+                opérationnels rapidement et de produire du code qui respecte vos
+                standards de qualité.
+              </p>
+              <h3>2. Montée en puissance</h3>
+              <p>
+                Une fois l'onboarding terminé, nos développeurs montent
+                progressivement en charge. Ils prennent en main des{' '}
+                <strong>user stories</strong>, participent aux{' '}
+                <strong>code reviews</strong> et contribuent activement aux
+                sprints. Notre objectif : apporter de la valeur dès les
+                premières semaines.
+              </p>
+              <h3>3. Transfert de compétences</h3>
+              <p>
+                Nous ne nous contentons pas de livrer du code. Nous partageons
+                nos <strong>bonnes pratiques</strong>, nos{' '}
+                <strong>retours d'expérience</strong> et nos{' '}
+                <strong>connaissances techniques</strong> avec vos équipes.
+                L'objectif est que votre équipe soit plus forte après notre
+                intervention.
+              </p>
+            </>
+          ))
+          .with('en', () => (
+            <>
+              <h2>How does Project Boost work?</h2>
+              <p>
+                Our engagement unfolds in several phases to ensure effective
+                integration and fast results.
+              </p>
+              <h3>1. Immersion and onboarding</h3>
+              <p>
+                Our developers take the time to understand your{' '}
+                <strong>business context</strong>, your{' '}
+                <strong>technical architecture</strong> and your{' '}
+                <strong>development processes</strong>. This immersion phase,
+                typically one week, allows us to become operational quickly and
+                produce code that meets your quality standards.
+              </p>
+              <h3>2. Ramp-up</h3>
+              <p>
+                Once onboarding is complete, our developers progressively take
+                on more responsibility. They pick up{' '}
+                <strong>user stories</strong>, participate in{' '}
+                <strong>code reviews</strong> and actively contribute to
+                sprints. Our goal: deliver value from the very first weeks.
+              </p>
+              <h3>3. Knowledge transfer</h3>
+              <p>
+                We don't just deliver code. We share our{' '}
+                <strong>best practices</strong>, our{' '}
+                <strong>lessons learned</strong> and our{' '}
+                <strong>technical knowledge</strong> with your teams. The goal
+                is for your team to be stronger after our engagement.
+              </p>
+            </>
+          ))
+          .exhaustive()
+      }
     </Prose>
   </Container>
 
   <Container>
     <Prose>
-      <h2>Nos experts en Boost Projet</h2>
+      <h2>
+        {
+          match(locale)
+            .with('fr', () => 'Nos experts en Boost Projet')
+            .with('en', () => 'Our Project Boost experts')
+            .exhaustive()
+        }
+      </h2>
     </Prose>
     <PeopleCarousel client:load people={people} locale={locale} />
   </Container>
 
   <Container>
     <Prose>
-      <h2>Pourquoi choisir le Boost Projet ?</h2>
-      <p>
-        Le recrutement de développeurs est long et coûteux. Le Boost Projet vous
-        permet de <strong
-          >disposer immédiatement de compétences techniques</strong
-        > sans les contraintes du recrutement. Nos développeurs sont opérationnels
-        en quelques jours et s'adaptent à votre environnement technique.
-      </p>
-      <p>
-        Notre équipe maîtrise les <strong>technologies modernes</strong> de l'écosystème
-        JavaScript/TypeScript : React, React Native, TanStack Start, Node.js, Tailwind
-        CSS, et bien d'autres. Nous avons également une forte culture du <strong
-          >craft</strong
-        > : tests, code reviews, CI/CD, architecture propre et documentation.
-      </p>
-      <p>
-        Nous avons accompagné des <strong>startups</strong>, des <strong
-          >scaleups</strong
-        > et des <strong>grands comptes</strong> sur des projets variés : refonte
-        d'application, développement de nouvelles fonctionnalités, migration technique,
-        mise en place de design systems. Cette diversité d'expérience nous permet
-        de nous intégrer rapidement quel que soit votre contexte.
-      </p>
+      {
+        match(locale)
+          .with('fr', () => (
+            <>
+              <h2>Pourquoi choisir le Boost Projet ?</h2>
+              <p>
+                Le recrutement de développeurs est long et coûteux. Le Boost
+                Projet vous permet de{' '}
+                <strong>
+                  disposer immédiatement de compétences techniques
+                </strong>{' '}
+                sans les contraintes du recrutement. Nos développeurs sont
+                opérationnels en quelques jours et s'adaptent à votre
+                environnement technique.
+              </p>
+              <p>
+                Notre équipe maîtrise les <strong>technologies modernes</strong>{' '}
+                de l'écosystème JavaScript/TypeScript : React, React Native,
+                TanStack Start, Node.js, Tailwind CSS, et bien d'autres. Nous
+                avons également une forte culture du <strong>craft</strong> :
+                tests, code reviews, CI/CD, architecture propre et
+                documentation.
+              </p>
+              <p>
+                Nous avons accompagné des <strong>startups</strong>, des{' '}
+                <strong>scaleups</strong> et des <strong>grands comptes</strong>{' '}
+                sur des projets variés : refonte d'application, développement de
+                nouvelles fonctionnalités, migration technique, mise en place de
+                design systems. Cette diversité d'expérience nous permet de nous
+                intégrer rapidement quel que soit votre contexte.
+              </p>
+            </>
+          ))
+          .with('en', () => (
+            <>
+              <h2>Why choose Project Boost?</h2>
+              <p>
+                Hiring developers is time-consuming and expensive. Project Boost
+                allows you to{' '}
+                <strong>immediately access technical expertise</strong> without
+                the constraints of recruitment. Our developers are operational
+                within days and adapt to your technical environment.
+              </p>
+              <p>
+                Our team masters <strong>modern technologies</strong> in the
+                JavaScript/TypeScript ecosystem: React, React Native, TanStack
+                Start, Node.js, Tailwind CSS, and many more. We also have a
+                strong <strong>craft</strong> culture: testing, code reviews,
+                CI/CD, clean architecture and documentation.
+              </p>
+              <p>
+                We have supported <strong>startups</strong>,{' '}
+                <strong>scaleups</strong> and <strong>large enterprises</strong>{' '}
+                on a variety of projects: application redesign, new feature
+                development, technical migration, design system implementation.
+                This diversity of experience allows us to integrate quickly
+                regardless of your context.
+              </p>
+            </>
+          ))
+          .exhaustive()
+      }
     </Prose>
   </Container>
 
   <Container>
     <Prose>
-      <h2>Questions fréquentes sur le Boost Projet</h2>
-      <p>
-        Retrouvez les réponses aux questions les plus courantes sur le <strong
-          >Boost Projet</strong
-        >, nos modalités d'intervention et notre approche.
-      </p>
+      {
+        match(locale)
+          .with('fr', () => (
+            <>
+              <h2>Questions fréquentes sur le Boost Projet</h2>
+              <p>
+                Retrouvez les réponses aux questions les plus courantes sur le{' '}
+                <strong>Boost Projet</strong>, nos modalités d'intervention et
+                notre approche.
+              </p>
 
-      <div class="flex flex-col">
-        <Accordion question="Quand faire appel au Boost Projet ?">
-          <p>Plusieurs situations peuvent justifier un Boost Projet :</p>
-          <ul>
-            <li>
-              Vous avez un <strong>pic de charge</strong> ou une deadline importante
-              à tenir
-            </li>
-            <li>
-              Vous n'arrivez pas à <strong>recruter</strong> suffisamment vite pour
-              tenir votre roadmap
-            </li>
-            <li>
-              Vous avez besoin d'une <strong
-                >expertise technique spécifique</strong
-              > que votre équipe ne possède pas encore
-            </li>
-            <li>
-              Votre projet prend du <strong>retard</strong> et vous avez besoin de
-              renfort pour rattraper le planning
-            </li>
-            <li>
-              Vous lancez un <strong>nouveau produit</strong> et avez besoin de développeurs
-              expérimentés pour poser les bases
-            </li>
-          </ul>
-        </Accordion>
+              <div class="flex flex-col">
+                <Accordion question="Quand faire appel au Boost Projet ?">
+                  <p>
+                    Plusieurs situations peuvent justifier un Boost Projet :
+                  </p>
+                  <ul>
+                    <li>
+                      Vous avez un <strong>pic de charge</strong> ou une
+                      deadline importante à tenir
+                    </li>
+                    <li>
+                      Vous n'arrivez pas à <strong>recruter</strong>{' '}
+                      suffisamment vite pour tenir votre roadmap
+                    </li>
+                    <li>
+                      Vous avez besoin d'une{' '}
+                      <strong>expertise technique spécifique</strong> que votre
+                      équipe ne possède pas encore
+                    </li>
+                    <li>
+                      Votre projet prend du <strong>retard</strong> et vous avez
+                      besoin de renfort pour rattraper le planning
+                    </li>
+                    <li>
+                      Vous lancez un <strong>nouveau produit</strong> et avez
+                      besoin de développeurs expérimentés pour poser les bases
+                    </li>
+                  </ul>
+                </Accordion>
 
-        <Accordion
-          question="Combien de temps dure une mission de Boost Projet ?"
-        >
-          <p>
-            La durée d'une mission varie selon vos besoins. En général, nos
-            interventions durent de <strong
-              >quelques semaines à plusieurs mois</strong
-            >. Nous recommandons un minimum de 4 semaines pour qu'un développeur
-            soit pleinement opérationnel et apporte une réelle valeur ajoutée.
-          </p>
-          <p>
-            Nous privilégions les <strong>engagements flexibles</strong> : vous pouvez
-            ajuster le nombre de développeurs et la durée de la mission en fonction
-            de l'évolution de vos besoins. Il n'y a pas d'engagement rigide sur le
-            long terme.
-          </p>
-        </Accordion>
+                <Accordion question="Combien de temps dure une mission de Boost Projet ?">
+                  <p>
+                    La durée d'une mission varie selon vos besoins. En général,
+                    nos interventions durent de{' '}
+                    <strong>quelques semaines à plusieurs mois</strong>. Nous
+                    recommandons un minimum de 4 semaines pour qu'un développeur
+                    soit pleinement opérationnel et apporte une réelle valeur
+                    ajoutée.
+                  </p>
+                  <p>
+                    Nous privilégions les <strong>engagements flexibles</strong>{' '}
+                    : vous pouvez ajuster le nombre de développeurs et la durée
+                    de la mission en fonction de l'évolution de vos besoins. Il
+                    n'y a pas d'engagement rigide sur le long terme.
+                  </p>
+                </Accordion>
 
-        <Accordion
-          question="Comment vos développeurs s'intègrent-ils à notre équipe ?"
-        >
-          <p>
-            Nos développeurs sont habitués à s'intégrer dans des contextes
-            variés. Dès le premier jour, ils participent à vos <strong
-              >rituels agiles</strong
-            > (daily, sprint planning, rétrospective), utilisent vos <strong
-              >outils</strong
-            > (Jira, Linear, GitHub, GitLab, Slack...) et respectent vos
-            <strong>conventions de code</strong>.
-          </p>
-          <p>
-            Nous prenons le temps de comprendre votre architecture, vos patterns
-            et vos standards de qualité. Notre objectif est que l'intégration
-            soit <strong>transparente</strong> pour le reste de votre équipe.
-          </p>
-        </Accordion>
+                <Accordion question="Comment vos développeurs s'intègrent-ils à notre équipe ?">
+                  <p>
+                    Nos développeurs sont habitués à s'intégrer dans des
+                    contextes variés. Dès le premier jour, ils participent à vos{' '}
+                    <strong>rituels agiles</strong> (daily, sprint planning,
+                    rétrospective), utilisent vos <strong>outils</strong> (Jira,
+                    Linear, GitHub, GitLab, Slack...) et respectent vos{' '}
+                    <strong>conventions de code</strong>.
+                  </p>
+                  <p>
+                    Nous prenons le temps de comprendre votre architecture, vos
+                    patterns et vos standards de qualité. Notre objectif est que
+                    l'intégration soit <strong>transparente</strong> pour le
+                    reste de votre équipe.
+                  </p>
+                </Accordion>
 
-        <Accordion question="Sur quelles technologies intervenez-vous ?">
-          <p>
-            Notre expertise principale se concentre sur l'écosystème <strong
-              >JavaScript/TypeScript</strong
-            > : React, React Native, Node.js, TanStack Start, Astro, et l'ensemble
-            des technologies associées (Tailwind CSS, Prisma, tRPC, etc.).
-          </p>
-          <p>
-            Nous maîtrisons également les aspects <strong>DevOps</strong> : CI/CD,
-            Docker, déploiement cloud (Vercel, AWS, etc.), monitoring et performance.
-          </p>
-          <p>
-            Si votre stack sort de notre périmètre d'expertise, nous serons
-            transparents avec vous dès le premier échange.
-          </p>
-        </Accordion>
+                <Accordion question="Sur quelles technologies intervenez-vous ?">
+                  <p>
+                    Notre expertise principale se concentre sur l'écosystème{' '}
+                    <strong>JavaScript/TypeScript</strong> : React, React
+                    Native, Node.js, TanStack Start, Astro, et l'ensemble des
+                    technologies associées (Tailwind CSS, Prisma, tRPC, etc.).
+                  </p>
+                  <p>
+                    Nous maîtrisons également les aspects{' '}
+                    <strong>DevOps</strong> : CI/CD, Docker, déploiement cloud
+                    (Vercel, AWS, etc.), monitoring et performance.
+                  </p>
+                  <p>
+                    Si votre stack sort de notre périmètre d'expertise, nous
+                    serons transparents avec vous dès le premier échange.
+                  </p>
+                </Accordion>
 
-        <Accordion
-          question="Quelle est la différence entre le Boost Projet et un freelance ?"
-        >
-          <p>
-            Contrairement à un freelance, nos développeurs font partie d'une
-            <strong>équipe structurée</strong>. Ils bénéficient du soutien de
-            leurs collègues au BearStudio : pair programming, code reviews
-            croisées, partage de connaissances sur les problématiques
-            rencontrées.
-          </p>
-          <p>
-            Nous garantissons également la <strong>continuité de service</strong
-            > : en cas d'absence, nous assurons le remplacement par un développeur
-            du même niveau. Vous n'êtes pas dépendant d'une seule personne.
-          </p>
-          <p>
-            Enfin, nous apportons nos <strong>outils et méthodologies</strong> éprouvés
-            (Start UI, design systems, bonnes pratiques) qui bénéficient à l'ensemble
-            de votre projet.
-          </p>
-        </Accordion>
+                <Accordion question="Quelle est la différence entre le Boost Projet et un freelance ?">
+                  <p>
+                    Contrairement à un freelance, nos développeurs font partie
+                    d'une <strong>équipe structurée</strong>. Ils bénéficient du
+                    soutien de leurs collègues au BearStudio : pair programming,
+                    code reviews croisées, partage de connaissances sur les
+                    problématiques rencontrées.
+                  </p>
+                  <p>
+                    Nous garantissons également la{' '}
+                    <strong>continuité de service</strong> : en cas d'absence,
+                    nous assurons le remplacement par un développeur du même
+                    niveau. Vous n'êtes pas dépendant d'une seule personne.
+                  </p>
+                  <p>
+                    Enfin, nous apportons nos{' '}
+                    <strong>outils et méthodologies</strong> éprouvés (Start UI,
+                    design systems, bonnes pratiques) qui bénéficient à
+                    l'ensemble de votre projet.
+                  </p>
+                </Accordion>
 
-        <Accordion
-          question="Pouvez-vous intervenir sur un projet existant avec de la dette technique ?"
-        >
-          <p>
-            Oui, c'est même l'un de nos cas d'intervention les plus fréquents.
-            Nos développeurs sont habitués à <strong
-              >reprendre des projets existants</strong
-            >, comprendre du code legacy et travailler avec de la dette
-            technique.
-          </p>
-          <p>
-            Nous adoptons une approche <strong>pragmatique</strong> : plutôt que
-            de tout réécrire, nous améliorons progressivement la qualité du code
-            tout en livrant de nouvelles fonctionnalités. Chaque intervention est
-            l'occasion de laisser le code dans un meilleur état.
-          </p>
-          <p>
-            Si la dette technique est trop importante, nous pouvons également
-            vous accompagner dans une stratégie de refonte progressive, en lien
-            avec notre prestation d'<a
-              href={getLink('/fr/prestations/accompagnement-cto', locale, {})}
-              >accompagnement CTO</a
-            >.
-          </p>
-        </Accordion>
+                <Accordion question="Pouvez-vous intervenir sur un projet existant avec de la dette technique ?">
+                  <p>
+                    Oui, c'est même l'un de nos cas d'intervention les plus
+                    fréquents. Nos développeurs sont habitués à{' '}
+                    <strong>reprendre des projets existants</strong>, comprendre
+                    du code legacy et travailler avec de la dette technique.
+                  </p>
+                  <p>
+                    Nous adoptons une approche <strong>pragmatique</strong> :
+                    plutôt que de tout réécrire, nous améliorons progressivement
+                    la qualité du code tout en livrant de nouvelles
+                    fonctionnalités. Chaque intervention est l'occasion de
+                    laisser le code dans un meilleur état.
+                  </p>
+                  <p>
+                    Si la dette technique est trop importante, nous pouvons
+                    également vous accompagner dans une stratégie de refonte
+                    progressive, en lien avec notre prestation d'
+                    <a
+                      href={getLink(
+                        '/fr/prestations/accompagnement-cto',
+                        locale,
+                        {}
+                      )}
+                    >
+                      accompagnement CTO
+                    </a>
+                    .
+                  </p>
+                </Accordion>
 
-        <Accordion question="Pourquoi le BearStudio pour votre Boost Projet ?">
-          <p>
-            Au BearStudio, nous sommes des <strong
-              >développeurs passionnés</strong
-            > qui codent au quotidien. Nos développeurs ne sont pas des consultants
-            déconnectés du terrain : ils développent des produits, contribuent à
-            l'open source et se forment en continu sur les dernières technologies.
-          </p>
-          <p>
-            Notre <strong>culture du craft</strong> se traduit par des standards
-            élevés : tests automatisés, code reviews systématiques, documentation,
-            accessibilité. Nous ne nous contentons pas de livrer du code qui fonctionne,
-            nous livrons du code maintenable et évolutif.
-          </p>
-          <p>
-            Nous avons développé nos propres outils open source (<a
-              href="https://start-ui.com"
-              target="_blank"
-              rel="noopener noreferrer">Start UI</a
-            >) qui accélèrent la mise en place de projets et garantissent des
-            bases solides. Cette expertise nous permet d'apporter une réelle
-            valeur ajoutée dès les premiers jours d'intervention.
-          </p>
-        </Accordion>
-      </div>
+                <Accordion question="Pourquoi le BearStudio pour votre Boost Projet ?">
+                  <p>
+                    Au BearStudio, nous sommes des{' '}
+                    <strong>développeurs passionnés</strong> qui codent au
+                    quotidien. Nos développeurs ne sont pas des consultants
+                    déconnectés du terrain : ils développent des produits,
+                    contribuent à l'open source et se forment en continu sur les
+                    dernières technologies.
+                  </p>
+                  <p>
+                    Notre <strong>culture du craft</strong> se traduit par des
+                    standards élevés : tests automatisés, code reviews
+                    systématiques, documentation, accessibilité. Nous ne nous
+                    contentons pas de livrer du code qui fonctionne, nous
+                    livrons du code maintenable et évolutif.
+                  </p>
+                  <p>
+                    Nous avons développé nos propres outils open source (
+                    <a
+                      href="https://start-ui.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Start UI
+                    </a>
+                    ) qui accélèrent la mise en place de projets et garantissent
+                    des bases solides. Cette expertise nous permet d'apporter
+                    une réelle valeur ajoutée dès les premiers jours
+                    d'intervention.
+                  </p>
+                </Accordion>
+              </div>
+            </>
+          ))
+          .with('en', () => (
+            <>
+              <h2>Frequently asked questions about Project Boost</h2>
+              <p>
+                Find answers to the most common questions about{' '}
+                <strong>Project Boost</strong>, our engagement terms and our
+                approach.
+              </p>
+
+              <div class="flex flex-col">
+                <Accordion question="When should you call on Project Boost?">
+                  <p>Several situations can justify a Project Boost:</p>
+                  <ul>
+                    <li>
+                      You have a <strong>workload spike</strong> or an important
+                      deadline to meet
+                    </li>
+                    <li>
+                      You can't <strong>recruit</strong> fast enough to keep up
+                      with your roadmap
+                    </li>
+                    <li>
+                      You need <strong>specific technical expertise</strong>{' '}
+                      that your team doesn't yet possess
+                    </li>
+                    <li>
+                      Your project is <strong>falling behind</strong> and you
+                      need reinforcement to catch up with the schedule
+                    </li>
+                    <li>
+                      You're launching a <strong>new product</strong> and need
+                      experienced developers to lay the foundations
+                    </li>
+                  </ul>
+                </Accordion>
+
+                <Accordion question="How long does a Project Boost engagement last?">
+                  <p>
+                    The duration of an engagement varies according to your
+                    needs. Generally, our interventions last from{' '}
+                    <strong>a few weeks to several months</strong>. We recommend
+                    a minimum of 4 weeks for a developer to be fully operational
+                    and bring real added value.
+                  </p>
+                  <p>
+                    We favour <strong>flexible commitments</strong>: you can
+                    adjust the number of developers and the engagement duration
+                    based on your evolving needs. There is no rigid long-term
+                    commitment.
+                  </p>
+                </Accordion>
+
+                <Accordion question="How do your developers integrate into our team?">
+                  <p>
+                    Our developers are accustomed to integrating into various
+                    contexts. From day one, they participate in your{' '}
+                    <strong>agile rituals</strong> (daily standups, sprint
+                    planning, retrospectives), use your <strong>tools</strong>{' '}
+                    (Jira, Linear, GitHub, GitLab, Slack...) and follow your{' '}
+                    <strong>coding conventions</strong>.
+                  </p>
+                  <p>
+                    We take the time to understand your architecture, your
+                    patterns and your quality standards. Our goal is for the
+                    integration to be <strong>seamless</strong> for the rest of
+                    your team.
+                  </p>
+                </Accordion>
+
+                <Accordion question="What technologies do you work with?">
+                  <p>
+                    Our core expertise focuses on the{' '}
+                    <strong>JavaScript/TypeScript</strong> ecosystem: React,
+                    React Native, Node.js, TanStack Start, Astro, and all
+                    associated technologies (Tailwind CSS, Prisma, tRPC, etc.).
+                  </p>
+                  <p>
+                    We also master <strong>DevOps</strong> aspects: CI/CD,
+                    Docker, cloud deployment (Vercel, AWS, etc.), monitoring and
+                    performance.
+                  </p>
+                  <p>
+                    If your stack falls outside our area of expertise, we will
+                    be transparent with you from the very first conversation.
+                  </p>
+                </Accordion>
+
+                <Accordion question="What is the difference between Project Boost and a freelancer?">
+                  <p>
+                    Unlike a freelancer, our developers are part of a{' '}
+                    <strong>structured team</strong>. They benefit from the
+                    support of their colleagues at BearStudio: pair programming,
+                    cross code reviews, knowledge sharing on encountered
+                    challenges.
+                  </p>
+                  <p>
+                    We also guarantee <strong>service continuity</strong>: in
+                    case of absence, we ensure replacement by a developer of the
+                    same level. You are not dependent on a single person.
+                  </p>
+                  <p>
+                    Finally, we bring our proven{' '}
+                    <strong>tools and methodologies</strong> (Start UI, design
+                    systems, best practices) that benefit your entire project.
+                  </p>
+                </Accordion>
+
+                <Accordion question="Can you work on an existing project with technical debt?">
+                  <p>
+                    Yes, it's actually one of our most common engagement
+                    scenarios. Our developers are accustomed to{' '}
+                    <strong>taking over existing projects</strong>,
+                    understanding legacy code and working with technical debt.
+                  </p>
+                  <p>
+                    We adopt a <strong>pragmatic approach</strong>: rather than
+                    rewriting everything, we progressively improve code quality
+                    while delivering new features. Every engagement is an
+                    opportunity to leave the code in a better state.
+                  </p>
+                  <p>
+                    If the technical debt is too significant, we can also
+                    support you with a progressive redesign strategy, in
+                    conjunction with our{' '}
+                    <a
+                      href={getLink(
+                        '/fr/prestations/accompagnement-cto',
+                        locale,
+                        {}
+                      )}
+                    >
+                      CTO support
+                    </a>{' '}
+                    service.
+                  </p>
+                </Accordion>
+
+                <Accordion question="Why choose BearStudio for your Project Boost?">
+                  <p>
+                    At BearStudio, we are <strong>passionate developers</strong>{' '}
+                    who code every day. Our developers are not consultants
+                    disconnected from the field: they build products, contribute
+                    to open source and continuously train on the latest
+                    technologies.
+                  </p>
+                  <p>
+                    Our <strong>craft culture</strong> translates into high
+                    standards: automated testing, systematic code reviews,
+                    documentation, accessibility. We don't just deliver code
+                    that works, we deliver maintainable and scalable code.
+                  </p>
+                  <p>
+                    We have developed our own open source tools (
+                    <a
+                      href="https://start-ui.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Start UI
+                    </a>
+                    ) that accelerate project setup and ensure solid
+                    foundations. This expertise allows us to bring real added
+                    value from the very first days of engagement.
+                  </p>
+                </Accordion>
+              </div>
+            </>
+          ))
+          .exhaustive()
+      }
     </Prose>
   </Container>
 </MainLayout>
