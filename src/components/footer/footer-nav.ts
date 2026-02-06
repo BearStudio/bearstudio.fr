@@ -40,6 +40,11 @@ const FOOTER_NAV: Array<NavItem> = [
     i18nKey: 'services.ctoSupport.breadcrumb',
   },
   {
+    getHref: (locale) =>
+      getLink('/fr/prestations/intelligence-artificielle', locale, {}),
+    i18nKey: 'services.ai.breadcrumb',
+  },
+  {
     getHref: (locale) => getLink('/fr/equipe', locale, {}),
     i18nKey: 'common.nav.team',
   },

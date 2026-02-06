@@ -23,6 +23,10 @@
       "title": "Accompagnement CTO",
       "description": "Vous avez besoin de conseils stratégiques sur votre architecture technique ou vos choix technologiques ? Nous vous accompagnons dans la prise de décisions techniques, la structuration de votre équipe de développement et la mise en place de bonnes pratiques pour faire évoluer votre produit sereinement."
     },
+    "ai": {
+      "title": "Intelligence Artificielle",
+      "description": "De la conception d'interfaces IA à l'intégration de solutions LLM et au développement assisté par IA, nous vous accompagnons dans l'adoption pragmatique de l'intelligence artificielle."
+    },
     "team": {
       "title": "Qui compose l'équipe de votre projet ?",
       "yourTeamAndOurs": {
@@ -65,5 +69,10 @@
     "breadcrumb": "Accompagnement CTO",
     "title": "Accompagnement CTO",
     "description": "Nous vous accompagnons dans vos décisions techniques, la structuration de votre équipe et la mise en place de bonnes pratiques."
+  },
+  "ai": {
+    "breadcrumb": "Intelligence Artificielle",
+    "title": "Intelligence Artificielle",
+    "description": "De la conception d'interfaces intégrant l'IA à l'intégration de solutions LLM et au développement assisté par IA, nous vous accompagnons dans l'adoption pragmatique de l'intelligence artificielle."
   }
 }

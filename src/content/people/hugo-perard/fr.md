@@ -9,6 +9,7 @@ status: 'current'
 hidden: false
 order: 35
 services:
+  - ai
   - web-development
   - mobile-development
 ---

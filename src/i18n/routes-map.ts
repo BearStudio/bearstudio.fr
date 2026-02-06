@@ -15,6 +15,9 @@ export const ROUTE_MAPPINGS = {
   },
   '/fr/prestations/boost-projet': { en: '/en/services/project-boost' },
   '/fr/prestations/accompagnement-cto': { en: '/en/services/cto-support' },
+  '/fr/prestations/intelligence-artificielle': {
+    en: '/en/services/artificial-intelligence',
+  },
   '/fr/equipe': { en: '/en/team' },
   '/fr/equipe/:id': { en: '/en/team/:id' },
   '/fr/contact': { en: '/en/contact' },

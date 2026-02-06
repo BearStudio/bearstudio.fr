@@ -11,6 +11,7 @@ status: 'current'
 hidden: false
 order: 25
 services:
+  - ai
   - web-development
   - mobile-development
   - project-boost

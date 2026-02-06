@@ -23,6 +23,7 @@ const ROUTES_CONFIG = {
     },
     "legal-notice": {},
     "services": {
+      "artificial-intelligence": {},
       "cto-support": {},
       "mobile-development": {},
       "project-boost": {},
@@ -58,6 +59,7 @@ const ROUTES_CONFIG = {
       "boost-projet": {},
       "developpement-mobile": {},
       "developpement-web": {},
+      "intelligence-artificielle": {},
       "ux-design": {}
     }
   },

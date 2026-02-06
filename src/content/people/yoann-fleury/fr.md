@@ -12,6 +12,7 @@ socials:
 status: 'current'
 order: 20
 services:
+  - ai
   - cto-support
   - mobile-development
   - project-boost
