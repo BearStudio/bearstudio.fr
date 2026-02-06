@@ -72,5 +72,29 @@
       "description": "It's great to work at BearStudio: we form a complementary team that puts its good mood at the service of your projects!",
       "hashtag": "#TrollInside"
     }
+  },
+  "workWithUs": {
+    "title": "Work with BearStudio",
+    "description": "A full range of services to support the development of your digital project.",
+    "design": {
+      "title": "Application design",
+      "description1": "We design <strong>modern and intuitive user interfaces</strong> that put the user experience at the heart of every project.",
+      "description2": "Our UX/UI approach ensures <strong>aesthetic, accessible, and ergonomic</strong> applications to maximize user engagement."
+    },
+    "development": {
+      "title": "Web and mobile application development",
+      "description1": "We develop <strong>performant and scalable applications</strong> using the technologies best suited to your needs.",
+      "description2": "From web to mobile, we create <strong>robust and maintainable</strong> solutions that support the growth of your business."
+    },
+    "boost": {
+      "title": "Boost your projects",
+      "description1": "We step in to <strong>reinforce your teams</strong>, accelerate your developments, and bring our technical expertise.",
+      "description2": "Our flexible support helps <strong>unblock your projects</strong> and reach your goals in the best timeframes."
+    },
+    "ai": {
+      "title": "AI Ready",
+      "description1": "We integrate <strong>artificial intelligence</strong> into your applications to automate and optimize your business processes.",
+      "description2": "Our AI expertise allows you to <strong>leverage the latest advances</strong> in technology to stay competitive."
+    }
   }
 }

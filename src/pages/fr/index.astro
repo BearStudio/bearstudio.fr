@@ -534,17 +534,16 @@ const latestPosts = await Promise.all(
       </Container>
     </SectionScratched>
 
-    {/* Work with use */}
+    {/* Work with us */}
     <Container class="sm:flex-row sm:gap-8">
       <div class="flex flex-1 flex-col gap-2">
         <h2
           class="font-heading text-2xl font-bold text-balance md:max-w-[20ch]"
         >
-          Travailler avec le bearstudio
+          {t('home.workWithUs.title')}
         </h2>
         <p class="max-w-[70ch] text-sm text-balance">
-          Tout un panel d’offres pour assurer le développement de votre projet
-          numérique.
+          {t('home.workWithUs.description')}
         </p>
         <ContactCta locale={locale} />
       </div>
@@ -554,21 +553,12 @@ const latestPosts = await Promise.all(
             <a
               href={getLink('/fr/prestations/ux-design', locale, {})}
               class="text-foreground! no-underline hover:underline"
-              >Design de vos applications</a
+              >{t('home.workWithUs.design.title')}</a
             >
           </h3>
           <>
-            <p>
-              Nous concevons des <strong
-                >interfaces utilisateur modernes et intuitives</strong
-              >{' '}
-              qui placent l'expérience utilisateur au coeur de chaque projet.
-            </p>
-            <p>
-              Notre approche UX/UI garantit des applications{' '}
-              <strong>esthétiques, accessibles et ergonomiques</strong> pour maximiser
-              l'engagement de vos utilisateurs.
-            </p>
+            <p set:html={t('home.workWithUs.design.description1')} />
+            <p set:html={t('home.workWithUs.design.description2')} />
           </>
         </Prose>
         <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
@@ -576,21 +566,12 @@ const latestPosts = await Promise.all(
             <a
               href={getLink('/fr/prestations/developpement-web', locale, {})}
               class="text-foreground! no-underline hover:underline"
-              >Développement d'application web et mobile</a
+              >{t('home.workWithUs.development.title')}</a
             >
           </h3>
           <>
-            <p>
-              Nous développons des <strong
-                >applications performantes et évolutives</strong
-              >{' '}
-              en utilisant les technologies les plus adaptées à vos besoins.
-            </p>
-            <p>
-              Du web au mobile, nous créons des solutions{' '}
-              <strong>robustes et maintenables</strong> qui accompagnent la croissance
-              de votre activité.
-            </p>
+            <p set:html={t('home.workWithUs.development.description1')} />
+            <p set:html={t('home.workWithUs.development.description2')} />
           </>
         </Prose>
         <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
@@ -598,33 +579,19 @@ const latestPosts = await Promise.all(
             <a
               href={getLink('/fr/prestations/boost-projet', locale, {})}
               class="text-foreground! no-underline hover:underline"
-              >Booster vos projets</a
+              >{t('home.workWithUs.boost.title')}</a
             >
           </h3>
           <>
-            <p>
-              Nous intervenons en <strong>renfort de vos équipes</strong> pour accélérer
-              vos développements et apporter notre expertise technique.
-            </p>
-            <p>
-              Notre accompagnement flexible permet de{' '}
-              <strong>débloquer vos projets</strong> et d'atteindre vos objectifs
-              dans les meilleurs délais.
-            </p>
+            <p set:html={t('home.workWithUs.boost.description1')} />
+            <p set:html={t('home.workWithUs.boost.description2')} />
           </>
         </Prose>
         <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-          <h3>AI Ready</h3>
+          <h3>{t('home.workWithUs.ai.title')}</h3>
           <>
-            <p>
-              Nous intégrons l'<strong>intelligence artificielle</strong> dans vos
-              applications pour automatiser et optimiser vos processus métier.
-            </p>
-            <p>
-              Notre expertise IA vous permet de{' '}
-              <strong>tirer parti des dernières avancées</strong> technologiques
-              pour rester compétitif.
-            </p>
+            <p set:html={t('home.workWithUs.ai.description1')} />
+            <p set:html={t('home.workWithUs.ai.description2')} />
           </>
         </Prose>
       </div>
