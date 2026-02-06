@@ -11,7 +11,6 @@ import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import ServiceOtherServices from '@/components/services/service-other-services.astro';
-import ServiceSkills from '@/components/services/service-skills.astro';
 import Accordion from '@/components/ui/accordion.astro';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
@@ -53,70 +52,76 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       description={t('services.projectBoost.description')}
     />
   </Hero>
-  <Container>
+
+  <Container placement="overlapHero">
     <div
-      class="flex flex-col gap-8 sm:flex-row-reverse sm:justify-end sm:gap-16"
+      class="flex flex-col gap-8 md:flex-row-reverse md:justify-end md:gap-16"
     >
-      <div class="flex flex-none flex-col gap-6 sm:w-64 sm:py-4">
-        <ServiceSkills
-          locale={locale}
-          skills={[
-            'react',
-            'typescript',
-            'tanstack-start',
-            'react-native',
-            'tailwind',
-            'start-ui',
-          ]}
-        />
+      <div
+        class="hidden flex-none flex-col gap-6 md:w-64 md:pt-32 md:pb-4 lg:flex"
+      >
         <ServiceOtherServices locale={locale} currentService="project-boost" />
       </div>
-
-      <Prose>
-        <h2>Qu'est-ce que le Boost Projet ?</h2>
-        <p>
-          Le Boost Projet consiste à <strong
-            >intégrer des développeurs expérimentés</strong
-          > directement au sein de vos équipes pour accélérer la livraison de votre
-          produit. Que vous fassiez face à un pic de charge, un manque de ressources
-          techniques ou un projet qui prend du retard, nous intervenons rapidement
-          pour <strong>maintenir votre vélocité de développement</strong>.
-        </p>
-        <p>
-          Contrairement à une prestation classique de développement, le Boost
-          Projet mise sur l'<strong>intégration</strong> : nos développeurs rejoignent
-          vos rituels, utilisent vos outils et adoptent vos conventions de code.
-          L'objectif est de fonctionner comme une
-          <strong>extension naturelle de votre équipe</strong>, pas comme un
-          prestataire externe.
-        </p>
-        <p>
-          Nous intervenons sur des projets de <a
-            href={getLink('/fr/prestations/developpement-web', locale, {})}
-            >développement web</a
-          >, de <a
-            href={getLink('/fr/prestations/developpement-mobile', locale, {})}
-            >développement mobile</a
-          > et sur la mise en place de <a
-            href={getLink('/fr/prestations/ux-design', locale, {})}
-            >design systems</a
-          >, avec une expertise forte sur l'écosystème React et TypeScript.
-        </p>
-        <p>
-          Notre approche est <strong>flexible</strong> : nous pouvons intervenir
-          à temps plein ou à temps partiel, sur des missions courtes ou longues,
-          selon vos besoins et votre budget. Nous nous adaptons à votre contexte,
-          pas l'inverse.
-        </p>
-      </Prose>
+      <div class="w-full max-w-prose">
+        <iframe
+          class="aspect-video h-auto w-full max-w-full rounded-lg"
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/fDwnTugiGtw?si=_UCL7KnzOGvdDk67"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
     </div>
   </Container>
+
+  <Container>
+    <Prose>
+      <h2>Qu'est-ce que le Boost Projet ?</h2>
+      <p>
+        Le Boost Projet consiste à <strong
+          >intégrer des développeurs expérimentés</strong
+        > directement au sein de vos équipes pour accélérer la livraison de votre
+        produit. Que vous fassiez face à un pic de charge, un manque de ressources
+        techniques ou un projet qui prend du retard, nous intervenons rapidement
+        pour <strong>maintenir votre vélocité de développement</strong>.
+      </p>
+      <p>
+        Contrairement à une prestation classique de développement, le Boost
+        Projet mise sur l'<strong>intégration</strong> : nos développeurs rejoignent
+        vos rituels, utilisent vos outils et adoptent vos conventions de code. L'objectif
+        est de fonctionner comme une
+        <strong>extension naturelle de votre équipe</strong>, pas comme un
+        prestataire externe.
+      </p>
+      <p>
+        Nous intervenons sur des projets de <a
+          href={getLink('/fr/prestations/developpement-web', locale, {})}
+          >développement web</a
+        >, de <a
+          href={getLink('/fr/prestations/developpement-mobile', locale, {})}
+          >développement mobile</a
+        > et sur la mise en place de <a
+          href={getLink('/fr/prestations/ux-design', locale, {})}
+          >design systems</a
+        >, avec une expertise forte sur l'écosystème React et TypeScript.
+      </p>
+      <p>
+        Notre approche est <strong>flexible</strong> : nous pouvons intervenir à
+        temps plein ou à temps partiel, sur des missions courtes ou longues, selon
+        vos besoins et votre budget. Nous nous adaptons à votre contexte, pas l'inverse.
+      </p>
+    </Prose>
+  </Container>
+
   <Container class="pt-0">
     <ContactCard
       locale={locale}
       title="On est disponible"
       subtitle="Discutons de vos besoins en renfort et trouvons ensemble la meilleure façon d'accélérer votre projet."
-      peopleIds={['yoann-fleury', 'ivan-dalmet']}
+      peopleIds={['yoann-fleury', 'nicolas-torion']}
     />
   </Container>
 
