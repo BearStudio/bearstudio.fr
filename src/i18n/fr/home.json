@@ -72,5 +72,29 @@
       "description": "Il fait bon travailler au BearStudio : nous formons une équipe complémentaire qui met sa bonne humeur au service de vos projets !",
       "hashtag": "#TrollInside"
     }
+  },
+  "workWithUs": {
+    "title": "Travailler avec le bearstudio",
+    "description": "Tout un panel d'offres pour assurer le développement de votre projet numérique.",
+    "design": {
+      "title": "Design de vos applications",
+      "description1": "Nous concevons des <strong>interfaces utilisateur modernes et intuitives</strong> qui placent l'expérience utilisateur au coeur de chaque projet.",
+      "description2": "Notre approche UX/UI garantit des applications <strong>esthétiques, accessibles et ergonomiques</strong> pour maximiser l'engagement de vos utilisateurs."
+    },
+    "development": {
+      "title": "Développement d'application web et mobile",
+      "description1": "Nous développons des <strong>applications performantes et évolutives</strong> en utilisant les technologies les plus adaptées à vos besoins.",
+      "description2": "Du web au mobile, nous créons des solutions <strong>robustes et maintenables</strong> qui accompagnent la croissance de votre activité."
+    },
+    "boost": {
+      "title": "Booster vos projets",
+      "description1": "Nous intervenons en <strong>renfort de vos équipes</strong> pour accélérer vos développements et apporter notre expertise technique.",
+      "description2": "Notre accompagnement flexible permet de <strong>débloquer vos projets</strong> et d'atteindre vos objectifs dans les meilleurs délais."
+    },
+    "ai": {
+      "title": "AI Ready",
+      "description1": "Nous intégrons l'<strong>intelligence artificielle</strong> dans vos applications pour automatiser et optimiser vos processus métier.",
+      "description2": "Notre expertise IA vous permet de <strong>tirer parti des dernières avancées</strong> technologiques pour rester compétitif."
+    }
   }
 }
