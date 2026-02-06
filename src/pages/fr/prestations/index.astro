@@ -21,6 +21,7 @@ import imgCto from './accompagnement-cto/_bg.jpg';
 import imgProjectBoost from './boost-projet/_bg.jpg';
 import imgMobileDev from './developpement-mobile/_bg.jpg';
 import imgWebDev from './developpement-web/_bg.jpg';
+import imgAi from './intelligence-artificielle/_bg.jpg';
 import imgUx from './ux-design/_bg.jpg';
 
 const locale = parseAstroLocale(Astro.currentLocale);
@@ -106,6 +107,12 @@ const peopleCurrent = await Promise.all(
         title={t('services.root.ctoSupport.title')}
         description={t('services.root.ctoSupport.description')}
         image={imgCto}
+      />
+      <ServiceCard
+        href={getLink('/fr/prestations/intelligence-artificielle', locale, {})}
+        title={t('services.root.ai.title')}
+        description={t('services.root.ai.description')}
+        image={imgAi}
       />
     </div>
   </Container>

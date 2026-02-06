@@ -1,0 +1,719 @@
+---
+import { match } from 'ts-pattern';
+
+import { getLink } from '@/lib/link';
+import { getDataForPeopleCarousel } from '@/lib/people';
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import ContactCard from '@/components/contact/contact-card.astro';
+import Container from '@/components/container.astro';
+import HeroContent from '@/components/hero/hero-content.astro';
+import Hero from '@/components/hero/hero.astro';
+import { PeopleCarousel } from '@/components/people/people-carousel';
+import Prose from '@/components/prose.astro';
+import SEO from '@/components/seo/index.astro';
+import { getAlternates } from '@/components/seo/utils';
+import ServiceOtherServices from '@/components/services/service-other-services.astro';
+import SubService from '@/components/services/sub-service.astro';
+import Accordion from '@/components/ui/accordion.astro';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
+import MainLayout from '@/layouts/main-layout.astro';
+
+import imgBg from './_bg.jpg';
+import imgDevIa from './_dev-ia.jpg';
+import imgIntegrationIa from './_integration-ia.jpg';
+import imgUxIa from './_ux-ia.jpg';
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
+
+const people = (
+  await getDataForPeopleCarousel({ locale, status: 'current' })
+).filter((people) => people.data.services?.includes('ai'));
+
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    label: t('services.root.breadcrumb'),
+    path: '/fr/prestations',
+    params: {},
+  }),
+  entry({
+    label: t('services.ai.breadcrumb'),
+    path: '/fr/prestations/intelligence-artificielle',
+    params: {},
+  }),
+]);
+---
+
+<MainLayout>
+  <SEO
+    slot="seo"
+    title={t('services.ai.title')}
+    description={t('services.ai.description')}
+    alternates={getAlternates('/fr/prestations/intelligence-artificielle', {})}
+    breadcrumb={breadcrumb}
+  />
+
+  <Hero image={imgBg}>
+    <HeroContent
+      breadcrumb={breadcrumb}
+      title={t('services.ai.title')}
+      description={t('services.ai.description')}
+    />
+  </Hero>
+  <Container>
+    <div
+      class="flex flex-col gap-8 md:flex-row-reverse md:justify-end md:gap-16"
+    >
+      <div class="hidden flex-none flex-col gap-6 md:flex md:w-64 md:py-4">
+        <ServiceOtherServices locale={locale} currentService="ai" />
+      </div>
+
+      <Prose>
+        {
+          match(locale)
+            .with('fr', () => (
+              <>
+                <h2>L'intelligence artificielle chez BearStudio</h2>
+                <p>
+                  L'IA transforme profondément la manière dont nous concevons,
+                  développons et utilisons les produits numériques. Chez
+                  BearStudio, nous adoptons une approche{' '}
+                  <strong>pragmatique et orientée résultats</strong> de
+                  l'intelligence artificielle : pas de buzzwords, mais des
+                  solutions concrètes qui apportent une vraie valeur à vos
+                  utilisateurs et à votre business.
+                </p>
+                <p>
+                  Notre expertise couvre l'ensemble du spectre de l'IA appliquée
+                  au développement produit : de la{' '}
+                  <strong>conception d'interfaces intégrant l'IA</strong> (chat,
+                  génération de contenu, suggestions intelligentes) à l'
+                  <strong>intégration de solutions LLM</strong> (RAG, agents
+                  autonomes, APIs) en passant par le{' '}
+                  <strong>développement assisté par IA</strong> avec des outils
+                  comme Claude Code, Cursor ou GitHub Copilot.
+                </p>
+                <p>
+                  Nous ne nous contentons pas de brancher une API : nous
+                  réfléchissons à l'<strong>expérience utilisateur</strong>, à
+                  l'<strong>architecture technique</strong>, à la{' '}
+                  <strong>pertinence des cas d'usage</strong> et au{' '}
+                  <strong>coût réel</strong> des solutions IA. Notre objectif
+                  est de vous aider à tirer le meilleur de l'IA, là où elle a
+                  vraiment du sens.
+                </p>
+              </>
+            ))
+            .with('en', () => (
+              <>
+                <h2>Artificial Intelligence at BearStudio</h2>
+                <p>
+                  AI is profoundly transforming how we design, develop, and use
+                  digital products. At BearStudio, we take a{' '}
+                  <strong>pragmatic, results-oriented approach</strong> to
+                  artificial intelligence: no buzzwords, just concrete solutions
+                  that deliver real value to your users and your business.
+                </p>
+                <p>
+                  Our expertise covers the full spectrum of AI applied to
+                  product development: from{' '}
+                  <strong>designing AI-integrated interfaces</strong> (chat,
+                  content generation, smart suggestions) to{' '}
+                  <strong>LLM solution integration</strong> (RAG, autonomous
+                  agents, APIs) and <strong>AI-assisted development</strong>{' '}
+                  with tools like Claude Code, Cursor, and GitHub Copilot.
+                </p>
+                <p>
+                  We don't just plug in an API: we think about{' '}
+                  <strong>user experience</strong>,{' '}
+                  <strong>technical architecture</strong>,{' '}
+                  <strong>use case relevance</strong>, and the{' '}
+                  <strong>real cost</strong> of AI solutions. Our goal is to
+                  help you get the best out of AI, where it truly makes sense.
+                </p>
+              </>
+            ))
+            .exhaustive()
+        }
+      </Prose>
+    </div>
+  </Container>
+  <Container class="pt-0">
+    <ContactCard
+      locale={locale}
+      title={match(locale)
+        .with('fr', () => 'Parlons IA')
+        .with('en', () => "Let's talk AI")
+        .exhaustive()}
+      subtitle={match(locale)
+        .with(
+          'fr',
+          () =>
+            'Discutons de vos projets IA et trouvons ensemble les solutions les plus adaptées à vos besoins.'
+        )
+        .with(
+          'en',
+          () =>
+            "Let's discuss your AI projects and find the best solutions for your needs together."
+        )
+        .exhaustive()}
+      peopleIds={['renan-decamps', 'noe-tatoud']}
+    />
+  </Container>
+
+  <Container>
+    <Prose>
+      {
+        match(locale)
+          .with('fr', () => (
+            <>
+              <h2>Nos expertises IA</h2>
+              <p>
+                Que vous souhaitiez <strong>repenser vos interfaces</strong>{' '}
+                pour intégrer l'IA, <strong>connecter des LLM</strong> à vos
+                produits existants ou{' '}
+                <strong>accélérer votre développement</strong> avec des outils
+                IA, nous mettons à votre disposition notre expertise de terrain
+                et notre vision produit.
+              </p>
+            </>
+          ))
+          .with('en', () => (
+            <>
+              <h2>Our AI expertise</h2>
+              <p>
+                Whether you want to <strong>rethink your interfaces</strong> to
+                integrate AI, <strong>connect LLMs</strong> to your existing
+                products, or <strong>accelerate your development</strong> with
+                AI tools, we bring our hands-on expertise and product vision to
+                the table.
+              </p>
+            </>
+          ))
+          .exhaustive()
+      }
+    </Prose>
+    <div class="mt-2 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <SubService
+        title={match(locale)
+          .with('fr', () => 'UX & IA')
+          .with('en', () => 'UX & AI')
+          .exhaustive()}
+        image={imgUxIa}
+      >
+        {
+          match(locale)
+            .with('fr', () => (
+              <p>
+                Conception d'<strong>interfaces intégrant l'IA</strong> de
+                manière naturelle et intuitive. Nous designons les nouveaux
+                patterns d'interaction : <strong>chat conversationnel</strong>,{' '}
+                <strong>génération de contenu</strong>,{' '}
+                <strong>suggestions intelligentes</strong>,{' '}
+                <strong>recherche sémantique</strong>, et accompagnons vos
+                utilisateurs dans l'adoption de ces nouvelles expériences.
+              </p>
+            ))
+            .with('en', () => (
+              <p>
+                Designing <strong>AI-integrated interfaces</strong> that feel
+                natural and intuitive. We craft new interaction patterns:{' '}
+                <strong>conversational chat</strong>,{' '}
+                <strong>content generation</strong>,{' '}
+                <strong>smart suggestions</strong>,{' '}
+                <strong>semantic search</strong>, and guide your users in
+                adopting these new experiences.
+              </p>
+            ))
+            .exhaustive()
+        }
+      </SubService>
+      <SubService
+        image={imgIntegrationIa}
+        title={match(locale)
+          .with('fr', () => 'Intégration de solutions IA')
+          .with('en', () => 'AI solution integration')
+          .exhaustive()}
+      >
+        {
+          match(locale)
+            .with('fr', () => (
+              <p>
+                Intégration d'<strong>APIs LLM</strong> (OpenAI, Anthropic,
+                Mistral), mise en place de pipelines{' '}
+                <strong>RAG (Retrieval-Augmented Generation)</strong>,
+                développement d'<strong>agents autonomes</strong>, et connexion
+                de l'intelligence artificielle à vos{' '}
+                <strong>produits existants</strong>. Nous maîtrisons
+                l'architecture technique nécessaire pour des solutions IA
+                fiables et performantes.
+              </p>
+            ))
+            .with('en', () => (
+              <p>
+                Integration of <strong>LLM APIs</strong> (OpenAI, Anthropic,
+                Mistral), implementation of{' '}
+                <strong>RAG (Retrieval-Augmented Generation)</strong> pipelines,
+                development of <strong>autonomous agents</strong>, and
+                connecting AI to your <strong>existing products</strong>. We
+                master the technical architecture needed for reliable and
+                performant AI solutions.
+              </p>
+            ))
+            .exhaustive()
+        }
+      </SubService>
+      <SubService
+        image={imgDevIa}
+        title={match(locale)
+          .with('fr', () => 'Développement assisté par IA')
+          .with('en', () => 'AI-assisted development')
+          .exhaustive()}
+      >
+        {
+          match(locale)
+            .with('fr', () => (
+              <p>
+                Nous utilisons au quotidien{' '}
+                <strong>Claude Code, Cursor, GitHub Copilot</strong> et d'autres
+                outils IA pour <strong>accélérer notre développement</strong>.
+                Nous partageons notre méthodologie, nos bonnes pratiques et
+                formons vos équipes à tirer le meilleur de ces outils pour{' '}
+                <strong>gagner en productivité</strong> sans sacrifier la
+                qualité du code.
+              </p>
+            ))
+            .with('en', () => (
+              <p>
+                We use <strong>Claude Code, Cursor, GitHub Copilot</strong> and
+                other AI tools daily to{' '}
+                <strong>accelerate our development</strong>. We share our
+                methodology, best practices, and train your teams to get the
+                most out of these tools to <strong>boost productivity</strong>{' '}
+                without sacrificing code quality.
+              </p>
+            ))
+            .exhaustive()
+        }
+      </SubService>
+    </div>
+  </Container>
+
+  <Container>
+    <Prose>
+      <h2>
+        {
+          match(locale)
+            .with('fr', () => 'Notre équipe IA')
+            .with('en', () => 'Our AI team')
+            .exhaustive()
+        }
+      </h2>
+    </Prose>
+    <PeopleCarousel client:load people={people} locale={locale} />
+  </Container>
+
+  <Container>
+    <Prose>
+      {
+        match(locale)
+          .with('fr', () => (
+            <>
+              <h2>Notre approche de l'IA</h2>
+              <p>
+                Au BearStudio, nous ne sommes pas des évangélistes de l'IA :
+                nous sommes des <strong>praticiens</strong>. Nous utilisons l'IA
+                tous les jours dans nos projets, ce qui nous permet de
+                distinguer clairement ce qui fonctionne de ce qui relève du
+                marketing.
+              </p>
+              <p>
+                Notre approche repose sur trois principes :{' '}
+                <strong>pragmatisme</strong> (l'IA doit résoudre un vrai
+                problème, pas être une feature gadget), <strong>qualité</strong>{' '}
+                (un produit IA mal conçu est pire que pas d'IA du tout) et{' '}
+                <strong>transparence</strong> (nous vous dirons si l'IA n'est
+                pas la bonne solution pour votre cas d'usage).
+              </p>
+              <p>
+                Nous combinons notre expertise en{' '}
+                <a href={getLink('/fr/prestations/ux-design', locale, {})}>
+                  UX design
+                </a>
+                , en{' '}
+                <a
+                  href={getLink(
+                    '/fr/prestations/developpement-web',
+                    locale,
+                    {}
+                  )}
+                >
+                  développement web
+                </a>{' '}
+                et en{' '}
+                <a
+                  href={getLink(
+                    '/fr/prestations/developpement-mobile',
+                    locale,
+                    {}
+                  )}
+                >
+                  développement mobile
+                </a>{' '}
+                avec notre maîtrise des technologies IA pour créer des produits
+                complets, cohérents et réellement utiles.
+              </p>
+            </>
+          ))
+          .with('en', () => (
+            <>
+              <h2>Our approach to AI</h2>
+              <p>
+                At BearStudio, we're not AI evangelists: we're{' '}
+                <strong>practitioners</strong>. We use AI every day in our
+                projects, which allows us to clearly distinguish what works from
+                what's just marketing.
+              </p>
+              <p>
+                Our approach is based on three principles:{' '}
+                <strong>pragmatism</strong> (AI should solve a real problem, not
+                be a gimmick feature), <strong>quality</strong> (a poorly
+                designed AI product is worse than no AI at all), and{' '}
+                <strong>transparency</strong> (we'll tell you if AI isn't the
+                right solution for your use case).
+              </p>
+              <p>
+                We combine our expertise in{' '}
+                <a href={getLink('/fr/prestations/ux-design', locale, {})}>
+                  UX design
+                </a>
+                ,{' '}
+                <a
+                  href={getLink(
+                    '/fr/prestations/developpement-web',
+                    locale,
+                    {}
+                  )}
+                >
+                  web development
+                </a>
+                , and{' '}
+                <a
+                  href={getLink(
+                    '/fr/prestations/developpement-mobile',
+                    locale,
+                    {}
+                  )}
+                >
+                  mobile development
+                </a>{' '}
+                with our mastery of AI technologies to create complete,
+                coherent, and truly useful products.
+              </p>
+            </>
+          ))
+          .exhaustive()
+      }
+    </Prose>
+  </Container>
+
+  <Container>
+    <Prose>
+      {
+        match(locale)
+          .with('fr', () => (
+            <>
+              <h2>Questions fréquentes sur nos prestations IA</h2>
+              <p>
+                Retrouvez les réponses aux questions les plus courantes sur nos
+                prestations en <strong>intelligence artificielle</strong>.
+              </p>
+
+              <div class="flex flex-col">
+                <Accordion question="Quels types de projets IA accompagnez-vous ?">
+                  <p>
+                    Nous accompagnons une grande variété de projets intégrant
+                    l'IA :
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Chatbots et assistants conversationnels</strong>{' '}
+                      intégrés à vos produits web et mobile
+                    </li>
+                    <li>
+                      <strong>Systèmes de recherche sémantique</strong> et de
+                      recommandation basés sur des embeddings
+                    </li>
+                    <li>
+                      <strong>Pipelines RAG</strong> pour interroger vos
+                      documents et bases de connaissances internes
+                    </li>
+                    <li>
+                      <strong>Agents autonomes</strong> capables d'exécuter des
+                      tâches complexes
+                    </li>
+                    <li>
+                      <strong>Génération de contenu</strong> (texte, images)
+                      intégrée dans vos workflows
+                    </li>
+                    <li>
+                      <strong>Outils internes</strong> augmentés par l'IA pour
+                      vos équipes
+                    </li>
+                  </ul>
+                </Accordion>
+
+                <Accordion question="Quelles technologies IA utilisez-vous ?">
+                  <p>
+                    Nous travaillons avec les principaux fournisseurs de modèles
+                    de langage :{' '}
+                    <strong>OpenAI (GPT-4), Anthropic (Claude), Mistral</strong>
+                    , et d'autres selon les besoins. Pour l'infrastructure, nous
+                    utilisons des solutions comme{' '}
+                    <strong>LangChain, Vercel AI SDK, pgvector</strong> pour les
+                    bases vectorielles.
+                  </p>
+                  <p>
+                    Pour le développement assisté par IA, nous utilisons
+                    quotidiennement{' '}
+                    <strong>Claude Code, Cursor, GitHub Copilot</strong> et
+                    avons développé des workflows et bonnes pratiques que nous
+                    partageons avec nos clients.
+                  </p>
+                </Accordion>
+
+                <Accordion question="Comment concevez-vous les interfaces IA ?">
+                  <p>
+                    La conception d'interfaces IA est un vrai défi UX. Les
+                    patterns classiques ne suffisent plus : il faut inventer de
+                    nouvelles manières d'interagir avec des systèmes
+                    probabilistes.
+                  </p>
+                  <p>
+                    Notre équipe{' '}
+                    <a href={getLink('/fr/prestations/ux-design', locale, {})}>
+                      UX design
+                    </a>{' '}
+                    travaille main dans la main avec nos développeurs pour
+                    concevoir des interfaces qui{' '}
+                    <strong>
+                      gèrent l'incertitude, le temps de réponse, les erreurs
+                    </strong>{' '}
+                    et qui offrent une expérience fluide malgré la nature non
+                    déterministe de l'IA.
+                  </p>
+                </Accordion>
+
+                <Accordion question="Quel est le coût d'un projet IA ?">
+                  <p>
+                    Le coût d'un projet IA dépend de plusieurs facteurs : la
+                    complexité du cas d'usage, le volume de données à traiter,
+                    le choix des modèles et l'infrastructure nécessaire.
+                  </p>
+                  <p>
+                    Un <strong>POC (Proof of Concept)</strong> peut être réalisé
+                    en quelques jours pour valider la faisabilité. Un produit
+                    complet avec intégration IA nécessite généralement plusieurs
+                    semaines à quelques mois de développement.
+                  </p>
+                  <p>
+                    Nous vous aidons à{' '}
+                    <strong>
+                      évaluer les coûts d'infrastructure récurrents
+                    </strong>{' '}
+                    (API calls, tokens, hébergement) pour que vous ayez une
+                    vision claire du coût total de possession avant de vous
+                    engager.
+                  </p>
+                </Accordion>
+
+                <Accordion question="Comment le développement assisté par IA change-t-il votre façon de travailler ?">
+                  <p>
+                    Les outils comme <strong>Claude Code et Cursor</strong> ont
+                    fondamentalement changé notre workflow de développement.
+                    Nous les utilisons pour accélérer l'écriture de code, le
+                    refactoring, les tests, la documentation et le débogage.
+                  </p>
+                  <p>
+                    Le résultat : un <strong>gain de productivité</strong>{' '}
+                    significatif sur les tâches répétitives, ce qui nous permet
+                    de nous concentrer davantage sur l'architecture, la qualité
+                    et l'expérience utilisateur. Nous gardons toujours un{' '}
+                    <strong>regard critique</strong> sur le code généré : l'IA
+                    est un outil puissant, mais la revue humaine reste
+                    indispensable.
+                  </p>
+                  <p>
+                    Nous pouvons <strong>former vos équipes</strong> à ces
+                    outils et les aider à mettre en place des workflows
+                    efficaces pour en tirer le meilleur parti.
+                  </p>
+                </Accordion>
+
+                <Accordion question="Pourquoi choisir BearStudio pour vos projets IA ?">
+                  <p>
+                    Parce que nous ne sommes pas une agence IA : nous sommes une{' '}
+                    <strong>agence produit</strong> qui maîtrise l'IA. La
+                    différence est fondamentale : nous ne pensons pas
+                    "technologie" d'abord, mais{' '}
+                    <strong>"problème utilisateur"</strong> d'abord.
+                  </p>
+                  <p>
+                    Notre force est de combiner{' '}
+                    <strong>UX design, développement et IA</strong> dans une
+                    même équipe. Nous savons concevoir des expériences
+                    complètes, pas juste brancher un modèle à une interface.
+                  </p>
+                  <p>
+                    Enfin, nous utilisons nous-mêmes ces outils au quotidien.
+                    Notre retour d'expérience n'est pas théorique : il est basé
+                    sur de <strong>projets réels</strong> où nous avons intégré
+                    l'IA dans nos processus et nos produits.
+                  </p>
+                </Accordion>
+              </div>
+            </>
+          ))
+          .with('en', () => (
+            <>
+              <h2>Frequently asked questions about our AI services</h2>
+              <p>
+                Find answers to the most common questions about our{' '}
+                <strong>artificial intelligence</strong> services.
+              </p>
+
+              <div class="flex flex-col">
+                <Accordion question="What types of AI projects do you support?">
+                  <p>We support a wide variety of AI-integrated projects:</p>
+                  <ul>
+                    <li>
+                      <strong>Chatbots and conversational assistants</strong>{' '}
+                      integrated into your web and mobile products
+                    </li>
+                    <li>
+                      <strong>Semantic search</strong> and embedding-based
+                      recommendation systems
+                    </li>
+                    <li>
+                      <strong>RAG pipelines</strong> to query your documents and
+                      internal knowledge bases
+                    </li>
+                    <li>
+                      <strong>Autonomous agents</strong> capable of executing
+                      complex tasks
+                    </li>
+                    <li>
+                      <strong>Content generation</strong> (text, images)
+                      integrated into your workflows
+                    </li>
+                    <li>
+                      AI-augmented <strong>internal tools</strong> for your
+                      teams
+                    </li>
+                  </ul>
+                </Accordion>
+
+                <Accordion question="What AI technologies do you use?">
+                  <p>
+                    We work with the leading language model providers:{' '}
+                    <strong>OpenAI (GPT-4), Anthropic (Claude), Mistral</strong>
+                    , and others as needed. For infrastructure, we use solutions
+                    like <strong>LangChain, Vercel AI SDK, pgvector</strong> for
+                    vector databases.
+                  </p>
+                  <p>
+                    For AI-assisted development, we daily use{' '}
+                    <strong>Claude Code, Cursor, GitHub Copilot</strong> and
+                    have developed workflows and best practices that we share
+                    with our clients.
+                  </p>
+                </Accordion>
+
+                <Accordion question="How do you design AI interfaces?">
+                  <p>
+                    Designing AI interfaces is a real UX challenge. Classic
+                    patterns are no longer enough: we need to invent new ways of
+                    interacting with probabilistic systems.
+                  </p>
+                  <p>
+                    Our{' '}
+                    <a href={getLink('/fr/prestations/ux-design', locale, {})}>
+                      UX design
+                    </a>{' '}
+                    team works hand in hand with our developers to create
+                    interfaces that{' '}
+                    <strong>handle uncertainty, response times, errors</strong>{' '}
+                    and deliver a smooth experience despite the
+                    non-deterministic nature of AI.
+                  </p>
+                </Accordion>
+
+                <Accordion question="What does an AI project cost?">
+                  <p>
+                    The cost of an AI project depends on several factors: use
+                    case complexity, data volume, model selection, and required
+                    infrastructure.
+                  </p>
+                  <p>
+                    A <strong>POC (Proof of Concept)</strong> can be done in a
+                    few days to validate feasibility. A complete product with AI
+                    integration typically requires several weeks to a few months
+                    of development.
+                  </p>
+                  <p>
+                    We help you{' '}
+                    <strong>evaluate recurring infrastructure costs</strong>{' '}
+                    (API calls, tokens, hosting) so you have a clear picture of
+                    the total cost of ownership before committing.
+                  </p>
+                </Accordion>
+
+                <Accordion question="How does AI-assisted development change the way you work?">
+                  <p>
+                    Tools like <strong>Claude Code and Cursor</strong> have
+                    fundamentally changed our development workflow. We use them
+                    to accelerate code writing, refactoring, testing,
+                    documentation, and debugging.
+                  </p>
+                  <p>
+                    The result: a significant <strong>productivity gain</strong>{' '}
+                    on repetitive tasks, allowing us to focus more on
+                    architecture, quality, and user experience. We always
+                    maintain a <strong>critical eye</strong> on generated code:
+                    AI is a powerful tool, but human review remains essential.
+                  </p>
+                  <p>
+                    We can <strong>train your teams</strong> on these tools and
+                    help them set up effective workflows to get the most out of
+                    them.
+                  </p>
+                </Accordion>
+
+                <Accordion question="Why choose BearStudio for your AI projects?">
+                  <p>
+                    Because we're not an AI agency: we're a{' '}
+                    <strong>product agency</strong> that masters AI. The
+                    difference is fundamental: we don't think "technology"
+                    first, but <strong>"user problem"</strong> first.
+                  </p>
+                  <p>
+                    Our strength is combining{' '}
+                    <strong>UX design, development, and AI</strong> within the
+                    same team. We know how to design complete experiences, not
+                    just plug a model into an interface.
+                  </p>
+                  <p>
+                    Finally, we use these tools ourselves every day. Our
+                    feedback isn't theoretical: it's based on{' '}
+                    <strong>real projects</strong> where we've integrated AI
+                    into our processes and products.
+                  </p>
+                </Accordion>
+              </div>
+            </>
+          ))
+          .exhaustive()
+      }
+    </Prose>
+  </Container>
+</MainLayout>

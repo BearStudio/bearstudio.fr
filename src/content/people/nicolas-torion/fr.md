@@ -11,6 +11,7 @@ status: 'current'
 hidden: false
 order: 30
 services:
+  - ai
   - web-development
   - mobile-development
   - cto-support

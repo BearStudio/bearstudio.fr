@@ -13,6 +13,7 @@ status: current
 hidden: false
 order: 2
 services:
+  - ai
   - ux-design
   - cto-support
   - project-boost

@@ -13,6 +13,7 @@ status: 'current'
 hidden: false
 order: 1000
 services:
+  - ai
   - web-development
   - mobile-development
 ---

@@ -172,6 +172,18 @@ const latestPosts = await Promise.all(
           >
             {t('home.services.ctoSupport')}
           </a>
+          <a
+            href={getLink(
+              '/fr/prestations/intelligence-artificielle',
+              locale,
+              {}
+            )}
+            class={cn(
+              buttonVariants({ variant: 'secondaryOnDark', size: 'sm' })
+            )}
+          >
+            {t('home.services.ai')}
+          </a>
         </div>
       </div>
 
@@ -588,7 +600,17 @@ const latestPosts = await Promise.all(
           </>
         </Prose>
         <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-          <h3>{t('home.workWithUs.ai.title')}</h3>
+          <h3>
+            <a
+              href={getLink(
+                '/fr/prestations/intelligence-artificielle',
+                locale,
+                {}
+              )}
+              class="text-foreground! no-underline hover:underline"
+              >{t('home.workWithUs.ai.title')}</a
+            >
+          </h3>
           <>
             <p set:html={t('home.workWithUs.ai.description1')} />
             <p set:html={t('home.workWithUs.ai.description2')} />

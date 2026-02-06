@@ -21,6 +21,7 @@ export const zPerson = ({ image }: SchemaContext) =>
     services: z
       .array(
         z.enum([
+          'ai',
           'cto-support',
           'mobile-development',
           'project-boost',

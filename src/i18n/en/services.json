@@ -23,6 +23,10 @@
       "title": "CTO Support",
       "description": "Need strategic advice on your technical architecture or technology choices? We support you in making technical decisions, structuring your development team, and implementing best practices to evolve your product confidently."
     },
+    "ai": {
+      "title": "Artificial Intelligence",
+      "description": "From AI interface design to LLM solution integration and AI-assisted development, we support you in the pragmatic adoption of artificial intelligence."
+    },
     "team": {
       "title": "Who makes up your project team?",
       "yourTeamAndOurs": {
@@ -65,5 +69,10 @@
     "breadcrumb": "CTO Support",
     "title": "CTO Support",
     "description": "We support you in your technical decisions, team structuring, and implementing best practices."
+  },
+  "ai": {
+    "breadcrumb": "Artificial Intelligence",
+    "title": "Artificial Intelligence",
+    "description": "From AI interface design to LLM solution integration and AI-assisted development, we support you in the pragmatic adoption of artificial intelligence."
   }
 }

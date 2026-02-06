@@ -9,7 +9,8 @@ type ServiceKey =
   | 'web-development'
   | 'mobile-development'
   | 'project-boost'
-  | 'cto-support';
+  | 'cto-support'
+  | 'ai';
 
 interface Props {
   locale: Locale;
@@ -45,6 +46,11 @@ const allServices = [
     key: 'cto-support' as const,
     label: t('services.ctoSupport.breadcrumb'),
     path: '/fr/prestations/accompagnement-cto' as const,
+  },
+  {
+    key: 'ai' as const,
+    label: t('services.ai.breadcrumb'),
+    path: '/fr/prestations/intelligence-artificielle' as const,
   },
 ];
 
