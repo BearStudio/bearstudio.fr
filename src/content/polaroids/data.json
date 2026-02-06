@@ -1,42 +1,38 @@
 [
   {
-    "id": "conference-codeurs-en-seine",
-    "title": {
-      "fr": "Nos conférences de Codeurs en Seine 2026",
-      "en": "Our Codeurs en Seine 2026 talks"
-    },
-    "src": "./ivan-talk-ces-25.jpeg",
-    "href": {
-      "fr": "https://www.codeursenseine.com/2025/programme"
-    }
-  },
-  {
-    "id": "taverne-des-3-ours",
+    "id": "1",
     "title": { "fr": "La tanière", "en": "The Den" },
-    "src": "./bearstudio-house.jpeg",
+    "src": "./polaroid-taniere.jpg",
     "href": {
       "fr": "/fr/equipe",
       "en": "/en/team"
     }
   },
   {
-    "id": "conference-react-london",
+    "id": "2",
     "title": {
-      "fr": "React Advanced Conference London 2026",
-      "en": "React Advanced Conference London 2026"
+      "fr": "Rejoingnez-nous à Fork it! Rouen 2026",
+      "en": "Join Us at Fork it! Rouen 2026"
     },
-    "src": "./london-25.jpeg",
-    "href": {
-      "fr": "https://www.forkit.community/news/article/2025-12-05-react-advanced-london"
-    }
+    "src": "./polaroid-forkit-rouen-2026.jpg",
+    "href": "https://www.forkit.community/events/2026-france-rouen"
   },
   {
-    "id": "fork-it-for-kids",
+    "id": "3",
     "title": {
-      "fr": "Fork it! For Kids à Rouen",
-      "en": "Fork it! For Kids Rouen edition"
+      "fr": "On sera à React Paris 2026",
+      "en": "Join Us at React Paris 2026"
     },
-    "src": "./forkids-rouen-2.jpeg",
-    "href": "https://www.forkit.community/news/article/2025-12-05-react-advanced-london"
+    "src": "./polaroid-react-paris-2026.jpg",
+    "href": "https://react.paris/?gad_campaignid=23307103345&gbraid=0AAAAAC-aWsNEc4kfNVfw68HH9eUtf45Fv"
+  },
+  {
+    "id": "4",
+    "title": {
+      "fr": "Nos starters Open Source",
+      "en": "Our Open Source Starters"
+    },
+    "src": "./polaroid-start-ui.jpg",
+    "href": "https://start-ui.com"
   }
 ]
