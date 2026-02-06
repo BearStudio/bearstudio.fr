@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 
 import { PiArrowSquareOut } from 'react-icons/pi';
+import { match } from 'ts-pattern';
 
 import { getLink } from '@/lib/link';
 import { getDataForPeopleCarousel } from '@/lib/people';
@@ -87,107 +88,277 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       </div>
 
       <Prose>
-        <h2>Qu'est-ce que le développement web ?</h2>
-        <p>
-          Le développement web se divise aujourd'hui en deux parties majeures:
-          le développement front-end et le développement back-end.
-        </p>
-        <p>
-          Le premier correspond aux productions HTML, CSS et JavaScript d’une
-          page Internet ou d’une application qu’un utilisateur peut voir et avec
-          lesquelles il peut interagir directement.
-        </p>
-        <p>
-          Le second correspond à la <strong>gestion des bases de données</strong
-          >, la mise en place d’un <strong>serveur web</strong>, d’un
-          back-office, le <strong>branchement d’API</strong> ou d’un <strong
-            >système de paiement</strong
-          >, l’architecture technique, la sécurisation et la gestion de
-          l’ensemble de votre contenu et plus globalement, tout ce qui est lié à
-          la <strong
-            >« logique » et aux aspects fonctionnels de votre projet</strong
-          >.
-        </p>
-        <p>
-          Si l’on devait comparer un site web à un magasin, le <strong
-            >front-end serait la boutique</strong
-          >, là où l’on vend les produits et le <strong
-            >back-end serait l’arrière boutique</strong
-          >, la partie <strong>cachée aux clients</strong> (utilisateurs) où se gèrent
-          tous les stocks, les approvisionnements, où se trouvent les bureaux etc.
-          #LesMeilleuresAnalogies
-        </p>
-        <p>
-          L’<strong>équipe de développement</strong> est donc particulièrement attentive
-          à l’<a href={getLink('/fr/prestations/ux-design', locale, {})}
-            ><strong>expérience utilisateur</strong></a
-          > lors du développement front. La prise en compte des <strong
-            >besoins des utilisateurs</strong
-          > passe par le développement d’un <strong
-            >design responsive et ergonomique</strong
-          > par le <strong>concepteur</strong>.
-        </p>
+        {
+          match(locale)
+            .with('fr', () => (
+              <>
+                <h2>Qu'est-ce que le développement web ?</h2>
+                <p>
+                  Le développement web se divise aujourd'hui en deux parties
+                  majeures: le développement front-end et le développement
+                  back-end.
+                </p>
+                <p>
+                  Le premier correspond aux productions HTML, CSS et JavaScript
+                  d'une page Internet ou d'une application qu'un utilisateur
+                  peut voir et avec lesquelles il peut interagir directement.
+                </p>
+                <p>
+                  Le second correspond à la{' '}
+                  <strong>gestion des bases de données</strong>, la mise en
+                  place d'un <strong>serveur web</strong>, d'un back-office, le{' '}
+                  <strong>branchement d'API</strong> ou d'un{' '}
+                  <strong>système de paiement</strong>, l'architecture
+                  technique, la sécurisation et la gestion de l'ensemble de
+                  votre contenu et plus globalement, tout ce qui est lié à la{' '}
+                  <strong>
+                    « logique » et aux aspects fonctionnels de votre projet
+                  </strong>
+                  .
+                </p>
+                <p>
+                  Si l'on devait comparer un site web à un magasin, le{' '}
+                  <strong>front-end serait la boutique</strong>, là où l'on vend
+                  les produits et le{' '}
+                  <strong>back-end serait l'arrière boutique</strong>, la partie{' '}
+                  <strong>cachée aux clients</strong> (utilisateurs) où se
+                  gèrent tous les stocks, les approvisionnements, où se trouvent
+                  les bureaux etc. #LesMeilleuresAnalogies
+                </p>
+                <p>
+                  L'<strong>équipe de développement</strong> est donc
+                  particulièrement attentive à l'
+                  <a href={getLink('/fr/prestations/ux-design', locale, {})}>
+                    <strong>expérience utilisateur</strong>
+                  </a>{' '}
+                  lors du développement front. La prise en compte des{' '}
+                  <strong>besoins des utilisateurs</strong> passe par le
+                  développement d'un{' '}
+                  <strong>design responsive et ergonomique</strong> par le{' '}
+                  <strong>concepteur</strong>.
+                </p>
+              </>
+            ))
+            .with('en', () => (
+              <>
+                <h2>What is web development?</h2>
+                <p>
+                  Web development is divided into two major areas today:
+                  front-end development and back-end development.
+                </p>
+                <p>
+                  The first corresponds to the HTML, CSS and JavaScript
+                  production of a web page or application that a user can see
+                  and interact with directly.
+                </p>
+                <p>
+                  The second corresponds to <strong>database management</strong>
+                  , setting up a <strong>web server</strong>, a back-office,{' '}
+                  <strong>API integration</strong> or a{' '}
+                  <strong>payment system</strong>, technical architecture,
+                  security and managing all your content and more broadly,
+                  everything related to the{' '}
+                  <strong>
+                    "logic" and functional aspects of your project
+                  </strong>
+                  .
+                </p>
+                <p>
+                  If we were to compare a website to a shop, the{' '}
+                  <strong>front-end would be the storefront</strong>, where
+                  products are sold and the{' '}
+                  <strong>back-end would be the back office</strong>, the part{' '}
+                  <strong>hidden from customers</strong> (users) where all
+                  stock, supplies, and offices are managed. #BestAnalogiesEver
+                </p>
+                <p>
+                  The <strong>development team</strong> is therefore
+                  particularly attentive to the{' '}
+                  <a href={getLink('/fr/prestations/ux-design', locale, {})}>
+                    <strong>user experience</strong>
+                  </a>{' '}
+                  during front-end development. Addressing{' '}
+                  <strong>user needs</strong> involves developing a{' '}
+                  <strong>responsive and ergonomic design</strong> by the{' '}
+                  <strong>designer</strong>.
+                </p>
+              </>
+            ))
+            .exhaustive()
+        }
       </Prose>
     </div>
   </Container>
   <Container class="pt-0">
     <ContactCard
       locale={locale}
-      title="On est disponible"
-      subtitle="Discutons de votre projet et trouvons ensemble la meilleure approche pour le développement de vos fonctionnalités."
+      title={match(locale)
+        .with('fr', () => 'On est disponible')
+        .with('en', () => "We're available")
+        .exhaustive()}
+      subtitle={match(locale)
+        .with(
+          'fr',
+          () =>
+            'Discutons de votre projet et trouvons ensemble la meilleure approche pour le développement de vos fonctionnalités.'
+        )
+        .with(
+          'en',
+          () =>
+            "Let's discuss your project and find the best approach together for developing your features."
+        )
+        .exhaustive()}
       peopleIds={['yoann-fleury', 'renan-decamps']}
     />
   </Container>
 
   <Container>
     <Prose>
-      <h2>Développement d'application web sur mesure</h2>
-      <p>
-        Qu’il s’agisse d’un back-office, d’un intranet ou d’une application web
-        métier accessible partout, nous disposons de l’expertise technique
-        nécessaire pour intervenir sur vos projets de développement web et vous
-        libérer du temps en simplifiant la gestion de vos données.
-      </p>
-      <p>
-        Nous savons tirer parti de l’intelligence artificielle pour accélérer la
-        production d’écrans de gestion, en complément des technologies que nous
-        maîtrisons au quotidien, telles que React, Tailwind CSS, Shadcn,
-        TanStack Start, TypeScript ou encore, notre starter de projet contenant
-        la mise en place de toutes ces technologies, Start UI [web].
-      </p>
+      {
+        match(locale)
+          .with('fr', () => (
+            <>
+              <h2>Développement d'application web sur mesure</h2>
+              <p>
+                Qu'il s'agisse d'un back-office, d'un intranet ou d'une
+                application web métier accessible partout, nous disposons de
+                l'expertise technique nécessaire pour intervenir sur vos projets
+                de développement web et vous libérer du temps en simplifiant la
+                gestion de vos données.
+              </p>
+              <p>
+                Nous savons tirer parti de l'intelligence artificielle pour
+                accélérer la production d'écrans de gestion, en complément des
+                technologies que nous maîtrisons au quotidien, telles que React,
+                Tailwind CSS, Shadcn, TanStack Start, TypeScript ou encore,
+                notre starter de projet contenant la mise en place de toutes ces
+                technologies, Start UI [web].
+              </p>
+            </>
+          ))
+          .with('en', () => (
+            <>
+              <h2>Custom web application development</h2>
+              <p>
+                Whether it's a back-office, an intranet or a business web
+                application accessible everywhere, we have the technical
+                expertise needed to work on your web development projects and
+                free up your time by simplifying your data management.
+              </p>
+              <p>
+                We know how to leverage artificial intelligence to accelerate
+                the production of management screens, alongside the technologies
+                we master daily, such as React, Tailwind CSS, Shadcn, TanStack
+                Start, TypeScript and our project starter containing all these
+                technologies, Start UI [web].
+              </p>
+            </>
+          ))
+          .exhaustive()
+      }
     </Prose>
     <div class="mt-2 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <SubService image={imgIntegration} title="Intégration">
-        <p>
-          Vous savez déjà à quoi va ressembler votre projet et vous avez besoin
-          de transformer votre « joli » en code ? Il n’y a donc plus qu’à se
-          mettre au travail. Grâce aux <strong>compétences techniques</strong> de
-          notre équipe, nous pouvons vous aider à intégrer les <strong
-            >maquettes</strong
-          > de votre application web ou de votre site internet !
-        </p>
+      <SubService
+        image={imgIntegration}
+        title={match(locale)
+          .with('fr', () => 'Intégration')
+          .with('en', () => 'Integration')
+          .exhaustive()}
+      >
+        {
+          match(locale)
+            .with('fr', () => (
+              <p>
+                Vous savez déjà à quoi va ressembler votre projet et vous avez
+                besoin de transformer votre « joli » en code ? Il n'y a donc
+                plus qu'à se mettre au travail. Grâce aux{' '}
+                <strong>compétences techniques</strong> de notre équipe, nous
+                pouvons vous aider à intégrer les <strong>maquettes</strong> de
+                votre application web ou de votre site internet !
+              </p>
+            ))
+            .with('en', () => (
+              <p>
+                You already know what your project will look like and you need
+                to turn your designs into code? Then let's get to work. Thanks
+                to our team's <strong>technical skills</strong>, we can help you
+                integrate the <strong>mockups</strong> of your web application
+                or website!
+              </p>
+            ))
+            .exhaustive()
+        }
       </SubService>
-      <SubService image={imgFrontend} title="Développement Front">
-        <p>
-          Si vous souhaitez dynamiser votre application web ou mettre rapidement
-          en place des écrans à destination de vos utilisateurs, nos
-          développeurs mettront à profit leur expertise en CSS et JavaScript
-          pour vous proposer des interfaces efficaces et soignées.
-        </p>
+      <SubService
+        image={imgFrontend}
+        title={match(locale)
+          .with('fr', () => 'Développement Front')
+          .with('en', () => 'Front-end Development')
+          .exhaustive()}
+      >
+        {
+          match(locale)
+            .with('fr', () => (
+              <p>
+                Si vous souhaitez dynamiser votre application web ou mettre
+                rapidement en place des écrans à destination de vos
+                utilisateurs, nos développeurs mettront à profit leur expertise
+                en CSS et JavaScript pour vous proposer des interfaces efficaces
+                et soignées.
+              </p>
+            ))
+            .with('en', () => (
+              <p>
+                If you want to enhance your web application or quickly set up
+                user-facing screens, our developers will leverage their CSS and
+                JavaScript expertise to deliver efficient and polished
+                interfaces.
+              </p>
+            ))
+            .exhaustive()
+        }
       </SubService>
-      <SubService image={imgBackend} title="Développement Back">
-        <p>
-          Pour améliorer les performances, la fiabilité et la scalabilité de
-          votre application web, nos développeurs backend conçoivent des APIs
-          performantes, sécurisent vos données et optimisent l’architecture
-          technique afin de soutenir durablement votre activité en ligne.
-        </p>
+      <SubService
+        image={imgBackend}
+        title={match(locale)
+          .with('fr', () => 'Développement Back')
+          .with('en', () => 'Back-end Development')
+          .exhaustive()}
+      >
+        {
+          match(locale)
+            .with('fr', () => (
+              <p>
+                Pour améliorer les performances, la fiabilité et la scalabilité
+                de votre application web, nos développeurs backend conçoivent
+                des APIs performantes, sécurisent vos données et optimisent
+                l'architecture technique afin de soutenir durablement votre
+                activité en ligne.
+              </p>
+            ))
+            .with('en', () => (
+              <p>
+                To improve the performance, reliability and scalability of your
+                web application, our backend developers design high-performance
+                APIs, secure your data and optimize the technical architecture
+                to sustainably support your online business.
+              </p>
+            ))
+            .exhaustive()
+        }
       </SubService>
     </div>
   </Container>
   <Container>
     <Prose>
-      <h2>Nos experts en développement web</h2>
+      <h2>
+        {
+          match(locale)
+            .with('fr', () => 'Nos experts en développement web')
+            .with('en', () => 'Our web development experts')
+            .exhaustive()
+        }
+      </h2>
     </Prose>
     <PeopleCarousel client:load people={people} locale={locale} />
   </Container>
@@ -199,19 +370,48 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
           Start UI [web]
         </h2>
         <p class="max-w-[70ch] text-sm text-balance">
-          Notre <strong>starter web React open source</strong> offre une base de
-          code prête pour la production avec authentification, internationalisation,
-          dark mode et composants avancés. Aligné sur notre kit de design
-          <a
-            href="http://figma.start-ui.com"
-            class="hover:text-accent underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Start UI [figma]</a
-          >, il permet à nos développeurs de transformer rapidement les
-          maquettes en applications fonctionnelles, garantissant une cohérence
-          parfaite entre design et implémentation.
+          {
+            match(locale)
+              .with('fr', () => (
+                <>
+                  Notre <strong>starter web React open source</strong> offre une
+                  base de code prête pour la production avec authentification,
+                  internationalisation, dark mode et composants avancés. Aligné
+                  sur notre kit de design{' '}
+                  <a
+                    href="http://figma.start-ui.com"
+                    class="hover:text-accent underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Start UI [figma]
+                  </a>
+                  , il permet à nos développeurs de transformer rapidement les
+                  maquettes en applications fonctionnelles, garantissant une
+                  cohérence parfaite entre design et implémentation.
+                </>
+              ))
+              .with('en', () => (
+                <>
+                  Our <strong>open source React web starter</strong> provides a
+                  production-ready codebase with authentication,
+                  internationalization, dark mode and advanced components.
+                  Aligned with our design kit{' '}
+                  <a
+                    href="http://figma.start-ui.com"
+                    class="hover:text-accent underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Start UI [figma]
+                  </a>
+                  , it enables our developers to quickly turn mockups into
+                  functional applications, ensuring perfect consistency between
+                  design and implementation.
+                </>
+              ))
+              .exhaustive()
+          }
         </p>
         <a
           href="http://web.start-ui.com"
@@ -219,7 +419,13 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
           rel="noopener noreferrer"
           class={buttonVariants()}
         >
-          Obtenir sur GitHub <PiArrowSquareOut />
+          {
+            match(locale)
+              .with('fr', () => 'Obtenir sur GitHub')
+              .with('en', () => 'Get on GitHub')
+              .exhaustive()
+          }
+          <PiArrowSquareOut />
         </a>
       </div>
       <a
@@ -241,281 +447,565 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
 
   <Container>
     <Prose>
-      <h2>Quelles sont les technos les plus utilisées au BearStudio ?</h2>
-      <p>
-        Lorsque nous réalisons des <strong>applications web</strong>, des <strong
-          >sites web</strong
-        >, des <strong>back-office</strong> ou bien des <strong
-          >applications mobiles</strong
-        >, nous utilisons généralement des technologies telles que : <a
-          href="https://fr.react.dev/"
-          target="_blank"
-          rel="noopener">React</a
-        >, <a href="https://reactnative.dev/" target="_blank" rel="noopener"
-          >React Native</a
-        >, <a href="https://astro.build/" target="_blank" rel="noopener"
-          >Astro</a
-        >
-        ou encore notre starter de projet <a
-          href="https://start-ui.com/"
-          target="_blank"
-          rel="noopener">Start UI</a
-        >. Ces frameworks nous permettent d’<strong
-          >étoffer la couche visuelle</strong
-        > que les langages HTML,CSS et JavaScript apportent et nous offrent la possibilité
-        d’<strong>aller beaucoup plus loin</strong>, d’<strong
-          >être plus performants</strong
-        > ainsi que de nous donner des outils qui <strong>facilitent</strong> la
-        <strong>mise en place</strong> et le processus d’<strong
-          >évolution de votre projet</strong
-        >.
-      </p>
+      {
+        match(locale)
+          .with('fr', () => (
+            <>
+              <h2>
+                Quelles sont les technos les plus utilisées au BearStudio ?
+              </h2>
+              <p>
+                Lorsque nous réalisons des <strong>applications web</strong>,
+                des <strong>sites web</strong>, des <strong>back-office</strong>{' '}
+                ou bien des <strong>applications mobiles</strong>, nous
+                utilisons généralement des technologies telles que :{' '}
+                <a href="https://fr.react.dev/" target="_blank" rel="noopener">
+                  React
+                </a>
+                ,{' '}
+                <a
+                  href="https://reactnative.dev/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  React Native
+                </a>
+                ,{' '}
+                <a href="https://astro.build/" target="_blank" rel="noopener">
+                  Astro
+                </a>{' '}
+                ou encore notre starter de projet{' '}
+                <a href="https://start-ui.com/" target="_blank" rel="noopener">
+                  Start UI
+                </a>
+                . Ces frameworks nous permettent d'
+                <strong>étoffer la couche visuelle</strong> que les langages
+                HTML, CSS et JavaScript apportent et nous offrent la possibilité
+                d'<strong>aller beaucoup plus loin</strong>, d'
+                <strong>être plus performants</strong> ainsi que de nous donner
+                des outils qui <strong>facilitent</strong> la{' '}
+                <strong>mise en place</strong> et le processus d'
+                <strong>évolution de votre projet</strong>.
+              </p>
+            </>
+          ))
+          .with('en', () => (
+            <>
+              <h2>What are the most used technologies at BearStudio?</h2>
+              <p>
+                When we build <strong>web applications</strong>,{' '}
+                <strong>websites</strong>, <strong>back-offices</strong> or{' '}
+                <strong>mobile applications</strong>, we generally use
+                technologies such as:{' '}
+                <a href="https://react.dev/" target="_blank" rel="noopener">
+                  React
+                </a>
+                ,{' '}
+                <a
+                  href="https://reactnative.dev/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  React Native
+                </a>
+                ,{' '}
+                <a href="https://astro.build/" target="_blank" rel="noopener">
+                  Astro
+                </a>{' '}
+                and our project starter{' '}
+                <a href="https://start-ui.com/" target="_blank" rel="noopener">
+                  Start UI
+                </a>
+                . These frameworks allow us to{' '}
+                <strong>enhance the visual layer</strong> that HTML, CSS and
+                JavaScript languages provide and offer us the ability to{' '}
+                <strong>go much further</strong>, to{' '}
+                <strong>be more performant</strong> as well as giving us tools
+                that <strong>facilitate</strong> the <strong>setup</strong> and
+                the process of <strong>evolving your project</strong>.
+              </p>
+            </>
+          ))
+          .exhaustive()
+      }
     </Prose>
   </Container>
   <Container>
     <Prose>
-      <h2>Questions fréquentes sur le développement web</h2>
-      <p>
-        Retrouvez les réponses aux questions les plus courantes sur le{' '}
-        <strong>développement web</strong>, nos méthodologies et bonnes
-        pratiques.
-      </p>
+      {
+        match(locale)
+          .with('fr', () => (
+            <>
+              <h2>Questions fréquentes sur le développement web</h2>
+              <p>
+                Retrouvez les réponses aux questions les plus courantes sur le{' '}
+                <strong>développement web</strong>, nos méthodologies et bonnes
+                pratiques.
+              </p>
 
-      <div class="flex flex-col">
-        <Accordion
-          question="Quelle est la différence entre front office et back office\u00a0?"
-        >
-          <p>
-            Le front office est la partie visible par l'utilisateur avec
-            laquelle il pourra interagir. En prenant l'exemple du personnel
-            d'une boutique, la partie front office représente les vendeurs en
-            interaction directe avec le client.
-          </p>
-          <p>
-            Le back office, à l'inverse, est la partie cachée d'un produit qui
-            permet sa gestion et son administration et qui est uniquement
-            accessible par un administrateur. En reprenant l'exemple du
-            personnel d'une boutique, une des composantes de la partie back
-            office serait par exemple les responsables de la gestion des stocks.
-          </p>
-        </Accordion>
+              <div class="flex flex-col">
+                <Accordion question="Quelle est la différence entre front office et back office\u00a0?">
+                  <p>
+                    Le front office est la partie visible par l'utilisateur avec
+                    laquelle il pourra interagir. En prenant l'exemple du
+                    personnel d'une boutique, la partie front office représente
+                    les vendeurs en interaction directe avec le client.
+                  </p>
+                  <p>
+                    Le back office, à l'inverse, est la partie cachée d'un
+                    produit qui permet sa gestion et son administration et qui
+                    est uniquement accessible par un administrateur. En
+                    reprenant l'exemple du personnel d'une boutique, une des
+                    composantes de la partie back office serait par exemple les
+                    responsables de la gestion des stocks.
+                  </p>
+                </Accordion>
 
-        <Accordion
-          question="Quelles sont les missions d'un développeur front end\u00a0?"
-        >
-          <p>
-            C'est grâce au développeur front que l'interface utilisateur prend
-            vie. Grâce aux différents langages de développement front, il
-            développe l'interface en prenant en compte l'accessibilité, le
-            référencement naturel (ou SEO) et l'optimisation de l'expérience
-            utilisateur en collaboration avec le designer UX et UI.
-          </p>
-          <p>
-            L'analyse des besoins du client est au cœur du métier de développeur
-            qui doit concevoir et développer des solutions techniques efficaces
-            et pertinentes.
-          </p>
-          <p>
-            Etre développeur front c'est aussi de la gestion de projet, de la
-            collaboration et de la communication avec les designers et tout le
-            reste de l'équipe mais aussi de la résolution de bugs.
-          </p>
-          <p>
-            Côté compétences techniques, le front dev doit maîtriser certains
-            langages indispensables que nous abordons dans la question suivante,
-            mais aussi une grande variété d'outils tels que des CMS (WordPress,
-            Drupal, Shopify...) ou encore des frameworks (React, Vue...).
-          </p>
-          <p>
-            Au niveau des "compétences humaines", le développeur informatique
-            doit être agile, créatif, rigoureux, curieux, avoir un bon sens du
-            relationnel et se poser des questions (sur la façon de faire et le
-            besoin du client). Etre autodidacte est un plus pour monter plus
-            facilement en compétences par la suite et continuer son
-            apprentissage.
-          </p>
-          <p>
-            Ces compétences ne sont pas réservées aux développeurs front, qu'on
-            soit chef de projet web, intégrateur web, web-designer, développeur
-            d'application (tout métier du numérique qui inclut du travail en
-            équipe en fait....) ce sont LES compétences à développer.
-          </p>
-        </Accordion>
-        <Accordion question="Quels sont les différents frameworks front end ?">
-          <p>
-            Un framework permet de créer un cadre de travail avec un ensemble
-            d'outils et de processus qui simplifient la tâche du développeur.
-          </p>
-          <p>
-            En fonction du type de produit que l'on développe en front-end il
-            conviendra de choisir un framework adapté. Au BearStudio, nous
-            recommandons principalement 4 frameworks:
-          </p>
-          <ul>
-            <li>
-              React, une bibliothèque JS créée par Facebook et utilisée par
-              Facebook, Netflix, Yahoo, Instagram, Gutenberg de WordPress et
-              bien d'autres... Elle permet de construire des composants
-              réutilisables dans une interface utilisateur. Le plus de React est
-              sa grande communautée qui permet une mise à disposition de
-              nombreuses librairies aux développeurs
-            </li>
-            <li>
-              TanStack Start est un starter de projet React moderne pour créer
-              rapidement une application web performante et typée de bout en
-              bout. Basé sur l’écosystème TanStack, il combine routage, gestion
-              des données et logique serveur dans une architecture claire,
-              idéale pour démarrer une application React scalable et
-              maintenable.
-            </li>
-            <li>
-              VueJS, un framework Javascript populaire pour sa légèreté et sa
-              performance, il utilise le Model-View-View-Model qui permet une
-              liaison bidirectionnelle grâce au data binding.
-            </li>
-          </ul>
-          <p>
-            Difficile de parler de tous les frameworks intéressants qui
-            existent, on peut encore citer Svelte, Angular, Ember.js, Solid,
-            jQuery et bien d'autres...
-          </p>
-        </Accordion>
-        <Accordion question="Quels sont les différents langages back end ?">
-          <p>
-            En fonction des besoins d’un produit numérique, l’utilisation d’un
-            langage de programmation adapté est nécessaire, il est donc
-            indispensable de maîtriser les langages principaux afin d’optimiser
-            le développement de la partie backend d’un produit. De plus, chaque
-            langage possède son lot de frameworks qui peuvent être utiles dans
-            un cadre d’utilisation précis.
-          </p>
+                <Accordion question="Quelles sont les missions d'un développeur front end\u00a0?">
+                  <p>
+                    C'est grâce au développeur front que l'interface utilisateur
+                    prend vie. Grâce aux différents langages de développement
+                    front, il développe l'interface en prenant en compte
+                    l'accessibilité, le référencement naturel (ou SEO) et
+                    l'optimisation de l'expérience utilisateur en collaboration
+                    avec le designer UX et UI.
+                  </p>
+                  <p>
+                    L'analyse des besoins du client est au cœur du métier de
+                    développeur qui doit concevoir et développer des solutions
+                    techniques efficaces et pertinentes.
+                  </p>
+                  <p>
+                    Etre développeur front c'est aussi de la gestion de projet,
+                    de la collaboration et de la communication avec les
+                    designers et tout le reste de l'équipe mais aussi de la
+                    résolution de bugs.
+                  </p>
+                  <p>
+                    Côté compétences techniques, le front dev doit maîtriser
+                    certains langages indispensables que nous abordons dans la
+                    question suivante, mais aussi une grande variété d'outils
+                    tels que des CMS (WordPress, Drupal, Shopify...) ou encore
+                    des frameworks (React, Vue...).
+                  </p>
+                  <p>
+                    Au niveau des "compétences humaines", le développeur
+                    informatique doit être agile, créatif, rigoureux, curieux,
+                    avoir un bon sens du relationnel et se poser des questions
+                    (sur la façon de faire et le besoin du client). Etre
+                    autodidacte est un plus pour monter plus facilement en
+                    compétences par la suite et continuer son apprentissage.
+                  </p>
+                  <p>
+                    Ces compétences ne sont pas réservées aux développeurs
+                    front, qu'on soit chef de projet web, intégrateur web,
+                    web-designer, développeur d'application (tout métier du
+                    numérique qui inclut du travail en équipe en fait....) ce
+                    sont LES compétences à développer.
+                  </p>
+                </Accordion>
+                <Accordion question="Quels sont les différents frameworks front end ?">
+                  <p>
+                    Un framework permet de créer un cadre de travail avec un
+                    ensemble d'outils et de processus qui simplifient la tâche
+                    du développeur.
+                  </p>
+                  <p>
+                    En fonction du type de produit que l'on développe en
+                    front-end il conviendra de choisir un framework adapté. Au
+                    BearStudio, nous recommandons principalement 4 frameworks:
+                  </p>
+                  <ul>
+                    <li>
+                      React, une bibliothèque JS créée par Facebook et utilisée
+                      par Facebook, Netflix, Yahoo, Instagram, Gutenberg de
+                      WordPress et bien d'autres... Elle permet de construire
+                      des composants réutilisables dans une interface
+                      utilisateur. Le plus de React est sa grande communautée
+                      qui permet une mise à disposition de nombreuses librairies
+                      aux développeurs
+                    </li>
+                    <li>
+                      TanStack Start est un starter de projet React moderne pour
+                      créer rapidement une application web performante et typée
+                      de bout en bout. Basé sur l'écosystème TanStack, il
+                      combine routage, gestion des données et logique serveur
+                      dans une architecture claire, idéale pour démarrer une
+                      application React scalable et maintenable.
+                    </li>
+                    <li>
+                      VueJS, un framework Javascript populaire pour sa légèreté
+                      et sa performance, il utilise le Model-View-View-Model qui
+                      permet une liaison bidirectionnelle grâce au data binding.
+                    </li>
+                  </ul>
+                  <p>
+                    Difficile de parler de tous les frameworks intéressants qui
+                    existent, on peut encore citer Svelte, Angular, Ember.js,
+                    Solid, jQuery et bien d'autres...
+                  </p>
+                </Accordion>
+                <Accordion question="Quels sont les différents langages back end ?">
+                  <p>
+                    En fonction des besoins d'un produit numérique,
+                    l'utilisation d'un langage de programmation adapté est
+                    nécessaire, il est donc indispensable de maîtriser les
+                    langages principaux afin d'optimiser le développement de la
+                    partie backend d'un produit. De plus, chaque langage possède
+                    son lot de frameworks qui peuvent être utiles dans un cadre
+                    d'utilisation précis.
+                  </p>
+                  <p>
+                    Quelques langages back populaires, leurs caractéristiques et
+                    frameworks :
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>JavaScript</strong> (TypeScript), qui permet de
+                      rendre une page web interactive et est utilisé pour les
+                      applications web, est utilisé par les développeurs front
+                      mais aussi par les développeurs back lorsqu'ils font du
+                      Node.JS. Il est donc possible de développer une
+                      application web entière simplement à l'aide de HTML et CSS
+                      et JavaScript. Avec JS on peut donc utiliser Node.JS et
+                      ainsi profiter de différents frameworks comme{' '}
+                      <strong>TanStack Start</strong> ou{' '}
+                      <strong>Next.js</strong> qui permettent de créer des web
+                      apps très rapidement.
+                    </li>
+                    <li>
+                      <strong>Java</strong>, un langage de programmation orienté
+                      objet qui permet de compiler un langage intermédiaire
+                      pouvant être lu par une machine virtuelle. Avec Java on
+                      peut utiliser <strong>Spring</strong> qui est adapté à la
+                      création d'API (et donc de services réutilisables par
+                      votre frontend web et votre frontend mobile).
+                    </li>
+                    <li>
+                      <strong>PHP</strong>, un langage impératif orienté objet
+                      qui permet de traiter des informations issues de bases de
+                      donnés, de formulaires ou de moteurs de recherche. PHP
+                      permet d'utiliser <strong>Laravel</strong>, parfait pour
+                      créer des API et <strong>Symfony</strong> qui permet de
+                      charger des pages HTML compréhensibles par Google et donc
+                      optimisées pour le référencement, contrairement à Spring,
+                      plus adapté aux applications.
+                    </li>
+                    <li>
+                      <strong>Python</strong>, un langage informatique à la fois
+                      simple à utiliser et qui offre un champ de possibilités
+                      très large, il est notamment utilisé par Google, Uber et
+                      Reddit. Sur Python, on peut utiliser le framework{' '}
+                      <strong>Django</strong> qui permet de faire des API avec
+                      les spécificités du langage (simplification des calculs,
+                      data science, IA…).
+                    </li>
+                    <li>
+                      <strong>Ruby</strong>, un langage de programmation open
+                      source qui permet de coder facilement et rapidement, il a
+                      été utilisé par Twitter et Airbnb. Avec Ruby on peut
+                      utiliser <strong>Ruby on Rails</strong> qui est un
+                      framework full-stack permettant de créer des applications
+                      web de A à Z.
+                    </li>
+                  </ul>
+                </Accordion>
+                <Accordion question="Pourquoi le BearStudio pour votre développement front ?">
+                  <p>
+                    Le développement front est le cœur de métier du BearStudio,
+                    il représente une majorité des projets de notre équipe.
+                    Notre team est d'ailleurs constituée de spécialistes dans
+                    différents domaines d'expertise, ce qui nous assure un
+                    niveau de compétences élevé.
+                  </p>
+                  <p>
+                    Nous sommes très sensibles aux{' '}
+                    <a href={getLink('/fr/prestations/ux-design', locale, {})}>
+                      problématiques UI et UX
+                    </a>{' '}
+                    en plaçant l'expérience utilisateur au centre de tout, un
+                    aspect primordial pour un développement front de qualité.
+                  </p>
+                  <p>
+                    Nous prenons en compte l'accessibilité lors de la conception
+                    de vos produits afin de s'assurer qu'ils soient utilisables
+                    par tous.
+                  </p>
+                  <p>
+                    Pour nous, une bonne communication est indispensable au bon
+                    déroulement d'un projet. Nous faisons tout notre possible
+                    pour analyser au mieux votre besoin et y répondre
+                    efficacement en faisant des retours, en prenant des
+                    feedbacks, en réalisant des tests utilisateurs et en restant
+                    en communication constante tout au long du projet.
+                  </p>
+                  <p>
+                    Nous sommes également moteur dans le développement front de
+                    plusieurs projets OpenSource (Formiz,{' '}
+                    <a href="https://start-ui.com">Start UI</a>)
+                  </p>
+                  <p>À bientôt pour votre futur projet !</p>
+                </Accordion>
+                <Accordion question="Pourquoi le BearStudio pour votre développement back ?">
+                  <p>
+                    Au BearStudio nous utilisons une stack que nous maîtrisons
+                    parfaitement et qui nous permet de gagner beaucoup de temps
+                    tout en nous offrant des possibilités quasi infinies.
+                  </p>
+                  <p>
+                    Nous suivons un processus rigoureux pour réaliser des tests,
+                    et lorsque c'est nécessaire et suivant la vélocité requise,
+                    nous réalisons des tests unitaires et des tests
+                    d'intégration qui nous permettent de livrer des produits de
+                    qualité.
+                  </p>
+                  <p>
+                    Nous possédons une expérience et une expertise dans le
+                    domaine du dev back, nous avons par exemple traité à
+                    plusieurs reprises des problématiques de performance et
+                    branché différents services externes (paiement, facturation,
+                    stockage de fichiers…) qui nous permettent d'économiser du
+                    temps et de l'argent.
+                  </p>
+                  <p>
+                    La gamme de compétences de notre entreprise fait de nous une
+                    équipe au profil full stack, nous ne nous contentons pas de
+                    produire un back end fonctionnel, nous produisons également
+                    des interfaces graphiques ergonomiques et accessibles.
+                  </p>
+                </Accordion>
+              </div>
+            </>
+          ))
+          .with('en', () => (
+            <>
+              <h2>Frequently asked questions about web development</h2>
+              <p>
+                Find answers to the most common questions about{' '}
+                <strong>web development</strong>, our methodologies and best
+                practices.
+              </p>
 
-          <p>
-            Quelques langages back populaires, leurs caractéristiques et
-            frameworks :
-          </p>
-          <ul>
-            <li>
-              <strong>JavaScript</strong> (TypeScript), qui permet de rendre une
-              page web interactive et est utilisé pour les applications web, est
-              utilisé par les développeurs front mais aussi par les développeurs
-              back lorsqu’ils font du Node.JS. Il est donc possible de développer
-              une application web entière simplement à l’aide de HTML et CSS et JavaScript.
-              Avec JS on peut donc utiliser Node.JS et ainsi profiter de différents
-              frameworks comme <strong>TanStack Start</strong> ou
-              <strong>Next.js</strong> qui permettent de créer des web apps très
-              rapidement.
-            </li>
-            <li>
-              <strong>Java</strong>, un langage de programmation orienté objet
-              qui permet de compiler un langage intermédiaire pouvant être lu
-              par une machine virtuelle. Avec Java on peut utiliser <strong>
-                Spring</strong
-              > qui est adapté à la création d’API (et donc de services réutilisables
-              par votre frontend web et votre frontend mobile).
-            </li>
-            <li>
-              <strong>PHP</strong>, un langage impératif orienté objet qui
-              permet de traiter des informations issues de bases de donnés, de
-              formulaires ou de moteurs de recherche. PHP permet d’utiliser
-              <strong>Laravel</strong>, parfait pour créer des API et <strong
-                >Symfony</strong
-              >
-              qui permet de charger des pages HTML compréhensibles par Google et
-              donc optimisées pour le référencement, contrairement à Spring, plus
-              adapté aux applications.
-            </li>
-            <li>
-              <strong>Python</strong>, un langage informatique à la fois simple
-              à utiliser et qui offre un champ de possibilités très large, il
-              est notamment utilisé par Google, Uber et Reddit. Sur Python, on
-              peut utiliser le framework <strong>Django</strong> qui permet de faire
-              des API avec les spécificités du langage (simplification des calculs,
-              data science, IA…).
-            </li>
-            <li>
-              <strong>Ruby</strong>, un langage de programmation open source qui
-              permet de coder facilement et rapidement, il a été utilisé par
-              Twitter et Airbnb. Avec Ruby on peut utiliser
-              <strong>Ruby on Rails</strong>
-              qui est un framework full-stack permettant de créer des applications
-              web de A à Z.
-            </li>
-          </ul>
-        </Accordion>
-        <Accordion
-          question="Pourquoi le BearStudio pour votre développement front ?"
-        >
-          <p>
-            Le développement front est le cœur de métier du BearStudio, il
-            représente une majorité des projets de notre équipe. Notre team est
-            d’ailleurs constituée de spécialistes dans différents domaines
-            d’expertise, ce qui nous assure un niveau de compétences élevé.
-          </p>
+              <div class="flex flex-col">
+                <Accordion question="What is the difference between front office and back office?">
+                  <p>
+                    The front office is the part visible to the user that they
+                    can interact with. Using the example of shop staff, the
+                    front office represents the salespeople in direct
+                    interaction with the customer.
+                  </p>
+                  <p>
+                    The back office, on the other hand, is the hidden part of a
+                    product that enables its management and administration and
+                    is only accessible by an administrator. Using the shop staff
+                    example again, one component of the back office would be the
+                    stock management team.
+                  </p>
+                </Accordion>
 
-          <p>
-            Nous sommes très sensibles aux <a
-              href={getLink('/fr/prestations/ux-design', locale, {})}
-              >problématiques UI et UX</a
-            > en plaçant l’expérience utilisateur au centre de tout, un aspect primordial
-            pour un développement front de qualité.
-          </p>
-
-          <p>
-            Nous prenons en compte l’accessibilité lors de la conception de vos
-            produits afin de s’assurer qu’ils soient utilisables par tous.
-          </p>
-
-          <p>
-            Pour nous, une bonne communication est indispensable au bon
-            déroulement d’un projet. Nous faisons tout notre possible pour
-            analyser au mieux votre besoin et y répondre efficacement en faisant
-            des retours, en prenant des feedbacks, en réalisant des tests
-            utilisateurs et en restant en communication constante tout au long
-            du projet.
-          </p>
-
-          <p>
-            Nous sommes également moteur dans le développement front de
-            plusieurs projets OpenSource (Formiz, <a href="https://start-ui.com"
-              >Start UI</a
-            >)
-          </p>
-
-          <p>À bientôt pour votre futur projet !</p>
-        </Accordion>
-        <Accordion
-          question="Pourquoi le BearStudio pour votre développement back ?"
-        >
-          <p>
-            Au BearStudio nous utilisons une stack que nous maîtrisons
-            parfaitement et qui nous permet de gagner beaucoup de temps tout en
-            nous offrant des possibilités quasi infinies.
-          </p>
-
-          <p>
-            Nous suivons un processus rigoureux pour réaliser des tests, et
-            lorsque c’est nécessaire et suivant la vélocité requise, nous
-            réalisons des tests unitaires et des tests d’intégration qui nous
-            permettent de livrer des produits de qualité.
-          </p>
-
-          <p>
-            Nous possédons une expérience et une expertise dans le domaine du
-            dev back, nous avons par exemple traité à plusieurs reprises des
-            problématiques de performance et branché différents services
-            externes (paiement, facturation, stockage de fichiers…) qui nous
-            permettent d’économiser du temps et de l’argent.
-          </p>
-
-          <p>
-            La gamme de compétences de notre entreprise fait de nous une équipe
-            au profil full stack, nous ne nous contentons pas de produire un
-            back end fonctionnel, nous produisons également des interfaces
-            graphiques ergonomiques et accessibles.
-          </p>
-        </Accordion>
-      </div>
+                <Accordion question="What are the responsibilities of a front-end developer?">
+                  <p>
+                    It is thanks to the front-end developer that the user
+                    interface comes to life. Using various front-end development
+                    languages, they build the interface while considering
+                    accessibility, search engine optimization (SEO) and user
+                    experience optimization in collaboration with the UX and UI
+                    designer.
+                  </p>
+                  <p>
+                    Analyzing client needs is at the heart of a developer's job,
+                    who must design and develop effective and relevant technical
+                    solutions.
+                  </p>
+                  <p>
+                    Being a front-end developer also involves project
+                    management, collaboration and communication with designers
+                    and the rest of the team, as well as bug fixing.
+                  </p>
+                  <p>
+                    On the technical skills side, front-end devs must master
+                    certain essential languages that we cover in the next
+                    question, but also a wide variety of tools such as CMS
+                    (WordPress, Drupal, Shopify...) or frameworks (React,
+                    Vue...).
+                  </p>
+                  <p>
+                    In terms of "soft skills", developers must be agile,
+                    creative, rigorous, curious, have good interpersonal skills
+                    and ask questions (about how to do things and the client's
+                    needs). Being self-taught is a plus for upskilling more
+                    easily and continuing to learn.
+                  </p>
+                  <p>
+                    These skills are not reserved for front-end developers,
+                    whether you're a web project manager, web integrator,
+                    web-designer or application developer (any digital
+                    profession that involves teamwork really...) these are THE
+                    skills to develop.
+                  </p>
+                </Accordion>
+                <Accordion question="What are the different front-end frameworks?">
+                  <p>
+                    A framework creates a working environment with a set of
+                    tools and processes that simplify the developer's task.
+                  </p>
+                  <p>
+                    Depending on the type of product being developed on the
+                    front-end, an appropriate framework should be chosen. At
+                    BearStudio, we mainly recommend 4 frameworks:
+                  </p>
+                  <ul>
+                    <li>
+                      React, a JS library created by Facebook and used by
+                      Facebook, Netflix, Yahoo, Instagram, WordPress Gutenberg
+                      and many others... It allows building reusable components
+                      in a user interface. React's biggest advantage is its
+                      large community which provides numerous libraries for
+                      developers.
+                    </li>
+                    <li>
+                      TanStack Start is a modern React project starter for
+                      quickly creating a performant, end-to-end typed web
+                      application. Based on the TanStack ecosystem, it combines
+                      routing, data management and server logic in a clear
+                      architecture, ideal for starting a scalable and
+                      maintainable React application.
+                    </li>
+                    <li>
+                      VueJS, a popular JavaScript framework known for its
+                      lightness and performance, it uses the
+                      Model-View-View-Model which enables bidirectional binding
+                      through data binding.
+                    </li>
+                  </ul>
+                  <p>
+                    It's hard to talk about all the interesting frameworks out
+                    there, we can also mention Svelte, Angular, Ember.js, Solid,
+                    jQuery and many others...
+                  </p>
+                </Accordion>
+                <Accordion question="What are the different back-end languages?">
+                  <p>
+                    Depending on the needs of a digital product, using an
+                    appropriate programming language is necessary, so it is
+                    essential to master the main languages to optimize back-end
+                    development. Moreover, each language has its own set of
+                    frameworks that can be useful in specific use cases.
+                  </p>
+                  <p>
+                    Some popular back-end languages, their characteristics and
+                    frameworks:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>JavaScript</strong> (TypeScript), which makes web
+                      pages interactive and is used for web applications, is
+                      used by front-end developers but also by back-end
+                      developers when working with Node.JS. It is therefore
+                      possible to develop an entire web application using just
+                      HTML, CSS and JavaScript. With JS you can use Node.JS and
+                      take advantage of various frameworks like{' '}
+                      <strong>TanStack Start</strong> or{' '}
+                      <strong>Next.js</strong> which allow creating web apps
+                      very quickly.
+                    </li>
+                    <li>
+                      <strong>Java</strong>, an object-oriented programming
+                      language that compiles to an intermediate language that
+                      can be read by a virtual machine. With Java you can use{' '}
+                      <strong>Spring</strong> which is suited for API creation
+                      (and thus reusable services for your web frontend and
+                      mobile frontend).
+                    </li>
+                    <li>
+                      <strong>PHP</strong>, an imperative object-oriented
+                      language for processing information from databases, forms
+                      or search engines. PHP allows using{' '}
+                      <strong>Laravel</strong>, perfect for creating APIs and{' '}
+                      <strong>Symfony</strong> which can serve HTML pages
+                      understandable by Google and thus optimized for SEO,
+                      unlike Spring, which is more suited for applications.
+                    </li>
+                    <li>
+                      <strong>Python</strong>, a programming language that is
+                      both easy to use and offers a very wide range of
+                      possibilities, it is notably used by Google, Uber and
+                      Reddit. With Python, you can use the{' '}
+                      <strong>Django</strong> framework to build APIs with the
+                      language's specifics (simplified calculations, data
+                      science, AI...).
+                    </li>
+                    <li>
+                      <strong>Ruby</strong>, an open source programming language
+                      that allows coding easily and quickly, it has been used by
+                      Twitter and Airbnb. With Ruby you can use{' '}
+                      <strong>Ruby on Rails</strong> which is a full-stack
+                      framework for creating web applications from A to Z.
+                    </li>
+                  </ul>
+                </Accordion>
+                <Accordion question="Why choose BearStudio for your front-end development?">
+                  <p>
+                    Front-end development is BearStudio's core business, it
+                    represents the majority of our team's projects. Our team is
+                    made up of specialists in various areas of expertise, which
+                    ensures a high level of competence.
+                  </p>
+                  <p>
+                    We are very sensitive to{' '}
+                    <a href={getLink('/fr/prestations/ux-design', locale, {})}>
+                      UI and UX challenges
+                    </a>{' '}
+                    by placing user experience at the center of everything, a
+                    key aspect for quality front-end development.
+                  </p>
+                  <p>
+                    We take accessibility into account when designing your
+                    products to ensure they are usable by everyone.
+                  </p>
+                  <p>
+                    For us, good communication is essential to the smooth
+                    running of a project. We do our best to analyze your needs
+                    and respond effectively by providing feedback, taking input,
+                    conducting user testing and maintaining constant
+                    communication throughout the project.
+                  </p>
+                  <p>
+                    We are also driving forces in the front-end development of
+                    several open source projects (Formiz,{' '}
+                    <a href="https://start-ui.com">Start UI</a>)
+                  </p>
+                  <p>See you soon for your next project!</p>
+                </Accordion>
+                <Accordion question="Why choose BearStudio for your back-end development?">
+                  <p>
+                    At BearStudio we use a stack that we master perfectly and
+                    that allows us to save a lot of time while offering nearly
+                    infinite possibilities.
+                  </p>
+                  <p>
+                    We follow a rigorous testing process, and when necessary and
+                    depending on the required velocity, we perform unit tests
+                    and integration tests that allow us to deliver quality
+                    products.
+                  </p>
+                  <p>
+                    We have experience and expertise in back-end development. We
+                    have dealt with performance issues on several occasions and
+                    connected various external services (payment, invoicing,
+                    file storage...) which save us time and money.
+                  </p>
+                  <p>
+                    Our company's range of skills makes us a full stack team. We
+                    don't just produce a functional back-end, we also produce
+                    ergonomic and accessible graphical interfaces.
+                  </p>
+                </Accordion>
+              </div>
+            </>
+          ))
+          .exhaustive()
+      }
     </Prose>
   </Container>
 </MainLayout>
