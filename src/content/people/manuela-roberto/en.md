@@ -7,7 +7,7 @@ socials:
     href: https://www.linkedin.com/in/manuelaroberto?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 status: 'current'
 hidden: false
-order: 71
+order: 85
 ---
 
 Manuela is an office manager with more than 20 years of experience in IT service companies, at the heart of the worlds of document digitization and video games. Always on the move, she juggles priorities, anticipates, coordinates, and drives projects forward with infectious energy.

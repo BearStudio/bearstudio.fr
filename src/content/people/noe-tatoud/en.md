@@ -11,7 +11,7 @@ socials:
     href: 'https://noe.tatoud.com'
 status: 'current'
 hidden: false
-order: 1000
+order: 71
 services:
   - ai
   - web-development

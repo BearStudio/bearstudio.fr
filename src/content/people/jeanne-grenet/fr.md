@@ -9,7 +9,7 @@ socials:
     href: 'https://www.jeanne-grenet.fr/'
 status: 'current'
 hidden: false
-order: 1000
+order: 91
 services:
   - web-development
   - mobile-development

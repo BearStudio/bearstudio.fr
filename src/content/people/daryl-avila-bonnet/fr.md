@@ -7,7 +7,7 @@ socials:
     href: https://www.linkedin.com/in/darylavilabonnet/
 status: 'current'
 hidden: false
-order: 71
+order: 74
 services:
   - ux-design
 ---

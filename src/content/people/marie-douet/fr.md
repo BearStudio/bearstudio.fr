@@ -7,7 +7,7 @@ socials:
     href: 'https://www.linkedin.com/in/marie-douet/'
 status: 'current'
 hidden: false
-order: 1000
+order: 72
 services:
   - web-development
   - mobile-development

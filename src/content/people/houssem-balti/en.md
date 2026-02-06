@@ -7,7 +7,7 @@ socials:
     href: 'https://www.linkedin.com/in/houssem-balti/'
 status: 'current'
 hidden: false
-order: 1000
+order: 96
 services:
   - web-development
 ---
