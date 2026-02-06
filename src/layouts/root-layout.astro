@@ -35,16 +35,12 @@ dayjs.locale(Astro.currentLocale);
       content="black-translucent"
     />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    {
-      locale === 'fr' && (
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title={t('blog.root.title')}
-          href={getLink('/fr/blog/rss.xml', locale, {}, true)}
-        />
-      )
-    }
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={t('blog.root.title')}
+      href={getLink('/fr/blog/rss.xml', locale, {}, true)}
+    />
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta
@@ -52,8 +48,6 @@ dayjs.locale(Astro.currentLocale);
       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
     <meta name="generator" content={Astro.generator} />
-    <link rel="shortlink" href="https://www.bearstudio.fr/" />
-
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -72,7 +66,7 @@ dayjs.locale(Astro.currentLocale);
         '@id': getId('website'),
         url: `${getSiteUrl()}/`,
         name: 'BearStudio',
-        description: '',
+        description: t('home.metadata.description'),
         publisher: {
           '@id': getId('organization'),
         },

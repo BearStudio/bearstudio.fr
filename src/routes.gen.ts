@@ -16,7 +16,8 @@ const ROUTES_CONFIG = {
       },
       "posts": {
         ":id": {}
-      }
+      },
+      "rss.xml": {}
     },
     "contact": {
       "application-process-bearstudio": {}
