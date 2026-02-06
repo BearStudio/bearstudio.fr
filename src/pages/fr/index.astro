@@ -10,7 +10,6 @@ import { getPostsCollection } from '@/lib/posts';
 import { cn } from '@/lib/tailwind/utils';
 import { PostCardMore } from '@/components/blog/post-card-more';
 import { PostsCarousel } from '@/components/blog/posts-carousel';
-import ContactCard from '@/components/contact/contact-card.astro';
 import ContactCta from '@/components/contact/contact-cta.astro';
 import Container from '@/components/container.astro';
 import Hero from '@/components/hero/hero.astro';
@@ -201,447 +200,446 @@ const latestPosts = await Promise.all(
     </div>
   </Hero>
 
-  {/* Your problem */}
-  <Container class="md:py-20">
-    <div class="-mt-32 w-full lg:hidden">
-      <PolaroidsCarousel client:load locale={locale} polaroids={polaroids} />
-    </div>
+  <div class="flex flex-col md:gap-20">
+    {/* Your problem */}
+    <Container class="md:pt-20">
+      <div class="-mt-32 w-full lg:hidden">
+        <PolaroidsCarousel client:load locale={locale} polaroids={polaroids} />
+      </div>
 
-    <div class="flex flex-col gap-8 pt-8 md:flex-row md:pt-0">
-      <div class="flex flex-1 flex-col gap-3">
+      <div class="flex flex-col gap-8 pt-8 md:flex-row md:pt-0">
+        <div class="flex flex-1 flex-col gap-3">
+          <h2
+            class="font-heading text-2xl font-bold text-balance md:max-w-[20ch]"
+          >
+            {t('home.contact.title')}
+          </h2>
+          <p class="max-w-[70ch] text-sm text-balance">
+            {t('home.contact.description')}
+          </p>
+          <ContactCta locale={locale} class="max-md:hidden" />
+        </div>
+
+        <div class="xs:flex-row flex flex-2 flex-col gap-8">
+          <div class="flex flex-1 flex-col gap-2">
+            <h3
+              class="font-heading text-lg leading-tight font-bold text-balance"
+            >
+              {t('home.contact.idea.title')}
+            </h3>
+            <p class="max-w-[70ch] text-sm text-balance italic">
+              {t('home.contact.idea.quote')}
+            </p>
+            <p class="max-w-[70ch] text-sm text-balance">
+              {t('home.contact.idea.description')}
+            </p>
+          </div>
+
+          <div class="flex flex-1 flex-col gap-2">
+            <h3
+              class="font-heading text-lg leading-tight font-bold text-balance"
+            >
+              {t('home.contact.need.title')}
+            </h3>
+            <p class="max-w-[70ch] text-sm text-balance italic">
+              {t('home.contact.need.quote')}
+            </p>
+            <p class="max-w-[70ch] text-sm text-balance">
+              {t('home.contact.need.description')}
+            </p>
+          </div>
+        </div>
+
+        <ContactCta locale={locale} class="md:hidden" />
+      </div>
+    </Container>
+
+    {/* Trust */}
+    <SectionScratched>
+      <Container>
+        <div class="flex flex-1 flex-col gap-2">
+          <h2
+            class="font-heading text-accent text-2xl font-bold text-balance md:max-w-[20ch]"
+          >
+            {t('home.trust.title')}
+          </h2>
+          <p class="max-w-[70ch] text-sm text-balance">
+            {t('home.trust.description')}
+          </p>
+        </div>
+
+        <div class="2xs:grid-cols-2 grid flex-2 gap-4 sm:grid-cols-3">
+          <a
+            href="https://www.cuisinez-pour-bebe.fr/"
+            class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div
+              class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
+            >
+              <Image
+                width={288}
+                height={172}
+                class="w-fit"
+                src="/logos/cuisinez-pour-bebe_bg-white@hd.png"
+                alt="Cuisinez pour bébé"
+              />
+            </div>
+            <div class="flex flex-2 flex-col gap-1 p-2">
+              <p class="text-xs opacity-80">
+                {t('home.trust.clients.cuisinezPourBebe')}
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://www.docaposte-agility.fr/"
+            class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div
+              class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
+            >
+              <Image
+                width={288}
+                height={172}
+                class="w-fit"
+                src="/logos/docaposte_bg-white@hd.png"
+                alt="Docaposte Agility"
+              />
+            </div>
+            <div class="flex flex-2 flex-col gap-1 p-2">
+              <p class="text-xs opacity-80">
+                {t('home.trust.clients.docaposte')}
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://kernelbiomedical.com/"
+            class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div
+              class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
+            >
+              <Image
+                width={288}
+                height={172}
+                class="w-fit"
+                src="/logos/kernel-biomedical_bg-white@hd.png"
+                alt="Kernel Biomedical"
+              />
+            </div>
+            <div class="flex flex-2 flex-col gap-1 p-2">
+              <p class="text-xs opacity-80">
+                {t('home.trust.clients.kernelBiomedical')}
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://apps.apple.com/fr/app/l%C3%A9a-english/id6739615642"
+            class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div
+              class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
+            >
+              <Image
+                width={288}
+                height={172}
+                class="w-fit"
+                src="/logos/lea-english_bg-white@hd.png"
+                alt="Léa English"
+              />
+            </div>
+            <div class="flex flex-2 flex-col gap-1 p-2">
+              <p class="text-xs opacity-80">
+                {t('home.trust.clients.leaEnglish')}
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://trashtalk.co/"
+            class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div
+              class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
+            >
+              <Image
+                width={288}
+                height={172}
+                class="w-fit"
+                src="/logos/trashtalk_bg-white@hd.png"
+                alt="TrashTalk"
+              />
+            </div>
+            <div class="flex flex-2 flex-col gap-1 p-2">
+              <p class="text-xs opacity-80">
+                {t('home.trust.clients.trashTalk')}
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://campo-products.com/"
+            class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div
+              class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
+            >
+              <Image
+                width={288}
+                height={172}
+                class="w-fit"
+                src="/logos/campo_bg-white@hd.png"
+                alt="Campo"
+              />
+            </div>
+            <div class="flex flex-2 flex-col gap-1 p-2">
+              <p class="text-xs opacity-80">
+                {t('home.trust.clients.campo')}
+              </p>
+            </div>
+          </a>
+        </div>
+      </Container>
+    </SectionScratched>
+
+    <Container class="gap-12 md:gap-20">
+      {/* Experts */}
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-1">
+          <h2 class="font-heading text-2xl font-bold text-balance">
+            <a href={getLink('/fr/equipe', locale, {})}
+              >{t('home.experts.title')}</a
+            >
+          </h2>
+          <p class="max-w-[70ch] text-sm text-balance">
+            {t('home.experts.description')}
+          </p>
+        </div>
+        <PeopleCarousel client:load people={peopleCurrent} locale={locale}>
+          <PersonCardMore href={getLink('/fr/equipe', locale, {})}>
+            {t('home.experts.more')}
+          </PersonCardMore>
+        </PeopleCarousel>
+      </div>
+
+      {/* Latest Posts */}
+      {
+        !!latestPosts.length && (
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
+              <h2 class="font-heading text-2xl font-bold text-balance">
+                <a href={getLink('/fr/blog', locale, {})}>
+                  {t('home.blog.title')}
+                </a>
+              </h2>
+              <p class="max-w-[70ch] text-sm text-balance">
+                {t('home.blog.description')}
+              </p>
+            </div>
+            <PostsCarousel client:load posts={latestPosts} locale={locale}>
+              <PostCardMore href={getLink('/fr/blog', locale, {})}>
+                {t('home.blog.more')}
+              </PostCardMore>
+            </PostsCarousel>
+          </div>
+        )
+      }
+    </Container>
+
+    {/* Values */}
+    <SectionScratched>
+      <Container class="md:py-20">
+        <div class="flex flex-col gap-8">
+          <div class="flex flex-col gap-4">
+            <h2
+              class="font-heading text-accent text-2xl font-bold text-balance"
+            >
+              {t('home.values.title')}
+            </h2>
+            <p class="max-w-[70ch] text-sm text-balance">
+              {t('home.values.intro')}
+            </p>
+          </div>
+
+          <div class="grid flex-2 gap-6 py-4 lg:grid-cols-2">
+            <div class="flex flex-col gap-4">
+              <h3
+                class="font-heading text-lg leading-tight font-bold text-balance"
+              >
+                {t('home.values.support.title')}
+              </h3>
+              <p class="max-w-[70ch] text-sm text-balance italic">
+                {t('home.values.support.description')}
+              </p>
+              <p
+                class="font-handwritten text-2xl md:text-3xl"
+                aria-label={t('home.values.support.hashtag')}
+              >
+                {t('home.values.support.hashtag')}
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <h3
+                class="font-heading text-lg leading-tight font-bold text-balance"
+              >
+                {t('home.values.quality.title')}
+              </h3>
+              <p class="max-w-[70ch] text-sm text-balance italic">
+                {t('home.values.quality.description')}
+              </p>
+              <p
+                class="font-handwritten text-2xl md:text-3xl"
+                aria-label={t('home.values.quality.hashtag')}
+              >
+                {t('home.values.quality.hashtag')}
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <h3
+                class="font-heading text-lg leading-tight font-bold text-balance"
+              >
+                {t('home.values.team.title')}
+              </h3>
+              <p class="max-w-[70ch] text-sm text-balance italic">
+                {t('home.values.team.description')}
+              </p>
+              <p class="max-w-[70ch] text-sm text-balance italic">
+                {t('home.values.team.location')}
+              </p>
+              <p
+                class="font-handwritten text-2xl md:text-3xl"
+                aria-label={t('home.values.team.hashtag')}
+              >
+                {t('home.values.team.hashtag')}
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <h3
+                class="font-heading text-lg leading-tight font-bold text-balance"
+              >
+                {t('home.values.conviviality.title')}
+              </h3>
+              <p class="max-w-[70ch] text-sm text-balance italic">
+                {t('home.values.conviviality.description')}
+              </p>
+              <p
+                class="font-handwritten text-2xl md:text-3xl"
+                aria-label={t('home.values.conviviality.hashtag')}
+              >
+                {t('home.values.conviviality.hashtag')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </SectionScratched>
+
+    {/* Work with use */}
+    <Container class="sm:flex-row sm:gap-8">
+      <div class="flex flex-1 flex-col gap-2">
         <h2
           class="font-heading text-2xl font-bold text-balance md:max-w-[20ch]"
         >
-          {t('home.contact.title')}
+          Travailler avec le bearstudio
         </h2>
         <p class="max-w-[70ch] text-sm text-balance">
-          {t('home.contact.description')}
+          Tout un panel d’offres pour assurer le développement de votre projet
+          numérique.
         </p>
-        <ContactCta locale={locale} class="max-md:hidden" />
+        <ContactCta locale={locale} />
       </div>
-
-      <div class="xs:flex-row flex flex-2 flex-col gap-8">
-        <div class="flex flex-1 flex-col gap-2">
-          <h3 class="font-heading text-lg leading-tight font-bold text-balance">
-            {t('home.contact.idea.title')}
+      <div class="grid flex-2 gap-6 py-4 pb-12 lg:grid-cols-2">
+        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+          <h3>
+            <a
+              href={getLink('/fr/prestations/ux-design', locale, {})}
+              class="text-foreground! no-underline hover:underline"
+              >Design de vos applications</a
+            >
           </h3>
-          <p class="max-w-[70ch] text-sm text-balance italic">
-            {t('home.contact.idea.quote')}
-          </p>
-          <p class="max-w-[70ch] text-sm text-balance">
-            {t('home.contact.idea.description')}
-          </p>
-        </div>
-
-        <div class="flex flex-1 flex-col gap-2">
-          <h3 class="font-heading text-lg leading-tight font-bold text-balance">
-            {t('home.contact.need.title')}
+          <>
+            <p>
+              Nous concevons des <strong
+                >interfaces utilisateur modernes et intuitives</strong
+              >{' '}
+              qui placent l'expérience utilisateur au coeur de chaque projet.
+            </p>
+            <p>
+              Notre approche UX/UI garantit des applications{' '}
+              <strong>esthétiques, accessibles et ergonomiques</strong> pour maximiser
+              l'engagement de vos utilisateurs.
+            </p>
+          </>
+        </Prose>
+        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+          <h3>
+            <a
+              href={getLink('/fr/prestations/developpement-web', locale, {})}
+              class="text-foreground! no-underline hover:underline"
+              >Développement d'application web et mobile</a
+            >
           </h3>
-          <p class="max-w-[70ch] text-sm text-balance italic">
-            {t('home.contact.need.quote')}
-          </p>
-          <p class="max-w-[70ch] text-sm text-balance">
-            {t('home.contact.need.description')}
-          </p>
-        </div>
-      </div>
-
-      <ContactCta locale={locale} class="md:hidden" />
-    </div>
-  </Container>
-
-  {/* Trust */}
-  <SectionScratched>
-    <Container>
-      <div class="flex flex-1 flex-col gap-2">
-        <h2
-          class="font-heading text-accent text-2xl font-bold text-balance md:max-w-[20ch]"
-        >
-          {t('home.trust.title')}
-        </h2>
-        <p class="max-w-[70ch] text-sm text-balance">
-          {t('home.trust.description')}
-        </p>
-      </div>
-
-      <div class="2xs:grid-cols-2 grid flex-2 gap-4 sm:grid-cols-3">
-        <a
-          href="https://www.cuisinez-pour-bebe.fr/"
-          class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div
-            class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
-          >
-            <Image
-              width={288}
-              height={172}
-              class="w-fit"
-              src="/logos/cuisinez-pour-bebe_bg-white@hd.png"
-              alt="Cuisinez pour bébé"
-            />
-          </div>
-          <div class="flex flex-2 flex-col gap-1 p-2">
-            <p class="text-xs opacity-80">
-              {t('home.trust.clients.cuisinezPourBebe')}
+          <>
+            <p>
+              Nous développons des <strong
+                >applications performantes et évolutives</strong
+              >{' '}
+              en utilisant les technologies les plus adaptées à vos besoins.
             </p>
-          </div>
-        </a>
-        <a
-          href="https://www.docaposte-agility.fr/"
-          class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div
-            class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
-          >
-            <Image
-              width={288}
-              height={172}
-              class="w-fit"
-              src="/logos/docaposte_bg-white@hd.png"
-              alt="Docaposte Agility"
-            />
-          </div>
-          <div class="flex flex-2 flex-col gap-1 p-2">
-            <p class="text-xs opacity-80">
-              {t('home.trust.clients.docaposte')}
+            <p>
+              Du web au mobile, nous créons des solutions{' '}
+              <strong>robustes et maintenables</strong> qui accompagnent la croissance
+              de votre activité.
             </p>
-          </div>
-        </a>
-        <a
-          href="https://kernelbiomedical.com/"
-          class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div
-            class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
-          >
-            <Image
-              width={288}
-              height={172}
-              class="w-fit"
-              src="/logos/kernel-biomedical_bg-white@hd.png"
-              alt="Kernel Biomedical"
-            />
-          </div>
-          <div class="flex flex-2 flex-col gap-1 p-2">
-            <p class="text-xs opacity-80">
-              {t('home.trust.clients.kernelBiomedical')}
+          </>
+        </Prose>
+        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+          <h3>
+            <a
+              href={getLink('/fr/prestations/boost-projet', locale, {})}
+              class="text-foreground! no-underline hover:underline"
+              >Booster vos projets</a
+            >
+          </h3>
+          <>
+            <p>
+              Nous intervenons en <strong>renfort de vos équipes</strong> pour accélérer
+              vos développements et apporter notre expertise technique.
             </p>
-          </div>
-        </a>
-        <a
-          href="https://apps.apple.com/fr/app/l%C3%A9a-english/id6739615642"
-          class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div
-            class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
-          >
-            <Image
-              width={288}
-              height={172}
-              class="w-fit"
-              src="/logos/lea-english_bg-white@hd.png"
-              alt="Léa English"
-            />
-          </div>
-          <div class="flex flex-2 flex-col gap-1 p-2">
-            <p class="text-xs opacity-80">
-              {t('home.trust.clients.leaEnglish')}
+            <p>
+              Notre accompagnement flexible permet de{' '}
+              <strong>débloquer vos projets</strong> et d'atteindre vos objectifs
+              dans les meilleurs délais.
             </p>
-          </div>
-        </a>
-        <a
-          href="https://trashtalk.co/"
-          class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div
-            class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
-          >
-            <Image
-              width={288}
-              height={172}
-              class="w-fit"
-              src="/logos/trashtalk_bg-white@hd.png"
-              alt="TrashTalk"
-            />
-          </div>
-          <div class="flex flex-2 flex-col gap-1 p-2">
-            <p class="text-xs opacity-80">
-              {t('home.trust.clients.trashTalk')}
+          </>
+        </Prose>
+        <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
+          <h3>AI Ready</h3>
+          <>
+            <p>
+              Nous intégrons l'<strong>intelligence artificielle</strong> dans vos
+              applications pour automatiser et optimiser vos processus métier.
             </p>
-          </div>
-        </a>
-        <a
-          href="https://campo-products.com/"
-          class="group flex flex-col gap-2 overflow-hidden rounded-sm p-2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div
-            class="overflow-hidden rounded-sm bg-white shadow-xl transition group-hover:scale-105"
-          >
-            <Image
-              width={288}
-              height={172}
-              class="w-fit"
-              src="/logos/campo_bg-white@hd.png"
-              alt="Campo"
-            />
-          </div>
-          <div class="flex flex-2 flex-col gap-1 p-2">
-            <p class="text-xs opacity-80">
-              {t('home.trust.clients.campo')}
+            <p>
+              Notre expertise IA vous permet de{' '}
+              <strong>tirer parti des dernières avancées</strong> technologiques
+              pour rester compétitif.
             </p>
-          </div>
-        </a>
+          </>
+        </Prose>
       </div>
     </Container>
-  </SectionScratched>
-
-  {/* Experts */}
-  <Container class="pt-20">
-    <div class="flex flex-col gap-4">
-      <div class="flex flex-col gap-1">
-        <h2 class="font-heading text-2xl font-bold text-balance">
-          <a href={getLink('/fr/equipe', locale, {})}
-            >{t('home.experts.title')}</a
-          >
-        </h2>
-        <p class="max-w-[70ch] text-sm text-balance">
-          {t('home.experts.description')}
-        </p>
-      </div>
-      <PeopleCarousel client:load people={peopleCurrent} locale={locale}>
-        <PersonCardMore href={getLink('/fr/equipe', locale, {})}>
-          {t('home.experts.more')}
-        </PersonCardMore>
-      </PeopleCarousel>
-    </div>
-  </Container>
-
-  {/* Latest Posts */}
-  {
-    !!latestPosts.length && (
-      <Container>
-        <div class="flex flex-col gap-4">
-          <div class="flex flex-col gap-1">
-            <h2 class="font-heading text-2xl font-bold text-balance">
-              <a href={getLink('/fr/blog', locale, {})}>
-                {t('home.blog.title')}
-              </a>
-            </h2>
-            <p class="max-w-[70ch] text-sm text-balance">
-              {t('home.blog.description')}
-            </p>
-          </div>
-          <PostsCarousel client:load posts={latestPosts} locale={locale}>
-            <PostCardMore href={getLink('/fr/blog', locale, {})}>
-              {t('home.blog.more')}
-            </PostCardMore>
-          </PostsCarousel>
-        </div>
-      </Container>
-    )
-  }
-
-  {/* Work with use */}
-  <Container class="sm:flex-row sm:gap-8">
-    <div class="flex flex-1 flex-col gap-2">
-      <h2 class="font-heading text-2xl font-bold text-balance md:max-w-[20ch]">
-        Travailler avec le bearstudio
-      </h2>
-      <p class="max-w-[70ch] text-sm text-balance">
-        Tout un panel d’offres pour assurer le développement de votre projet
-        numérique.
-      </p>
-      <ContactCta locale={locale} />
-    </div>
-    <div class="grid flex-2 gap-6 py-4 pb-12 lg:grid-cols-2">
-      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-        <h3>
-          <a
-            href={getLink('/fr/prestations/ux-design', locale, {})}
-            class="text-foreground! no-underline hover:underline"
-            >Design de vos applications</a
-          >
-        </h3>
-        <>
-          <p>
-            Nous concevons des <strong
-              >interfaces utilisateur modernes et intuitives</strong
-            >{' '}
-            qui placent l'expérience utilisateur au coeur de chaque projet.
-          </p>
-          <p>
-            Notre approche UX/UI garantit des applications{' '}
-            <strong>esthétiques, accessibles et ergonomiques</strong> pour maximiser
-            l'engagement de vos utilisateurs.
-          </p>
-        </>
-      </Prose>
-      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-        <h3>
-          <a
-            href={getLink('/fr/prestations/developpement-web', locale, {})}
-            class="text-foreground! no-underline hover:underline"
-            >Développement d'application web et mobile</a
-          >
-        </h3>
-        <>
-          <p>
-            Nous développons des <strong
-              >applications performantes et évolutives</strong
-            >{' '}
-            en utilisant les technologies les plus adaptées à vos besoins.
-          </p>
-          <p>
-            Du web au mobile, nous créons des solutions{' '}
-            <strong>robustes et maintenables</strong> qui accompagnent la croissance
-            de votre activité.
-          </p>
-        </>
-      </Prose>
-      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-        <h3>
-          <a
-            href={getLink('/fr/prestations/boost-projet', locale, {})}
-            class="text-foreground! no-underline hover:underline"
-            >Booster vos projets</a
-          >
-        </h3>
-        <>
-          <p>
-            Nous intervenons en <strong>renfort de vos équipes</strong> pour accélérer
-            vos développements et apporter notre expertise technique.
-          </p>
-          <p>
-            Notre accompagnement flexible permet de{' '}
-            <strong>débloquer vos projets</strong> et d'atteindre vos objectifs dans
-            les meilleurs délais.
-          </p>
-        </>
-      </Prose>
-      <Prose class="prose-sm prose-p:my-0.5 flex flex-col">
-        <h3>AI Ready</h3>
-        <>
-          <p>
-            Nous intégrons l'<strong>intelligence artificielle</strong> dans vos
-            applications pour automatiser et optimiser vos processus métier.
-          </p>
-          <p>
-            Notre expertise IA vous permet de{' '}
-            <strong>tirer parti des dernières avancées</strong> technologiques pour
-            rester compétitif.
-          </p>
-        </>
-      </Prose>
-    </div>
-  </Container>
-
-  {/* Values */}
-  <SectionScratched>
-    <Container>
-      <div class="flex flex-col gap-8">
-        <div class="flex flex-col gap-4">
-          <h2 class="font-heading text-accent text-2xl font-bold text-balance">
-            {t('home.values.title')}
-          </h2>
-          <p class="max-w-[70ch] text-sm text-balance">
-            {t('home.values.intro')}
-          </p>
-        </div>
-
-        <div class="grid flex-2 gap-6 py-4 pb-12 lg:grid-cols-2">
-          <div class="flex flex-col gap-4">
-            <h3
-              class="font-heading text-lg leading-tight font-bold text-balance"
-            >
-              {t('home.values.support.title')}
-            </h3>
-            <p class="max-w-[70ch] text-sm text-balance italic">
-              {t('home.values.support.description')}
-            </p>
-            <p
-              class="font-handwritten text-2xl md:text-3xl"
-              aria-label={t('home.values.support.hashtag')}
-            >
-              {t('home.values.support.hashtag')}
-            </p>
-          </div>
-
-          <div class="flex flex-col gap-4">
-            <h3
-              class="font-heading text-lg leading-tight font-bold text-balance"
-            >
-              {t('home.values.quality.title')}
-            </h3>
-            <p class="max-w-[70ch] text-sm text-balance italic">
-              {t('home.values.quality.description')}
-            </p>
-            <p
-              class="font-handwritten text-2xl md:text-3xl"
-              aria-label={t('home.values.quality.hashtag')}
-            >
-              {t('home.values.quality.hashtag')}
-            </p>
-          </div>
-
-          <div class="flex flex-col gap-4">
-            <h3
-              class="font-heading text-lg leading-tight font-bold text-balance"
-            >
-              {t('home.values.team.title')}
-            </h3>
-            <p class="max-w-[70ch] text-sm text-balance italic">
-              {t('home.values.team.description')}
-            </p>
-            <p class="max-w-[70ch] text-sm text-balance italic">
-              {t('home.values.team.location')}
-            </p>
-            <p
-              class="font-handwritten text-2xl md:text-3xl"
-              aria-label={t('home.values.team.hashtag')}
-            >
-              {t('home.values.team.hashtag')}
-            </p>
-          </div>
-
-          <div class="flex flex-col gap-4">
-            <h3
-              class="font-heading text-lg leading-tight font-bold text-balance"
-            >
-              {t('home.values.conviviality.title')}
-            </h3>
-            <p class="max-w-[70ch] text-sm text-balance italic">
-              {t('home.values.conviviality.description')}
-            </p>
-            <p
-              class="font-handwritten text-2xl md:text-3xl"
-              aria-label={t('home.values.conviviality.hashtag')}
-            >
-              {t('home.values.conviviality.hashtag')}
-            </p>
-          </div>
-        </div>
-      </div>
-    </Container>
-  </SectionScratched>
-  <Container>
-    <ContactCard
-      class="mx-auto my-12"
-      locale={locale}
-      title="On est disponible"
-      subtitle="Discutons de votre projet et trouvons ensemble la meilleure approche pour vos utilisateurs."
-      peopleIds={['nhung-duong', 'rudy-baer']}
-    />
-  </Container>
+  </div>
 </MainLayout>
