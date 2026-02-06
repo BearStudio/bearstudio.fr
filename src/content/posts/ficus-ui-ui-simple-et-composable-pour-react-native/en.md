@@ -7,7 +7,7 @@ tags:
   - 'developpement'
   - 'developpement-mobile'
   - 'react-native'
-heroImage: 'images/Format-Blog-Header-8-scaled.png'
+heroImage: 'images/og-image.jpg'
 authors: ['nicolas-torion']
 ---
 
@@ -388,13 +388,13 @@ const { colorMode, toggleColorMode } = useColorMode();
 
 ## Comparison with other React Native UI libraries (2025)
 
-| Library                       | Strengths                    | What Ficus UI adds                                     |
-| ----------------------------- | ---------------------------- | ------------------------------------------------------ |
-| **NativeBase / Gluestack UI** | Complete, rich, maintained   | API closer to Chakra UI                                |
-| **React Native Paper**        | Based on Material Design     | Ficus UI is agnostic, not limited by Material Design   |
-| **UI Kitten**                 | Complete                     | Less intuitive API                                     |
-| **Tamagui**                   | Cross-platform performant    | API closer to Chakra UI                                |
-| **Dripsy**                    | Minimal and extensible       | Fewer ready-to-use components                          |
+| Library                       | Strengths                  | What Ficus UI adds                                   |
+| ----------------------------- | -------------------------- | ---------------------------------------------------- |
+| **NativeBase / Gluestack UI** | Complete, rich, maintained | API closer to Chakra UI                              |
+| **React Native Paper**        | Based on Material Design   | Ficus UI is agnostic, not limited by Material Design |
+| **UI Kitten**                 | Complete                   | Less intuitive API                                   |
+| **Tamagui**                   | Cross-platform performant  | API closer to Chakra UI                              |
+| **Dripsy**                    | Minimal and extensible     | Fewer ready-to-use components                        |
 
 Ficus UI aims for the right balance: **powerful without being complex**, **lightweight without being limited**, and **familiar for web + mobile teams**.
 
