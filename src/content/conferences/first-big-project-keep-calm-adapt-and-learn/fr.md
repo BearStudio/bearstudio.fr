@@ -1,19 +1,15 @@
 ---
-title: 'From Zero to Live: Is it possible to ship an app in 45 minutes ?'
+title: 'First big project? Keep calm, adapt and learn'
 
 instances:
-  - name: 'Kuala Lumpur - Fork it! Full Day Event'
-    date: 2025-10-01
-    speakers: ['hugo-perard']
+  - name: 'Hanoi - Fork it! Meetup'
+    date: 2025-08-01
+    speakers: ['marie-douet']
+  - name: 'Bangkok - Fork it! Meetup'
+    date: 2025-08-01
+    speakers: ['marie-douet']
 ---
 
-The goal of this talk is to showcase the real-world advantages of using a modern project starter like Start-UI to rapidly build and deploy a full-stack web application. By starting from scratch and going live during the session, we’ll demonstrate how much time and complexity a well-designed starter can save — from architecture and authentication to styling and developer experience. To make it even more fun and practical, the final app will include a live interactive feature that lets the audience engage with it.
-
-🧭 Talk Outline
-
-1. Introduction Who you are & what the session is about Why using a project starter can save a lot of time Quick overview of Start-UI
-2. Project Initialization Creating the app using CLI Setting up project and deployment stuff First deployment to Vercel
-3. Building the Interactive Feature Introducing our app feature Live coding the key parts: API routes Frontend Sharing the app link or QR code with the audience
-4. Production Deployment Push feature to production Check that everything works
-5. Live Audience Interaction Invite attendees to submit messages Live display on stage
-6. Conclusion & Q/A Recap: Time from zero to live + key advantages of using a project starter Pros/cons of this approach in real-world projects Open the floor for questions
+You thought you’d feel quickly comfortable in your first dev job… but what happens when the project is huge and already halfway done?
+In this talk, I’ll share what it’s like to join a big ongoing project for the first time, and how to work through it when everything feels out of control. From handling legacy code to managing your imposter syndrome, this talk focuses on real difficulties we all face and tips to overcome them.
+You’ll hear honest feedback on how to adapt quickly and find your place in a complex team environment. There are no easy answers or miracles, just lessons learned the hard way, and some good news: you’re not alone.
