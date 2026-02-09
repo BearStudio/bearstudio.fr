@@ -16,4 +16,4 @@ services:
   - mobile-development
 ---
 
-Hugo est un développeur passionné par le développement front-end et déterminé à faire les choses bien. Son esprit avisé saura trouver la solution adéquate pour n’importe quel problème.
+Hugo est un front-end développeur passionné par le développement et la technologie. Son esprit avisé saura trouver la solution adéquate pour n’importe quel problème.
