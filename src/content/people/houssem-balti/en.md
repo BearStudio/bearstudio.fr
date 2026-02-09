@@ -13,5 +13,3 @@ services:
 ---
 
 Passionate about the web and finding solutions, I enjoy sharing ideas and connecting with like-minded people. Always driven by a desire to learn and grow together.
-
-Houssem is a web developer passionate about finding solutions and exchanging ideas.

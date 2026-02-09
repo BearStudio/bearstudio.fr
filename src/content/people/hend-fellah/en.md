@@ -11,5 +11,3 @@ order: 1000
 ---
 
 With my passion for genuine interactions and human relationships, team management no longer feels like a professional constraint to me.
-
-Accounting, administration, and paperwork hold no secrets for me anymore.

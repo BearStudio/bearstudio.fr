@@ -14,5 +14,3 @@ services:
 ---
 
 Développeur Back-end, Aziz met son énergie et sa curiosité au service des projets du BearStudio. Solide dans la conception et la logique métier, il est aussi sur la route du développement mobile et n’hésite pas à mettre les mains dans le front quand il le faut. Toujours motivé à apprendre et à explorer de nouveaux horizons, il sait s’adapter aux besoins et relever les défis techniques avec engagement.
-
-Développeur Back-end passionné, Aziz explore aussi le mobile et n’hésite pas à donner un coup de main sur le front.

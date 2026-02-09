@@ -14,5 +14,3 @@ services:
 ---
 
 Toujours prête à rendre service, que ce soit dans le quotidien ou dans ses projets tech, Héloïse aime participer à des initiatives variées, du web au mobile. Polyvalente et organisée, elle apprécie particulièrement jongler entre plusieurs projets en parallèle et contribuer là où elle peut avoir un impact.
-
-Héloïse aime contribuer à des projets variés et jongler avec plusieurs défis à la fois.

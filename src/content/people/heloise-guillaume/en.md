@@ -14,5 +14,3 @@ services:
 ---
 
 Always eager to help, whether in daily tasks or tech projects, Héloïse enjoys working on diverse initiatives, from web to mobile. Versatile and organized, she especially values juggling multiple projects at once and contributing wherever she can make a difference.
-
-Héloïse enjoys contributing to diverse projects and juggling multiple challenges at once.

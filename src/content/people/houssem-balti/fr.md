@@ -13,5 +13,3 @@ services:
 ---
 
 Passionné par le web et la recherche de solutions, j’aime partager mes idées et échanger avec des personnes qui partagent la même curiosité. Toujours motivé par l’envie d’apprendre et de grandir ensemble.
-
-Houssem est un développeur web passionné par la recherche de solutions et le partage d’idées.
