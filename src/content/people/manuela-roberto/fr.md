@@ -7,7 +7,7 @@ socials:
     href: https://www.linkedin.com/in/manuelaroberto?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 status: 'current'
 hidden: false
-order: 71
+order: 85
 ---
 
 Manuela est office manager avec plus de 20 ans d’expérience en ESN, au cœur des univers de la dématérialisation documentaire et du jeu vidéo. Toujours en mouvement, elle jongle avec les priorités, anticipe, coordonne et fait avancer les projets avec une énergie communicative.

@@ -7,7 +7,7 @@ socials:
     href: 'https://www.linkedin.com/in/aziz-ouertani/'
 status: 'current'
 hidden: false
-order: 1000
+order: 60
 services:
   - web-development
   - project-boost

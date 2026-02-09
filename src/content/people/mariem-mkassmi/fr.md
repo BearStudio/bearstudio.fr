@@ -7,7 +7,7 @@ socials:
     href: 'https://www.linkedin.com/in/mkassmi-meriem-6b1326169/'
 status: 'current'
 hidden: false
-order: 1000
+order: 92
 services:
   - web-development
 ---

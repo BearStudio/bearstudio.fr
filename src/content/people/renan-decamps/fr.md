@@ -9,7 +9,7 @@ socials:
     href: 'https://www.linkedin.com/in/decampsrenan/'
 status: 'current'
 hidden: false
-order: 25
+order: 20
 services:
   - ai
   - web-development
