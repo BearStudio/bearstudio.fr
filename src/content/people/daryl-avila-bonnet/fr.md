@@ -1,7 +1,7 @@
 ---
 name: 'Daryl Avila Bonnet'
 picture: './daryl.png'
-job: 'UI/UX Designer'
+job: 'UX/UI Designer'
 socials:
   - type: 'linkedin'
     href: https://www.linkedin.com/in/darylavilabonnet/
