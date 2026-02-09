@@ -9,7 +9,7 @@ export const PostCardMore = (props: { href: string; children?: ReactNode }) => {
     <a
       href={props.href}
       onDragStart={(e) => e.preventDefault()}
-      className="bg-brand-100/50 flex-1 flex gap-2.5 overflow-hidden rounded-md items-center justify-center p-2 transition-all hover:bg-brand-100"
+      className="bg-brand-100/50 flex-1 flex gap-2.5 overflow-hidden rounded-md items-center justify-center p-4 transition-all hover:bg-brand-100"
     >
       {!!props.children && (
         <div className="text-xs uppercase">{props.children}</div>
