@@ -12,4 +12,4 @@ hidden: false
 order: 2000
 ---
 
-Manager and founder of Synhack, Clément has made it its duty to raise awareness and to advise about all the topics related to security.
+Clément Michel works in cybersecurity at YesWeHack, where he helps organizations improve their security through vulnerability disclosure and bug bounty programs. He is also actively involved in the cybersecurity community.

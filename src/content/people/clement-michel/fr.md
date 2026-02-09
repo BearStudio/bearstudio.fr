@@ -12,4 +12,4 @@ hidden: false
 order: 2000
 ---
 
-Responsable et fondateur de Synhack, Clément s'est mis au devoir de sensibiliser et conseiller à propos de toutes les problématiques liées à la sécurité.
+Clément Michel travaille dans la cybersécurité chez YesWeHack, où il accompagne les organisations sur les sujets de divulgation de vulnérabilités et de bug bounty. Il est également très impliqué dans la communauté cybersécurité.
