@@ -15,7 +15,7 @@
       "en": "Join Us at Fork it! Rouen 2026"
     },
     "src": "./polaroid-forkit-rouen-2026.jpg",
-    "href": "https://www.forkit.community/events/2026-france-rouen"
+    "href": "https://www.forkit.community/events/2026-france-rouen?utm_source=bearstudio.fr"
   },
   {
     "id": "3",
@@ -24,7 +24,7 @@
       "en": "Join Us at React Paris 2026"
     },
     "src": "./polaroid-react-paris-2026.jpg",
-    "href": "https://react.paris/?gad_campaignid=23307103345&gbraid=0AAAAAC-aWsNEc4kfNVfw68HH9eUtf45Fv"
+    "href": "https://react.paris?utm_source=bearstudio.fr"
   },
   {
     "id": "4",
@@ -33,6 +33,6 @@
       "en": "Our Open Source Starters"
     },
     "src": "./polaroid-start-ui.jpg",
-    "href": "https://start-ui.com"
+    "href": "https://start-ui.com?utm_source=bearstudio.fr"
   }
 ]
