@@ -12,4 +12,4 @@ hidden: false
 order: 1000
 ---
 
-Founder of [Webvert](https://www.lewebvert.fr/). Ex-CTO / co-founder of Saagie. Activist at Codeurs en Seine, Tech Rocks and Rouen French Tech.
+Youen Chéné is an independent CTO and tech entrepreneur. Former CTO and co founder of Saagie, he now helps teams and organizations with architecture, product, and technical leadership, while staying actively involved in the tech community.
