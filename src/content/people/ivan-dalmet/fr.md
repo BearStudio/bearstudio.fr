@@ -19,4 +19,4 @@ services:
   - project-boost
 ---
 
-Lead Designer, Dev Front et passionné de web et d'ergonomie. Cela fait plus de 10 ans qu'Ivan joue avec le design et le développement pour proposer à vos projets l'interface parfaite !
+Ivan Dalmet est Lead Designer, product builder et co-fondateur de BearStudio. Avec plus de 15 ans d’expérience, il fait le lien entre design et développement pour concevoir des interfaces accessibles, efficaces et centrées utilisateur.
