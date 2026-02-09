@@ -15,4 +15,4 @@ services:
   - mobile-development
 ---
 
-Jeanne s’est passionnée pour les mathématiques bien avant de découvrir le web. Cet esprit analytique l’a naturellement conduite vers le développement frontend. Aujourd’hui, elle met cette même curiosité et cette rigueur au service de son métier, en concevant des interfaces utilisateurs tout en enrichissant continuellement ses compétences.
+À 12 ans, Jeanne savait déjà qu'elle serait développeuse. Elle a à coeur de concecvoir et développer des interfaces utiles et cohérentes, au plus proche des besoins des utilisateurs. Curieuse de nature et toujours en quête d’apprentissage, elle s'investi autant sur les projets que dans l'organisation de conférences avec Fork it! Community.

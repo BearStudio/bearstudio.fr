@@ -15,4 +15,4 @@ services:
   - mobile-development
 ---
 
-Jeanne fell in love with math long before discovering the web. It was this analytical spark that naturally led her to becoming a frontend developer. Today, she brings the same curiosity and rigor to her work, building user interfaces while continuously learning and refining her craft.
+At the age of 12, Jeanne already knew she would become a developer. She is passionate about designing and building useful, coherent interfaces that closely meet users’ needs. Naturally curious and always eager to learn, she is deeply involved both in project development and in organizing conferences with the Fork it! Community.
