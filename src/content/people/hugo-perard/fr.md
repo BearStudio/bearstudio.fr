@@ -5,6 +5,8 @@ job: 'Front-End Developer'
 socials:
   - type: 'linkedin'
     href: 'https://www.linkedin.com/in/hugoperard/'
+  - type: 'x'
+    href: 'https://x.com/prdHugo_'
 status: 'current'
 hidden: false
 order: 35
