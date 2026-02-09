@@ -39,6 +39,7 @@
     "clsx": "2.1.1",
     "dayjs": "1.11.18",
     "embla-carousel-react": "8.6.0",
+    "embla-carousel-wheel-gestures": "8.1.0",
     "hast-util-to-text": "4.0.2",
     "motion": "12.23.24",
     "radix-ui": "1.4.3",

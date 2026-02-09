@@ -3,6 +3,7 @@ import * as React from 'react';
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from 'embla-carousel-react';
+import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';
 import { PiArrowLeft, PiArrowRight } from 'react-icons/pi';
 
 import { cn } from '@/lib/tailwind/utils';
@@ -55,7 +56,7 @@ function Carousel({
       ...opts,
       axis: orientation === 'horizontal' ? 'x' : 'y',
     },
-    plugins
+    [WheelGesturesPlugin(), ...(plugins ?? [])]
   );
   const [canScrollPrev, setCanScrollPrev] = React.useState(false);
   const [canScrollNext, setCanScrollNext] = React.useState(false);
