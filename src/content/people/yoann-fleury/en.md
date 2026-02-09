@@ -10,7 +10,7 @@ socials:
   - type: 'website'
     href: 'https://www.yoannfleury.dev/'
 status: 'current'
-order: 20
+order: 10
 services:
   - ai
   - cto-support
