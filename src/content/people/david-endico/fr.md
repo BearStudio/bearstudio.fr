@@ -1,7 +1,7 @@
 ---
 name: 'David Endico'
 picture: './david.png'
-job: 'CoFounder & UI/UX Manager'
+job: 'CoFounder & Lead Product Designer'
 socials:
   - type: 'x'
     href: 'https://twitter.com/DavidEndico'
@@ -12,4 +12,4 @@ hidden: false
 order: 4000
 ---
 
-Co-fondateur du BearStudio, aujourd'hui Product Designer chez Owkin. Son expérience en tant que UI/UX Manager, associée à son parcours en tant que graphiste, UI/UX Designer et front-end developer lui permet d'apporter une perspective créative, polyvalente et holistique à la conception de produits.
+Designer produit passionné et orienté résultats, avec une expérience confirmée dans divers secteurs. Expert en méthodologies de design thinking, je crée des designs captivants, de l'idéation au prototypage, en passant par le développement de marque. Habile à diriger des équipes pluridisciplinaires, je suis reconnu pour ma capacité à favoriser une collaboration efficace et à proposer des solutions innovantes. Prêt à sublimer l'expérience utilisateur et à avoir un impact significatif !

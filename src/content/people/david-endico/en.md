@@ -1,7 +1,7 @@
 ---
 name: 'David Endico'
 picture: './david.png'
-job: 'CoFounder & UI/UX Manager'
+job: 'CoFounder & Lead Product Designer'
 socials:
   - type: 'x'
     href: 'https://twitter.com/DavidEndico'
@@ -12,4 +12,4 @@ hidden: false
 order: 4000
 ---
 
-UX/UI expert, graphic designer and front-end developer, David is keen on conceptualization and interface design. His weapons? The paper-pencil combo, the Adobe Suite and all the power of the front languages (HTML, CSS, JavaScript) as well as their frameworks!
+Passionate and results-driven Product Designer with a proven track record across diverse industries. Expert in implementing Design Thinking methodologies, crafting captivating designs from ideation to prototyping and brand development. Adept at leading cross-functional teams and known for fostering effective collaboration, delivering innovative solutions. Ready to elevate design experiences and create impact!
