@@ -19,6 +19,4 @@ services:
   - web-development
 ---
 
-Issu d'un profil Full Stack, Yoann est aujourd'hui principalement développeur Front-end. Yoann aime concevoir des interfaces réactives, légères et accessibles.
-
-Avec une veille technologique accrue, il saura toujours trouver les bons outils et les bonnes pratiques pour la réussite de votre projet.
+Avec une forte expertise en React et TypeScript, Yoann est Lead développeur Front-end et met un accent fort sur l'expérience développeur (DX), l'expérience utilisateur (UX) et aime concevoir des interfaces réactives, légères et accessibles. Il s'investit également beaucoup dans le partage, notamment en tant que mainteneur de projets Open Source (dont Start UI), l'organisation de conférence à travers le monde via Fork it! Community et une veille technologique accrue.

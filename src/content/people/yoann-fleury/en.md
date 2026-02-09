@@ -19,6 +19,4 @@ services:
   - web-development
 ---
 
-Yoann is a Front-end Developer with full-stack experience. Yoann likes to build reactive, lightweight, and accessible interfaces.
-
-He spends most of his free time adding to his technical knowledge and will always find the best tools and methodologies to make your project successful.
+With strong expertise in React and TypeScript, Yoann is a Front-end Lead Developer who places a strong emphasis on Developer Experience (DX), User Experience (UX), and enjoys designing responsive, lightweight, and accessible interfaces. He is also deeply committed to knowledge sharing, notably as a maintainer of Open Source projects (including Start UI), organizing conferences around the world through Fork it! Community, and staying on top of the latest technology trends.
