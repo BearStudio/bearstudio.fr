@@ -20,5 +20,10 @@
     "newer": "Newer",
     "older": "Older",
     "page": "Page"
+  },
+  "article": {
+    "on": "",
+    "by": "by",
+    "published": "Published on"
   }
 }

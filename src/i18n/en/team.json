@@ -13,5 +13,9 @@
     },
     "moreArticles": "More articles",
     "website": "View website"
+  },
+  "advisors": {
+    "title": "BearStudio Advisors",
+    "description": "Because it's important to step back and see the bigger picture, BearStudio has built a core group of experienced advisors whose role is to complement and challenge the main team."
   }
 }

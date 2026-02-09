@@ -13,5 +13,9 @@
     },
     "moreArticles": "Plus d'articles",
     "website": "Voir le site"
+  },
+  "advisors": {
+    "title": "Les conseillers du BearStudio",
+    "description": "Parce qu'il est important de prendre du recul, le BearStudio a constitué un noyau d'advisors expérimentés dont le rôle est de compléter et de challenger l'équipe principale."
   }
 }

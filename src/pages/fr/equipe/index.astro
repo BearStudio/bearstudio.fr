@@ -59,12 +59,10 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     <div class="flex flex-col gap-4">
       <div class="flex flex-col gap-1">
         <h2 class="font-heading text-2xl font-bold">
-          Les conseillers du BearStudio
+          {t('team.advisors.title')}
         </h2>
         <p class="max-w-[70ch] text-sm text-balance opacity-80">
-          Parce qu'il est important de prendre du recul, le BearStudio a
-          constitué un noyau d'advisors expérimentés dont le rôle est de
-          compléter et de challenger l'équipe principale.
+          {t('team.advisors.description')}
         </p>
       </div>
       <PeopleGrid>

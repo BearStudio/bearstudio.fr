@@ -128,13 +128,13 @@ const [slugFr, slugEn] = await Promise.all([
       </h1>
       <div class="flex flex-col gap-0 text-sm lg:flex-row lg:gap-1">
         <div class="opacity-60">
-          Le
+          {t('blog.article.on')}
           <FormattedDate date={post.data.date} locale={locale} />
         </div>
         {
           !!post.data._computed.authors.length && (
             <div>
-              <span class="opacity-60">par</span>
+              <span class="opacity-60">{t('blog.article.by')}</span>
               {post.data._computed.authors.map((author, index) => {
                 return author.data._computed.slug ? (
                   <a
@@ -163,13 +163,13 @@ const [slugFr, slugEn] = await Promise.all([
     </Prose>
     <div class="flex flex-col gap-0 pt-12 text-sm lg:flex-row lg:gap-1">
       <div>
-        Publié le
+        {t('blog.article.published')}
         <FormattedDate date={post.data.date} locale={locale} />
       </div>
       {
         !!post.data._computed.authors.length && (
           <div>
-            <span>par</span>
+            <span>{t('blog.article.by')}</span>
             {post.data._computed.authors.map((author, index) => {
               return author.data._computed.slug ? (
                 <a
