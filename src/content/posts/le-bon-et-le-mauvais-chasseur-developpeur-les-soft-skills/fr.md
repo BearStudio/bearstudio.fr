@@ -1,5 +1,5 @@
 ---
-title: 'Le bon et le mauvais <s>chasseur</s> développeur : Les soft skills'
+title: 'Le bon et le mauvais développeur : Les soft skills'
 date: 2025-06-30
 categories:
   - 'developpement'
