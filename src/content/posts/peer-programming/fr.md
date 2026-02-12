@@ -8,6 +8,7 @@ tags:
   - 'developpeur'
   - 'retour-dexperience'
 heroImage: 'images/peer-programming-illustration.jpg'
+metaDescription: 'À quoi sert le peer programming, quels sont ses avantages et inconvénients ? On répond à toutes vos interrogations dans cet article'
 authors: ['gregoire-protas']
 ---
 

@@ -7,6 +7,7 @@ tags:
   - 'design'
   - 'ux'
 heroImage: 'images/article-ux-miniature.png'
+metaDescription: 'Bien comprendre le parcours utilisateur est essentiel pour créer un chemin fluide qui va permettre d''optimiser l''expérience de l''utilisateur'
 authors: ['emmanuel-gien']
 ---
 

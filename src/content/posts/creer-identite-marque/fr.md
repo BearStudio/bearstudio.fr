@@ -4,6 +4,7 @@ date: 2022-05-16
 categories:
   - 'design-css'
 heroImage: 'images/visuel-branding-identity.jpg'
+metaDescription: 'Dans cet article, j''aborderais toutes les étapes à suivre pour créer une identité de marque ou branding identity.'
 authors: ['maxime-podgorski']
 ---
 

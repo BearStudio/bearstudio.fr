@@ -11,6 +11,7 @@ tags:
   - 'ui'
   - 'web'
 heroImage: 'images/visuel-article-start-ui-tinified.png'
+metaDescription: 'Start UI [web] est un starter UI avec React, Chakra UI, React Query et Formiz — Par l''équipe BearStudio'
 authors:
   - yoann-fleury
 ---

@@ -7,6 +7,7 @@ tags:
   - 'developpement-web'
   - 'retour-dexperience'
 heroImage: 'images/og-image.jpg'
+metaDescription: 'Discover a new way to manage your website content, intuitive and database-free, with the Outstatic CMS.'
 authors: ['jeanne-grenet']
 ---
 

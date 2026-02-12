@@ -9,6 +9,7 @@ tags:
   - 'digital'
   - 'web'
 heroImage: 'images/arretez-de-vous-faire-avoir-par-votre-agence-digitale.jpg'
+metaDescription: 'Des agences de communication digitale peuvent vous facturer des sites jolis, mais qui oublient les règles du monde du web. Or, cela ne pardonne plus.'
 authors: ['ivan-dalmet', 'youen-chene']
 ---
 

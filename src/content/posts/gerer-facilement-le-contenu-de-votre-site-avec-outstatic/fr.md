@@ -7,6 +7,7 @@ tags:
   - 'developpement-web'
   - 'retour-dexperience'
 heroImage: 'images/outstatic-format-blog-header.png'
+metaDescription: 'Découvrez une nouvelle façon de gérer le contenu de votre site, intuitive et sans base de données, avec le CMS Outstatic.'
 authors: ['jeanne-grenet']
 ---
 

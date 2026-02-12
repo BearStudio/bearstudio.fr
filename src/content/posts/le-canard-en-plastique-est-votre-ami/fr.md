@@ -7,6 +7,7 @@ tags:
   - 'developpement'
   - 'developpement-web'
 heroImage: 'images/image-24.png'
+metaDescription: 'Le canard en plastique est une méthode très connue des développeurs, et beaucoup l''utilisent au quotidien sans le réaliser, ou la comprendre'
 authors: ['gregoire-protas']
 ---
 

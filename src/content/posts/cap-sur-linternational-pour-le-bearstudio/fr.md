@@ -4,6 +4,7 @@ date: 2021-03-23
 categories:
   - 'actualites-web-numerique'
 heroImage: 'images/img_4787-scaled.jpeg'
+metaDescription: 'Bilan du salon Gitex Future Stars à Dubaï lors duquel l''équipe BearStudio a représenté la French Tech parmi des centaines de startups internationales !'
 authors: ['nathan-lesouef']
 ---
 

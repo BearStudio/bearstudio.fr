@@ -9,6 +9,7 @@ tags:
   - 'temoignage'
   - 'web'
 heroImage: 'images/Image-1.png'
+metaDescription: 'Les ours du BearStudio au Camping des Speakers 2023 : retour sur cette conférence tech en plein air.'
 authors: ['hugo-perard']
 ---
 

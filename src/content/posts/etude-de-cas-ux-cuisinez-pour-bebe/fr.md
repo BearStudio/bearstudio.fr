@@ -10,6 +10,8 @@ tags:
   - 'ux'
 heroImage: 'images/Format-Blog-Header-9-scaled.png'
 authors: ['daryl-avila-bonnet']
+metaDescription: >
+  Comment Cuisinez pour Bébé est passé d’un blog à une application du quotidien : enjeux UX, design mobile et accompagnement des parents.
 ---
 
 ## À propos de Cuisinez pour bébé

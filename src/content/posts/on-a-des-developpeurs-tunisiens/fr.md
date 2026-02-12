@@ -4,6 +4,7 @@ date: 2021-03-08
 categories:
   - 'actualites-web-numerique'
 heroImage: 'images/monde.jpg'
+metaDescription: 'Depuis quelques années, le BearStudio accueille des développeurs tunisiens qui travaillent en remote depuis chez eux pour prêter main forte à notre équipe !'
 authors: ['rudy-baer']
 ---
 

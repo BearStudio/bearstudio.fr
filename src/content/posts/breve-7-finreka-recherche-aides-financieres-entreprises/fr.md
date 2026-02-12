@@ -7,6 +7,7 @@ tags:
   - 'financement'
   - 'tips'
 heroImage: 'images/breve-7.jpg'
+metaDescription: 'Découvrez les nombreux avantages de Finreka!, le moteur de recherche entièrement gratuit d''aides au financement des entreprises.'
 authors:
   - 'nhung-duong'
 ---

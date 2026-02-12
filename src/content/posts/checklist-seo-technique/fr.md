@@ -4,6 +4,7 @@ date: 2022-06-27
 categories:
   - 'developpement'
 heroImage: 'images/checklist-seo-technique-illustration.png'
+metaDescription: 'Apprenez à créer un site web qui se positionne sur les moteurs de recherche grâce à une bonne base SEO technique !'
 authors: ['yohann-josselin']
 ---
 

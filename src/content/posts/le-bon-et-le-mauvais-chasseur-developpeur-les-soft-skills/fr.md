@@ -8,6 +8,7 @@ tags:
   - 'developpement-web'
   - 'developpeur'
 heroImage: 'images/format-blog-header.png'
+metaDescription: 'Bon ou mauvais développeur ? Découvrez comment les soft skills font toute la différence, au-delà du simple fait de savoir coder.'
 authors: ['hugo-perard']
 ---
 

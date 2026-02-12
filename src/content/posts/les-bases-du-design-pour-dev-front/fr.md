@@ -9,6 +9,7 @@ tags:
   - 'digital'
   - 'ux'
 heroImage: 'images/les-bases-du-design-pour-les-dev-front-baniere.png'
+metaDescription: 'Les bases du design pour dev front : que faut-il savoir ? Découvrez les principes UX/UI, hiérarchie visuelle, affordance et feedback.'
 authors: ['charlelise-fouasse']
 ---
 

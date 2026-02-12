@@ -4,6 +4,7 @@ date: 2021-04-14
 categories:
   - 'developpement'
 heroImage: 'images/sylius-clever-cloud-tuto-article.png'
+metaDescription: 'Nos développeurs vous dévoilent leurs astuces pour réussir à coup sûr le déploiement de votre application Sylius chez Clever Cloud.'
 authors:
   - 'rudy-baer'
 ---

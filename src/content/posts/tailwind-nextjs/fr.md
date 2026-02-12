@@ -9,6 +9,7 @@ tags:
   - 'projet'
   - 'rex'
 heroImage: 'images/tailwindnext.js.png'
+metaDescription: 'Comment nos alternants ont créés un site web, du design au développement, en autonomie grâce à Tailwind et NextJS'
 authors: ['fabien-essid', 'delphin-batantou', 'yohann-josselin']
 ---
 

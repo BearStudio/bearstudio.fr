@@ -4,6 +4,7 @@ date: 2021-08-24
 categories:
   - 'developpement'
 heroImage: 'images/visuel-article-JHipster-Deploy.png'
+metaDescription: 'Apprenez à déployer facilement une application JHipster sur Clever Cloud grâce à ce tutoriel pas à pas.'
 authors:
   - 'rudy-baer'
 ---

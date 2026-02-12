@@ -6,6 +6,9 @@ categories:
 tags:
   - 'developpement'
 heroImage: 'images/visuel-breve-min-3-1.png'
+metaDescription: >
+  Dans cet article, Yoann vous propose une liste de ressources complète pour
+  l'apprentissage du langage Rust
 authors:
   - yoann-fleury
 ---
