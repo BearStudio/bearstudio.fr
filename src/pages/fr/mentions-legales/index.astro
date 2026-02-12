@@ -27,6 +27,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
 
 <MainLayout>
   <SEO
+    slot="seo"
     title={t('legal.root.hero.title')}
     description={t('legal.root.hero.description')}
     alternates={getAlternates('/fr/mentions-legales', {})}
@@ -48,13 +49,15 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
               <section>
                 <h2>Propriétaire</h2>
                 <p>
-                  Le site <strong> {getSiteUrl()}</strong> est édité par le{' '}
+                  Le site <strong>{getSiteUrl()}</strong> est édité par le{' '}
                   <strong>BearStudio</strong>, SAS au capital social de 10 000 €
                 </p>
                 <p>
                   Inscrite au registre du commerce et des sociétés sous le
                   numéro
-                  <strong>SIRET 819 733 759 00016</strong>
+                  <strong class="whitespace-nowrap">
+                    SIRET 819 733 759 00016
+                  </strong>
                 </p>
                 <p>
                   dont le siège social se situe au 1900 Route de Cailly,
@@ -83,6 +86,41 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
                 <p>
                   dont le siège social se situe à 440 N Barranca Avenue #4133
                   Covina, CA 91723 United States
+                </p>
+              </section>
+              <section>
+                <h2>Propriété intellectuelle </h2>
+                <p>
+                  Tous les contenus présents sur le site Bearstudio, tels que
+                  les textes, images, logos, graphismes, vidéos et autres
+                  éléments, sont protégés par les droits d’auteur et la
+                  législation sur la propriété intellectuelle. Toute
+                  reproduction ou représentation, en tout ou en partie, de ces
+                  contenus sans autorisation préalable est interdite.
+                </p>
+
+                <h2>Collecte des données personnelles</h2>
+                <p>
+                  La société Bearstudio s’engage à respecter la confidentialité
+                  des informations personnelles communiquées par les
+                  utilisateurs du site. Ces données sont collectées dans le
+                  respect de la réglementation applicable, notamment le
+                  Règlement Général sur la Protection des Données (RGPD).
+                </p>
+
+                <h2>Droit applicable</h2>
+                <p>
+                  Le site Bearstudio est régi par le droit français. En cas de
+                  litige, les tribunaux français seront compétents.
+                </p>
+
+                <h2>Protection des données personnelles</h2>
+                <p>
+                  Pour toute question relative à la collecte ou au traitement de
+                  vos données personnelles, ou pour exercer vos droits (accès,
+                  rectification, suppression, opposition), vous pouvez contacter
+                  notre référent à la protection des données à l’adresse
+                  suivante : contact@bearstudio.fr
                 </p>
               </section>
             </>
@@ -130,6 +168,39 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
                 <p>
                   Headquarters are located at 440 N Barranca Avenue #4133
                   Covina, CA 91723 United States
+                </p>
+              </section>
+              <section>
+                <h2>Intellectual Property</h2>
+                <p>
+                  All content on the BearStudio website, such as texts, images,
+                  logos, graphics, videos, and other elements, is protected by
+                  copyright and intellectual property legislation. Any
+                  reproduction or representation, in whole or in part, of this
+                  content without prior authorization is prohibited.
+                </p>
+
+                <h2>Collection of Personal Data</h2>
+                <p>
+                  BearStudio is committed to respecting the confidentiality of
+                  personal information provided by users of the site. This data
+                  is collected in compliance with applicable regulations,
+                  including the General Data Protection Regulation (GDPR).
+                </p>
+
+                <h2>Applicable Law</h2>
+                <p>
+                  The BearStudio website is governed by French law. In the event
+                  of a dispute, the French courts shall have jurisdiction.
+                </p>
+
+                <h2>Protection of Personal Data</h2>
+                <p>
+                  For any questions regarding the collection or processing of
+                  your personal data, or to exercise your rights (access,
+                  rectification, deletion, objection), you can contact our data
+                  protection officer at the following address:
+                  contact@bearstudio.fr
                 </p>
               </section>
             </>

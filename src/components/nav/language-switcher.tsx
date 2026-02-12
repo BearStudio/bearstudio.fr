@@ -35,6 +35,7 @@ export const LanguageSwitcher = (props: { locale: Locale }) => {
               className="text-center items-center justify-center"
             >
               <a
+                className="cursor-pointer"
                 href={getLink('/fr', toLocale, {})}
                 onClick={(e) => {
                   const alternate = document.querySelector(
