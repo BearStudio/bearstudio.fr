@@ -8,7 +8,6 @@ import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
 import { PeopleCarousel } from '@/components/people/people-carousel';
-import { PersonCardMore } from '@/components/people/person-card-more';
 import SectionScratched from '@/components/sections/section-scratched.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
@@ -167,11 +166,15 @@ const peopleCurrent = await Promise.all(
           {t('services.root.experts.description')}
         </p>
       </div>
-      <PeopleCarousel client:load people={peopleCurrent} locale={locale}>
-        <PersonCardMore href={getLink('/fr/equipe', locale, {})}>
-          {t('services.root.experts.more')}
-        </PersonCardMore>
-      </PeopleCarousel>
+      <PeopleCarousel
+        client:load
+        people={peopleCurrent}
+        locale={locale}
+        moreLink={{
+          href: getLink('/fr/equipe', locale, {}),
+          label: t('services.root.experts.more'),
+        }}
+      />
     </div>
   </Container>
 </MainLayout>

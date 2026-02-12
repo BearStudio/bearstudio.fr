@@ -13,7 +13,6 @@ import ContactCta from '@/components/contact/contact-cta.astro';
 import Container from '@/components/container.astro';
 import Hero from '@/components/hero/hero.astro';
 import { PeopleCarousel } from '@/components/people/people-carousel';
-import { PersonCardMore } from '@/components/people/person-card-more';
 import { Polaroid } from '@/components/polaroids/polaroid';
 import { PolaroidsCarousel } from '@/components/polaroids/polaroids-carousel';
 import Prose from '@/components/prose.astro';
@@ -435,11 +434,15 @@ const latestPosts = await Promise.all(
             {t('home.experts.description')}
           </p>
         </div>
-        <PeopleCarousel client:load people={peopleCurrent} locale={locale}>
-          <PersonCardMore href={getLink('/fr/equipe', locale, {})}>
-            {t('home.experts.more')}
-          </PersonCardMore>
-        </PeopleCarousel>
+        <PeopleCarousel
+          client:load
+          people={peopleCurrent}
+          locale={locale}
+          moreLink={{
+            href: getLink('/fr/equipe', locale, {}),
+            label: t('home.experts.more'),
+          }}
+        />
       </div>
 
       {/* Latest Posts */}

@@ -1,9 +1,8 @@
-import type { ReactNode } from 'react';
-
 import type { GetImageResult } from 'astro';
 
 import type { PersonWithComputed } from '@/lib/people';
 import { PersonCard } from '@/components/people/person-card';
+import { PersonCardMore } from '@/components/people/person-card-more';
 import {
   Carousel,
   CarouselContent,
@@ -18,7 +17,12 @@ export const PeopleCarousel = (props: {
       data: PersonWithComputed['data'] & { image: GetImageResult | undefined };
     }
   >;
-  children?: ReactNode;
+  // Passing Astro-rendered children (`PersonCardMore`) as a slot into a React
+  // `client:load` island (`PeopleCarousel`) causes a hydration mismatch. Astro
+  // serializes the children as static HTML during SSR, but React reconstructs
+  // the tree differently during client hydration, leading to the mismatch, that
+  // is why we use this prop.
+  moreLink?: { href: string; label: string } | undefined;
 }) => {
   if (!props.people.length) return null;
   return (
@@ -40,9 +44,11 @@ export const PeopleCarousel = (props: {
             </CarouselItem>
           );
         })}
-        {!!props.children && (
+        {!!props.moreLink && (
           <CarouselItem className="basis-[60%] 2xs:basis-[40%] flex flex-col xs:basis-[30%] md:basis-[24%] fisrt:ml-8 last:mr-8">
-            {props.children}
+            <PersonCardMore href={props.moreLink.href}>
+              {props.moreLink.label}
+            </PersonCardMore>
           </CarouselItem>
         )}
       </CarouselContent>
