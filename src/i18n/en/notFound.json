@@ -7,5 +7,9 @@
     "title": "Page not found",
     "description": "Sorry, the page you are looking for does not exist or has been moved.",
     "cta": "Back to home"
+  },
+  "blog": {
+    "title": "Our latest articles",
+    "description": "The page you're looking for seems unavailable, but our articles might have what you need."
   }
 }

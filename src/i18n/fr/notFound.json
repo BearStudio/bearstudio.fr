@@ -7,5 +7,9 @@
     "title": "Page non trouvée",
     "description": "Désolé, la page que vous recherchez n'existe pas ou a été déplacée.",
     "cta": "Retour à l'accueil"
+  },
+  "blog": {
+    "title": "Nos derniers articles",
+    "description": "La page que vous cherchez semble introuvable, mais nos articles pourraient bien avoir ce que vous recherchez."
   }
 }
