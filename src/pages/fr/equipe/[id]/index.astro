@@ -17,7 +17,6 @@ import {
   getPostsCollectionLinkedToPerson,
   type PostWithComputed,
 } from '@/lib/posts';
-import { PostCardMore } from '@/components/blog/post-card-more';
 import { PostsCarousel } from '@/components/blog/posts-carousel';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
@@ -232,17 +231,17 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
             client:load
             posts={posts.slice(0, POSTS_LIMIT)}
             locale={locale}
-          >
-            {!!person.data._computed.slug && posts.length > POSTS_LIMIT && (
-              <PostCardMore
-                href={getLink('/fr/blog/auteurs/:author', locale, {
-                  author: person.data._computed.slug,
-                })}
-              >
-                {t('team.person.moreArticles')}
-              </PostCardMore>
-            )}
-          </PostsCarousel>
+            moreLink={
+              !!person.data._computed.slug && posts.length > POSTS_LIMIT
+                ? {
+                    href: getLink('/fr/blog/auteurs/:author', locale, {
+                      author: person.data._computed.slug,
+                    }),
+                    label: t('team.person.moreArticles'),
+                  }
+                : undefined
+            }
+          />
         </div>
       )
     }

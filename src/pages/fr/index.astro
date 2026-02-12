@@ -8,7 +8,6 @@ import { getPeopleCollection } from '@/lib/people';
 import { getPolaroidHref } from '@/lib/polaroids';
 import { getPostsCollection } from '@/lib/posts';
 import { cn } from '@/lib/tailwind/utils';
-import { PostCardMore } from '@/components/blog/post-card-more';
 import { PostsCarousel } from '@/components/blog/posts-carousel';
 import ContactCta from '@/components/contact/contact-cta.astro';
 import Container from '@/components/container.astro';
@@ -457,11 +456,15 @@ const latestPosts = await Promise.all(
                 {t('home.blog.description')}
               </p>
             </div>
-            <PostsCarousel client:load posts={latestPosts} locale={locale}>
-              <PostCardMore href={getLink('/fr/blog', locale, {})}>
-                {t('home.blog.more')}
-              </PostCardMore>
-            </PostsCarousel>
+            <PostsCarousel
+              client:load
+              posts={latestPosts}
+              locale={locale}
+              moreLink={{
+                href: getLink('/fr/blog', locale, {}),
+                label: t('home.blog.more'),
+              }}
+            />
           </div>
         )
       }

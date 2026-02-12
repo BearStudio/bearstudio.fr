@@ -3,7 +3,6 @@ import { getImage } from 'astro:assets';
 
 import { getLink } from '@/lib/link';
 import { getPostsCollection } from '@/lib/posts';
-import { PostCardMore } from '@/components/blog/post-card-more';
 import { PostsCarousel } from '@/components/blog/posts-carousel';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
@@ -91,11 +90,15 @@ const latestPosts = await Promise.all(
               {t('notFound.blog.description')}
             </p>
           </div>
-          <PostsCarousel client:load posts={latestPosts} locale={locale}>
-            <PostCardMore href={getLink('/fr/blog', locale, {})}>
-              {t('home.blog.more')}
-            </PostCardMore>
-          </PostsCarousel>
+          <PostsCarousel
+            client:load
+            posts={latestPosts}
+            locale={locale}
+            moreLink={{
+              href: getLink('/fr/blog', locale, {}),
+              label: t('home.blog.more'),
+            }}
+          />
         </div>
       )
     }
