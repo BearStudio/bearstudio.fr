@@ -4,7 +4,7 @@ date: 2021-03-23
 categories:
   - 'actualites-web-numerique'
 heroImage: 'images/img_4787-scaled.jpeg'
-metaDescription: 'Bilan du salon Gitex Future Stars à Dubaï lors duquel l''équipe BearStudio a représenté la French Tech parmi des centaines de startups internationales !'
+metaDescription: "Bilan du salon Gitex Future Stars à Dubaï lors duquel l'équipe BearStudio a représenté la French Tech parmi des centaines de startups internationales !"
 authors: ['nathan-lesouef']
 ---
 
@@ -62,7 +62,7 @@ Notre présence sur le GITEX nous a permis d’éprouver **notre stratégie 
 Tout d'abord, Dubaï est une ville incroyable par sa démesure et c'est une destination incontournable pour le business à l'international. Ça a été un réel plaisir de pouvoir y aller avec le BearStudio. D'autant plus que j'ai vu le studio évoluer étape par étape, passant du réseau régional Normand à l'international.  
 Le salon GITEX fut une expérience très enrichissante pour nous tous car cela nous a permis de découvrir le marché numérique à l'international et de **mettre en avant notre savoir-faire.**
 
-### [Philippe (Tic)](https://www.bearstudio.fr/team/philippe-chevreul)
+### Philippe (Tic)
 
 Dubaï était une super expérience ! J’ai été très surpris du voyage : la ville est immense et agréable, tout le monde est très respectueux et gentil. Le salon GITEX était une très bonne découverte, beaucoup de relations intéressantes et un aspect commerce qu’en tant que développeur je ne connaissais pas vraiment ! J’ai beaucoup appris sur ce sujet et je pense que cela sera bénéfique pour le BearStudio comme pour nous personnellement.
 

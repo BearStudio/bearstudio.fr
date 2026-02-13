@@ -4,7 +4,7 @@ date: 2022-05-16
 categories:
   - 'design-css'
 heroImage: 'images/visuel-branding-identity.jpg'
-metaDescription: 'Dans cet article, j''aborderais toutes les étapes à suivre pour créer une identité de marque ou branding identity.'
+metaDescription: "Dans cet article, j'aborderais toutes les étapes à suivre pour créer une identité de marque ou branding identity."
 authors: ['maxime-podgorski']
 ---
 
@@ -76,7 +76,7 @@ Par ailleurs, avant toute création graphique, je vous invite à composer un [mo
 - Couleurs
 - Interfaces / sites dans une ambiance similaire
 
-Voici un exemple de moodboard créé pour l’[application open source Start UI](https://start-ui.vercel.app/) : 
+Voici un exemple de moodboard créé pour l’[application open source Start UI](https://start-ui.com/) : 
 
 ![moodboard start ui](images/moodboard-start-ui-1024x647.jpeg)
 
@@ -232,8 +232,6 @@ Les consommateurs et utilisateurs accordent une grande importance à votre image
 
 Maintenant, qu’attendez-vous pour créer votre propre identité de marque ? 
 
-Pour en apprendre plus sur le design, on vous invite à lire nos [articles sur l’UX design](/fr/blog/articles). On vous recommande l’[article sur la loi de proximité](/fr/blog/articles/la-loi-de-proximite) !
+Pour en apprendre plus sur le design, on vous invite à lire nos [articles sur l’UX design](/fr/blog). On vous recommande l’[article sur la loi de proximité](/fr/blog/articles/la-loi-de-proximite) !
 
 Pour avoir un exemple concret de branding identity, vous pouvez aussi découvrir la conception de l'identité de marque de Green Lead sur [Behance](https://www.behance.net/gallery/118561423/Green-Lead-Brand-Guidelines?tracking_source=search_projects%7Clogo%20brand).
-
-**Auteur** : [Maxime Podgorski](https://www.linkedin.com/in/maxime-podgorski/)

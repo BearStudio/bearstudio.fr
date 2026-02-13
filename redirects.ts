@@ -601,6 +601,11 @@ export const members = [
     statusCode: 301,
   },
   {
+    source: '/team/philippe-chevreul',
+    destination: '/fr/equipe',
+    statusCode: 301,
+  },
+  {
     source: '/team/claire-jeanne',
     destination: '/fr/equipe',
     statusCode: 301,
