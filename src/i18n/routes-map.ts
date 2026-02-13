@@ -33,6 +33,7 @@ export const ROUTE_MAPPINGS = {
     en: '/en/contact/application-process-bearstudio',
   },
   '/fr/blog/rss.xml': { en: '/en/blog/rss.xml' },
+  '/fr/blog/articles/:id.md': { en: '/en/blog/posts/:id.md' },
 } as const satisfies Record<
   DefaultLocaleRoutePaths,
   Record<LocalesWithoutDefault, RoutePaths | null>
