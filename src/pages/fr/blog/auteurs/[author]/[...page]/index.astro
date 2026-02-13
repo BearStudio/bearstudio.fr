@@ -88,10 +88,14 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     slot="seo"
     title={t('blog.author.metadata.title', { name: authorName })}
     description={t('blog.author.metadata.description', { name: authorName })}
-    alternates={getAlternates('/fr/blog/auteurs/:author/:page', {
-      author: params.author,
-      page: page.currentPage.toString(),
-    })}
+    alternates={page.currentPage === 1
+      ? getAlternates('/fr/blog/auteurs/:author', {
+          author: params.author,
+        })
+      : getAlternates('/fr/blog/auteurs/:author/:page', {
+          author: params.author,
+          page: page.currentPage.toString(),
+        })}
     breadcrumb={breadcrumb}
   />
   <Hero>
