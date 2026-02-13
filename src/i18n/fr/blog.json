@@ -14,6 +14,11 @@
     "metadata": {
       "title": "Articles de {{name}} sur le blog du BearStudio, studio de développement web à Rouen",
       "description": "Retrouvez les articles de {{name}} sur le développement web et mobile, les technologies, et bien plus encore."
+    },
+    "empty": {
+      "title": "Aucun article pour le moment",
+      "description": "{{name}} n'a pas encore publié d'article en français sur le blog. Revenez bientôt !",
+      "cta": "Voir tous les articles"
     }
   },
   "pagination": {

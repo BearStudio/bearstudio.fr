@@ -14,6 +14,11 @@
     "metadata": {
       "title": "Articles by {{name}} on BearStudio's blog, web development studio in Rouen",
       "description": "Find articles by {{name}} about web and mobile development, technologies, and much more."
+    },
+    "empty": {
+      "title": "No articles yet",
+      "description": "{{name}} hasn't published any articles in English on the blog yet. Check back soon!",
+      "cta": "View all articles"
     }
   },
   "pagination": {

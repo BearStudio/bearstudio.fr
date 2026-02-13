@@ -3,6 +3,8 @@ import { getEntry } from 'astro:content';
 
 import type { GetStaticPathsOptions } from 'astro';
 
+import { getLink } from '@/lib/link';
+import { getPeopleCollection } from '@/lib/people';
 import { getPostsCollection } from '@/lib/posts';
 import Pagination from '@/components/blog/pagination.astro';
 import PostCard from '@/components/blog/post-card.astro';
@@ -13,6 +15,7 @@ import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
+import { buttonVariants } from '@/components/ui/button';
 import type { Locale } from '@/i18n/utils';
 import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
@@ -27,19 +30,20 @@ export async function generateStaticPaths(
     locale: params.locale,
   });
 
-  const allAuthorsIds = [
-    ...new Set(
-      allPosts.flatMap((p) => (p.data.authors ?? []).map((a) => a.id))
-    ),
-  ];
+  const allAuthors = await getPeopleCollection({ locale: params.locale });
 
-  return allAuthorsIds.flatMap((authorId) => {
+  return allAuthors.flatMap((author) => {
+    if (!author.data._computed.slug) {
+      return [];
+    }
+
     const filteredPosts = allPosts.filter((post) =>
-      (post.data.authors ?? []).some((a) => a.id === authorId)
+      (post.data.authors ?? []).some((a) => a.id === author.data._computed.slug)
     );
+
     return params.paginate(filteredPosts, {
       pageSize: PAGE_SIZE,
-      params: { author: authorId },
+      params: { author: author.data._computed.slug },
     });
   });
 }
@@ -88,14 +92,10 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     slot="seo"
     title={t('blog.author.metadata.title', { name: authorName })}
     description={t('blog.author.metadata.description', { name: authorName })}
-    alternates={page.currentPage === 1
-      ? getAlternates('/fr/blog/auteurs/:author', {
-          author: params.author,
-        })
-      : getAlternates('/fr/blog/auteurs/:author/:page', {
-          author: params.author,
-          page: page.currentPage.toString(),
-        })}
+    alternates={getAlternates('/fr/blog/auteurs/:author', {
+      author: params.author,
+    })}
+    noindex={page.currentPage !== 1}
     breadcrumb={breadcrumb}
   />
   <Hero>
@@ -105,14 +105,37 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       description={t('blog.author.description', { name: authorName })}
     />
   </Hero>
-  <Container placement="overlapHero">
-    <PostsGrid>
-      {page.data.map((post) => <PostCard post={post} />)}
-    </PostsGrid>
-    <Pagination
-      currentPage={page.currentPage}
-      nextUrl={page.url.next}
-      prevUrl={page.url.prev}
-    />
-  </Container>
+  {
+    page.data.length === 0 ? (
+      <Container class="py-16">
+        <div class="flex flex-col gap-4">
+          <h2 class="font-heading text-2xl font-bold text-balance">
+            {t('blog.author.empty.title')}
+          </h2>
+          <p class="text-muted-foreground max-w-[50ch] text-pretty">
+            {t('blog.author.empty.description', { name: authorName })}
+          </p>
+          <a
+            href={getLink('/fr/blog', locale, {})}
+            class={buttonVariants({ variant: 'secondary' })}
+          >
+            {t('blog.author.empty.cta')}
+          </a>
+        </div>
+      </Container>
+    ) : (
+      <Container placement="overlapHero">
+        <PostsGrid>
+          {page.data.map((post) => (
+            <PostCard post={post} />
+          ))}
+        </PostsGrid>
+        <Pagination
+          currentPage={page.currentPage}
+          nextUrl={page.url.next}
+          prevUrl={page.url.prev}
+        />
+      </Container>
+    )
+  }
 </MainLayout>
