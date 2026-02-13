@@ -29,6 +29,7 @@ interface Props
   url?: NonNullable<ComponentProps<typeof SEO>['openGraph']>['basic']['url'];
   alternates: Required<Record<Locale, string | null>> | null;
   breadcrumb: Array<BreadcrumbEntry> | null;
+  markdownUrl?: string;
 }
 const {
   title,
@@ -41,6 +42,7 @@ const {
   alternates,
   openGraph,
   breadcrumb,
+  markdownUrl,
 } = Astro.props;
 
 const locale = parseAstroLocale(Astro.currentLocale);
@@ -101,6 +103,12 @@ const languageAlternates = isNonNullish(alternates)
     site: '@_BearStudio',
   }}
 />
+
+{
+  markdownUrl && (
+    <link rel="alternate" type="text/markdown" href={markdownUrl} />
+  )
+}
 
 {
   !!breadcrumb?.length && (
