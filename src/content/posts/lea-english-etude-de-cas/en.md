@@ -1,5 +1,6 @@
 ---
 title: 'Lea English Case Study'
+slug: 'lea-english-case-study'
 date: 2025-07-03
 categories:
   - 'design-css'
@@ -73,7 +74,7 @@ General sketch from our online workshop with the client
 
 </figure>
 
-We complemented these valuable client-provided insights with a **targeted competitive analysis** (studying platforms like Duolingo, iTalki, and Simpler). [This allowed us to identify specific UX best practices and areas for improvement.](/en/blog/articles/pourquoi-lexperience-utilisateur-est-elle-importante) This approach helped us strengthen the solid foundations laid by Léa. We combined her user-centered feedback with industry standards. Thanks to this, we were able to clearly define a strong direction for our design work.
+We complemented these valuable client-provided insights with a **targeted competitive analysis** (studying platforms like Duolingo, iTalki, and Simpler). [This allowed us to identify specific UX best practices and areas for improvement.](/fr/blog/articles/pourquoi-lexperience-utilisateur-est-elle-importante) This approach helped us strengthen the solid foundations laid by Léa. We combined her user-centered feedback with industry standards. Thanks to this, we were able to clearly define a strong direction for our design work.
 
 #### Additional Details on Initial Data and Research
 

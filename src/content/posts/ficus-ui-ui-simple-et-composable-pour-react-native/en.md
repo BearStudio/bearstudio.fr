@@ -1,5 +1,6 @@
 ---
 title: 'Ficus UI 🌿 — Simple and Composable UI for React Native'
+slug: 'ficus-ui-simple-and-composable-ui-for-react-native'
 date: 2025-12-24
 categories:
   - 'developpement'

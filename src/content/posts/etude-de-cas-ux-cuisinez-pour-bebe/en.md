@@ -1,5 +1,6 @@
 ---
 title: 'UX Case Study: Cuisinez pour bébé'
+slug: 'ux-case-study-cuisinez-pour-bebe'
 date: 2026-01-27
 categories:
   - 'design-css'

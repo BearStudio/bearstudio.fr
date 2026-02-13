@@ -1,5 +1,6 @@
 ---
 title: 'Easily Manage Your Website Content with Outstatic'
+slug: 'easily-manage-your-website-content-with-outstatic'
 date: 2025-04-25
 categories:
   - 'developpement'
