@@ -548,7 +548,7 @@ export const articles = [
   },
   {
     source: '/blog/actualites-web-numerique/start-ui',
-    destination: '/en/blog/articles/start-ui',
+    destination: '/en/blog/posts/start-ui-opinionated-ui-starter',
     statusCode: 301,
   },
   {
