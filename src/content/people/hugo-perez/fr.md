@@ -12,6 +12,7 @@ services:
   - ai
   - web-development
   - mobile-development
+  - cto-support
 ---
 
 Développeur Back-end, Hugo surnommé Hub possède également des compétences en Ops et en cybersécurité qu'il met à profit au BearStudio.
