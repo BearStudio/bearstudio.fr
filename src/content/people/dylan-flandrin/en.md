@@ -1,10 +1,10 @@
 ---
 name: 'Dylan Flandrin'
 picture: './trylan.png'
-job: 'Junior Front-End Developer'
+job: 'Front-End Developer'
 socials:
   - type: 'linkedin'
-    href: 'https://www.linkedin.com/in/dylanfland/'
+    href: 'https://www.linkedin.com/in/dylan-fland/'
 status: 'current'
 hidden: false
 order: 95
