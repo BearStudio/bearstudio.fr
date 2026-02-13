@@ -8,6 +8,11 @@ type Redirect = {
 
 export const categories = [
   {
+    source: '/blog',
+    destination: '/fr/blog',
+    statusCode: 301,
+  },
+  {
     source: '/blog/actualites-web-numerique',
     destination: '/fr/blog',
     statusCode: 301,
