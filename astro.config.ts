@@ -39,7 +39,21 @@ export default defineConfig({
   },
   integrations: [
     mdx(),
-    sitemap(),
+    sitemap({
+      filter: (page) => {
+        const url = new URL(page);
+        const path = url.pathname;
+
+        // Exclude paginated pages (e.g. /fr/blog/2, /en/blog/authors/john/3)
+        const paginationPatterns = [
+          /^\/(fr|en)\/blog\/\d+$/,
+          /^\/(fr|en)\/blog\/auteurs\/[^/]+\/\d+$/,
+          /^\/(fr|en)\/blog\/authors\/[^/]+\/\d+$/,
+        ];
+
+        return !paginationPatterns.some((pattern) => pattern.test(path));
+      },
+    }),
     react(),
     robotsTxt({
       policy: [
