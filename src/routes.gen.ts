@@ -15,7 +15,8 @@ const ROUTES_CONFIG = {
         }
       },
       "posts": {
-        ":id": {}
+        ":id": {},
+        ":id.md": {}
       },
       "rss.xml": {}
     },
@@ -39,7 +40,8 @@ const ROUTES_CONFIG = {
     "blog": {
       ":page": {},
       "articles": {
-        ":id": {}
+        ":id": {},
+        ":id.md": {}
       },
       "auteurs": {
         ":author": {
@@ -64,6 +66,8 @@ const ROUTES_CONFIG = {
       "ux-design": {}
     }
   },
+  "llms-full.txt": {},
+  "llms.txt": {},
   "styleguide": {}
 } as const;
 
