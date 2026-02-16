@@ -540,7 +540,11 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
           .exhaustive()
       }
 
-      <div class="flex flex-col">
+      <div
+        class="flex flex-col"
+        itemscope=""
+        itemtype="https://schema.org/FAQPage"
+      >
         <Accordion
           question={match(locale)
             .with(
