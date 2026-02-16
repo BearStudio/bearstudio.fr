@@ -166,9 +166,9 @@ One of the **adjustments** concerned card behavior, with the addition of a "Don'
 
 #### Branding and Design System
 
-Lea English already had **a clear and well-defined visual identity**, which we naturally integrated into our custom design system. We built upon components from [Start UI Figma](/en/blog/articles/start-ui), an open-source Figma library that we designed and use internally.
+Lea English already had **a clear and well-defined visual identity**, which we naturally integrated into our custom design system. We built upon components from [Start UI Figma](/en/blog/posts/start-ui-opinionated-ui-starter), an open-source Figma library that we designed and use internally.
 
-The components we use in Figma are already implemented in [Start UI Native](/en/blog/articles/start-ui). This library uses technologies like **TypeScript, React** and **Ficus UI.** Thanks to this, developers can immediately accelerate the implementation phase after design finalization. Furthermore, it ensures consistency for future features to come.
+The components we use in Figma are already implemented in [Start UI Native](/en/blog/posts/start-ui-opinionated-ui-starter). This library uses technologies like **TypeScript, React** and **Ficus UI.** Thanks to this, developers can immediately accelerate the implementation phase after design finalization. Furthermore, it ensures consistency for future features to come.
 
 ![](images/figma.png)
 
@@ -254,7 +254,7 @@ In preparation for the public release, we designed all the visual assets. This i
 
 #### Iterative Launch and Feature Integration
 
-The initial release, **in April 2025,** strategically targeted approximately **300 users** on launch day to create a controlled testing environment. This early feedback was invaluable, allowing us to iterate quickly and improve [the user experience](/en/blog/articles/pourquoi-lexperience-utilisateur-est-elle-importante) based on direct feedback.
+The initial release, **in April 2025,** strategically targeted approximately **300 users** on launch day to create a controlled testing environment. This early feedback was invaluable, allowing us to iterate quickly and improve [the user experience](/fr/prestations/ux-design) based on direct feedback.
 
 ###### Learning Pace Customization
 
