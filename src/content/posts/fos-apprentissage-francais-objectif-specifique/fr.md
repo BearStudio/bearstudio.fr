@@ -43,7 +43,7 @@ Installés en Tunisie depuis plus de deux ans, les oursons sont partis à la con
 
 Ce choix, même s’il émane d'une bonne volonté, les a confrontés à d'autres problématiques qu’ils n'envisageaient pas du tout dans un pays censé être francophone :
 
-![la barrière de la langue](images/barriere-de-la-langue.gif)
+![la barrière de la langue](images/la-barriere-de-la-langue.png)
 
 Il faut dire que, comme plusieurs pays du globe, les inégalités pédagogiques et professionnelles sont très répandues en Tunisie et touchent spécialement les régions sud du pays. Mais ce n’est pas ça qui a ralenti la gambade de nos petits ours !
 
