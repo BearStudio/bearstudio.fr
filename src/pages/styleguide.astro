@@ -5,6 +5,7 @@ import {
   PiWarningOctagonDuotone,
 } from 'react-icons/pi';
 
+import SEO from '@/components/seo/index.astro';
 import { Button } from '@/components/ui/button';
 import {
   Callout,
@@ -16,6 +17,15 @@ import RootLayout from '@/layouts/root-layout.astro';
 ---
 
 <RootLayout>
+  <SEO
+    slot="seo"
+    title="Styleguide"
+    description="Styleguide"
+    alternates={null}
+    breadcrumb={null}
+    noindex
+    nofollow
+  />
   <div class="container mx-auto flex flex-col gap-8 p-8">
     <h1 class="font-heading text-4xl font-bold">Styleguide</h1>
 

@@ -44,6 +44,9 @@ export default defineConfig({
         const url = new URL(page);
         const path = url.pathname;
 
+        // Exclude styleguide page
+        if (path === '/styleguide') return false;
+
         // Exclude paginated pages (e.g. /fr/blog/2, /en/blog/authors/john/3)
         const paginationPatterns = [
           /^\/(fr|en)\/blog\/\d+$/,
