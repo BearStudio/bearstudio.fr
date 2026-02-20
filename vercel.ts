@@ -15,6 +15,9 @@ export const config: VercelConfig = {
     routes.header('/(.*)', [{ key: 'X-Robots-Tag', value: 'noindex' }], {
       has: [{ type: 'host', value: 'bearstudio-site-2026.vercel.app' }],
     }),
+    // Security headers applied to all routes.
+    // When adding a new external service (iframe embed, script, font CDN, etc.),
+    // update the Content-Security-Policy directives below to whitelist the new domain.
     routes.header('/(.*)', [
       {
         key: 'Content-Security-Policy',
