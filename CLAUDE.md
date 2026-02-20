@@ -51,6 +51,16 @@ Schemas are defined in `src/schemas/`. Use `getCollection()` with locale filteri
 - **UI primitives**: `src/components/ui/` (Button, Dialog, Drawer, Carousel, etc.)
 - **Styling**: Tailwind CSS with `cn()` helper (clsx + tailwind-merge)
 
+### Security Headers
+
+HTTP security headers are configured in `vercel.ts`. When adding a new external service (iframe embed, external script, font CDN, image CDN, etc.), update the `Content-Security-Policy` directive to whitelist the new domain. The relevant directives are:
+
+- `frame-src`: for iframe embeds (e.g., Pipedrive, Google Maps, YouTube)
+- `script-src`: for external scripts
+- `img-src`: for external image sources
+- `font-src`: for external font CDNs
+- `connect-src`: for fetch/XHR API calls
+
 ### Key Conventions
 
 - **Filename casing**: kebab-case enforced by ESLint
