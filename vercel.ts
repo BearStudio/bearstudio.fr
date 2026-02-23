@@ -42,6 +42,12 @@ export const config: VercelConfig = {
         key: 'X-Frame-Options',
         value: 'DENY',
       },
+      {
+        key: 'Referrer-Policy',
+        // We don't have anything sensitive in the URL for our site, so we just
+        // keep referrer data off HTTP connections.
+        value: 'strict-origin-when-cross-origin',
+      },
     ]),
   ],
 };
