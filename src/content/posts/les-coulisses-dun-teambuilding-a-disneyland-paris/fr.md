@@ -14,7 +14,7 @@ authors:
   - 'sandrine-auber-lardans'
 ---
 
-Le dernier week end d’août 2025, le [BearStudio](https://www.bearstudio.fr/) a offert à tous ses salariés et leurs proches, un week end teambuilding à [Disneyland Paris](https://www.disneylandparis.com/fr-fr). 
+Le dernier week end d’août 2025, le [BearStudio](/fr/) a offert à tous ses salariés et leurs proches, un week end teambuilding à [Disneyland Paris](https://www.disneylandparis.com/fr-fr). 
 
 Organiser un team building à Disney, c’est comme préparer un spectacle. Il faut un scénario, des acteurs motivés, et une logistique sans faille. Retour sur les coulisses de ce projet, de l’idée initiale à la concrétisation, en passant par les choix stratégiques et les ajustements nécessaires.
 

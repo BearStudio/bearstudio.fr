@@ -120,12 +120,12 @@ Ignorer les principes d'accessibilité peut **exclure une partie de la populatio
 
 Tout comme les ingénieurs civils veillent à ce qu'un bâtiment puisse résister à la gravité, les architectes adaptent la maison pour répondre aux besoins du propriétaire. De manière similaire, dans notre scénario actuel, tandis que les **développeurs** offrent un **support** **technique** et veillent à ce que l'application **fonctionne** **sans** **faille**, les **concepteurs** **UX** jouent le rôle **d'architectes** **des** **applications**. Leur rôle est de s'assurer que l**es utilisateurs interagissent facilement avec l'application et atteignent leurs objectifs sans effort.**
 
-Si vous souhaitez créer un produit adapté aux **besoins** et aux **demandes** de vos utilisateurs, BearStudio propose des [services d’UX Design](https://www.bearstudio.fr/prestations/ux-design) pour **améliorer l'expérience utilisateur** de votre produit.
+Si vous souhaitez créer un produit adapté aux **besoins** et aux **demandes** de vos utilisateurs, BearStudio propose des [services d’UX Design](/fr/prestations/ux-design) pour **améliorer l'expérience utilisateur** de votre produit.
 
 **Négliger l'UX** peut sembler économique, mais cela entraîne des **dépenses supplémentaires à long terme**. Corriger ultérieurement l'une des problématiques mentionnées ci-dessus nécessite un **développement supplémentaire, du temps et des ressources**. Cela a pour conséquence d’augmenter les coûts de manière significative. **Investir dans une bonne expérience utilisateur** dès le départ **permet d'économiser de l'argent** en évitant ces dépenses futures.
 
 Pour avoir une perception **mature** d'un produit, il doit être compris comme un **organisme systémique** qui, pour fonctionner au mieux, ne peut manquer d'aucun composant, parmi lesquels le design UX.
 
-Toutefois, si votre produit est déjà développé et **manque de logique** UX, nous proposons un [audit UX](https://www.bearstudio.fr/prestations/ux-design/audit-ux) de votre projet. Vous pourrez ainsi connaître ses **points faibles** ainsi que nos recommandations d’action pour **l’optimiser** !
+Toutefois, si votre produit est déjà développé et **manque de logique** UX, nous proposons un [audit UX](/fr/prestations/ux-design) de votre projet. Vous pourrez ainsi connaître ses **points faibles** ainsi que nos recommandations d’action pour **l’optimiser** !
 
 ![Un produit bien conçu englobe un business plan solide, une infrastructure réfléchie, un développement de qualité et un UX Design efficace.](images/illu8-1024x767.png)

@@ -100,7 +100,7 @@ Les problèmes d’organisation avec un de mes associés ont été plus compliqu
 
 Le vrai gros problème de l’année : à la base je pensais prendre des stagiaires, en voir un sortir du lot, l’embaucher puis recommencer l’année suivante et augmenter tranquillement… Malheureusement pour moi (ou pas) j’en ai eu 4 en même temps…
 
-Dans une [société de service](/prestations), généralement, tu trouves les clients, de plus en plus de projets donc tu recrutes quand tu as besoin de capacité de production… Le problème c’est que généralement les bons profils sont déjà partis. C’est comme ça que des SSII (ESN je sais mais je suis vieux 😜) te font miroiter une embauche pendant des semaines sans forcément te le dire. Personnellement, ça me faisait chier de les voir partir. Clairement, ils avaient et ils incarnaient tout ce que je voulais faire, en tant que personne, avec le BearStudio. Nous avons donc pris une décision ensemble : ils commencent en **freelance** puis l’entreprise les embauche dans 6 mois environ et nous allons nous démerder pour trouver le business qui **permet d’alimenter tout le monde**. Ça n’a pas été simple mais nous avons réussi. 😉
+Dans une [société de service](/fr/prestations), généralement, tu trouves les clients, de plus en plus de projets donc tu recrutes quand tu as besoin de capacité de production… Le problème c’est que généralement les bons profils sont déjà partis. C’est comme ça que des SSII (ESN je sais mais je suis vieux 😜) te font miroiter une embauche pendant des semaines sans forcément te le dire. Personnellement, ça me faisait chier de les voir partir. Clairement, ils avaient et ils incarnaient tout ce que je voulais faire, en tant que personne, avec le BearStudio. Nous avons donc pris une décision ensemble : ils commencent en **freelance** puis l’entreprise les embauche dans 6 mois environ et nous allons nous démerder pour trouver le business qui **permet d’alimenter tout le monde**. Ça n’a pas été simple mais nous avons réussi. 😉
 
 **Nous avons doublé le chiffre d'affaires de l’année précédente.**
 
@@ -136,7 +136,7 @@ Nous avons encore **doublé le chiffre d'affaires de l’année précédente**.
 
 **Effectifs** : 
 
-- 10 [salariés](/team)
+- 10 [salariés](/fr/equipe)
 - 2 prestataires
 - 7 actionnaires 
 

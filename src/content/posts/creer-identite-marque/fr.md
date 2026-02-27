@@ -36,13 +36,13 @@ Pour cela, vous disposez de nombreux outils sur le web tels que Dribbble, Behanc
 
 Il vous sera intéressant de prendre connaissances de vos potentiels concurrents, vous devrez donc passer par la case Benchmark. Cette étape vous aidera à connaître les codes graphiques des entreprises exerçant le même secteur d’activité que vous, ce qui vous dirigera vers un chemin différent de vos concurrents (logotype, charte graphique, communication, marketing…) 
 
-_Un benchmark est un document d’analyse concurrentielle comportant plusieurs critères de différenciation tels que le_ [_design_](https://www.bearstudio.fr/prestations/ux-design)_, l’ergonomie mais aussi l’architecture en présentant tous les points positifs et points d’amélioration de leurs sites web, e-commerce ou encore identité visuelle._
+_Un benchmark est un document d’analyse concurrentielle comportant plusieurs critères de différenciation tels que le_ [_design_](/fr/prestations/ux-design)_, l’ergonomie mais aussi l’architecture en présentant tous les points positifs et points d’amélioration de leurs sites web, e-commerce ou encore identité visuelle._
 
 Nous vous partageons un exemple d’une planche benchmark de logotypes concurrents dans le domaine du covoiturage/taxi : 
 
 ![planche de benchmark de logos](images/planche-benchmark-logotypes.png)
 
-Cette étape de benchmarking est à prioriser avant le moodboard et la [charte graphique](https://www.bearstudio.fr/prestations/ux-design/charte-graphique), car grâce à cette étude graphique, vous serez en mesure de vous diriger vers votre identité visuelle finale, la rendant unique.
+Cette étape de benchmarking est à prioriser avant le moodboard et la [charte graphique](/fr/prestations/ux-design), car grâce à cette étude graphique, vous serez en mesure de vous diriger vers votre identité visuelle finale, la rendant unique.
 
 Comment se présente cette planche benchmark ?
 
@@ -67,7 +67,7 @@ Enfin, j’analyse leur typographie qui sont aussi différentes, nous retrouvons
 
 ## 3\. Créer un moodboard 
 
-Par ailleurs, avant toute création graphique, je vous invite à composer un [moodboard](https://www.bearstudio.fr/prestations/ux-design/moodboard) (planche d’ambiance), afin de réunir toutes vos inspirations graphiques/inspirationnelles et de trouver une atmosphère/ambiance homogène à votre moodboard. 
+Par ailleurs, avant toute création graphique, je vous invite à composer un [moodboard](/fr/prestations/ux-design) (planche d’ambiance), afin de réunir toutes vos inspirations graphiques/inspirationnelles et de trouver une atmosphère/ambiance homogène à votre moodboard. 
 
 ### Mais que trouvons-nous dans notre moodboard ?
 

@@ -53,7 +53,7 @@ Cela signifie que vous devrez recréer votre propre image Docker basée sur Java
 
 ## Étape 3 : Modifiez votre environnement Cloud
 
-Au [BearStudio](https://www.bearstudio.fr/prestations), nous utilisons [CleverCloud](http://clever-cloud.com/) qui permet de modifier la version Java cible très facilement grâce à la variable d'environnement `CC_JAVA_VERSION` qu’il faut mettre à jour à la version 17, avant la sauvegarde de vos changements.
+Au [BearStudio](/fr/prestations), nous utilisons [CleverCloud](http://clever-cloud.com/) qui permet de modifier la version Java cible très facilement grâce à la variable d'environnement `CC_JAVA_VERSION` qu’il faut mettre à jour à la version 17, avant la sauvegarde de vos changements.
 
 **C'est fait, votre projet JHipster devrait maintenant fonctionner sur Java 17 🎉**
 

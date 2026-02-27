@@ -13,7 +13,7 @@ authors: ['emma-monchablon', 'nathan-lesouef']
 
 L’enjeu de la productivité au travail a rarement été aussi primordial que dans la société d’aujourd’hui où tout rime avec la fameuse maxime des temps modernes : _“time is money”_. Pourtant, contrairement à ce qu’on pense, il ne suffit pas de comparer le temps passé sur une tâche aux résultats obtenus, pour prétendre analyser l’efficacité d’une personne dans son travail ! 
 
-Certains l’ont sans doute déjà compris, au [BearStudio](https://www.bearstudio.fr/) nous ne sommes pas très portés sur la langue de bois... Il est temps de voir un peu plus loin que les conseils bateau qu’on peut trouver sur le net, comme par exemple : prendre des notes, écrire des _to-do_ et faire des pauses. C’est pourquoi nous vous avons concocté une petite **liste des bonnes pratiques** pour rester productif (presque) en toutes circonstances ! 
+Certains l’ont sans doute déjà compris, au [BearStudio](/fr/) nous ne sommes pas très portés sur la langue de bois... Il est temps de voir un peu plus loin que les conseils bateau qu’on peut trouver sur le net, comme par exemple : prendre des notes, écrire des _to-do_ et faire des pauses. C’est pourquoi nous vous avons concocté une petite **liste des bonnes pratiques** pour rester productif (presque) en toutes circonstances ! 
 
 ![améliorer sa productivité](images/photo-1507099985932-87a4520ed1d5.jpeg)
 
@@ -75,7 +75,7 @@ C’est le moment parfait pour aller saigner la machine à café de la boîte ! 
 
 En vous laissant aller à la **procrastination** et en rapportant du travail à la maison ou sur votre lieu de vacances, vous n’aurez aucune chance d’améliorer votre productivité. Rien de tel que partir pour mieux revenir. 
 
-Qui à part des [développeurs passionnés](https://www.bearstudio.fr/team) amèneraient leur travail avec eux en vacances de toute façon ?
+Qui à part des [développeurs passionnés](/fr/equipe) amèneraient leur travail avec eux en vacances de toute façon ?
 
 ### **10- Faire ce qui a été planifié et sans excuses** 
 

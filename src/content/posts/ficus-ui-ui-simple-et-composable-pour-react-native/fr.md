@@ -15,7 +15,7 @@ authors: ['nicolas-torion']
 **La conception d’une librairie UI React Native cohérente et maintenable** est un enjeu central dans le développement d’applications mobiles modernes. Depuis de nombreuses années, nous utilisons React Native pour ses capacités cross-platform, qui permettent de cibler à la fois Android et iOS tout en conservant les avantages de React et du mobile natif.  
 Cependant, la gestion du style et de l’UI React Native reste limitée par défaut : le framework fournit des composants de base pour structurer les vues, mais peu d’outils pour créer des interfaces mobiles avancées, personnalisables et cohérentes à grande échelle.  
 La communauté React Native a rapidement développé des librairies UI pour corriger ces problèmes, mais nous n’avons pas trouvé une librairie qui corresponde à ce que nous utilisons sur React web : [Chakra UI](https://chakra-ui.com/)  
-C’est pourquoi nous avons développé au [BearStudio](https://www.bearstudio.fr/) une nouvelle librairie UI open source : [React Native Ficus UI 🌿](https://ficus-ui.com/)
+C’est pourquoi nous avons développé au [BearStudio](/fr/) une nouvelle librairie UI open source : [React Native Ficus UI 🌿](https://ficus-ui.com/)
 
 ## Pourquoi Ficus UI ?
 
@@ -411,6 +411,6 @@ C’est une librairie qui reflète notre philosophie : **des outils simples, com
 
 Et n'hésitez pas à découvrir nos autres projets open-source :
 
-- [Start UI \[Web\]](https://www.bearstudio.fr/blog/actualites-web-numerique/start-ui)
+- [Start UI \[Web\]](/fr/blog/articles/start-ui)
 
-- [UI-State](https://www.bearstudio.fr/blog/developpement/pourquoi-on-a-cree-ui-state)
+- [UI-State](/fr/blog/articles/pourquoi-on-a-cree-ui-state)

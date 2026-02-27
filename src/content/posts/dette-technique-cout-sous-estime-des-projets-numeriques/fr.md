@@ -28,7 +28,7 @@ Il est important de se méfier de l'abus de ce genre de pratique, ce que j'ai co
 
 ## Dette technique : l'exemple d'une entreprise canadienne
 
-Cette entreprise a commencé ses [développements](https://www.bearstudio.fr/prestations/dev-front) au milieu des années 1990 en ayant pour objectif de mettre en place une application unique, visant à gérer des flottes de transporteurs.
+Cette entreprise a commencé ses [développements](/fr/prestations/developpement-web) au milieu des années 1990 en ayant pour objectif de mettre en place une application unique, visant à gérer des flottes de transporteurs.
 
 Cette application étant vouée à contenir beaucoup de formulaires, [Visual Basic 6](https://fr.wikipedia.org/wiki/Visual_Basic) a été la technologie choisie à l’époque, puisque leader sur le marché. C’est une technologie de Microsoft permettant une conception logicielle simplifiée à l'aide de _drag'n'drop_ d'éléments pour créer des formulaires. Ayant fait un choix judicieux, l'entreprise a donc **rapidement pu vendre sa solution** à des entreprises de transports, lui apportant une bonne croissance.
 
@@ -38,7 +38,7 @@ C’est un exemple concret qui m’a permis de me poser la question : **Quelles 
 
 VB6 étant une technologie qui prend de l'âge, elle ne fonctionne que sur les versions 32 bits de Windows, limitant son utilisation à des ordinateurs de 4Go de mémoire RAM.
 
-Cette limitation impacte directement la durée des [développements](https://www.bearstudio.fr/prestations/dev-back) à venir puisque la moindre opération est longue sur des machines si peu puissantes.
+Cette limitation impacte directement la durée des [développements](/fr/prestations/developpement-web) à venir puisque la moindre opération est longue sur des machines si peu puissantes.
 
 La compilation prend jusqu’à 3 minutes, les éditeurs de texte prennent quelques secondes à retranscrire ce que le développeur écrit et le mode visuel s’ouvre en plusieurs dizaines de secondes.
 

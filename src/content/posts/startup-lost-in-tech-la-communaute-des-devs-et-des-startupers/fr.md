@@ -117,7 +117,7 @@ Bonne humeur et partage de connaissances - Copyright Halimé Taboye
 
 Cet **afterwork** a donc donné l’élan à d’autres projets et d’autres formats d’**événements** qui seront organisés durant l’année 2020. Des conférences, des débats, du contenu en ligne sur les différentes plateformes d’échanges… L’objectif est de tisser un réel réseau de partage des connaissances et d’entraide. 
 
-Vous pouvez également [nous contacter](https://www.bearstudio.fr/contact) pour plus de renseignements ou tout simplement pour parler de votre projet. Le [BearStudio](https://www.facebook.com/allyouneedisbear/) a ainsi été créé : pour répondre à vos questions !  
+Vous pouvez également [nous contacter](/fr/contact) pour plus de renseignements ou tout simplement pour parler de votre projet. Le [BearStudio](https://www.facebook.com/allyouneedisbear/) a ainsi été créé : pour répondre à vos questions !  
 
 En attendant de fêter la nouvelle année et d’avoir le programme des réjouissances, nous vous invitons à vous inscrire aux groupes [Meetup](https://www.meetup.com/fr-FR/Startup-lost-in-tech/) et [Facebook](https://www.facebook.com/groups/521992361896607/) afin d’avoir toutes les informations nécessaires sur nos prochains **événements**.
 

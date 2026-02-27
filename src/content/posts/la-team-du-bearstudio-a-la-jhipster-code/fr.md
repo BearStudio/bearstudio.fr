@@ -12,7 +12,7 @@ excerpt: 'Jhipster c’est quoi ? Jhipster est un framework open source de déve
 
 [Jhipster](https://www.jhipster.tech/) est un framework **open source** de développement web. Pour les non développeurs, c’est un générateur de projet qui va faire gagner énormément de temps aux développeurs. Il pose un cadre et des bonnes pratiques qui, en plus de créer de la valeur rapidement dans un projet, évite les fantaisies de conception et d'implémentation que peuvent faire des développeurs pas assez expérimentés au démarrage...
 
-Apprenez en plus sur Jhipster à travers [cet article](/fr/blog/articles/jhipster-generateur-projet-hipsters) écrit par [Nicolas Torion](https://www.bearstudio.fr/team/nicolas-torion)
+Apprenez en plus sur Jhipster à travers [cet article](/fr/blog/articles/jhipster-generateur-projet-hipsters) écrit par [Nicolas Torion](/fr/equipe/nicolas-torion)
 
 ## La Jhipster code c’est quoi ?
 
@@ -31,7 +31,7 @@ A suivre : le récap de quelques ours du BearStudio ;) Eh oui, nous étions nomb
 
 Ce premier atelier était destiné aux personnes n'ayant encore jamais participé à une contribution de ce type.
 
-### Feedback d'[Asceline Boullen](https://www.bearstudio.fr/team/asceline-boullen)
+### Feedback d'[Asceline Boullen](/fr/equipe/asceline-boullen)
 
 Au BearStudio, je suis régulièrement amenée à faire des **wireframes** pour des projets générés par mes collègues avec JHipster mais sans en savoir réellement plus sur l’aspect technique de ce générateur.
 
@@ -55,9 +55,9 @@ _Aperçu des personnages que j'ai proposés_
 
 C’était pour moi la première contribution de ma vie, mes premiers pas dans l’open source et c’est cool ! Merci le billet diversité, qui m’a permis de participer à cette journée et m’encourager à y aller 😊
 
-### Feedback de [Fabien Essid](https://www.bearstudio.fr/team/fabien-essid)
+### Feedback de [Fabien Essid](/fr/equipe/fabien-essid)
 
-On utilise JHipster quasiment tous les jours au [BearStudio](https://www.bearstudio.fr/) mais au final je n’avais jamais généré un projet. La track _Beginners_ m’a permis de faire mes premiers pas avec JHipster et de découvrir le fonctionnement du générateur. Les participants de cette track avaient pour objectif de corriger des issues. Elles étaient bien **ciblées pour des débutants**, ce qui m’a permis de rapidement être à l’aise avec le générateur.
+On utilise JHipster quasiment tous les jours au [BearStudio](/fr/) mais au final je n’avais jamais généré un projet. La track _Beginners_ m’a permis de faire mes premiers pas avec JHipster et de découvrir le fonctionnement du générateur. Les participants de cette track avaient pour objectif de corriger des issues. Elles étaient bien **ciblées pour des débutants**, ce qui m’a permis de rapidement être à l’aise avec le générateur.
 
 Au final **j’ai réussi à fix une issue front** (passer le personnage de JHipster de la droite vers la gauche sur les apps [React](https://fr.reactjs.org/) pour être raccord avec les autres technos) et à bien avancer sur une seconde (que je poursuis d'ailleurs sur mon temps libre). Elle consiste à ajouter un bouton de _refresh_ sur les listings des entités et des utilisateurs. C'est pas mal de boulot car il faut reporter la modification sur chaque techno : React, Angular et VueJS.
 
@@ -65,7 +65,7 @@ En prime, la génération de projets JHipster n’a plus de secrets pour moi ! J
 
 **Première contribution de ma vie** aussi, et ça c’est cool.
 
-### Feedback d'[Ivan Dalmet](https://www.bearstudio.fr/team/ivan-dalmet)
+### Feedback d'[Ivan Dalmet](/fr/equipe/ivan-dalmet)
 
 Adepte de l’open source, c’était avec plaisir de découvrir la partie maintainer de JHipster :) Comme c’était la première fois que j’allais jouer avec le générateur, j’ai assisté à la track _Beginners_ en début de journée. Après avoir compris comment le générateur fonctionne j’ai voulu m’attaquer à un sujet qui me tient à coeur : **un nouveau front-end pour JHipster avec Chakra UI** 
 
@@ -95,7 +95,7 @@ _Update :_ le projet a été renommé mais voici le [lien du résultat](https://
 
 Celle-ci visait principalement à améliorer les standards de JHipster en optimisant le [caractère Restful](/fr/blog/articles/votre-api-est-elle-vraiment-restful) de son API.
 
-### Feedback de [Quentin Lerebours](https://www.bearstudio.fr/team/quentin-lerebours)
+### Feedback de [Quentin Lerebours](/fr/equipe/quentin-lerebours)
 
 **On a commencé par de la théorie** sur les APIs Restful et les conventions d'une telle API. J'ai appris qu'une vraie API REST se développait sur 4 niveaux de conventions (URI, verbes, code de retour et HATEOAS), et que plus de 99% des APIs ne respectent pas la dernière convention. On a donc décidé de discuter de la meilleure manière d'**améliorer le respect des convention**s de REST sur JHipster.
 
@@ -105,7 +105,7 @@ On est donc passés sur la deuxième tâche de la journée : ajouter des _endpoi
 
 En fin de journée, on avait accompli environ 50% du travail, la [PR](https://github.com/jhipster/generator-jhipster/pull/12727) était ouverte sur GitHub et on était tous très satisfait d'avoir travaillé là-dessus. C'était très intéressant de comprendre en profondeur le fonctionnement du générateur et d'être initiés à la contribution sur ce projet, **ce qui simplifiera les prochaines corrections d'issue ou développement de features**.
 
-### Feedback de [Jessy Baer](https://www.bearstudio.fr/team/jessy-baer)
+### Feedback de [Jessy Baer](/fr/equipe/jessy-baer)
 
 On a commencé avec une **présentation de la future version de Jhipster**, la version 7, ce qui nous à permis de voir les nouvelles features qui arriveront prochainement
 
@@ -115,19 +115,19 @@ Après j’ai travaillé sur la track API, avec pour objectif de rendre Jhipster
 
 Ici, le but était de travailler à l'amélioration du **JDL Studio**, un outil qui permet de visualiser son schéma d'entités pendant sa rédaction.
 
-### Feedback de [Renan Decamps](https://www.bearstudio.fr/team/renan-decamps)
+### Feedback de [Renan Decamps](/fr/equipe/renan-decamps)
 
 La première track que j'ai suivi consistait à **améliorer le langage jdl utilisé** dans [jdl-studio](https://www.jhipster.tech/jdl/). Il faut savoir que dans la version actuelle, le code n'a jamais été réadapté au fur et à mesure des nouvelles features. Nous avons donc d'abord listé toutes les incohérences au niveau des paramètres de chaque instruction. (Par exemple, pouvoir mettre `no false` à un paramètre mais n'avoir que `no` sur un autre). Puis nous avons réfléchi à une solution qui permettrait d'unifier le langage et de le rendre plus clair. La solution sur laquelle nous somme tous tombés d'accord permet de résoudre l'ensemble de ces problèmes.
 
 J'ai ensuite laissé mon groupe pour travailler sur l'intégration du nouveau jdl-studio avec JHipster online. Pour cela j'ai d'abord échangé avec **Deepu**, le créateur du jdl-studio, pour comprendre comment fonctionnait l'app. **J'ai commencé à coder l'intégration**. Une [PR](http://github.com/jhipster/jdl-studio/pull/105\(ouvre un nouvel onglet\)) a d'ailleurs été ouverte à ce sujet, qui a été merged entre-temps.
 
-### Feedback de [Nicolas Torion](https://www.bearstudio.fr/team/nicolas-torion)
+### Feedback de [Nicolas Torion](/fr/equipe/nicolas-torion)
 
 Journée très sympa durant laquelle on a pu échanger avec la core team de jHipster sur de multiples sujets.
 
 J’ai passé du temps sur l’**amélioration de la syntaxe JDL** du générateur avec :
 
-- [Renan](https://www.bearstudio.fr/team/renan-decamps)
+- [Renan](/fr/equipe/renan-decamps)
 - [Mathieu ABOU-AICHI](https://github.com/MathieuAA), membre de la core team
 - [Arnaud Freismuth](https://twitter.com/arnaudfreismuth), membre de la core team
 

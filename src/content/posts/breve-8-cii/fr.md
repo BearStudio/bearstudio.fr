@@ -28,7 +28,7 @@ Pour être éligible au CII (lire C2I), une entreprise doit remplir certaines co
 
 _Psst : autant vous dire que pour le BearStudio, c’était plutôt bien parti_ 😄
 
-D’ailleurs, si vous souhaitez en apprendre un peu plus sur nos offres de prestations, [c’est par ici](https://www.bearstudio.fr/prestations). 
+D’ailleurs, si vous souhaitez en apprendre un peu plus sur nos offres de prestations, [c’est par ici](/fr/prestations). 
 
 ## Quels sont les avantages du CII ?
 

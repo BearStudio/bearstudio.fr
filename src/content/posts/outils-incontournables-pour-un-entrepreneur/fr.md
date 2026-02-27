@@ -67,7 +67,7 @@ Comme son nom l’indique, Pipedrive permet de suivre sa prospection commerciale
 
 ## Suivre la gestion de projet avec facilité
 
-Il y a certainement d’autres outils plus orientés dans votre métier mais [**Trello**](https://trello.com/) reste une valeur sûre pour une gestion de [projet](https://www.bearstudio.fr/prestations) efficace. Se basant sur la méthodologie de gestion de projet Kanban, Trello est grandement personnalisable. Dans une version simpliste, il vous permettra de faire un suivi des tâches avec des statuts de suivi : à faire, en cours, en attente de validation, fait. A vous d’adapter l’outil à votre besoin, la version gratuite est déjà très complète et devrait vous satisfaire. 
+Il y a certainement d’autres outils plus orientés dans votre métier mais [**Trello**](https://trello.com/) reste une valeur sûre pour une gestion de [projet](/fr/prestations) efficace. Se basant sur la méthodologie de gestion de projet Kanban, Trello est grandement personnalisable. Dans une version simpliste, il vous permettra de faire un suivi des tâches avec des statuts de suivi : à faire, en cours, en attente de validation, fait. A vous d’adapter l’outil à votre besoin, la version gratuite est déjà très complète et devrait vous satisfaire. 
 
 ## Gestion de sa trésorerie professionnelle
 

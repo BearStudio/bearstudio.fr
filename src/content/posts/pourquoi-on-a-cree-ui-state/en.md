@@ -106,7 +106,7 @@ But there's a tradeoff: **You have to extract the layout into a separate compone
 
 ## What we wanted: a single, well-typed, active state, reusable anywhere
 
-At [BearStudio](https://www.bearstudio.fr), we wanted to keep the same core principles:
+At [BearStudio](/en), we wanted to keep the same core principles:
 
 - Only one active state at a time
 - Exhaustive type safety

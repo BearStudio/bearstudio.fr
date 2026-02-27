@@ -29,7 +29,7 @@ Lorsque vous souhaitez rendre du code atomique, dans un service de votre applica
 
 ### **Un exemple concret :**
 
-Vous [développez une application](https://www.bearstudio.fr/prestations/dev-back) pour commander des places de cinéma et vous vous attaquez à la fonction permettant de réserver une place. Vous avez besoin de rendre ce code atomique car sinon deux personnes pourraient réserver en même temps la dernière place de cinéma disponible.
+Vous [développez une application](/fr/prestations/developpement-web) pour commander des places de cinéma et vous vous attaquez à la fonction permettant de réserver une place. Vous avez besoin de rendre ce code atomique car sinon deux personnes pourraient réserver en même temps la dernière place de cinéma disponible.
 
 ![Exemple de code d'une fonction Java atomique](images/atomic_method-2-1024x600.png)
 

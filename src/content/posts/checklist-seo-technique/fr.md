@@ -160,7 +160,7 @@ Pour être sûr de ne pas avoir de problèmes, la meilleure option est de réfé
 
 Le fait de changer l’URL ne vous empêche pas de trier vos articles par catégorie dans votre blog. Ça n’aura pas d’impact pour la compréhension de Google. C’est le **sitemap**, le **fil d’ariane et le maillage interne** (liaison des pages entre elles via les liens internes) qui **rendra compréhensible votre site** aux yeux de Google.
 
-Pour le reste de votre site, je vous conseille de suivre la **hiérarchie logique**. Par exemple pour notre page maquettes, on a [https://www.bearstudio.fr/prestations/ux-design/maquettes](https://www.bearstudio.fr/prestations/ux-design/maquettes). En suivant le lien, on sait qu’on la retrouve dans la catégorie prestations, puis UX design, puis maquettes.
+Pour le reste de votre site, je vous conseille de suivre la **hiérarchie logique**. Par exemple pour notre page maquettes, on a [/fr/prestations/ux-design](/fr/prestations/ux-design). En suivant le lien, on sait qu’on la retrouve dans la catégorie prestations, puis UX design, puis maquettes.
 
 On retrouve cette logique dans le **fil d’ariane** présent sur les pages du site. Il est utile à la fois pour Google qui comprend la **profondeur du site**, mais également pour l’utilisateur qui peut retourner dans les pages mères facilement. 
 
@@ -198,9 +198,9 @@ Il est important que vos pages suivent une **hiérarchie logique**. Par exemple 
 
 On peut prendre l’exemple du site du BearStudio pour comprendre la bonne façon de **structurer un site** web.
 
-On a le menu qui regroupe les pages principales du site. Si on veut découvrir les [prestations proposés par le BearStudio](https://www.bearstudio.fr/prestations) on retrouve la page dédiée dans le menu.
+On a le menu qui regroupe les pages principales du site. Si on veut découvrir les [prestations proposés par le BearStudio](/fr/prestations) on retrouve la page dédiée dans le menu.
 
-Sur la page, on retrouve 4 catégories principales. Si on choisi la catégorie [**UX design**](https://www.bearstudio.fr/prestations/ux-design) on retrouve toutes les prestations liées au Design. C’est simple, logique mais efficace. 
+Sur la page, on retrouve 4 catégories principales. Si on choisi la catégorie [**UX design**](/fr/prestations/ux-design) on retrouve toutes les prestations liées au Design. C’est simple, logique mais efficace. 
 
 ![hiérarchie du site bearstudio](images/hierarchie-site-web-1024x503-1.webp)
 
@@ -214,7 +214,7 @@ Pour vérifier l’ergonomie mobile de votre site, vous pouvez vous rendre sur l
 
 ![l'ergonomie mobile sur la google search console](images/ergonomie-mobile-google-search-console-1.webp)
 
-Pour aller plus loin, vous pouvez aussi faire appel à nous pour faire réaliser un [Audit UX](https://www.bearstudio.fr/prestations/ux-design/audit-ux) de votre site par des experts avec une **vraie connaissance humaine**. 
+Pour aller plus loin, vous pouvez aussi faire appel à nous pour faire réaliser un [Audit UX](/fr/prestations/ux-design) de votre site par des experts avec une **vraie connaissance humaine**. 
 
 Contrairement à un simple outil automatisé, vous aurez un retour de test par un oeil avisé qui saura se mettre dans la peau d’un utilisateur. 
 

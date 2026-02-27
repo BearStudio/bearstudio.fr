@@ -44,9 +44,9 @@ _Note : Une API est souvent protégée par un système d’authentification, pou
 
 ### **Interface web**
 
-Lorsqu’on parle d’interface web (ou UI), il s'agit de la partie visible de votre application. L’interface web peut aussi être appelée **[front-end](https://www.bearstudio.fr/prestations/dev-front)**, car c’est la partie "avant", que va utiliser l’utilisateur alors que le [backend](https://www.bearstudio.fr/prestations/dev-back) est à l’arrière, caché aux yeux du client.
+Lorsqu’on parle d’interface web (ou UI), il s'agit de la partie visible de votre application. L’interface web peut aussi être appelée **[front-end](/fr/prestations/developpement-web)**, car c’est la partie "avant", que va utiliser l’utilisateur alors que le [backend](/fr/prestations/developpement-web) est à l’arrière, caché aux yeux du client.
 
-Gardez en tête que cette UI doit être ergonomique (on parle d’[UX design](https://www.bearstudio.fr/prestations/ux-design)) et souvent _responsive_. Cela signifie qu'elle doit pouvoir s’adapter au différents terminaux sur laquelle elle est utilisée (mobile, ordinateurs…).
+Gardez en tête que cette UI doit être ergonomique (on parle d’[UX design](/fr/prestations/ux-design)) et souvent _responsive_. Cela signifie qu'elle doit pouvoir s’adapter au différents terminaux sur laquelle elle est utilisée (mobile, ordinateurs…).
 
 ## Les fonctionnalités de JHipster
 
@@ -114,6 +114,6 @@ En plus de permettre un **démarrage très rapide de votre projet**, JHipster po
 
 D’abord parce c’est un projet _Open Source_, ce qui signifie que le code est accessible à tous sur [Github](https://github.com/jhipster/generator-jhipster/). Autrement dit, **ça implique que tout le monde puisse contribuer à l’amélioration du générateur**, et donc venir ajouter de nouvelles fonctionnalités au projet. Que ce soit pour s’assurer qu’il ne possède pas de failles de sécurité, corriger de potentiels bugs, etc. Concrètement, ça nous permet d’améliorer votre projet lors de chaque mise à jour de JHipster, en ajoutant de nouvelles fonctionnalités. Nous sommes par exemple en train de travailler sur l’ajout d’une fonctionnalité permettant de visualiser des statistiques sur vos données (nombre d’utilisateurs…). Nous vous invitons d'ailleurs à lire le [témoignage de nos ours présents lors de la dernière JHipster Code de Bordeaux](/fr/blog/articles/la-team-du-bearstudio-a-la-jhipster-code).
 
-Pour finir, je souhaitais mettre en avant le fait qu’un projet JHipster peut être déployé très rapidement sur le cloud. Un [article](https://www.jhipster.tech/clever-cloud/) de [Rudy](https://www.bearstudio.fr/team/rudy-baer) explique comment déployer sur [CleverCloud](https://www.clever-cloud.com/en/) . Cette expertise nous permet de mettre l’interface du back-office entre vos mains, sur une plateforme de pré-production, en un jour seulement (sans la logique spécifique à votre métier, évidemment).
+Pour finir, je souhaitais mettre en avant le fait qu’un projet JHipster peut être déployé très rapidement sur le cloud. Un [article](https://www.jhipster.tech/clever-cloud/) de [Rudy](/fr/equipe/rudy-baer) explique comment déployer sur [CleverCloud](https://www.clever-cloud.com/en/) . Cette expertise nous permet de mettre l’interface du back-office entre vos mains, sur une plateforme de pré-production, en un jour seulement (sans la logique spécifique à votre métier, évidemment).
 
-Si vous souhaitez en apprendre plus sur notre façon d’utiliser JHipster et savoir ce que ce générateur apporte aux entreprises avec lesquelles nous travaillons, vous pouvez retrouver [une vidéo](https://youtu.be/BT9qdMdmM9I?t=1716) de [Rudy](https://www.bearstudio.fr/team/rudy-baer) et [moi](https://www.bearstudio.fr/team/quentin-lerebours), en présentation lors d’un meetup JHipster.
+Si vous souhaitez en apprendre plus sur notre façon d’utiliser JHipster et savoir ce que ce générateur apporte aux entreprises avec lesquelles nous travaillons, vous pouvez retrouver [une vidéo](https://youtu.be/BT9qdMdmM9I?t=1716) de [Rudy](/fr/equipe/rudy-baer) et [moi](/fr/equipe/quentin-lerebours), en présentation lors d’un meetup JHipster.

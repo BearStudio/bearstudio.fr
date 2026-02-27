@@ -12,7 +12,7 @@ authors:
 
 _Disclaimer : cet article a été écrit avant la crise du coronavirus_ 😷
 
-Cela fait un moment que [Rudy](https://www.bearstudio.fr/team/rudy-baer) voit passer des jeunes développeurs et des gens en reconversion qui galèrent à trouver des entreprises pour un stage ou une alternance. En général, il leur donne des conseils et il compte d’ailleurs continuer à le faire. Toutefois, nous allons essayer d’en synthétiser un maximum ici.
+Cela fait un moment que [Rudy](/fr/equipe/rudy-baer) voit passer des jeunes développeurs et des gens en reconversion qui galèrent à trouver des entreprises pour un stage ou une alternance. En général, il leur donne des conseils et il compte d’ailleurs continuer à le faire. Toutefois, nous allons essayer d’en synthétiser un maximum ici.
 
 Mettons-nous en situation : Mohamed (j’utilise volontairement un prénom à consonance musulmane dans un autre contexte qu’une histoire péjorative sur BFM TV) est en reconversion professionnelle à Rouen. Il ne connaît personne qui travaille dans le milieu informatique ni dans celui des startups.
 
@@ -79,7 +79,7 @@ Dans le cas de Mohamed à Rouen il y a le Slack de codeurs en seine ([En voici l
 
 En général l’un des premiers channel qui est créé est le #CV / #Jobs. L’idée est de permettre aux recruteurs de poster leurs offres et aux candidats de poster leur CV.
 
-Ces Slacks vous permettent d’avoir **un contact plus humain** que le traditionnel formulaire de [candidature](https://www.bearstudio.fr/contact/processus-candidature-bearstudio).
+Ces Slacks vous permettent d’avoir **un contact plus humain** que le traditionnel formulaire de [candidature](/fr/contact/processus-candidature-bearstudio).
 
 ---
 

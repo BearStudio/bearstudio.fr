@@ -31,7 +31,7 @@ M'est alors venu cette idée d’y inclure cet “happening”, cette petite rub
 
 Le but serait de créer un moment assez court qui tranche avec le reste du stream, tout en restant orienté tech / outils de dev et qui soit surtout fun !
 
-J'en parle autour de moi, ça fait marrer tout le monde; [Yoann](https://www.bearstudio.fr/team/yoann-fleury) crée un générique de QUA-LI-TÉ en 20 minutes et on cale 5 / 10 minutes sur le prochain stream pour la première Minute Kikoo !
+J'en parle autour de moi, ça fait marrer tout le monde; [Yoann](/fr/equipe/yoann-fleury) crée un générique de QUA-LI-TÉ en 20 minutes et on cale 5 / 10 minutes sur le prochain stream pour la première Minute Kikoo !
 
 <figure>
 
@@ -49,7 +49,7 @@ Résultat des courses, ça s'est super bien passé, pleins de retours positifs; 
 
 Venez nous voir tous les 1er vendredi du mois 😃 ça se passe sur [la chaîne Twitch du BearStudio](https://www.twitch.tv/bearstudiolive) !
 
-Si jamais vous voulez une minute kikoo de Renan personnalisée, [contactez nous](https://www.bearstudio.fr/contact), je fais également les mariages et bar mitzvah.
+Si jamais vous voulez une minute kikoo de Renan personnalisée, [contactez nous](/fr/contact), je fais également les mariages et bar mitzvah.
 
 ---
 

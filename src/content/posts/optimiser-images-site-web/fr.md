@@ -53,7 +53,7 @@ Deux sites pour les compressions d'images :
 
 ## Afficher le terminal sans problème
 
-Comment afficher un terminal sans que l’image soit floue ou de mauvaise qualité ? C’est une problématique à laquelle nous nous sommes confrontés au Bearstudio lors de la [rédaction d’articles](https://www.bearstudio.fr/blog).
+Comment afficher un terminal sans que l’image soit floue ou de mauvaise qualité ? C’est une problématique à laquelle nous nous sommes confrontés au Bearstudio lors de la [rédaction d’articles](/fr/blog).
 
 Avant de trouver une solution, on faisait seulement une capture d’écran, mais la qualité dépendait du PC sur lequel on se trouvait, ce qui rendait le résultat trop aléatoire.
 
@@ -69,4 +69,4 @@ _PS : il est aussi possible, au lieu de télécharger l’image, de générer un
 
 ![](images/carbon2-3.png)
 
-_[Grégoire Protas](https://www.bearstudio.fr/team)_
+_[Grégoire Protas](/fr/equipe)_

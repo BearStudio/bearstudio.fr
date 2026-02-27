@@ -171,6 +171,6 @@ Ce type de structure de fichier a deux avantages : commenter/décommenter une fe
 
 ## Le mot de la fin
 
-Comme vous pouvez le constater, il n'a fallu que quelques apports simples à BEM pour le transformer en BEMIT: l'ajout d'un préfixage et la mise en place d'une architecture mettant l'accent sur la compréhension et la lisibilité se révèle être un atout inestimable lors du [développement](https://www.bearstudio.fr/prestations/dev-front) de vos sites, applications et webapps.
+Comme vous pouvez le constater, il n'a fallu que quelques apports simples à BEM pour le transformer en BEMIT: l'ajout d'un préfixage et la mise en place d'une architecture mettant l'accent sur la compréhension et la lisibilité se révèle être un atout inestimable lors du [développement](/fr/prestations/developpement-web) de vos sites, applications et webapps.
 
 Adieu râleries, classes sans queue ni tête et architectures chaotiques, désormais, votre code est robuste, maintenable et lisible, et ce pour tous les acteurs de votre projet !

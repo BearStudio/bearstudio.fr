@@ -47,6 +47,6 @@ Pour les développeurs en _remote_ permanent, nous pouvons les faire participer 
 - Les guests qui viennent au B & B : conjoints ou conjointes, potes, voisins, clients…
 - Les fins d’entretien au B & B : rien de tel pour montrer sa sincérité que d’inviter un candidat à prendre une bière avec ses futurs collègues pour finir de le convaincre
 
-Voila ! En soi rien de révolutionnaire, mais trop de managers sous-estiment l’impact d’un moment de détente régulier sur la cohésion d’[équipe](https://www.bearstudio.fr/team). Au passage ce billet de blog permettra à nos futures recrues de savoir ce qu’est le B&B.
+Voila ! En soi rien de révolutionnaire, mais trop de managers sous-estiment l’impact d’un moment de détente régulier sur la cohésion d’[équipe](/fr/equipe). Au passage ce billet de blog permettra à nos futures recrues de savoir ce qu’est le B&B.
 
 Si vous avez des feedbacks ou des pratiques similaires n’hésitez pas à nous en parler sur [Twitter](https://twitter.com/_BearStudio) ou [LinkedIn](https://www.linkedin.com/company/bearstudio/). **😉**

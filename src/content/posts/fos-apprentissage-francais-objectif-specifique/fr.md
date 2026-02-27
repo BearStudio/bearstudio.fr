@@ -47,7 +47,7 @@ Ce choix, même s’il émane d'une bonne volonté, les a confrontés à d'autre
 
 Il faut dire que, comme plusieurs pays du globe, les inégalités pédagogiques et professionnelles sont très répandues en Tunisie et touchent spécialement les régions sud du pays. Mais ce n’est pas ça qui a ralenti la gambade de nos petits ours !
 
-Contactée par [l’équipe du Bear Studio](https://www.bearstudio.fr/team) en juin 2019, mon objectif a été de comprendre les problèmes linguistiques de l’équipe et de la société afin d’élaborer un programme pour y remédier.  
+Contactée par [l’équipe du Bear Studio](/fr/equipe) en juin 2019, mon objectif a été de comprendre les problèmes linguistiques de l’équipe et de la société afin d’élaborer un programme pour y remédier.  
 
 Cette expérience m’a d’abord parue effrayante (mes notes du lycée en informatique…). Mais au fil de mes recherches et de mes journées passées au sein de l’entreprise, cette expérience me paraissait de plus en plus challengeante et surtout plus proche du terrain. 
 

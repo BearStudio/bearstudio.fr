@@ -13,7 +13,7 @@ authors:
   - 'rudy-baer'
 ---
 
-Je pense que vous l’avez tous remarqué mais en 2019 nous nous sommes mis à la communication ! C’est à dire que nous avons embauché Laurie, fucking [masse salariale](/team). _BearStudio style_, nous avons bêta testé plein de trucs avec toujours cette touche #nobullshit et sincère qui nous caractérise.
+Je pense que vous l’avez tous remarqué mais en 2019 nous nous sommes mis à la communication ! C’est à dire que nous avons embauché Laurie, fucking [masse salariale](/fr/equipe). _BearStudio style_, nous avons bêta testé plein de trucs avec toujours cette touche #nobullshit et sincère qui nous caractérise.
 
 ## Pour 2020, on monte d’un cran en communication !
 
@@ -22,7 +22,7 @@ Maintenant, nous avons une stratégie (et surtout un nouveau site internet). De 
 - Publier plus d’articles sur notre blog : au moins 1 par mois !
 - Continuer la communication sur les réseaux sociaux mais en adaptant le contenu à chaque canal :
   - De l’entrepreneuriat et du [management](/fr/blog/articles/9-trucs-abstraction-quand-on-manage) sur [LinkedIn](https://www.linkedin.com/company/bearstudio/)
-  - De l’[UX](https://www.bearstudio.fr/prestations/ux-design) sur [Instagram](https://www.instagram.com/_bearstudio/)
+  - De l’[UX](/fr/prestations/ux-design) sur [Instagram](https://www.instagram.com/_bearstudio/)
   - De la tech sur [Twitter](https://twitter.com/_BearStudio)
 
 Choisissez le réseau qui vous convient ou suivez-nous partout pour ne rien louper 😁
