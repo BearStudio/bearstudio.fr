@@ -40,7 +40,11 @@ const ROUTES_CONFIG = {
     "blog": {
       ":page": {},
       "articles": {
-        ":id": {},
+        ":id": {
+          "assets": {
+            ":__image.:__type": {}
+          }
+        },
         ":id.md": {}
       },
       "auteurs": {

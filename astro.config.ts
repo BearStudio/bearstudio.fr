@@ -3,8 +3,10 @@
 import robotsTxt from 'astro-robots-txt';
 import { defineConfig, envField } from 'astro/config';
 import mdx from '@astrojs/mdx';
+import node from '@astrojs/node';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
+import vercel from '@astrojs/vercel';
 
 import bearstudioTypedRoutes from '@bearstudio/astro-typed-routes';
 import tailwindcss from '@tailwindcss/vite';
@@ -12,6 +14,11 @@ import tailwindcss from '@tailwindcss/vite';
 // Relative import is required
 import { defaultLocale, locales } from './src/i18n';
 import { getSiteUrl } from './src/lib/site/get-site-url';
+
+const adapter =
+  process.argv[3] === '--node' || process.argv[4] === '--node'
+    ? node({ mode: 'standalone' })
+    : vercel({ isr: true });
 
 // https://astro.build/config
 export default defineConfig({
@@ -71,6 +78,23 @@ export default defineConfig({
   ],
 
   vite: {
+    optimizeDeps: {
+      exclude: [
+        '@takumi-rs/image-response',
+        '@takumi-rs/core',
+        '@takumi-rs/helpers',
+      ],
+    },
+    ssr: {
+      noExternal: [
+        '@takumi-rs/image-response',
+        '@takumi-rs/core',
+        '@takumi-rs/helpers',
+        '@bearstudio/astro-assets-generation',
+      ],
+    },
     plugins: [tailwindcss()],
   },
+
+  adapter,
 });

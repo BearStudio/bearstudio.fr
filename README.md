@@ -49,8 +49,17 @@ src/
 
 ## Tech Stack
 
+### 🛠️ Local Build & Preview
+
+To test the production build locally, run the following commands:
+
+```bash
+pnpm run build:node
+pnpm run preview
+```
+
 - **[Astro](https://astro.build)** - Static site generation
 - **[React](https://react.dev)** - Interactive islands
 - **[Tailwind CSS](https://tailwindcss.com)** - Styling
-- **[MDX](https://mdxjs.com)** - Blog content
 - **[Radix UI](https://www.radix-ui.com)** - Accessible UI primitives
+- **[MDX](https://mdxjs.com)** - Blog content
