@@ -12,8 +12,8 @@ import type { Locale } from '@/i18n/utils';
 import { LOCALE_TERRITORY_MAP } from '@/i18n/utils';
 
 export const config: AssetImageConfig = {
-  width: 1200,
-  height: 630,
+  width: 1280,
+  height: 640,
   debugScale: 1,
 };
 

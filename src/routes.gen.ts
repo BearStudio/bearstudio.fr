@@ -62,7 +62,11 @@ const ROUTES_CONFIG = {
       "processus-candidature-bearstudio": {}
     },
     "equipe": {
-      ":id": {}
+      ":id": {
+        "assets": {
+          ":__image.:__type": {}
+        }
+      }
     },
     "mentions-legales": {},
     "prestations": {
