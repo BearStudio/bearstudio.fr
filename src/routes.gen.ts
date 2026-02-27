@@ -15,7 +15,11 @@ const ROUTES_CONFIG = {
         }
       },
       "posts": {
-        ":id": {},
+        ":id": {
+          "assets": {
+            ":__image.:__type": {}
+          }
+        },
         ":id.md": {}
       },
       "rss.xml": {}

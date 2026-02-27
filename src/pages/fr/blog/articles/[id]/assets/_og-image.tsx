@@ -7,6 +7,9 @@ import {
 import type { AssetImageConfig } from '@bearstudio/astro-assets-generation';
 
 import { THEME } from '@/lib/assets';
+import { getPostsCollection } from '@/lib/posts';
+import type { Locale } from '@/i18n/utils';
+import { LOCALE_TERRITORY_MAP } from '@/i18n/utils';
 
 export const config: AssetImageConfig = {
   width: 1200,
@@ -14,17 +17,34 @@ export const config: AssetImageConfig = {
   debugScale: 1,
 };
 
-export default async function OgImage({ params }: { params: { id: string } }) {
-  const blogPost = await getEntry({
-    collection: 'posts',
-    id: `${params.id}/fr`,
-  });
+const MULTI_AUTHOR_LABEL: Record<
+  Locale,
+  { and: string; others: (n: number) => string }
+> = {
+  fr: { and: '&', others: (n) => `et ${n} autres` },
+  en: { and: '&', others: (n) => `and ${n} others` },
+};
+
+export default async function OgImage({
+  params,
+  currentLocale,
+}: {
+  params: { id: string };
+  currentLocale: Locale;
+}) {
+  const blogPost = (await getPostsCollection({ locale: currentLocale })).find(
+    (post) => post.data._computed.slug === params.id
+  );
+
+  if (!blogPost) {
+    return new Response(null, { status: 404 });
+  }
 
   const authors = await Promise.all(
     (blogPost.data.authors ?? []).map(async (authorRef) => {
       const person = await getEntry({
         collection: 'people',
-        id: `${authorRef.id}/fr`,
+        id: `${authorRef.id}/${currentLocale}`,
       });
       const pictureBase64 = person.data.picture
         ? await getAstroImageBase64(person.data.picture)
@@ -37,7 +57,8 @@ export default async function OgImage({ params }: { params: { id: string } }) {
     })
   );
 
-  const formattedDate = blogPost.data.date.toLocaleDateString('fr-FR', {
+  const dateLocale = LOCALE_TERRITORY_MAP[currentLocale].replace('_', '-');
+  const formattedDate = blogPost.data.date.toLocaleDateString(dateLocale, {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -145,7 +166,9 @@ export default async function OgImage({ params }: { params: { id: string } }) {
         </div>
 
         {/* Bottom: Authors */}
-        {authors.length > 0 && <AuthorsSection authors={authors} />}
+        {authors.length > 0 && (
+          <AuthorsSection authors={authors} locale={currentLocale} />
+        )}
       </div>
     </FontWrapper>
   );
@@ -153,7 +176,13 @@ export default async function OgImage({ params }: { params: { id: string } }) {
 
 type Author = { name: string; job: string; picture: string | null };
 
-function AuthorsSection({ authors }: { authors: Author[] }) {
+function AuthorsSection({
+  authors,
+  locale,
+}: {
+  authors: Author[];
+  locale: Locale;
+}) {
   const firstAuthor = authors[0];
   const secondAuthor = authors[1];
 
@@ -170,7 +199,14 @@ function AuthorsSection({ authors }: { authors: Author[] }) {
         }}
       >
         {firstAuthor.picture && <Avatar author={firstAuthor} />}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '2px',
+            fontFamily: 'Inter, sans-serif',
+          }}
+        >
           <span
             style={{
               fontSize: '20px',
@@ -202,6 +238,8 @@ function AuthorsSection({ authors }: { authors: Author[] }) {
         alignItems: 'center',
         gap: '20px',
         marginTop: '32px',
+
+        fontFamily: 'Inter, sans-serif',
       }}
     >
       {/* Stacked avatars */}
@@ -226,8 +264,8 @@ function AuthorsSection({ authors }: { authors: Author[] }) {
         }}
       >
         {authors.length === 2 && secondAuthor
-          ? `${firstAuthor.name} & ${secondAuthor.name}`
-          : `${firstAuthor.name} et ${authors.length - 1} autres`}
+          ? `${firstAuthor.name} ${MULTI_AUTHOR_LABEL[locale].and} ${secondAuthor.name}`
+          : `${firstAuthor.name} ${MULTI_AUTHOR_LABEL[locale].others(authors.length - 1)}`}
       </span>
     </div>
   );

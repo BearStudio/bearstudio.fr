@@ -54,5 +54,11 @@ export default defineConfig(
         },
       ],
     },
+  },
+  {
+    files: ['**/*__*.ts'],
+    rules: {
+      'unicorn/filename-case': 'off',
+    },
   }
 );

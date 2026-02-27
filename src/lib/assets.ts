@@ -21,5 +21,11 @@ configure({
       url: '/fonts/RobotoSlab-Bold.ttf',
       weight: 700,
     },
+    {
+      name: 'Inter',
+      style: 'normal',
+      url: '/fonts/Inter.ttf',
+      weight: 500,
+    },
   ],
 });
