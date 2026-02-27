@@ -11,7 +11,7 @@ metaDescription: "Cette brève vous livre tout ce qu'il y a à connaître à pro
 authors: ['quentin-lerebours']
 ---
 
-Il y a quelques jours, j’ai onboardé un nouveau développeur sur un projet Spring Boot qui a un coverage de test à 80%. N’ayant pas énormément d’expérience avec les tests d’[intégration](https://www.bearstudio.fr/prestations/integration), j’ai pris le temps de lui expliquer la différence entre l’annotation @Mock de Mockito et @MockBean de [Spring Boot](/fr/blog/articles/versionner-entite-jpa), je vais donc en profiter pour résumer ça dans une brève.
+Il y a quelques jours, j’ai onboardé un nouveau développeur sur un projet Spring Boot qui a un coverage de test à 80%. N’ayant pas énormément d’expérience avec les tests d’[intégration](/fr/prestations), j’ai pris le temps de lui expliquer la différence entre l’annotation @Mock de Mockito et @MockBean de [Spring Boot](/fr/blog/articles/versionner-entite-jpa), je vais donc en profiter pour résumer ça dans une brève.
 
 Que ce soit @Mock ou @MockBean, les deux annotations permettent de mocker le comportement de vos services ou composants Spring.
 

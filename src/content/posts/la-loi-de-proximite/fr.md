@@ -18,7 +18,7 @@ La loi de proximité est une des lois de la [Gestalt](https://fr.wikipedia.org/w
 
 Il n’en fallait pas plus pour que les designers web, graphistes et UX/UI designers s’en emparent afin de mieux hiérarchiser, structurer et clarifier les informations d’une interface web.
 
-Cela signifie tout simplement qu’en [UX design](https://www.bearstudio.fr/prestations/ux-design), il faut **réduire l’espace entre des éléments** censés appartenir au même ensemble (et vice-versa) afin que l’utilisateur puisse très rapidement faire la distinction entre les différents groupes.
+Cela signifie tout simplement qu’en [UX design](/fr/prestations/ux-design), il faut **réduire l’espace entre des éléments** censés appartenir au même ensemble (et vice-versa) afin que l’utilisateur puisse très rapidement faire la distinction entre les différents groupes.
 
 <figure>
 
@@ -52,13 +52,13 @@ Bien sûr, **la loi de proximité** ne permet pas à elle seule de designer une 
 
 ## Pourquoi la loi de proximité est-elle utile pour les développeurs ?
 
-Eh oui, même les développeurs peuvent avoir recours à ce principe d’[UX/UI design](https://www.bearstudio.fr/prestations/ux-design). En effet, la difficulté de retranscrire fidèlement les maquettes en code était l’un de nos **problèmes**.
+Eh oui, même les développeurs peuvent avoir recours à ce principe d’[UX/UI design](/fr/prestations/ux-design). En effet, la difficulté de retranscrire fidèlement les maquettes en code était l’un de nos **problèmes**.
 
-Le schéma classique était le suivant : le designer créait sa **[maquette](https://www.bearstudio.fr/prestations/ux-design/maquettes)**, son [wireframe](https://www.bearstudio.fr/prestations/ux-design/wireframes), son composant. Le développeur lui réalisait cet élément en code. Il fallait alors une review design **s**ystématique et nos designers relevaient souvent les mêmes problématiques et erreurs de marges, d’espacement ou autre, le plus souvent liés à la loi de proximité.
+Le schéma classique était le suivant : le designer créait sa **[maquette](/fr/prestations/ux-design)**, son [wireframe](/fr/prestations/ux-design), son composant. Le développeur lui réalisait cet élément en code. Il fallait alors une review design **s**ystématique et nos designers relevaient souvent les mêmes problématiques et erreurs de marges, d’espacement ou autre, le plus souvent liés à la loi de proximité.
 
 Il y avait tout une phase d’allers-retours entre développeurs et designers pour que l’élément codé corresponde aux maquettes ou wireframes. En plus de devoir répéter les mêmes litanies (ce qui peut être assez agaçant à force :p), la **quantité** **de temps** passé à répéter ce processus était **monstrueuse**…
 
-Nous avons souhaité former nos développeurs ([front](https://www.bearstudio.fr/prestations/dev-front) et [back](https://www.bearstudio.fr/prestations/dev-back)) à ces **principes** afin de les **sensibiliser** aux problématiques que les UX/UI designers rencontrent dans la **création** **de wireframes** et autres **maquettes**. En effet, le **concept** de **loi de proximité** étant assez trivial et **accessible** **à tout le monde**, il permettra aux développeurs de mieux identifier tous les petits **problèmes** d’interface et de faire moins **d’erreurs** lors du développement des éléments qui composent ces dernières. 
+Nous avons souhaité former nos développeurs ([front](/fr/prestations/developpement-web) et [back](/fr/prestations/developpement-web)) à ces **principes** afin de les **sensibiliser** aux problématiques que les UX/UI designers rencontrent dans la **création** **de wireframes** et autres **maquettes**. En effet, le **concept** de **loi de proximité** étant assez trivial et **accessible** **à tout le monde**, il permettra aux développeurs de mieux identifier tous les petits **problèmes** d’interface et de faire moins **d’erreurs** lors du développement des éléments qui composent ces dernières. 
 
 ## Quelques mots pour finir...
 

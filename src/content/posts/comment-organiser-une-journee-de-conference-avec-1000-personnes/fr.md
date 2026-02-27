@@ -89,7 +89,7 @@ En parallèle, on communique par mail et sur les réseaux sociaux, principalemen
 
 Concernant la ligne éditoriale, on essaye de composer une vision large de la tech, on va donc essayer d’avoir :
 
-- un sujet par gros type ([front](https://www.bearstudio.fr/prestations/dev-front), [back](https://www.bearstudio.fr/prestations/dev-back), ops…)
+- un sujet par gros type ([front](/fr/prestations/developpement-web), [back](/fr/prestations/developpement-web), ops…)
 
 - un sujet par techno principale (javascript, php, java etc),
 

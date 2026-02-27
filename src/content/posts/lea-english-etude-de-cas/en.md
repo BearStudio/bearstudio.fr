@@ -254,7 +254,7 @@ In preparation for the public release, we designed all the visual assets. This i
 
 #### Iterative Launch and Feature Integration
 
-The initial release, **in April 2025,** strategically targeted approximately **300 users** on launch day to create a controlled testing environment. This early feedback was invaluable, allowing us to iterate quickly and improve [the user experience](/fr/prestations/ux-design) based on direct feedback.
+The initial release, **in April 2025,** strategically targeted approximately **300 users** on launch day to create a controlled testing environment. This early feedback was invaluable, allowing us to iterate quickly and improve [the user experience](/en/services/ux-design) based on direct feedback.
 
 ###### Learning Pace Customization
 

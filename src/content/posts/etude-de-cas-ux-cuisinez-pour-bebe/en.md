@@ -38,7 +38,7 @@ The app had to become a natural extension of the website, serving the same goal:
 
 ## Our Role
 
-On the [BearStudio](https://www.bearstudio.fr/) side, the project is driven by a dedicated team whose composition has evolved over time.
+On the [BearStudio](/en/) side, the project is driven by a dedicated team whose composition has evolved over time.
 
 Current team:
 
@@ -295,4 +295,4 @@ Access to weekly menus, filters, favorites, shopping list, and premium features
 **YouTube**: Explainer videos, filmed recipes, workshops and masterclasses
 [https://www.youtube.com/cuisinezpourbebe](https://www.youtube.com/cuisinezpourbebe)
 
-And feel free to check out [our previous case study on Léa English](https://www.bearstudio.fr/blog/design-css/lea-english-etude-de-cas)!
+And feel free to check out [our previous case study on Léa English](/en/blog/posts/lea-english-case-study)!

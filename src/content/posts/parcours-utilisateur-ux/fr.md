@@ -15,13 +15,13 @@ Le parcours utilisateur est défini par les différents chemins et interactions 
 
 Bien comprendre le parcours utilisateur est essentiel pour créer un chemin fluide et cohérent. Il va permettre d’optimiser l’expérience de l’utilisateur au fur et à mesure de son utilisation d’un produit numérique. Le but est de permettre à l’utilisateur d’atteindre efficacement son objectif. 
 
-La définition d’un parcours utilisateur fait donc partie des étapes essentielles dans l’optimisation de l’[UX design](https://www.bearstudio.fr/prestations/ux-design) (UX = expérience utilisateur).
+La définition d’un parcours utilisateur fait donc partie des étapes essentielles dans l’optimisation de l’[UX design](/fr/prestations/ux-design) (UX = expérience utilisateur).
 
 En utilisant la bonne méthode et les bons outils, on s’offre la possibilité d’optimiser au maximum l’expérience utilisateur en se mettant à sa place afin de retracer l’ensemble de son parcours. Il en existe de nombreuses (comme l’user journey qui prend en compte les émotions des utilisateurs). Au BearStudio nous avons choisi, à force d’expérience, d’utiliser les **User Flows**.
 
 Bien sûr, l’utilisation des User Flows ne permettra pas automatiquement de créer un parcours utilisateur parfait. D’autant qu’il existe plusieurs manières d’utiliser cette méthode. Avec le temps, nous avons affiné notre processus de création d’User Flows afin d’être toujours plus pertinent et de s’assurer que la conception de ces différents parcours utilisateur soit efficace et intuitive.
 
-Une autre utilité des Users flows est de préparer les [maquettes](https://www.bearstudio.fr/prestations/ux-design/maquettes) et les [wireframes](https://www.bearstudio.fr/prestations/ux-design/wireframes). En effet, il s’agit d’une étape préliminaire à la réalisation de maquettes. Plus les User flows sont détaillés, le plus clair seront les maquettes ou les wireframes.
+Une autre utilité des Users flows est de préparer les [maquettes](/fr/prestations/ux-design) et les [wireframes](/fr/prestations/ux-design). En effet, il s’agit d’une étape préliminaire à la réalisation de maquettes. Plus les User flows sont détaillés, le plus clair seront les maquettes ou les wireframes.
 
 Dans cet article nous allons vous présenter sommairement quelle est notre procédure pour réaliser des User flows qui permettent de s’assurer que le parcours utilisateur soit bien défini par tous les acteurs du projet (client, designer, équipe de développeurs etc.).
 
@@ -98,7 +98,7 @@ Un userflow peut donc être dans les cas les plus simple un simple schéma des d
 
 ## Et ensuite ? 
 
-Une fois les userflows faits et validés, la suite peut commencer. Réalisation de maquettes, chiffrage projet complet, [développement](https://www.bearstudio.fr/prestations/dev-front) etc.
+Une fois les userflows faits et validés, la suite peut commencer. Réalisation de maquettes, chiffrage projet complet, [développement](/fr/prestations/developpement-web) etc.
 
 Permettre de définir le parcours utilisateur au plus tôt dans le projet, est un excellent moyen de se donner une vision globale sur le travail à accomplir à tous moments du projet. Il est utilisable par tous les membres du projet (designers, développeurs front et back, commerciaux et clients). Il sera la clé d’une bonne expérience utilisateur et client sur toute conception, du site internet, ou encore de l’application web ou mobile. 
 

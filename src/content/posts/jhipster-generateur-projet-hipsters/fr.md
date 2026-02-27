@@ -12,7 +12,7 @@ authors:
 
 ## Pourquoi un générateur de projet ?
 
-Sur tous les [projets techniques](https://www.bearstudio.fr/prestations), notamment les applications web, les mêmes problématiques reviennent toujours. Comme la gestion des entités, la création des requêtes CRUD (Create, Read, Update, Delete) pour chaque entité, la gestion des comptes et de rôles, ou encore le développement d’une partie administration par exemple.
+Sur tous les [projets techniques](/fr/prestations), notamment les applications web, les mêmes problématiques reviennent toujours. Comme la gestion des entités, la création des requêtes CRUD (Create, Read, Update, Delete) pour chaque entité, la gestion des comptes et de rôles, ou encore le développement d’une partie administration par exemple.
 
 Toutes ces mêmes problématiques ont un coût en développement non négligeable et ne font pas partie des problématiques liées au métier de l’application.
 
@@ -26,7 +26,7 @@ Développés par des communautés compétentes et souvent en [open-source](/fr/b
 
 ![Jhipster Logo](images/jhipster-1-tiny.png)
 
-**Java Hipster** ou [jHipster](https://www.jhipster.tech) est un projet **open-source** qui permet de générer une application web complète avec une partie [back-end](https://www.bearstudio.fr/prestations/dev-back) en **Java / Spring-Boot** et une partie [front-end](https://www.bearstudio.fr/prestations/dev-front) avec la techno de son choix parmi :
+**Java Hipster** ou [jHipster](https://www.jhipster.tech) est un projet **open-source** qui permet de générer une application web complète avec une partie [back-end](/fr/prestations/developpement-web) en **Java / Spring-Boot** et une partie [front-end](/fr/prestations/developpement-web) avec la techno de son choix parmi :
 
 - React ⚛️
 - Angular

@@ -37,7 +37,7 @@ L’application devait devenir une extension naturelle du site, au service du m�
 
 ## Notre rôle
 
-Côté [BearStudio](https://www.bearstudio.fr/), le projet est porté par une équipe dédiée dont la composition a évolué au fil du temps.
+Côté [BearStudio](/fr/), le projet est porté par une équipe dédiée dont la composition a évolué au fil du temps.
 
 Équipe actuelle :
 
@@ -294,4 +294,4 @@ Accès aux menus hebdomadaires, filtres, favoris, liste de courses et fonctionna
 **YouTube** : Vidéos explicatives, recettes filmées, ateliers et masterclass  
 [https://www.youtube.com/cuisinezpourbebe](https://www.youtube.com/cuisinezpourbebe)
 
-Et n'hésitez pas à découvrir [notre précédente étude de cas sur Léa English](https://www.bearstudio.fr/blog/design-css/lea-english-etude-de-cas) !
+Et n'hésitez pas à découvrir [notre précédente étude de cas sur Léa English](/fr/blog/articles/lea-english-etude-de-cas) !

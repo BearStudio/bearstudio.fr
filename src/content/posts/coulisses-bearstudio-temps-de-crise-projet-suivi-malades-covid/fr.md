@@ -13,7 +13,7 @@ authors: ['emma-monchablon', 'nathan-lesouef']
 
 Nous sommes Nathan et Emma, étudiants en école de commerce, actuellement en stage au BearStudio. Voilà maintenant quelques semaines que nous avons intégré l'équipe ! Notre première mission : retracer le développement d’une interface de monitoring pour les patients atteints du Covid-19. En effet, aucun de nous deux n’est familier avec l’univers de la tech, d'où notre regard de néophytes.
 
-D'abord, nous nous sommes immiscés dans les _“channels”_ de discussion instantanée [Slack](/fr/blog/articles/outils-incontournables-pour-un-entrepreneur) utilisés par l’entreprise pour suivre l’avancement des projets. Ensuite, nous avons pris le temps d’échanger avec les porteurs du projet du côté de **KerNel Biomedical**. De même, nous avons interrogé les développeurs du Bearstudio sur le coup : [Ivan](https://www.bearstudio.fr/team/ivan-dalmet) et [Philippe](https://www.bearstudio.fr/team/philippe-chevreul) (a.k.a Tic). Cela nous a permis d’avoir une vision globale et d’en apprendre davantage sur le processus de création. 
+D'abord, nous nous sommes immiscés dans les _“channels”_ de discussion instantanée [Slack](/fr/blog/articles/outils-incontournables-pour-un-entrepreneur) utilisés par l’entreprise pour suivre l’avancement des projets. Ensuite, nous avons pris le temps d’échanger avec les porteurs du projet du côté de **KerNel Biomedical**. De même, nous avons interrogé les développeurs du Bearstudio sur le coup : [Ivan](/fr/equipe/ivan-dalmet) et [Philippe](/fr/equipe/philippe-chevreul) (a.k.a Tic). Cela nous a permis d’avoir une vision globale et d’en apprendre davantage sur le processus de création. 
 
 ---
 
@@ -29,7 +29,7 @@ Si la start-up a fait appel à notre cher studio de développement, c’est nota
 
 ## L'équipe
 
-Quand [Rudy](https://www.bearstudio.fr/team/rudy-baer), le “chef” du **BearStudio**, a reçu l’appel d’Emeline fin mars, il a compris qu’il s’agissait d’un projet urgent. Avant même d’avoir signé le contrat, il réfléchissait à qui il pouvait confier la mission. Finalement, il a missionné Ivan ainsi que Tic, alors en train de finir son alternance. Pour la petite anecdote, cet épisode s’est déroulé quelques jours avant l’arrivée officielle d’Ivan dans les locaux du BearStudio, pour lequel il a longtemps opéré en tant qu'advisor UX (Consultant expérience utilisateur).
+Quand [Rudy](/fr/equipe/rudy-baer), le “chef” du **BearStudio**, a reçu l’appel d’Emeline fin mars, il a compris qu’il s’agissait d’un projet urgent. Avant même d’avoir signé le contrat, il réfléchissait à qui il pouvait confier la mission. Finalement, il a missionné Ivan ainsi que Tic, alors en train de finir son alternance. Pour la petite anecdote, cet épisode s’est déroulé quelques jours avant l’arrivée officielle d’Ivan dans les locaux du BearStudio, pour lequel il a longtemps opéré en tant qu'advisor UX (Consultant expérience utilisateur).
 
 Le fait de placer un nombre très réduit de personnes sur la création de l’interface est un choix stratégique : pour être efficace dans ce domaine, il faut à tout prix éviter de se marcher dessus. D’ailleurs, un duo parvient souvent à fournir des résultats étonnants. Et le partenariat junior/expérimenté est une combinaison qui fonctionne très bien ; d’autant que nos 2 acolytes avaient l’habitude de travailler ensemble. En ce qui concerne la répartition des tâches, Ivan s’est davantage positionné sur la partie exploitation des données, tandis que Tic s’est chargé de la mise en forme des graphiques. 
 
@@ -153,7 +153,7 @@ L'équipe du **Bearstudio** a surtout travaillé sur l’interface, la récupér
 
 ## Le mot de la fin
 
-Si c’était à refaire ? Il va sans dire que nos deux développeurs seraient prêts à réitérer sans problème ! Idem pour l’ensemble de [l'équipe](https://www.bearstudio.fr/team) du BearStudio.
+Si c’était à refaire ? Il va sans dire que nos deux développeurs seraient prêts à réitérer sans problème ! Idem pour l’ensemble de [l'équipe](/fr/equipe) du BearStudio.
 
 En plus, si **KerNel Biomedical** parvient à obtenir la certification _[CE](https://aviesan.fr/aviesan/accueil/menu-header/vademecum-reglementaire/dispositif-medical-marquage-ce)_, leur dispositif pourrait être mis sur le marché et utilisé par de nombreux autres centres hospitaliers. Autrement dit, il se pourrait que cette technologie se révèle utile à plus long-terme. 
 

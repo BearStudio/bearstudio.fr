@@ -22,7 +22,7 @@ Ces dons aux associations se veulent collaboratifs. Chaque année, en Octobre, u
 
 ##### Une idée née d'une augmentation… différente
 
-Tout a commencé avec [Quentin](https://www.bearstudio.fr/team/quentin-lerebours) il y a quelques années, l’un de nos collaborateurs. Lors d’une réunion d’augmentation autour d’une pizza (on vous invite à lire [cet article](https://ppbearstudio.wpengine.com/blog/entrepreneuriat/comment-deleguer-la-responsabilite-pour-les-augmentations) sur notre processus d'augmentation), Quentin a fait une demande atypique. Une fois n’est pas coutume, s’étant renseigné sur l’impact financier de son augmentation, il a souhaité l’utiliser en deux temps :
+Tout a commencé avec [Quentin](/fr/equipe/quentin-lerebours) il y a quelques années, l’un de nos collaborateurs. Lors d’une réunion d’augmentation autour d’une pizza (on vous invite à lire [cet article](https://ppbearstudio.wpengine.com/blog/entrepreneuriat/comment-deleguer-la-responsabilite-pour-les-augmentations) sur notre processus d'augmentation), Quentin a fait une demande atypique. Une fois n’est pas coutume, s’étant renseigné sur l’impact financier de son augmentation, il a souhaité l’utiliser en deux temps :
 
 - Dans un premier temps, il a demandé à BearStudio de recruter un stagiaire pour faire avancer son side project : [TraveledMap](https://www.traveledmap.com/fr).
 
@@ -59,7 +59,7 @@ Madagascar : Amélioration des locaux d’éducation du collège Marovantaza et 
 
 ##### Maromme Canteleu Volley
 
-[Maromme Canteleu Volley](https://mcv76.fr/) est le club de Volley-ball dans lequel [Soraya](https://www.bearstudio.fr/team/soraya-benchakroune) a commencé sa “carrière” de Volleyeuse. Bénévole pendant de nombreuses années et évoluant dans ce club depuis plus de 3 ans. Elle a souhaité que le don du BearStudio serve à acheter des ballons et des accessoires pour l’organisation des séances d'entraînement. Ainsi permettre aux jeunes joueurs de pouvoir être le mieux encadrés.
+[Maromme Canteleu Volley](https://mcv76.fr/) est le club de Volley-ball dans lequel [Soraya](/fr/equipe/soraya-benchakroune) a commencé sa “carrière” de Volleyeuse. Bénévole pendant de nombreuses années et évoluant dans ce club depuis plus de 3 ans. Elle a souhaité que le don du BearStudio serve à acheter des ballons et des accessoires pour l’organisation des séances d'entraînement. Ainsi permettre aux jeunes joueurs de pouvoir être le mieux encadrés.
 
 ![](images/image-3-1024x768.png)
 
@@ -71,7 +71,7 @@ Compétiteur né, Quentin reprend le Handball en dernière division après quelq
 
 ##### Foot Tourvilles sur Arques
 
-[Foot Tourvilles sur Arques](https://tourville-sur-arques.footeo.com/) est le club d’un de nos deux [Hugo](https://www.bearstudio.fr/team/hugo-perard) préféré. Il y a évolué depuis l’âge de 6 ans (soit presque 18 ans), où il a pu se former au poste de défenseur. BearStudio a pu soutenir son club notamment dans l’achat de matériel et d’ensembles de survêtements.
+[Foot Tourvilles sur Arques](https://tourville-sur-arques.footeo.com/) est le club d’un de nos deux [Hugo](/fr/equipe/hugo-perard) préféré. Il y a évolué depuis l’âge de 6 ans (soit presque 18 ans), où il a pu se former au poste de défenseur. BearStudio a pu soutenir son club notamment dans l’achat de matériel et d’ensembles de survêtements.
 
 ![](images/image-768x1024.png)
 
@@ -81,7 +81,7 @@ Ces contributions offrent aux collaborateurs de BearStudio l’occasion de s’e
 
 ## Le mécénat de compétences : un nouveau pas vers l’engagement
 
-Cette année, au BearStudio, nous avons également commencé le bénévolat par le mécénat de compétences, à savoir offrir des heures de savoir-faire au service d’associations en demande. C’est le cas de [Nhung](https://www.bearstudio.fr/team/nhung-duong) et [Ivan](https://www.bearstudio.fr/team/ivan-dalmet) qui œuvrent pour [Sistech](https://sis.tech/donation-sistech-refugee-women/). Sistech soutient l’émancipation professionnelle des femmes réfugiées dans les métiers de la tech et du numérique en France, en Italie et en Grèce. Nhung est présente pour les aider sur le côté administratif et business, tandis qu’Ivan les aide en discutant et pratiquant le français afin qu’elles puissent s’améliorer et le pratiquer le plus souvent possible.  
+Cette année, au BearStudio, nous avons également commencé le bénévolat par le mécénat de compétences, à savoir offrir des heures de savoir-faire au service d’associations en demande. C’est le cas de [Nhung](/fr/equipe/nhung-duong) et [Ivan](/fr/equipe/ivan-dalmet) qui œuvrent pour [Sistech](https://sis.tech/donation-sistech-refugee-women/). Sistech soutient l’émancipation professionnelle des femmes réfugiées dans les métiers de la tech et du numérique en France, en Italie et en Grèce. Nhung est présente pour les aider sur le côté administratif et business, tandis qu’Ivan les aide en discutant et pratiquant le français afin qu’elles puissent s’améliorer et le pratiquer le plus souvent possible.  
 
 Quentin, lui aussi aide l’association Passerelle Numérique au Vietnam, dont l’objectif est de sélectionner (sur la base de leur niveau et de la précarité de leurs familles) des futurs étudiants pour financer leurs 3 années d’études dans l’informatique. Quentin donne deux ateliers différents l’un basé sur l’infrastructure distribuée et l’autre sur le thème de l’utilisation de l’IA dans les métiers du numérique.
 

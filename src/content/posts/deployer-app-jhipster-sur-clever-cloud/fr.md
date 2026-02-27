@@ -9,7 +9,7 @@ authors:
   - 'rudy-baer'
 ---
 
-Cet article est la traduction française d'un tuto réalisé par [Rudy](https://www.bearstudio.fr/team/rudy-baer), notre CTO, directement sur le [forum JHipster](https://www.jhipster.tech/clever-cloud/).
+Cet article est la traduction française d'un tuto réalisé par [Rudy](/fr/equipe/rudy-baer), notre CTO, directement sur le [forum JHipster](https://www.jhipster.tech/clever-cloud/).
 
 ## Avant de commencer
 

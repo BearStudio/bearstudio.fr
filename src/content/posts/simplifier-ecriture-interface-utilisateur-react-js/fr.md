@@ -16,7 +16,7 @@ authors:
   - 'ivan-dalmet'
 ---
 
-⚡ [Chakra UI](https://chakra-ui.com/) est un **projet Open Source** qui permet de simplifier l’écriture d’[interfaces utilisateurs](https://www.bearstudio.fr/prestations/ux-design/maquettes) avec [React JS](https://reactjs.org).
+⚡ [Chakra UI](https://chakra-ui.com/) est un **projet Open Source** qui permet de simplifier l’écriture d’[interfaces utilisateurs](/fr/prestations/ux-design) avec [React JS](https://reactjs.org).
 
 Dans ce domaine il existe déjà beaucoup de librairies Open Source comme [Material UI](https://material-ui.com/) ou [Reactstrap](https://reactstrap.github.io/)
 
@@ -36,7 +36,7 @@ La composition est un des **patterns** les plus importants dans le développemen
 
 Par défaut, tous les composants de Chakra UI sont disponibles. Et surtout la librairie permet d'implémenter ses propres composants en les rendant accessibles.
 
-Gestion du focus, navigation au clavier, gestion des attributs [ARIA](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA) et autres bonnes pratiques [UX/UI](https://www.bearstudio.fr/prestations/ux-design) font partie intégrante de la librairie.
+Gestion du focus, navigation au clavier, gestion des attributs [ARIA](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA) et autres bonnes pratiques [UX/UI](/fr/prestations/ux-design) font partie intégrante de la librairie.
 
 ## Gestion du thème
 

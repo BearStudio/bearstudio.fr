@@ -52,17 +52,17 @@ Enfin, une fois l’audit terminé, nous vous envoyons des **slides en PDF avec 
 
 Autant prévenir, la prochaine étape ne sera pas gratuite 😉
 
-Il y a [plusieurs possibilités](https://www.bearstudio.fr/prestations) qui dépendent un peu du contexte :
+Il y a [plusieurs possibilités](/fr/prestations) qui dépendent un peu du contexte :
 
 1. Un audit plus poussé avec des préconisations
-2. Une prestation de réalisation de [wireframes](https://www.bearstudio.fr/prestations/ux-design/wireframes) ou [maquettes](https://www.bearstudio.fr/prestations/ux-design/maquettes) 
+2. Une prestation de réalisation de [wireframes](/fr/prestations/ux-design) ou [maquettes](/fr/prestations/ux-design) 
 3. Une prestation de réalisation de styleguide ou storybook
 4. Une formation de vos développeurs sur les bonnes pratiques en ergonomie
 
 ## Comment faire pour bénéficier d’un mini audit UX ?
 
 - Nous suivre sur au minima 2 de nos réseaux sociaux ([Twitter](https://twitter.com/_BearStudio) ou [LinkedIn](https://www.linkedin.com/company/bearstudio/) par exemple).
-- Faire une demande via le [formulaire de contact](https://www.bearstudio.fr/contact).
+- Faire une demande via le [formulaire de contact](/fr/contact).
 - Optionnel : si vous êtes contents, nous recommander à votre réseau.😉
 
 ![](images/audit-ux-gratuit-bearstudio-1.png)

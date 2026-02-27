@@ -65,31 +65,31 @@ Avec plus de 50 speakers, le Camping des Speakers nous a offert une riche divers
 
 ### [Passez moins de temps à attendre la CI et plus de temps au bord de la piscine](https://camping-speakers.fr/sessions/passez_moins_de_temps_a_attendre_la_ci/) - Jean-Phi Baconnais & Guillaume Membré
 
-“J’étais dans la piscine, j’ai fait du toboggan pour démontrer les concepts de job et pipeline parallèles et dépendants et ça c’est vraiment une très bonne manière d’apprendre de nouvelles choses !”  - [Yoann Fleury](https://www.bearstudio.fr/team/yoann-fleury)
+“J’étais dans la piscine, j’ai fait du toboggan pour démontrer les concepts de job et pipeline parallèles et dépendants et ça c’est vraiment une très bonne manière d’apprendre de nouvelles choses !”  - [Yoann Fleury](/fr/equipe/yoann-fleury)
 
-_“C’est la seule conf que j’ai fait de ma vie où j’ai joué le rôle d’un job d’une CI le tout dans un toboggan d’une piscine, ça n’arrive qu’au camping des speakers”_ \- [Ivan Dalmet](https://www.bearstudio.fr/team/ivan-dalmet)
+_“C’est la seule conf que j’ai fait de ma vie où j’ai joué le rôle d’un job d’une CI le tout dans un toboggan d’une piscine, ça n’arrive qu’au camping des speakers”_ \- [Ivan Dalmet](/fr/equipe/ivan-dalmet)
 
 ### [Corn Hole 2 Turbo : De l'arduino pour l'apéro !](https://camping-speakers.fr/sessions/corn_hole_2_turbo/) - Paul Roye
 
-_“Super intéressant d’autant plus que pour des side projects ou des projets persos, on a les mêmes problèmes qu'en pro ! (Faire un MVP vraiment minimaliste, toujours tester, etc...). On apprend tout en jouant à un jeu d’adresse, il n’y a rien de mieux”_ \- [Dorian Delorme](https://www.bearstudio.fr/team/dorian-delorme)
+_“Super intéressant d’autant plus que pour des side projects ou des projets persos, on a les mêmes problèmes qu'en pro ! (Faire un MVP vraiment minimaliste, toujours tester, etc...). On apprend tout en jouant à un jeu d’adresse, il n’y a rien de mieux”_ \- [Dorian Delorme](/fr/equipe/dorian-delorme)
 
 ### [🗣️ Zut ! J'aurais dû dire ça ! 🙊 Astuces pour parler avec aisance en public 🎙️](https://camping-speakers.fr/sessions/astuces_pour_parler/) - Willy Malvault & Sylvain Coudert
 
-_“C'est pas un sujet tech et il y a d’autres conférences appréciées et mais j'ai vraiment bien aimé leur approche et leurs explications, c'était vraiment cool !”_ - [Florian Gille](https://www.bearstudio.fr/team/florian-gille) 
+_“C'est pas un sujet tech et il y a d’autres conférences appréciées et mais j'ai vraiment bien aimé leur approche et leurs explications, c'était vraiment cool !”_ - [Florian Gille](/fr/equipe/florian-gille) 
 
 ### [Vous pouvez venir à ce talk les yeux fermés](https://camping-speakers.fr/sessions/vous_pouvez_venir/) - François-Xavier Lair
 
-_“J’ai pu découvrir l’utilisation d’un site web ou d’une app web avec un lecteur d’écran pour la 1ere fois de ma vie et j’ai pris conscience du chemin qu’il y a encore à parcourir pour faire des apps vraiment accessibles ! Et en plus j’ai appris des choses sur le HTML (l’utilisation d’un attribut alt vide sur une image par exemple, ça a une vraie utilité et je l’ignorais) donc c’était super !”_ - [Fabien Essid](https://www.bearstudio.fr/team/fabien-essid)
+_“J’ai pu découvrir l’utilisation d’un site web ou d’une app web avec un lecteur d’écran pour la 1ere fois de ma vie et j’ai pris conscience du chemin qu’il y a encore à parcourir pour faire des apps vraiment accessibles ! Et en plus j’ai appris des choses sur le HTML (l’utilisation d’un attribut alt vide sur une image par exemple, ça a une vraie utilité et je l’ignorais) donc c’était super !”_ - [Fabien Essid](/fr/equipe/fabien-essid)
 
-*“J'avais pu voir à codeurs en seine(lien) une conf similaire mais on avait l'écran du pc pour voir le site, et donc forcément on a tendance à regarder pour mieux comprendre le lecteur d'écran. La le fait que ce soit sans slides, on se rend vraiment compte de ce que représente l'utilisation d'un lecteur d'écran et à quel point c'est difficile quand le site n'est pas accessible”* \- [Charlelise Fouasse](https://www.bearstudio.fr/team/charlelise-fouasse)
+*“J'avais pu voir à codeurs en seine(lien) une conf similaire mais on avait l'écran du pc pour voir le site, et donc forcément on a tendance à regarder pour mieux comprendre le lecteur d'écran. La le fait que ce soit sans slides, on se rend vraiment compte de ce que représente l'utilisation d'un lecteur d'écran et à quel point c'est difficile quand le site n'est pas accessible”* \- [Charlelise Fouasse](/fr/equipe/charlelise-fouasse)
 
 ### [Mini golf pour une accessibilité numérique maximale](https://camping-speakers.fr/sessions/mini_golf_pour_une_accessibilite/) - Hervé Boisgontier
 
-_“Un format hyper sympa ou l’on a fait une partie de croquet/minigolf qui permettait derrière de se mettre vraiment dans la peau d’une personne en situation de handicaps, et de se rendre compte qu'il y a plein de choses qu'on oublie quand on dev…”_ \- [Dylan Campbell](https://www.bearstudio.fr/team/dylan-campbell) 
+_“Un format hyper sympa ou l’on a fait une partie de croquet/minigolf qui permettait derrière de se mettre vraiment dans la peau d’une personne en situation de handicaps, et de se rendre compte qu'il y a plein de choses qu'on oublie quand on dev…”_ \- [Dylan Campbell](/fr/equipe/dylan-campbell) 
 
 ### [Möbkky, le mob appliqué au Mölkky](https://camping-speakers.fr/sessions/mobkky_le_mob_applique_au_molkky/) - Benoît Masson & Gwendal Leclerc
 
-_“L’idée de montrer l’intérêt du mob programming par le Mölkky était une idée très intéressante et pédagogique, ajouté à ça la bonne ambiance du jeu en lui-même, c’était un super moment !”_ \- [Hugo Pérard](https://www.bearstudio.fr/team/hugo-perard) 
+_“L’idée de montrer l’intérêt du mob programming par le Mölkky était une idée très intéressante et pédagogique, ajouté à ça la bonne ambiance du jeu en lui-même, c’était un super moment !”_ \- [Hugo Pérard](/fr/equipe/hugo-perard) 
 
 ---
 

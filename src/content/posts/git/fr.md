@@ -97,7 +97,7 @@ Avec les **branches**, on attaque la partie épineuse de Git (sans mauvais jeu 
 
 La branche principale de votre projet se nomme par défaut master.
 
-L’objectif des branches est de pouvoir paralléliser facilement le [développement](https://www.bearstudio.fr/prestations/dev-back) de plusieurs fonctionnalités de votre projet. Cela permet de gagner en clarté et de faciliter la possibilité de retour en arrière. Et je peux vous le prouver.
+L’objectif des branches est de pouvoir paralléliser facilement le [développement](/fr/prestations/developpement-web) de plusieurs fonctionnalités de votre projet. Cela permet de gagner en clarté et de faciliter la possibilité de retour en arrière. Et je peux vous le prouver.
 
 Imaginez que vous développez une application web comportant, entre autre, une fonctionnalité de publication d’article et une fonctionnalité de recherche parmi ces articles. Imaginez maintenant que vous ne prenez pas la peine de créer deux branches différentes pour développer ces deux fonctionnalités. Vous travaillez tantôt sur l’une, tantôt sur l’autre. Voici à quoi peut ressembler l’historique des commits de votre projet :
 

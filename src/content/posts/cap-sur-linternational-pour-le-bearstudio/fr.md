@@ -10,7 +10,7 @@ authors: ['nathan-lesouef']
 
 ## Intro...
 
-Le 22 octobre, notre CEO/CTO [Rudy Baer](https://www.bearstudio.fr/team/rudy-baer) s'est rendu à Dubaï pour voir un client sur place. Après quelques échanges, il a eu vent d’**un événement autour de la tech : le salon [Gitex Future Stars](https://www.gitexfuturestars.com) !** L’ambiance cosmopolite était au rendez-vous, avec beaucoup de nationalités différentes. Ça faisait vraiment plaisir de peser l’attractivité de ce salon. Il n'en a pas fallu plus pour planifier la venue d’une partie de [l’équipe](https://www.bearstudio.fr/team) à l'occasion de cet événement du 6 au 10 décembre 2020...
+Le 22 octobre, notre CEO/CTO [Rudy Baer](/fr/equipe/rudy-baer) s'est rendu à Dubaï pour voir un client sur place. Après quelques échanges, il a eu vent d’**un événement autour de la tech : le salon [Gitex Future Stars](https://www.gitexfuturestars.com) !** L’ambiance cosmopolite était au rendez-vous, avec beaucoup de nationalités différentes. Ça faisait vraiment plaisir de peser l’attractivité de ce salon. Il n'en a pas fallu plus pour planifier la venue d’une partie de [l’équipe](/fr/equipe) à l'occasion de cet événement du 6 au 10 décembre 2020...
 
 Pendant un mois, tout le monde au bureau était sur le pont ! Il fallait produire les contenus nécessaires en prévision du salon, tels que la plaquette commerciale ou encore la version anglaise de notre site web. De plus, comme cet événement n’était pas prévu initialement, nous avons dû “rusher” pour imaginer l'ensemble des supports de communication, les goodies, etc.
 
@@ -52,12 +52,12 @@ Par la suite, nous avons (pas mal) réfléchi à ce que nous allions faire aux E
 
 J’ai passé un très bon moment à Dubaï. Je suis d'autant plus reconnaissant envers le BearStudio car j'ai eu l’occasion de participer à cet event alors que je ne suis qu’un “stagiaire”. Ça a aussi été le début de la transition entre mon stage initialement intitulé "marketing/communication" vers des missions plus axées sur la partie commerce. Je me suis donné à fond pour parler à des gens et essayer de trouver des prospects. Et j’ai vraiment hâte de pouvoir en faire plus !
 
-### [Claire](https://www.bearstudio.fr/team/claire-jeanne)
+### [Claire](/fr/equipe/claire-jeanne)
 
 J’ai eu l’opportunité d’aller à Dubaï deux fois durant l’année 2020. Mon rôle de support pendant ces voyages m’a permis d’apprendre à beaucoup mieux connaître mes collègues. Dubaï est une ville hypnotisante et contradictoire par certains de ses aspects, nous y avons passé de bonnes soirées ensemble et échangé avec d’autre français présents sur place.   
 Notre présence sur le GITEX nous a permis d’éprouver **notre stratégie d’expansion à l’international** et de mieux connaître les travaux de nos collègues.
 
-### [Nicolas](https://www.bearstudio.fr/team/nicolas-torion)
+### [Nicolas](/fr/equipe/nicolas-torion)
 
 Tout d'abord, Dubaï est une ville incroyable par sa démesure et c'est une destination incontournable pour le business à l'international. Ça a été un réel plaisir de pouvoir y aller avec le BearStudio. D'autant plus que j'ai vu le studio évoluer étape par étape, passant du réseau régional Normand à l'international.  
 Le salon GITEX fut une expérience très enrichissante pour nous tous car cela nous a permis de découvrir le marché numérique à l'international et de **mettre en avant notre savoir-faire.**

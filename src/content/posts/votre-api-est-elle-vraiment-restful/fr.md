@@ -39,7 +39,7 @@ C'est le dernier niveau, qui fait que peu d'API sont entièrement RESTful, il s'
 
 L'idée de ce niveau est donc d'inclure suffisamment d'informations dans la réponse pour permettre d'utiliser l'API sans aucune ressource supplémentaire.
 
-Maintenant que j'ai apprivoisé ce modèle pour créer des API optimisées, on va pouvoir [le mettre au service de nos futurs devs](https://www.bearstudio.fr/prestations) !
+Maintenant que j'ai apprivoisé ce modèle pour créer des API optimisées, on va pouvoir [le mettre au service de nos futurs devs](/fr/prestations) !
 
 ### Pour aller plus loin...
 

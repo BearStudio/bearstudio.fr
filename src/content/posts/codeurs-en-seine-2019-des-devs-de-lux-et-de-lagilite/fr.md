@@ -17,9 +17,9 @@ L'événement [Codeurs en Seine](https://www.codeursenseine.com/2019/) s’est t
 
 ## Une organisation rodée et efficace
 
-Depuis plusieurs années, le BearStudio a la fierté d'être un des sponsors de l'événement et de mobiliser une partie de son [équipe](https://www.bearstudio.fr/team) dans l'organisation de cette journée.
+Depuis plusieurs années, le BearStudio a la fierté d'être un des sponsors de l'événement et de mobiliser une partie de son [équipe](/fr/equipe) dans l'organisation de cette journée.
 
-Le BearStudio était **sponsor** et une partie de son [équipe](https://www.bearstudio.fr/team) fut organisatrice de l'événement axé sur des **conférences** aussi instructives qu’inspirantes. Nous vous proposons donc un retour sur notre expérience 2019 !
+Le BearStudio était **sponsor** et une partie de son [équipe](/fr/equipe) fut organisatrice de l'événement axé sur des **conférences** aussi instructives qu’inspirantes. Nous vous proposons donc un retour sur notre expérience 2019 !
 
 « Niveau organisation nous sommes bien rodés, ça tourne bien, on a simplifié plein de choses, notamment à l’accueil, ça se fluidifie bien. Nous avons eu pas mal d’organisateurs cette année donc ça permet de bien avancer et de répartir les tâches. » ([Rudy Baer)](https://www.linkedin.com/in/rudybaer/)
 
@@ -47,7 +47,7 @@ Salle des plénières - Copyright Arnaud Lemercier
 
 ### Les conférences
 
-Les **conférences** d’une quarantaine de minutes tout au long de la journée sur différents sujets techniques ou sur l’écosystème du **web** ont également permis à tout le monde d’y trouver son compte. De la **cybersécurité** à la **programmation** en passant par le **design system**, les visiteurs ont pu apprendre et échanger sur les rudiments du **développement** et de l’**[expérience utilisateur](https://www.bearstudio.fr/prestations/ux-design)**. 
+Les **conférences** d’une quarantaine de minutes tout au long de la journée sur différents sujets techniques ou sur l’écosystème du **web** ont également permis à tout le monde d’y trouver son compte. De la **cybersécurité** à la **programmation** en passant par le **design system**, les visiteurs ont pu apprendre et échanger sur les rudiments du **développement** et de l’**[expérience utilisateur](/fr/prestations/ux-design)**. 
 
 Le domaine du **développement** se caractérise par sa continuelle évolution, ce « refresh » quasi permanent de nos connaissances sur les techniques employées. Ainsi, « nous consommons de la connaissance que nous redistribuons par la suite ». Codeurs en Seine a donc été créé pour diffuser de la connaissance, prendre du recul sur celle-ci et partager les solutions techniques appropriées. 
 
@@ -103,7 +103,7 @@ Tout au long de la journée, nous avons pu avoir des **retours d’expérience**
 
 « Je ne suis pas venue ce matin car il y avait plein de trucs pour les devs et pour ma part, je ne comprends pas une seule ligne de code. Justement cette après-midi c’est la première fois que je viens car il y avait beaucoup plus de **conférences** qui n’étaient pas sur le **développement**, le **code**, mais plus sur l’**ux design** avec notamment «  Et si Mario était ux designer ? » et une autre qui avait l’air très intéressante sur le **bien être au travail**. »
 
-A ce propos, Rudy Baer (Fondateur/CTO du [BearStudio](https://www.bearstudio.fr/) et secrétaire de l’association Codeurs en Seine) nous explique le processus de choix pour les différentes **conférences** :  
+A ce propos, Rudy Baer (Fondateur/CTO du [BearStudio](/fr/) et secrétaire de l’association Codeurs en Seine) nous explique le processus de choix pour les différentes **conférences** :  
 « Historiquement il y a 4 tracks : **JAVA**, **Web**, **devOps**, **Agilité**. Ça a toujours été dans l’ADN de Codeurs en Seine et on a toujours essayé d’avoir des sujets variés comme l’ux design par exemple. Codeurs en Seine est une conférence assez hétérogène. Lors du « Call For Paper », les gens soumettent leur sujet et nous sommes une trentaine de personnes à voter tout en faisant attention à la diversité des sujets. »
 
 Pour conclure, Codeurs en Seine s’affiche de plus en plus sur la scène régionale comme le rendez-vous qualitatif des professionnels du **web** et des **logiciels** en Normandie.

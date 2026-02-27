@@ -104,7 +104,7 @@ Mais ça vient avec une contrepartie : **on doit extraire le layout dans un comp
 
 ## Ce qu’on voulait : un seul état actif, bien typé, et exploitable où on veut
 
-Chez [BearStudio](https://www.bearstudio.fr/), on voulait garder le même principe fondamental :
+Chez [BearStudio](/fr/), on voulait garder le même principe fondamental :
 
 - un seul état actif à la fois,
 - exhaustivité garantie au typage,

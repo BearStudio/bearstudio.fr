@@ -90,7 +90,7 @@ Pour des sessions à répétition, il est aussi possible d’organiser des debri
 
 ### Des différences de niveaux
 
-Le peer programming permet un transfert des connaissances plus efficace. Mais il y a une condition qui s’applique pour que cette méthode fonctionne. La différence de niveau des développeurs concernés ne doit pas être trop importante. Prenons un exemple : Si un débutant [Front-end](https://www.bearstudio.fr/prestations/dev-front) faisait du peer programming avec un un expert [Back-end](https://www.bearstudio.fr/prestations/dev-back), sur une tâche complexe de back, le transfert de connaissance ne va pas marcher, ou en tout cas, sera très lent.
+Le peer programming permet un transfert des connaissances plus efficace. Mais il y a une condition qui s’applique pour que cette méthode fonctionne. La différence de niveau des développeurs concernés ne doit pas être trop importante. Prenons un exemple : Si un débutant [Front-end](/fr/prestations/developpement-web) faisait du peer programming avec un un expert [Back-end](/fr/prestations/developpement-web), sur une tâche complexe de back, le transfert de connaissance ne va pas marcher, ou en tout cas, sera très lent.
 
 Pour ne pas se retrouver dans ce cas de figure, il faut penser à 3 points qui doivent être respectés :
 

@@ -19,7 +19,7 @@ https://twitter.com/IvanDalmet/status/1475382332651675650
 
 Dans cet article, je vous propose une liste de ressources pour l’apprentissage du langage [Rust](https://www.rust-lang.org/fr/). (Et non pas du jeu vidéo du même nom). 
 
-Ici, pas de Hello World, pas de cours sur les conditions, les boucles, le borrowing, le [développement back](https://www.bearstudio.fr/prestations/dev-back), mais une liste de ressources pour vous permettre d’apprendre le langage. 
+Ici, pas de Hello World, pas de cours sur les conditions, les boucles, le borrowing, le [développement back](/fr/prestations/developpement-web), mais une liste de ressources pour vous permettre d’apprendre le langage. 
 
 ## Rust, qu’est-ce que c’est ?
 

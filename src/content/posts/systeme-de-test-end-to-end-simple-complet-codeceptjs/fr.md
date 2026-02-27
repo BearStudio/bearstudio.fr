@@ -38,6 +38,6 @@ Côté technique, CodeceptJS fonctionne avec plusieurs moteurs de test (c'est ce
 
 ## **Et bien plus encore !** 
 
-CodeceptJS propose encore d’autres features très intéressantes ! C’est un outil complet, avec une **documentation** détaillée et une **communauté** disponible en cas de besoin (GitHub, Slack, réseaux sociaux…). À noter aussi que CodeceptJS a lancé en beta une interface permettant de faire ces tests, qui s’appelle CodeceptUI. N’hésitez donc pas à suivre le projet et à tester cet outil qui peut-être, vous permettra d’éviter quelques bugs en prod sur [votre projet](https://www.bearstudio.fr/prestations) 😎
+CodeceptJS propose encore d’autres features très intéressantes ! C’est un outil complet, avec une **documentation** détaillée et une **communauté** disponible en cas de besoin (GitHub, Slack, réseaux sociaux…). À noter aussi que CodeceptJS a lancé en beta une interface permettant de faire ces tests, qui s’appelle CodeceptUI. N’hésitez donc pas à suivre le projet et à tester cet outil qui peut-être, vous permettra d’éviter quelques bugs en prod sur [votre projet](/fr/prestations) 😎
 
 Cet article vous a plu ? Alors vous aimerez sans doute [celui-ci qui vous explique comment simplifier l'utilisation de React JS.](/fr/blog/articles/simplifier-ecriture-interface-utilisateur-react-js)

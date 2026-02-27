@@ -21,7 +21,7 @@ When using User Interface (UI) starters in the past, we found ourselves faced wi
 
 ## What is Start UI?
 
-🚀 Start UI is a collection of opinionated UI starters for design, web and mobile (mostly React based at the moment) which lets you easily bootstrap new UI projects. Based on our many years of experience working with starters and on real projects ranging from small to large scale applications, 🚀 Start UI starters are opinionated and made of strong architectural design decisions. They come with many configurations (such as Internationalization, API Mocking, [Storybook](https://www.bearstudio.fr/en/services/integration), Dark Theme…), components and user administration interfaces by default. Those features help to avoid the setup phase and quickly develop the features specific to the project use cases.
+🚀 Start UI is a collection of opinionated UI starters for design, web and mobile (mostly React based at the moment) which lets you easily bootstrap new UI projects. Based on our many years of experience working with starters and on real projects ranging from small to large scale applications, 🚀 Start UI starters are opinionated and made of strong architectural design decisions. They come with many configurations (such as Internationalization, API Mocking, [Storybook](/en/services), Dark Theme…), components and user administration interfaces by default. Those features help to avoid the setup phase and quickly develop the features specific to the project use cases.
 
 At the moment, 🚀 Start UI is made of 3 projects: 🚀 Start UI \[web\], 🚀 Start UI \[native\] and 🚀 Start UI \[figma\].
 
