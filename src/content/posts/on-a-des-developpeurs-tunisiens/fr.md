@@ -48,13 +48,13 @@ Il y a des bons ingénieurs là-bas, et une certaine proximité avec la France. 
 
 Actuellement nous avons 3 développeurs tunisiens.
 
-[Amine](/fr/equipe/mohamed-amin-ziraoui) a été le premier à me suivre dans l’aventure. Je l’ai rencontré grâce à un [espace de co-working](https://cozi.tn) à Djerba et il a prononcé quelques mots magiques : 
+Amine a été le premier à me suivre dans l’aventure. Je l’ai rencontré grâce à un [espace de co-working](https://cozi.tn) à Djerba et il a prononcé quelques mots magiques : 
 
 - “[Jhipster](https://www.jhipster.tech)” : beaucoup connaissent la relation particulière que le BearStudio entretient avec ce framework
 - “[Angular](https://angularjs.org)” : à l’époque c’était encore un mot magique... 
 - “Non, je ne sais pas faire” : alors que j’avais peur de tomber sur des développeurs disant oui oui à tout pour obtenir le poste…
 
-Puis [Omar](/fr/equipe/omar-borji), toujours à **Djerba** nous a rejoints après avoir assisté à une conférence sur [ReactNative](https://reactnative.dev) animée par [Nicolas Torion](/fr/equipe/nicolas-torion).
+Puis Omar, toujours à **Djerba** nous a rejoints après avoir assisté à une conférence sur [ReactNative](https://reactnative.dev) animée par [Nicolas Torion](/fr/equipe/nicolas-torion).
 
 Et enfin [Zouhair](/fr/equipe/zouhair-mkassmi), en remote depuis **Nabeul**, via une recommandation d’un ancien professeur de fac d’Amine.
 
@@ -78,7 +78,7 @@ Aucune gêne à ça, comme je l’ai indiqué plus haut, c’était un test, not
 
 Deuxième évidence, une **diversité culturelle**, au BearStudio on ne passe pas forcément notre temps à le mettre en avant mais c’est quelque chose qui nous tient à cœur.
 
-Mais encore : des aventures humaines ! Pour créer des liens et garder une **cohésion d’équipe**, les gens en France doivent rencontrer les gens en Tunisie une fois par trimestre (bon la pandémie complique les choses mais on arrive quand même à se rencontrer en physique…). Il faut dire que mélanger un [beauf d’Auvergne](/fr/equipe/nicolas-torion) avec un [bledard de Sfax](/fr/equipe/mohamed-amin-ziraoui), ça forge des souvenirs…
+Mais encore : des aventures humaines ! Pour créer des liens et garder une **cohésion d’équipe**, les gens en France doivent rencontrer les gens en Tunisie une fois par trimestre (bon la pandémie complique les choses mais on arrive quand même à se rencontrer en physique…). Il faut dire que mélanger un [beauf d’Auvergne](/fr/equipe/nicolas-torion) avec un bledard de Sfax, ça forge des souvenirs…
 
 <figure>
 

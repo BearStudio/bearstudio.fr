@@ -13,7 +13,7 @@ authors: ['emma-monchablon', 'nathan-lesouef']
 
 Nous sommes Nathan et Emma, étudiants en école de commerce, actuellement en stage au BearStudio. Voilà maintenant quelques semaines que nous avons intégré l'équipe ! Notre première mission : retracer le développement d’une interface de monitoring pour les patients atteints du Covid-19. En effet, aucun de nous deux n’est familier avec l’univers de la tech, d'où notre regard de néophytes.
 
-D'abord, nous nous sommes immiscés dans les _“channels”_ de discussion instantanée [Slack](/fr/blog/articles/outils-incontournables-pour-un-entrepreneur) utilisés par l’entreprise pour suivre l’avancement des projets. Ensuite, nous avons pris le temps d’échanger avec les porteurs du projet du côté de **KerNel Biomedical**. De même, nous avons interrogé les développeurs du Bearstudio sur le coup : [Ivan](/fr/equipe/ivan-dalmet) et [Philippe](/fr/equipe/philippe-chevreul) (a.k.a Tic). Cela nous a permis d’avoir une vision globale et d’en apprendre davantage sur le processus de création. 
+D'abord, nous nous sommes immiscés dans les _“channels”_ de discussion instantanée [Slack](/fr/blog/articles/outils-incontournables-pour-un-entrepreneur) utilisés par l’entreprise pour suivre l’avancement des projets. Ensuite, nous avons pris le temps d’échanger avec les porteurs du projet du côté de **KerNel Biomedical**. De même, nous avons interrogé les développeurs du Bearstudio sur le coup : [Ivan](/fr/equipe/ivan-dalmet) et Philippe (a.k.a Tic). Cela nous a permis d’avoir une vision globale et d’en apprendre davantage sur le processus de création. 
 
 ---
 
