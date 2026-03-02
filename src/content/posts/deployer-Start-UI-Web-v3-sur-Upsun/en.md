@@ -218,7 +218,7 @@ This allows you to diagnose issues, inspect generated files, or check the state 
 
 ![](images/image19.png)
 
-### ## Ports and Environment Variable Management
+### Ports and Environment Variable Management
 
 Upsun does not allow the use of manually exposed **static ports**.  
 Ports are assigned **dynamically** and automatically managed by the platform.
