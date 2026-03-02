@@ -6,6 +6,7 @@ import type { GetStaticPathsOptions } from 'astro';
 import { getLink } from '@/lib/link';
 import { getPeopleCollection } from '@/lib/people';
 import { getPostsCollection } from '@/lib/posts';
+import { getTranslationUtilities } from '@/lib/site/get-i18n-utilities';
 import Pagination from '@/components/blog/pagination.astro';
 import PostCard from '@/components/blog/post-card.astro';
 import PostsGrid from '@/components/blog/posts-grid.astro';
@@ -17,7 +18,6 @@ import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import { buttonVariants } from '@/components/ui/button';
 import type { Locale } from '@/i18n/utils';
-import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
 export async function generateStaticPaths(
@@ -52,8 +52,7 @@ export async function getStaticPaths(params: GetStaticPathsOptions) {
   return generateStaticPaths({ ...params, locale: 'fr' });
 }
 
-const locale = parseAstroLocale(Astro.currentLocale);
-const t = getTranslationFn(locale);
+const { t, locale } = getTranslationUtilities(Astro.currentLocale);
 
 const { page } = Astro.props;
 const params = Astro.params;

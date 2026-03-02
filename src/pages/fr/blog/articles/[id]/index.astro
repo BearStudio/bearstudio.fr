@@ -13,6 +13,7 @@ import {
   getPostSlugInOtherLocale,
   type PostWithComputed,
 } from '@/lib/posts';
+import { getTranslationUtilities } from '@/lib/site/get-i18n-utilities';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
@@ -20,7 +21,7 @@ import Hero from '@/components/hero/hero.astro';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import { FormattedDate } from '@/components/ui/formatted-date';
-import { getTranslationFn, parseAstroLocale, type Locale } from '@/i18n/utils';
+import type { Locale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
 export async function generateStaticPaths(params: { locale: Locale }) {
@@ -48,8 +49,8 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 const url = new URL(Astro.url.pathname, Astro.site);
 
-const locale = parseAstroLocale(Astro.currentLocale);
-const t = getTranslationFn(locale);
+const { t, locale } = getTranslationUtilities(Astro.currentLocale);
+
 const renderers = await loadRenderers([mdxContainerRenderer()]);
 const container = await experimental_AstroContainer.create({ renderers });
 

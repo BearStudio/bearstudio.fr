@@ -6,13 +6,9 @@ import type { ComponentProps } from 'astro/types';
 import { entries, filter, isNonNullish, map, pipe } from 'remeda';
 
 import { getLink } from '@/lib/link';
+import { getTranslationUtilities } from '@/lib/site/get-i18n-utilities';
 import { defaultLocale } from '@/i18n';
-import {
-  getTranslationFn,
-  LOCALE_TERRITORY_MAP,
-  parseAstroLocale,
-  type Locale,
-} from '@/i18n/utils';
+import { LOCALE_TERRITORY_MAP, type Locale } from '@/i18n/utils';
 
 import type { BreadcrumbEntry } from '../breadcrumb/utils';
 
@@ -45,8 +41,7 @@ const {
   markdownUrl,
 } = Astro.props;
 
-const locale = parseAstroLocale(Astro.currentLocale);
-const t = getTranslationFn(locale);
+const { t, locale } = getTranslationUtilities(Astro.currentLocale);
 
 const ogImageAlt = 'BearStudio';
 const titleDefault =

@@ -12,13 +12,12 @@ import '@/styles/global.css';
 import { Schema } from 'astro-seo-schema';
 
 import { getLink } from '@/lib/link';
+import { getTranslationUtilities } from '@/lib/site/get-i18n-utilities';
 import { getSiteUrl } from '@/lib/site/get-site-url';
 import { getId } from '@/components/seo/utils';
 import { SOCIALS } from '@/content/socials';
-import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 
-const locale = parseAstroLocale(Astro.currentLocale);
-const t = getTranslationFn(locale);
+const { t, locale } = getTranslationUtilities(Astro.currentLocale);
 dayjs.locale(Astro.currentLocale);
 ---
 
