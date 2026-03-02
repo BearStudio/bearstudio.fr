@@ -141,9 +141,6 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.16
         version: 0.5.16(tailwindcss@4.1.18)
-      '@types/mdast':
-        specifier: 4.0.4
-        version: 4.0.4
       '@types/react':
         specifier: 19.2.2
         version: 19.2.2
