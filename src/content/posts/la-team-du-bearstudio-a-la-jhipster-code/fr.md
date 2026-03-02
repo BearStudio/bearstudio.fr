@@ -31,7 +31,7 @@ A suivre : le récap de quelques ours du BearStudio ;) Eh oui, nous étions nomb
 
 Ce premier atelier était destiné aux personnes n'ayant encore jamais participé à une contribution de ce type.
 
-### Feedback d'[Asceline Boullen](/fr/equipe/asceline-boullen)
+### Feedback d'Asceline Boullen
 
 Au BearStudio, je suis régulièrement amenée à faire des **wireframes** pour des projets générés par mes collègues avec JHipster mais sans en savoir réellement plus sur l’aspect technique de ce générateur.
 
@@ -55,7 +55,7 @@ _Aperçu des personnages que j'ai proposés_
 
 C’était pour moi la première contribution de ma vie, mes premiers pas dans l’open source et c’est cool ! Merci le billet diversité, qui m’a permis de participer à cette journée et m’encourager à y aller 😊
 
-### Feedback de [Fabien Essid](/fr/equipe/fabien-essid)
+### Feedback de Fabien Essid
 
 On utilise JHipster quasiment tous les jours au [BearStudio](/fr/) mais au final je n’avais jamais généré un projet. La track _Beginners_ m’a permis de faire mes premiers pas avec JHipster et de découvrir le fonctionnement du générateur. Les participants de cette track avaient pour objectif de corriger des issues. Elles étaient bien **ciblées pour des débutants**, ce qui m’a permis de rapidement être à l’aise avec le générateur.
 
@@ -95,7 +95,7 @@ _Update :_ le projet a été renommé mais voici le [lien du résultat](https://
 
 Celle-ci visait principalement à améliorer les standards de JHipster en optimisant le [caractère Restful](/fr/blog/articles/votre-api-est-elle-vraiment-restful) de son API.
 
-### Feedback de [Quentin Lerebours](/fr/equipe/quentin-lerebours)
+### Feedback de Quentin Lerebours
 
 **On a commencé par de la théorie** sur les APIs Restful et les conventions d'une telle API. J'ai appris qu'une vraie API REST se développait sur 4 niveaux de conventions (URI, verbes, code de retour et HATEOAS), et que plus de 99% des APIs ne respectent pas la dernière convention. On a donc décidé de discuter de la meilleure manière d'**améliorer le respect des convention**s de REST sur JHipster.
 
@@ -105,7 +105,7 @@ On est donc passés sur la deuxième tâche de la journée : ajouter des _endpoi
 
 En fin de journée, on avait accompli environ 50% du travail, la [PR](https://github.com/jhipster/generator-jhipster/pull/12727) était ouverte sur GitHub et on était tous très satisfait d'avoir travaillé là-dessus. C'était très intéressant de comprendre en profondeur le fonctionnement du générateur et d'être initiés à la contribution sur ce projet, **ce qui simplifiera les prochaines corrections d'issue ou développement de features**.
 
-### Feedback de [Jessy Baer](/fr/equipe/jessy-baer)
+### Feedback de Jessy Baer
 
 On a commencé avec une **présentation de la future version de Jhipster**, la version 7, ce qui nous à permis de voir les nouvelles features qui arriveront prochainement
 

@@ -52,7 +52,7 @@ Par la suite, nous avons (pas mal) réfléchi à ce que nous allions faire aux E
 
 J’ai passé un très bon moment à Dubaï. Je suis d'autant plus reconnaissant envers le BearStudio car j'ai eu l’occasion de participer à cet event alors que je ne suis qu’un “stagiaire”. Ça a aussi été le début de la transition entre mon stage initialement intitulé "marketing/communication" vers des missions plus axées sur la partie commerce. Je me suis donné à fond pour parler à des gens et essayer de trouver des prospects. Et j’ai vraiment hâte de pouvoir en faire plus !
 
-### [Claire](/fr/equipe/claire-jeanne)
+### Claire
 
 J’ai eu l’opportunité d’aller à Dubaï deux fois durant l’année 2020. Mon rôle de support pendant ces voyages m’a permis d’apprendre à beaucoup mieux connaître mes collègues. Dubaï est une ville hypnotisante et contradictoire par certains de ses aspects, nous y avons passé de bonnes soirées ensemble et échangé avec d’autre français présents sur place.   
 Notre présence sur le GITEX nous a permis d’éprouver **notre stratégie d’expansion à l’international** et de mieux connaître les travaux de nos collègues.
