@@ -6,6 +6,7 @@ import { match } from 'ts-pattern';
 
 import { getLink } from '@/lib/link';
 import { getDataForPeopleCarousel } from '@/lib/people';
+import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import ContactCard from '@/components/contact/contact-card.astro';
 import Container from '@/components/container.astro';
@@ -20,14 +21,12 @@ import ServiceOtherServices from '@/components/services/service-other-services.a
 import ServiceSkills from '@/components/services/service-skills.astro';
 import Accordion from '@/components/ui/accordion.astro';
 import { buttonVariants } from '@/components/ui/button';
-import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
 import imgBg from './_bg.jpg';
 import imgStartUiNative from './_start-ui-native.jpg';
 
-const locale = parseAstroLocale(Astro.currentLocale);
-const t = getTranslationFn(locale);
+const { t, locale } = getTranslationUtilities(Astro.currentLocale);
 
 const people = (
   await getDataForPeopleCarousel({ locale, status: 'current' })

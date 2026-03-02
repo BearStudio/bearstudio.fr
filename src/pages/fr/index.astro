@@ -7,6 +7,7 @@ import { getLink } from '@/lib/link';
 import { getPeopleCollection } from '@/lib/people';
 import { getPolaroidHref } from '@/lib/polaroids';
 import { getPostsCollection } from '@/lib/posts';
+import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 import { cn } from '@/lib/tailwind/utils';
 import { PostsCarousel } from '@/components/blog/posts-carousel';
 import ContactCta from '@/components/contact/contact-cta.astro';
@@ -20,11 +21,9 @@ import SectionScratched from '@/components/sections/section-scratched.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import { buttonVariants } from '@/components/ui/button';
-import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
-const locale = parseAstroLocale(Astro.currentLocale);
-const t = getTranslationFn(locale);
+const { t, locale } = getTranslationUtilities(Astro.currentLocale);
 
 const polaroids = await Promise.all(
   (await getCollection('polaroids')).map(async (polaroid) => ({

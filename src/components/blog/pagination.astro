@@ -1,7 +1,7 @@
 ---
 import { PiArrowLeftBold, PiArrowRightBold } from 'react-icons/pi';
 
-import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
+import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 
 import { buttonVariants } from '../ui/button';
 
@@ -11,8 +11,7 @@ interface Props {
   prevUrl: string | undefined;
 }
 
-const locale = parseAstroLocale(Astro.currentLocale);
-const t = getTranslationFn(locale);
+const { t } = getTranslationUtilities(Astro.currentLocale);
 const { currentPage, nextUrl, prevUrl } = Astro.props;
 ---
 

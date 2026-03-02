@@ -1,5 +1,6 @@
 ---
 import { getPeopleCollection } from '@/lib/people';
+import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
@@ -8,11 +9,9 @@ import PeopleGrid from '@/components/people/people-grid.astro';
 import PersonCard from '@/components/people/person-card.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
-import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
-const locale = parseAstroLocale(Astro.currentLocale);
-const t = getTranslationFn(locale);
+const { t, locale } = getTranslationUtilities(Astro.currentLocale);
 const peopleCurrent = await getPeopleCollection({
   locale,
   status: 'current',

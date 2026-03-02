@@ -2,16 +2,15 @@
 import { Image } from 'astro:assets';
 
 import { getLink } from '@/lib/link';
+import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 import { Logo } from '@/components/ui/logo';
 import { ScratchFull } from '@/components/ui/scratch';
 import { SOCIALS } from '@/content/socials';
-import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 
 import { getFooterNavItems } from './footer-nav';
 import LogoRegion from './logo-region.svg';
 
-const locale = parseAstroLocale(Astro.currentLocale);
-const t = getTranslationFn(locale);
+const { t, locale } = getTranslationUtilities(Astro.currentLocale);
 ---
 
 <footer

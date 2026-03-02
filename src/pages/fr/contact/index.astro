@@ -1,5 +1,6 @@
 ---
 import { getLink } from '@/lib/link';
+import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import { ContactFormDrawer } from '@/components/contact/contact-form-drawer';
 import Container from '@/components/container.astro';
@@ -9,11 +10,9 @@ import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { SOCIALS } from '@/content/socials';
-import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
-const locale = parseAstroLocale(Astro.currentLocale);
-const t = getTranslationFn(locale);
+const { t, locale } = getTranslationUtilities(Astro.currentLocale);
 
 const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({
