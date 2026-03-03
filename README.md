@@ -18,13 +18,13 @@ The dev server starts at `http://localhost:4321`.
 
 ## Commands
 
-| Command         | Description                              |
-| :-------------- | :--------------------------------------- |
-| `pnpm dev`      | Start dev server at `localhost:4321`     |
-| `pnpm build`    | Build production site to `./dist/`       |
-| `pnpm preview`  | Preview production build locally         |
-| `pnpm lint`     | Run all linters (astro check, eslint, tsc) |
-| `pnpm pretty`   | Format code with Prettier                |
+| Command        | Description                                |
+| :------------- | :----------------------------------------- |
+| `pnpm dev`     | Start dev server at `localhost:4321`       |
+| `pnpm build`   | Build production site to `./dist/`         |
+| `pnpm preview` | Preview production build locally           |
+| `pnpm lint`    | Run all linters (astro check, eslint, tsc) |
+| `pnpm pretty`  | Format code with Prettier                  |
 
 ## Project Structure
 
