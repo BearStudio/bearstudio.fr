@@ -17,6 +17,7 @@
     "lint:ts": "tsc --noEmit"
   },
   "dependencies": {
+    "@astro-community/astro-embed-twitter": "0.5.11",
     "@astrojs/check": "0.9.6",
     "@astrojs/mdx": "4.3.13",
     "@astrojs/react": "4.4.2",

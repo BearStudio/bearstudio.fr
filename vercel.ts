@@ -25,7 +25,7 @@ export const config: VercelConfig = {
           "default-src 'self'",
           "script-src 'self' 'unsafe-inline'",
           "style-src 'self' 'unsafe-inline'",
-          "img-src 'self' data:",
+          "img-src 'self' data: https://pbs.twimg.com",
           "font-src 'self'",
           'frame-src https://webforms.pipedrive.com https://www.google.com https://www.youtube-nocookie.com',
           "connect-src 'self'",
