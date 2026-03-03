@@ -1,0 +1,11 @@
+{
+  "root": {
+    "breadcrumb": "Expertise",
+    "title": "Notre expertise",
+    "description": "Découvrez les technologies et compétences que nous maîtrisons au BearStudio. Du développement web et mobile au design, en passant par les outils et frameworks modernes.",
+    "metadata": {
+      "title": "Expertise du BearStudio, studio de développement web à Rouen",
+      "description": "Découvrez les technologies et compétences du BearStudio : React, React Native, TypeScript, Tailwind, design UX/UI et bien plus encore."
+    }
+  }
+}
