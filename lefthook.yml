@@ -1,7 +1,7 @@
 pre-commit:
   commands:
     format:
-      glob: '*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc,astro}'
+      glob: '*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc,astro,mdx,md}'
       run: pnpm prettier --write {staged_files}
       stage_fixed: true
 

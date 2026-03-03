@@ -8,7 +8,7 @@ tags:
   - 'engagement'
   - 'temoignage'
 heroImage: 'images/format-blog-header-2-scaled.png'
-metaDescription: 'BearStudio s''engage auprès d''associations via des dons et du mécénat : des engagements associatifs forts en entreprise.'
+metaDescription: "BearStudio s'engage auprès d'associations via des dons et du mécénat : des engagements associatifs forts en entreprise."
 authors: ['soraya-benchakroune']
 ---
 
