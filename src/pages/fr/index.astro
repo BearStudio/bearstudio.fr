@@ -23,6 +23,8 @@ import { getAlternates } from '@/components/seo/utils';
 import { buttonVariants } from '@/components/ui/button';
 import MainLayout from '@/layouts/main-layout.astro';
 
+import { enhancePostWithImage } from '../../components/blog/utils';
+
 const { t, locale } = getTranslationUtilities(Astro.currentLocale);
 
 const polaroids = await Promise.all(
@@ -71,22 +73,7 @@ const latestPosts = await Promise.all(
       locale,
       limit: 5,
     })
-  ).map(async (person) => {
-    return {
-      ...person,
-      data: {
-        ...person.data,
-        image: person.data.heroImage
-          ? await getImage({
-              src: person.data.heroImage,
-              widths: [800, 1200],
-              sizes: '(min-width: 800px) 1200px, 800px',
-              layout: 'constrained',
-            })
-          : undefined,
-      },
-    };
-  })
+  ).map(async (post) => enhancePostWithImage(post))
 );
 ---
 

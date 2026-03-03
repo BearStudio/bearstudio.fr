@@ -29,6 +29,8 @@ import { SOCIALS } from '@/content/socials';
 import { getTranslationFn, parseAstroLocale, type Locale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
 
+import { enhancePostWithImage } from '../../../../components/blog/utils';
+
 const POSTS_LIMIT = 4;
 
 export async function generateStaticPaths(params: { locale: Locale }) {
@@ -61,21 +63,7 @@ const posts = await Promise.all(
       author: person,
       locale,
     })
-  ).map(async (person) => {
-    return {
-      ...person,
-      data: {
-        ...person.data,
-        image: person.data.heroImage
-          ? await getImage({
-              src: person.data.heroImage,
-              width: 1200,
-              height: 800,
-            })
-          : undefined,
-      },
-    };
-  })
+  ).map(async (post) => enhancePostWithImage(post))
 );
 
 const conferences = await getConferencesCollectionByPerson({
