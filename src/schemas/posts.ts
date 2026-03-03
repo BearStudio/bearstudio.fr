@@ -8,6 +8,7 @@ export const zPost = ({ image }: SchemaContext) =>
     excerpt: z.string().optional(),
     metaDescription: z.string().optional(),
     heroImage: image().optional(),
+    thumbnailImage: image().optional(),
     authors: z.array(reference('people')).optional(),
     date: z.date(),
     tags: z.array(z.string()).optional(),

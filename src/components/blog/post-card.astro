@@ -13,7 +13,8 @@ const locale = parseAstroLocale(Astro.currentLocale);
 const props = Astro.props;
 
 const image = await getImage({
-  src: props.post.data.heroImage ?? defaultImg,
+  src:
+    props.post.data.thumbnailImage ?? props.post.data.heroImage ?? defaultImg,
   width: 1200,
   height: 800,
 });
