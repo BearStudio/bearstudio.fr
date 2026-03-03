@@ -17,8 +17,6 @@ export async function enhancePostWithImage(
 ): Promise<PostWithComputedAndImage> {
   const sourceImage =
     post.data.thumbnail?.image ?? post.data.heroImage ?? defaultImg;
-  console.log(post.data);
-  console.log({ sourceImage });
   return {
     ...post,
     data: {

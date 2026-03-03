@@ -7,7 +7,10 @@ import { parseAstroLocale } from '@/i18n/utils';
 import defaultImg from './default.jpeg';
 import { PostCard as PostCardUI } from './post-card';
 
-type Props = Omit<ComponentProps<typeof PostCardUI>, 'image' | 'locale'>;
+type Props = Omit<
+  ComponentProps<typeof PostCardUI>,
+  'image' | 'locale' | 'alt'
+>;
 
 const locale = parseAstroLocale(Astro.currentLocale);
 const props = Astro.props;
@@ -23,6 +26,6 @@ const image = await getImage({
 <PostCardUI
   locale={locale}
   image={image}
-  alt={props.post.data.thumbnail?.alt}
+  alt={props.post.data.thumbnail?.alt || ''}
   {...props}
 />
