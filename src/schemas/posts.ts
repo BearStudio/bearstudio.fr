@@ -1,5 +1,7 @@
 import { reference, z, type SchemaContext } from 'astro:content';
 
+import { zImage } from '@/schemas/utils.ts';
+
 export type Post = z.infer<ReturnType<typeof zPost>>;
 export const zPost = ({ image }: SchemaContext) =>
   z.object({
@@ -8,7 +10,7 @@ export const zPost = ({ image }: SchemaContext) =>
     excerpt: z.string().optional(),
     metaDescription: z.string().optional(),
     heroImage: image().optional(),
-    thumbnailImage: image().optional(),
+    thumbnail: zImage({ image }).optional(),
     authors: z.array(reference('people')).optional(),
     date: z.date(),
     tags: z.array(z.string()).optional(),

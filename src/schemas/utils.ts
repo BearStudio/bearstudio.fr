@@ -1,4 +1,4 @@
-import { z } from 'astro:content';
+import { z, type SchemaContext } from 'astro:content';
 
 export type SocialType = z.infer<typeof zSocialTypes>;
 export const zSocialTypes = z.enum([
@@ -13,3 +13,10 @@ export const zSocialTypes = z.enum([
   'twitch',
   'website',
 ]);
+
+export type Image = z.infer<ReturnType<typeof zImage>>;
+export const zImage = ({ image }: SchemaContext) =>
+  z.object({
+    image: image(),
+    alt: z.string().default(''),
+  });

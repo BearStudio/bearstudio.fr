@@ -14,10 +14,15 @@ const props = Astro.props;
 
 const image = await getImage({
   src:
-    props.post.data.thumbnailImage ?? props.post.data.heroImage ?? defaultImg,
+    props.post.data.thumbnail?.image ?? props.post.data.heroImage ?? defaultImg,
   width: 1200,
   height: 800,
 });
 ---
 
-<PostCardUI locale={locale} image={image} {...props} />
+<PostCardUI
+  locale={locale}
+  image={image}
+  alt={props.post.data.thumbnail?.alt}
+  {...props}
+/>
