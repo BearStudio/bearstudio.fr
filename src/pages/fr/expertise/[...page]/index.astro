@@ -3,7 +3,6 @@ import type { GetStaticPathsOptions } from 'astro';
 
 import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 import { getSkillsCollection } from '@/lib/skills';
-import Pagination from '@/components/blog/pagination.astro';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
@@ -70,14 +69,9 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       description={t('skills.root.description')}
     />
   </Hero>
-  <Container placement="overlapHero">
+  <Container>
     <SkillsGrid>
       {page.data.map((skill) => <SkillCard skill={skill} />)}
     </SkillsGrid>
-    <Pagination
-      currentPage={page.currentPage}
-      nextUrl={page.url.next}
-      prevUrl={page.url.prev}
-    />
   </Container>
 </MainLayout>
