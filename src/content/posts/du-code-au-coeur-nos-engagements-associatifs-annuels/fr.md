@@ -22,7 +22,7 @@ Ces dons aux associations se veulent collaboratifs. Chaque année, en Octobre, u
 
 ##### Une idée née d'une augmentation… différente
 
-Tout a commencé avec [Quentin](/fr/equipe/quentin-lerebours) il y a quelques années, l’un de nos collaborateurs. Lors d’une réunion d’augmentation autour d’une pizza (on vous invite à lire [cet article](https://ppbearstudio.wpengine.com/blog/entrepreneuriat/comment-deleguer-la-responsabilite-pour-les-augmentations) sur notre processus d'augmentation), Quentin a fait une demande atypique. Une fois n’est pas coutume, s’étant renseigné sur l’impact financier de son augmentation, il a souhaité l’utiliser en deux temps :
+Tout a commencé avec Quentin il y a quelques années, l’un de nos collaborateurs. Lors d’une réunion d’augmentation autour d’une pizza (on vous invite à lire [cet article](https://ppbearstudio.wpengine.com/blog/entrepreneuriat/comment-deleguer-la-responsabilite-pour-les-augmentations) sur notre processus d'augmentation), Quentin a fait une demande atypique. Une fois n’est pas coutume, s’étant renseigné sur l’impact financier de son augmentation, il a souhaité l’utiliser en deux temps :
 
 - Dans un premier temps, il a demandé à BearStudio de recruter un stagiaire pour faire avancer son side project : [TraveledMap](https://www.traveledmap.com/fr).
 
