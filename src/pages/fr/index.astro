@@ -10,6 +10,7 @@ import { getPostsCollection } from '@/lib/posts';
 import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 import { cn } from '@/lib/tailwind/utils';
 import { PostsCarousel } from '@/components/blog/posts-carousel';
+import { enhancePostWithImage } from '@/components/blog/utils';
 import ContactCta from '@/components/contact/contact-cta.astro';
 import Container from '@/components/container.astro';
 import Hero from '@/components/hero/hero.astro';
@@ -22,8 +23,6 @@ import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import { buttonVariants } from '@/components/ui/button';
 import MainLayout from '@/layouts/main-layout.astro';
-
-import { enhancePostWithImage } from '../../components/blog/utils';
 
 const { t, locale } = getTranslationUtilities(Astro.currentLocale);
 

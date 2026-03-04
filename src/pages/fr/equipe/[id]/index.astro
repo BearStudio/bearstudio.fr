@@ -18,6 +18,7 @@ import {
   type PostWithComputed,
 } from '@/lib/posts';
 import { PostsCarousel } from '@/components/blog/posts-carousel';
+import { enhancePostWithImage } from '@/components/blog/utils';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
@@ -28,8 +29,6 @@ import { getAlternates, getId } from '@/components/seo/utils';
 import { SOCIALS } from '@/content/socials';
 import { getTranslationFn, parseAstroLocale, type Locale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
-
-import { enhancePostWithImage } from '../../../../components/blog/utils';
 
 const POSTS_LIMIT = 4;
 
