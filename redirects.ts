@@ -592,7 +592,7 @@ export const members = [
   },
   {
     source: '/team/nicolas-greverie',
-    destination: '/fr/equipe',
+    destination: '/fr/equipe/nicolas-greverie',
     statusCode: 301,
   },
   {
