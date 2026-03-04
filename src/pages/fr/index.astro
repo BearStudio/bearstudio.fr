@@ -10,6 +10,7 @@ import { getPostsCollection } from '@/lib/posts';
 import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 import { cn } from '@/lib/tailwind/utils';
 import { PostsCarousel } from '@/components/blog/posts-carousel';
+import { enhancePostWithImage } from '@/components/blog/utils';
 import ContactCta from '@/components/contact/contact-cta.astro';
 import Container from '@/components/container.astro';
 import Hero from '@/components/hero/hero.astro';
@@ -71,22 +72,7 @@ const latestPosts = await Promise.all(
       locale,
       limit: 5,
     })
-  ).map(async (person) => {
-    return {
-      ...person,
-      data: {
-        ...person.data,
-        image: person.data.heroImage
-          ? await getImage({
-              src: person.data.heroImage,
-              widths: [800, 1200],
-              sizes: '(min-width: 800px) 1200px, 800px',
-              layout: 'constrained',
-            })
-          : undefined,
-      },
-    };
-  })
+  ).map(async (post) => enhancePostWithImage(post))
 );
 ---
 

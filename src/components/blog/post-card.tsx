@@ -10,6 +10,7 @@ export const PostCard = (props: {
   post: PostWithComputed;
   locale: Locale;
   image: GetImageResult;
+  alt: string;
 }) => {
   return (
     <a
@@ -23,7 +24,7 @@ export const PostCard = (props: {
         {!!props.image && (
           <ImgAstroReact
             image={props.image}
-            alt=""
+            alt={props.alt}
             className="absolute inset-0 h-full w-full object-cover"
           />
         )}

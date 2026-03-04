@@ -1,10 +1,9 @@
 ---
-import { getImage } from 'astro:assets';
-
 import { getLink } from '@/lib/link';
 import { getPostsCollection } from '@/lib/posts';
 import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 import { PostsCarousel } from '@/components/blog/posts-carousel';
+import { enhancePostWithImage } from '@/components/blog/utils';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
@@ -29,22 +28,7 @@ const latestPosts = await Promise.all(
       locale,
       limit: 5,
     })
-  ).map(async (person) => {
-    return {
-      ...person,
-      data: {
-        ...person.data,
-        image: person.data.heroImage
-          ? await getImage({
-              src: person.data.heroImage,
-              widths: [800, 1200],
-              sizes: '(min-width: 800px) 1200px, 800px',
-              layout: 'constrained',
-            })
-          : undefined,
-      },
-    };
-  })
+  ).map(async (post) => enhancePostWithImage(post))
 );
 ---
 

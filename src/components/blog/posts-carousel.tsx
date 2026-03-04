@@ -41,6 +41,7 @@ export const PostsCarousel = (props: {
                 post={post}
                 locale={props.locale}
                 image={post.data.image}
+                alt={post.data.thumbnail?.alt ?? ''}
               />
             </CarouselItem>
           );
