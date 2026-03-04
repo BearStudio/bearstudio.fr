@@ -687,7 +687,7 @@ export const members = [
   },
   {
     source: '/team/luis-rubiera',
-    destination: '/fr/equipe/luis-rubiera',
+    destination: '/fr/equipe',
     statusCode: 301,
   },
   {
