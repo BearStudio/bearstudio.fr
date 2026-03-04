@@ -1,0 +1,58 @@
+---
+import { cn } from '@/lib/tailwind/utils';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div data-pswp-gallery class={cn(className)}>
+  <slot />
+</div>
+
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+
+  import 'photoswipe/style.css';
+
+  const wrapImage = (img: HTMLImageElement) => {
+    const a = document.createElement('a');
+    a.href = img.src;
+    a.dataset.pswpWidth = String(img.naturalWidth);
+    a.dataset.pswpHeight = String(img.naturalHeight);
+    img.parentNode?.insertBefore(a, img);
+    a.appendChild(img);
+  };
+
+  function initGallery(gallery: HTMLElement) {
+    const images = gallery.querySelectorAll<HTMLImageElement>('img');
+
+    images.forEach((img) => {
+      if (img.closest('a')) return;
+
+      if (img.complete && img.naturalWidth > 0) {
+        wrapImage(img);
+      } else {
+        img.addEventListener('load', () => wrapImage(img), { once: true });
+      }
+    });
+
+    new PhotoSwipeLightbox({
+      gallery,
+      children: 'a[data-pswp-width]',
+      pswpModule: () => import('photoswipe'),
+    }).init();
+  }
+
+  document
+    .querySelectorAll<HTMLElement>('[data-pswp-gallery]')
+    .forEach(initGallery);
+</script>
+
+<style>
+  [data-pswp-gallery] :global(img) {
+    cursor: zoom-in;
+  }
+</style>
