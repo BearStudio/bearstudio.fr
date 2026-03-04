@@ -81,7 +81,7 @@ importers:
         specifier: 12.34.0
         version: 12.34.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       photoswipe:
-        specifier: ^5.4.4
+        specifier: 5.4.4
         version: 5.4.4
       radix-ui:
         specifier: 1.4.3
