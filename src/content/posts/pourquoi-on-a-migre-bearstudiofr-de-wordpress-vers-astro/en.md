@@ -3,6 +3,9 @@ title: 'Why we migrated from WordPress to Astro'
 slug: 'why-we-migrated-from-wordpress-to-astro'
 date: 2026-03-05
 heroImage: 'og-image-en.png'
+thumbnail:
+  image: 'pourquoi-on-a-migre-bearstudiofr-de-wordpress-to-astro.jpg'
+  alt: 'BearStudio website displayed on multiple devices to show the different pages of the website'
 categories:
   - 'developpement'
 tags:
@@ -72,9 +75,9 @@ Astro stood out on several points:
 
 **Performance by default**: Astro takes a "zero client-side JavaScript by default" approach, which delivers ultra-fast sites without any special configuration.
 
-**Island flexibility** (_Astro Islands_): you can integrate React, Vue or Svelte components only where needed, without loading an entire framework for the whole page.
+**Astro Islands flexibility**: you can integrate React, Vue or Svelte components only where needed, without loading an entire framework for the whole page.
 
-We chose not to use a headless CMS. All content is managed in Markdown or MDX files (for articles that need embedded React components). Simple, versioned with the code, no external dependency.
+We chose not to use a headless CMS. All content is managed in Markdown or MDX files (for articles that need embedded React components). Simple, versioned with the code, no external dependency. What initially felt like a constraint turned into an advantage: everything is in one place, all the context is available, and with AI, that's a real strength.
 
 ---
 
@@ -93,7 +96,7 @@ From now on, the entire team can contribute, whether on the technical side or th
 
 We started with about 200 pages — blog posts, service pages, team members, contact pages — and took the opportunity to **rework the marketing content in depth**: merging front-end and back-end categories under a single "web development" axis, adding a "project boost" category and a dedicated AI category. This wasn't just a technical migration.
 
-### The most complex part: translations
+### The most complex part: the translation system
 
 The most time-consuming technical challenge was multilingual support. We wanted a site available in French and English — we already have international clients and are active in the open source and React community. We also support startups and tech teams as a development partner or in a role close to CTO advisory, and in that context, being fluent in English — including on our website — is essential.
 
@@ -155,7 +158,7 @@ With that in mind, we're preparing several new sections. One dedicated to **even
 
 ### AI is already in the site
 
-We've started preparing the site for the era of agents and LLMs. An `llms.txt` file is already in place at the root, and all blog posts are accessible in Markdown by appending `.md` to any URL. The site is designed to be readable by both humans and AI.
+We've started preparing the site for the era of agents and LLMs. An `llms.txt` file is already in place at the root, and all blog posts are accessible in Markdown by appending `.md` ([example with this article](/en/blog/articles/why-we-migrated-from-wordpress-to-astro)) to any URL. The site is designed to be readable by both humans and AI.
 
 And internally, we use **Claude Code** daily to build the site's evolutions. AI isn't a future topic for us — it's already in our tools.
 
