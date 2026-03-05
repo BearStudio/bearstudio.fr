@@ -13,36 +13,11 @@ const { class: className } = Astro.props;
 </div>
 
 <script>
-  import PhotoSwipeLightbox from 'photoswipe/lightbox';
-
-  import 'photoswipe/style.css';
-
-  const wrapImage = (img: HTMLImageElement) => {
-    const a = document.createElement('a');
-    a.href = img.src;
-    a.dataset.pswpWidth = String(img.naturalWidth);
-    a.dataset.pswpHeight = String(img.naturalHeight);
-    img.parentNode?.insertBefore(a, img);
-    a.appendChild(img);
-  };
+  import { initImageLightbox } from '@/lib/photo-swipe';
 
   document
     .querySelectorAll<HTMLImageElement>('[data-pswp-gallery] img')
-    .forEach((img) => {
-      if (img.closest('a')) return;
-
-      if (img.complete && img.naturalWidth > 0) {
-        wrapImage(img);
-      } else {
-        img.addEventListener('load', () => wrapImage(img), { once: true });
-      }
-
-      new PhotoSwipeLightbox({
-        gallery: img.parentElement!,
-        children: 'a',
-        pswpModule: () => import('photoswipe'),
-      }).init();
-    });
+    .forEach((img) => initImageLightbox(img, img.parentElement!));
 </script>
 
 <style>

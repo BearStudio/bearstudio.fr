@@ -1,0 +1,30 @@
+---
+import { cn } from '@/lib/tailwind/utils';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<span data-pswp-image class={cn(className)}>
+  <slot />
+</span>
+
+<script>
+  import { initImageLightbox } from '@/lib/photo-swipe';
+
+  document
+    .querySelectorAll<HTMLElement>('[data-pswp-image]')
+    .forEach((wrapper) => {
+      const img = wrapper.querySelector<HTMLImageElement>('img');
+      if (img) initImageLightbox(img, wrapper);
+    });
+</script>
+
+<style>
+  [data-pswp-image] :global(img) {
+    cursor: zoom-in;
+  }
+</style>
