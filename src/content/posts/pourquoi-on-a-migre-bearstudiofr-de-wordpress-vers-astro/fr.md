@@ -4,6 +4,9 @@ date: 2026-03-05
 categories:
   - 'developpement'
 heroImage: 'og-image.png'
+thumbnail:
+  image: 'pourquoi-on-a-migre-bearstudiofr-de-wordpress-to-astro.jpg'
+  alt: 'Le site de BearStudio affiché sur plusieurs appareil afin de montrer plusieurs pages du site'
 tags:
   - 'Astro'
   - 'React'
@@ -73,9 +76,9 @@ Astro s'est distingué sur plusieurs points&nbsp;:
 
 **Les performances par défaut**&nbsp;: Astro adopte une approche "zéro JavaScript côté client par défaut", ce qui favorise des sites ultra-rapides sans configuration particulière.
 
-**La flexibilité des îles** (_Astro Islands_)&nbsp;: on peut intégrer des composants React, Vue ou Svelte uniquement là où c'est nécessaire, sans charger un framework entier pour toute la page.
+**La flexibilité des Astro Islands**&nbsp;: on peut intégrer des composants React, Vue ou Svelte uniquement là où c'est nécessaire, sans charger un framework entier pour toute la page.
 
-On a choisi de ne pas utiliser de CMS headless. Tout le contenu est géré en fichiers Markdown ou MDX (pour les articles qui nécessitent des composants React embarqués). Simple, versionné avec le code, sans dépendance externe.
+On a choisi de ne pas utiliser de CMS headless. Tout le contenu est géré en fichiers Markdown ou MDX (pour les articles qui nécessitent des composants React embarqués). Simple, versionné avec le code, sans dépendance externe. Ce qui ressemblait à une contrainte est devenu un avantage&nbsp;: tout est au même endroit, tout le contexte est disponible, et avec l'IA, c'est une vraie force.
 
 ---
 
@@ -94,7 +97,7 @@ Désormais, c'est toute l'équipe qui va pouvoir contribuer, que ce soit techniq
 
 On est partis d'environ 200 pages, articles de blog, pages de prestations, membres de l'équipe, pages de contact, et on en a profité pour **retravailler le contenu marketing en profondeur**&nbsp;: fusion des catégories front-end et back-end sous un seul axe "développement web", ajout d'une catégorie "boost de projet" et d'une catégorie dédiée à l'IA. Ce n'était pas juste une migration technique.
 
-### La partie la plus complexe&nbsp;: les traductions
+### La partie la plus complexe&nbsp;: le système de traduction
 
 Le défi technique le plus chronophage a été la gestion du multilingue. On voulait un site disponible en français et en anglais, on a déjà des clients internationaux et on est actifs dans la communauté open source et React. On accompagne aussi des startups et des équipes tech en tant que partenaire de développement ou dans un rôle proche de l'accompagnement CTO, et dans ce contexte, parler anglais couramment, y compris sur notre site, est indispensable.
 
@@ -156,7 +159,7 @@ Dans ce sens, on prépare plusieurs nouvelles sections. Une dédiée aux **évé
 
 ### L'IA, déjà dans le site
 
-On a commencé à préparer le site pour l'ère des agents et des LLMs. Un fichier `llms.txt` est déjà en place à la racine, et tous les articles de blog sont accessibles en Markdown en suffixant `.md` à n'importe quelle URL. Le site est pensé pour être lisible aussi bien par des humains que par des IA.
+On a commencé à préparer le site pour l'ère des agents et des LLMs. Un fichier `llms.txt` est déjà en place à la racine, et tous les articles de blog sont accessibles en Markdown en suffixant `.md` ([exemple avec cet article](/fr/blog/articles/pourquoi-on-a-migre-bearstudiofr-de-wordpress-vers-astro)) à n'importe quelle URL. Le site est pensé pour être lisible aussi bien par des humains que par des IA.
 
 Et en interne, on utilise **Claude Code** au quotidien pour construire les évolutions du site. L'IA n'est pas un sujet futur chez nous, c'est déjà dans nos outils.
 
