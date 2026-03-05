@@ -26,10 +26,9 @@ const { class: className } = Astro.props;
     a.appendChild(img);
   };
 
-  function initGallery(gallery: HTMLElement) {
-    const images = gallery.querySelectorAll<HTMLImageElement>('img');
-
-    images.forEach((img) => {
+  document
+    .querySelectorAll<HTMLImageElement>('[data-pswp-gallery] img')
+    .forEach((img) => {
       if (img.closest('a')) return;
 
       if (img.complete && img.naturalWidth > 0) {
@@ -37,18 +36,13 @@ const { class: className } = Astro.props;
       } else {
         img.addEventListener('load', () => wrapImage(img), { once: true });
       }
+
+      new PhotoSwipeLightbox({
+        gallery: img.parentElement!,
+        children: 'a',
+        pswpModule: () => import('photoswipe'),
+      }).init();
     });
-
-    new PhotoSwipeLightbox({
-      gallery,
-      children: 'a[data-pswp-width]',
-      pswpModule: () => import('photoswipe'),
-    }).init();
-  }
-
-  document
-    .querySelectorAll<HTMLElement>('[data-pswp-gallery]')
-    .forEach(initGallery);
 </script>
 
 <style>
