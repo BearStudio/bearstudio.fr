@@ -16,8 +16,13 @@ const { class: className } = Astro.props;
   import { initImageLightbox } from '@/lib/photo-swipe';
 
   document
-    .querySelectorAll<HTMLImageElement>('[data-pswp-gallery] img')
-    .forEach((img) => initImageLightbox(img, img.parentElement!));
+    .querySelectorAll<HTMLImageElement>('[data-pswp-gallery]')
+    .forEach((wrapper) => {
+      const img = wrapper.querySelector<HTMLImageElement>('img');
+      if (img?.parentElement) {
+        initImageLightbox(img, img.parentElement);
+      }
+    });
 </script>
 
 <style>
