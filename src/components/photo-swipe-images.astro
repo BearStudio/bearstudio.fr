@@ -8,7 +8,7 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<div data-pswp-gallery class={cn(className)}>
+<div data-images class={cn(className)}>
   <slot />
 </div>
 
@@ -16,17 +16,12 @@ const { class: className } = Astro.props;
   import { initImageLightbox } from '@/lib/photo-swipe';
 
   document
-    .querySelectorAll<HTMLImageElement>('[data-pswp-gallery]')
-    .forEach((wrapper) => {
-      const img = wrapper.querySelector<HTMLImageElement>('img');
-      if (img?.parentElement) {
-        initImageLightbox(img, img.parentElement);
-      }
-    });
+    .querySelectorAll<HTMLImageElement>('[data-images] img')
+    .forEach((img) => initImageLightbox(img, img.parentElement!));
 </script>
 
 <style>
-  [data-pswp-gallery] :global(img) {
+  [data-images] :global(img) {
     cursor: zoom-in;
   }
 </style>
