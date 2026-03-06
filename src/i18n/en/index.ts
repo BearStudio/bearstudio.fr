@@ -7,6 +7,7 @@ import home from './home.json';
 import legal from './legal.json';
 import notFound from './notFound.json';
 import services from './services.json';
+import skills from './skills.json';
 import team from './team.json';
 
 export default {
@@ -16,6 +17,7 @@ export default {
   legal,
   notFound,
   services,
+  skills,
   team,
   contact,
 } as const;

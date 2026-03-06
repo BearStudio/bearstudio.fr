@@ -1,0 +1,77 @@
+---
+import type { GetStaticPathsOptions } from 'astro';
+
+import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
+import { getSkillsCollection } from '@/lib/skills';
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import Container from '@/components/container.astro';
+import HeroContent from '@/components/hero/hero-content.astro';
+import Hero from '@/components/hero/hero.astro';
+import SEO from '@/components/seo/index.astro';
+import { getAlternates } from '@/components/seo/utils';
+import SkillCard from '@/components/skills/skill-card.astro';
+import SkillsGrid from '@/components/skills/skills-grid.astro';
+import type { Locale } from '@/i18n/utils';
+import MainLayout from '@/layouts/main-layout.astro';
+
+export async function generateStaticPaths(
+  params: {
+    locale: Locale;
+  } & GetStaticPathsOptions
+) {
+  const PAGE_SIZE = 24;
+  const allSkills = await getSkillsCollection({
+    locale: params.locale,
+  });
+
+  return params.paginate(allSkills, {
+    pageSize: PAGE_SIZE,
+  });
+}
+
+export async function getStaticPaths(params: GetStaticPathsOptions) {
+  return generateStaticPaths({ ...params, locale: 'fr' });
+}
+
+const { t, locale } = getTranslationUtilities(Astro.currentLocale);
+
+const { page } = Astro.props;
+
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    path: '/fr/expertise',
+    params: {},
+    label: t('skills.root.breadcrumb'),
+  }),
+  page.currentPage > 1
+    ? entry({
+        path: '/fr/expertise/:page',
+        params: { page: page.currentPage.toString() },
+        label: `Page ${page.currentPage}`,
+      })
+    : undefined,
+]);
+---
+
+<MainLayout>
+  <SEO
+    slot="seo"
+    title={t('skills.root.metadata.title')}
+    description={t('skills.root.metadata.description')}
+    alternates={getAlternates('/fr/expertise', {})}
+    noindex={page.currentPage !== 1}
+    breadcrumb={breadcrumb}
+  />
+  <Hero>
+    <HeroContent
+      breadcrumb={breadcrumb}
+      title={t('skills.root.title')}
+      description={t('skills.root.description')}
+    />
+  </Hero>
+  <Container>
+    <SkillsGrid>
+      {page.data.map((skill) => <SkillCard skill={skill} />)}
+    </SkillsGrid>
+  </Container>
+</MainLayout>

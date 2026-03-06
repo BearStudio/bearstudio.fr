@@ -1,0 +1,25 @@
+---
+import { getImage } from 'astro:assets';
+
+import type { SkillWithComputed } from '@/lib/skills';
+import { parseAstroLocale } from '@/i18n/utils';
+
+import { SkillCard as SkillCardUI } from './skill-card';
+
+interface Props {
+  skill: SkillWithComputed;
+}
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const { skill } = Astro.props;
+
+const iconImage = skill.icon
+  ? await getImage({
+      src: skill.icon.data.image,
+      width: 96,
+      height: 96,
+    })
+  : null;
+---
+
+<SkillCardUI locale={locale} skill={skill} iconImage={iconImage} />
