@@ -60,7 +60,7 @@ Setting up Outstatic on your project is very simple — it only takes 3 steps:
 
 Add Outstatic to your project by running:
 
-```
+```bash
 npm install outstatic
 ```
 
@@ -85,7 +85,7 @@ Outstatic uses GitHub for authentication and article management. Here's how to c
 
 1. Create a .env file with the previously retrieved variables.
 
-```
+```bash
 OST_GITHUB_ID=YOUR_GITHUB_OAUTH_APP_ID
 OST_GITHUB_SECRET=YOUR_GITHUB_OAUTH_APP_SECRET
 
@@ -116,32 +116,32 @@ From the interface, you can create a collection: for example, for a blog you wou
 
 To retrieve your Markdown articles, use the methods provided by Outstatic: `getDocuments` or `getDocumentBySlug`. Then convert the content to HTML to style it.
 
-```
-const posts = getDocuments("articles", ["title", "slug"]);
+```javascript
+const posts = getDocuments('articles', ['title', 'slug']);
 
-const post = getDocumentBySlug("articles", slug, [
-    "title",
-    "publishedAt",
-    "slug",
-    "author",
-    "content",
-    "coverImage",
-  ]);
+const post = getDocumentBySlug('articles', slug, [
+  'title',
+  'publishedAt',
+  'slug',
+  'author',
+  'content',
+  'coverImage',
+]);
 ```
 
 ## How to Style the Article?
 
 In my case, I chose to use Tailwind CSS and specifically [Tailwind Typography](https://github.com/tailwindlabs/tailwindcss-typography) to handle the styling of Markdown articles: you can customize your articles as you wish, by modifying the style of headings, images, etc.
 
-```
+```jsx
 <article className="prose prose-lg prose-h2:font-semibold prose-img:rounded-lg">
- <header>
- <h1>{data.title}</h1>
- <p>Published on {data.date} by {data.author}</p>
- </header>
- <section>
- {content}
- </section>
+  <header>
+    <h1>{data.title}</h1>
+    <p>
+      Published on {data.date} by {data.author}
+    </p>
+  </header>
+  <section>{content}</section>
 </article>
 ```
 

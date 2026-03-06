@@ -18,7 +18,7 @@ Cette erreur m’arrive encore tous les jours ! En réalité, elle se produit lo
 
 **Exemple :**
 
-```
+```java
 String exemple = null;
 System.out.println(exemple.length());
 // Il va y avoir un null pointer
@@ -31,7 +31,7 @@ if (exemple != null) {
 
 Un autre piège courant avec les énumérations. Imagine que tu as un type enum et une classe comme ceci :
 
-```
+```java
 enum Status {
     PENDING,
     APPROVED
@@ -49,13 +49,13 @@ MyClass a = new MyClass();
 
 Si tu veux vérifier le statut et vérifier s’il est PENDING ou non, tu pourrais écrire comme ça :
 
-```
+```java
 if (a.getStatus().equals(Status.PENDING)) { }
 ```
 
 Ce code ne s’exécutera jamais si getStatus() retourne null et l’application plantera, car si getStatus() retourne null, alors tu essaies d’appler la méthode “.equals()” sur ce null. Ce cas provoque donc une NPE(NullPointerException). Une solution serait :
 
-```
+```java
 if (Status.PENDING.equals(a.getStatus())) { }
 ```
 
@@ -65,7 +65,7 @@ Ici la méthode “equals()” sera toujours appelée sur un objet existant. Dan
 
 Une confusion fréquente en Java concerne la comparaison de valeurs :
 
-```
+```java
 String a = new String("Bonjour");
 String b = new String("Bonjour");
 
@@ -86,7 +86,7 @@ Dans notre exemple :
 
 Si l’on veut simplement comparer les contenus, il faut faire :
 
-```
+```java
 String a = new String("Bonjour");
 String b = new String("Bonjour");
 
@@ -111,7 +111,7 @@ En Java, quand tu utilises un `switch`, le code continue à s’exécuter dans l
 
 Exemple :
 
-```
+```java
 int jour = 2;
 switch (jour) {
     case 1:
@@ -130,7 +130,7 @@ switch (jour) {
 
 Pour éviter cela, il faut toujours ajouter les `break`.
 
-```
+```java
 int jour = 2;
 switch (jour) {
     case 1:
@@ -159,7 +159,7 @@ Exemple :
 
 Quand tu passes un `int`, `double` ou `boolean` à une méthode, c’est équivalent à donner une **photocopie** de ta recette à un ami. Si ton ami modifie sa copie (ajoute du sucre, change la température), ta recette originale reste intacte ⇒ Chacun travaille sur sa propre version
 
-```
+```java
 public class Test {
     public static void main(String[] args) {
         int a = 5; // La recette original contient 5 grammes de sucre
@@ -180,7 +180,7 @@ Exemple :
 
 Quand tu passes un objet (comme `String`, `ArrayList`), c'est comme donner un **double de ta clé d'appartement** à un ami. Ton ami ne peut pas changer ta clé, mais peut entrer dans ton appartement et déplacer les meubles ⇒ Vous accédez au même appartement avec des clés différentes.
 
-```
+```java
 class Appartement {
     String couleurMur;
     Appartement(String couleur) { this.couleurMur = couleur; }

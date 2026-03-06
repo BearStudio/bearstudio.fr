@@ -38,8 +38,8 @@ This works very well... but it's often verbose, not very expressive, and difficu
 
 ![Example card component displayed, texts shown:<div></div>React Native Ficus UI 🌿 Discover Ficus UI for your React Native apps<div></div>Button: Explore](images/Capture-decran-2025-12-18-a-16.47.58.png)
 
-```
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+```tsx
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function Card() {
   return (
@@ -99,8 +99,8 @@ This code is functional, but it:
 
 The same component, written with Ficus UI, becomes much more **declarative and composable**:
 
-```
-import { Box, Text, Button } from 'react-native-ficus-ui';
+```tsx
+import { Box, Button, Text } from 'react-native-ficus-ui';
 
 export default function Card() {
   return (
@@ -111,7 +111,9 @@ export default function Card() {
       <Text fontSize="xl" color="gray.600" mb="lg">
         Discover Ficus UI for your React Native apps
       </Text>
-      <Button colorScheme="teal" full>Explore</Button>
+      <Button colorScheme="teal" full>
+        Explore
+      </Button>
     </Box>
   );
 }
@@ -141,9 +143,10 @@ This allows you to maintain visual consistency across your entire application wh
 
 ![Default theme color palettes](images/Capture-decran-2025-12-18-a-16.51.38.png)
 
-```
+```tsx
 import { AppRegistry } from 'react-native';
 import { ThemeProvider } from 'react-native-ficus-ui';
+
 import App from './src/App';
 
 // this is our custom theme
@@ -167,7 +170,7 @@ const theme = {
     '6xl': 32,
   },
   space: {
-    'xs': 2,
+    xs: 2,
     '5xl': 64,
   },
   // components defaults can also be customized
@@ -195,9 +198,9 @@ This makes it easy to integrate custom elements into your design system while be
 
 ![Ficus component displaying a circle with "teal" color as background](images/Capture-decran-2025-12-18-a-16.44.12.png)
 
-```
-import { ficus } from 'react-native-ficus-ui';
+```tsx
 import { View } from 'react-native';
+import { ficus } from 'react-native-ficus-ui';
 
 const Circle = ficus(View, {
   baseStyle: {
@@ -243,7 +246,7 @@ These components are built on recognized React Native libraries, but with a simp
 
 [Try it in the docs](https://ficus-ui.com/docs/Components/Inputs/pininput)
 
-```
+```tsx
 const SimplePinInput = () => {
   const [pinValue, setPinValue] = React.useState(null);
 
@@ -255,7 +258,7 @@ const SimplePinInput = () => {
       colorScheme="teal"
     />
   );
-}
+};
 ```
 
 Based on [https://github.com/retyui/react-native-confirmation-code-field](https://github.com/retyui/react-native-confirmation-code-field)
@@ -266,7 +269,7 @@ Based on [https://github.com/retyui/react-native-confirmation-code-field](https:
 
 [Try it in the docs](https://ficus-ui.com/docs/Components/Inputs/slider)
 
-```
+```tsx
 <Slider colorScheme="teal" defaultValue={0.2} />
 ```
 
@@ -278,7 +281,7 @@ Built on [https://github.com/callstack/react-native-slider](https://github.com/c
 
 [Try it in the docs](https://ficus-ui.com/docs/Components/draggable-modal)
 
-```
+```tsx
 const SimpleModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -297,11 +300,7 @@ const SimpleModal = () => {
         {!isOpen ? 'Show Modal' : 'Hide Modal'}
       </Button>
 
-      <DraggableModal
-        isOpen={isOpen}
-        onClose={onClose}
-        p="lg"
-      >
+      <DraggableModal isOpen={isOpen} onClose={onClose} p="lg">
         <Text fontSize="4xl" fontWeight="bold">
           Settings
         </Text>
@@ -310,7 +309,7 @@ const SimpleModal = () => {
       </DraggableModal>
     </Box>
   );
-}
+};
 ```
 
 Based on [`react-native-bottom-sheet`](https://github.com/gorhom/react-native-bottom-sheet)
@@ -321,12 +320,8 @@ Based on [`react-native-bottom-sheet`](https://github.com/gorhom/react-native-bo
 
 [Try it in the docs](https://ficus-ui.com/docs/Components/Layout/tabs)
 
-```
-<Tabs
-  initialPage={0}
-  onChangeTab={setIndex}
-  selectedTab={index}
->
+```tsx
+<Tabs initialPage={0} onChangeTab={setIndex} selectedTab={index}>
   <TabList>
     <Tab name="first">Tab 1</Tab>
     <Tab name="second">Tab 2</Tab>
@@ -358,7 +353,7 @@ Responsive design is often a headache on React Native.
 
 With Ficus UI, style props can accept **values by breakpoint**, just like on the web:
 
-```
+```tsx
 <Box bg={{ base: 'gray.100', md: 'gray.300' }} p={[2, 4, 6]}>
   <Text>Adaptive layout</Text>
 </Box>
@@ -378,12 +373,12 @@ Ficus UI automatically detects the user's preference (dark or light) and dynamic
 
 You can also force a mode or manually toggle between the two.
 
-```
+```tsx
 const { colorMode, toggleColorMode } = useColorMode();
 
 <Button onPress={toggleColorMode}>
   {colorMode === 'light' ? '🌙 Dark mode' : '☀️ Light mode'}
-</Button>
+</Button>;
 ```
 
 **Color schemes** ensure optimal contrast and automatic visual consistency.

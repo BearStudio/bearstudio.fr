@@ -18,7 +18,7 @@ Une **classe** en Java est une structure qui permet de définir des objets avec 
 
 ### Exemple d'une classe simple :
 
-```
+```java
 public class Person {
     private String name;
     private int age;
@@ -73,7 +73,7 @@ Un **record** est une structure de données simplifiée introduite dans Java 16,
 
 ### Exemple d'un record simple :
 
-```
+```java
 public record Person(String name, int age) {
     // Le constructeur, les getters, toString, equals, et hashCode sont générés automatiquement
 }
@@ -117,7 +117,7 @@ Les **classes** sont appropriées lorsque :
 
 Si tu dois créer une classe représentant un **compte bancaire** qui permet de modifier son solde et d'exécuter des opérations :
 
-```
+```java
 public class BankAccount {
     private String accountHolder;
     private double balance;
@@ -162,7 +162,7 @@ Les **records** sont particulièrement utiles lorsque :
 
 Imaginons que tu dois stocker les informations d'un **utilisateur** sans logique métier spécifique :
 
-```
+```java
 public record User(String username, String email) {
     // Constructeur, getters, equals, hashCode et toString sont générés automatiquement
 }
@@ -171,7 +171,7 @@ public record User(String username, String email) {
 
 Tu peux facilement créer des instances comme ceci :
 
-```
+```java
 User user = new User("john_doe", "john@example.com");
 System.out.println(user.username());  // john_doe
 
@@ -183,7 +183,7 @@ Parfois, tu peux combiner des **classes** et des **records** dans un même proje
 
 ### Exemple combiné :
 
-```
+```java
 public class BankAccount {
     private String accountHolder;
     private double balance;
