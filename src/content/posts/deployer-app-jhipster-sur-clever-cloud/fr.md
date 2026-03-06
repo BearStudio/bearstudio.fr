@@ -17,7 +17,7 @@ Il faut installer [Clever Cloud CLI](https://www.clever-cloud.com/doc/reference/
 
 Vous devez aussi [créer un compte Clever Cloud](https://api.clever-cloud.com/v2/sessions/signup) et vous connecter avec le CLI en lançant la commande `clever login`.
 
-```
+```bash
 Opening https://console.clever-cloud.com/cli-oauth?cli_version=2.7.1&cli_token=XXX in your browser to log you in…
 Login successful as ...
 ```
@@ -29,7 +29,7 @@ Login successful as ...
 
 Liste des fournisseurs d'addons supportés : `clever addon providers`
 
-```
+```bash
  cellar-addon      Cellar S3 storage       S3-like online file storage web service
  config-provider   Configuration provider  Expose configuration to your applications  (via environment variables)
  es-addon          Elastic Stack           Elasticsearch with Kibana and APM server as options
@@ -53,68 +53,68 @@ Liste des fournisseurs d'addons supportés : `clever addon providers`
 
 Avec PostgreSQL
 
-```
+```yaml
 spring:
-     datasource:
-         type: com.zaxxer.hikari.HikariDataSource
-         url: jdbc:postgresql://${POSTGRESQL_ADDON_HOST}:${POSTGRESQL_ADDON_PORT}/${POSTGRESQL_ADDON_DB}?useUnicode=true&characterEncoding=utf8&useSSL=false
-         username: ${POSTGRESQL_ADDON_USER}
-         password: ${POSTGRESQL_ADDON_PASSWORD}
-         hikari:
-             maximumPoolSize: 2
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://${POSTGRESQL_ADDON_HOST}:${POSTGRESQL_ADDON_PORT}/${POSTGRESQL_ADDON_DB}?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: ${POSTGRESQL_ADDON_USER}
+    password: ${POSTGRESQL_ADDON_PASSWORD}
+    hikari:
+      maximumPoolSize: 2
 ```
 
 Avec MySQL
 
-```
+```yaml
 spring:
-     datasource:
-         type: com.zaxxer.hikari.HikariDataSource
-         url: jdbc:mysql://${MYSQL_ADDON_HOST}:${MYSQL_ADDON_PORT}/${MYSQL_ADDON_DB}?useUnicode=true&characterEncoding=utf8&useSSL=false
-         username: ${MYSQL_ADDON_USER}
-         password: ${MYSQL_ADDON_PASSWORD}
-         hikari:
-             maximumPoolSize: 2
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://${MYSQL_ADDON_HOST}:${MYSQL_ADDON_PORT}/${MYSQL_ADDON_DB}?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: ${MYSQL_ADDON_USER}
+    password: ${MYSQL_ADDON_PASSWORD}
+    hikari:
+      maximumPoolSize: 2
 ```
 
 Avec MongoDB
 
-```
+```yaml
 spring:
-   data:
-     mongodb:
-       uri: ${MONGODB_ADDON_URI}
-       database: ${MONGODB_ADDON_DB}
+  data:
+    mongodb:
+      uri: ${MONGODB_ADDON_URI}
+      database: ${MONGODB_ADDON_DB}
 ```
 
 3\. Ajoutez un fichier ._json_ contenant le goal suivant pour indiquer comment démarrer l'application.
 
 Pour Maven, créez un fichier `clevercloud/maven.json` et utilisez l'artifactld de votre _pom.xml_
 
-```
- {
-     "build": {
-         "type": "maven",
-         "goal": "-Pprod package -DskipTests"
-     },
-     "deploy": {
-     "jarName": "./target/[REPLACE BY ARTIFACTID]-0.0.1-SNAPSHOT.jar"
-     }
- }
+```json
+{
+  "build": {
+    "type": "maven",
+    "goal": "-Pprod package -DskipTests"
+  },
+  "deploy": {
+    "jarName": "./target/[REPLACE BY ARTIFACTID]-0.0.1-SNAPSHOT.jar"
+  }
+}
 ```
 
 Pour Gradle, créez un fichier `clevercloud/gradle.json` et utilisez le rootProject.name _gradle.properties_.
 
-```
+```json
 {
-     "build": {
-         "type": "gradle",
-         "goal": "-Pprod bootJar -x test"
-     },
-     "deploy": {
-         "jarName": "./build/libs/[REPLACE BY rootProject.name]-0.0.1-SNAPSHOT.jar"
-     }
- }
+  "build": {
+    "type": "gradle",
+    "goal": "-Pprod bootJar -x test"
+  },
+  "deploy": {
+    "jarName": "./build/libs/[REPLACE BY rootProject.name]-0.0.1-SNAPSHOT.jar"
+  }
+}
 ```
 
 ## Déployer votre application
@@ -131,7 +131,7 @@ Ajoutez `$CLEVER_TOKEN` et `CLEVER_SECRET` aux variables d'environnement de Gitl
 
 Ajoutez cette étape à votre `.gitlab-ci.yml`.
 
-```
+```yaml
 deploy-to-clever-env:
   stage: deploy
   variables:
@@ -152,7 +152,7 @@ deploy-to-clever-env:
 
 Vous pouvez sélectionner la version Java (Java 11 par défaut)
 
-```
+```bash
 clever env set CC_JAVA_VERSION 12
 ```
 

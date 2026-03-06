@@ -86,49 +86,49 @@ Ajouter des serveurs MCP à ces agents permet de **déverrouiller des capacité
 
 Extrait de données sur les employés :
 
-```
+```json
 [
   {
-    "nom": "Alice Dupont",
-    "poste": "Développeuse Frontend",
-    "anciennete": "3 ans",
-    "competences": "React, TypeScript, UI/UX",
-    "statut": "CDI"
+    "nom": "Alice Dupont",
+    "poste": "Développeuse Frontend",
+    "anciennete": "3 ans",
+    "competences": "React, TypeScript, UI/UX",
+    "statut": "CDI"
   },
   {
-    "nom": "Mehdi Benali",
-    "poste": "Tech Lead Fullstack",
-    "anciennete": "5 ans",
-    "competences": "Java, React, Architecture",
-    "statut": "CDI"
+    "nom": "Mehdi Benali",
+    "poste": "Tech Lead Fullstack",
+    "anciennete": "5 ans",
+    "competences": "Java, React, Architecture",
+    "statut": "CDI"
   },
   {
-    "nom": "Julie Morel",
-    "poste": "QA Analyst",
-    "anciennete": "2 ans",
-    "competences": "Tests automatisés, Cypress", 
-    "statut": "CDD"
+    "nom": "Julie Morel",
+    "poste": "QA Analyst",
+    "anciennete": "2 ans",
+    "competences": "Tests automatisés, Cypress",
+    "statut": "CDD"
   },
   {
-    "nom": "Thomas Leroy",
-    "poste": "Product Manager",
-    "anciennete": "4 ans",
-    "competences": "Agile, Roadmap, Communication",
-    "statut": "CDI"
+    "nom": "Thomas Leroy",
+    "poste": "Product Manager",
+    "anciennete": "4 ans",
+    "competences": "Agile, Roadmap, Communication",
+    "statut": "CDI"
   },
   {
-    "nom": "Claire Nguyen",
-    "poste": "Développeuse Backend", 
-    "anciennete": "1 an",
-    "competences": "Node.js, PostgreSQL, Docker", 
-    "statut": "Alternance"
+    "nom": "Claire Nguyen",
+    "poste": "Développeuse Backend",
+    "anciennete": "1 an",
+    "competences": "Node.js, PostgreSQL, Docker",
+    "statut": "Alternance"
   },
   {
-    "nom": "Romain Garcia", 
-    "poste": "Designer UI/UX", 
-    "anciennete": "2 ans",
-    "competences": "Figma, Accessibilité, Design Sys", 
-    "statut": "Freelance"
+    "nom": "Romain Garcia",
+    "poste": "Designer UI/UX",
+    "anciennete": "2 ans",
+    "competences": "Figma, Accessibilité, Design Sys",
+    "statut": "Freelance"
   }
 ]
 ```
@@ -137,7 +137,7 @@ L'objectif ici va être de construire un mini serveur MCP afin de récupérer ce
 
 Initialiser un projet Node 24 avec pnpm :
 
-```
+```bash
 $ mkdir demo-mcp
 $ cd demo-mcp
 $ pnpm init -y
@@ -145,7 +145,7 @@ $ pnpm init -y
 
 Installer les dépendances :
 
-```
+```bash
 $ pnpm add zod @modelcontextprotocol/sdk
 ```
 
@@ -153,13 +153,13 @@ Nous n'aurons besoin que d'un seul fichier : `main.ts`.
 
 Commençons par créer notre serveur :
 
-```
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+```typescript
+import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 
-const server = new McpServer({ 
-  name: "Gestionnaire d'employés", 
-  version: "1.0.0",
-  description: "Un serveur MCP de démonstration",
+const server = new McpServer({
+  name: "Gestionnaire d'employés",
+  version: '1.0.0',
+  description: 'Un serveur MCP de démonstration',
 });
 ```
 
@@ -177,29 +177,31 @@ On doit préciser trois choses importantes :
 
 Ajoutons tout cela à notre fichier `main.ts` :
 
-```
-server.tool( 
-  "getEmployees",
-  "Récupère la liste de tous les employés en appliquant un filtre si nécessaire",
+```typescript
+server.tool(
+  'getEmployees',
+  'Récupère la liste de tous les employés en appliquant un filtre si nécessaire',
   {
-    filter: z
-      .object({ 
-        key: z
-        .enum(["nom", "poste", "anciennete", "competences", "statut"])
-        .describe("Les clés de la table des employés utilisées pour filtrer les employés"),
-        value: z.string(),
+    filter: z
+      .object({
+        key: z
+          .enum(['nom', 'poste', 'anciennete', 'competences', 'statut'])
+          .describe(
+            'Les clés de la table des employés utilisées pour filtrer les employés'
+          ),
+        value: z.string(),
       })
       .optional()
       .describe("Filtrer la liste d'employés"),
   },
-  async ({ filter }) => {
-    const employees = await getEmployees({ 
-      where: filter?.key,
-      value: filter?.value,
+  async ({ filter }) => {
+    const employees = await getEmployees({
+      where: filter?.key,
+      value: filter?.value,
     });
 
-    return {
-      content: [{ type: "text", text: JSON.stringify(employees, null, 2)}],
+    return {
+      content: [{ type: 'text', text: JSON.stringify(employees, null, 2) }],
     };
   }
 );
@@ -211,23 +213,23 @@ Une solution simple est de lire depuis l’entrée standard et d’écrire sur l
 
 Heureusement, la bibliothèque `@modelcontextprotocol/sdk` fournit une abstraction simple pour cela : `StdioServerTransport` .
 
-```
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+```typescript
+import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 
-const transport = new StdioServerTransport(); 
-await server.connect(transport);
+const transport = new StdioServerTransport();
+await server.connect(transport);
 ```
 
 Et voilà, notre serveur est désormais prêt à être utilisé !
 
 Connectons-le à Cursor. Pour cela, il suffit d'ajouter dans notre fichier `.cursor/mcp.json` (à la racine de votre projet par exemple) :
 
-```
+```json
 {
-  "mcpServers": { 
-    "demo-mcp": {
-      "command": "npx",
-      "args": ["node", "/chemin-vers-votre-projet/demo-mcp/main.ts"]
+  "mcpServers": {
+    "demo-mcp": {
+      "command": "npx",
+      "args": ["node", "/chemin-vers-votre-projet/demo-mcp/main.ts"]
     }
   }
 }

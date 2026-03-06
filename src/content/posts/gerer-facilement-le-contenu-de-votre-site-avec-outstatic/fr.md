@@ -59,7 +59,7 @@ Configurer Outstatic sur votre projet est très simple, il suffit de seulement 3
 
 Ajoutez Outstatic à votre projet en exécutant :
 
-```
+```bash
 npm install outstatic
 ```
 
@@ -84,7 +84,7 @@ Outstatic utilise GitHub pour l'authentification et la gestion des articles. Voi
 
 1. Créer un fichier .env avec les variables récupérées précédemment.
 
-```
+```bash
 OST_GITHUB_ID=YOUR_GITHUB_OAUTH_APP_ID
 OST_GITHUB_SECRET=YOUR_GITHUB_OAUTH_APP_SECRET
 
@@ -115,32 +115,32 @@ Depuis l'interface, vous pouvez créer une collection : par exemple pour un blog
 
 Pour récupérer vos articles Markdown, utilisez les méthodes fournies par Outstatic : `getDocuments` ou `getDocumentBySlug`. Convertissez ensuite le contenu en HTML pour les styliser ensuite. 
 
-```
-const posts = getDocuments("articles", ["title", "slug"]);
+```javascript
+const posts = getDocuments('articles', ['title', 'slug']);
 
-const post = getDocumentBySlug("articles", slug, [
-    "title",
-    "publishedAt",
-    "slug",
-    "author",
-    "content",
-    "coverImage",
-  ]);
+const post = getDocumentBySlug('articles', slug, [
+  'title',
+  'publishedAt',
+  'slug',
+  'author',
+  'content',
+  'coverImage',
+]);
 ```
 
 ## Comment styliser l’article ?
 
 Dans mon cas, j’ai choisi d’utiliser Tailwind CSS et plus particulièrement [Tailwind typography](https://github.com/tailwindlabs/tailwindcss-typography) pour gérer le style des articles Markdown : vous pouvez personnaliser vos articles comme vous le souhaitez, en modifiant le style des titres, des images etc…
 
-```
+```jsx
 <article className="prose prose-lg prose-h2:font-semibold prose-img:rounded-lg">
- <header>
- <h1>{data.title}</h1>
- <p>Publié le {data.date} par {data.author}</p>
- </header>
- <section>
- {content}
- </section>
+  <header>
+    <h1>{data.title}</h1>
+    <p>
+      Publié le {data.date} par {data.author}
+    </p>
+  </header>
+  <section>{content}</section>
 </article>
 ```
 
