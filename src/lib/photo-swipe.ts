@@ -14,10 +14,18 @@ const wrapImage = (img: HTMLImageElement) => {
 
 const init = (img: HTMLImageElement) => {
   const a = wrapImage(img);
-  new PhotoSwipeLightbox({
+  const lightbox = new PhotoSwipeLightbox({
     gallery: a,
     pswpModule: () => import('photoswipe'),
-  }).init();
+  });
+
+  lightbox.init();
+
+  // Cleanup when View Transition swap the DOM
+  // Prevent memory leaks
+  document.addEventListener('astro:before-swap', () => lightbox.destroy(), {
+    once: true,
+  });
 };
 
 export const initImageLightbox = (img: HTMLImageElement) => {
