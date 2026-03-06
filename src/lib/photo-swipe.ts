@@ -9,26 +9,23 @@ const wrapImage = (img: HTMLImageElement) => {
   a.dataset.pswpHeight = String(img.naturalHeight);
   img.parentNode?.insertBefore(a, img);
   a.appendChild(img);
+  return a;
 };
 
-const init = (img: HTMLImageElement, gallery: HTMLElement) => {
-  wrapImage(img);
+const init = (img: HTMLImageElement) => {
+  const a = wrapImage(img);
   new PhotoSwipeLightbox({
-    gallery,
-    children: 'a',
+    gallery: a,
     pswpModule: () => import('photoswipe'),
   }).init();
 };
 
-export const initImageLightbox = (
-  img: HTMLImageElement,
-  gallery: HTMLElement
-) => {
+export const initImageLightbox = (img: HTMLImageElement) => {
   if (img.closest('a')) return;
 
   if (img.complete && img.naturalWidth > 0) {
-    init(img, gallery);
+    init(img);
   } else {
-    img.addEventListener('load', () => init(img, gallery), { once: true });
+    img.addEventListener('load', () => init(img), { once: true });
   }
 };
