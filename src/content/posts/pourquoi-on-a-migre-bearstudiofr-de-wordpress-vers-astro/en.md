@@ -1,0 +1,173 @@
+---
+title: 'Why we migrated from WordPress to Astro'
+slug: 'why-we-migrated-from-wordpress-to-astro'
+date: 2026-03-05
+heroImage: 'og-image-en.png'
+thumbnail:
+  image: 'pourquoi-on-a-migre-bearstudiofr-de-wordpress-to-astro.jpg'
+  alt: 'BearStudio website displayed on multiple devices to show the different pages of the website'
+categories:
+  - 'developpement'
+tags:
+  - 'Astro'
+  - 'React'
+  - 'WordPress'
+  - 'migration'
+  - 'open source'
+  - 'AI'
+  - 'UX'
+  - 'web development'
+  - 'CTO support'
+  - 'performance'
+metaDescription: 'Full retrospective on the migration of bearstudio.fr: why we left WordPress for Astro, the technical challenges, UX decisions and results. A redesign built for React developers, AI and CTO advisory.'
+excerpt: "In February 2026, we finally made the move: bearstudio.fr now runs on Astro. Here's the full story behind a ~200-page redesign — about thirty days of collective work and a real source of team pride."
+authors:
+  - 'yoann-fleury'
+---
+
+_In February 2026, we finally made the move: bearstudio.fr now runs on Astro. Here's the full story behind a ~200-page redesign — about thirty days of collective work and a real source of team pride. An article especially relevant for tech teams, React and front-end developers, and anyone considering breaking free from WordPress._
+
+---
+
+## A bit of history: three versions, three eras
+
+The BearStudio website has had three lives.
+
+The first version, of which [an archive from November 2016](https://web.archive.org/web/20161107063014/http://www.bearstudio.fr/) still exists, ran on **GravCMS** — a file-based CMS with no database. In [November 2019](https://web.archive.org/web/20191117075057/https://www.bearstudio.fr/), we switched to WordPress — the obvious choice at the time, the one that "just worked." And for over six years, it did the job. Until February 2026, when we migrated everything to [Astro](https://astro.build/).
+
+This wasn't a decision taken lightly. It was the result of years of accumulated friction, piling technical debt, and the desire to take back control of our own tool.
+
+---
+
+## What finally convinced us to leave WordPress
+
+WordPress is a proven solution. But over time, several issues became impossible to ignore.
+
+### Developer Experience was a real struggle
+
+The workflow was painful. We had sources on GitHub that needed to be deployed to the WordPress instance. Slow, tedious, error-prone. For a development agency whose website is its showcase, that's hard to accept long-term. We were piling up technical debt on a tool we didn't fully control.
+
+### Performance hit a ceiling
+
+WordPress does server-side rendering by default. The result: pages that could take a while to load, disappointing Lighthouse scores, and a user experience below what we expected for our own site. Switching to static generation with Astro changed things dramatically.
+
+### Security was a constant risk
+
+WordPress code is widely used, making it a prime target. Security updates come one after another, and plugins can introduce vulnerabilities. For a statically generated site built at compile time, the attack surface is virtually zero. And our new site is fully open source, available on GitHub — a stance that aligns with our values and our involvement in the community.
+
+### Hosting costs were optimizable
+
+We used WP Engine for hosting: around $300 per year. Today, we're on a shared account that covers several of our applications for $20 per month — split across all our projects. Much more cost-effective at scale.
+
+### A stack that no longer evolved with us
+
+It was also the perfect opportunity to rethink our offerings in the age of AI. Our development processes have evolved significantly: we now integrate AI into our workflows and the projects we support. Our showcase website should clearly reflect that for clients discovering us.
+
+---
+
+## Why Astro over Next.js, Nuxt or Gatsby?
+
+We already had experience with other solutions. I had notably worked on the Codeurs en Seine website with Gatsby, then migrated that same site to Next.js with ContentLayer for Markdown file management. It was quite heavy and the ecosystem was fairly passive — ContentLayer was no longer evolving.
+
+Astro stood out on several points:
+
+**Built-in content management**: Astro lets you define content schemas directly in code. If a field is missing or incorrectly filled in a Markdown file, the build fails with an explicit error message. It's an extremely practical safety net for day-to-day work.
+
+**Performance by default**: Astro takes a "zero client-side JavaScript by default" approach, which delivers ultra-fast sites without any special configuration.
+
+**Astro Islands flexibility**: you can integrate React, Vue or Svelte components only where needed, without loading an entire framework for the whole page.
+
+We chose not to use a headless CMS. All content is managed in Markdown or MDX files (for articles that need embedded React components). Simple, versioned with the code, no external dependency. What initially felt like a constraint turned into an advantage: everything is in one place, all the context is available, and with AI, that's a real strength.
+
+---
+
+## A redesign, not just a migration
+
+The thirty or so days needed included much more than pure development. Here's how the project broke down:
+
+- **Upfront thinking and competitive research** to define the direction of the new site — I actually spent a fair amount of time looking at what was being done elsewhere internationally
+- **Setting up the technical foundation** by [Grégoire](/en/team/gregoire-protas) and [Noé](/en/team/noe-tatoud)
+- **Development and design** primarily driven by [Ivan](/en/team/ivan-dalmet) and myself
+- **Editorial and SEO work** to preserve existing gains and refine our marketing message
+
+From now on, the entire team can contribute, whether on the technical side or through blog posts.
+
+### Serious editorial work
+
+We started with about 200 pages — blog posts, service pages, team members, contact pages — and took the opportunity to **rework the marketing content in depth**: merging front-end and back-end categories under a single "web development" axis, adding a "project boost" category and a dedicated AI category. This wasn't just a technical migration.
+
+### The most complex part: the translation system
+
+The most time-consuming technical challenge was multilingual support. We wanted a site available in French and English — we already have international clients and are active in the open source and React community. We also support startups and tech teams as a development partner or in a role close to CTO advisory, and in that context, being fluent in English — including on our website — is essential.
+
+Astro doesn't provide a complete built-in solution for translations (though it offers some minimal options). We had to build a custom solution, with subtleties to manage around collections as well as **Astro Islands**: when passing props to interactive components, you need to be careful not to unnecessarily bloat the client-side bundle.
+
+### SEO was a project in itself
+
+We had years of SEO work on the old version. Losing it all was out of the question. Significant effort went into URL mapping, setting up redirects, and verifying meta tags to preserve what we'd built.
+
+---
+
+## The major changes in the new site
+
+### A redesigned look, a preserved brand identity
+
+Ivan delivered a strong design overhaul while keeping our visual identity intact. BearStudio's colors — blue and yellow — are still there, but their usage has been streamlined. On the old site, yellow was everywhere to the point of being "too much." The new design uses it more surgically, where it truly creates impact.
+
+### UX choices focused on people and clarity
+
+The new site puts more emphasis on the people who make up BearStudio. Navigation is clearer, access to our services more direct. We also introduced a more indirect and memorable communication style through "polaroids" — a visual element that creates personality without cluttering the page.
+
+The blog page perfectly illustrates this evolution: several articles are now immediately visible, even on mobile, which wasn't the case with the old WordPress theme.
+
+### A site that also speaks to international clients
+
+The English version of the site was a priority. Being present in English opens doors with clients and communities we weren't reaching enough before. And let's be honest, it's also much easier today thanks to AI — we do a quick pass, review it, and we have our page.
+
+---
+
+## What we gained in our daily work
+
+**Performance**: loading is significantly faster. Static generation does its job.
+
+**Peace of mind**: we control the entire stack. No mysterious plugins, no endless WordPress updates, no shaky deployment workflow. We write code, push to GitHub, and it's live (and we even get deploy previews before going to production — handy for testing).
+
+**Ownership**: we don't have a dedicated marketing team updating the site. Having a stack we know inside out is what makes all of this viable and enjoyable long-term.
+
+---
+
+## Who should consider this migration?
+
+Astro is an excellent choice for **any predominantly static site**: showcase site, portfolio, blog, agency site. If your content is stable and you want maximum performance without sacrificing flexibility, Astro checks all the boxes.
+
+On the other hand, if you have a large non-technical team that needs to update content daily, the lack of a CMS interface can become a blocker. In that case, an Astro + headless CMS combination (Sanity, Contentful, Directus…) will be more suitable.
+
+**One piece of advice**: don't reduce the migration to a technical exercise. It's the perfect opportunity to rework your content, clarify your message, and modernize your design. That's what we did, and it's clearly what makes the difference.
+
+---
+
+## What's next? What we're preparing
+
+The migration isn't an end in itself. It's a solid foundation we'll keep building on.
+
+### Content that truly reflects who we are
+
+The long-term goal for the site is to be a real showcase of BearStudio: who we are, what we do, and the humans behind it all. Almost a public database of ourselves — a place where we make publicly accessible everything we have internally: our technologies, our way of working, our open source projects.
+
+With that in mind, we're preparing several new sections. One dedicated to **events** — to know where to find the BearStudio team in real life, whether at meetups, conferences, or React and open source community events. Another focused on the **technologies we use** and our open source contributions, to document our technical choices and share what we build.
+
+### AI is already in the site
+
+We've started preparing the site for the era of agents and LLMs. An `llms.txt` file is already in place at the root, and all blog posts are accessible in Markdown by appending `.md` ([example with this article](/en/blog/articles/why-we-migrated-from-wordpress-to-astro)) to any URL. The site is designed to be readable by both humans and AI.
+
+And internally, we use **Claude Code** daily to build the site's evolutions. AI isn't a future topic for us — it's already in our tools.
+
+### Ongoing technical work
+
+One thing we set aside during the migration: **dynamic Open Graph images**. Currently, sharing images are static. We're in the process of reintegrating dynamic generation, building on the work we'd developed for the [Fork it! Community](https://www.forkit.community/) website. It's a short project, but one that will have a real impact on how our articles look when shared on social media.
+
+---
+
+## Thank you
+
+A big thank you to everyone who contributed to this project, directly or indirectly: Grégoire, Noé, and a special thanks to **Ivan** for the design and the shared thinking on content.
