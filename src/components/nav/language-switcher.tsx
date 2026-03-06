@@ -13,6 +13,7 @@ import { getTranslationFn, type Locale } from '@/i18n/utils';
 
 export const LanguageSwitcher = (props: { locale: Locale }) => {
   const t = getTranslationFn(props.locale);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

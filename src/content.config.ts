@@ -2,6 +2,7 @@ import { defineCollection } from 'astro:content';
 import { file, glob } from 'astro/loaders';
 
 import { zConference } from '@/schemas/conferences';
+import { zEvent } from '@/schemas/events';
 import { zIcon } from '@/schemas/icons';
 import { zPerson } from '@/schemas/people';
 import { zPolaroid } from '@/schemas/polaroids';
@@ -23,6 +24,13 @@ export const collections = {
       pattern: '**/*.{md,mdx}',
     }),
     schema: zConference,
+  }),
+  events: defineCollection({
+    loader: glob({
+      base: './src/content/events',
+      pattern: '**/*.{md,mdx}',
+    }),
+    schema: zEvent,
   }),
   polaroids: defineCollection({
     loader: file('src/content/polaroids/data.json'),
