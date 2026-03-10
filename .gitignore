@@ -33,3 +33,5 @@ pnpm-debug.log*
 # zed
 /.zed/*
 !/.zed/settings.example.json
+
+/.claude/*.local.json

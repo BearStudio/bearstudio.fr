@@ -25,6 +25,9 @@
     "@astrojs/sitemap": "3.7.0",
     "@bearstudio/astro-typed-routes": "0.1.6",
     "@bearstudio/lunalink": "0.3.1",
+    "@effect/cli": "0.73.2",
+    "@effect/platform": "0.94.5",
+    "@effect/platform-node": "0.104.1",
     "@fontsource-variable/caveat": "5.2.8",
     "@fontsource-variable/inter": "5.2.8",
     "@fontsource-variable/roboto-slab": "5.2.8",
@@ -37,6 +40,7 @@
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "dayjs": "1.11.19",
+    "effect": "3.19.19",
     "embla-carousel-react": "8.6.0",
     "embla-carousel-wheel-gestures": "8.1.0",
     "hast-util-to-text": "4.0.2",
@@ -59,6 +63,7 @@
     "vaul": "1.1.2"
   },
   "devDependencies": {
+    "@effect/language-service": "0.77.0",
     "@eslint-react/eslint-plugin": "1.53.0",
     "@eslint/js": "9.35.0",
     "@ianvs/prettier-plugin-sort-imports": "4.7.0",
