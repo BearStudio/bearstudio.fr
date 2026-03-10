@@ -1,5 +1,5 @@
 ---
-title: 'Deploy Start UI Web v3 on Upsun v3.3.45'
+title: 'Deploy Start UI Web V3 on Upsun'
 slug: 'deploy-start-ui-web-v3-on-upsun'
 date: 2026-03-02
 categories:
@@ -15,13 +15,14 @@ metaDescription: >
   Test Upsun to deploy a project without any experience in DevOps, using a Start UI instance as an example.
 ---
 
-# Deploy Start UI Web v3 with Upsun
+# Deploy Start UI Web V3 with Upsun
 
 ## Foreword
 
 As part of exploring modern deployment solutions, I decided to try out [Upsun](https://upsun.com/), a relatively new PaaS platform built by the team behind Platform.sh.
 
 My goals were twofold:
+
 - **Assess Upsun as a potential alternative to Clever Cloud**, which I already use, and compare the developer experience, setup process, and overall usability.
 - **Attempt a first deployment “from scratch” with no prior knowledge of Upsun and no DevOps background**. The perspective here is deliberately that of a developer discovering the tool for the first time.
 
@@ -29,12 +30,12 @@ For this experiment, I chose to deploy our in-house tool, [Start UI Web](https:/
 
 This article is intentionally hands-on. It combines a **step-by-step tutorial** with **practical feedback**, highlighting strengths, friction points, and limitations along the way.
 
-------------------------------------------------------------------------
+---
 
 ## Step 1: Creating an Upsun Account
 
 First, you need to create an account on the Upsun platform via the official console.  
-*⚠️ This tutorial was made on Upsun v3.3.45 !*
+_⚠️ This tutorial was made on Upsun v3.3.45 !_
 
 You can sign up using an email address or a third-party provider (GitHub, Google, etc.).
 
@@ -44,7 +45,7 @@ At the end of the trial, your project will be suspended until you add a valid pa
 Once logged in, you’ll need to activate a project before you can proceed with deployments.
 So far, the interface feels promising, and the setup process is fairly standard.
 
-------------------------------------------------------------------------
+---
 
 ## Step 2: Fork / Initialize the Start UI Web v3 Repository and set Up Locally
 
@@ -58,7 +59,7 @@ A local environment file can be generated from the provided example file to enab
 Alternatively, you can initialize a new project using `pnpm create start-ui -t web myApp`.
 In both cases, the project must be pushed to a GitHub repository to be eligible for deployment. (Both approaches were tested and work equally well!)
 
-------------------------------------------------------------------------
+---
 
 ## Step 3: Syncing a GitHub Repository with Upsun
 
@@ -81,14 +82,14 @@ I had to repeat the process twice, even trying with two different repositories b
 
 ![Upsun error page when attempting to synchronize a GitHub repository.](images/upsun-invalid-installation.png)
 
-
-------------------------------------------------------------------------
+---
 
 ## Step 4: Initial Upsun Project Configuration
 
 Once the project is linked to Upsun, an initialization step is required to generate the necessary configuration files.
 
 This step allows you to:
+
 - define the technology used (Node.js),
 - add required services such as a database,
 - automatically generate a `.upsun` folder at the root of the project,
@@ -107,7 +108,7 @@ I assumed it was normal for this initial deployment to fail or not produce a wor
 I tried using the AI-assisted configuration generation option during the project initialization, but it didn’t work out. I was hoping for a kind of one-click deployment miracle.  
 However, since I didn't really understand the generated code, its architecture, or its purpose, I chose to switch back to a manual configuration. I had to revise it several times before fully understanding which fields were absolutely required (hooks, the start command, environment variables, etc.).
 
-------------------------------------------------------------------------
+---
 
 ## Step 5: Retrieving the Application and Database URLs
 
@@ -120,7 +121,8 @@ These details are essential to complete the application configuration, yet they�
 
 ![Command “upsun relationships” to retrieve information from the database.](images/upsun-infos-base-de-donnees.png)
 
-------------------------------------------------------------------------
+---
+
 ## Step 6: Customizing the Upsun Configuration File
 
 The configuration file located in the `.upsun` folder needs to be adapted to match the requirements of Start UI Web.
@@ -156,7 +158,8 @@ The **build hook** is used to install dependencies and generate the production b
 Using `--ignore-scripts` during installation is important to prevent Husky and Git hooks from being set up, which would otherwise clutter the logs with unnecessary errors.
 
 In our case:
-``` bash
+
+```bash
 npm i -g pnpm npm-run-all
 pnpm install --ignore-scripts
 pnpm postinstall
@@ -180,7 +183,7 @@ Don’t forget to update the command in the `web > commands > start` section to:
 
 After many attempts, these should normally be the only commands required.
 
-------------------------------------------------------------------------
+---
 
 ## Step 7: Commit, push, and deploy
 
@@ -190,7 +193,7 @@ If a GitHub integration is enabled, simply pushing to the remote repository auto
 
 The first full deployment can take several dozen minutes ⏱️.
 
-------------------------------------------------------------------------
+---
 
 ## Step 8: Accessing the Deployed Application
 
@@ -200,7 +203,7 @@ A short additional delay may occur on the first load, especially if the database
 ![Deployed Start UI login page](images/start-ui-login-deployed.jpeg)
 ![Deployed Start UI dashboard](images/start-ui-dashboard-deployed.png)
 
-------------------------------------------------------------------------
+---
 
 ## Commands, Tips, and Additional Notes
 
@@ -230,7 +233,7 @@ Variables defined in the configuration file are not automatically duplicated in 
 
 **Static variables** defined in the configuration file are version-controlled and **shared** across all environments, whereas variables defined via the **interface** can **vary** depending on the **context** (production, staging, etc.).
 
-------------------------------------------------------------------------
+---
 
 ## Feedback and Areas for Improvement
 
@@ -239,8 +242,8 @@ Variables defined in the configuration file are not automatically duplicated in 
 - The deployment time displayed in the interface is **6 minutes**, while in reality it often exceeds **20 minutes**, which can be a bit frustrating 😅.
 - The interface isn’t particularly intuitive: the “Redeploy” button lacks visibility, some options feel repetitive and appear in multiple submenus, access to certain tabs isn’t clearly indicated, and there are quite a few menus, buttons, and tabs with inconsistent styles.
 - The modals are not very ergonomic and make the experience less fluid:
-    - having to click on “Options” and then on another button,
-    - or going through the status button to perform an action.
+  - having to click on “Options” and then on another button,
+  - or going through the status button to perform an action.
 - The **options located in the left sidebar** are not very well highlighted and can be difficult to read.
 
 ![Focus on the options on the Upsun project dashboard.](images/upsun-deployment-options.png)
@@ -286,7 +289,7 @@ Variables defined in the configuration file are not automatically duplicated in 
 - In the Backup tab, the “i” button located under the title is not very clear.
 - The “Manage schedule” button lacks visual consistency with the rest of the interface and doesn’t look very polished.
 
-------------------------------------------------------------------------
+---
 
 ## Conclusion
 
@@ -295,10 +298,11 @@ Deploying Start UI Web v3 on Upsun is absolutely possible and works properly onc
 However, **the learning curve is real**, especially for a junior developer or someone discovering Upsun without guidance.
 
 Upsun offers a solid technical foundation, but its **usability and developer experience could benefit from simplification**, particularly when it comes to:
+
 - environment variable management
 - error readability
 - log accessibility
 
 As an alternative to Clever Cloud, Upsun is definitely worth testing, but at this stage it requires a fairly significant upfront investment in time and effort.
 
-If you’d like to go further, you can explore our *made-in-BearStudio* open-source libraries: [UI-State](/en/blog/posts/why-did-we-create-ui-state) and [Ficus UI](/en/blog/posts/ficus-ui-simple-and-composable-ui-for-react-native).
+If you’d like to go further, you can explore our _made-in-BearStudio_ open-source libraries: [UI-State](/en/blog/posts/why-did-we-create-ui-state) and [Ficus UI](/en/blog/posts/ficus-ui-simple-and-composable-ui-for-react-native).
