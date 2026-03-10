@@ -1,4 +1,5 @@
-import { z, type SchemaContext } from 'astro:content';
+import { type SchemaContext } from 'astro:content';
+import { z } from 'astro/zod';
 
 import { zSocialTypes } from '@/schemas/utils';
 
@@ -12,7 +13,7 @@ export const zPerson = ({ image }: SchemaContext) =>
       .array(
         z.object({
           type: zSocialTypes,
-          href: z.string().url(),
+          href: z.url(),
         })
       )
       .optional(),
