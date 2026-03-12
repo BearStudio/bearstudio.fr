@@ -1,6 +1,6 @@
 ---
-title: 'Deploy Start UI Web V3 on Upsun'
-slug: 'deploy-start-ui-web-v3-on-upsun'
+title: 'Deploy Start UI Web on Upsun'
+slug: 'deploy-start-ui-web-on-upsun'
 date: 2026-03-02
 categories:
   - 'developpement'
@@ -14,8 +14,6 @@ authors: ['heloise-guillaume']
 metaDescription: >
   Test Upsun to deploy a project without any experience in DevOps, using a Start UI instance as an example.
 ---
-
-# Deploy Start UI Web V3 with Upsun
 
 ## Foreword
 
