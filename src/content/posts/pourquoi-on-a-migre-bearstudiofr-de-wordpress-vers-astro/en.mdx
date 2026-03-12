@@ -2,7 +2,6 @@
 title: 'Why we migrated from WordPress to Astro'
 slug: 'why-we-migrated-from-wordpress-to-astro'
 date: 2026-03-05
-heroImage: 'og-image-en.png'
 thumbnail:
   image: 'pourquoi-on-a-migre-bearstudiofr-de-wordpress-to-astro.jpg'
   alt: 'BearStudio website displayed on multiple devices to show the different pages of the website'
@@ -33,7 +32,24 @@ _In February 2026, we finally made the move: bearstudio.fr now runs on Astro. He
 
 The BearStudio website has had three lives.
 
+<figure>
+  ![First version of the bearstudio.fr website built in
+  2016](premiere-version-du-site-developpee-en-2016.jpeg)
+  <figcaption>
+    The first version of the website, built in 2016. This screenshot is from
+    Internet Archive.
+  </figcaption>
+</figure>
+
 The first version, of which [an archive from November 2016](https://web.archive.org/web/20161107063014/http://www.bearstudio.fr/) still exists, ran on **GravCMS** — a file-based CMS with no database. In [November 2019](https://web.archive.org/web/20191117075057/https://www.bearstudio.fr/), we switched to WordPress — the obvious choice at the time, the one that "just worked." And for over six years, it did the job. Until February 2026, when we migrated everything to [Astro](https://astro.build/).
+
+<figure>
+  ![Second version of the bearstudio.fr
+  website](deuxieme-version-du-site-mis-en-production-fin-2019.jpeg)
+  <figcaption>
+    Second version of the website, deployed in November 2019
+  </figcaption>
+</figure>
 
 This wasn't a decision taken lightly. It was the result of years of accumulated friction, piling technical debt, and the desire to take back control of our own tool.
 
@@ -85,10 +101,28 @@ We chose not to use a headless CMS. All content is managed in Markdown or MDX fi
 
 The thirty or so days needed included much more than pure development. Here's how the project broke down:
 
+<figure>
+  ![On the left, the sitemap as a mindmap of the new bearstudio.fr website, on
+  the right, screenshots and links to
+  competitors](veille-concurentielle-et-sitemap.jpeg)
+  <figcaption>
+    Competitive research and information architecture were a major part of the
+    time spent on this new website.
+  </figcaption>
+</figure>
+
 - **Upfront thinking and competitive research** to define the direction of the new site — I actually spent a fair amount of time looking at what was being done elsewhere internationally
 - **Setting up the technical foundation** by [Grégoire](/en/team/gregoire-protas) and [Noé](/en/team/noe-tatoud)
 - **Development and design** primarily driven by [Ivan](/en/team/ivan-dalmet) and myself
 - **Editorial and SEO work** to preserve existing gains and refine our marketing message
+
+<figure>
+  ![Screenshot of Figma showing a quick
+  wireframe.](reflexion-de-decoupage-du-nouveau-site.jpeg)
+  <figcaption>
+    A lot of thinking went into the layout and structure of the new site.
+  </figcaption>
+</figure>
 
 From now on, the entire team can contribute, whether on the technical side or through blog posts.
 
@@ -152,13 +186,13 @@ The migration isn't an end in itself. It's a solid foundation we'll keep buildin
 
 ### Content that truly reflects who we are
 
-The long-term goal for the site is to be a real showcase of BearStudio: who we are, what we do, and the humans behind it all. Almost a public database of ourselves — a place where we make publicly accessible everything we have internally: our technologies, our way of working, our open source projects.
+The long-term goal for the site is to be a real showcase of BearStudio: who we are, what we do, and the humans behind it all. Almost a public database of ourselves — a place where we make publicly accessible everything we have internally: our technologies, our way of working, our open source projects, like [Start UI](/en/blog/posts/start-ui-opinionated-ui-starter).
 
 With that in mind, we're preparing several new sections. One dedicated to **events** — to know where to find the BearStudio team in real life, whether at meetups, conferences, or React and open source community events. Another focused on the **technologies we use** and our open source contributions, to document our technical choices and share what we build.
 
 ### AI is already in the site
 
-We've started preparing the site for the era of agents and LLMs. An `llms.txt` file is already in place at the root, and all blog posts are accessible in Markdown by appending `.md` ([example with this article](/en/blog/articles/why-we-migrated-from-wordpress-to-astro)) to any URL. The site is designed to be readable by both humans and AI.
+We've started preparing the site for the era of agents and LLMs. An `llms.txt` file is already in place at the root, and all blog posts are accessible in Markdown by appending `.md` ([example with this article](/en/blog/articles/why-we-migrated-from-wordpress-to-astro.md)) to any URL. The site is designed to be readable by both humans and AI.
 
 And internally, we use **Claude Code** daily to build the site's evolutions. AI isn't a future topic for us — it's already in our tools.
 

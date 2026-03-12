@@ -3,7 +3,6 @@ title: 'Pourquoi on a migré de WordPress vers Astro'
 date: 2026-03-05
 categories:
   - 'developpement'
-heroImage: 'og-image.png'
 thumbnail:
   image: 'pourquoi-on-a-migre-bearstudiofr-de-wordpress-to-astro.jpg'
   alt: 'Le site de BearStudio affiché sur plusieurs appareil afin de montrer plusieurs pages du site'
@@ -34,7 +33,24 @@ _En février 2026, on a finalement franchi le pas&nbsp;: bearstudio.fr tourne d�
 
 Le site de BearStudio a connu trois vies.
 
+<figure>
+  ![Première version du site bearstudio.fr développé en
+  2016](premiere-version-du-site-developpee-en-2016.jpeg)
+  <figcaption>
+    La première version du site développée en 2016. Cette capture est issue de
+    Internet Archive.
+  </figcaption>
+</figure>
+
 La première version, dont il existe [une archive datant de novembre 2016](https://web.archive.org/web/20161107063014/http://www.bearstudio.fr/), tournait sur **GravCMS**, un CMS à base de fichiers, sans base de données. En [novembre 2019](https://web.archive.org/web/20191117075057/https://www.bearstudio.fr/), on est passés à WordPress, la solution évidente à l'époque, celle qui "fonctionnait". Et pendant plus de six ans, ça a tourné. Jusqu'en février 2026, où on a tout migré vers [Astro](https://astro.build/).
+
+<figure>
+  ![Deuxième version du site de
+  bearstudio.fr](deuxieme-version-du-site-mis-en-production-fin-2019.jpeg)
+  <figcaption>
+    Deuxième version du site, mis en production en novembre 2019
+  </figcaption>
+</figure>
 
 Ce n'est pas une décision prise à la légère. C'est le résultat d'années de frictions accumulées, de dette technique qui s'entassait, et de l'envie de reprendre la main sur notre propre outil.
 
@@ -50,7 +66,7 @@ Le workflow était pénible. On avait les sources sur GitHub qu'il fallait dépl
 
 ### Les performances, un plafond de verre
 
-WordPress fait du rendu côté serveur par défaut. Résultat&nbsp;: des pages qui peuvent mettre du temps à charger, des scores Lighthouse décevants, un ressenti utilisateur en dessous de ce qu'on attendait pour notre propre site. Passer à de la génération statique avec Astro a changé la donne de façon drastique.
+WordPress fait du rendu côté serveur par défaut. Résultat&nbsp;: des pages qui peuvent mettre du temps à charger, des [scores Lighthouse](/fr/blog/articles/checklist-seo-technique) décevants, un ressenti utilisateur en dessous de ce qu'on attendait pour notre propre site. Passer à de la génération statique avec Astro a changé la donne de façon drastique.
 
 ### La sécurité, un risque permanent
 
@@ -78,7 +94,7 @@ Astro s'est distingué sur plusieurs points&nbsp;:
 
 **La flexibilité des Astro Islands**&nbsp;: on peut intégrer des composants React, Vue ou Svelte uniquement là où c'est nécessaire, sans charger un framework entier pour toute la page.
 
-On a choisi de ne pas utiliser de CMS headless. Tout le contenu est géré en fichiers Markdown ou MDX (pour les articles qui nécessitent des composants React embarqués). Simple, versionné avec le code, sans dépendance externe. Ce qui ressemblait à une contrainte est devenu un avantage&nbsp;: tout est au même endroit, tout le contexte est disponible, et avec l'IA, c'est une vraie force.
+On a choisi de ne pas utiliser de CMS headless (on avait d'ailleurs exploré [Outstatic](/fr/blog/articles/gerer-facilement-le-contenu-de-votre-site-avec-outstatic) par le passé). Tout le contenu est géré en fichiers Markdown ou MDX (pour les articles qui nécessitent des composants React embarqués). Simple, versionné avec le code, sans dépendance externe. Ce qui ressemblait à une contrainte est devenu un avantage&nbsp;: tout est au même endroit, tout le contexte est disponible, et avec l'IA, c'est une vraie force.
 
 ---
 
@@ -86,10 +102,28 @@ On a choisi de ne pas utiliser de CMS headless. Tout le contenu est géré en fi
 
 La trentaine de jours nécessaires inclut bien plus que du développement pur. Voici comment le projet s'est réparti&nbsp;:
 
+<figure>
+  ![Sur la gauche, le sitemap en mindmap du nouveau site bearstudio.fr, sur la
+  droite, des captures d'écran et des liens vers des
+  concurrents](veille-concurentielle-et-sitemap.jpeg)
+  <figcaption>
+    La veille concurentielle et le découpage des informations ont été une
+    majeure partie du temps pris pour ce nouveau site.
+  </figcaption>
+</figure>
+
 - **La réflexion en amont et la veille concurrentielle** pour définir la direction du nouveau site, j'ai effectivement passé pas mal de temps à voir ce qui se faisait ailleurs à l'international
 - **La mise en place du socle technique** par [Grégoire](/fr/equipe/gregoire-protas) et [Noé](/fr/equipe/noe-tatoud)
 - **Le développement et le design** portés principalement par [Ivan](/fr/equipe/ivan-dalmet) et moi
 - **Le travail éditorial et SEO** pour ne rien perdre des acquis et affiner le message marketing
+
+<figure>
+  ![Capture d'écran de Figma où l'on peut voir un rapide
+  wireframe.](reflexion-de-decoupage-du-nouveau-site.jpeg)
+  <figcaption>
+    Beaucoup de refléxion sur le découpage des blocs du site.
+  </figcaption>
+</figure>
 
 Désormais, c'est toute l'équipe qui va pouvoir contribuer, que ce soit technique ou via des articles de blog.
 
@@ -129,7 +163,7 @@ La version anglaise du site était une priorité. Se positionner sur la langue d
 
 ## Ce qu'on a gagné au quotidien
 
-**Performances**&nbsp;: le chargement est nettement plus rapide. La génération statique fait son travail.
+**Performances**&nbsp;: le chargement est nettement plus rapide. La génération statique fait son travail, couplée à une [optimisation des images](/fr/blog/articles/optimiser-images-site-web) native dans Astro.
 
 **Sérénité**&nbsp;: on a la main sur l'intégralité de la stack. Pas de plugin mystérieux, pas de mise à jour WordPress à la chaîne, pas de workflow de déploiement bancal. On écrit du code, on pousse sur GitHub, c'est en ligne (et on a même les prévisualisations des changements avant les mises en production, pratique pour tester).
 
@@ -153,13 +187,13 @@ La migration n'est pas une fin en soi. C'est une base saine sur laquelle on va c
 
 ### Du contenu qui reflète vraiment qui on est
 
-L'objectif du site à terme, c'est d'être une vraie vitrine de BearStudio&nbsp;: qui on est, ce qu'on fait, et les humains derrière tout ça. Presque une base de données publique de nous-mêmes, un endroit où l'on rend accessible au public tout ce qu'on a en interne&nbsp;: nos technologies, notre façon de travailler, nos projets open source.
+L'objectif du site à terme, c'est d'être une vraie vitrine de BearStudio&nbsp;: qui on est, ce qu'on fait, et les humains derrière tout ça. Presque une base de données publique de nous-mêmes, un endroit où l'on rend accessible au public tout ce qu'on a en interne&nbsp;: nos technologies, notre façon de travailler, nos projets open source, comme [Start UI](/fr/blog/articles/start-ui).
 
 Dans ce sens, on prépare plusieurs nouvelles sections. Une dédiée aux **événements**, pour savoir où retrouver la team BearStudio dans la vraie vie, que ce soit des meetups, des conférences ou des événements de la communauté React et open source. Une autre centrée sur les **technologies qu'on utilise** et sur nos contributions open source, pour documenter nos choix techniques et partager ce qu'on construit.
 
 ### L'IA, déjà dans le site
 
-On a commencé à préparer le site pour l'ère des agents et des LLMs. Un fichier `llms.txt` est déjà en place à la racine, et tous les articles de blog sont accessibles en Markdown en suffixant `.md` ([exemple avec cet article](/fr/blog/articles/pourquoi-on-a-migre-bearstudiofr-de-wordpress-vers-astro)) à n'importe quelle URL. Le site est pensé pour être lisible aussi bien par des humains que par des IA.
+On a commencé à préparer le site pour l'ère des agents et des LLMs. Un fichier `llms.txt` est déjà en place à la racine, et tous les articles de blog sont accessibles en Markdown en suffixant `.md` ([exemple avec cet article](/fr/blog/articles/pourquoi-on-a-migre-bearstudiofr-de-wordpress-vers-astro.md)) à n'importe quelle URL. Le site est pensé pour être lisible aussi bien par des humains que par des IA.
 
 Et en interne, on utilise **Claude Code** au quotidien pour construire les évolutions du site. L'IA n'est pas un sujet futur chez nous, c'est déjà dans nos outils.
 
