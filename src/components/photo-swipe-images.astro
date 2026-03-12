@@ -1,0 +1,27 @@
+---
+import { cn } from '@/lib/tailwind/utils';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div data-images class={cn(className)}>
+  <slot />
+</div>
+
+<script>
+  import { initImageLightbox } from '@/lib/photo-swipe';
+
+  document
+    .querySelectorAll<HTMLImageElement>('[data-images] img')
+    .forEach((img) => initImageLightbox(img));
+</script>
+
+<style>
+  [data-images] :global(img) {
+    cursor: zoom-in;
+  }
+</style>

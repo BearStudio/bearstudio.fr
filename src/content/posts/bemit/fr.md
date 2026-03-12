@@ -30,7 +30,7 @@ Première composante de cette convention, et non des moindres : BEM. Son but est
 
 Voici une illustration :
 
-```
+```css
 .person /* Un block lambda */
 .person__hand /* Une partie de ce block */
 .person--female /* Une variante de ce block */
@@ -40,23 +40,19 @@ Voici une illustration :
 
 De façon plus concrête, voici ce qu'un code en CSS simple donnerait une fois retranscrit selon la nomenclature BEM :
 
-```
+```html
 <div class="card article sponsorised">
-    <img class="img photo"/>
-    <p class="text presentation">
-        ...
-    </p>
+  <img class="img photo" />
+  <p class="text presentation">...</p>
 </div>
 ```
 
 Deviendra :
 
-```
+```html
 <div class="card article article--sponsorised">
-    <img class="card__img article__photo logo"/>
-    <p class="card__text article__presentation">
-        ...
-    </p>
+  <img class="card__img article__photo logo" />
+  <p class="card__text article__presentation">...</p>
 </div>
 ```
 
@@ -90,14 +86,12 @@ Personnellement, j'aime à décomposer cette structure en 4 préfixes principaux
    C'est une classe utilitaire. Elle est utilisée pour écraser et modifier le comportement des éléments ciblés.  
    Exemple : `u-text-align` `u-display` `u-spin` `u-no-margin` `...`
 
-```
+```html
 <div class="l-grid">
-    <div class="l-grid__cell o-card c-article c-article--sponsorised">
-        <img class="o-card__img c-article__photo"/>
-        <p class="o-card__text c-article__presentation u-text-center">
-            ...
-        </p>
-    </div>
+  <div class="l-grid__cell o-card c-article c-article--sponsorised">
+    <img class="o-card__img c-article__photo" />
+    <p class="o-card__text c-article__presentation u-text-center">...</p>
+  </div>
 </div>
 ```
 
@@ -129,7 +123,7 @@ En s'appuyant sur le namespacing précédent, nous pouvons décomposer l'archite
 
 Une fois cette architecture mise en place, il devient aisé dans chacun de ces dossiers d'ajouter un fichier CSS par élément créé, tous appelés ensuite dans un fichier global (_app.less ou app.scss par exemple_) de la manière suivante :
 
-```
+```scss
 /* ----- SETTINGS ----- */
 /* Legacies, settings and overall configuations */
 

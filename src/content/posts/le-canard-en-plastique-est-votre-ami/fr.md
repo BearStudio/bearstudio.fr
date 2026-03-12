@@ -45,13 +45,13 @@ Assez parlé de la théorie, passons à la pratique avec l’exemple suivant :
 
 J'ai une liste de nombres avec lesquels je ne veux additionner que les nombres pairs.
 
-```
+```javascript
 const array = [1, 2, 4, 7, 14, 21, 34, 39];
 ```
 
 J’ai donc écrit la fonction suivante
 
-```
+```javascript
 const reduceEvenNumbers = (numberArray: Array<number>) => {
   return numberArray.reduce((sum, num) => {
     return num % 2 === 1 ? sum + num  : sum; 
@@ -73,7 +73,7 @@ J’explique donc à mon canard ce que je veux faire: 
 
 Et c’est en expliquant le raisonnement que l’on peut voir l’erreur. La vérification sur mon modulo n’est pas la bonne, et doit être changée pour enfin avoir le résultat attendu
 
-```
+```javascript
 const reduceEvenNumbers = (numberArray: Array<number>) => {
   return numberArray.reduce((sum, num) => {
     return num % 2 === 0 ? sum + num  : sum; 

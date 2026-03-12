@@ -1,4 +1,5 @@
-import { reference, z, type SchemaContext } from 'astro:content';
+import { reference, type SchemaContext } from 'astro:content';
+import { z } from 'astro/zod';
 
 export type Conference = z.infer<ReturnType<typeof zConference>>;
 export const zConference = ({ image }: SchemaContext) =>
@@ -20,5 +21,5 @@ export const zConferenceInstance = () =>
     link: z.string().optional(),
     language: z.string().optional(),
     speakers: z.array(reference('people')).optional(),
-    replay: z.string().url().optional(),
+    replay: z.url().optional(),
   });

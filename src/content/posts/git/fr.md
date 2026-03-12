@@ -32,7 +32,7 @@ Git gère une architecture dite “à trois arbres”. Mais on pourrait aussi bi
 - La **copie de travail (working directory)** représente votre espace de travail. C’est l’endroit où vous avancez sur vos tâches en cours en éditant des fichiers. Jusque là, rien qui sorte de l’ordinaire !
 - **L’index (staging area)** est une zone de transition. Cette zone représente l’ensemble des modifications qui constitueront la prochaine version de votre travail. Ces modifications peuvent être ajoutées à l’index grâce à la commande :
 
-```
+```bash
 git add <noms de fichiers>
 ```
 
@@ -40,7 +40,7 @@ git add <noms de fichiers>
 
 - Le **dépôt local (local repository)** est l’endroit où sont conservées toutes les versions de votre travail. Une version est composée de modifications ayant été précédemment ajoutées à l’index, et ayant été validées grâce à la commande :
 
-```
+```bash
 git commit [-m <filename>]
 ```
 
@@ -65,7 +65,7 @@ Architecture Git
 
 Voilà, maintenant, vous savez selon quels processus sont gérées les modifications de votre travail. Pourtant, si vous ouvrez votre dépôt Git dans votre explorateur de fichiers, il est probable que l’état actuel des arbres ne vous saute pas aux yeux... et c’est normal ! Tout ce que vous montre l’explorateur de fichiers, c’est le contenu de votre copie de travail. Pour connaître l’état de votre index, il suffit d’utiliser la commande :
 
-```
+```bash
 git status
 ```
 
@@ -75,13 +75,13 @@ git status
 
 Un des intérêts d’utiliser un logiciel de versionnement, c’est de pouvoir consulter les différentes versions de son travail. Il est possible de lister tous les commits effectués grâce à la commande :
 
-```
+```bash
 git log
 ```
 
 Il est également possible de retourner à une ancienne version afin de naviguer dedans grâce à la commande
 
-```
+```bash
 git checkout <commit>
 ```
 
@@ -113,19 +113,19 @@ Maintenant que vous êtes convaincu, voici un petit mode d’emploi des branches
 
 - **Pour créer une nouvelle branche**, il faut utiliser la commande :
 
-```
+```bash
 git branch <branch name>
 ```
 
 - **Pour lister vos branches**, utilisez la même commande mais cette fois-ci sans argument :
 
-```
+```bash
 git branch
 ```
 
 - **Pour supprimer une branche**, c’est encore la même commande, avec une option :
 
-```
+```bash
 git branch -d <branch name>
 ```
 
@@ -133,7 +133,7 @@ git branch -d <branch name>
 
 - **Pour changer de branche**, il faut utiliser la commande :
 
-```
+```bash
 git checkout <branch name>
 ```
 
@@ -145,7 +145,7 @@ C’est bien joli d’avoir toutes les fonctionnalités sur des branches différ
 
 Il faut se placer sur la branche destination et lancer la commande suivante :
 
-```
+```bash
 git merge <source branch name>
 ```
 
@@ -157,7 +157,7 @@ Comme mentionné plus haut, lorsque l’on merge des branches ensemble, des conf
 
 Faut-il garder la version de la branche source ? Celle de la branche destination ? Ou encore, faut-il combiner les deux ? Git ne peut hélas pas le deviner. Tout ce qu’il peut faire pour vous, c’est faire ressortir les conflits grâce à des suites de caractères bizarres, ça ressemble à ça :
 
-```
+```bash
 <<<<<<< HEAD
   <meta name="description" content="Sandbox website">
   <meta name="author" content="Axelle Boucher">
@@ -183,7 +183,7 @@ Il existe heureusement une solution simple. En effet, il est possible d’héber
 
 Pour utiliser un dépôt distant, il faut l’indiquer à Git grâce à la commande :
 
-```
+```bash
 git remote add <name> <url>
 ```
 
@@ -191,7 +191,7 @@ git remote add <name> <url>
 
 Vous pouvez consulter la liste des dépôts distants que vous avez paramétrés grâce à la commande :
 
-```
+```bash
 git remote -v
 ```
 
@@ -201,7 +201,7 @@ Pour faire simple, il y a trois catégories d’opérations possibles sur un dé
 
 - Envoyer des données depuis votre dépôt local vers un dépôt distant. Cela est possible grâce à la commande :
 
-```
+```bash
 git push origin <branch name>
 ```
 
@@ -209,7 +209,7 @@ git push origin <branch name>
 
 - Récupérer des données du dépôt distant (et les placer sur votre dépôt local). Cela est possible grâce à la commande :
 
-```
+```bash
 git pull
 ```
 
@@ -217,11 +217,11 @@ git pull
 
 - Et bien entendu, consulter l’état du dépôt distant comme vous le faites déjà sur votre dépôt local. Souvent, il suffira d’ajouter des options ou arguments aux commandes que vous connaissez déjà. Voici les plus couramment utilisées :
 
-```
+```bash
 git log origin <branch name>
 ```
 
-```
+```bash
 git branch -r
 ```
 

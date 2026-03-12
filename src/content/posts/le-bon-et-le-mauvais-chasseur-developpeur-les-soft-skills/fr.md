@@ -46,11 +46,11 @@ Je vais utiliser le cas du nom des variables comme cas concret.
 
 Il va nommer une variable d’une façon pas ou peu explicite :
 
-```
+```javascript
 const v = () => [...] // Là j’abuse mais ça existe 
 ```
 
-```
+```javascript
 const values = () => [...] 
 ```
 
@@ -58,7 +58,7 @@ const values = () => [...] 
 
 Il contextualise son wording afin d’expliciter le plus clairement possible ce dont il s’agit :
 
-```
+```javascript
 const getFormValuesSortedByName = () => [...]
 ```
 
