@@ -35,7 +35,9 @@ export async function getPostsCollection(params: {
           .at(-1)
           ?.replace('.mdx', '')
           .replace('.md', '');
-        return itemLocale === params.locale;
+        // Filter out posts with a future date
+        const isPublished = item.data.date <= new Date();
+        return itemLocale === params.locale && isPublished;
       })
       .sort(sortByLatest)
       .map(postWithComputed)
