@@ -13,7 +13,7 @@ export const zPerson = ({ image }: SchemaContext) =>
       .array(
         z.object({
           type: zSocialTypes,
-          href: z.string().url(),
+          href: z.url(),
         })
       )
       .optional(),
