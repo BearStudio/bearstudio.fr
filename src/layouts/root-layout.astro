@@ -15,6 +15,7 @@ import { getLink } from '@/lib/link';
 import { getSiteUrl } from '@/lib/site/get-site-url';
 import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 import { getId } from '@/components/seo/utils';
+import { ADDRESS } from '@/content/address';
 import { SOCIALS } from '@/content/socials';
 
 const { t, locale } = getTranslationUtilities(Astro.currentLocale);
@@ -80,6 +81,17 @@ dayjs.locale(Astro.currentLocale);
         name: 'BearStudio',
         url: `${getSiteUrl()}/`,
         sameAs: SOCIALS.map((s) => s.href),
+        logo: `${getSiteUrl()}/favicon.svg`,
+        foundingDate: '2016',
+        description: t('common.footer.description'),
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: ADDRESS.street,
+          postalCode: ADDRESS.postalCode,
+          addressLocality: ADDRESS.city,
+          addressRegion: ADDRESS.region,
+          addressCountry: ADDRESS.country,
+        },
       }}
     />
   </head>
