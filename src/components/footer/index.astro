@@ -5,6 +5,7 @@ import { getLink } from '@/lib/link';
 import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 import { Logo } from '@/components/ui/logo';
 import { ScratchFull } from '@/components/ui/scratch';
+import { ADDRESS } from '@/content/address';
 import { SOCIALS } from '@/content/socials';
 
 import { getFooterNavItems } from './footer-nav';
@@ -25,9 +26,10 @@ const { t, locale } = getTranslationUtilities(Astro.currentLocale);
         <Logo className="text-accent w-24 sm:w-32" />
       </a>
       <address class="text-xs not-italic">
-        {t('common.footer.address.street')}<br />
-        {t('common.footer.address.city')}<br />
-        {t('common.footer.address.region')}
+        {ADDRESS.street}<br />
+        {ADDRESS.postalCode}
+        {ADDRESS.city}<br />
+        {ADDRESS.region}, {ADDRESS.countryName}
       </address>
     </div>
     <div class="-mx-2 flex-2 columns-2 flex-col text-xs md:pt-10">

@@ -1,6 +1,6 @@
 ---
 import { Schema } from 'astro-seo-schema';
-import { Image } from 'astro:assets';
+import { getImage, Image } from 'astro:assets';
 import { render } from 'astro:content';
 
 import dayjs from 'dayjs';
@@ -17,6 +17,7 @@ import {
   getPostsCollectionLinkedToPerson,
   type PostWithComputed,
 } from '@/lib/posts';
+import { getSiteUrl } from '@/lib/site/get-site-url';
 import { PostsCarousel } from '@/components/blog/posts-carousel';
 import { enhancePostWithImage } from '@/components/blog/utils';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
@@ -82,6 +83,17 @@ const { Content } = await render(person);
 const url = new URL(Astro.url.pathname, Astro.site);
 const slug = person.data._computed.slug;
 
+const personImageResult = person.data.picture
+  ? await getImage({ src: person.data.picture, width: 800 })
+  : undefined;
+const personImageUrl = personImageResult
+  ? `${getSiteUrl()}${personImageResult.src}`
+  : undefined;
+
+const personDescription = person.body
+  ? (await mdxToPlainText(person.body)).text.slice(0, 155)
+  : undefined;
+
 if (!slug) {
   return new Response(null, { status: 404 });
 }
@@ -106,9 +118,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
   <SEO
     slot="seo"
     title={person.data.name}
-    description={person.body
-      ? (await mdxToPlainText(person.body)).text.slice(0, 155)
-      : t('team.root.description')}
+    description={personDescription ?? t('team.root.description')}
     url={url}
     alternates={getAlternates('/fr/equipe/:id', {
       id: slug,
@@ -120,13 +130,28 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     slot="ld+json"
     item={{
       '@context': 'https://schema.org',
-      '@type': 'Person',
-      name: person.data.name,
-      jobTitle: person.data.job ?? undefined!,
-      worksFor:
-        person.data.status === 'current' ? getId('organization') : undefined!,
-      sameAs: (person.data.socials ?? []).map((social) => social.href),
-      isAccessibleForFree: true,
+      '@type': 'ProfilePage',
+      mainEntity: {
+        '@type': 'Person',
+        name: person.data.name,
+        ...(person.data.job ? { jobTitle: person.data.job } : {}),
+        ...(person.data.status === 'current'
+          ? {
+              worksFor: {
+                '@type': 'Organization',
+                '@id': getId('organization'),
+                name: 'BearStudio',
+              },
+            }
+          : {}),
+        sameAs: (person.data.socials ?? []).map((social) => social.href),
+        url: url.toString(),
+        ...(personImageUrl ? { image: personImageUrl } : {}),
+        ...(personDescription ? { description: personDescription } : {}),
+        ...(person.data.services?.length
+          ? { knowsAbout: person.data.services }
+          : {}),
+      },
     }}
   />
   <Hero>

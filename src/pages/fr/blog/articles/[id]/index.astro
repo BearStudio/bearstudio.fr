@@ -13,6 +13,7 @@ import {
   getPostSlugInOtherLocale,
   type PostWithComputed,
 } from '@/lib/posts';
+import { getSiteUrl } from '@/lib/site/get-site-url';
 import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
@@ -21,6 +22,7 @@ import Hero from '@/components/hero/hero.astro';
 import PhotoSwipeImages from '@/components/photo-swipe-images.astro';
 import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
+import { getId } from '@/components/seo/utils';
 import { FormattedDate } from '@/components/ui/formatted-date';
 import type { Locale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
@@ -61,6 +63,43 @@ const articleBody = (await container.renderToString(Content))
   .replace(/<[^>]*>/g, '')
   .trim();
 const wordCount = articleBody.split(' ').length;
+
+const { getImage } = await import('astro:assets');
+const heroImageResult = post.data.heroImage
+  ? await getImage({ src: post.data.heroImage, width: 1200 })
+  : undefined;
+const heroImageUrl = heroImageResult
+  ? `${getSiteUrl()}${heroImageResult.src}`
+  : undefined;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const blogPostingSchema: any = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  articleBody,
+  wordCount,
+  datePublished: dayjs(post.data.date).format('YYYY-MM-DD'),
+  abstract: post.data.excerpt ?? '',
+  description: post.data.metaDescription ?? '',
+  isAccessibleForFree: true,
+  keywords: post.data.tags ?? [],
+  ...(heroImageUrl ? { image: heroImageUrl } : {}),
+  url: url.toString(),
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url.toString() },
+  publisher: { '@id': getId('organization') },
+  inLanguage: locale,
+  author: post.data._computed.authors.map((author) => ({
+    '@type': 'Person',
+    name: author.data.name,
+    ...(author.data.job ? { jobTitle: author.data.job } : {}),
+    ...(author.data._computed.slug
+      ? {
+          url: `${getSiteUrl()}${getLink('/fr/equipe/:id', locale, { id: author.data._computed.slug })}`,
+        }
+      : {}),
+  })),
+};
 
 const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({
@@ -104,24 +143,7 @@ const [slugFr, slugEn] = await Promise.all([
     breadcrumb={breadcrumb}
     markdownUrl={`${Astro.url.pathname}.md`}
   />
-  <Schema
-    slot="ld+json"
-    item={{
-      '@context': 'https://schema.org',
-      '@type': 'BlogPosting',
-      articleBody,
-      headline: post.data.title,
-      wordCount,
-      datePublished: dayjs(post.data.date).format('YYYY-MM-DD'),
-      abstract: post.data.excerpt ?? '',
-      isAccessibleForFree: true,
-      author: post.data._computed.authors.map((author) => ({
-        '@type': 'Person',
-        name: author.data.name,
-      })),
-      keywords: post.data.tags ?? [],
-    }}
-  />
+  <Schema slot="ld+json" item={blogPostingSchema} />
   <Hero image={post.data.heroImage}>
     <HeroContent breadcrumb={breadcrumb}>
       <h1
