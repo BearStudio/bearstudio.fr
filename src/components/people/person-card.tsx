@@ -51,9 +51,9 @@ export const PersonCard = (props: {
         )}
       </div>
       <div className="flex flex-1 flex-col gap-1 px-1">
-        <h2 className="font-heading leading-tight font-bold text-sm sm:text-base">
+        <h3 className="font-heading leading-tight font-bold text-sm sm:text-base">
           {props.person.data.name}
-        </h2>
+        </h3>
         {!!props.person.data.job && (
           <p className="text-xs">{props.person.data.job}</p>
         )}

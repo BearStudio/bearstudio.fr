@@ -30,9 +30,9 @@ export const PostCard = (props: {
         )}
       </div>
       <div className="flex flex-1 flex-col gap-2 px-1">
-        <h2 className="font-heading flex-1 text-lg leading-tight font-bold line-clamp-2">
+        <h3 className="font-heading flex-1 text-lg leading-tight font-bold line-clamp-2">
           {props.post.data.title}
-        </h2>
+        </h3>
         <FormattedDate
           locale={props.locale}
           date={props.post.data.date}
