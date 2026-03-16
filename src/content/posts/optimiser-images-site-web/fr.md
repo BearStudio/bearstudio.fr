@@ -68,5 +68,3 @@ L’image est ensuite téléchargeable en 2 formats : SVG et PNG. Une fois l’i
 _PS : il est aussi possible, au lieu de télécharger l’image, de générer un lien ou une iFrame (une balise HTML intégrant du contenu venu d’une autre page)._
 
 ![](images/carbon2-3.png)
-
-_[Grégoire Protas](/fr/equipe)_
