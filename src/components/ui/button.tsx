@@ -13,11 +13,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'bg-accent text-accent-foreground border border-b-3 pb-px active:translate-y-0.5 active:border-b border-accent-border hover:bg-accent/90 [a:hover_&]:bg-accent/90 [button:hover_&]:bg-accent/90',
+          'bg-accent text-accent-foreground border border-accent-border pressable pressable-accent hover:bg-accent/90 [a:hover_&]:bg-accent/90 [button:hover_&]:bg-accent/90',
         secondary:
-          'bg-secondary text-secondary-foreground border border-b-3 pb-px active:translate-y-0.5 active:border-b border-secondary-border hover:bg-secondary/90 [a:hover_&]:bg-secondary/90 [button:hover_&]:bg-secondary/90',
+          'bg-secondary text-secondary-foreground border border-secondary-border pressable pressable-secondary hover:bg-secondary/90 [a:hover_&]:bg-secondary/90 [button:hover_&]:bg-secondary/90',
         secondaryOnDark:
-          'bg-primary text-primary-foreground border border-b-3 pb-px active:translate-y-0.5 active:border-b border-primary-border hover:brightness-125 [a:hover_&]:brightness-125 [button:hover_&]:brightness-125',
+          'bg-primary text-primary-foreground border border-primary-border pressable pressable-primary hover:brightness-125 [a:hover_&]:brightness-125 [button:hover_&]:brightness-125',
         ghost:
           'hover:bg-black/5  [a:hover_&]:bg-black/5 [button:hover_&]:bg-black/5 active:translate-y-px',
         ghostOnDark:

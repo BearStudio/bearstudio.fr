@@ -207,6 +207,40 @@
   }
 }
 
+@utility pressable {
+  box-shadow: 0 var(--pressable-depth, 2px) 0 0
+    var(--pressable-color, var(--color-border));
+
+  &:active {
+    translate: 0 var(--pressable-depth, 2px);
+    box-shadow: 0 0 0 0 var(--pressable-color, var(--color-border));
+  }
+}
+
+@utility pressable-sm {
+  --pressable-depth: 1px;
+}
+
+@utility pressable-lg {
+  --pressable-depth: 3px;
+}
+
+@utility pressable-accent {
+  --pressable-color: var(--color-accent-border);
+}
+
+@utility pressable-secondary {
+  --pressable-color: var(--color-secondary-border);
+}
+
+@utility pressable-primary {
+  --pressable-color: var(--color-primary-border);
+}
+
+@utility pressable-destructive {
+  --pressable-color: var(--color-destructive-border);
+}
+
 @layer components {
   @keyframes caret-blink {
     0%,
