@@ -21,16 +21,22 @@ export function AssetCard({
   return (
     <div
       className={cn(
-        'relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-muted',
-        withBackground && 'border border-white/10 '
+        'bg-card border-card-border flex flex-col gap-2.5 overflow-hidden rounded-md border border-b-3 p-2 transition-all'
       )}
     >
-      <img
-        src={`${pathWithoutExt}.svg`}
-        alt={alt}
-        className="w-full overflow-hidden"
-      />
-      <div className="flex w-full items-center justify-center gap-2 p-2">
+      <div
+        className={cn(
+          'bg-muted relative flex  w-full flex-1 items-center justify-center overflow-hidden rounded-sm',
+          withBackground && 'border border-white/10'
+        )}
+      >
+        <img
+          src={`${pathWithoutExt}.svg`}
+          alt={alt}
+          className="h-full w-full object-contain"
+        />
+      </div>
+      <div className="flex w-full items-center justify-center gap-2">
         <Button size="sm" asChild className="flex-1" variant="secondary">
           <a href={`${pathWithoutExt}.svg`} download>
             SVG

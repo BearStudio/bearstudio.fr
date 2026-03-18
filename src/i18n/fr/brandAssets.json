@@ -4,61 +4,47 @@
       "logoAssets": "Ressources marque"
     },
     "modal": {
-      "title": "Ressources marque",
-      "description": "Téléchargez rapidement le logo BearStudio",
+      "title": "Ressources marque BearStudio",
+      "description": "Téléchargez le logo officiel en SVG et PNG. Gratuit pour presse, présentations et marketing.",
       "copyright": "© {{year}} BearStudio"
     },
     "hero": {
-      "title": "Ressources marque",
-      "description": "Téléchargez les logos et icônes BearStudio pour vos supports de communication."
+      "title": "Ressources marque BearStudio",
+      "description": "Téléchargez le logo et les ressources marque en SVG, PNG et JPG."
     },
     "sections": {
       "logoWithoutBg": {
         "title": "Logo sans fond",
-        "description": "Version complète avec le nom BearStudio"
+        "description": "Le logotype complet sur fond transparent.",
+        "usage": "Écrans, présentations, interfaces claires ou sombres."
       },
       "logoWithBg": {
         "title": "Logo avec fond",
-        "description": "Variantes prévues pour un fond coloré ou blanc"
+        "description": "Variantes du logo avec fond uni.",
+        "usage": "Impression, signalétique, réseaux sociaux, documents sur fond coloré ou blanc."
       },
       "iconWithoutBg": {
         "title": "Icône sans fond",
-        "description": "Symbole seul, format carré"
+        "description": "Le symbole au format carré, fond transparent.",
+        "usage": "Favicons, icônes d'applications, identité compacte."
       },
       "iconWithBg": {
         "title": "Icône avec fond",
-        "description": "Symbole avec fond coloré ou blanc"
-      },
-      "logos": {
-        "title": "Logo",
-        "description": "Version complète avec le nom BearStudio"
-      },
-      "icons": {
-        "title": "Icône",
-        "description": "Symbole seul, format carré"
-      },
-      "withBackground": {
-        "title": "Avec fond",
-        "description": "Variantes prévues pour un fond coloré ou blanc"
-      },
-      "guidelines": {
-        "title": "Guide d’utilisation",
-        "description": "Respectez les proportions, les marges minimales et les contrastes. N’altérez pas les couleurs ni la forme."
-      },
-      "cta": {
-        "title": "Besoin de ressources spécifiques ?",
-        "subtitle": "Nous pouvons fournir d’autres formats ou variantes sur demande."
+        "description": "Le symbole avec fond uni.",
+        "usage": "Avatars sociaux, badges, impression."
       }
     },
     "labels": {
       "black": "Noir",
       "white": "Blanc",
       "blue": "Bleu",
-      "yellow": "Jaune",
-      "download": "Télécharger",
-      "svg": "SVG",
-      "png": "PNG",
-      "jpg": "JPG"
+      "yellow": "Jaune"
+    },
+    "alts": {
+      "logo": "Logo BearStudio {{color}}, fond transparent, téléchargement SVG et PNG",
+      "logoWithBg": "Logo BearStudio {{color}} avec fond, téléchargement JPG",
+      "icon": "Icône BearStudio {{color}}, fond transparent, téléchargement SVG et PNG",
+      "iconWithBg": "Icône BearStudio {{color}} avec fond, téléchargement JPG"
     }
   }
 }

@@ -1,64 +1,50 @@
 {
   "root": {
     "popover": {
-      "logoAssets": "Logo Assets"
+      "logoAssets": "Brand Assets"
     },
     "modal": {
-      "title": "Logo Assets",
-      "description": "Quickly download the BearStudio logo",
+      "title": "BearStudio Brand Assets",
+      "description": "Download the official logo in SVG and PNG. Free for press, presentations, and marketing.",
       "copyright": "© {{year}} BearStudio"
     },
     "hero": {
-      "title": "Brand Assets",
-      "description": "Download BearStudio logos and icons for your communications."
+      "title": "BearStudio Brand Assets",
+      "description": "Download the official logo and brand assets in SVG, PNG, and JPG."
     },
     "sections": {
       "logoWithoutBg": {
         "title": "Logo without background",
-        "description": "Full version with BearStudio name"
+        "description": "The full wordmark with transparent background.",
+        "usage": "Digital screens, presentations, light or dark interfaces."
       },
       "logoWithBg": {
         "title": "Logo with background",
-        "description": "Variants designed for colored or white backgrounds"
+        "description": "Logo variants with solid background.",
+        "usage": "Print, signage, social media, documents on colored or white backgrounds."
       },
       "iconWithoutBg": {
         "title": "Icon without background",
-        "description": "Symbol only, square format"
+        "description": "The bear symbol in square format, transparent background.",
+        "usage": "Favicons, app icons, compact branding."
       },
       "iconWithBg": {
         "title": "Icon with background",
-        "description": "Symbol with colored or white background"
-      },
-      "logos": {
-        "title": "Logo",
-        "description": "Full version with BearStudio name"
-      },
-      "icons": {
-        "title": "Icon",
-        "description": "Symbol only, square format"
-      },
-      "withBackground": {
-        "title": "With background",
-        "description": "Variants designed for colored or white backgrounds"
-      },
-      "guidelines": {
-        "title": "Usage guidelines",
-        "description": "Respect proportions, minimum clear space, and contrast. Do not alter colors or shape."
-      },
-      "cta": {
-        "title": "Need specific assets?",
-        "subtitle": "We can provide other formats or variants on request."
+        "description": "The bear symbol with solid background.",
+        "usage": "Social avatars, badges, print."
       }
     },
     "labels": {
       "black": "Black",
       "white": "White",
       "blue": "Blue",
-      "yellow": "Yellow",
-      "download": "Download",
-      "svg": "SVG",
-      "png": "PNG",
-      "jpg": "JPG"
+      "yellow": "Yellow"
+    },
+    "alts": {
+      "logo": "BearStudio logo in {{color}}, transparent background, SVG and PNG download",
+      "logoWithBg": "BearStudio logo in {{color}} with background, JPG download",
+      "icon": "BearStudio icon in {{color}}, transparent background, SVG and PNG download",
+      "iconWithBg": "BearStudio icon in {{color}} with background, JPG download"
     }
   }
 }
