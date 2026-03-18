@@ -14,7 +14,7 @@ const { t, locale } = getTranslationUtilities(Astro.currentLocale);
 const breadcrumb = breadcrumbEntries(locale)((entry) => [
   entry({
     label: t('brandAssets.root.hero.title'),
-    path: '/fr/ressources-marque',
+    path: '/fr/branding',
     params: {},
   }),
 ]);
@@ -25,7 +25,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     slot="seo"
     title={t('brandAssets.root.hero.title')}
     description={t('brandAssets.root.hero.description')}
-    alternates={getAlternates('/fr/ressources-marque', {})}
+    alternates={getAlternates('/fr/branding', {})}
     breadcrumb={breadcrumb}
   />
   <Hero>

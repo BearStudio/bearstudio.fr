@@ -59,7 +59,7 @@ const FOOTER_NAV: Array<NavItem> = [
     i18nKey: 'common.nav.career',
   },
   {
-    getHref: (locale) => getLink('/fr/ressources-marque', locale, {}),
+    getHref: (locale) => getLink('/fr/branding', locale, {}),
     i18nKey: 'common.nav.brandAssets',
   },
   {

@@ -1,16 +1,16 @@
 {
   "root": {
     "popover": {
-      "logoAssets": "Ressources marque"
+      "logoAssets": "Branding"
     },
     "modal": {
-      "title": "Ressources marque BearStudio",
-      "description": "Téléchargez le logo officiel en SVG et PNG. Gratuit pour presse, présentations et marketing.",
+      "title": "BearStudio Branding",
+      "description": "Téléchargez le logo et les éléments de branding en SVG, PNG et JPG.",
       "copyright": "© {{year}} BearStudio"
     },
     "hero": {
-      "title": "Ressources marque BearStudio",
-      "description": "Téléchargez le logo et les ressources marque en SVG, PNG et JPG."
+      "title": "BearStudio Branding",
+      "description": "Téléchargez le logo et les éléments de branding en SVG, PNG et JPG."
     },
     "sections": {
       "logoWithoutBg": {
