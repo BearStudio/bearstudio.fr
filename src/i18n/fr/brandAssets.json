@@ -1,0 +1,64 @@
+{
+  "root": {
+    "popover": {
+      "logoAssets": "Ressources marque"
+    },
+    "modal": {
+      "title": "Ressources marque",
+      "description": "Téléchargez rapidement le logo BearStudio",
+      "copyright": "© {{year}} BearStudio"
+    },
+    "hero": {
+      "title": "Ressources marque",
+      "description": "Téléchargez les logos et icônes BearStudio pour vos supports de communication."
+    },
+    "sections": {
+      "logoWithoutBg": {
+        "title": "Logo sans fond",
+        "description": "Version complète avec le nom BearStudio"
+      },
+      "logoWithBg": {
+        "title": "Logo avec fond",
+        "description": "Variantes prévues pour un fond coloré ou blanc"
+      },
+      "iconWithoutBg": {
+        "title": "Icône sans fond",
+        "description": "Symbole seul, format carré"
+      },
+      "iconWithBg": {
+        "title": "Icône avec fond",
+        "description": "Symbole avec fond coloré ou blanc"
+      },
+      "logos": {
+        "title": "Logo",
+        "description": "Version complète avec le nom BearStudio"
+      },
+      "icons": {
+        "title": "Icône",
+        "description": "Symbole seul, format carré"
+      },
+      "withBackground": {
+        "title": "Avec fond",
+        "description": "Variantes prévues pour un fond coloré ou blanc"
+      },
+      "guidelines": {
+        "title": "Guide d’utilisation",
+        "description": "Respectez les proportions, les marges minimales et les contrastes. N’altérez pas les couleurs ni la forme."
+      },
+      "cta": {
+        "title": "Besoin de ressources spécifiques ?",
+        "subtitle": "Nous pouvons fournir d’autres formats ou variantes sur demande."
+      }
+    },
+    "labels": {
+      "black": "Noir",
+      "white": "Blanc",
+      "blue": "Bleu",
+      "yellow": "Jaune",
+      "download": "Télécharger",
+      "svg": "SVG",
+      "png": "PNG",
+      "jpg": "JPG"
+    }
+  }
+}

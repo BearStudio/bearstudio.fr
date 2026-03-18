@@ -1,0 +1,64 @@
+{
+  "root": {
+    "popover": {
+      "logoAssets": "Logo Assets"
+    },
+    "modal": {
+      "title": "Logo Assets",
+      "description": "Quickly download the BearStudio logo",
+      "copyright": "© {{year}} BearStudio"
+    },
+    "hero": {
+      "title": "Brand Assets",
+      "description": "Download BearStudio logos and icons for your communications."
+    },
+    "sections": {
+      "logoWithoutBg": {
+        "title": "Logo without background",
+        "description": "Full version with BearStudio name"
+      },
+      "logoWithBg": {
+        "title": "Logo with background",
+        "description": "Variants designed for colored or white backgrounds"
+      },
+      "iconWithoutBg": {
+        "title": "Icon without background",
+        "description": "Symbol only, square format"
+      },
+      "iconWithBg": {
+        "title": "Icon with background",
+        "description": "Symbol with colored or white background"
+      },
+      "logos": {
+        "title": "Logo",
+        "description": "Full version with BearStudio name"
+      },
+      "icons": {
+        "title": "Icon",
+        "description": "Symbol only, square format"
+      },
+      "withBackground": {
+        "title": "With background",
+        "description": "Variants designed for colored or white backgrounds"
+      },
+      "guidelines": {
+        "title": "Usage guidelines",
+        "description": "Respect proportions, minimum clear space, and contrast. Do not alter colors or shape."
+      },
+      "cta": {
+        "title": "Need specific assets?",
+        "subtitle": "We can provide other formats or variants on request."
+      }
+    },
+    "labels": {
+      "black": "Black",
+      "white": "White",
+      "blue": "Blue",
+      "yellow": "Yellow",
+      "download": "Download",
+      "svg": "SVG",
+      "png": "PNG",
+      "jpg": "JPG"
+    }
+  }
+}

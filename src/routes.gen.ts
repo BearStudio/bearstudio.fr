@@ -20,6 +20,7 @@ const ROUTES_CONFIG = {
       },
       "rss.xml": {}
     },
+    "brand-assets": {},
     "contact": {
       "application-process-bearstudio": {}
     },
@@ -64,7 +65,8 @@ const ROUTES_CONFIG = {
       "developpement-web": {},
       "intelligence-artificielle": {},
       "ux-design": {}
-    }
+    },
+    "ressources-marque": {}
   },
   "llms-full.txt": {},
   "llms.txt": {},
