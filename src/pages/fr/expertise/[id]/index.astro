@@ -10,7 +10,6 @@ import {
   type SkillWithComputed,
 } from '@/lib/skills';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
-import ContactCard from '@/components/contact/contact-card.astro';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
@@ -99,9 +98,5 @@ const [slugFr, slugEn] = await Promise.all([
     <Prose>
       <Content />
     </Prose>
-  </Container>
-
-  <Container class="pb-0">
-    <ContactCard title="blablalba" subtitle="jdioejzidijzeo" locale="fr" />
   </Container>
 </MainLayout>

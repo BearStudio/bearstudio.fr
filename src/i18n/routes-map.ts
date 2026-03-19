@@ -35,7 +35,6 @@ export const ROUTE_MAPPINGS = {
   '/fr/blog/rss.xml': { en: '/en/blog/rss.xml' },
   '/fr/blog/articles/:id.md': { en: '/en/blog/posts/:id.md' },
   '/fr/expertise': { en: '/en/skills' },
-  '/fr/expertise/:page': { en: '/en/skills/:page' },
   '/fr/expertise/:id': { en: '/en/skills/:id' },
 } as const satisfies Record<
   DefaultLocaleRoutePaths,

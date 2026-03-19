@@ -33,7 +33,6 @@ const ROUTES_CONFIG = {
       "web-development": {}
     },
     "skills": {
-      ":page": {},
       ":id": {}
     },
     "team": {
@@ -61,7 +60,6 @@ const ROUTES_CONFIG = {
       ":id": {}
     },
     "expertise": {
-      ":page": {},
       ":id": {}
     },
     "mentions-legales": {},

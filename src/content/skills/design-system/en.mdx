@@ -4,8 +4,18 @@ description: Reusable UI components, guidelines, and standards for visual consis
 icon: color-swatch
 ---
 
+import ContactCard from '@/components/contact/contact-card.astro';
+
 At BearStudio, a design system is both a shared visual language and a library of reusable components. The goal is simple: ensure interface consistency across the entire application, and speed up both design and development.
 
 Our approach starts in Figma. That's where the design system takes shape: components, variants, colors, typography, spacing. Once validated on the design side, it's translated into code ready to use in the application. This bridge between design and development cuts out unnecessary back-and-forth and ensures that what's designed matches what's delivered.
 
 In practice, we use Start UI as a starting foundation, which we then tailor to each project's needs. Whether it's a client who needs their own design system or one of our internal projects, the approach is the same: lay down solid foundations once, then build on top of them efficiently.
+
+<ContactCard
+  class="not-prose"
+  title="Designers"
+  subtitle="contact us"
+  locale="en"
+  peopleIds={['ivan-dalmet', 'daryl-avila-bonnet']}
+/>
