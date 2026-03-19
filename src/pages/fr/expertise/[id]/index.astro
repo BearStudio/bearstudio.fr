@@ -72,25 +72,30 @@ const [slugFr, slugEn] = await Promise.all([
     }}
     breadcrumb={breadcrumb}
   />
-  <Hero>
+  <Hero contentClassName="lg:pb-24">
     <HeroContent breadcrumb={breadcrumb}>
-      <div class="flex items-center gap-4">
-        {
-          !!skill.icon && (
-            <Image
-              src={skill.icon.data.image}
-              alt={skill.data.name}
-              width={64}
-              height={64}
-              class="size-16"
-            />
-          )
-        }
-        <h1
-          class="font-heading text-accent text-4xl leading-tight font-bold text-balance md:text-5xl"
-        >
-          {skill.data.name}
-        </h1>
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-4">
+          {
+            !!skill.icon && (
+              <Image
+                src={skill.icon.data.image}
+                alt={skill.data.name}
+                width={64}
+                height={64}
+                class="size-16"
+              />
+            )
+          }
+          <h1
+            class="font-heading text-accent text-4xl leading-tight font-bold text-balance md:text-5xl"
+          >
+            {skill.data.name}
+          </h1>
+        </div>
+        <p class="max-w-[60ch] text-sm text-balance opacity-80">
+          {skill.data.description}
+        </p>
       </div>
     </HeroContent>
   </Hero>

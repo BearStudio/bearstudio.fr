@@ -40,7 +40,7 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
       description={t('skills.root.description')}
     />
   </Hero>
-  <Container>
+  <Container placement="overlapHero">
     <SkillsGrid>
       {allSkills.map((skill) => <SkillCard skill={skill} />)}
     </SkillsGrid>
