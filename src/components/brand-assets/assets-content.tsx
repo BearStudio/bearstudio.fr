@@ -14,40 +14,24 @@ export function AssetsContent({ locale }: AssetsContentProps) {
   const sections = {
     logoWithoutBg: {
       title: t('brandAssets.root.sections.logoWithoutBg.title'),
-      description: t('brandAssets.root.sections.logoWithoutBg.description'),
-      usage: t('brandAssets.root.sections.logoWithoutBg.usage'),
     },
     logoWithBg: {
       title: t('brandAssets.root.sections.logoWithBg.title'),
-      description: t('brandAssets.root.sections.logoWithBg.description'),
-      usage: t('brandAssets.root.sections.logoWithBg.usage'),
     },
     iconWithoutBg: {
       title: t('brandAssets.root.sections.iconWithoutBg.title'),
-      description: t('brandAssets.root.sections.iconWithoutBg.description'),
-      usage: t('brandAssets.root.sections.iconWithoutBg.usage'),
     },
     iconWithBg: {
       title: t('brandAssets.root.sections.iconWithBg.title'),
-      description: t('brandAssets.root.sections.iconWithBg.description'),
-      usage: t('brandAssets.root.sections.iconWithBg.usage'),
     },
   };
 
   return (
     <div className="flex flex-col gap-12">
-      <section className="flex flex-col gap-4">
-        <div>
-          <h2 className="font-heading text-2xl font-bold">
-            {sections.logoWithoutBg.title}
-          </h2>
-          <p className="mt-1 max-w-[60ch] text-sm opacity-80">
-            {sections.logoWithoutBg.description}
-          </p>
-          <p className="mt-1 max-w-[60ch] text-xs opacity-80">
-            {sections.logoWithoutBg.usage}
-          </p>
-        </div>
+      <section className="flex flex-col gap-2">
+        <h2 className="font-heading text-2xl font-bold">
+          {sections.logoWithoutBg.title}
+        </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {COLORS.map((color) => (
             <AssetCard
@@ -62,18 +46,10 @@ export function AssetsContent({ locale }: AssetsContentProps) {
         </div>
       </section>
 
-      <section className="flex flex-col gap-4">
-        <div>
-          <h2 className="font-heading text-2xl font-bold">
-            {sections.logoWithBg.title}
-          </h2>
-          <p className="mt-1 max-w-[60ch] text-sm opacity-80">
-            {sections.logoWithBg.description}
-          </p>
-          <p className="mt-1 max-w-[60ch] text-xs opacity-80">
-            {sections.logoWithBg.usage}
-          </p>
-        </div>
+      <section className="flex flex-col gap-2">
+        <h2 className="font-heading text-2xl font-bold">
+          {sections.logoWithBg.title}
+        </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {COLORS.map((color) => (
             <AssetCard
@@ -89,18 +65,10 @@ export function AssetsContent({ locale }: AssetsContentProps) {
         </div>
       </section>
 
-      <section className="flex flex-col gap-4">
-        <div>
-          <h2 className="font-heading text-2xl font-bold">
-            {sections.iconWithoutBg.title}
-          </h2>
-          <p className="mt-1 max-w-[60ch] text-sm opacity-80">
-            {sections.iconWithoutBg.description}
-          </p>
-          <p className="mt-1 max-w-[60ch] text-xs opacity-80">
-            {sections.iconWithoutBg.usage}
-          </p>
-        </div>
+      <section className="flex flex-col gap-2">
+        <h2 className="font-heading text-2xl font-bold">
+          {sections.iconWithoutBg.title}
+        </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {COLORS.map((color) => (
             <AssetCard
@@ -115,18 +83,10 @@ export function AssetsContent({ locale }: AssetsContentProps) {
         </div>
       </section>
 
-      <section className="flex flex-col gap-4">
-        <div>
-          <h2 className="font-heading text-2xl font-bold">
-            {sections.iconWithBg.title}
-          </h2>
-          <p className="mt-1 max-w-[60ch] text-sm opacity-80">
-            {sections.iconWithBg.description}
-          </p>
-          <p className="mt-1 max-w-[60ch] text-xs opacity-80">
-            {sections.iconWithBg.usage}
-          </p>
-        </div>
+      <section className="flex flex-col gap-2">
+        <h2 className="font-heading text-2xl font-bold">
+          {sections.iconWithBg.title}
+        </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {COLORS.map((color) => (
             <AssetCard

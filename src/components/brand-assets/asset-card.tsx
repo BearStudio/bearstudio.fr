@@ -1,3 +1,5 @@
+import { PiDownloadSimple } from 'react-icons/pi';
+
 import { cn } from '@/lib/tailwind/utils';
 import { Button } from '@/components/ui/button';
 
@@ -38,20 +40,35 @@ export function AssetCard({
       </div>
       <div className="flex w-full items-center justify-center gap-2">
         <Button size="sm" asChild className="flex-1" variant="secondary">
-          <a href={`${pathWithoutExt}.svg`} download>
+          <a
+            href={`${pathWithoutExt}.svg`}
+            download
+            className="inline-flex items-center justify-center gap-2"
+          >
+            <PiDownloadSimple aria-hidden />
             SVG
           </a>
         </Button>
         {!withBackground && (
           <Button size="sm" asChild className="flex-1" variant="secondary">
-            <a href={`${pathWithoutExt}.png`} download>
+            <a
+              href={`${pathWithoutExt}.png`}
+              download
+              className="inline-flex items-center justify-center gap-2"
+            >
+              <PiDownloadSimple aria-hidden />
               PNG
             </a>
           </Button>
         )}
         {withBackground && (
           <Button size="sm" asChild className="flex-1" variant="secondary">
-            <a href={`${pathWithoutExt}.jpg`} download>
+            <a
+              href={`${pathWithoutExt}.jpg`}
+              download
+              className="inline-flex items-center justify-center gap-2"
+            >
+              <PiDownloadSimple aria-hidden />
               JPG
             </a>
           </Button>
