@@ -14,6 +14,12 @@ metaDescription: >
   Comment Cuisinez pour Bébé est passé d’un blog à une application du quotidien : enjeux UX, design mobile et accompagnement des parents.
 ---
 
+import CaseStudyRoleSection from '@/components/case-study/case-study-role-section.astro';
+import CaseStudyRole from '@/components/case-study/case-study-role.astro';
+import CaseStudyTags from '@/components/case-study/case-study-tags.astro';
+import CaseStudyTeam from '@/components/case-study/case-study-team.astro';
+import image37 from './images/image-37.png';
+
 ## À propos de Cuisinez pour bébé
 
 L’histoire de _Cuisinez pour Bébé_ commence avec Clémence, une jeune maman passionnée de cuisine qui souhaitait offrir à son enfant une alimentation saine, simple et variée. Comme beaucoup de parents, elle s’est posé les questions essentielles :
@@ -35,47 +41,34 @@ L’enjeu était donc de transposer l’expérience du site dans un format mobil
 L’application devait devenir une extension naturelle du site, au service du même objectif :   
 **accompagner les parents au quotidien dans la préparation des repas de leur bébé.**
 
-## Notre rôle
-
-Côté [BearStudio](/fr/), le projet est porté par une équipe dédiée dont la composition a évolué au fil du temps.
-
-Équipe actuelle :
-
-- 1 Lead UX/UI Designer
-
-- 1 UX/UI Designer
-
-- 1 Lead Développeur Full-Stack
-
-Contribution passée :
-
-- 1 Développeur Front-End
-
-## Product Design (UX/UI)
-
-Notre équipe a accompagné _Cuisinez pour Bébé_ dans la conception complète de l’expérience mobile, depuis la compréhension des usages jusqu’à la définition des parcours :
-
-- Analyse des besoins des jeunes parents et identification des attentes spécifiques sur mobile
-
-- Structuration de l’architecture de l’information et conception de parcours simples et centrés sur les usages réels
-
-- Prototypes basse fidélité → prototypes haute fidélité (_maquettes interactives_)
-
-- Plusieurs cycles d’itération réalisés avec le client pour affiner les parcours et valider les choix de conception
-
-## Développement
-
-Côté technique, BearStudio a assuré la réalisation de l’application mobile connectée à l’infrastructure WordPress existante :
-
-- Développement mobile en React Native (_Android & iOS_)
-
-- Intégration des contenus via API REST WordPress (_recettes, menus, profils_)
-
-- Mise en place de la recherche Algolia pour un accès rapide et filtré aux recettes
-
-- Gestion de l’authentification et du modèle freemium / abonnés
-
-- Optimisation de la cohérence visuelle et technique grâce à des composants partagés et une communication étroite entre designers et développeurs
+<CaseStudyRoleSection title="Rôle et processus">
+  <CaseStudyRole
+    label="Rôle"
+    title="Product Design"
+    icon="layout"
+    image={image37}
+    imageAlt="Écrans de l’application Cuisinez pour Bébé"
+  >
+    Notre équipe a participé à la conception de l’expérience mobile à partir de l’analyse des besoins utilisateurs. Et participe également à la structuration des parcours et réalisation de prototypes basse et haute fidélité, avec des itérations pour valider les choix de conception.
+    <CaseStudyTags slot="tags" tags={["Figma", "UX/UI", "Maquettes"]} />
+    <CaseStudyTeam slot="team" label="Équipe sur ce rôle" members={[
+      { name: "Ivan D.", role: "Lead Designer UX/UI", href: "/fr/equipe/ivan-dalmet" },
+      { name: "Daryl A.", role: "UX/UI Designer", href: "/fr/equipe/daryl-avila-bonnet" },
+      { name: "Dorian D.", role: "UX/UI Designer", href: "/fr/equipe/dorian-delorme" },
+    ]} />
+  </CaseStudyRole>
+  <CaseStudyRole
+    label="Rôle"
+    title="Développement"
+    icon="code"
+  >
+    Côté technique, BearStudio a assuré la réalisation de l’application mobile connectée à l’infrastructure WordPress existante : développement React Native (Android & iOS), intégration via API REST WordPress, recherche Algolia, authentification et modèle freemium.
+    <CaseStudyTags slot="tags" tags={["React Native", "WordPress API", "Algolia"]} />
+    <CaseStudyTeam slot="team" label="Équipe sur ce rôle" members={[
+      { name: "Lead Dev", role: "Lead Développeur Full-Stack" },
+    ]} />
+  </CaseStudyRole>
+</CaseStudyRoleSection>
 
 ## Conception & itérations
 

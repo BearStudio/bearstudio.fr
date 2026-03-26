@@ -1,0 +1,15 @@
+---
+import { cn } from '@/lib/tailwind/utils';
+
+interface Props {
+  title: string;
+  class?: string;
+}
+
+const { title, class: className } = Astro.props;
+---
+
+<div class={cn('not-prose flex flex-col gap-6', className)}>
+  <h2 class="font-heading text-4xl font-bold text-foreground">{title}</h2>
+  <slot />
+</div>

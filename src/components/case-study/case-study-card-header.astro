@@ -1,0 +1,25 @@
+---
+import { cn } from '@/lib/tailwind/utils';
+
+interface Props {
+  label?: string;
+  title: string;
+  class?: string;
+}
+
+const { label, title, class: className } = Astro.props;
+---
+
+<div class={cn('flex items-center gap-4', className)}>
+  <div class="flex size-12 shrink-0 items-center justify-center rounded-lg border border-brand-600 bg-brand-700">
+    <slot name="icon" />
+  </div>
+  <div class="flex flex-col justify-center">
+    {label && (
+      <span class="font-sans text-sm font-normal leading-[21px] text-brand-200">
+        {label}
+      </span>
+    )}
+    <h3 class="whitespace-nowrap font-heading text-[28px] font-bold leading-[27px] text-brand-50">{title}</h3>
+  </div>
+</div>

@@ -251,6 +251,23 @@ html body[data-scroll-locked] {
 }
 
 @layer components {
+  .prose-breakout {
+    display: grid;
+    grid-template-columns: min(65ch, 100%) 1fr;
+  }
+
+  .prose-breakout > * {
+    grid-column: 1;
+  }
+
+  .prose-breakout > .not-prose,
+  .prose-breakout > img,
+  .prose-breakout > figure {
+    grid-column: 1 / -1;
+  }
+}
+
+@layer components {
   @keyframes caret-blink {
     0%,
     70%,

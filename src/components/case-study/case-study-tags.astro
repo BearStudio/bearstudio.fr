@@ -1,0 +1,20 @@
+---
+import { cn } from '@/lib/tailwind/utils';
+import CaseStudyCardTags from './case-study-card-tags.astro';
+import CaseStudyCardTag from './case-study-card-tag.astro';
+
+interface Props {
+  tags: Array<string>;
+  class?: string;
+}
+
+const { tags, class: className } = Astro.props;
+---
+
+{tags.length > 0 && (
+  <CaseStudyCardTags class={className}>
+    {tags.map((tag) => (
+      <CaseStudyCardTag>{tag}</CaseStudyCardTag>
+    ))}
+  </CaseStudyCardTags>
+)}
