@@ -66,7 +66,7 @@ To fully leverage our client's deep knowledge of her users, we held a **focused 
 
 <figure>
 
-![](images/frame-162-1-1024x752.png)
+![General sketch from our online workshop with the client](images/frame-162-1-1024x752.png)
 
 <figcaption>
 
@@ -104,9 +104,9 @@ From this competitive analysis, it became clear that the app to be designed need
 
 These obstacles significantly reduced engagement and accessibility. Beyond UX issues, we also identified **technical flaws, including security vulnerabilities and recurring functional bugs**.
 
-![](images/old-screen.png)
+![First web version of Léa English: Podcast page with dialogue list and level filters](images/old-screen.png)
 
-![](images/old-screens-1024x585.png)
+![Three screens of the old mobile version: grammar test, Flash Cards and AI conversation](images/old-screens-1024x585.png)
 
 ##### Some of Our Observations
 
@@ -156,7 +156,7 @@ We used wireframes to define the app's features and structure its main sections 
 
 - **AI Chat** - testing clarity of distinction for users between the daily interactive conversation and past conversations, which needed to be clearly indicated as inactive.
 
-![](images/wireframes-1024x597.png)
+![Low-fidelity wireframes of the Léa English app: Flash Cards, Review and Listen screens](images/wireframes-1024x597.png)
 
 #### Usability Testing and Validation
 
@@ -172,7 +172,7 @@ Lea English already had **a clear and well-defined visual identity**, which we n
 
 The components we use in Figma are already implemented in [Start UI Native](/en/blog/posts/start-ui-opinionated-ui-starter). This library uses technologies like **TypeScript, React** and **Ficus UI.** Thanks to this, developers can immediately accelerate the implementation phase after design finalization. Furthermore, it ensures consistency for future features to come.
 
-![](images/figma.png)
+![Léa English Figma components via Start UI: Button, Tag, FormField, Tab, Avatar and NavItem](images/figma.png)
 
 #### UX Feature Analysis
 
@@ -189,7 +189,7 @@ The components we use in Figma are already implemented in [Start UI Native](/en/
 - **Progress Indicator**
   - Clearly visible **progress** counters or bars encourage regular user engagement and provide **immediate feedback** on daily goals achieved.
 
-![](images/image-1-e1751294667236-1024x560.png)
+![Vocabulary Cards feature: front and back of the card, and end-of-session screen](images/image-1-e1751294667236-1024x560.png)
 
 ###### 2\. "Review" Feature
 
@@ -208,7 +208,7 @@ The components we use in Figma are already implemented in [Start UI Native](/en/
   - Users can **listen to pronunciation** directly in the review section, supporting auditory learning.
   - Contextualized word or expression examples help reinforce understanding and correct usage.
 
-![](images/image-e1751294688522-1024x560.png)
+![Review feature: vocabulary list, display preferences and word addition form](images/image-e1751294688522-1024x560.png)
 
 ###### 3\. "Listen" Feature
 
@@ -233,7 +233,7 @@ The components we use in Figma are already implemented in [Start UI Native](/en/
 - **Fixed Audio Control Bar**
   - Audio controls remain permanently visible during scrolling, with integrated options for adjusting playback speed and showing or hiding the transcription, thus improving user comfort and control.
 
-![](images/image-4-e1751355919230.png)
+![Listen feature: filterable audio list and detailed view with bilingual transcript](images/image-4-e1751355919230.png)
 
 ###### 4\. AI Conversation: "Practice"
 
@@ -248,7 +248,7 @@ The components we use in Figma are already implemented in [Start UI Native](/en/
 - **Structured Daily Topics**
   - Varied daily themes ensure rich exposure to different vocabularies and grammatical contexts, keeping the exercise relevant and motivating.
 
-![](images/image-3-e1751294625433-1024x562.png)
+![Practice feature: daily conversation, real-time grammar corrections and built-in translator](images/image-3-e1751294625433-1024x562.png)
 
 #### Complete Launch Management and Visual Design
 
@@ -272,7 +272,7 @@ Community feedback revealed **demand from other regions**. We therefore expanded
 
 Launch feedback:
 
-![](images/frame-33.png)
+![Four positive user testimonials following the launch of the Léa English app](images/frame-33.png)
 
 #### Post-Launch Results - First Month
 
@@ -292,15 +292,15 @@ This subscription distribution pattern highlights **the success of the onboardin
 
 Reviews found on AppStore / Google Play / Trustpilot:
 
-![](images/avis-1.png)
+![5-star Trustpilot review by Liliane Brochet: practical app, well-adapted, daily rhythm maintained](images/avis-1.png)
 
-![](images/avis-2.png)
+![5-star App Store review by Claudemarie: contextual vocabulary, podcasts and AI praised](images/avis-2.png)
 
-![](images/avis-3.png)
+![5-star App Store review by Elodie Ricordel: simple, motivating app, progress in 15 min/day](images/avis-3.png)
 
-![](images/avis-4.png)
+![ReUser comment: comprehensive app, method effective when combined with Netflix seriesview](images/avis-4.png)
 
-![](images/avis-5.png)
+![User message congratulating the Léa English team for a pleasant and functional result](images/avis-5.png)
 
 ## Final Thoughts
 
