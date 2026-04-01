@@ -63,7 +63,7 @@ Pour tirer pleinement parti de la connaissance approfondie que notre cliente a d
 
 <figure>
 
-![](images/frame-162-1-1024x752.png)
+![Esquisse générale de notre atelier en ligne avec la cliente](images/frame-162-1-1024x752.png)
 
 <figcaption>
 
@@ -101,9 +101,9 @@ De cette analyse concurrentielle, il est ressorti que l’application à concevo
 
 Ces obstacles réduisaient significativement l’engagement et l’accessibilité. Au-delà des problématiques UX, nous avons également identifié **des failles techniques, dont des vulnérabilités de sécurité et des bugs fonctionnels récurrents**.
 
-![](images/old-screen.png)
+![Première version web de Léa English : page Podcast avec liste de dialogues et filtres de niveau.](images/old-screen.png)
 
-![](images/old-screens-1024x585.png)
+![Trois écrans de l'ancienne version mobile : test de grammaire, Flash Cards et conversation IA.](images/old-screens-1024x585.png)
 
 ##### Quelques-unes de nos observations
 
@@ -153,7 +153,7 @@ Nous avons utilisé les wireframes pour définir les fonctionnalités de l’app
 
 - **Chat IA** - test de la clarté de distinction pour les utilisateurs entre la conversation du jour, interactive, et les conversations passées, qui doivent être clairement indiquées comme inactives.
 
-![](images/wireframes-1024x597.png)
+![Wireframes basse fidélité de l'app Léa English : Flash Cards, Réviser et Écouter](images/wireframes-1024x597.png)
 
 #### Tests d’utilisabilité et validation
 
@@ -169,7 +169,7 @@ Lea English disposait déjà **d’une identité visuelle** claire et bien défi
 
 Les composants que nous utilisons dans Figma sont déjà implémentés dans [Start UI Native](/fr/blog/articles/start-ui). Cette bibliothèque utilise des technologies comme **TypeScript, React** et **Ficus UI.** Grâce à cela, les développeurs peuvent accélérer immédiatement la phase d’implémentation après la finalisation du design. Par ailleurs, cela garantit une cohérence pour les futures fonctionnalités à venir.
 
-![](images/figma.png)
+![Composants Figma de Léa English via Start UI : Button, Tag, FormField, Tab, Avatar et NavItem.](images/figma.png)
 
 #### Analyse des fonctionnalités UX 
 
@@ -186,7 +186,7 @@ Les composants que nous utilisons dans Figma sont déjà implémentés dans [Sta
 - **Indicateur de Progression**
   - Des compteurs ou barres de **progression** clairement visibles encouragent l’engagement régulier des utilisateurs et fournissent un **retour immédiat** sur les objectifs atteints dans la journée.
 
-![](images/image-1-e1751294667236-1024x560.png)
+![Fonctionnalité cartes de vocabulaire quotidiennes : recto, verso de la carte et écran de fin de session](images/image-1-e1751294667236-1024x560.png)
 
 ###### 2\. Fonctionnalité “Réviser”
 
@@ -205,7 +205,7 @@ Les composants que nous utilisons dans Figma sont déjà implémentés dans [Sta
   - Les utilisateurs peuvent **écouter la prononciation** directement dans la section de révision, soutenant l’apprentissage auditif.
   - Des exemples de mots ou expressions contextualisés aident à renforcer la compréhension et l’usage correct.
 
-![](images/image-e1751294688522-1024x560.png)
+![Fonctionnalité Réviser : liste de vocabulaire, préférences d'affichage et ajout de mot.](images/image-e1751294688522-1024x560.png)
 
 ###### 3\. Fonctionnalité “Écouter”
 
@@ -230,7 +230,7 @@ Les composants que nous utilisons dans Figma sont déjà implémentés dans [Sta
 - **Barre de contrôle audio fixe**
   - Les contrôles audio restent visibles en permanence pendant le défilement, avec des options intégrées pour régler la vitesse de lecture et afficher ou masquer la transcription, améliorant ainsi le confort et le contrôle de l’utilisateur.
 
-![](images/image-4-e1751355919230.png)
+![Fonctionnalité Écouter : liste d'audios filtrables et vue détaillée avec transcription bilingue](images/image-4-e1751355919230.png)
 
 ###### 4\. Conversation avec l’IA : “Pratiquer”
 
@@ -245,7 +245,7 @@ Les composants que nous utilisons dans Figma sont déjà implémentés dans [Sta
 - **Sujets quotidiens structurés**
   - Des thèmes variés chaque jour garantissent une exposition riche à différents vocabulaires et contextes grammaticaux, gardant l’exercice pertinent et motivant.
 
-![](images/image-3-e1751294625433-1024x562.png)
+![Fonctionnalité Pratiquer : conversation du jour, corrections grammaticales et traducteur intégré](images/image-3-e1751294625433-1024x562.png)
 
 #### Gestion complète du lancement et conception visuelle
 
@@ -269,7 +269,7 @@ Les retours de la communauté ont révélé **une demande dans d’autres régio
 
 Retours sur le lancement:
 
-![](images/frame-33.png)
+![Quatre témoignages positifs d'utilisateurs suite au lancement de l'application Léa English.](images/frame-33.png)
 
 #### Résultats après lancement - premier mois
 
@@ -289,15 +289,15 @@ Ce schéma de répartition des abonnements met en lumière **le succès de l’o
 
 Retours trouvés sur AppStore/ Google Play/ Trustpilot :
 
-![](images/avis-1.png)
+![Avis Trustpilot 5 étoiles de Liliane Brochet : application concrète, adaptée, rythme quotidien tenu](images/avis-1.png)
 
-![](images/avis-2.png)
+![Avis App Store 5 étoiles de Claudemarie : vocabulaire en contexte, podcasts et IA appréciés](images/avis-2.png)
 
-![](images/avis-3.png)
+![Avis App Store 5 étoiles d'Elodie Ricordel : app simple, motivante, progrès en 15 min/jour](images/avis-3.png)
 
-![](images/avis-4.png)
+![Commentaire utilisateur : application complète, méthode efficace combinée aux séries Netflix](images/avis-4.png)
 
-![](images/avis-5.png)
+![Message utilisateur félicitant l'équipe Léa English pour un résultat agréable et fonctionnel](images/avis-5.png)
 
 ## Réflexions finales
 
