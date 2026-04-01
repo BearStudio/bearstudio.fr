@@ -11,6 +11,7 @@ import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 import SectionContent from '@/components/blog/case-studies/section-content.astro';
 import SectionSubtitle from '@/components/blog/case-studies/section-subtitle.astro';
 import SectionTitle from '@/components/blog/case-studies/section-title.astro';
+import SectionWithMedia from '@/components/blog/case-studies/section-with-media.astro';
 import Section from '@/components/blog/case-studies/section.astro';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import CaseStudyRole from '@/components/case-study/case-study-role.astro';
@@ -26,6 +27,7 @@ import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import { getId } from '@/components/seo/utils';
 import { FormattedDate } from '@/components/ui/formatted-date';
+import contexteEtEnjeu from '@/content/posts/etude-de-cas-ux-cuisinez-pour-bebe/images/contexte-et-enjeu.png';
 import image1 from '@/content/posts/etude-de-cas-ux-cuisinez-pour-bebe/images/image-1-1024x473.png';
 import image2 from '@/content/posts/etude-de-cas-ux-cuisinez-pour-bebe/images/image-2-1024x964.png';
 import image3 from '@/content/posts/etude-de-cas-ux-cuisinez-pour-bebe/images/image-3-1024x971.png';
@@ -168,35 +170,45 @@ const blogPostingSchema = {
           diversification.
         </p>
 
-        <h2>Le défi / Le besoin</h2>
-        <p>
-          Avec plus de <strong>150 000 visites mensuelles</strong> et une communauté
-          très active sur les réseaux sociaux, <em>Cuisinez pour Bébé</em> s'est
-          imposé comme une ressource incontournable pour les parents en quête de
-          recettes simples et équilibrées pour leurs enfants.
-        </p>
-        <p>
-          Ce succès a cependant révélé un besoin clair : rendre l'expérience
-          plus fluide, plus mobile et plus personnalisée. La majorité des
-          utilisateurs consultait déjà le site depuis leur téléphone et
-          exprimait le besoin d'accéder plus rapidement à leurs recettes, à
-          leurs favoris et aux menus hebdomadaires directement depuis une
-          application.
-        </p>
-        <p>
-          L'enjeu était donc de transposer l'expérience du site dans un format
-          mobile intuitif, fidèle à l'univers existant, tout en intégrant des
-          fonctionnalités clés : un modèle freemium, une navigation adaptée à
-          l'âge de l'enfant et un accès simplifié aux menus de batch cooking.
-        </p>
-        <p>
-          L'application devait devenir une extension naturelle du site, au
-          service du même objectif :<br />
-          <strong
-            >accompagner les parents au quotidien dans la préparation des repas
-            de leur bébé.</strong
-          >
-        </p>
+        <SectionWithMedia mediaPosition="start" bleedMedia>
+          <SectionTitle>Contexte et enjeux</SectionTitle>
+          <SectionContent>
+            <p>
+              Avec plus de <strong>150 000 visites mensuelles</strong> et une communauté
+              très active sur les réseaux sociaux, <em>Cuisinez pour Bébé</em> s'est
+              imposé comme une ressource incontournable pour les parents en quête
+              de recettes simples et équilibrées pour leurs enfants.
+            </p>
+            <p>
+              Ce succès a cependant révélé un besoin clair : rendre l'expérience
+              plus fluide, plus mobile et plus personnalisée. La majorité des
+              utilisateurs consultait déjà le site depuis leur téléphone et
+              exprimait le besoin d'accéder plus rapidement à leurs recettes, à
+              leurs favoris et aux menus hebdomadaires directement depuis une
+              application.
+            </p>
+            <p>
+              L'enjeu était donc de transposer l'expérience du site dans un
+              format mobile intuitif, fidèle à l'univers existant, tout en
+              intégrant des fonctionnalités clés : un modèle freemium, une
+              navigation adaptée à l'âge de l'enfant et un accès simplifié aux
+              menus de batch cooking.
+            </p>
+            <p>
+              <strong
+                >Accompagner les parents au quotidien dans la préparation des
+                repas de leur bébé.</strong
+              >
+            </p>
+          </SectionContent>
+          <Image
+            slot="media"
+            src={contexteEtEnjeu}
+            alt="Contexte et enjeux Cuisinez pour Bébé"
+            class="rounded-lg"
+            widths={[480, 768]}
+          />
+        </SectionWithMedia>
 
         <SectionDark class="mt-19 mb-24">
           <Section class="gap-8 py-0">

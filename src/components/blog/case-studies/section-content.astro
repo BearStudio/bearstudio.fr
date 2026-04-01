@@ -8,6 +8,11 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<div class={cn('flex flex-col gap-6', className)}>
+<div
+  class={cn(
+    'flex flex-col gap-4 [&_p]:text-sm [&_p]:font-normal [&_p]:leading-[21px] [&_p]:text-foreground',
+    className
+  )}
+>
   <slot />
 </div>
