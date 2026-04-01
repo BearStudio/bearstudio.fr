@@ -1,13 +1,13 @@
 ---
-import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
 
-import { cn } from '@/lib/tailwind/utils';
-import CaseStudyCard from './case-study-card.astro';
-import CaseStudyCardHeader from './case-study-card-header.astro';
+import type { ImageMetadata } from 'astro';
+
 import CaseStudyCardDescription from './case-study-card-description.astro';
-import IconLayout from './icons/icon-layout.astro';
+import CaseStudyCardHeader from './case-study-card-header.astro';
+import CaseStudyCard from './case-study-card.astro';
 import IconCode from './icons/icon-code.astro';
+import IconLayout from './icons/icon-layout.astro';
 
 const icons = { layout: IconLayout, code: IconCode } as const;
 
@@ -41,12 +41,14 @@ const IconComponent = icons[icon];
   </CaseStudyCardDescription>
   <slot name="tags" />
   <slot name="team" />
-  {image && (
-    <Image
-      slot="media"
-      src={image}
-      alt={imageAlt}
-      class="h-full w-full object-contain"
-    />
-  )}
+  {
+    image && (
+      <Image
+        slot="media"
+        src={image}
+        alt={imageAlt}
+        class="h-full w-full object-contain"
+      />
+    )
+  }
 </CaseStudyCard>
