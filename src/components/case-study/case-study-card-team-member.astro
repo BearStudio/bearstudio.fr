@@ -4,8 +4,8 @@ import { cn } from '@/lib/tailwind/utils';
 interface Props {
   name: string;
   role: string;
-  href?: string;
-  class?: string;
+  href?: string | undefined;
+  class?: string | undefined;
 }
 
 const { name, role, href, class: className } = Astro.props;
@@ -15,26 +15,28 @@ const Tag = href ? 'a' : 'span';
 
 <Tag
   class={cn('group flex flex-col gap-0.5', className)}
-  {...(href ? { href, target: '_blank', rel: 'noopener noreferrer' } : {})}
+  {...href ? { href, target: '_blank', rel: 'noopener noreferrer' } : {}}
 >
-  <span class="flex items-center gap-1 text-sm font-bold text-brand-200">
+  <span class="text-brand-200 flex items-center gap-1 text-sm font-bold">
     {name}
-    {href && (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="size-3 text-brand-200"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path d="M15 3h6v6" />
-        <path d="M10 14 21 3" />
-        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-      </svg>
-    )}
+    {
+      href && (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="text-brand-200 size-3"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M15 3h6v6" />
+          <path d="M10 14 21 3" />
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+        </svg>
+      )
+    }
   </span>
-  <span class="text-xs font-normal text-brand-200">{role}</span>
+  <span class="text-brand-200 text-xs font-normal">{role}</span>
 </Tag>

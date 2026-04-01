@@ -2,19 +2,15 @@
 import { cn } from '@/lib/tailwind/utils';
 
 interface Props {
-  title?: string;
-  class?: string;
+  title?: string | undefined;
+  class?: string | undefined;
 }
 
 const { title, class: className } = Astro.props;
 ---
 
 <div class={cn('flex flex-col gap-3', className)}>
-  {title && (
-    <span class="text-sm font-normal text-brand-200">
-      {title}
-    </span>
-  )}
+  {title && <span class="text-brand-200 text-sm font-normal">{title}</span>}
   <div class="flex flex-wrap gap-8">
     <slot />
   </div>
