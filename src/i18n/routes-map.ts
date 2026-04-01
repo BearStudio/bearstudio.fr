@@ -35,6 +35,7 @@ export const ROUTE_MAPPINGS = {
   },
   '/fr/blog/rss.xml': { en: '/en/blog/rss.xml' },
   '/fr/blog/articles/:id.md': { en: '/en/blog/posts/:id.md' },
+  '/fr/blog/articles/etude-de-cas-ux-cuisinez-pour-bebe': { en: null },
 } as const satisfies Record<
   DefaultLocaleRoutePaths,
   Record<LocalesWithoutDefault, RoutePaths | null>
