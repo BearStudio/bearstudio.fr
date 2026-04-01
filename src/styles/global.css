@@ -251,15 +251,23 @@ html body[data-scroll-locked] {
 }
 
 @layer components {
+  /* Grid layout for blog prose that constrains text to a readable width (65ch)
+     while allowing certain elements (images, custom components) to break out
+     to the full container width. Used on article pages to keep text readable
+     but let visuals and interactive components span wider. */
   .prose-breakout {
     display: grid;
     grid-template-columns: min(65ch, 100%) 1fr;
   }
 
+  /* Default: all children stay in the narrow text column */
   .prose-breakout > * {
     grid-column: 1;
   }
 
+  /* Breakout elements span the full width (both columns).
+     .not-prose: custom components like CaseStudyRole, SectionDark
+     img/figure: images should always use the full available width */
   .prose-breakout > .not-prose,
   .prose-breakout > img,
   .prose-breakout > figure {

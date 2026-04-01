@@ -11,15 +11,23 @@ const { label, title, class: className } = Astro.props;
 ---
 
 <div class={cn('flex items-center gap-4', className)}>
-  <div class="flex size-12 shrink-0 items-center justify-center rounded-lg border border-brand-600 bg-brand-700">
+  <div
+    class="border-brand-600 bg-brand-700 flex size-12 shrink-0 items-center justify-center rounded-lg border"
+  >
     <slot name="icon" />
   </div>
   <div class="flex flex-col justify-center">
-    {label && (
-      <span class="font-sans text-sm font-normal leading-[21px] text-brand-200">
-        {label}
-      </span>
-    )}
-    <h3 class="whitespace-nowrap font-heading text-[28px] font-bold leading-[27px] text-brand-50">{title}</h3>
+    {
+      label && (
+        <span class="text-brand-200 font-sans text-sm leading-[21px] font-normal">
+          {label}
+        </span>
+      )
+    }
+    <h3
+      class="font-heading text-brand-50 text-[28px] leading-[27px] font-normal whitespace-nowrap"
+    >
+      {title}
+    </h3>
   </div>
 </div>
