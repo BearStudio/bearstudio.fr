@@ -13,12 +13,18 @@ interface Props {
    * the nearest viewport side.
    */
   bleedMedia?: boolean;
+  /**
+   * Base width of the media column (before bleed is added).
+   * @default "450px"
+   */
+  mediaWidth?: string | undefined;
   class?: string | undefined;
 }
 
 const {
   mediaPosition = 'end',
   bleedMedia = false,
+  mediaWidth = '450px',
   class: className,
 } = Astro.props;
 
@@ -26,8 +32,8 @@ const {
 const bleedAmount = '3rem';
 const bleedStyle = bleedMedia
   ? mediaPosition === 'start'
-    ? `margin-left: -${bleedAmount}; width: calc(450px + ${bleedAmount});`
-    : `margin-right: -${bleedAmount}; width: calc(450px + ${bleedAmount});`
+    ? `margin-left: -${bleedAmount}; width: calc(${mediaWidth} + ${bleedAmount});`
+    : `margin-right: -${bleedAmount}; width: calc(${mediaWidth} + ${bleedAmount});`
   : undefined;
 ---
 
@@ -47,7 +53,7 @@ const bleedStyle = bleedMedia
   </div>
   <div
     class={cn(
-      'w-full shrink-0',
+      'w-full shrink-0 self-stretch',
       !bleedMedia && 'lg:w-[450px]',
       mediaPosition === 'start' ? 'lg:order-1' : 'lg:order-2'
     )}
