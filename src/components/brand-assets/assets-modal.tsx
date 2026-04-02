@@ -38,7 +38,7 @@ export const BrandAssetsModal = ({
         </ResponsiveDrawerHeader>
         <div className="max-h-[80vh] overflow-auto max-sm:overflow-auto sm:max-h-[80vh]">
           <AssetsContent locale={locale} />
-          <div className="border-t py-4 pt-6 text-center text-xs text-gray-500 max-sm:pb-8">
+          <div className="border-t py-4 mt-6 pt-6 text-center text-xs text-gray-500 max-sm:pb-8">
             {t('brandAssets.root.modal.copyright', {
               year: String(dayjs().year()),
             })}
