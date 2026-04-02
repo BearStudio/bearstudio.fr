@@ -1,0 +1,168 @@
+---
+title: 'Surviving the Rise of Vibe Coders Clients: How We Adapt'
+date: 2026-04-02
+categories:
+  - 'ia'
+tags:
+  - 'ia'
+  - 'rex'
+  - 'vibe-coding'
+  - 'collaboration'
+metaDescription: 'How we adapted our processes to collaborate with clients who vibe-code their own features with AI.'
+excerpt: 'The client wants to vibe-code alongside us. First reaction: big sigh. But adapt or disappear. Here is how we rebuilt our production process around a new principle: we are no longer the authors of every line of code; we are the editors.'
+authors:
+  - 'heloise-guillaume'
+---
+
+## In the previous article
+
+In the first article, I presented how our clients now use AI to prototype their ideas, turning these "shadow prototypes" into real specifications.
+
+But a new chapter begins when clients are no longer content with just showing... they want to **build with us**.
+
+## Surviving the Rise of Vibe Coders Clients: How We Adapt
+
+Client A's case was the first step: accepting AI as a specification tool. But with another client (let's call them "Team B") we faced a much more chaotic reality.
+
+They operate with the same budget constraints but aim to deliver more features by working alongside us rather than replacing our role. Their objective is to entrust us with the heavy, cross-cutting, and maintenance-oriented work, while retaining the autonomy to complete long-standing backlog tickets on their side. This approach allows them to address items they previously could not prioritize within their budget, while still relying on us for review and oversight when needed.
+
+The problem? They did not tell us at first. One day, they simply sent me a pull request fully vibe-coded with no context, no ticket description, and nothing even listed in the backlog.
+
+Our first reaction was confusion. I spent hours reviewing the code, trying to reverse-engineer the intent, the impact, and what needed to be tested. It was unsustainable. I couldn't just "fix" their code; we had to fix the collaboration.
+
+Finally, they came to us with a proposal that would give most traditional developers a heart attack:
+
+> We don't have the budget for you to build everything. We want to vibe-code features alongside you. You handle the core; we'll handle the rest.
+
+The old reflex:
+
+![annoyed](images/annoyed.jpg)
+
+Two years ago, our answer would have strongly discouraged this because of the review and maintenance cost.
+
+In the traditional agency model, the development team retains full responsibility for the production codebase. Contributions are therefore tightly controlled to ensure consistency, reliability, and security. Any external changes can introduce defects or risks that the team remains accountable for, making unmanaged contributions difficult to sustain.
+
+But as Rudy often says: **"Adapt or disappear."** If we refused, Team B would have just hired a freelancer who didn't care about quality, or they would have tried to do it all themselves and crashed six months later.
+
+## The new process: the "guardrails" strategy
+
+We accepted the challenge. But to make it work, we had to tear down our production process and rebuild it around a new concept: **We are no longer the authors of every line of code; we are the editors.**
+
+Here is the exact workflow we implemented to survive "vibe coding":
+
+### 1. The "pre-code" check (the planning phase)
+
+Team B uses Claude Code with the "Planning" feature. Now, instead of coding immediately, they generate the Plan. We intervene here. We review their human brief and the AI's proposed execution plan. We iterate on the logic before a single line of code is generated. If the plan is flawed, the code will be garbage. We fix the blueprint, not the house, by iterating until we are both satisfied: we simplify the architecture, optimize processes, verify the different business cases upfront...
+
+### 2. Context is king (agents.md)
+
+You cannot just let an AI guess your architecture. We worked with them to create strict context rules. We defined agents.md files, specific "skills," and coding standards (linting, security audits). We effectively taught their AI how to behave as much as possible like a BearStudio developer, ensuring the business logic remained intact. At the same time, the client teaches it his business rules and his intention.
+
+### 3. Integration over unit tests
+
+Historically, unit tests were often limited due to time and budget constraints. Today, with AI, we can generate them systematically and much faster, providing a baseline level of safety with minimal additional effort.
+
+However, the real shift happens at the integration testing level. We significantly reinforce this layer, as it becomes critical in this context.
+
+The client defines the test scenarios since they generate the features, and AI can then enhance these scenarios by adding edge cases or variations we might not have considered.
+
+Local testing and pre-production testing with the client are all the more effective when we already have an initial checklist to validate against.
+
+### 4. The new pull request review process
+
+We implemented an auto-review by AI for the basics with the review skills: general, security, architecture... but the human review changed scope. We stopped looking for syntax errors (the linter catches those). We started looking for Architectural Coherence. Is this maintainable? Does it respect the legacy logic? Are the performances okay?
+
+### 5. When AI turns technical debt into a growth accelerator
+
+Another strong signal emerged with Team B: the issue of major version upgrades.
+
+For years, our team had recommended a significant upgrade of the technical stack: the project was nearly ten major versions behind. As is often the case, this evolution was never prioritized: it delivered no visible feature and required allocating budget to something difficult to justify from a business perspective.
+
+Recently, however, the request came back to us, this time initiated by the client himself after an AI tool explicitly recommended the upgrade.
+
+It was no longer an abstract matter of "technical debt." It had become a concrete blocker to his ability to experiment. Modern tooling was no longer functioning properly in his environment: testing workflows were limited, and assistants such as Claude Code could not reliably run build and development commands in a Node 14 setup.
+
+**The AI did not create the technical need: it made it visible and immediate.**
+
+Where our earlier recommendations felt preventative, AI reframed modernization as an operational prerequisite. For the first time, the upgrade was not perceived as a cost, but as an accelerator.
+
+![fastTyping](images/fast-typing.jpg)
+
+## The unexpected benefit: cracking the legacy code
+
+This chaos actually revealed a superpower. This project had a heavy legacy codebase with old language subtleties that even our team found tedious.
+
+We discovered that the AI, when properly guided, could navigate this "mess" faster than us. A feature that would have taken days of digging into old files was generated in hours.
+
+We realized that by delegating the "coding" to the client's AI, we were moving faster, but it required us to accept a shift in our role.
+
+**We were no longer the sole writers; we were the Editors-in-Chief.**
+
+## The golden rule
+
+Even with the best processes, agents.md files, and automated reviews in place, you cannot simply let an AI roam free across your entire codebase. To make this "co-building" model work, we had to establish a golden rule with our clients to determine who builds what.
+
+It all comes down to the blast radius of a feature. We divide the roadmap into two categories: **Local** and **Transverse**.
+
+### 1. Local features (the client's playground)
+
+Local features are isolated. They are the standalone UI components, a specific settings page, a new dashboard widget, or a basic CRUD (Create, Read, Update, Delete) interface. AI is exceptionally good at this. The context window required is small. If the client's AI hallucinates or writes messy code here, the worst-case scenario is a broken button or a misaligned div.
+
+**Our stance: Go crazy.** "Vibe code" these features as fast as you want. As long as it passes the linter and basic security checks, we will merge it.
+
+### 2. Transverse features (the BearStudio fortress)
+
+Transverse features are the nervous system of the application.
+
+This includes routing, state management, authentication, database schemas, and deep integrations with legacy code. These features touch everything. If you change a transverse core component, you risk a cascading failure across the entire app.
+
+AI notoriously struggles here because it cannot easily hold the entire architectural mental model of a complex, multi-layered system in its active memory.
+
+**Our stance: this remains under our responsibility.** A client can propose a plan for a transverse feature, but they are not allowed to generate and push the code independently.
+
+### The triage in action
+
+Now, when a client like Team B wants to use their AI planner, the first question we ask during the "pre-code check" is: **Is this local or transverse?**
+
+If a Team B member wants to build the UI for his new chat feature (Local), he can do it in 2 hours. But when that chat needs to manage real-time WebSocket connections, persist data securely to the admin platform, and sync with the legacy user database (Transverse), the BearStudio team steps in.
+
+This distinction is what saves the project from collapsing under the weight of AI-generated technical debt. It gives the client the thrill of building visible features at warp speed, while we silently ensure the foundations never crack.
+
+![safe](images/safe.jpg)
+
+## How this prepares us for the future
+
+This hybrid model with Team B wasn't just a one-off experiment; it was a glimpse into the future of our industry. We discovered that when we stop fighting the client's desire to code, we unlock a massive efficiency boost.
+
+- **They feel powerful:** They can tweak a button color or add a text field in 10 minutes without paying us for an hour of work.
+- **We feel focused:** Freed from the trivial UI changes, our senior developers focused purely on high-level architecture and complex logic (the work that actually requires human expertise).
+
+We are entering an era where our value isn't measured by the volume of code we write, but by the **stability of the system we curate**.
+
+## The "adapt or disappear" reality
+
+Let's address the elephant in the room. Does this mean clients will eventually just "vibe code" everything, leaving us unemployed?
+
+The answer is a definitive **"No."**
+
+While tools like ChatGPT or Claude allow a founder to build a prototype in 2 hours, they don't solve the complexity of a scaling business.
+
+**Not everyone wants to code.** Most of our clients are business experts, not engineers. Client A enjoyed it, but he ultimately wanted to hand over the keys so he could focus on his business.
+
+**Vibe Coding has a ceiling.** It's great for a feature, but it gets messy fast. As we saw with Team B, without "Guardrails," AI generates technical debt at the speed of light.
+
+We are not facing an extinction event; we are facing an **Acceleration Event**. The "value" we provide is no longer in knowing the syntax of a for loop in Java. It is in knowing where to put that loop so it doesn't crash the server during Black Friday.
+
+## Conclusion
+
+We don't have a crystal ball, but we have a compass.
+
+If we had reacted defensively to Client A's screenshot or Team B's pull request, if we had said "Don't touch the code", we would have lost those clients. More importantly, we would have missed the opportunity to evolve.
+
+At BearStudio, we don't claim to know exactly what the agency model will look like in 5 years. We are honest about that. We are relearning our jobs every day, just like you. We are rewriting our playbooks, adopting tools like MCP, and training our teams to be "AI-Augmented Architects."
+
+But here is what we do know: **The clients who win will be the ones who use AI to move fast. The agencies that win will be the ones who help those clients move fast without breaking everything.**
+
+So, here is our offer to you: Whether you have a napkin sketch, a "shadow prototype" you built in 2 hours, or a team ready to "vibe code" alongside us, bring it on! We won't judge your code. We won't feel threatened by your tools. We will take your raw energy, mix it with our technical expertise, and build something robust, scalable, and real.
+
+**Let's build the future together. Faster.**
