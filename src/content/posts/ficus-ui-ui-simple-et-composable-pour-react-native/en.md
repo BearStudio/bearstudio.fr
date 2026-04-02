@@ -277,7 +277,7 @@ Built on [https://github.com/callstack/react-native-slider](https://github.com/c
 
 ### `DraggableModal`
 
-![](images/image-1.jpg)
+![DraggableModal example](images/image-1.jpg)
 
 [Try it in the docs](https://ficus-ui.com/docs/Components/draggable-modal)
 
