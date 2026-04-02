@@ -68,7 +68,7 @@ Après plusieurs années, certains sponsors viennent d'eux-mêmes mais sinon il 
 
 Globalement on leur évoque les raisons ci-dessus et on complète en détaillant ce qu’il y a dans le [dossier de sponsoring](https://drive.google.com/file/d/1zclVxBxeUZFUxX2kxVXCoAW8CnFr3p40/view).
 
-![](images/pasted-image-2.png)
+![Liste des quatres offres de sponsorings, dont les trois plus importantes sont en ruptures de stock](images/pasted-image-2.png)
 
 Depuis quelques années, d’autres sources financières sont apparues :
 
