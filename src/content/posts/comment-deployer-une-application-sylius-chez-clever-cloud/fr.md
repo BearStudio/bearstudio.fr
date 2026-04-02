@@ -49,7 +49,7 @@ Nous choisissons ensuite une version de PHP pour le projet, nous optons au minim
 
 Vous vous retrouvez alors sur le formulaire des variables d'environnement de votre application. Dans un premier temps, modifiez uniquement celle nommée `CC_PHP_VERSION` en lui attribuant la valeur `7.4`.
 
-Pour associer son code à l’application de Clever, si vous êtes plutôt un adepte des lignes de commande, utilisez le [Clever CLI](http://clever-cloud.com/doc/clever-tools/getting_started/)[](http://clever-cloud.com/doc/clever-tools/getting_started/).
+Pour associer son code à l’application de Clever, si vous êtes plutôt un adepte des lignes de commande, utilisez le [Clever CLI](http://clever-cloud.com/doc/clever-tools/getting_started/).
 
 Créez l’app
 
