@@ -59,7 +59,7 @@ Ce n’est pas comme cela qu’il faut voir les choses, mais c’est normal de l
 
 Or dans le monde du logiciel cette hypothèse n’est pas vraie et Linus Torvalds l’a prouvé en créant le **projet Linux**, un système d’exploitation libre et open-source.
 
-<iframe src="https://embed.ted.com/talks/lang/fr/linus_torvalds_the_mind_behind_linux" allowfullscreen width="100%" height="430"></iframe>
+<iframe src="https://embed.ted.com/talks/lang/fr/linus_torvalds_the_mind_behind_linux" title="TED Talk - L'Linus Torvals, the mind behind linux" allowfullscreen width="100%" height="430"></iframe>
 
 Comme l’explique Linus Torvalds dans ce TED, il a commencé le projet Linux seul alors qu’il était **étudiant à l’université d’Helsinki** dans les années 90. En 1991, il diffusa les premiers prototypes de Linux en expliquant qu’il souhaitait à terme des contributions externes sur son projet. Au début simplement des reports de bugs sur le logiciel, puis, des propositions de modification du code. Et c’est là que Linus Torvalds compris le grand intérêt de rendre son logiciel libre quand il constata que les propositions de modification du code étaient réellement pertinentes.
 
@@ -160,7 +160,7 @@ Si vous rencontrez le moindre soucis durant l’installation ou l’utilisation 
 **À vous de jouer !**  
 Une fois votre distribution installée, profitez de votre liberté retrouvée !
 
-<iframe src="https://www.youtube.com/embed/2OTwHSa1KVc" allowfullscreen width="100%" height="382"></iframe>
+<iframe src="https://www.youtube.com/embed/2OTwHSa1KVc" title="Youtube - Ubuntu 18.04 See Wath's New" allowfullscreen width="100%" height="382"></iframe>
 
 ---
 
