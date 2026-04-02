@@ -31,6 +31,6 @@ La réalisation de cette vidéo est très rapide chaque mois. La célèbre appli
 
 Découvrez sans plus tarder l'ensemble des vidéos déjà réalisées depuis le mois de juillet sur notre [playlist Youtube dédiée](https://www.youtube.com/playlist?list=PL3phsoEh8sHebM1tFqyQujNSfZuHdvFDs) à notre quotidien :
 
-<iframe class="m-3" src="https://www.youtube.com/embed/videoseries?list=PL3phsoEh8sHebM1tFqyQujNSfZuHdvFDs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="100%" height="400" frameborder="0"></iframe>
+<iframe class="m-3" src="https://www.youtube.com/embed/videoseries?list=PL3phsoEh8sHebM1tFqyQujNSfZuHdvFDs" title="Youtube - BearStudio au quotidien" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="100%" height="400" frameborder="0"></iframe>
 
 Et n'oubliez pas de vous abonner à [notre chaine Youtube](https://www.youtube.com/channel/UC-2hpnhKgU2C_OFucjEN0IA), d'autres vidéos doivent arriver dans les semaines à venir 😉
