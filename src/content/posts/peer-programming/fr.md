@@ -42,7 +42,7 @@ On a donc 2 ou plusieurs développeurs qui travaillent sur le même sujet, ça c
 
 Avec un conducteur qui a plus d’expérience, et un observateur junior, le conducteur peut expliquer le fonctionnement du code, tout en travaillant sur une feature. De plus, quand les rôles s'échangent, le junior reçoit des conseils pour améliorer sa méthode de travail, et bénéficie d’un support vers lequel se tourner.
 
-Attention cependant à ce que la différence de niveaux entre les développeurs et la tâche sélectionnée ne soit pas trop importante. (On reparlera de ce point [un peu plus tard](#niveaux) 😉)
+Attention cependant à ce que la différence de niveaux entre les développeurs et la tâche sélectionnée ne soit pas trop importante. (On reparlera de ce point [un peu plus tard](#des-différences-de-niveaux) 😉)
 
 ### L’onboarding sur de nouveaux projets
 
