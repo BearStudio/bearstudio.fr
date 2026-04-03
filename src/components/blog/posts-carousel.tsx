@@ -26,9 +26,7 @@ export const PostsCarousel = (props: {
   // is why we use this prop.
   moreLink?: { href: string; label: string } | undefined;
 }) => {
-  console.log('RENDER');
   if (!props.posts.length) return null;
-  console.log('RETURN', props.posts);
   return (
     <Carousel className="w-full" opts={{ dragFree: true }}>
       <CarouselContent>

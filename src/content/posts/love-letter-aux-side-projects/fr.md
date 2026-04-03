@@ -13,7 +13,6 @@ metaDescription: 'Side project pour apprendre et s’amuser vous permet de teste
 excerpt: "Faire un side project est le meilleur moyen d'apprendre et s'amuser en même temps. Laisse moi t'expliquer pourquoi !"
 authors:
   - 'renan-decamps'
-skills: []
 ---
 
 _Faire un side project est le meilleur moyen d'apprendre et s'amuser en même temps. Laisse moi t'expliquer pourquoi !_

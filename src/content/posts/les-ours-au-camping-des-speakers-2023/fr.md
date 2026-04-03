@@ -11,7 +11,6 @@ tags:
 heroImage: 'images/Image-1.png'
 metaDescription: 'Les ours du BearStudio au Camping des Speakers 2023 : retour sur cette conférence tech en plein air.'
 authors: ['hugo-perard']
-skills: []
 ---
 
 Les 15 et 16 juin derniers, l'équipe du BearStudio a eu l'occasion de participer à une expérience unique : le [Camping des Speakers](https://camping-speakers.fr/). Dans cet article, nous partageons notre expérience et les moments marquants de ces deux jours de conférences techs dans un camping en Bretagne.

@@ -9,7 +9,6 @@ tags:
 heroImage: 'images/image-24.png'
 metaDescription: "Le canard en plastique est une méthode très connue des développeurs, et beaucoup l'utilisent au quotidien sans le réaliser, ou la comprendre"
 authors: ['gregoire-protas']
-skills: []
 ---
 
 Le titre peut sembler bizarre, mais c’est le nom d’une méthode que beaucoup utilisent au quotidien sans vraiment le réaliser.

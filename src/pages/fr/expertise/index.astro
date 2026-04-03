@@ -13,7 +13,6 @@ import MainLayout from '@/layouts/main-layout.astro';
 
 const { t, locale } = getTranslationUtilities(Astro.currentLocale);
 
-// [TODO]: See if we need to check properties for "published" skills
 const allSkills = await getSkillsCollection({ locale });
 
 const breadcrumb = breadcrumbEntries(locale)((entry) => [

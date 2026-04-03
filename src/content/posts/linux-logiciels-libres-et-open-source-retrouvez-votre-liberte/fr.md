@@ -12,7 +12,6 @@ metaDescription: 'Vous avez déjà entendu parler de Linux, des logiciels libres
 excerpt: 'Vous avez déjà entendu parler de Linux, des logiciels libres ou encore de l’open-source mais vous ne savez pas à quoi sont associés ces termes ? A l’inverse vous ne savez pas du tout ce que c’est ? Ou vous le savez mais ne voyez toujours pas l’intérêt ? Alors ne partez pas, cet article [&hellip;]'
 authors:
   - 'nicolas-torion'
-skills: []
 ---
 
 Vous avez déjà entendu parler de **Linux**, des logiciels libres ou encore de l’open-source mais vous ne savez pas à quoi sont associés ces termes ? A l’inverse vous ne savez pas du tout ce que c’est ? Ou vous le savez mais ne voyez toujours pas l’intérêt ? Alors ne partez pas, cet article s’adresse à vous tous !

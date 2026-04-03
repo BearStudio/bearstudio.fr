@@ -26,9 +26,7 @@ export async function getSkillsCollectionWithIcons(
 export type SkillWithComputed = Awaited<ReturnType<typeof skillWithComputed>>;
 
 const skillWithComputed = async (item: CollectionEntry<'skills'>) => {
-  const slug =
-    item.filePath?.split('/').at(-2)?.replace('.mdx', '').replace('.md', '') ??
-    'unknown';
+  const slug = item.filePath?.split('/').at(-2) ?? 'unknown';
   const icon = await getEntry(item.data.icon);
   return {
     ...item,

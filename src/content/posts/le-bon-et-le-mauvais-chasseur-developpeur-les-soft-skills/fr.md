@@ -10,7 +10,6 @@ tags:
 heroImage: 'images/format-blog-header.png'
 metaDescription: 'Bon ou mauvais développeur ? Découvrez comment les soft skills font toute la différence, au-delà du simple fait de savoir coder.'
 authors: ['hugo-perard']
-skills: []
 ---
 
 _Le mauvais développeur c’est le gars, il a un ordinateur, on lui donne des specs et il code. Le bon développeur il a un ordinateur, on lui donne des specs et il code… mais c’est un bon développeur…_

@@ -8,7 +8,6 @@ metaDescription: "Les fonctionnalités du générateur de projet JHipster vont v
 excerpt: 'Disclaimer : Cet article n’est pas orienté sur l’aspect technique de JHipster et s’adresse donc principalement aux entrepreneurs et aux startups. Cependant il permet aussi de faire un rappel de certaines idées aux développeurs, voire même aux CTO. Pour consulter une présentation technique de JHipster, vous pouvez lire cet article. Présentation de JHipster JHipster est [&hellip;]'
 authors:
   - 'quentin-lerebours'
-skills: []
 ---
 
 _**Disclaimer :** Cet article n’est pas orienté sur l’aspect technique de JHipster et s’adresse donc principalement aux entrepreneurs et aux startups. Cependant il permet aussi de faire un rappel de certaines idées aux développeurs, voire même aux CTO._

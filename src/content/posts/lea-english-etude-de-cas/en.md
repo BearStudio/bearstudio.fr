@@ -14,6 +14,9 @@ metaDescription: 'Discover how we co-designed LEA English, a mobile app for lear
 authors: ['alexandra-pituru']
 skills:
   - 'ux'
+  - 'wireframes'
+  - 'design-system'
+  - 'prototype'
 ---
 
 ## Project Overview

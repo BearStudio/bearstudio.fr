@@ -13,6 +13,9 @@ metaDescription: "Découvrez comment nous avons co-conçu LEA English, une app m
 authors: ['alexandra-pituru']
 skills:
   - 'ux'
+  - 'wireframes'
+  - 'design-system'
+  - 'prototype'
 ---
 
 ## Présentation du projet

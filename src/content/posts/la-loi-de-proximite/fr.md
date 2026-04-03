@@ -12,6 +12,9 @@ metaDescription: "La loi de proximité est d'une importance capitale pour les gr
 authors: ['emmanuel-gien']
 skills:
   - 'ux'
+  - 'wireframes'
+  - 'design-system'
+  - 'prototype'
 ---
 
 ## Qu'est-ce que la loi de proximité en design ?

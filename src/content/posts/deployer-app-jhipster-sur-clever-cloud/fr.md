@@ -7,7 +7,6 @@ heroImage: 'images/visuel-article-JHipster-Deploy.png'
 metaDescription: 'Apprenez à déployer facilement une application JHipster sur Clever Cloud grâce à ce tutoriel pas à pas.'
 authors:
   - 'rudy-baer'
-skills: []
 ---
 
 Cet article est la traduction française d'un tuto réalisé par [Rudy](/fr/equipe/rudy-baer), notre CTO, directement sur le [forum JHipster](https://www.jhipster.tech/clever-cloud/).

@@ -8,7 +8,6 @@ metaDescription: "Des pratiques de management simples et efficaces : la communic
 excerpt: 'Dans la série des articles de blog sur le thème de l&rsquo;entrepreneuriat, j&rsquo;avais envie de vous partager un peu le quotidien au BearStudio. C&rsquo;est pourquoi je vais vous parler d&rsquo;un rituel que j&rsquo;ai mis en place avec mon équipe. Pour info, cet article date de l&rsquo;an dernier, avant les évènements de 2020 qui ont compliqué [&hellip;]'
 authors:
   - 'rudy-baer'
-skills: []
 ---
 
 Dans la série des articles de blog sur le thème de l'entrepreneuriat, j'avais envie de vous partager un peu le quotidien au BearStudio. C'est pourquoi je vais vous parler d'un rituel que j'ai mis en place avec mon équipe. Pour info, cet article date de l'an dernier, avant les évènements de 2020 qui ont compliqué un peu les choses...

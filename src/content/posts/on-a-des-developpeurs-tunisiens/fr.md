@@ -6,7 +6,6 @@ categories:
 heroImage: 'images/monde.jpg'
 metaDescription: 'Depuis quelques années, le BearStudio accueille des développeurs tunisiens qui travaillent en remote depuis chez eux pour prêter main forte à notre équipe !'
 authors: ['rudy-baer']
-skills: []
 ---
 
 _Note : l'écriture de l’article a commencé avant la pandémie mondiale. Si seulement je m’étais bougé pour le sortir avant… j’aurais été tellement visionnaire !_

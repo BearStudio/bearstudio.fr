@@ -10,7 +10,6 @@ tags:
 heroImage: 'images/peer-programming-illustration.jpg'
 metaDescription: 'À quoi sert le peer programming, quels sont ses avantages et inconvénients ? On répond à toutes vos interrogations dans cet article'
 authors: ['gregoire-protas']
-skills: []
 ---
 
 _Il est arrivé à tout développeur de se retrouver coincé sur un sujet et de ne pas pouvoir avancer sur une fonctionnalité ou un correctif. Même après avoir parcouru [StackOverflow](https://stackoverflow.com/) en boucle, il n’y a aucune solution en vue !_
