@@ -57,8 +57,6 @@ dayjs.locale(Astro.currentLocale);
     <meta name="apple-mobile-web-app-title" content="BearStudio" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <Analytics />
-
     <slot name="seo" />
     <slot name="ld+json" />
     <slot name="breadcrumb" />
@@ -113,5 +111,6 @@ dayjs.locale(Astro.currentLocale);
     <div class="flex flex-1 flex-col overflow-x-hidden">
       <slot />
     </div>
+    <Analytics />
   </body>
 </html>
