@@ -29,6 +29,10 @@
   "article": {
     "on": "",
     "by": "by",
-    "published": "Published on"
+    "published": "Published on",
+    "outdated": {
+      "title": "This article is outdated",
+      "description": "The information presented here may no longer be valid."
+    }
   }
 }
