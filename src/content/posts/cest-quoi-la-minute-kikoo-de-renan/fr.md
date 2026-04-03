@@ -17,34 +17,9 @@ La minute kikoo provient d'une remarque que je me suis faite en regardant l'émi
 
 > *Ça serait quand même marrant d'avoir quelqu'un qui fait ça, mais en présentant toutes les technos / sites / outils inutiles que des gens ont un jour développé, montrer un peu la face cachée des sides-project qu'on peut trouver sur le web* 😃
 
-<div class="spoiler-wrapper">
-  <p class="spoiler-text">Spoiler: j'ai pas trouvé ce concept, 😢 on arrête là ?</p>
-  <div class="spoiler-gif">
-    <iframe src="https://giphy.com/embed/KDRv3QggAjyo" title="Giphy - Peter Parker cry" frameborder="0" class="giphy-embed" allowfullscreen scrolling="no"></iframe>
-  </div>
-</div>
+Spoiler: j'ai pas trouvé ce concept, 😢 on arrête là ?</p>
 
-<style>
-  .spoiler-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-  .spoiler-gif {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 700%;
-  }
-  .spoiler-gif iframe {
-    width: 100%;
-    height: 200%;
-  }
-  .spoiler-wrapper:hover .spoiler-gif {
-    display: block;
-  }
-</style>
+<div style="display: flex; justify-content: center;"><iframe src="https://giphy.com/embed/KDRv3QggAjyo" title="Giphy - Peter Parker cry" class="giphy-embed" allowfullscreen scrolling="no"></iframe></div>
 
 > _Non ! Si personne ne le fait, pourquoi ne pas le faire moi-même !_?
 
