@@ -11,6 +11,8 @@ import '@/styles/global.css';
 
 import { Schema } from 'astro-seo-schema';
 
+import Analytics from '@vercel/analytics/astro';
+
 import { getLink } from '@/lib/link';
 import { getSiteUrl } from '@/lib/site/get-site-url';
 import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
@@ -54,6 +56,8 @@ dayjs.locale(Astro.currentLocale);
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="BearStudio" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <Analytics />
 
     <slot name="seo" />
     <slot name="ld+json" />
