@@ -29,6 +29,7 @@
     "@fontsource-variable/inter": "5.2.8",
     "@fontsource-variable/roboto-slab": "5.2.8",
     "@tailwindcss/vite": "4.1.18",
+    "@vercel/analytics": "2.0.1",
     "@vercel/config": "0.0.28",
     "astro": "6.0.1",
     "astro-robots-txt": "1.0.0",
