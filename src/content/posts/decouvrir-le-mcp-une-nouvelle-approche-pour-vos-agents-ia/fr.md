@@ -239,7 +239,7 @@ Maintenant, notre agent IA a accès au serveur MCP et aux outils qu’il propose
 
 On peut vérifier que le serveur est bien connecté dans les paramètres de Cursor :
 
-![Exemple de commande permttant de vérifier si le serveur est bien connecté dans les paramètre de Cursor](images/im2.jpeg)
+![Exemple de commande permttant de vérifier si le serveur est bien connecté dans les paramètres de Cursor](images/im2.jpeg)
 
 Maintenant, essayons de lui poser une question, par exemple :  
 **"Donne-moi la liste des employés qui sont en CDI."**
