@@ -277,6 +277,6 @@
 
 @layer base {
   .astro-code span[style*='color:#6A737D'] {
-    color: #8291a1 !important;
+    color: #8291a1;
   }
 }
