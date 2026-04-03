@@ -15,25 +15,7 @@ export const config: VercelConfig = {
     routes.header('/(.*)', [{ key: 'X-Robots-Tag', value: 'noindex' }], {
       has: [{ type: 'host', value: 'bearstudio-site-2026.vercel.app' }],
     }),
-    // Security headers applied to all routes.
-    // When adding a new external service (iframe embed, script, font CDN, etc.),
-    // update the Content-Security-Policy directives below to whitelist the new domain.
     routes.header('/(.*)', [
-      {
-        key: 'Content-Security-Policy',
-        value: [
-          "default-src 'self'",
-          "script-src 'self' 'unsafe-inline'",
-          "style-src 'self' 'unsafe-inline'",
-          "img-src 'self' data: https://pbs.twimg.com",
-          "font-src 'self' data:",
-          'frame-src https://webforms.pipedrive.com https://www.google.com https://www.youtube-nocookie.com',
-          "connect-src 'self'",
-          "base-uri 'self'",
-          "form-action 'self'",
-          "frame-ancestors 'none'",
-        ].join('; '),
-      },
       {
         key: 'X-Content-Type-Options',
         value: 'nosniff',
@@ -44,8 +26,6 @@ export const config: VercelConfig = {
       },
       {
         key: 'Referrer-Policy',
-        // We don't have anything sensitive in the URL for our site, so we just
-        // keep referrer data off HTTP connections.
         value: 'strict-origin-when-cross-origin',
       },
     ]),
