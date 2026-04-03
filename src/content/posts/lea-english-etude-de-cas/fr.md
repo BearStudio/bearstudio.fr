@@ -11,6 +11,8 @@ tags:
 heroImage: 'images/format-blog-header-1.png'
 metaDescription: "Découvrez comment nous avons co-conçu LEA English, une app mobile pour apprendre l'anglais oral de façon intuitive et efficace."
 authors: ['alexandra-pituru']
+skills:
+  - 'ux'
 ---
 
 ## Présentation du projet

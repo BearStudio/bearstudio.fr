@@ -11,6 +11,7 @@ metaDescription: "À la création d’une société, nous avons toujours un tas 
 excerpt: 'À la création d’une société, nous avons toujours un tas de choses à faire. Pour vous aider, voici des outils indispensables à la gestion d&rsquo;entreprise.'
 authors:
   - 'rudy-baer'
+skills: []
 ---
 
 À la création d'une société, nous avons toujours un tas de choses à faire. Par où commencer ? Cela dépend essentiellement de votre business. Cependant, il y a un certain nombre d’outils incontournables à connaître pour votre entreprise. 

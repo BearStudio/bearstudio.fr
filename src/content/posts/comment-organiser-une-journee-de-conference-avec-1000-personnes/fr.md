@@ -7,6 +7,7 @@ heroImage: 'images/image.png'
 metaDescription: "Retour d'expérience sur l'organisation d'une journée de conférence tech accueillant plus de 1000 personnes."
 authors:
   - 'rudy-baer'
+skills: []
 ---
 
 ## Les différents points à gérer

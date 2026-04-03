@@ -12,6 +12,7 @@ metaDescription: 'BEMIT est la synthèse de deux conventions déjà existantes :
 excerpt: 'Your princess is in another div Ne vous est-il jamais arrivé de retourner sur un vieux projet (vous savez, celui mis en suspens il y a deux mois) ou de récupérer celui d&rsquo;un collègue, et de pester car vous ne retrouviez pas les composants que vous cherchez ? Parce que les classes utilisées sont incompréhensibles [&hellip;]'
 authors:
   - 'david-endico'
+skills: []
 ---
 
 ## Your princess is in another div

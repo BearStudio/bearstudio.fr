@@ -10,6 +10,7 @@ tags:
 heroImage: 'images/breve-8.jpg'
 metaDescription: "Le BearStudio bénéficie désormais du crédit d'impôt Innovation, un dispositif fiscal de soutien destiné aux petites et moyennes entreprises !"
 authors: ['emma-monchablon']
+skills: []
 ---
 
 Le saviez-vous ? Depuis février 2020, le BearStudio bénéficie d'un nouveau crédit d'impôt en faveur de l'innovation.

@@ -12,6 +12,7 @@ metaDescription: 'Avec le MCP, les agents IA se connectent à vos outils et donn
 excerpt: 'Cet article est également disponible en anglais ! 🇬🇧 État des lieux rapide Ces derniers mois, l&rsquo;efficacité des&nbsp;LLM&nbsp;n’a cessé de croître, bouleversant nos habitudes et notre quotidien de développeur. De plus en plus sollicités pour écrire du code, débogguer, concevoir ou nous assister à chaque étape de notre travail, ces modèles sont en train de [&hellip;]'
 authors:
   - 'noe-tatoud'
+skills: []
 ---
 
 [Cet article est également disponible en anglais ! 🇬🇧](https://noe.tatoud.com/blog/what-is-mcp/)

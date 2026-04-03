@@ -9,6 +9,8 @@ tags:
 heroImage: 'images/outstatic-format-blog-header.png'
 metaDescription: 'Découvrez une nouvelle façon de gérer le contenu de votre site, intuitive et sans base de données, avec le CMS Outstatic.'
 authors: ['jeanne-grenet']
+skills:
+  - 'react'
 ---
 
 Il y a quelque temps, j’ai travaillé sur une landing page avec une partie blog. Deux contraintes majeures se présentaient :

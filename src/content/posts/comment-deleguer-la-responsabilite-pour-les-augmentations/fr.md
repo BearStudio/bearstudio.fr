@@ -11,6 +11,7 @@ metaDescription: "En 2018, j'ai été confronté à la problématique des augmen
 excerpt: 'En 2018, pour la première fois, j&rsquo;ai été réellement confronté à la problématique des augmentations au BearStudio.'
 authors:
   - 'rudy-baer'
+skills: []
 ---
 
 En 2018, pour la première fois, j'ai été réellement confronté à la problématique des augmentations au BearStudio.

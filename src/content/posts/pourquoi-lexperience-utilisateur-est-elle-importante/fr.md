@@ -13,6 +13,8 @@ metaDescription: "Une application mobile dépend de son apparence, de ses foncti
 excerpt: 'Dans le monde numérique d&rsquo;aujourd&rsquo;hui, le succès d&rsquo;une application mobile ou web dépend non seulement de son apparence ou de ses fonctionnalités, mais aussi de la qualité de l&rsquo;expérience utilisateur. Une expérience utilisateur fluide et intuitive est décisive pour attirer les utilisateurs, les fidéliser et en fin de compte, assurer un succès commercial.'
 authors:
   - 'alexandra-pituru'
+skills:
+  - 'ux'
 ---
 
 ## Comprendre le contexte

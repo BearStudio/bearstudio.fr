@@ -14,6 +14,9 @@ metaDescription: 'Pourquoi on a créé ui-state : découvrez comment gérer les 
 excerpt: "Pourquoi a t'on créé ui-state, une librairie TypeScript de gestion d'états ? Tout viens de la lecture d'un très bon article de Dominic Dorfmeister aka TkDodo (on vous conseille aussi de lire ses autres articles sur son blog)"
 authors:
   - 'ivan-dalmet'
+skills:
+  - 'react'
+  - 'typescript'
 ---
 
 Pourquoi a t'on créé [ui-state](https://github.com/BearStudio/ui-state), une librairie TypeScript de gestion d'états ? Tout viens de la lecture d'un très bon article de [Dominic Dorfmeister aka TkDodo](https://x.com/TkDodo) (on vous conseille aussi de [lire ses autres articles sur son blog](https://tkdodo.eu/blog/))

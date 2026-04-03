@@ -8,6 +8,7 @@ metaDescription: "Dans cet article, je vous propose quelques tips pour optimiser
 excerpt: 'Disclaimer : cet article a été écrit avant la crise du coronavirus 😷 Cela fait un moment que Rudy voit passer des jeunes développeurs et des gens en reconversion qui galèrent à trouver des entreprises pour un stage ou une alternance. En général, il leur donne des conseils et il compte d’ailleurs continuer à le [&hellip;]'
 authors:
   - 'rudy-baer'
+skills: []
 ---
 
 _Disclaimer : cet article a été écrit avant la crise du coronavirus_ 😷

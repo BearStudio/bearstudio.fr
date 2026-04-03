@@ -6,6 +6,7 @@ categories:
 heroImage: 'images/img_4787-scaled.jpeg'
 metaDescription: "Bilan du salon Gitex Future Stars à Dubaï lors duquel l'équipe BearStudio a représenté la French Tech parmi des centaines de startups internationales !"
 authors: ['nathan-lesouef']
+skills: []
 ---
 
 ## Intro...

@@ -9,6 +9,7 @@ tags:
 heroImage: 'images/featured-Image-Site-MKDR.png'
 metaDescription: 'Découvrez la Minute Kikoo de Renan, un format court et fun pour partager des anecdotes tech au BearStudio.'
 authors: ['renan-decamps']
+skills: []
 ---
 
 ## D'où ça vient ?

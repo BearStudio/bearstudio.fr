@@ -6,6 +6,7 @@ categories:
 heroImage: 'images/checklist-seo-technique-illustration.png'
 metaDescription: 'Apprenez à créer un site web qui se positionne sur les moteurs de recherche grâce à une bonne base SEO technique !'
 authors: ['yohann-josselin']
+skills: []
 ---
 
 Si la création d’un site web est (presque) **indispensable** pour développer une **notoriété en ligne**, il est important de respecter certaines **règles de conception** si vous souhaitez gagner de la visibilité en vous **positionnant sur Google**.

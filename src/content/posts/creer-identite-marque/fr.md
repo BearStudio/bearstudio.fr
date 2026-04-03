@@ -6,6 +6,7 @@ categories:
 heroImage: 'images/visuel-branding-identity.jpg'
 metaDescription: "Dans cet article, j'aborderais toutes les étapes à suivre pour créer une identité de marque ou branding identity."
 authors: ['maxime-podgorski']
+skills: []
 ---
 
 *Dans cet article, je vous parlerai de branding identity (identité de marque en français) mais plus particulièrement, comment en créer une.* 

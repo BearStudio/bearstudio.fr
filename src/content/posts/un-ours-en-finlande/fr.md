@@ -5,6 +5,7 @@ categories:
   - 'actualites-web-numerique'
 heroImage: 'images/un-ours-en-finlande-1.jpg'
 metaDescription: "Récit du voyage d'un ours du BearStudio en Finlande, entre découvertes culturelles et aventures nordiques."
+skills: []
 ---
 
 La parole est à Nathan : jeune recrue intrépide qui ne recule devant aucune frontière pour ouvrir les horizons de la tanière!

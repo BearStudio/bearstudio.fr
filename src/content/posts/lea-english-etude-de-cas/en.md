@@ -12,6 +12,8 @@ tags:
 heroImage: 'images/og-image.jpg'
 metaDescription: 'Discover how we co-designed LEA English, a mobile app for learning spoken English in an intuitive and effective way.'
 authors: ['alexandra-pituru']
+skills:
+  - 'ux'
 ---
 
 ## Project Overview

@@ -12,6 +12,7 @@ metaDescription: 'Quelques conseils pour maîtriser la dette technique de son pr
 excerpt: 'Dans notre précédent article sur la dette technique, je présentais le concept en prenant quelques exemples. Voici maintenant quelques conseils pour maîtriser cette dette sur son projet. Anticiper la dette technique Tout d’abord, il est important de savoir quel niveau de dette technique vous attendez. Pour cela, il faut vous demander si vous développez un [&hellip;]'
 authors:
   - 'quentin-lerebours'
+skills: []
 ---
 
 Dans notre [précédent article sur la dette technique](/fr/blog/articles/dette-technique-cout-sous-estime-des-projets-numeriques), je présentais le concept en prenant quelques exemples. Voici maintenant quelques c**onseils pour maîtriser cette dette** sur son projet.

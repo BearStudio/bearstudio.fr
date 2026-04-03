@@ -3,12 +3,15 @@ import { Image } from 'astro:assets';
 import { render } from 'astro:content';
 
 import { getLink } from '@/lib/link';
+import { getPostsCollectionLinkedToSkill } from '@/lib/posts';
 import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
 import {
   getSkillsCollection,
   getSkillSlugInOtherLocale,
   type SkillWithComputed,
 } from '@/lib/skills';
+import { PostsCarousel } from '@/components/blog/posts-carousel';
+import { enhancePostWithImage } from '@/components/blog/utils';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
@@ -17,6 +20,8 @@ import Prose from '@/components/prose.astro';
 import SEO from '@/components/seo/index.astro';
 import type { Locale } from '@/i18n/utils';
 import MainLayout from '@/layouts/main-layout.astro';
+
+const POSTS_LIMIT = 4;
 
 export async function generateStaticPaths(params: { locale: Locale }) {
   const skills = await getSkillsCollection({ locale: params.locale });
@@ -59,6 +64,12 @@ const [slugFr, slugEn] = await Promise.all([
   getSkillSlugInOtherLocale(skill, 'fr'),
   getSkillSlugInOtherLocale(skill, 'en'),
 ]);
+
+const linkedPosts = await Promise.all(
+  (await getPostsCollectionLinkedToSkill({ skill, locale })).map(async (post) =>
+    enhancePostWithImage(post)
+  )
+);
 ---
 
 <MainLayout>
@@ -104,4 +115,21 @@ const [slugFr, slugEn] = await Promise.all([
       <Content />
     </Prose>
   </Container>
+
+  {
+    !!linkedPosts.length && (
+      <Container>
+        <div class="flex flex-col gap-4">
+          <h2 class="font-heading text-2xl font-bold">
+            {t('skills.detail.blog.title', { name: skill.data.name })}
+          </h2>
+          <PostsCarousel
+            client:load
+            posts={linkedPosts.slice(0, POSTS_LIMIT)}
+            locale={locale}
+          />
+        </div>
+      </Container>
+    )
+  }
 </MainLayout>

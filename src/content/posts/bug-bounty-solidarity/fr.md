@@ -9,6 +9,7 @@ tags:
 heroImage: 'images/breve-6.jpg'
 metaDescription: "Cette année, le BearStudio a souhaité exprimer son soutien auprès d'une association de la région rouennaise en accord avec ses valeurs."
 excerpt: 'Pour la première fois, certains membres de l&rsquo;équipe ont remporté des gains (bug bounty pour les amateurs) lors de contribution en open-source à des projets collaboratifs tels que la JHipster Code. C&rsquo;est pour cette raison qu&rsquo;à l&rsquo;occasion des fêtes de fin d’année, le BearStudio a eu l&rsquo;idée d&rsquo;effectuer un don en soutien à une association. [&hellip;]'
+skills: []
 ---
 
 Pour la première fois, certains membres de [l'équipe](/fr/equipe) ont remporté des gains (bug bounty pour les amateurs) lors de contribution en open-source à des projets collaboratifs tels que la JHipster Code. C'est pour cette raison qu'à l'occasion des fêtes de fin d’année, le BearStudio a eu l'idée d'effectuer un don en soutien à une association.

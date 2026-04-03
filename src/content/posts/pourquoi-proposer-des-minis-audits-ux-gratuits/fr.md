@@ -8,6 +8,11 @@ metaDescription: 'BearStudio vous propose un mini audit UX gratuit pour votre pr
 excerpt: 'Vous ne le savez peut-être pas mais au BearStudio, nous vous proposons des mini audits UX gratuitement pour votre plateforme web ou votre application mobile.&nbsp; En quoi consiste un mini audit UX ? Vous avez une application web ou mobile, un produit déjà développé, un POC (Preuve de concept en français), un prototype ? Nous [&hellip;]'
 authors:
   - 'asceline-boullen'
+skills:
+  - 'ux'
+  - 'wireframes'
+  - 'design-system'
+  - 'ux'
 ---
 
 Vous ne le savez peut-être pas mais au BearStudio, nous vous proposons des **mini audits UX gratuitement** pour votre plateforme web ou votre application mobile. 

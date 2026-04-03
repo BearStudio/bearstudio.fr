@@ -8,6 +8,7 @@ metaDescription: "Besoin de conseils pour manager ? Voici une liste d'éléments
 excerpt: 'Nos conseils pour mieux manager une équipe Même si ça ne semble pas du tout naturel, il faut se forcer à mettre certains choses de côté pour prendre confiance&nbsp;et établir une ambiance de travail bienveillante. Attention, je ne prétends pas que ce sont là des vérités absolues ! Il est possible qu’à un moment donné [&hellip;]'
 authors:
   - 'rudy-baer'
+skills: []
 ---
 
 ## Nos conseils pour mieux manager une équipe

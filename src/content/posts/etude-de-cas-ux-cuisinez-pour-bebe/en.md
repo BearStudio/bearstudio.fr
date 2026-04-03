@@ -13,6 +13,8 @@ heroImage: 'images/og-image.jpg'
 authors: ['daryl-avila-bonnet']
 metaDescription: >
   How Cuisinez pour Bébé went from a blog to an everyday app: UX challenges, mobile design, and supporting parents.
+skills:
+  - 'ux'
 ---
 
 ## About Cuisinez pour bébé

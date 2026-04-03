@@ -15,6 +15,9 @@ metaDescription: 'Discover ui-state, a TypeScript library by BearStudio for mana
 excerpt: "Managing UI states like loading, error, or empty in React often leads to messy conditionals. Inspired by TkDodo's component composition patterns, we built ui-state — a TypeScript library that gives you a single, well-typed active state with exhaustive matching, without restructuring your JSX."
 authors:
   - 'ivan-dalmet'
+skills:
+  - 'react'
+  - 'typescript'
 ---
 
 Why did we create [ui-state](https://github.com/BearStudio/ui-state), a TypeScript library to manage ui state display? It all started after reading an excellent article by [Dominic Dorfmeister, aka TkDodo](https://x.com/TkDodo) (we also recommend checking out [his other posts on his blog](https://tkdodo.eu/blog/)).

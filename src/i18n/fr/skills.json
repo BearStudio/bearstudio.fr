@@ -7,5 +7,10 @@
       "title": "Expertise du BearStudio, studio de développement web à Rouen",
       "description": "Découvrez les technologies et compétences du BearStudio : React, React Native, TypeScript, Tailwind, design UX/UI et bien plus encore."
     }
+  },
+  "detail": {
+    "blog": {
+      "title": "Articles sur {{name}}"
+    }
   }
 }

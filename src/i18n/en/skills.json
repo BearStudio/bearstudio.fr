@@ -7,5 +7,10 @@
       "title": "BearStudio skills, web development studio in Rouen",
       "description": "Discover BearStudio's technologies and skills: React, React Native, TypeScript, Tailwind, UX/UI design and much more."
     }
+  },
+  "detail": {
+    "blog": {
+      "title": "Articles about {{name}}"
+    }
   }
 }

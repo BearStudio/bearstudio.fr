@@ -11,6 +11,7 @@ metaDescription: "2019 se termine déjà, mais pour 2020 nous avons plein de nou
 excerpt: 'Je pense que vous l’avez tous remarqué mais en 2019 nous nous sommes mis à la communication ! C’est à dire que nous avons embauché Laurie, fucking masse salariale. BearStudio style, nous avons bêta testé plein de trucs avec toujours cette touche #nobullshit et sincère qui nous caractérise. Pour 2020, on monte d’un cran en [&hellip;]'
 authors:
   - 'rudy-baer'
+skills: []
 ---
 
 Je pense que vous l’avez tous remarqué mais en 2019 nous nous sommes mis à la communication ! C’est à dire que nous avons embauché Laurie, fucking [masse salariale](/fr/equipe). _BearStudio style_, nous avons bêta testé plein de trucs avec toujours cette touche #nobullshit et sincère qui nous caractérise.

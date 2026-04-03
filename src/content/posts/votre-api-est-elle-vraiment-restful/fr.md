@@ -13,6 +13,7 @@ metaDescription: 'Savez vous qu''environ 100% des API dites "REST" ne le sont pa
 excerpt: 'Il y a peu de temps, j&rsquo;apprenais qu&rsquo;environ 100% des API dites « REST » ne le sont pas réellement. C&rsquo;est assez étonnant, mais seulement lorsqu&rsquo;on ne connaît pas le modèle de maturité de Richardson. Ce modèle définit 4 niveaux de maturité pour les API REST : Niveau 0 On parle de Swamp of POX, soit le [&hellip;]'
 authors:
   - 'quentin-lerebours'
+skills: []
 ---
 
 Il y a peu de temps, j'apprenais qu'environ 100% des API dites "REST" ne le sont pas réellement.

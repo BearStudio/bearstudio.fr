@@ -12,6 +12,7 @@ metaDescription: "L'abus de dette technique est dangereux pour l'entreprise. Les
 excerpt: 'Le terme dette technique est utilisé dans le domaine de l’informatique en comparaison à la dette du domaine financier. Celle-ci permet de symboliser les coûts liés aux mauvaises décisions techniques d’une entreprise. Cet article s’adresse donc aussi bien à ceux qui prennent les décisions qu’à ceux qui les suivent, puisqu’il est important de minimiser cette [&hellip;]'
 authors:
   - 'quentin-lerebours'
+skills: []
 ---
 
 Le terme **dette technique** est utilisé dans le domaine de l’informatique en comparaison à la dette du domaine financier. Celle-ci permet de symboliser les coûts liés aux mauvaises décisions techniques d’une entreprise.

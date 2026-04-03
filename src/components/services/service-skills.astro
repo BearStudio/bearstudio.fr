@@ -1,8 +1,8 @@
 ---
-import { Image } from 'astro:assets';
-
+import { getLink } from '@/lib/link';
 import { getSkillsCollectionWithIcons } from '@/lib/skills';
 import { cn } from '@/lib/tailwind/utils';
+import { buttonVariants } from '@/components/ui/button';
 import type { Locale } from '@/i18n/utils';
 
 interface Props {
@@ -20,20 +20,17 @@ const skills = await getSkillsCollectionWithIcons(skillNames, locale);
   <h4 class="font-heading font-medium">Skills</h4>
   <div class="flex flex-wrap gap-2 md:flex-col">
     {
-      skills.map((skill) => (
-        <div class="flex w-fit items-center gap-0 rounded-full border bg-neutral-100 px-1.5 py-1 text-sm">
-          {!!skill.icon && (
-            <Image
-              src={skill.icon.data.image}
-              alt={skill.icon.data.name}
-              width={32}
-              height={32}
-              class="-my-1 size-6"
-            />
-          )}
-          <span class="px-1.5">{skill.data.name}</span>
-        </div>
-      ))
+      skills.map((skill) => {
+        const slug = skill.filePath?.split('/').at(-2) ?? '';
+        return (
+          <a
+            href={getLink('/fr/expertise/:id', locale, { id: slug })}
+            class={cn(buttonVariants({ variant: 'secondary', size: 'sm' }))}
+          >
+            {skill.data.name}
+          </a>
+        );
+      })
     }
   </div>
 </div>
