@@ -19,7 +19,7 @@ La minute kikoo provient d'une remarque que je me suis faite en regardant l'émi
 
 Spoiler: j'ai pas trouvé ce concept, 😢 on arrête là ?</p>
 
-<div style="display: flex; justify-content: center;"><iframe src="https://giphy.com/embed/KDRv3QggAjyo" title="Giphy - Peter Parker cry" class="giphy-embed" allowfullscreen scrolling="no"></iframe></div>
+<div style="display: flex; justify-content: center;"><iframe src="https://giphy.com/embed/KDRv3QggAjyo" title="Giphy - Peter Parker cry" class="giphy-embed" allowfullscreen scrolling="no" width="400" height="300"></iframe></div>
 
 > _Non ! Si personne ne le fait, pourquoi ne pas le faire moi-même !_?
 
