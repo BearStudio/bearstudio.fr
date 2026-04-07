@@ -11,6 +11,9 @@ tags:
   - 'developpement'
 metaDescription: "Why a client's Slack message about prototyping a feature in 2 hours with AI no longer scares us, and how it's reshaping our business as developers."
 excerpt: "A client sends us a Slack message: he prototyped a chat in 2 hours with AI. Panic? No. Here's how this episode transformed our vision of the craft, from builders to guardians."
+thumbnail:
+  image: 'images/blog-header.png'
+  alt: 'Illustration of a developer and a polar bear working together on a laptop with an AI chatbot'
 authors:
   - 'heloise-guillaume'
 ---

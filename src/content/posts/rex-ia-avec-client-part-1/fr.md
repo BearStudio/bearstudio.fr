@@ -11,6 +11,9 @@ tags:
   - 'developpement'
 metaDescription: "Pourquoi le message Slack d'un client qui a prototypé une fonctionnalité en 2h avec l'IA ne nous fait plus peur, et comment il redéfinit notre métier de développeurs."
 excerpt: "Un client nous envoie un message Slack : il a prototypé un tchat en 2 heures avec l'IA. Panique ? Non. Voici comment cet épisode a transformé notre vision du métier, du rôle de constructeur à celui de garant."
+thumbnail:
+  image: 'images/blog-header.png'
+  alt: "Illustration d'un développeur et d'un ours polaire travaillant ensemble sur un laptop avec un chatbot IA"
 authors:
   - 'heloise-guillaume'
 ---
