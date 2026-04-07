@@ -10,7 +10,7 @@ tags:
   - 'web'
   - 'developpement'
 metaDescription: "Pourquoi le message Slack d'un client qui a prototypé une fonctionnalité en 2h avec l'IA ne nous fait plus peur, et comment il redéfinit notre métier de développeurs."
-excerpt: "Un client nous envoie un message Slack : il a prototypé un chat en 2 heures avec l'IA. Panique ? Non. Voici comment cet épisode a transformé notre vision du métier, du rôle de constructeur à celui de garant."
+excerpt: "Un client nous envoie un message Slack : il a prototypé un tchat en 2 heures avec l'IA. Panique ? Non. Voici comment cet épisode a transformé notre vision du métier, du rôle de constructeur à celui de garant."
 authors:
   - 'heloise-guillaume'
 ---
@@ -19,9 +19,9 @@ Ce n'est pas arrivé au cours d'une confrontation tendue en salle de réunion ma
 
 Nous avions estimé des tickets pour un client (que nous allons appeler « Client A »). Parmi ceux-ci, nous avons identifié deux fonctionnalités comme étant du « travail conséquent », nécessitant du temps, des tests et du budget. Puis, on a vu la fameuse notification dans le canal.
 
-Client A a expérimenté de son côté une version de l'application comme projet annexe. Il a partagé l'image d'un chat entièrement fonctionnel avec un indicateur de saisie, accompagnée du message suivant :
+Client A a expérimenté de son côté une version de l'application comme projet annexe. Il a partagé l'image d'un tchat entièrement fonctionnel avec un indicateur de saisie, accompagnée du message suivant :
 
-> Par curiosité, j'ai testé la création d'un chat hier. Voici le résultat en moins de 2 heures.
+> Par curiosité, j'ai testé la création d'un tchat hier. Voici le résultat en moins de 2 heures.
 
 Pour une équipe de développement, voir une fonctionnalité estimée à plusieurs jours de travail apparaître en « moins de 2 heures » peut provoquer un moment de panique. Sommes-nous trop lents ? Notre expertise est-elle en train de devenir obsolète ? Même notre canal interne s'est animé : « Attends, est-ce qu'on utilise suffisamment ces outils ? Est-ce qu'on est en retard ? »
 
@@ -49,7 +49,7 @@ Pour comprendre pourquoi cette interaction avec Client A a été un tournant, il
 
 ### L'ancien modèle : le jeu de la « discovery »
 
-Avant l'IA, lorsqu'un client souhaitait une fonctionnalité complexe comme un système de chat, on jouait à une sorte de téléphone arabe. Comme dans ce jeu où un message est chuchoté de personne en personne et se déforme progressivement, l'idée initiale du client évoluait, perdait en clarté ou se transformait au fil des intermédiaires (Product Owner, Designer, Développeur). Chaque étape impliquait une interprétation, avec son lot de malentendus et de dérives par rapport à la vision d'origine.
+Avant l'IA, lorsqu'un client souhaitait une fonctionnalité complexe comme un système de tchat, on jouait à une sorte de téléphone arabe. Comme dans ce jeu où un message est chuchoté de personne en personne et se déforme progressivement, l'idée initiale du client évoluait, perdait en clarté ou se transformait au fil des intermédiaires (Product Owner, Designer, Développeur). Chaque étape impliquait une interprétation, avec son lot de malentendus et de dérives par rapport à la vision d'origine.
 
 C'était un processus conçu pour limiter les risques, mais il était lent.
 
@@ -57,9 +57,9 @@ Si un client arrivait avec son propre code, nous étions les « gardiens ». Nou
 
 ### Le basculement : l'incident Client A
 
-Puis est arrivé le message Slack de Client A. Il ne s'était pas contenté de décrire le chat ; il l'avait construit.
+Puis est arrivé le message Slack de Client A. Il ne s'était pas contenté de décrire le tchat ; il l'avait construit.
 
-Lorsqu'il nous a proposé de nous montrer sa « plateforme admin » et le chat qu'il avait développé en moins de 2 heures, il était en réalité un peu inquiet. Il plaisantait en disant qu'il ressentait « une grosse pression », car il savait que son code n'était pas de niveau professionnel.
+Lorsqu'il nous a proposé de nous montrer sa « plateforme admin » et le tchat qu'il avait développé en moins de 2 heures, il était en réalité un peu inquiet. Il plaisantait en disant qu'il ressentait « une grosse pression », car il savait que son code n'était pas de niveau professionnel.
 
 C'est à ce moment-là que notre perception a changé. En interne, la réaction a été brute :
 
@@ -69,7 +69,7 @@ Mais lors de l'échange, la dynamique s'est inversée. Client A n'a pas dit : «
 
 Il a dit : « Je peux vous montrer le reste, et vous pourrez me dire à quel point l'IA a probablement mal fait les choses. »
 
-Il ne voulait plus que nous construisions le chat. Il avait déjà « construit » la vision.
+Il ne voulait plus que nous construisions le tchat. Il avait déjà « construit » la vision.
 
 **Il voulait que nous la professionnalisions.**
 
@@ -82,7 +82,9 @@ Au lieu de passer des jours sur des user stories abstraites (« En tant qu'utili
 - **Avant** : nous estimions 10 jours pour comprendre le besoin et le construire.
 - **Aujourd'hui** : nous estimons 5 jours, dont 0 % consacré à deviner, et 100 % dédié à l'architecture, à la sécurité et à l'intégration, le tout accéléré par l'usage de l'IA dans le code.
 
-Nous avons compris que le code généré par l'IA de Client A était fragile : probablement sans contrôles de sécurité et incapable de passer à l'échelle. Mais il remplissait un rôle essentiel : nous permettre de sauter la phase de « discovery » pour aller directement à l'« engineering ».
+Le code généré par l’IA fonctionnait pour un prototype, mais ne couvrait pas toujours les exigences d’un environnement de production (robustesse, sécurité, passage à l’échelle) ni l’ensemble de nos bonnes pratiques.
+Et c’est normal : ce n’était pas son rôle.
+Sa vraie valeur était ailleurs : nous permettre de sauter la phase de « discovery » pour aller directement à l’« engineering ».
 
 ![Galaxy brain](./images/galaxy-brain.png)
 
