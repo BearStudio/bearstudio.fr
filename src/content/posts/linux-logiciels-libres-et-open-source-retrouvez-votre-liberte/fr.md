@@ -164,7 +164,7 @@ Une fois votre distribution installée, profitez de votre liberté retrouvée !
 
 # <iframe src="https://www.youtube.com/embed/2OTwHSa1KVc" title="Youtube - Ubuntu 18.04 See What's New" allowfullscreen width="100%" height="382"></iframe>
 
-<iframe src="https://www.youtube.com/embed/2OTwHSa1KVc" title="Youtube - Ubuntu 18.04 See Wath's New" allowfullscreen width="100%" height="382"></iframe>
+<iframe src="https://www.youtube.com/embed/2OTwHSa1KVc" title="Youtube - Ubuntu 18.04 See What's New" allowfullscreen width="100%" height="382"></iframe>
 >>>>>>> 6f459d9 ([ADD] TITLE - iframes - Add the missing title on most iframe)
 
 ---
