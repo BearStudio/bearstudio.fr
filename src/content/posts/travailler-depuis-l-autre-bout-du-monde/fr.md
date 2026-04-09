@@ -5,7 +5,7 @@ categories:
   - 'retour-experience'
 tags:
   - 'temoignage'
-heroImage: 'images/'
+heroImage: 'images/header-travailler-au-vietnam.png'
 metaDescription: 'Télétravailler depuis le Vietnam : retour d’expérience concret pour concilier travail, décalage horaire et découverte sans perdre en efficacité.'
 excerpt: 'L’année dernière, j’ai eu l’opportunité de partir deux semaines au Vietnam dans un cadre privé. L’idée n’était pas de prendre des vacances mais bien de télétravailler depuis l’étranger, avec une organisation pensée pour rester aligné avec mon équipe et avec [&hellip;]'
 authors:

@@ -1,11 +1,12 @@
 ---
 title: 'Working from the other side of the world: feedback from two weeks of remote work in Vietnam'
+slug: 'working-from-the-other-side-of-the-world'
 date: 2026-04-01
 categories:
   - 'retour-experience'
 tags:
-  - 'temoignage'
-heroImage: 'images/'
+  - 'testimony'
+heroImage: 'images/header-travailler-au-vietnam.png'
 metaDescription: 'Working remotely from Vietnam: concrete feedback on balancing work, time difference, and discovery without losing efficiency.'
 excerpt: 'Last year, I had the opportunity to spend two weeks in Vietnam in a personal context. The idea was not to take a vacation but to work remotely from abroad, with an organization designed to stay aligned with my team and with […]'
 authors:
