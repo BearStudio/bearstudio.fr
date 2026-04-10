@@ -19,7 +19,7 @@ My objective was simple: to see whether it was possible to combine efficient wor
 
 ---
 
-## 🕒 Time difference: the real challenge
+## Time difference: the real challenge
 
 The first obvious thing to take into account in this kind of project is the time difference—in my case, it was 6 hours. So you need to think about adjusting your days and working hours to stay as synchronized as possible with your team in France.
 
@@ -69,7 +69,7 @@ I respected my 7 working hours per day without neglecting the tourist aspect.
 
 ---
 
-## 💻 Equipment and working conditions
+## Equipment and working conditions
 
 ### From a hotel to a seaside restaurant
 
@@ -104,7 +104,7 @@ This list reflects what I **personally** need to work, but depending on **your c
 
 ---
 
-## 🤝 Working alone… but as a team
+## Working alone… but as a team
 
 We’ve covered the time difference, the equipment, and the working conditions, but there’s one important point left: your team. Because yes, you’re alone on the other side of the world, but the project still needs to move forward collectively. So how do you do it?
 
@@ -123,11 +123,11 @@ Here are a few examples of what I put in place:
 - Scheduling **meetings** during overlapping hours
 - Switching to **asynchronous communication** for certain topics
 
-🎯 Goal: be **geographically far**, but **close to the team**.
+🎯 Goal: be **geographically far**, but stay **close to the team**.
 
 ---
 
-## ✅ A good experience?
+## A good experience?
 
 Such an experience highlights many positive points:
 
@@ -147,7 +147,7 @@ But it’s not all ideal either:
 
 ---
 
-## 📌 Summary and advice
+## Summary and advice
 
 Even though the experience was tiring, it remains extremely positive. It allowed me to discover a country, continue working efficiently, and prove my ability to adapt and maintain self-discipline.
 

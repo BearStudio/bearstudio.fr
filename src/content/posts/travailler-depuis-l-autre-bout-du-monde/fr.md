@@ -1,5 +1,5 @@
 ---
-title: 'Travailler depuis l’autre bout du monde : retour d’expérience de deux semaine de télétravail au Vietnam'
+title: 'Travailler depuis l’autre bout du monde : retour d’expérience de deux semaines de télétravail au Vietnam'
 date: 2026-04-01
 categories:
   - 'retour-experience'
@@ -18,7 +18,7 @@ Mon objectif était simple : voir s’il était possible de concilier travail ef
 
 ---
 
-## 🕒 Décalage horaire : le vrai défi
+## Décalage horaire : le vrai défi
 
 La première chose évidente à prendre en compte dans ce genre de projet, c’est le décalage horaire, dans mon cas il y avait 6 heures. Il faut donc réfléchir à aménager ses journées et ses horaires de travail pour essayer d’être le plus possible synchronisé avec son équipe en France.
 
@@ -68,7 +68,7 @@ Je respectais mes 7 heures de travail par jour, sans pour autant délaisser l’
 
 ---
 
-## 💻 Matériel et conditions de travail
+## Matériel et conditions de travail
 
 ### D’un hôtel à un restaurant en bord de mer
 
@@ -103,7 +103,7 @@ Cette liste reflète ce dont j’ai **personnellement** besoin pour travailler, 
 
 ---
 
-## 🤝 Travailler seul… mais en équipe
+## Travailler seul… mais en équipe
 
 On a vu le décalage horaire, on a vu le matériel et les conditions de travail, mais il reste un point important : votre équipe. Parce que oui, vous êtes seul à l’autre bout du monde mais il faut continuer à faire avancer le projet collectivement. Alors, comment on fait ?
 
@@ -122,11 +122,11 @@ Voici quelques exemples de choses que j’ai mis en place :
 - Caler les **réunions** dans les fenêtres communes
 - Basculer sur un mode **communication asynchrone** sur certains sujets
 
-🎯 Objectif : être **loin géographiquement**, mais **proche de l’équipe**.
+🎯 Objectif : être **loin géographiquement**, mais rester **proche de l’équipe**.
 
 ---
 
-## ✅ Une bonne expérience ?
+## Une bonne expérience ?
 
 Une telle expérience met en lumière de nombreux points positifs :
 
@@ -146,7 +146,7 @@ Mais il ne faut pas tout idéaliser non plus :
 
 ---
 
-## 📌 Bilan et conseils
+## Bilan et conseils
 
 Même si l’expérience a été fatigante, elle reste extrêmement positive. Elle m’a permis de : découvrir un pays, continuer à travailler efficacement et me prouver ma capacité d’adaptation et mon auto-discipline.
 
