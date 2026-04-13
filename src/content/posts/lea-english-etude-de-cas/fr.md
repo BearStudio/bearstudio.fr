@@ -8,7 +8,9 @@ tags:
   - 'etude-de-cas'
   - 'experience-utilisateur'
   - 'ux'
-heroImage: 'images/format-blog-header-1.png'
+thumbnail:
+  image: 'images/blog-header.png'
+  alt: "Maquettes de l'application mobile Léa English montrant des écrans de leçons sur smartphones"
 metaDescription: "Découvrez comment nous avons co-conçu LEA English, une app mobile pour apprendre l'anglais oral de façon intuitive et efficace."
 authors: ['alexandra-pituru']
 ---
