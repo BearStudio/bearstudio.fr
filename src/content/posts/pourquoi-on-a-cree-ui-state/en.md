@@ -11,7 +11,7 @@ tags:
   - 'open-source'
   - 'projet'
 thumbnail:
-  image: 'images/blog-header.png'
+  image: 'images/thumbnail.jpeg'
   alt: 'Diagram of UI states (error, loading, empty, success) with a TypeScript code snippet using the ui-state library'
 metaDescription: 'Discover ui-state, a TypeScript library by BearStudio for managing UI states (loading, error, empty, success) with type safety and exhaustive matching — without breaking your JSX structure.'
 excerpt: "Managing UI states like loading, error, or empty in React often leads to messy conditionals. Inspired by TkDodo's component composition patterns, we built ui-state — a TypeScript library that gives you a single, well-typed active state with exhaustive matching, without restructuring your JSX."

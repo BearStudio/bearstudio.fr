@@ -9,7 +9,7 @@ tags:
   - 'developpement-mobile'
   - 'react-native'
 thumbnail:
-  image: 'images/blog-header.png'
+  image: 'images/thumbnail.jpeg'
   alt: 'Two mobile screens with green UI components and a leaf, representing the Ficus UI library'
 metaDescription: 'Ficus UI is an open-source React Native UI library, inspired by Chakra UI, with theming, style props, and native dark mode.'
 authors: ['nicolas-torion']

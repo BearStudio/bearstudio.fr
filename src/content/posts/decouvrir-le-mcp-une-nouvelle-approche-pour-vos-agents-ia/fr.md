@@ -8,7 +8,7 @@ tags:
   - 'ia'
   - 'numerique'
 thumbnail:
-  image: 'images/blog-header.png'
+  image: 'images/thumbnail.jpeg'
   alt: "Illustration d'un processeur MCP connectant une IA à des outils comme TypeScript, GitHub et Notion"
 metaDescription: 'Avec le MCP, les agents IA se connectent à vos outils et données, agissent en autonomie et transforment votre façon de développer.'
 excerpt: 'Cet article est également disponible en anglais ! 🇬🇧 État des lieux rapide Ces derniers mois, l&rsquo;efficacité des&nbsp;LLM&nbsp;n’a cessé de croître, bouleversant nos habitudes et notre quotidien de développeur. De plus en plus sollicités pour écrire du code, débogguer, concevoir ou nous assister à chaque étape de notre travail, ces modèles sont en train de [&hellip;]'

@@ -7,7 +7,7 @@ tags:
   - 'developpement'
   - 'developpement-web'
 thumbnail:
-  image: 'images/blog-header.png'
+  image: 'images/thumbnail.jpeg'
   alt: "Illustration d'un canard en plastique jaune à côté d'une barre de chargement affichant Processing"
 metaDescription: "Le canard en plastique est une méthode très connue des développeurs, et beaucoup l'utilisent au quotidien sans le réaliser, ou la comprendre"
 authors: ['gregoire-protas']

@@ -9,7 +9,7 @@ tags:
   - 'retour-dexperience'
   - 'temoignage'
 thumbnail:
-  image: 'images/blog-header.png'
+  image: 'images/thumbnail.jpeg'
   alt: "Illustration d'un ours blanc ayant une idée, entouré d'icônes de développement comme un laptop, du code et un fichier README"
 metaDescription: 'Side project pour apprendre et s’amuser vous permet de tester vos idées et progresser tout en prenant du plaisir.'
 excerpt: "Faire un side project est le meilleur moyen d'apprendre et s'amuser en même temps. Laisse moi t'expliquer pourquoi !"

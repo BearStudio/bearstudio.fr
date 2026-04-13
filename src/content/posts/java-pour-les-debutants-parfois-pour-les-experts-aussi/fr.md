@@ -4,7 +4,7 @@ date: 2025-05-28
 categories:
   - 'developpement'
 thumbnail:
-  image: 'images/blog-header.png'
+  image: 'images/thumbnail.jpeg'
   alt: "Illustration d'un ours blanc avec des engrenages et le logo Java"
 metaDescription: 'Évitez les erreurs Java fréquentes : NullPointerException, confusion ==/equals(), oubli de break, pièges courants.'
 authors: ['mariem-mkassmi']

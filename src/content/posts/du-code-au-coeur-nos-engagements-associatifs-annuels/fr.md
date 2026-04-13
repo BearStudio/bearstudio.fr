@@ -8,7 +8,7 @@ tags:
   - 'engagement'
   - 'temoignage'
 thumbnail:
-  image: 'images/blog-header.png'
+  image: 'images/thumbnail.jpeg'
   alt: "Illustration d'un ours blanc entouré de cœurs et de logos d'associations comme Mécénat Chirurgie Cardiaque et France Cancer"
 metaDescription: "BearStudio s'engage auprès d'associations via des dons et du mécénat : des engagements associatifs forts en entreprise."
 authors: ['soraya-benchakroune']

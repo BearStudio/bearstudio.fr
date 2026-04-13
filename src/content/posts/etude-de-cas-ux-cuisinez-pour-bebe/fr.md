@@ -9,7 +9,7 @@ tags:
   - 'experience-utilisateur'
   - 'ux'
 thumbnail:
-  image: 'images/blog-header.png'
+  image: 'images/thumbnail.jpeg'
   alt: "Aperçu de l'application mobile Cuisinez pour Bébé avec des écrans de recettes sur fond vert"
 authors: ['daryl-avila-bonnet']
 metaDescription: >

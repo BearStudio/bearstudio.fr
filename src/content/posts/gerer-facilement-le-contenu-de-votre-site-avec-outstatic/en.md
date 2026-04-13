@@ -8,7 +8,7 @@ tags:
   - 'developpement-web'
   - 'retour-dexperience'
 thumbnail:
-  image: 'images/blog-header.png'
+  image: 'images/thumbnail.jpeg'
   alt: 'Illustration of a laptop displaying the Outstatic logo with a bear mascot'
 metaDescription: 'Discover a new way to manage your website content, intuitive and database-free, with the Outstatic CMS.'
 authors: ['jeanne-grenet']

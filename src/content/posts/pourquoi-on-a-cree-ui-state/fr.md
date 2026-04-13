@@ -10,7 +10,7 @@ tags:
   - 'open-source'
   - 'projet'
 thumbnail:
-  image: 'images/blog-header.png'
+  image: 'images/thumbnail.jpeg'
   alt: 'Diagramme des états UI (error, loading, empty, success) avec un extrait de code TypeScript utilisant la librairie ui-state'
 metaDescription: 'Pourquoi on a créé ui-state : découvrez comment gérer les états UI (loading, empty, error, success) proprement en React et TypeScript.'
 excerpt: "Pourquoi a t'on créé ui-state, une librairie TypeScript de gestion d'états ? Tout viens de la lecture d'un très bon article de Dominic Dorfmeister aka TkDodo (on vous conseille aussi de lire ses autres articles sur son blog)"
