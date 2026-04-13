@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import { lunalink } from '@bearstudio/lunalink';
 import { PiCaretDownBold } from 'react-icons/pi';
 
 import { cn } from '@/lib/tailwind/utils';
@@ -13,10 +12,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Logo } from '@/components/ui/logo';
+import { LogoWithPopover } from '@/components/nav/logo-with-popover';
 import type { Locale } from '@/i18n/utils';
 import { getTranslationFn } from '@/i18n/utils';
-import { ROUTES } from '@/routes.gen';
 
 import { getMainNavItems } from './main-nav';
 
@@ -56,9 +54,7 @@ export const MainNavDesktop = (props: { pathname: string; locale: Locale }) => {
         )}
       >
         <div className="flex gap-8">
-          <a href={lunalink(ROUTES[props.locale].__path, {})} className="flex">
-            <Logo className="-mt-0.5 w-28" />
-          </a>
+          <LogoWithPopover locale={props.locale} />
           <nav className="flex items-center gap-1">
             {primaryItems.map((item) => {
               const href = item.getHref(props.locale);

@@ -1,0 +1,41 @@
+---
+import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
+import { AssetsContent } from '@/components/brand-assets';
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import Container from '@/components/container.astro';
+import HeroContent from '@/components/hero/hero-content.astro';
+import Hero from '@/components/hero/hero.astro';
+import SEO from '@/components/seo/index.astro';
+import { getAlternates } from '@/components/seo/utils';
+import MainLayout from '@/layouts/main-layout.astro';
+
+const { t, locale } = getTranslationUtilities(Astro.currentLocale);
+
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    label: t('brandAssets.root.hero.title'),
+    path: '/fr/branding',
+    params: {},
+  }),
+]);
+---
+
+<MainLayout>
+  <SEO
+    slot="seo"
+    title={t('brandAssets.root.hero.title')}
+    description={t('brandAssets.root.hero.description')}
+    alternates={getAlternates('/fr/branding', {})}
+    breadcrumb={breadcrumb}
+  />
+  <Hero>
+    <HeroContent
+      title={t('brandAssets.root.hero.title')}
+      description={t('brandAssets.root.hero.description')}
+      breadcrumb={breadcrumb}
+    />
+  </Hero>
+  <Container>
+    <AssetsContent client:load locale={locale} />
+  </Container>
+</MainLayout>
