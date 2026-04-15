@@ -19,7 +19,7 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm knip
+      - run: pnpm knip --reporter compact
 
   production:
     name: Knip (production)
@@ -34,4 +34,4 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm knip:production
+      - run: pnpm knip:production --reporter compact
