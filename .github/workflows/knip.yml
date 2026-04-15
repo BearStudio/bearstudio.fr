@@ -10,28 +10,47 @@ jobs:
     name: Knip (classic)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v6
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v6
+
+      - name: 🏗 Setup pnpm
+        uses: pnpm/action-setup@v6
         with:
-          version: 10.33.0
-      - uses: actions/setup-node@v6
+          version: 10
+
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm knip --reporter compact
+
+
+      - name: 📦 Install dependencies
+        run: pnpm install
+
+      - name: 🤖 Run Knip
+        run: pnpm knip --reporter compact
 
   production:
     name: Knip (production)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v6
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v6
+      
+      - name: 🏗 Setup pnpm
+        uses: pnpm/action-setup@v6
         with:
-          version: 10.33.0
-      - uses: actions/setup-node@v6
+          version: 10
+      
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm knip:production --reporter compact
+
+      - name: 📦 Install dependencies
+        run: pnpm install
+
+      - name: 🤖 Run Knip (production)
+        run: pnpm knip:production --reporter compact
