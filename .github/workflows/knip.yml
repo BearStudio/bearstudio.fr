@@ -26,7 +26,7 @@ jobs:
 
 
       - name: 📦 Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: 🤖 Run Knip
         run: pnpm knip --reporter compact
@@ -50,7 +50,7 @@ jobs:
           cache: pnpm
 
       - name: 📦 Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: 🤖 Run Knip (production)
         run: pnpm knip:production --reporter compact
