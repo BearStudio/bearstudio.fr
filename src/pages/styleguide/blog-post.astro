@@ -1,0 +1,44 @@
+---
+import { LuCalendar, LuImage, LuType } from 'react-icons/lu';
+
+import FeatureCard from '@/components/blog-post/feature-card.astro';
+import RootLayout from '@/layouts/root-layout.astro';
+---
+
+<RootLayout>
+  <div class="container mx-auto flex flex-col gap-12 p-8">
+    <div class="flex flex-col gap-1">
+      <a href="/styleguide" class="text-sm text-neutral-500 hover:underline"
+        >← Styleguide</a
+      >
+      <h1 class="font-heading text-4xl font-bold">Blog Post Components</h1>
+    </div>
+
+    <!-- Feature Card -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Feature Card</h2>
+
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <div class="grid max-w-xl grid-cols-2 gap-4">
+          <FeatureCard
+            icon={LuCalendar}
+            title="Âge présent mais secondaire"
+            content="Visible, sans voler l'attention"
+          />
+
+          <FeatureCard
+            icon={LuType}
+            title="Titre optimisé"
+            content="Typographie, espace, nombre de lignes soigneusement pensés"
+          />
+          <FeatureCard
+            icon={LuImage}
+            title="Image dominante"
+            content="L'œil décide d'abord par le visuel, un parti pris rendu évident par la richesse et la qualité exceptionnelle des photos"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</RootLayout>
