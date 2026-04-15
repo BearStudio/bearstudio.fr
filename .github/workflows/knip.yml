@@ -2,7 +2,7 @@ name: Knip
 
 on:
   push:
-    branches: [main, feature/add-new-knip-*]
+    branches: [main]
   pull_request:
 
 jobs:
