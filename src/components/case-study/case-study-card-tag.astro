@@ -1,0 +1,18 @@
+---
+import { cn } from '@/lib/tailwind/utils';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<span
+  class={cn(
+    'flex h-5 items-center justify-center gap-2 rounded-[99px] border border-brand-600 px-2 text-xs text-white',
+    className
+  )}
+>
+  <slot />
+</span>

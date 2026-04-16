@@ -1,0 +1,30 @@
+---
+import CaseStudyCardTeamMember from './case-study-card-team-member.astro';
+import CaseStudyCardTeam from './case-study-card-team.astro';
+
+interface TeamMember {
+  name: string;
+  role: string;
+  href?: string;
+}
+
+interface Props {
+  label?: string;
+  members: Array<TeamMember>;
+  class?: string;
+}
+
+const { label, members, class: className } = Astro.props;
+---
+
+<CaseStudyCardTeam title={label} class={className}>
+  {
+    members.map((member) => (
+      <CaseStudyCardTeamMember
+        name={member.name}
+        role={member.role}
+        href={member.href}
+      />
+    ))
+  }
+</CaseStudyCardTeam>

@@ -42,7 +42,8 @@ const ROUTES_CONFIG = {
       ":page": {},
       "articles": {
         ":id": {},
-        ":id.md": {}
+        ":id.md": {},
+        "etude-de-cas-ux-cuisinez-pour-bebe": {}
       },
       "auteurs": {
         ":author": {

@@ -1,0 +1,989 @@
+---
+import { Schema } from 'astro-seo-schema';
+import { Image } from 'astro:assets';
+import { getEntry } from 'astro:content';
+
+import dayjs from 'dayjs';
+import { isNonNullish } from 'remeda';
+
+import { getLink } from '@/lib/link';
+import { getPostsCollection } from '@/lib/posts';
+import { getSiteUrl } from '@/lib/site/get-site-url';
+import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
+import SectionContent from '@/components/blog/case-studies/section-content.astro';
+import SectionSubtitle from '@/components/blog/case-studies/section-subtitle.astro';
+import SectionTitle from '@/components/blog/case-studies/section-title.astro';
+import SectionWithMedia from '@/components/blog/case-studies/section-with-media.astro';
+import Section from '@/components/blog/case-studies/section.astro';
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import CaseStudyRole from '@/components/case-study/case-study-role.astro';
+import CaseStudyTags from '@/components/case-study/case-study-tags.astro';
+import CaseStudyTeam from '@/components/case-study/case-study-team.astro';
+import ReviewCard from '@/components/case-study/review-card.astro';
+import SectionDark from '@/components/case-study/section-dark.astro';
+import Container from '@/components/container.astro';
+import HeroContent from '@/components/hero/hero-content.astro';
+import Hero from '@/components/hero/hero.astro';
+import PhotoSwipeImages from '@/components/photo-swipe-images.astro';
+import Prose from '@/components/prose.astro';
+import SEO from '@/components/seo/index.astro';
+import { getId } from '@/components/seo/utils';
+import { FormattedDate } from '@/components/ui/formatted-date';
+import contexteEtEnjeu from '@/content/posts/etude-de-cas-ux-cuisinez-pour-bebe/images/contexte-et-enjeu.png';
+import image1 from '@/content/posts/etude-de-cas-ux-cuisinez-pour-bebe/images/image-1-1024x473.png';
+import image2 from '@/content/posts/etude-de-cas-ux-cuisinez-pour-bebe/images/image-2-1024x964.png';
+import image3 from '@/content/posts/etude-de-cas-ux-cuisinez-pour-bebe/images/image-3-1024x971.png';
+import image37 from '@/content/posts/etude-de-cas-ux-cuisinez-pour-bebe/images/image-37.png';
+import imagePhone from '@/content/posts/etude-de-cas-ux-cuisinez-pour-bebe/images/image-515x1024.png';
+import phoneHome from '@/content/posts/etude-de-cas-ux-cuisinez-pour-bebe/images/phone-home.png';
+import phoneList from '@/content/posts/etude-de-cas-ux-cuisinez-pour-bebe/images/phone-list.png';
+import MainLayout from '@/layouts/main-layout.astro';
+
+const locale = 'fr';
+const { t } = getTranslationUtilities(locale);
+
+const posts = await getPostsCollection({ locale });
+const post = posts.find(
+  (p) => p.data._computed.slug === 'etude-de-cas-ux-cuisinez-pour-bebe'
+);
+
+if (!post) {
+  return Astro.redirect('/fr/blog');
+}
+
+const url = new URL(Astro.url.pathname, Astro.site);
+
+const tagLabels = (
+  await Promise.all(
+    (post.data.tags ?? []).map(async (tag) => {
+      const skill = await getEntry('skills', `${tag}/${locale}`);
+      return skill?.data.name ?? null;
+    })
+  )
+).filter(isNonNullish);
+
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    path: '/fr/blog',
+    params: {},
+    label: t('blog.root.breadcrumb'),
+  }),
+  entry({
+    path: '/fr/blog/articles/:id',
+    params: { id: 'etude-de-cas-ux-cuisinez-pour-bebe' },
+    label: post.data.title,
+  }),
+]);
+
+const blogPostingSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  datePublished: dayjs(post.data.date).format('YYYY-MM-DD'),
+  description: post.data.metaDescription ?? '',
+  isAccessibleForFree: true,
+  keywords: post.data.tags ?? [],
+  url: url.toString(),
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url.toString() },
+  publisher: { '@id': getId('organization') },
+  inLanguage: locale,
+  author: post.data._computed.authors.map((author) => ({
+    '@type': 'Person' as const,
+    name: author.data.name,
+    ...(author.data.job ? { jobTitle: author.data.job } : {}),
+    ...(author.data._computed.slug
+      ? {
+          url: `${getSiteUrl()}${getLink('/fr/equipe/:id', locale, { id: author.data._computed.slug })}`,
+        }
+      : {}),
+  })),
+} as const;
+---
+
+<MainLayout>
+  <SEO
+    slot="seo"
+    title={post.data.title}
+    description={post.data.metaDescription ?? ''}
+    url={url}
+    alternates={{
+      fr: getLink('/fr/blog/articles/:id', 'fr', {
+        id: 'etude-de-cas-ux-cuisinez-pour-bebe',
+      }),
+      en: null,
+    }}
+    breadcrumb={breadcrumb}
+  />
+  <Schema slot="ld+json" item={blogPostingSchema} />
+  <Hero image={post.data.heroImage} contentClassName="pb-12 lg:pb-20">
+    <HeroContent breadcrumb={breadcrumb}>
+      <h1
+        class="font-heading text-accent max-w-[30ch] text-4xl leading-tight font-bold text-balance md:text-5xl"
+      >
+        {post.data.title}
+      </h1>
+      <div class="flex flex-col gap-0 text-sm lg:flex-row lg:gap-1">
+        <div class="opacity-60">
+          {t('blog.article.on')}
+          <FormattedDate date={post.data.date} locale={locale} />
+        </div>
+        {
+          !!post.data._computed.authors.length && (
+            <div>
+              <span class="opacity-60">{t('blog.article.by')}</span>
+              {post.data._computed.authors.map((author, index) => {
+                return author.data._computed.slug ? (
+                  <a
+                    href={getLink('/fr/equipe/:id', locale, {
+                      id: author.data._computed.slug,
+                    })}
+                    class="font-medium opacity-80 hover:opacity-100"
+                  >
+                    {`${author.data.name}${index !== post.data._computed.authors.length - 1 ? ', ' : ''}`}
+                  </a>
+                ) : (
+                  <span class="opacity-60">
+                    {`${author.data.name}${index !== post.data._computed.authors.length - 1 ? ', ' : ''}`}
+                  </span>
+                );
+              })}
+            </div>
+          )
+        }
+      </div>
+      {!!tagLabels.length && <CaseStudyTags tags={tagLabels} />}
+      {
+        !!post.data.excerpt && (
+          <p class="max-w-[90ch] text-sm text-balance opacity-80">
+            {post.data.excerpt}
+          </p>
+        )
+      }
+    </HeroContent>
+  </Hero>
+  <Container>
+    <PhotoSwipeImages>
+      <Prose>
+        <SectionWithMedia
+          mediaPosition="end"
+          bleedMedia
+          mediaWidth="380px"
+          class="pt-0"
+        >
+          <SectionTitle>Présentation du projet</SectionTitle>
+          <SectionContent>
+            <p>
+              L'histoire de <strong>Cuisinez pour Bébé</strong> commence avec <b
+                >Clémence</b
+              >
+              , une jeune maman passionnée de cuisine qui souhaitait offrir à son
+              enfant une alimentation saine, simple et variée. Comme beaucoup de
+              parents, elle s'est posé les questions essentielles :
+              <ul class="pl-6">
+                <li class="list-disc">
+                  <strong>
+                    Comment réussir la diversification alimentaire ?</strong
+                  >
+                </li>
+                <li class="list-disc">
+                  <strong>
+                    Comment préparer des repas équilibrés sans y passer des
+                    heures ?
+                  </strong>
+                </li>
+              </ul>
+            </p>
+            <p>
+              Pour y répondre, elle commence par partager ses <strong
+                >recettes maison</strong
+              >
+              sur un <strong>blog</strong>, qui devient rapidement un <strong
+                >site WordPress structuré</strong
+              >. Le succès est immédiat : les jeunes parents y trouvent des
+              repères clairs, des idées concrètes et une approche décomplexée de
+              la cuisine pour bébé.
+            </p>
+            <p>
+              Aujourd'hui, <em>Cuisinez pour Bébé</em> rassemble plus de <strong
+                >1 800 recettes</strong
+              >, classées par <strong>âge</strong>, des <strong
+                >menus hebdomadaires</strong
+              > de <strong>batch cooking</strong>, ainsi qu'une multitude de
+              conseils pratiques pour <strong>accompagner</strong>
+              chaque étape de la diversification.
+            </p>
+          </SectionContent>
+          <div slot="media" class="relative h-full w-[320px]">
+            <Image
+              src={phoneList}
+              alt="Liste de recettes de l'application Cuisinez pour Bébé"
+              class="absolute bottom-[37%] left-[30%] w-[220px]"
+              widths={[300, 600]}
+            />
+            <Image
+              src={phoneHome}
+              alt="Accueil de l'application Cuisinez pour Bébé"
+              class="absolute -right-44 bottom-[30%] z-10 w-[320px]"
+              widths={[300, 700]}
+            />
+          </div>
+        </SectionWithMedia>
+
+        <SectionWithMedia mediaPosition="start" bleedMedia>
+          <SectionTitle>Contexte et enjeux</SectionTitle>
+          <SectionContent>
+            <p>
+              Avec plus de <strong>150 000 visites mensuelles</strong> et une communauté
+              très active sur les réseaux sociaux, <em>Cuisinez pour Bébé</em> s'est
+              imposé comme une ressource incontournable pour les parents en quête
+              de recettes simples et équilibrées pour leurs enfants.
+            </p>
+            <p>
+              Ce succès a cependant révélé un besoin clair : rendre l'expérience
+              plus fluide, plus mobile et plus personnalisée. La majorité des
+              utilisateurs consultait déjà le site depuis leur téléphone et
+              exprimait le besoin d'accéder plus rapidement à leurs recettes, à
+              leurs favoris et aux menus hebdomadaires directement depuis une
+              application.
+            </p>
+            <p>
+              L'enjeu était donc de transposer l'expérience du site dans un
+              format mobile intuitif, fidèle à l'univers existant, tout en
+              intégrant des fonctionnalités clés : un modèle freemium, une
+              navigation adaptée à l'âge de l'enfant et un accès simplifié aux
+              menus de batch cooking.
+            </p>
+            <p>
+              <strong
+                >Accompagner les parents au quotidien dans la préparation des
+                repas de leur bébé.</strong
+              >
+            </p>
+          </SectionContent>
+          <Image
+            slot="media"
+            src={contexteEtEnjeu}
+            alt="Contexte et enjeux Cuisinez pour Bébé"
+            class=""
+            widths={[480, 768]}
+          />
+        </SectionWithMedia>
+
+        <SectionDark class="mt-19 mb-24">
+          <Section class="gap-8 py-0">
+            <div class="flex flex-col gap-4">
+              <SectionTitle class="text-brand-100"
+                >Frustrations utilisateurs</SectionTitle
+              >
+              <SectionSubtitle class="text-brand-100">
+                Les frustrations identifiées reflètent l'insatisfaction des
+                utilisateurs avant l'amélioration de l'application.
+              </SectionSubtitle>
+            </div>
+            <div
+              class="grid grid-cols-1 gap-6 pb-6 sm:grid-cols-2 lg:grid-cols-3"
+            >
+              <div class="flex items-center gap-4">
+                <!-- Send (paper plane) -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-brand-300 size-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path
+                    d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
+                  ></path><path d="m21.854 2.147-10.94 10.939"></path></svg
+                >
+                <p class="text-brand-200 text-sm leading-[21px] font-normal">
+                  Navigation moins pratique sur un site web que dans une
+                  application mobile.
+                </p>
+              </div>
+              <div class="flex items-center gap-4">
+                <!-- ScrollText -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-brand-300 size-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path d="M15 12h-5"></path><path d="M15 8h-5"></path><path
+                    d="M19 17V5a2 2 0 0 0-2-2H4"></path><path
+                    d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"
+                  ></path></svg
+                >
+                <p class="text-brand-200 text-sm leading-[21px] font-normal">
+                  Difficulté à passer rapidement entre recettes, menus et liste
+                  de courses.
+                </p>
+              </div>
+              <div class="flex items-center gap-4">
+                <!-- TrendingUp -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-brand-300 size-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"
+                  ></polyline><polyline points="16 7 22 7 22 13"
+                  ></polyline></svg
+                >
+                <p class="text-brand-200 text-sm leading-[21px] font-normal">
+                  Difficulté à suivre précisément l'évolution de la
+                  diversification de bébé.
+                </p>
+              </div>
+              <div class="flex items-center gap-4">
+                <!-- Heart -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-brand-300 size-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path
+                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                  ></path></svg
+                >
+                <p class="text-brand-200 text-sm leading-[21px] font-normal">
+                  Difficulté à retrouver rapidement ses recettes préférées sur
+                  le site.
+                </p>
+              </div>
+              <div class="flex items-center gap-4">
+                <!-- LayoutGrid -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-brand-300 size-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><rect width="7" height="7" x="3" y="3" rx="1"></rect><rect
+                    width="7"
+                    height="7"
+                    x="14"
+                    y="3"
+                    rx="1"></rect><rect
+                    width="7"
+                    height="7"
+                    x="14"
+                    y="14"
+                    rx="1"></rect><rect width="7" height="7" x="3" y="14" rx="1"
+                  ></rect></svg
+                >
+                <p class="text-brand-200 text-sm leading-[21px] font-normal">
+                  Difficulté à centraliser menus, recettes et courses dans un
+                  seul espace fluide.
+                </p>
+              </div>
+            </div>
+          </Section>
+        </SectionDark>
+
+        <Section>
+          <SectionTitle>Notre rôle</SectionTitle>
+          <SectionContent class="max-w-2/3">
+            <p class="text-foreground text-base leading-relaxed">
+              Dans le cadre de ce projet, <strong>BearStudio</strong> est intervenu
+              à la fois sur la <strong
+                >conception de l'expérience produit</strong
+              > et sur le <strong>développement de l'application mobile</strong
+              >. L'équipe a accompagné <strong>Cuisinez pour Bébé</strong> tout au
+              long du projet, depuis la phase de <strong
+                >compréhension des besoins</strong
+              > et de <strong>structuration des parcours</strong> jusqu'à la réalisation
+              technique de l'application et son intégration avec l'infrastructure
+              existante.
+            </p>
+            <p class="text-foreground text-base leading-relaxed">
+              Cette <strong>collaboration</strong> s'est appuyée sur une équipe dédiée,
+              <strong>impliquée</strong> dans les différentes phases de conception,
+              d'itération et de développement.
+            </p>
+          </SectionContent>
+        </Section>
+
+        <Section class="gap-6">
+          <SectionTitle>Rôle et processus</SectionTitle>
+          <CaseStudyRole
+            label="Rôle"
+            title="Product Design"
+            icon="layout"
+            image={image37}
+            imageAlt="Écrans de l'application Cuisinez pour Bébé"
+          >
+            Notre équipe a participé à la conception de l'expérience mobile à
+            partir de l'analyse des besoins utilisateurs. Et participe également
+            à la structuration des parcours et réalisation de prototypes basse
+            et haute fidélité, avec des itérations pour valider les choix de
+            conception.
+            <CaseStudyTags slot="tags" tags={['Figma', 'UX/UI', 'Maquettes']} />
+            <CaseStudyTeam
+              slot="team"
+              label="Équipe sur ce rôle"
+              members={[
+                {
+                  name: 'Ivan D.',
+                  role: 'Lead Designer UX/UI',
+                  href: '/fr/equipe/ivan-dalmet',
+                },
+                {
+                  name: 'Daryl A.',
+                  role: 'UX/UI Designer',
+                  href: '/fr/equipe/daryl-avila-bonnet',
+                },
+                {
+                  name: 'Dorian D.',
+                  role: 'UX/UI Designer',
+                  href: '/fr/equipe/dorian-delorme',
+                },
+              ]}
+            />
+          </CaseStudyRole>
+          <CaseStudyRole label="Rôle" title="Développement" icon="code">
+            Côté technique, BearStudio a assuré la réalisation de l'application
+            mobile connectée à l'infrastructure WordPress existante :
+            développement React Native (Android & iOS), intégration via API REST
+            WordPress, recherche Algolia, authentification et modèle freemium.
+            <CaseStudyTags
+              slot="tags"
+              tags={['React Native', 'WordPress API', 'Algolia']}
+            />
+            <CaseStudyTeam
+              slot="team"
+              label="Équipe sur ce rôle"
+              members={[
+                { name: 'Lead Dev', role: 'Lead Développeur Full-Stack' },
+              ]}
+            />
+          </CaseStudyRole>
+        </Section>
+
+        <h2>Conception & itérations</h2>
+
+        <h3>Écrans principaux de la V1 - Poser les fondations</h3>
+        <p>
+          La première version de l'application <em>Cuisinez pour Bébé</em> avait
+          pour objectif de transposer les fonctionnalités clés du site existant vers
+          un environnement mobile.
+        </p>
+        <p>
+          Cette V1 constituait un socle fonctionnel, pensé pour répondre en
+          priorité aux usages essentiels identifiés par l'équipe CPB : <strong
+            >consulter des recettes</strong
+          >, <strong
+            >organiser les repas de la semaine et comprendre la valeur de
+            l'abonnement</strong
+          >.
+        </p>
+        <p>
+          À ce stade, l'enjeu n'était pas encore d'optimiser chaque interaction,
+          mais de valider les parcours fondamentaux et la pertinence du format
+          applicatif.
+        </p>
+        <p>
+          L'application s'articulait ainsi autour de quelques briques centrales
+          :
+        </p>
+        <ol>
+          <li>
+            <strong>L'accès aux menus hebdomadaires</strong> dès l'entrée dans l'app
+          </li>
+          <li>
+            La <strong>consultation d'un catalogue de recettes</strong> classées
+            par âge
+          </li>
+          <li>
+            <strong>Des fiches recettes</strong> simples regroupant les informations
+            nécessaires à la préparation
+          </li>
+          <li>
+            <strong>Un espace favoris</strong> pour retrouver les contenus enregistrés
+          </li>
+          <li>
+            Un <strong>profil utilisateur</strong> orienté <strong
+              >gestion du compte</strong
+            > et de <strong>l'abonnement</strong>
+          </li>
+          <li>
+            <strong>Un paywall</strong> destiné à présenter l'offre freemium
+          </li>
+          <li>
+            <strong>Un parcours d'inscription</strong> volontairement très séquencé
+          </li>
+        </ol>
+        <p>
+          Cette première version a permis de poser les bases du produit, de
+          confronter les hypothèses initiales aux usages réels et de fournir un
+          terrain solide pour les évolutions futures.
+        </p>
+
+        <h3>Les écrans principaux aujourd'hui</h3>
+        <p>
+          Les écrans actuels de <em>Cuisinez pour Bébé</em> ne sont pas le résultat
+          d'un empilement de fonctionnalités. Ils sont le résultat d'une démarche
+          centrée sur des usages concrets, itérée dans le temps, avec un objectif
+          constant : rendre une expérience riche simple à utiliser sur mobile, dans
+          un contexte réel (<em
+            >parent pressé, téléphone à une main, enfant à gérer, cuisine en
+            cours</em
+          >).
+        </p>
+        <p>
+          Plutôt que de concevoir écran par écran, nous avons structuré
+          l'application autour de parcours "moteurs", ceux qui reviennent le
+          plus souvent dans le quotidien des parents :
+        </p>
+        <ul>
+          <li>
+            Planifier les repas de la semaine sans réfléchir à chaque décision
+          </li>
+          <li>
+            Trouver rapidement une recette pertinente <em
+              >(âge, texture, contexte)</em
+            >
+          </li>
+          <li>
+            Cuisiner sans friction, en gardant une lecture claire et continue
+          </li>
+          <li>Suivre la diversification alimentaire dans le temps</li>
+          <li>Gérer un profil familial et l'accès au premium sans confusion</li>
+        </ul>
+
+        <h3>Méthode de conception</h3>
+        <p>
+          Pour transformer ces usages en expérience mobile, nous avons
+          privilégié une approche très concrète : <strong
+            >prototyper, simuler, observer, ajuster</strong
+          >.
+        </p>
+        <p>Nous avons utilisé des prototypes interactifs pour valider :</p>
+        <ul>
+          <li>
+            La compréhension des enchaînements <em
+              >(où cliquer, quand et pourquoi)</em
+            >
+          </li>
+          <li>La profondeur de navigation <em>(éviter les tunnels)</em></li>
+          <li>
+            La lisibilité et la hiérarchie de l'information dans des listes
+            denses
+          </li>
+          <li>
+            La cohérence entre écrans <em
+              >(mêmes repères visuels, mêmes codes)</em
+            >
+          </li>
+        </ul>
+        <p>
+          Cette méthode permettait de tester rapidement des hypothèses avant
+          développement et de détecter tôt des problèmes typiques du mobile :
+          surcharge visuelle, gestes peu accessibles, filtres trop complexes,
+          actions secondaires trop visibles, manque de continuité entre listing
+          et détail.
+        </p>
+
+        <h3>Ce que cette démarche a changé</h3>
+        <p>
+          Au fil des itérations, plusieurs axes se sont imposés comme
+          structurants :
+        </p>
+        <ul>
+          <li>
+            Hiérarchiser l'information plutôt que tout afficher : photo, titre,
+            âge et quelques repères forts avant le reste
+          </li>
+          <li>
+            Raccourcir le chemin vers l'action : ouvrir une recette, ajouter en
+            favori, générer des courses, sans multiplier les écrans
+          </li>
+          <li>
+            Créer des écrans "carrefours" <em>(ex. Menu hebdo, Recettes)</em> qui
+            concentrent le besoin principal, puis renvoient vers des détails au moment
+            opportun
+          </li>
+          <li>
+            Assurer une continuité visuelle : si un parent comprend une carte
+            recette dans le catalogue, il doit la comprendre partout <em
+              >(menu, favoris, suggestions)</em
+            >
+          </li>
+        </ul>
+        <p>
+          Les écrans "aujourd'hui" incarnent ce niveau d'équilibre atteint : une
+          interface capable d'absorber des contenus denses et variables, tout en
+          restant fluide, cohérente et rassurante.
+        </p>
+        <h6>
+          <em
+            >Aperçu des écrans actuels : organisation, exploration, exécution,
+            suivi.</em
+          >
+        </h6>
+        <Image
+          src={image1}
+          alt="Cuisinez pour bébé"
+          class=""
+          widths={[480, 768, 1024]}
+        />
+
+        <h3>Zoom design - Composant Carte Recettes</h3>
+        <p>
+          La section Recettes est l'un des modules les plus exigeants de
+          l'application. C'est un espace où l'utilisateur doit pouvoir explorer
+          rapidement un catalogue très large, tout en gardant un sentiment de
+          maîtrise.
+        </p>
+
+        <h4>Intention produit</h4>
+        <p>
+          L'objectif central n'était pas de proposer un moteur de recherche
+          avancé. L'objectif était de permettre une prise de décision simple, à
+          partir de critères qui ont du sens pour les parents : <strong
+            >âge, texture, type de repas, contraintes alimentaires, contexte du
+            moment</strong
+          >.
+        </p>
+        <p>Autrement dit, la section recettes devait fonctionner comme :</p>
+        <ul>
+          <li>Une source d'inspiration</li>
+          <li>Un outil de tri</li>
+          <li>
+            Un point d'accès rapide à l'action <em
+              >(cuisiner, enregistrer, planifier)</em
+            >
+          </li>
+        </ul>
+        <h6>
+          <em
+            >Le catalogue est conçu pour être scanné en quelques secondes :
+            image, titre, âge.</em
+          >
+        </h6>
+        <Image
+          src={image3}
+          alt="Catalogue de recettes"
+          class=""
+          widths={[480, 768, 1024]}
+        />
+
+        <SectionDark>
+          <h4>Contraintes rencontrées</h4>
+          <p>Cette section cumule plusieurs contraintes complexes :</p>
+          <ul>
+            <li>
+              <strong>Densité</strong> : beaucoup de recettes à l'écran et beaucoup
+              de recettes au total
+            </li>
+            <li>
+              <strong>Variabilité</strong> : titres très longs, informations différentes
+              selon recettes
+            </li>
+            <li>
+              <strong>Multi-critères</strong> : le bon choix dépend de plusieurs
+              paramètres <em>(âge, texture, type, ingrédients)</em>
+            </li>
+            <li>
+              <strong>Mobile</strong> : interactions courtes, gestes simples, lisibilité
+              immédiate
+            </li>
+            <li>
+              <strong>Continuité</strong> : la liste doit préparer la fiche recette,
+              sans rupture
+            </li>
+          </ul>
+          <p>Le risque principal était double :</p>
+          <ul>
+            <li>
+              Un catalogue trop "riche" visuellement, où on ne lit plus rien
+            </li>
+            <li>
+              Ou un système de filtres trop complexe, qui décourage
+              l'exploration
+            </li>
+          </ul>
+        </SectionDark>
+
+        <h4>Décision clé n°1 : la carte de recette comme unité de lecture</h4>
+        <p>
+          La carte recette est le composant qui porte l'essentiel de la
+          compréhension. Elle doit permettre trois actions mentales très rapides
+          :
+        </p>
+        <ol>
+          <li>Reconnaître l'idée <em>(via l'image)</em></li>
+          <li>Comprendre le contenu <em>(via le titre)</em></li>
+          <li>Valider l'adéquation <em>(via l'âge)</em></li>
+        </ol>
+        <p>Cela implique une hiérarchie stricte :</p>
+        <ul>
+          <li>
+            <strong>Image dominante</strong> : l'œil décide d'abord par le visuel,
+            un parti pris rendu évident par la richesse et la qualité exceptionnelle
+            des photos de <em>Cuisinez pour Bébé</em>, véritable atout visuel de
+            la marque
+          </li>
+          <li>
+            <strong>Titre optimisé pour le long</strong> : typographie, espace, nombre
+            de lignes
+          </li>
+          <li>
+            <strong>Âge présent mais secondaire</strong> : visible, sans voler l'attention
+          </li>
+        </ul>
+        <Image
+          src={imagePhone}
+          alt="Carte recette mobile"
+          class=""
+          widths={[480, 768]}
+        />
+
+        <h4>
+          Décision clé n°2 : les filtres comme levier principal (et non un
+          "plus")
+        </h4>
+        <p>
+          Dans cette application, les filtres ne sont pas une fonctionnalité
+          secondaire. Ils sont le mécanisme qui rend le catalogue utilisable au
+          quotidien.
+        </p>
+        <p>
+          L'idée n'était pas "mettre beaucoup de filtres" mais de <strong
+            >proposer un système qui aide à réduire progressivement l'espace de
+            recherche sans exiger un effort mental important</strong
+          >.
+        </p>
+        <p>Les choix qui rendent les filtres efficaces :</p>
+        <ul>
+          <li>
+            <strong>Catégorisation claire</strong> : on raisonne par familles <em
+              >(régime, type, moment, saison, particularités)</em
+            >
+          </li>
+          <li><strong>Sélection rapide</strong></li>
+          <li>
+            <strong>Validation explicite</strong> : appliquer quand on est prêt,
+            plutôt que déclencher des résultats à chaque micro-choix
+          </li>
+          <li>
+            <strong>Feedback immédiat</strong> : voir le nombre de recettes trouvées
+            évite l'impression "je filtre dans le vide"
+          </li>
+        </ul>
+        <Image
+          src={image2}
+          alt="Système de filtres"
+          class=""
+          widths={[480, 768, 1024]}
+        />
+
+        <h2>Une collaboration qui se construit dans la durée</h2>
+        <p>
+          Depuis 2021, la collaboration entre BearStudio et l'équipe <em
+            >Cuisinez pour Bébé</em
+          > s'inscrit dans le temps. Elle repose sur une relation de confiance, une
+          grande réactivité et un dialogue constant autour de l'évolution du produit.
+        </p>
+        <p>
+          L'équipe CPB partage régulièrement des retours issus de sa communauté,
+          formule de nouvelles idées et sollicite des conseils pour faire
+          évoluer l'application.
+        </p>
+        <p>
+          Ces échanges prennent différentes formes : messages Slack, points
+          réguliers, ou encore des vidéos Loom pour détailler des attentes ou
+          proposer des pistes d'amélioration ou demander des conseils.
+        </p>
+        <p>
+          Cette dynamique a permis de faire évoluer progressivement
+          l'application au-delà de sa première version.
+        </p>
+        <p>
+          Plusieurs fonctionnalités majeures ont ainsi enrichi l'expérience au
+          fil du temps, comme <strong>la gestion de plusieurs enfants</strong> au
+          sein d'un même compte ou la mise en place de <strong
+            >la liste de courses</strong
+          >, devenues un élément clé de l'organisation quotidienne.
+        </p>
+        <p>
+          Certaines fonctionnalités existantes ont également été retravaillées
+          et affinées, notamment autour de <strong
+            >l'accès au contenu premium</strong
+          > et des écrans de conversion, afin d'améliorer la clarté et l'expérience
+          globale.
+        </p>
+        <p>
+          Ce rythme d'itération partagé permet au produit de rester vivant,
+          aligné avec les besoins réels des parents, et d'évoluer en continu,
+          porté conjointement par les équipes CPB et BearStudio.
+        </p>
+
+        <h2>Ce que les utilisateurs en disent</h2>
+        <p>
+          Au-delà des maquettes, des fonctionnalités et des itérations,
+          l'indicateur le plus précieux reste la satisfaction des utilisateurs.
+        </p>
+        <p>
+          Depuis le lancement de l'application, les retours laissés sur les
+          stores et les messages envoyés à CPB témoignent d'un impact réel dans
+          le quotidien des parents.
+        </p>
+        <p>Ce qui ressort le plus souvent :</p>
+        <ul>
+          <li>La simplicité d'utilisation</li>
+          <li>La clarté des recettes</li>
+          <li>Le gain de temps dans l'organisation des repas</li>
+          <li>La qualité du contenu proposé</li>
+          <li>La confiance accordée à l'univers CPB</li>
+        </ul>
+        <p>
+          Les notes laissées sur l'App Store et Google Play, ainsi que les
+          nombreux messages positifs, confirment que l'application répond à un
+          besoin fort : <strong
+            >accompagner les parents de manière fiable, intuitive et
+            bienveillante</strong
+          >.
+        </p>
+        <p>
+          Ces retours nourrissent à leur tour le projet, car chaque commentaire
+          constructif ou demande récurrente inspire de futures évolutions
+          renforçant encore davantage le cycle d'amélioration continue entre
+          CPB, ses utilisateurs et notre équipe.
+        </p>
+
+        <div
+          class="not-prose grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          <ReviewCard
+            name="Marie Aixdéelle"
+            date="22/03/2025"
+            rating={5}
+            store="app-store"
+          >
+            Franchement, application très utile, Sans abonnement, accès à des
+            multiples recettes, au menu de la semaine, aux fiches aliments, aux
+            guides de la diversification à 4, 6 et 9 mois et des articles. On a
+            envie de cuisiner pour bébé !
+          </ReviewCard>
+          <ReviewCard
+            name="Sophie L."
+            date="15/02/2025"
+            rating={5}
+            store="google-play"
+          >
+            Super application ! Les recettes sont claires et faciles à suivre.
+            La liste de courses est un vrai gain de temps. Je recommande à tous
+            les parents.
+          </ReviewCard>
+          <ReviewCard
+            name="Thomas B."
+            date="08/01/2025"
+            rating={5}
+            store="app-store"
+          >
+            Indispensable depuis que notre fils a commencé la diversification.
+            Les menus hebdomadaires nous simplifient la vie et le batch cooking
+            est top.
+          </ReviewCard>
+        </div>
+
+        <h2>Pour aller plus loin</h2>
+        <p>
+          <em>Cuisinez pour Bébé</em> continue d'accompagner chaque jour des milliers
+          de parents grâce à son écosystème de contenus, son application et ses ressources
+          pédagogiques.
+        </p>
+        <p>
+          Pour découvrir l'univers complet, voici où trouver la marque et suivre
+          ses dernières nouveautés :
+        </p>
+        <p>
+          <strong>Site web officiel</strong> : Recettes, conseils, batch cooking
+          et guides pratiques<br />
+          <a href="https://www.cuisinez-pour-bebe.fr/"
+            >https://www.cuisinez-pour-bebe.fr/</a
+          >
+        </p>
+        <p>
+          <strong>Application mobile</strong> : Disponible sur l'App Store et Google
+          Play<br />
+          Accès aux menus hebdomadaires, filtres, favoris, liste de courses et fonctionnalités
+          premium
+        </p>
+        <p>
+          <strong>Instagram</strong> : Partage de recettes, astuces, vidéos pratiques,
+          retours de la communauté<br />
+          <a href="https://www.instagram.com/cuisinezpourbebe/"
+            >https://www.instagram.com/cuisinezpourbebe/</a
+          >
+        </p>
+        <p>
+          <strong>Facebook</strong> : Communauté active, échanges entre parents,
+          lives et contenus exclusifs<br />
+          <a href="https://www.facebook.com/cuisinezpourbebe/"
+            >https://www.facebook.com/cuisinezpourbebe/</a
+          >
+        </p>
+        <p>
+          <strong>YouTube</strong> : Vidéos explicatives, recettes filmées, ateliers
+          et masterclass<br />
+          <a href="https://www.youtube.com/cuisinezpourbebe"
+            >https://www.youtube.com/cuisinezpourbebe</a
+          >
+        </p>
+        <p>
+          Et n'hésitez pas à découvrir <a
+            href="/fr/blog/articles/lea-english-etude-de-cas"
+            >notre précédente étude de cas sur Léa English</a
+          > !
+        </p>
+      </Prose>
+    </PhotoSwipeImages>
+    <div class="flex flex-col gap-0 pt-12 text-sm lg:flex-row lg:gap-1">
+      <div>
+        {t('blog.article.published')}
+        <FormattedDate date={post.data.date} locale={locale} />
+      </div>
+      {
+        !!post.data._computed.authors.length && (
+          <div>
+            <span>{t('blog.article.by')}</span>
+            {post.data._computed.authors.map((author, index) => {
+              return author.data._computed.slug ? (
+                <a
+                  href={getLink('/fr/equipe/:id', locale, {
+                    id: author.data._computed.slug,
+                  })}
+                  class="font-medium hover:underline"
+                >
+                  {`${author.data.name}${index !== post.data._computed.authors.length - 1 ? ', ' : ''}`}
+                </a>
+              ) : (
+                <span>
+                  {`${author.data.name}${index !== post.data._computed.authors.length - 1 ? ', ' : ''}`}
+                </span>
+              );
+            })}
+          </div>
+        )
+      }
+    </div>
+  </Container>
+</MainLayout>

@@ -1,0 +1,29 @@
+---
+import { cn } from '@/lib/tailwind/utils';
+
+import ScratchFull from './scratch-full.astro';
+
+interface Props {
+  class?: string;
+  contentClass?: string;
+}
+const { class: className, contentClass } = Astro.props;
+---
+
+<div
+  class={cn(
+    'not-prose relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-foreground text-background',
+    className
+  )}
+>
+  <ScratchFull class="text-background -mt-px rotate-180" />
+  <div
+    class={cn(
+      'prose prose-invert mx-auto max-w-screen-lg px-6 prose-headings:font-heading prose-headings:text-hero-foreground prose-p:text-hero-foreground/90 prose-li:text-hero-foreground/90 prose-strong:text-hero-foreground prose-li:marker:text-hero-foreground/50',
+      contentClass ?? 'py-24'
+    )}
+  >
+    <slot />
+  </div>
+  <ScratchFull class="text-background -mb-px" />
+</div>

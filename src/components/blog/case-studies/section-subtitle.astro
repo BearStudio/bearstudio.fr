@@ -1,0 +1,15 @@
+---
+import { cn } from '@/lib/tailwind/utils';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<p
+  class={cn('text-sm font-normal leading-[21px] text-foreground/70', className)}
+>
+  <slot />
+</p>

@@ -1,0 +1,41 @@
+---
+import StarRating from '@/components/case-study/star-rating.astro';
+
+interface Props {
+  name: string;
+  date: string;
+  rating: number;
+  store?: 'app-store' | 'google-play' | undefined;
+}
+
+const { name, date, rating } = Astro.props;
+
+const initials = name
+  .split(' ')
+  .map((w) => w[0])
+  .join('')
+  .toUpperCase()
+  .slice(0, 2);
+---
+
+<div
+  class="not-prose bg-brand-700 border-brand-600 flex flex-col gap-4 rounded-lg border p-6"
+>
+  <div class="flex items-center gap-3">
+    <div
+      class="bg-brand-700 text-brand-200 flex size-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
+    >
+      {initials}
+    </div>
+    <div class="flex flex-col">
+      <span class="text-sm font-semibold text-white">{name}</span>
+      <span class="text-brand-400 text-xs">{date}</span>
+    </div>
+  </div>
+
+  <StarRating value={rating} />
+
+  <p class="text-sm leading-relaxed text-white">
+    <slot />
+  </p>
+</div>

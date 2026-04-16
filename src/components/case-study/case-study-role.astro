@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+
+import type { ImageMetadata } from 'astro';
+
+import CaseStudyCardDescription from './case-study-card-description.astro';
+import CaseStudyCardHeader from './case-study-card-header.astro';
+import CaseStudyCard from './case-study-card.astro';
+import IconCode from './icons/icon-code.astro';
+import IconLayout from './icons/icon-layout.astro';
+
+const icons = { layout: IconLayout, code: IconCode } as const;
+
+interface Props {
+  label: string;
+  title: string;
+  icon: keyof typeof icons;
+  image?: ImageMetadata;
+  imageAlt?: string;
+  class?: string;
+}
+
+const {
+  label,
+  title,
+  icon,
+  image,
+  imageAlt = '',
+  class: className,
+} = Astro.props;
+
+const IconComponent = icons[icon];
+---
+
+<CaseStudyCard class={className}>
+  <CaseStudyCardHeader label={label} title={title}>
+    {IconComponent && <IconComponent slot="icon" />}
+  </CaseStudyCardHeader>
+  <CaseStudyCardDescription>
+    <slot />
+  </CaseStudyCardDescription>
+  <slot name="tags" />
+  <slot name="team" />
+  {
+    image && (
+      <Image
+        slot="media"
+        src={image}
+        alt={imageAlt}
+        class="h-full w-full object-contain"
+      />
+    )
+  }
+</CaseStudyCard>
