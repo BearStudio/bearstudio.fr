@@ -1,6 +1,6 @@
 ---
-title: 'Travailler depuis l’autre bout du monde : retour d’expérience de deux semaines de télétravail au Vietnam'
-date: 2026-04-01
+title: 'Retour d’expérience : travailler depuis l’autre bout du monde'
+date: 2026-04-16
 categories:
   - 'retour-experience'
 tags:

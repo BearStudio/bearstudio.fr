@@ -1,7 +1,7 @@
 ---
-title: 'Working from the other side of the world: feedback from two weeks of remote work in Vietnam'
+title: 'Testimonial: Working from the other side of the world'
 slug: 'working-from-the-other-side-of-the-world'
-date: 2026-04-01
+date: 2026-04-16
 categories:
   - 'retour-experience'
 tags:
