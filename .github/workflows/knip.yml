@@ -8,7 +8,7 @@ on:
 jobs:
   classic:
     name: Knip (classic)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: 🏗 Setup repo
         uses: actions/checkout@v6
@@ -33,7 +33,7 @@ jobs:
 
   production:
     name: Knip (production)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: 🏗 Setup repo
         uses: actions/checkout@v6
