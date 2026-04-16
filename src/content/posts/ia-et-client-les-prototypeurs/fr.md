@@ -1,5 +1,5 @@
 ---
-title: '"J''ai fait ça en moins de 2 heures avec l''IA" : pourquoi ce message Slack ne nous fait plus peur'
+title: 'IA & Client : les "Prototypeurs"'
 date: 2026-04-02
 categories:
   - 'rex'
@@ -12,7 +12,7 @@ tags:
 metaDescription: "Pourquoi le message Slack d'un client qui a prototypé une fonctionnalité en 2h avec l'IA ne nous fait plus peur, et comment il redéfinit notre métier de développeurs."
 excerpt: "Un client nous envoie un message Slack : il a prototypé un tchat en 2 heures avec l'IA. Panique ? Non. Voici comment cet épisode a transformé notre vision du métier, du rôle de constructeur à celui de garant."
 thumbnail:
-  image: 'images/blog-header.png'
+  image: 'images/thumbnail.jpeg'
   alt: "Illustration d'un développeur et d'un ours polaire travaillant ensemble sur un laptop avec un chatbot IA"
 authors:
   - 'heloise-guillaume'
@@ -20,7 +20,7 @@ authors:
 
 Ce n'est pas arrivé au cours d'une confrontation tendue en salle de réunion mais juste une notification Slack, un mardi comme un autre.
 
-Nous avions estimé des tickets pour un client (que nous allons appeler « Client A »). Parmi ceux-ci, nous avons identifié deux fonctionnalités comme étant du « travail conséquent », nécessitant du temps, des tests et du budget. Puis, on a vu la fameuse notification dans le canal.
+Nous avions estimé des tickets pour un client (que nous allons appeler « Client A »). Certains, comme la création d’un tchat directement intégré dans l’application, ont été identifiés comme du « travail conséquent ». Autrement dit, ces fonctionnalités demandaient du temps, des tests et un budget conséquent. Puis, on a vu la fameuse notification dans le canal.
 
 Client A a expérimenté de son côté une version de l'application comme projet annexe. Il a partagé l'image d'un tchat entièrement fonctionnel avec un indicateur de saisie, accompagnée du message suivant :
 
@@ -44,7 +44,8 @@ D'autres vont plus loin et veulent « vibe coder » avec nous, produire des fonc
 
 Chez BearStudio, nous avons compris que nous ne pouvions pas ignorer cette évolution. Nous devions passer du rôle de « constructeurs » à celui de « garants ».
 
-**Dans ce premier article, je souhaite montrer comment nous adaptons notre modèle de service à des clients qui codent parfois plus vite que nous, et pourquoi ils ont malgré tout plus que jamais besoin de nous.**
+**Dans ce premier article, je souhaite montrer comment nous adaptons notre modèle de service à des clients qui codent parfois plus vite que nous, et pourquoi ils ont malgré tout plus que jamais besoin de nous.
+Un second article suivra prochainement pour explorer un scénario qui va encore plus loin.**
 
 ## Le prototype « fantôme » : de gardiens à garants
 
@@ -89,7 +90,7 @@ Le code généré par l’IA fonctionnait pour un prototype, mais ne couvrait pa
 Et c’est normal : ce n’était pas son rôle.
 Sa vraie valeur était ailleurs : nous permettre de sauter la phase de « discovery » pour aller directement à l’« engineering ».
 
-![Galaxy brain](./images/galaxy-brain.png)
+![Galaxy brain](./images/galaxy-brain.jpeg)
 
 ## Comment cela nous prépare
 
@@ -107,4 +108,15 @@ Elles ne veulent pas que nous reconstruisions tout.
 
 Elles veulent coder avec nous.
 
-**Dans le prochain article, je détaillerais ce nouveau modèle de co-construction, ses risques, et les "guardrails" que nous avons mis en place pour éviter que la vitesse ne devienne du chaos.**
+**Dans le prochain article, je détaillerais ce nouveau modèle de co-construction, ses risques, et les "guardrails" que nous avons mis en place pour éviter que la vitesse ne se transforme en chaos.**
+
+## Pour aller plus loin
+
+Envie d'approfondir le sujet de l'IA côté technique ? Jetez un œil à notre article :
+
+- [Découvrir le MCP : une nouvelle approche pour vos agents IA](/fr/blog/articles/decouvrir-le-mcp-une-nouvelle-approche-pour-vos-agents-ia)
+
+Plutôt curieux de nos collaborations et de nos retours d'expérience client ? Voici deux études de cas à découvrir :
+
+- [Étude de cas UX : Cuisinez pour bébé](/fr/blog/articles/etude-de-cas-ux-cuisinez-pour-bebe)
+- [Lea English : étude de cas](/fr/blog/articles/lea-english-etude-de-cas)

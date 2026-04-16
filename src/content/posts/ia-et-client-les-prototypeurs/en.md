@@ -1,5 +1,6 @@
 ---
-title: '"I built this in under 2 hours with AI": Why this Slack message no longer scares us'
+title: 'IA & Client: "Prototypers"'
+slug: 'ia-and-client-prototypers'
 date: 2026-04-02
 categories:
   - 'rex'
@@ -10,9 +11,9 @@ tags:
   - 'web'
   - 'developpement'
 metaDescription: "Why a client's Slack message about prototyping a feature in 2 hours with AI no longer scares us, and how it's reshaping our business as developers."
-excerpt: "A client sends us a Slack message: he prototyped a chat in 2 hours with AI. Panic? No. Here's how this episode transformed our vision of the craft, from builders to guardians."
+excerpt: "A client sends us a Slack message: he prototyped a chat in 2 hours with AI. Panic? No. Here's how this episode transformed our vision of the craft, from builders to warrantors."
 thumbnail:
-  image: 'images/blog-header.png'
+  image: 'images/thumbnail.jpeg'
   alt: 'Illustration of a developer and a polar bear working together on a laptop with an AI chatbot'
 authors:
   - 'heloise-guillaume'
@@ -20,11 +21,11 @@ authors:
 
 It wasn't a tense boardroom showdown. It was just a Slack notification on a random Tuesday.
 
-We were in the middle of estimating tickets for a client (let's call him "Client A"). We had flagged two features as "substantial work," requiring time, testing, and budget. Then, the notification popped up in the channel.
+We were in the middle of estimating tickets for a client (let's call him "Client A"). Some of them, like building a chat directly integrated into the app, had been flagged as "substantial work." In other words, these features required time, testing, and a sizable budget. Then, the notification popped up in the channel.
 
 Client A had been tinkering on his own version of the app as a side project. He posted an image of a fully functional chat with a typing indicator and wrote:
 
-> "Out of curiosity, I tested creating a chat yesterday. Here is the result in < 2 hours."
+> Out of curiosity, I tested creating a chat yesterday. Here is the result in < 2 hours.
 
 For a development team, seeing a feature estimated at several days of work appear in "less than 2 hours" can trigger a moment of panic. Are we too slow? Is our expertise becoming obsolete? Even our internal chat lit up with questions: "Wait, do we use these tools enough? Are we behind?"
 
@@ -32,7 +33,7 @@ For a development team, seeing a feature estimated at several days of work appea
 
 But Client A wasn't trying to trap us. He wasn't asking us to blindly copy-paste his AI generation. In fact, we never even saw his code, only the interface. His message was actually an invitation: he trusted our ability to build a robust, maintainable application, but he was challenging us to harness that same raw speed to accelerate the process.
 
-## Client A isn't an anomaly. He is the new normal.
+## Client A isn't an anomaly. He is the new standard.
 
 Since the arrival of generative AI, we are seeing a shift in how clients interact with us.
 
@@ -41,17 +42,17 @@ They are no longer just "specifiers"; they are "makers."
 1. Some, like Client A, use AI to prototype visions they want us to industrialize.
 2. Others go further, wanting to "vibe code" alongside us, producing features in real-time while expecting us to guarantee the stability of the whole.
 
-At BearStudio, we realized we couldn't just ignore this. We had to move from being "The Builders" to becoming "The Guardians."
+At BearStudio, we realized we couldn't just ignore this. We had to move from being "The Builders" to becoming "The Warrantors."
 
-**Here is how we are adapting our service model to clients who sometimes code faster than we do, and why they still need us more than ever.**
+**In this first article, I want to show how we are adapting our service model to clients who sometimes code faster than we do, and why they still need us more than ever. A second article will follow soon to explore a scenario that goes even further.**
 
-## The "shadow" prototype: from gatekeepers to guardians
+## The "shadow" prototype: from gatekeepers to warrantors
 
 To understand why this interaction with Client A was a turning point, we have to look at how we, and the entire tech industry, operated just two years ago.
 
 ### The old way: the "discovery" game
 
-In the pre-AI era, when a client wanted a complex feature like a chat system, we played a game of telephone. Like the children's game in which a message is whispered from one person to another and becomes distorted as it passes along, a client's original idea often changed or lost clarity as it moved through multiple intermediaries (Product Owner, Designer, Developer). Each step involved interpretation, which could lead to misunderstandings or deviations from the client's initial vision.
+In the pre-AI era, when a client wanted a complex feature like a chat system, we played a telephone game. Like the children's game in which a message is whispered from one person to another and becomes distorted as it passes along, a client's original idea often changed or lost clarity as it moved through multiple intermediaries (Product Owner, Designer, Developer). Each step involved interpretation, which could lead to misunderstandings or deviations from the client's initial vision.
 
 It was a process designed to minimize risk, but it was slow.
 
@@ -88,13 +89,13 @@ The code generated by AI worked for a prototype, but did not always cover the re
 And that’s expected: it wasn’t its role.
 Its real value was elsewhere: enabling us to skip the “discovery” phase and move straight to “engineering.”
 
-![Galaxy brain](./images/galaxy-brain.png)
+![Galaxy brain](./images/galaxy-brain.jpeg)
 
 ## How this prepares us
 
 This is the future of our service. Clients will come to us with more than just ideas; they will come with working (but broken) prototypes. Our value proposition is shifting. We are no longer the ones who reveal the magic of code (AI does that now). We are the ones who provide the certainty of engineering.
 
-**We are moving from being "The Builders" to being "The Guardians": the experts who take a client's dangerous, exciting 2-hour experiment and turn it into a boring, stable, money-making product.**
+**We are moving from being "The Builders" to being "The Warrantors": the experts who take a client's dangerous, exciting 2-hour experiment and turn it into a boring, stable, money-making product.**
 
 But Client A's case was relatively safe. He built in his sandbox, and we built in ours. The two codebases never touched.
 
@@ -105,3 +106,14 @@ This brings us to a second, more disruptive scenario. We are seeing the rise of 
 They don't want us to rebuild everything. They want to code alongside us.
 
 **In the next article, we dive into this new co-construction model, its risks, and the guardrails we put in place to prevent speed from turning into chaos.**
+
+## Keep reading
+
+Curious about how we use AI on the technical side? Check out our dedicated article:
+
+- [Discovering MCP: a new approach for your AI agents](/fr/blog/articles/decouvrir-le-mcp-une-nouvelle-approche-pour-vos-agents-ia) (French only)
+
+More interested in how we collaborate with our clients? Take a look at these case studies:
+
+- [UX Case Study: Cuisinez pour bébé](/en/blog/posts/ux-case-study-cuisinez-pour-bebe)
+- [Lea English Case Study](/en/blog/posts/lea-english-case-study)
