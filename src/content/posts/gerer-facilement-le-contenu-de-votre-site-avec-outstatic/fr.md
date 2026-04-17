@@ -6,7 +6,9 @@ categories:
 tags:
   - 'developpement-web'
   - 'retour-dexperience'
-heroImage: 'images/outstatic-format-blog-header.png'
+thumbnail:
+  image: 'images/thumbnail.jpeg'
+  alt: "Illustration d'un laptop affichant le logo Outstatic avec un ours mascotte"
 metaDescription: 'Découvrez une nouvelle façon de gérer le contenu de votre site, intuitive et sans base de données, avec le CMS Outstatic.'
 authors: ['jeanne-grenet']
 ---
