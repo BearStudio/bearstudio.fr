@@ -1,5 +1,5 @@
 ---
-title: "Faire face à la vague de clients vibe coders : comment on a dû s'adapter"
+title: 'IA & Client : les "Vibecodeurs"'
 date: 2026-04-02
 categories:
   - 'ia'
@@ -10,6 +10,9 @@ tags:
   - 'collaboration'
 metaDescription: "Comment nous avons adapté nos processus pour collaborer avec des clients qui vibe codent leurs fonctionnalités avec l'IA."
 excerpt: "Le client veut vibe coder avec nous. Première réaction : soupir. Mais s'adapter ou disparaître. Voici comment nous avons reconstruit notre processus de production autour d'un nouveau principe : nous ne sommes plus les auteurs de chaque ligne de code, nous en sommes les éditeurs."
+thumbnail:
+  image: 'images/thumbnail.jpg'
+  alt: "Illustration d'un homme travaillant sur un écran généré par IA et d'un ours polaire."
 authors:
   - 'heloise-guillaume'
 ---
@@ -20,7 +23,7 @@ Dans le premier article, j'ai présenté comment nos clients utilisent désormai
 
 Mais une nouvelle étape commence lorsque les clients ne se contentent plus de montrer... mais veulent **construire avec nous**.
 
-## Faire face à la vague de clients "vibe coders" : comment on a dû s'adapter
+## Faire face à la vague de clients "vibecodeurs" : comment on a dû s'adapter
 
 Le cas de Client A était une première étape : accepter l'IA comme un outil de spécification. Mais avec un autre client (appelons-les "Team B"), nous avons fait face à une réalité bien plus chaotique.
 
