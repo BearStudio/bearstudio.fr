@@ -51,6 +51,7 @@ export default defineConfig(
         'error',
         {
           case: 'kebabCase',
+          ignore: [/^\[__image\]\.\[__type\]\.ts$/],
         },
       ],
     },
