@@ -14,7 +14,7 @@ export const zConference = ({ image }: SchemaContext) =>
 export type ConferenceInstance = z.infer<
   ReturnType<typeof zConferenceInstance>
 >;
-export const zConferenceInstance = () =>
+const zConferenceInstance = () =>
   z.object({
     date: z.date(),
     name: z.string().optional(),
