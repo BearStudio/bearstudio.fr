@@ -1,7 +1,7 @@
 ---
 title: 'IA & Client: "Prototypers"'
 slug: 'ia-and-client-prototypers'
-date: 2026-04-02
+date: 2026-04-29
 categories:
   - 'rex'
   - 'actualites-web-numerique'
