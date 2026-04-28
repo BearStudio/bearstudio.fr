@@ -25,7 +25,7 @@
     "@astrojs/rss": "4.0.17",
     "@astrojs/sitemap": "3.7.1",
     "@astrojs/vercel": "10.0.4",
-    "@bearstudio/astro-assets-generation": "0.2.0",
+    "@bearstudio/astro-assets-generation": "0.1.0",
     "@bearstudio/astro-typed-routes": "0.1.6",
     "@bearstudio/lunalink": "0.3.1",
     "@fontsource-variable/caveat": "5.2.8",
