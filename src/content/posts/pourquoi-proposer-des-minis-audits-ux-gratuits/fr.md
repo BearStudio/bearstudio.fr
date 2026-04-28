@@ -65,7 +65,7 @@ Il y a [plusieurs possibilités](/fr/prestations) qui dépendent un peu du conte
 - Faire une demande via le [formulaire de contact](/fr/contact).
 - Optionnel : si vous êtes contents, nous recommander à votre réseau.😉
 
-![](images/audit-ux-gratuit-bearstudio-1.png)
+![Trois icônes représentant les piliers du mini audit UX : fonctionnement technique, expérience utilisateur et communication](images/audit-ux-gratuit-bearstudio-1.png)
 
 ---
 

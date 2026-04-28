@@ -59,7 +59,7 @@ C’est là que le **Model Context Protocol (MCP)** entre en scène. Lancé fi
 
 Derrière le Model Context Protocol se cache une idée simple mais puissante : permettre à une IA de **découvrir dynamiquement, interroger et manipuler des outils ou des services** sans avoir à écrire une intégration dédiée pour chaque cas. Pour y parvenir, MCP définit un protocole de communication standardisé entre différents acteurs.
 
-![](images/im1.jpeg)
+![Schema de fonctionnement d'un MCP](images/im1.jpeg)
 
 ##### Les acteurs :
 
@@ -241,7 +241,7 @@ Maintenant, notre agent IA a accès au serveur MCP et aux outils qu’il propose
 
 On peut vérifier que le serveur est bien connecté dans les paramètres de Cursor :
 
-![](images/im2.jpeg)
+![Exemple de commande permttant de vérifier si le serveur est bien connecté dans les paramètres de Cursor](images/im2.jpeg)
 
 Maintenant, essayons de lui poser une question, par exemple :  
 **"Donne-moi la liste des employés qui sont en CDI."**
@@ -250,7 +250,7 @@ Maintenant, essayons de lui poser une question, par exemple :
 
 Le LLM va comprendre qu’il peut faire appel à l’outil de notre serveur, choisir les bons paramètres, récupérer les données, et nous renvoyer une réponse formatée à partir de celles-ci
 
-![](images/im3.jpeg)
+![Utilisation des outils du serveur par claude-3.5-sonnet pour répondre à la demande effectuée](images/im3.jpeg)
 
 ## À quoi s'attendre dans le futur ?
 

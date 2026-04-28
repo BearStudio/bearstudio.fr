@@ -96,7 +96,7 @@ Néanmoins, je note que naturellement des groupes de 4 à 10 personnes se sont c
   - Savoir demander l’avis des participants sans se perdre en voulant faire plaisir à tout le monde. Parfois il a fallu trancher car il est impossible de faire l'unanimité.
   - Responsabiliser les salariés sur le fait que l’on ne peut pas tout organiser pour eux. Il faut qu’ils comprennent que la réussite du team building repose aussi sur leur implication.
 
-![](images/group-photo.png)
+![Le Bearstudio à Disneyland](images/group-photo.png)
 
 ## Conclusion : Une aventure collective
 

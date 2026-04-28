@@ -56,7 +56,7 @@ La raison principale pour laquelle nous adorons JHipster au BearStudio et que no
 
 Si vous vous demandez comment JHipster nous apporte ce gain de temps, la réponse est simple : la plupart des fonctionnalités communes à tous les projets numériques sont incluses dès la génération de votre projet JHipster. En voici une liste :
 
-![](images/jhipster-1-1024x524-1.png)
+![Liste des fonctionnalités communes à tous les projets numériques](images/jhipster-1-1024x524-1.png)
 
 Pour la **gestion des utilisateurs** :
 

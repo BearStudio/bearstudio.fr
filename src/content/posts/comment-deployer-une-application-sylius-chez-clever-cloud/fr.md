@@ -49,7 +49,7 @@ Nous choisissons ensuite une version de PHP pour le projet, nous optons au minim
 
 Vous vous retrouvez alors sur le formulaire des variables d'environnement de votre application. Dans un premier temps, modifiez uniquement celle nommée `CC_PHP_VERSION` en lui attribuant la valeur `7.4`.
 
-Pour associer son code à l’application de Clever, si vous êtes plutôt un adepte des lignes de commande, utilisez le [Clever CLI](http://clever-cloud.com/doc/clever-tools/getting_started/)[](http://clever-cloud.com/doc/clever-tools/getting_started/).
+Pour associer son code à l’application de Clever, si vous êtes plutôt un adepte des lignes de commande, utilisez le [Clever CLI](http://clever-cloud.com/doc/clever-tools/getting_started/).
 
 Créez l’app
 
@@ -63,7 +63,7 @@ Créez l’addon relié a l’app
 
 Pour paramétrer notre application, nous devons activer le _build_ sur une instance dédiée. Rendez-vous dans le menu _Information_, dans la section _Application edition_ :
 
-![](images/image-8-1024x109.png)
+![Menu d'activation du build d'une instance dédiée de son application Sylius chez Clever Cloud](images/image-8-1024x109.png)
 
 Ou via le CLI
 
@@ -79,7 +79,7 @@ Pour builder le front, il faut ajouter la variable `CC_POST_BUILD_HOOK = yarn i
 
 Ne pas oublier de cliquer sur _Update changes_, et ensuite _Restart the app to apply changes_ :
 
-![](images/image-2-1024x486.png)
+![Ensemble des variables environnements définies pour le fonctionnement du projet](images/image-2-1024x486.png)
 
 Cette configuration est également possible via le CLI :
 
@@ -87,23 +87,23 @@ Cette configuration est également possible via le CLI :
 
 Ne pas oublier de _commit_ les modifications pour pouvoir _push_ l’application sur Clever Cloud. Maintenant que tout est prêt, il faut _push_ l’application depuis Clever directement. Pour cela, dans le terminal, il faut lancer la commande `clever deploy`. Ensuite, si vous avez créé votre application via la Console Clever, il vous faut **lier votre application en local** à l'aide de `clever link <app_id>` avec `<app_id>` ayant pour valeur l'id de votre application, renseigné dans _Information > Application information_.
 
-![](images/image-7.png)
+![Retour de la commande `clever deploy` dans un terminal](images/image-7.png)
 
 Après cette première étape, il faut **initialiser la base de données**. Depuis le terminal, lancez la commande `clever ssh`, ce qui vous permet d'accéder à la VM sur laquelle est déployée l'app :
 
-![](images/image-6.png)
+![Retour de la commande `clever ssh` dans un terminal](images/image-6.png)
 
 On descend alors dans le dossier présent et on lance la commande suivante.
 
 `php bin/console doctrine:schema:update --force --env=prod`
 
-![](images/image-4-1024x230.png)
+![Retour de la commande `php bin/console doctrine:schema:update --force --env=prod` dans un terminal](images/image-4-1024x230.png)
 
 Pour initialiser la base avec les données injectées par Sylius.
 
 `` `php bin/console sylius:fixtures:load --env=prod` ``
 
-![](images/image-5-1024x204.png)
+![Retour de la commande `php bin/console sylius:fixtures:load --env=prod` dans un terminal](images/image-5-1024x204.png)
 
 `exit` pour quitter la VM puis `clever open` pour ouvrir l’application dans votre navigateur.
 
