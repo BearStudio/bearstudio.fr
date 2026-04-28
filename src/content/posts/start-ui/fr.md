@@ -14,6 +14,17 @@ heroImage: 'images/visuel-article-start-ui-tinified.png'
 metaDescription: "Start UI [web] est un starter UI avec React, Chakra UI, React Query et Formiz — Par l'équipe BearStudio"
 authors:
   - yoann-fleury
+skills:
+  - 'start-ui'
+  - 'react'
+  - 'tailwind'
+  - 'typescript'
+  - 'vite'
+  - 'tanstack-query'
+  - 'tanstack-router'
+  - 'tanstack-start'
+  - 'react-native'
+  - 'figma'
 ---
 
 Par le passé, lorsque nous utilisions des starters d'Interface Utilisateur (UI), nous nous retrouvions face au choix de la technologie la plus adaptée à nos besoins. Entre le framework UI, le client HTTP, la bibliothèque de routage, la bibliothèque de styles, la bibliothèque de formulaires, et le téléchargement de toutes les configurations et dépendances nécessaires, cela pouvait s'avérer très chronophage. Pour tout centraliser et simplifier nos choix, nous avons décidé de créer notre propre starter d'Interface Utilisateur appelé **_Start UI_**_._

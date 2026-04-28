@@ -33,6 +33,9 @@ const ROUTES_CONFIG = {
       "ux-design": {},
       "web-development": {}
     },
+    "skills": {
+      ":id": {}
+    },
     "team": {
       ":id": {}
     }
@@ -56,6 +59,9 @@ const ROUTES_CONFIG = {
       "processus-candidature-bearstudio": {}
     },
     "equipe": {
+      ":id": {}
+    },
+    "expertise": {
       ":id": {}
     },
     "mentions-legales": {},
