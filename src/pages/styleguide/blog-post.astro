@@ -1,7 +1,9 @@
 ---
 import { LuCalendar, LuImage, LuType } from 'react-icons/lu';
+import { PiStarFill, PiStarHalfFill } from 'react-icons/pi';
 
 import FeatureCard from '@/components/blog-post/feature-card.astro';
+import StatCard from '@/components/blog-post/stat-card.astro';
 import RootLayout from '@/layouts/root-layout.astro';
 ---
 
@@ -26,7 +28,6 @@ import RootLayout from '@/layouts/root-layout.astro';
             title="Âge présent mais secondaire"
             content="Visible, sans voler l'attention"
           />
-
           <FeatureCard
             icon={LuType}
             title="Titre optimisé"
@@ -36,6 +37,83 @@ import RootLayout from '@/layouts/root-layout.astro';
             icon={LuImage}
             title="Image dominante"
             content="L'œil décide d'abord par le visuel, un parti pris rendu évident par la richesse et la qualité exceptionnelle des photos"
+          />
+        </div>
+      </div>
+      <div class="bg-foreground rounded-xl border border-neutral-200 p-8">
+        <div class="grid max-w-xl grid-cols-2 gap-4">
+          <FeatureCard
+            icon={LuCalendar}
+            title="Âge présent mais secondaire"
+            content="Visible, sans voler l'attention"
+          />
+          <FeatureCard
+            icon={LuType}
+            title="Titre optimisé"
+            content="Typographie, espace, nombre de lignes soigneusement pensés"
+          />
+          <FeatureCard
+            icon={LuImage}
+            title="Image dominante"
+            content="L'œil décide d'abord par le visuel, un parti pris rendu évident par la richesse et la qualité exceptionnelle des photos"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Stat Card -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Stat Card</h2>
+
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <div class="grid max-w-xl grid-cols-2 gap-4">
+          <StatCard value="4,8" label="1,1k notes">
+            <PiStarFill slot="visual" />
+          </StatCard>
+          <StatCard
+            value="+ 500 k"
+            title="Téléchargements"
+            label="Sur iOS & Android"
+          />
+          <StatCard
+            value="N°2"
+            title="Alimentation & Boissons"
+            label="Classement Google Play"
+          />
+          <StatCard
+            value="N°16"
+            title="Cuisine & Boissons"
+            label="Classement App Store"
+          />
+        </div>
+      </div>
+
+      <div class="bg-foreground rounded-xl border border-neutral-200 p-8">
+        <div class="grid max-w-xl grid-cols-2 gap-4">
+          <StatCard value="4,8" label="1,1k notes">
+            <Fragment slot="visual">
+              <PiStarFill />
+              <PiStarFill />
+              <PiStarFill />
+              <PiStarFill />
+              <PiStarHalfFill />
+            </Fragment>
+          </StatCard>
+          <StatCard
+            value="+ 500 k"
+            title="Téléchargements"
+            label="Sur iOS & Android"
+          />
+          <StatCard
+            value="N°2"
+            title="Alimentation & Boissons"
+            label="Classement Google Play"
+          />
+          <StatCard
+            value="N°16"
+            title="Cuisine & Boissons"
+            label="Classement App Store"
           />
         </div>
       </div>
