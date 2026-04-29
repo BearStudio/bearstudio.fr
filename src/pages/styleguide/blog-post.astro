@@ -3,6 +3,7 @@ import { LuCalendar, LuImage, LuType } from 'react-icons/lu';
 import { PiStarFill, PiStarHalfFill } from 'react-icons/pi';
 
 import FeatureCard from '@/components/blog-post/feature-card.astro';
+import { PhoneCarousel } from '@/components/blog-post/phone-carousel';
 import StatCard from '@/components/blog-post/stat-card.astro';
 import TestimonialCard from '@/components/blog-post/testimonial-card.astro';
 import RootLayout from '@/layouts/root-layout.astro';
@@ -15,6 +16,52 @@ import RootLayout from '@/layouts/root-layout.astro';
         >← Styleguide</a
       >
       <h1 class="font-heading text-4xl font-bold">Blog Post Components</h1>
+    </div>
+
+    <!-- Phone Carousel -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Phone Carousel</h2>
+
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <PhoneCarousel
+          client:load
+          slides={[
+            {
+              src: 'https://placehold.co/440x956/e2e8f0/94a3b8?text=Screen+1',
+              alt: 'Écran 1',
+            },
+            {
+              src: 'https://placehold.co/440x956/dbeafe/60a5fa?text=Screen+2',
+              alt: 'Écran 2',
+            },
+            {
+              src: 'https://placehold.co/440x956/dcfce7/4ade80?text=Screen+3',
+              alt: 'Écran 3',
+            },
+          ]}
+        />
+      </div>
+
+      <div class="bg-foreground rounded-xl border border-neutral-200 p-8">
+        <PhoneCarousel
+          client:load
+          slides={[
+            {
+              src: 'https://placehold.co/440x956/e2e8f0/94a3b8?text=Screen+1',
+              alt: 'Écran 1',
+            },
+            {
+              src: 'https://placehold.co/440x956/dbeafe/60a5fa?text=Screen+2',
+              alt: 'Écran 2',
+            },
+            {
+              src: 'https://placehold.co/440x956/dcfce7/4ade80?text=Screen+3',
+              alt: 'Écran 3',
+            },
+          ]}
+        />
+      </div>
     </div>
 
     <!-- Feature Card -->
