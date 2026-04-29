@@ -3,6 +3,7 @@ import * as React from 'react';
 import { PiArrowLeft, PiArrowRight } from 'react-icons/pi';
 
 import { cn } from '@/lib/tailwind/utils';
+import { Button } from '@/components/ui/button';
 
 type Slide = {
   src: string;
@@ -29,9 +30,9 @@ export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
       {/* Phone frame — fixed size, images scroll inside */}
       <div className="relative w-[220px] shrink-0">
         {/* Outer shell */}
-        <div className="relative rounded-[2.8rem] border-[8px] border-brand-50 bg-brand-50 shadow-xl ring-1 ring-brand-200/40">
+        <div className="relative rounded-[2.8rem] border-[8px] border-neutral-900 bg-neutral-900 shadow-xl ring-1 ring-neutral-700/60">
           {/* Notch */}
-          <div className="absolute top-0 left-1/2 z-10 h-5 w-24 -translate-x-1/2 rounded-b-xl bg-brand-50" />
+          <div className="absolute top-0 left-1/2 z-10 h-5 w-24 -translate-x-1/2 rounded-b-xl bg-neutral-900" />
           {/* Screen — overflow hidden, images slide inside */}
           <div className="overflow-hidden rounded-[2.2rem] bg-white">
             <div
@@ -51,22 +52,22 @@ export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
           </div>
           {/* Home bar */}
           <div className="flex justify-center pb-2 pt-1">
-            <div className="h-1 w-16 rounded-full bg-brand-300/60" />
+            <div className="h-1 w-16 rounded-full bg-neutral-700" />
           </div>
         </div>
       </div>
 
       {/* Controls below the phone */}
       <div className="flex items-center gap-3">
-        <button
-          type="button"
+        <Button
+          variant="secondary"
+          size="icon"
           onClick={prev}
           disabled={current === 0}
-          className="flex size-9 shrink-0 items-center justify-center rounded-full border border-brand-600 bg-brand-700 text-brand-200 transition-opacity disabled:opacity-30 hover:bg-brand-600"
           aria-label="Slide précédent"
         >
           <PiArrowLeft className="size-4" />
-        </button>
+        </Button>
 
         {/* Dots */}
         <div className="flex gap-1.5">
@@ -84,15 +85,15 @@ export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
           ))}
         </div>
 
-        <button
-          type="button"
+        <Button
+          variant="secondary"
+          size="icon"
           onClick={next}
           disabled={current === count - 1}
-          className="flex size-9 shrink-0 items-center justify-center rounded-full border border-brand-600 bg-brand-700 text-brand-200 transition-opacity disabled:opacity-30 hover:bg-brand-600"
           aria-label="Slide suivant"
         >
           <PiArrowRight className="size-4" />
-        </button>
+        </Button>
       </div>
     </div>
   );
