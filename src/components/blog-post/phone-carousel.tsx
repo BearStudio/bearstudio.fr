@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { PiArrowLeft, PiArrowRight } from 'react-icons/pi';
+import { PiCaretLeft, PiCaretRight } from 'react-icons/pi';
 
 import { cn } from '@/lib/tailwind/utils';
 import { Button } from '@/components/ui/button';
@@ -67,7 +67,7 @@ export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
           aria-label="Slide précédent"
           className="rounded-full"
         >
-          <PiArrowLeft className="size-4" />
+          <PiCaretLeft className="size-4" />
         </Button>
 
         {/* Dots */}
@@ -80,7 +80,7 @@ export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
               aria-label={`Aller au slide ${i + 1}`}
               className={cn(
                 'h-1.5 rounded-full transition-all',
-                i === current ? 'w-4 bg-brand-500' : 'w-1.5 bg-muted'
+                i === current ? 'w-4 bg-foreground' : 'w-1.5 bg-muted'
               )}
             />
           ))}
@@ -94,7 +94,7 @@ export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
           aria-label="Slide suivant"
           className="rounded-full"
         >
-          <PiArrowRight className="size-4" />
+          <PiCaretRight className="size-4" />
         </Button>
       </div>
     </div>
