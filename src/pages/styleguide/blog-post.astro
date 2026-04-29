@@ -6,6 +6,7 @@ import FeatureCard from '@/components/blog-post/feature-card.astro';
 import { PhoneCarousel } from '@/components/blog-post/phone-carousel';
 import StatCard from '@/components/blog-post/stat-card.astro';
 import TestimonialCard from '@/components/blog-post/testimonial-card.astro';
+import TwoColumns from '@/components/blog-post/two-columns.astro';
 import RootLayout from '@/layouts/root-layout.astro';
 ---
 
@@ -16,6 +17,94 @@ import RootLayout from '@/layouts/root-layout.astro';
         >← Styleguide</a
       >
       <h1 class="font-heading text-4xl font-bold">Blog Post Components</h1>
+    </div>
+
+    <!-- Two Columns -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Two Columns</h2>
+
+      <p class="text-sm text-neutral-500">1/2 + 1/2 (défaut)</p>
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <TwoColumns>
+          <div slot="left" class="flex flex-col gap-2">
+            <p class="font-heading text-lg font-semibold">Colonne texte</p>
+            <p class="text-sm text-neutral-600">
+              Un paragraphe d'explication ou de description pour accompagner
+              l'illustration à droite.
+            </p>
+          </div>
+          <div
+            slot="right"
+            class="flex aspect-video w-full items-center justify-center rounded-lg bg-neutral-100 text-sm text-neutral-400"
+          >
+            Illustration
+          </div>
+        </TwoColumns>
+      </div>
+
+      <p class="text-sm text-neutral-500">
+        1/3 texte + 2/3 illustration, alignement centré
+      </p>
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <TwoColumns leftRatio="1/3" align="center">
+          <div slot="left" class="flex flex-col gap-2">
+            <p class="font-heading text-lg font-semibold">Texte étroit</p>
+            <p class="text-sm text-neutral-600">
+              Illustration dominante sur la droite.
+            </p>
+          </div>
+          <div
+            slot="right"
+            class="flex aspect-video w-full items-center justify-center rounded-lg bg-neutral-100 text-sm text-neutral-400"
+          >
+            Grande illustration
+          </div>
+        </TwoColumns>
+      </div>
+
+      <p class="text-sm text-neutral-500">
+        2/3 texte + 1/3 illustration, inversé (illustration à gauche)
+      </p>
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <TwoColumns leftRatio="2/3" reverse align="center">
+          <div slot="left" class="flex flex-col gap-2">
+            <p class="font-heading text-lg font-semibold">Texte dominant</p>
+            <p class="text-sm text-neutral-600">
+              L'illustration est visuellement à gauche grâce à <code
+                >reverse</code
+              >, mais le slot reste <code>right</code> dans le markup.
+            </p>
+          </div>
+          <div
+            slot="right"
+            class="flex aspect-square w-full items-center justify-center rounded-lg bg-neutral-100 text-sm text-neutral-400"
+          >
+            Miniature
+          </div>
+        </TwoColumns>
+      </div>
+
+      <p class="text-sm text-neutral-500">Sur fond sombre</p>
+      <div class="bg-foreground rounded-xl border border-neutral-200 p-8">
+        <TwoColumns align="center">
+          <div slot="left" class="flex flex-col gap-2">
+            <p class="font-heading text-brand-100 text-lg font-semibold">
+              Colonne texte
+            </p>
+            <p class="text-brand-300 text-sm">
+              Un paragraphe d'explication ou de description pour accompagner
+              l'illustration à droite.
+            </p>
+          </div>
+          <div
+            slot="right"
+            class="bg-brand-700 text-brand-400 flex aspect-video w-full items-center justify-center rounded-lg text-sm"
+          >
+            Illustration
+          </div>
+        </TwoColumns>
+      </div>
     </div>
 
     <!-- Phone Carousel -->
@@ -46,6 +135,7 @@ import RootLayout from '@/layouts/root-layout.astro';
       <div class="bg-foreground rounded-xl border border-neutral-200 p-8">
         <PhoneCarousel
           client:load
+          dark
           slides={[
             {
               src: 'https://placehold.co/440x956/e2e8f0/94a3b8?text=Screen+1',

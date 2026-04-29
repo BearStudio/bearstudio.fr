@@ -10,17 +10,19 @@ import {
   type CarouselApi,
 } from '@/components/ui/carousel';
 
-type Slide = {
-  src: string;
-  alt?: string;
-};
-
 type PhoneCarouselProps = {
-  slides: Slide[];
+  slides: { src: string; alt?: string }[];
+  width?: number;
+  dark?: boolean;
   className?: string;
 };
 
-export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
+export function PhoneCarousel({
+  slides,
+  width = 220,
+  dark = false,
+  className,
+}: PhoneCarouselProps) {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
 
@@ -38,62 +40,52 @@ export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
       data-slot="phone-carousel"
       className={cn('not-prose flex flex-col items-center gap-4', className)}
     >
-      <PhoneFrame>
-        <Carousel setApi={setApi} className="w-full">
-          <CarouselContent>
+      <Carousel setApi={setApi} style={{ width }} className="shrink-0">
+        <div className="relative rounded-[2.8rem] border-8 border-neutral-900 bg-neutral-900 shadow-xl ring-1 ring-neutral-700/60">
+          <div className="absolute top-0 left-1/2 z-10 h-5 w-24 -translate-x-1/2 rounded-b-xl bg-neutral-900" />
+          <div className="overflow-hidden rounded-[2.2rem]">
+            <CarouselContent className="ml-0">
+              {slides.map((slide, i) => (
+                <CarouselItem key={slide.src} className="pl-0">
+                  <img
+                    src={slide.src}
+                    alt={slide.alt ?? `Écran ${i + 1}`}
+                    className="block w-full object-cover"
+                    draggable={false}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </div>
+        </div>
+
+        <div className="mt-4 flex items-center justify-center gap-3">
+          <CarouselPrevious
+            variant={dark ? 'secondaryOnDark' : 'secondary'}
+            className="static translate-y-0"
+          />
+          <div className="flex gap-1.5">
             {slides.map((slide, i) => (
-              <CarouselItem key={slide.src}>
-                <img
-                  src={slide.src}
-                  alt={slide.alt ?? `Écran ${i + 1}`}
-                  className="block w-full object-cover"
-                  draggable={false}
-                />
-              </CarouselItem>
+              <button
+                key={slide.src}
+                type="button"
+                onClick={() => api?.scrollTo(i)}
+                aria-label={`Aller au slide ${i + 1}`}
+                className={cn(
+                  'h-1.5 rounded-full transition-all',
+                  i === current
+                    ? cn('w-4', dark ? 'bg-background' : 'bg-brand-500')
+                    : cn('w-1.5', dark ? 'bg-white/30' : 'bg-muted')
+                )}
+              />
             ))}
-          </CarouselContent>
-        </Carousel>
-      </PhoneFrame>
-
-      <div className="flex items-center gap-3">
-        <CarouselPrevious
-          variant="secondary"
-          className="static translate-y-0"
-        />
-
-        <div className="flex gap-1.5">
-          {slides.map((slide, i) => (
-            <button
-              key={slide.src}
-              type="button"
-              onClick={() => api?.scrollTo(i)}
-              aria-label={`Aller au slide ${i + 1}`}
-              className={cn(
-                'h-1.5 rounded-full transition-all',
-                i === current ? 'w-4 bg-brand-500' : 'w-1.5 bg-muted'
-              )}
-            />
-          ))}
+          </div>
+          <CarouselNext
+            variant={dark ? 'secondaryOnDark' : 'secondary'}
+            className="static translate-y-0"
+          />
         </div>
-
-        <CarouselNext variant="secondary" className="static translate-y-0" />
-      </div>
-    </div>
-  );
-}
-
-function PhoneFrame({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="relative w-[220px] shrink-0">
-      <div className="relative rounded-[2.8rem] border-[8px] border-neutral-900 bg-neutral-900 shadow-xl ring-1 ring-neutral-700/60">
-        <div className="absolute top-0 left-1/2 z-10 h-5 w-24 -translate-x-1/2 rounded-b-xl bg-neutral-900" />
-        <div className="overflow-hidden rounded-[2.2rem] bg-white">
-          {children}
-        </div>
-        <div className="flex justify-center py-1">
-          <div className="h-1 w-16 rounded-full bg-neutral-700" />
-        </div>
-      </div>
+      </Carousel>
     </div>
   );
 }
