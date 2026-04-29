@@ -1,13 +1,12 @@
 import * as React from 'react';
 
-import { PiCaretLeft, PiCaretRight } from 'react-icons/pi';
-
 import { cn } from '@/lib/tailwind/utils';
-import { Button } from '@/components/ui/button';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
   type CarouselApi,
 } from '@/components/ui/carousel';
 
@@ -24,12 +23,14 @@ type PhoneCarouselProps = {
 export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
-  const count = slides.length;
 
   React.useEffect(() => {
     if (!api) return;
-    setCurrent(api.selectedScrollSnap());
-    api.on('select', () => setCurrent(api.selectedScrollSnap()));
+    const onSelect = () => setCurrent(api.selectedScrollSnap());
+    api.on('select', onSelect);
+    return () => {
+      api.off('select', onSelect);
+    };
   }, [api]);
 
   return (
@@ -54,24 +55,16 @@ export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
         </Carousel>
       </PhoneFrame>
 
-      {/* Controls below the phone */}
       <div className="flex items-center gap-3">
-        <Button
+        <CarouselPrevious
           variant="secondary"
-          size="icon"
-          onClick={() => api?.scrollPrev()}
-          disabled={current === 0}
-          aria-label="Slide précédent"
-          className="rounded-full"
-        >
-          <PiCaretLeft className="size-4" />
-        </Button>
+          className="static translate-y-0"
+        />
 
-        {/* Dots */}
         <div className="flex gap-1.5">
-          {slides.map((_, i) => (
+          {slides.map((slide, i) => (
             <button
-              key={i}
+              key={slide.src}
               type="button"
               onClick={() => api?.scrollTo(i)}
               aria-label={`Aller au slide ${i + 1}`}
@@ -83,16 +76,7 @@ export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
           ))}
         </div>
 
-        <Button
-          variant="secondary"
-          size="icon"
-          onClick={() => api?.scrollNext()}
-          disabled={current === count - 1}
-          aria-label="Slide suivant"
-          className="rounded-full"
-        >
-          <PiCaretRight className="size-4" />
-        </Button>
+        <CarouselNext variant="secondary" className="static translate-y-0" />
       </div>
     </div>
   );
@@ -102,13 +86,10 @@ function PhoneFrame({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative w-[220px] shrink-0">
       <div className="relative rounded-[2.8rem] border-[8px] border-neutral-900 bg-neutral-900 shadow-xl ring-1 ring-neutral-700/60">
-        {/* Notch */}
         <div className="absolute top-0 left-1/2 z-10 h-5 w-24 -translate-x-1/2 rounded-b-xl bg-neutral-900" />
-        {/* Screen */}
         <div className="overflow-hidden rounded-[2.2rem] bg-white">
           {children}
         </div>
-        {/* Home bar */}
         <div className="flex justify-center py-1">
           <div className="h-1 w-16 rounded-full bg-neutral-700" />
         </div>
