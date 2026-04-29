@@ -8,6 +8,7 @@ import RoleCard from '@/components/blog-post/role-card.astro';
 import ScratchSection from '@/components/blog-post/scratch-section.astro';
 import StatCard from '@/components/blog-post/stat-card.astro';
 import TestimonialCard from '@/components/blog-post/testimonial-card.astro';
+import TestimonialList from '@/components/blog-post/testimonial-list.astro';
 import TwoColumns from '@/components/blog-post/two-columns.astro';
 import RootLayout from '@/layouts/root-layout.astro';
 ---
@@ -205,7 +206,7 @@ import RootLayout from '@/layouts/root-layout.astro';
       <h2 class="font-heading text-xl font-bold">Feature Card</h2>
 
       <div class="rounded-xl border border-neutral-200 p-8">
-        <div class="grid max-w-xl grid-cols-2 gap-4">
+        <div class="grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-2">
           <FeatureCard
             icon={LuCalendar}
             title="Âge présent mais secondaire"
@@ -224,7 +225,7 @@ import RootLayout from '@/layouts/root-layout.astro';
         </div>
       </div>
       <div class="bg-foreground rounded-xl border border-neutral-200 p-8">
-        <div class="grid max-w-xl grid-cols-2 gap-4">
+        <div class="grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-2">
           <FeatureCard
             icon={LuCalendar}
             title="Âge présent mais secondaire"
@@ -308,7 +309,7 @@ import RootLayout from '@/layouts/root-layout.astro';
       <h2 class="font-heading text-xl font-bold">Testimonial Card</h2>
 
       <div class="rounded-xl border border-neutral-200 p-8">
-        <div class="grid max-w-xl grid-cols-2 gap-4">
+        <TestimonialList>
           <TestimonialCard
             person={{ name: 'Sara Cookies' }}
             date="23/05/2025"
@@ -321,11 +322,17 @@ import RootLayout from '@/layouts/root-layout.astro';
             rating={4}
             content="Très bonne application, les recettes sont variées et bien expliquées. Je recommande !"
           />
-        </div>
+          <TestimonialCard
+            person={{ name: 'Julie M.' }}
+            date="01/01/2025"
+            rating={5}
+            content="Super application, je l'utilise tous les jours pour mes enfants."
+          />
+        </TestimonialList>
       </div>
 
       <div class="bg-foreground rounded-xl border border-neutral-200 p-8">
-        <div class="grid max-w-xl grid-cols-2 gap-4">
+        <TestimonialList>
           <TestimonialCard
             person={{ name: 'Sara Cookies' }}
             date="23/05/2025"
@@ -338,7 +345,13 @@ import RootLayout from '@/layouts/root-layout.astro';
             rating={4}
             content="Très bonne application, les recettes sont variées et bien expliquées. Je recommande !"
           />
-        </div>
+          <TestimonialCard
+            person={{ name: 'Julie M.' }}
+            date="01/01/2025"
+            rating={5}
+            content="Super application, je l'utilise tous les jours pour mes enfants."
+          />
+        </TestimonialList>
       </div>
     </div>
   </div>
