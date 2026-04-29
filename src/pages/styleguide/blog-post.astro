@@ -4,6 +4,7 @@ import { PiStarFill, PiStarHalfFill } from 'react-icons/pi';
 
 import FeatureCard from '@/components/blog-post/feature-card.astro';
 import StatCard from '@/components/blog-post/stat-card.astro';
+import TestimonialCard from '@/components/blog-post/testimonial-card.astro';
 import RootLayout from '@/layouts/root-layout.astro';
 ---
 
@@ -114,6 +115,46 @@ import RootLayout from '@/layouts/root-layout.astro';
             value="N°16"
             title="Cuisine & Boissons"
             label="Classement App Store"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial Card -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Testimonial Card</h2>
+
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <div class="grid max-w-xl grid-cols-2 gap-4">
+          <TestimonialCard
+            person={{ name: 'Sara Cookies' }}
+            date="23/05/2025"
+            rating={5}
+            content="Très contente de cette application qui est très complète pour la diversification de mon bébé."
+          />
+          <TestimonialCard
+            person={{ name: 'Marc Dupont' }}
+            date="14/03/2025"
+            rating={4}
+            content="Très bonne application, les recettes sont variées et bien expliquées. Je recommande !"
+          />
+        </div>
+      </div>
+
+      <div class="bg-foreground rounded-xl border border-neutral-200 p-8">
+        <div class="grid max-w-xl grid-cols-2 gap-4">
+          <TestimonialCard
+            person={{ name: 'Sara Cookies' }}
+            date="23/05/2025"
+            rating={5}
+            content="Très contente de cette application qui est très complète pour la diversification de mon bébé."
+          />
+          <TestimonialCard
+            person={{ name: 'Marc Dupont' }}
+            date="14/03/2025"
+            rating={4}
+            content="Très bonne application, les recettes sont variées et bien expliquées. Je recommande !"
           />
         </div>
       </div>
