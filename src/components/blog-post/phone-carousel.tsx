@@ -51,7 +51,7 @@ export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
             </div>
           </div>
           {/* Home bar */}
-          <div className="flex justify-center pb-2 pt-1">
+          <div className="flex justify-center py-1">
             <div className="h-1 w-16 rounded-full bg-neutral-700" />
           </div>
         </div>
