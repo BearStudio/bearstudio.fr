@@ -66,6 +66,9 @@ export default defineConfig({
           disallow: ['/styleguide'],
         },
       ],
+      // Declare AI content usage preferences — https://contentsignals.org/
+      transform: (content) =>
+        `${content}\nContent-Signal: ai-train=no, search=yes, ai-input=no\n`,
     }),
     bearstudioTypedRoutes(),
   ],
