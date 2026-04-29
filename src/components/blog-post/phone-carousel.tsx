@@ -65,6 +65,7 @@ export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
           onClick={prev}
           disabled={current === 0}
           aria-label="Slide précédent"
+          className="rounded-full"
         >
           <PiArrowLeft className="size-4" />
         </Button>
@@ -91,6 +92,7 @@ export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
           onClick={next}
           disabled={current === count - 1}
           aria-label="Slide suivant"
+          className="rounded-full"
         >
           <PiArrowRight className="size-4" />
         </Button>
