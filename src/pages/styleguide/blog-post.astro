@@ -1,9 +1,10 @@
 ---
-import { LuCalendar, LuImage, LuType } from 'react-icons/lu';
+import { LuCalendar, LuImage, LuLayoutDashboard, LuType } from 'react-icons/lu';
 import { PiStarFill, PiStarHalfFill } from 'react-icons/pi';
 
 import FeatureCard from '@/components/blog-post/feature-card.astro';
 import { PhoneCarousel } from '@/components/blog-post/phone-carousel';
+import RoleCard from '@/components/blog-post/role-card.astro';
 import ScratchSection from '@/components/blog-post/scratch-section.astro';
 import StatCard from '@/components/blog-post/stat-card.astro';
 import TestimonialCard from '@/components/blog-post/testimonial-card.astro';
@@ -169,6 +170,34 @@ import RootLayout from '@/layouts/root-layout.astro';
         Contenu de la section sur fond sombre avec déchirures en haut et en bas.
       </p>
     </ScratchSection>
+
+    <!-- Role Card -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Role Card</h2>
+
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <RoleCard
+          icon={LuLayoutDashboard}
+          role="Product Design"
+          description="Notre équipe a participé à la conception de l'expérience mobile à partir de l'analyse des besoins utilisateurs. Et participe également à la structuration des parcours et réalisation de prototypes basse et haute fidélité, avec des itérations pour valider les choix de conception."
+          tags={['Figma', 'UX/UI', 'Maquettes']}
+          team={[
+            { name: 'Ivan D.', title: 'Lead Designer UX/UI', url: '#' },
+            { name: 'Daryl A.', title: 'UX/UI Designer', url: '#' },
+            { name: 'Dorian D.', title: 'UX/UI Designer' },
+          ]}
+        >
+          <div slot="visual" class="h-full w-full overflow-hidden rounded-md">
+            <img
+              src="https://placehold.co/800x500/1a3a42/4a9aaa?text=Illustration"
+              class="h-full w-full rounded-md object-cover"
+              alt=""
+            />
+          </div>
+        </RoleCard>
+      </div>
+    </div>
 
     <!-- Feature Card -->
 
