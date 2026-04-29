@@ -1,0 +1,43 @@
+---
+import type { IconType } from 'react-icons/lib';
+
+import { cn } from '@/lib/tailwind/utils';
+
+interface Props {
+  icon: IconType;
+  title: string;
+  content: string;
+  class?: string;
+}
+
+const { icon: Icon, title, content, class: className } = Astro.props;
+---
+
+<div
+  data-slot="feature-card"
+  class={cn(
+    'not-prose inline-flex flex-col items-start gap-4 self-stretch rounded-md bg-brand-700 p-4 border border-brand-600',
+    className
+  )}
+>
+  <div class="flex items-center gap-3">
+    <div
+      data-slot="feature-card-icon"
+      class="bg-brand-600 text-brand-200 flex size-8 shrink-0 items-center justify-center self-start rounded-sm pb-0.5 [&>svg]:size-3.25"
+    >
+      <Icon />
+    </div>
+    <p
+      data-slot="feature-card-title"
+      class="font-heading text-brand-100 text-md font-normal"
+    >
+      {title}
+    </p>
+  </div>
+  <div
+    data-slot="feature-card-content"
+    class="text-brand-200 text-xs leading-relaxed font-light"
+  >
+    {content}
+  </div>
+</div>
