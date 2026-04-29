@@ -8,11 +8,17 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<div
-  data-slot="testimonial-list"
-  class={cn('not-prose flex gap-4 overflow-x-auto', className)}
->
-  <slot />
+<div data-slot="testimonial-list-wrapper" class="relative">
+  <div
+    data-slot="testimonial-list"
+    class={cn('not-prose flex gap-4 overflow-x-auto', className)}
+  >
+    <slot />
+  </div>
+  <div
+    class="from-foreground pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l to-transparent"
+  >
+  </div>
 </div>
 
 <style>

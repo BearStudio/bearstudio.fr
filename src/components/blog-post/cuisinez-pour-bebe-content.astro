@@ -1,0 +1,869 @@
+---
+import {
+  LuBell,
+  LuCalendar,
+  LuChartLine,
+  LuCode,
+  LuFastForward,
+  LuHeart,
+  LuImage,
+  LuLayoutDashboard,
+  LuLayoutGrid,
+  LuNavigation,
+  LuSquareMenu,
+  LuType,
+} from 'react-icons/lu';
+import { PiStarFill, PiStarHalfFill } from 'react-icons/pi';
+
+import FeatureCard from '@/components/blog-post/feature-card.astro';
+import Heading from '@/components/blog-post/heading.astro';
+import Insight from '@/components/blog-post/insight.astro';
+import { PhoneCarousel } from '@/components/blog-post/phone-carousel';
+import RoleCard from '@/components/blog-post/role-card.astro';
+import ScratchSection from '@/components/blog-post/scratch-section.astro';
+import StatCard from '@/components/blog-post/stat-card.astro';
+import TestimonialCard from '@/components/blog-post/testimonial-card.astro';
+import TestimonialList from '@/components/blog-post/testimonial-list.astro';
+import TwoColumns from '@/components/blog-post/two-columns.astro';
+---
+
+<div class="flex flex-col gap-[60px]">
+  <!-- Présentation du projet -->
+  <TwoColumns align="center" leftRatio="2/3">
+    <div slot="left" class="prose max-w-none">
+      <Heading>Présentation du projet</Heading>
+      <p>
+        L'histoire de <strong>Cuisinez pour Bébé</strong> commence avec <strong
+          >Clémence</strong
+        >, une jeune maman passionnée de cuisine qui souhaitait offrir à son
+        enfant une alimentation saine, simple et variée. Comme beaucoup de
+        parents, elle s'est posé les questions essentielles :
+      </p>
+      <ul>
+        <li>
+          <strong>Comment réussir la diversification alimentaire ?</strong>
+        </li>
+        <li>
+          <strong
+            >Comment préparer des repas équilibrés sans y passer des heures ?</strong>
+        </li>
+      </ul>
+      <p>
+        Pour y répondre, elle commence par partager ses <strong
+          >recettes maison</strong
+        > sur un <strong>blog</strong>, qui devient rapidement un <strong
+          >site WordPress structuré</strong
+        >. Le succès est immédiat : les jeunes parents y trouvent des repères
+        clairs, des idées concrètes et une approche décomplexée de la cuisine
+        pour bébé.
+      </p>
+      <p>
+        Aujourd'hui, Cuisinez pour Bébé rassemble plus de <strong
+          >1 800 recettes</strong
+        >, classées par <strong>âge</strong>, des <strong
+          >menus hebdomadaires</strong
+        > de <strong>batch cooking</strong>, ainsi qu'une multitude de conseils
+        pratiques pour <strong>accompagner</strong> chaque étape de la diversification.
+      </p>
+    </div>
+    <div slot="right" class="relative">
+      <div
+        class="flex aspect-[3/4] w-full items-center justify-center rounded-xl border border-dashed border-neutral-200 text-sm text-neutral-400"
+      >
+        Visuel app screenshots
+      </div>
+      <div
+        class="bg-brand-200 absolute -right-4 -bottom-4 h-3/4 w-4/5 rounded-xl"
+      >
+      </div>
+    </div>
+  </TwoColumns>
+
+  <!-- Contexte et enjeux -->
+  <TwoColumns align="center" leftRatio="1/3">
+    <div slot="left" class="relative">
+      <div
+        class="flex aspect-[4/3] w-full items-center justify-center rounded-xl border border-dashed border-neutral-200 text-sm text-neutral-400"
+      >
+        Visuel Before / Now
+      </div>
+      <div
+        class="bg-brand-200 absolute top-1/2 -left-8 h-full w-full -translate-y-1/2 rounded-xl"
+      >
+      </div>
+    </div>
+    <div slot="right" class="prose max-w-none">
+      <Heading>Contexte et enjeux</Heading>
+      <p>
+        Avec plus de <strong>150 000 visites mensuelles</strong> et une <strong
+          >communauté très active</strong
+        > sur les réseaux sociaux, <strong>Cuisinez pour Bébé</strong> s'est imposé
+        comme une ressource incontournable <strong>pour les parents</strong> en quête
+        de <strong>recettes simples et équilibrées</strong> pour leurs enfants.
+      </p>
+      <p>
+        Ce succès a cependant révélé un besoin clair : rendre l'expérience plus <strong
+          >fluide</strong
+        >, plus <strong>mobile</strong> et plus <strong>personnalisée</strong>.
+        La majorité des utilisateurs consultait déjà le site depuis leur
+        téléphone et exprimait le besoin d'accéder plus rapidement à leurs
+        recettes, à leurs favoris et aux menus hebdomadaires directement <strong
+          >depuis une application</strong
+        >.
+      </p>
+      <p>
+        L'enjeu était donc de transposer l'expérience du site dans un format
+        mobile intuitif, fidèle à l'univers existant, tout en intégrant des <strong
+          >fonctionnalités clés</strong
+        > : un modèle freemium, une navigation adaptée à l'âge de l'enfant et un
+        accès simplifié aux menus de <strong>batch cooking</strong>.
+      </p>
+      <p>
+        L'application devait devenir une extension naturelle du site, au service
+        du même objectif :
+      </p>
+      <p>
+        <strong
+          >accompagner les parents au quotidien dans la préparation des repas de
+          leur bébé.</strong>
+      </p>
+    </div>
+  </TwoColumns>
+
+  <!-- Frustrations utilisateurs -->
+  <ScratchSection>
+    <h2 class="font-heading text-brand-100 text-4xl leading-[46px] font-medium">
+      Frustrations utilisateurs
+    </h2>
+    <p class="text-brand-300 mt-2 text-sm">
+      Les frustrations identifiées reflètent l'insatisfaction des utilisateurs
+      avant l'amélioration de l'application.
+    </p>
+    <div
+      class="mt-8 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3"
+    >
+      <Insight icon={LuNavigation} class="w-full"
+        >Navigation moins pratique sur un site web que dans une application
+        mobile.</Insight
+      >
+      <Insight icon={LuSquareMenu} class="w-full"
+        >Difficulté à passer rapidement entre recettes, menus et liste de
+        courses.</Insight
+      >
+      <Insight icon={LuChartLine} class="w-full"
+        >Difficulté à suivre précisément l'évolution de la diversification du
+        bébé.</Insight
+      >
+      <Insight icon={LuHeart} class="w-full"
+        >Difficulté à retrouver rapidement ses recettes préférées sur le site.</Insight
+      >
+      <Insight icon={LuLayoutGrid} class="w-full"
+        >Difficulté à centraliser menus, recettes et courses dans un seul espace
+        fluide.</Insight
+      >
+    </div>
+  </ScratchSection>
+
+  <!-- Notre rôle -->
+  <div class="flex flex-col gap-8">
+    <div class="prose max-w-none">
+      <Heading>Notre rôle</Heading>
+      <p>
+        Dans le cadre de ce projet, <strong>BearStudio</strong> est intervenu à la
+        fois sur la <strong>conception de l'expérience produit</strong> et sur le
+        <strong>développement de l'application mobile</strong>. L'équipe a
+        accompagné <strong>Cuisinez pour Bébé</strong> tout au long du projet, depuis
+        la phase de <strong>compréhension des besoins</strong> et de <strong
+          >structuration des parcours</strong
+        > jusqu'à la réalisation technique de l'application et son intégration avec
+        l'infrastructure existante.
+      </p>
+      <p>
+        Cette <strong>collaboration</strong> s'est appuyée sur une équipe dédiée,
+        <strong>impliquée</strong> dans les différentes phases de conception, d'itération
+        et de développement.
+      </p>
+    </div>
+
+    <!-- Rôle et processus -->
+    <div class="flex flex-col gap-4">
+      <Heading>Rôle et processus</Heading>
+      <RoleCard
+        icon={LuLayoutDashboard}
+        role="Product Design"
+        description="Notre équipe a participé à la conception de l'expérience mobile à partir de l'analyse des besoins utilisateurs. Et participe également à la structuration des parcours et réalisation de prototypes basse et haute fidélité, avec des itérations pour valider les choix de conception."
+        tags={['Figma', 'UX/UI', 'Maquettes']}
+        team={[
+          { name: 'Ivan D.', title: 'Lead Designer UX/UI' },
+          { name: 'Daryl A.', title: 'UX/UI Designer' },
+          { name: 'Dorian D.', title: 'UX/UI Designer' },
+        ]}
+      >
+        <div
+          slot="visual"
+          class="bg-brand-700 text-brand-400 flex h-full w-full items-center justify-center rounded-md text-sm"
+        >
+          Visuel écrans mobile
+        </div>
+      </RoleCard>
+
+      <RoleCard
+        icon={LuCode}
+        role="Développement"
+        description="BearStudio a assuré le développement de l'application mobile en React Native (Android et iOS) ainsi que son intégration avec l'infrastructure WordPress, en garantissant une cohérence technique et visuelle et une expérience utilisateur fluide."
+        tags={['Développement web', 'Application mobile', 'React Native']}
+        team={[
+          { name: 'Nicolas T.', title: 'Full Stack' },
+          { name: 'Omar B.', title: 'Développeur' },
+        ]}
+      >
+        <div
+          slot="visual"
+          class="bg-brand-700 text-brand-400 flex h-full w-full items-center justify-center rounded-md text-sm"
+        >
+          Visuel laptop / code
+        </div>
+      </RoleCard>
+    </div>
+  </div>
+
+  <!-- Conception et itérations -->
+  <TwoColumns align="start" leftRatio="2/3">
+    <div slot="left" class="flex flex-col gap-6">
+      <Heading>Conception et itérations</Heading>
+
+      <div class="flex flex-col gap-6">
+        <Heading size="3xl">Écrans V1 - Poser les bases</Heading>
+        <p class="text-sm leading-relaxed">
+          Cette <strong class="font-semibold">première version</strong> servait de
+          socle fonctionnel, conçue pour répondre avant tout aux besoins essentiels
+          identifiés par l'équipe CPB : <strong class="font-semibold"
+            >parcourir les recettes</strong
+          >, <strong class="font-semibold"
+            >planifier les repas de la semaine</strong
+          > et <strong class="font-semibold"
+            >comprendre l'intérêt de l'abonnement</strong
+          >.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <Heading size="xl">Objectifs</Heading>
+        <p class="text-sm leading-relaxed">
+          Transposer les <strong class="font-semibold"
+            >fonctionnalités clés</strong
+          > du site existant vers un <strong class="font-semibold"
+            >environnement mobile</strong
+          >.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <Heading size="xl">Briques fonctionnelles initiales</Heading>
+        <ul class="flex list-disc flex-col gap-1 pl-5 text-sm leading-relaxed">
+          <li>
+            Accès direct aux <strong class="font-semibold"
+              >menus hebdomadaires</strong>
+          </li>
+          <li>Catalogue de recettes par âge</li>
+          <li>Fiches recettes simplifiées</li>
+          <li>Espace favoris pour les contenus enregistrés</li>
+          <li>Gestion du compte et abonnements</li>
+          <li>
+            Un <strong class="font-semibold">paywall</strong> dédié à présenter l'offre
+            freemium
+          </li>
+          <li>Parcours d'inscription séquencé</li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <Heading size="xl">Bilan de la V1</Heading>
+        <p class="text-sm leading-relaxed">
+          Cette <strong class="font-semibold">première version</strong> a permis
+          d'établir les <strong class="font-semibold"
+            >fondations du produit</strong
+          >, de tester les hypothèses initiales à l'épreuve des <strong
+            class="font-semibold">usages réels</strong
+          > et de créer une <strong class="font-semibold">base solide</strong> pour
+          les <strong class="font-semibold">évolutions à venir</strong>.
+        </p>
+      </div>
+    </div>
+    <div
+      slot="right"
+      class="flex aspect-[9/16] w-full items-center justify-center rounded-xl border border-dashed border-neutral-200 text-sm text-neutral-400"
+    >
+      Visuel écran V1
+    </div>
+  </TwoColumns>
+
+  <!-- Les écrans actuels -->
+  <ScratchSection>
+    <TwoColumns align="center">
+      <div slot="left" class="flex flex-col gap-6">
+        <h2
+          class="font-heading text-brand-100 text-4xl leading-[46px] font-medium"
+        >
+          Les écrans actuels
+        </h2>
+        <p class="text-brand-200 text-sm leading-relaxed">
+          Les <strong>écrans actuels</strong> de <em>Cuisinez pour Bébé</em> ne sont
+          pas le résultat d'un empilement de fonctionnalités. Ils sont le résultat
+          d'une <strong>démarche centrée sur des usages concrets</strong>,
+          itérée dans le temps, avec un objectif constant : <strong
+            >rendre une expérience riche simple</strong
+          > à utiliser <strong>sur mobile</strong>, dans un <strong
+            >contexte réel</strong
+          > (parent pressé, téléphone à une main, enfant à gérer, cuisine en cours).
+        </p>
+        <p class="text-brand-200 text-sm leading-relaxed">
+          Plutôt que de concevoir écran par écran, nous avons structuré
+          l'application autour de <strong>parcours "moteurs"</strong>, ceux qui
+          reviennent le plus souvent dans le <strong
+            >quotidien des parents.</strong
+          >
+        </p>
+      </div>
+      <div slot="right" class="grid grid-cols-2 gap-4">
+        <FeatureCard
+          icon={LuCalendar}
+          title="Planifier les repas"
+          content="Organisez les menus rapidement, sans réfléchir à chaque décision."
+        />
+        <FeatureCard
+          icon={LuFastForward}
+          title="Trouver rapidement"
+          content="Une recette adaptée en un instant, selon l'âge, la texture et le contexte."
+        />
+        <FeatureCard
+          icon={LuBell}
+          title="Cuisiner sans friction"
+          content="En maintenant une lecture fluide et continue des étapes de la recette."
+        />
+        <FeatureCard
+          icon={LuChartLine}
+          title="Suivre la diversification"
+          content="Gérer l'évolution alimentaire de l'enfant dans le temps de manière claire et structurée."
+        />
+      </div>
+    </TwoColumns>
+  </ScratchSection>
+
+  <!-- Méthode de conception -->
+  <div class="flex w-2/3 flex-col gap-6">
+    <Heading>Méthode de conception</Heading>
+    <p class="text-sm leading-relaxed">
+      Pour transformer ces usages en expérience mobile, nous avons privilégié
+      une approche très concrète : <strong class="font-semibold"
+        >prototyper</strong
+      >, <strong class="font-semibold">simuler</strong>, <strong
+        class="font-semibold">observer</strong
+      >, <strong class="font-semibold">ajuster</strong>.
+    </p>
+
+    <div class="flex flex-col gap-2">
+      <Heading size="3xl">Prototypes interactifs utilisé pour valider :</Heading
+      >
+      <ul class="flex list-disc flex-col gap-1 pl-5 text-sm leading-relaxed">
+        <li>
+          La <strong class="font-semibold"
+            >compréhension des enchaînements</strong
+          > (où cliquer, quand et pourquoi)
+        </li>
+        <li>
+          La <strong class="font-semibold">profondeur de navigation</strong> (éviter
+          les tunnels)
+        </li>
+        <li>
+          La <strong class="font-semibold">lisibilité</strong> et la <strong
+            class="font-semibold">hiérarchie de l'information</strong
+          > dans des listes denses
+        </li>
+        <li>
+          La <strong class="font-semibold">cohérence entre écrans</strong> (mêmes
+          repères visuels, mêmes codes)
+        </li>
+      </ul>
+    </div>
+
+    <p class="text-sm leading-relaxed">
+      Cette méthode permettait de <strong class="font-semibold"
+        >tester rapidement des hypothèses</strong
+      > avant développement et de <strong class="font-semibold"
+        >détecter tôt des problèmes</strong
+      > typiques du mobile : <strong class="font-semibold"
+        >surcharge visuelle</strong
+      >, <strong class="font-semibold">gestes peu accessibles</strong>, <strong
+        class="font-semibold">filtres trop complexes</strong
+      >, actions secondaires trop visibles, <strong class="font-semibold"
+        >manque de continuité</strong
+      > entre listing et détail.
+    </p>
+  </div>
+
+  <!-- Ce que cette démarche a changé -->
+  <TwoColumns align="center" leftRatio="1/3">
+    <div slot="left" class="flex justify-start">
+      <PhoneCarousel
+        client:load
+        slides={[
+          {
+            src: 'https://placehold.co/440x956/e2e8f0/94a3b8?text=Écran+1',
+            alt: 'Écran 1',
+          },
+          {
+            src: 'https://placehold.co/440x956/e2e8f0/94a3b8?text=Écran+2',
+            alt: 'Écran 2',
+          },
+        ]}
+      />
+    </div>
+    <div slot="right" class="flex flex-col gap-6">
+      <Heading>Ce que cette démarche a changé</Heading>
+
+      <div class="flex flex-col gap-2">
+        <Heading size="xl">Évolutions structurantes</Heading>
+        <ul class="flex list-disc flex-col gap-1 pl-5 text-sm leading-relaxed">
+          <li>
+            <strong class="font-semibold">Hiérarchiser l'information</strong> (ce
+            qui tout affiche photo, titre, âge et quelques repères forts avant la
+            recette)
+          </li>
+          <li>
+            <strong class="font-semibold"
+              >Raccourcir le chemin vers l'action</strong
+            > (ouvrir une recette, ajouter en favori, générer des courses, sans multiplier
+            les écrans)
+          </li>
+          <li>
+            <strong class="font-semibold"
+              >Créer des circuits "carrefours"</strong
+            > (ex. Menu hebdo, Recettes) qui concernent le besoin principal, puis
+            renvoient vers des détails au moment opportun
+          </li>
+          <li>
+            Assure une <strong class="font-semibold">cohérence visuelle</strong>
+            : il ya partout composé une carte recette dans le catalogue, il doit
+            la comprendre (photo, titre, filtres, tags, suggestions)
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-sm leading-relaxed">
+        Ainsi l'application s'est progressivement muée en une expérience
+        interface capable d'absorber ces <strong class="font-semibold"
+          >contenus denses et variables</strong
+        >, tout en restant <strong class="font-semibold"
+          >fluide, cohérente et rassurante</strong
+        >.
+      </p>
+    </div>
+  </TwoColumns>
+
+  <!-- Zoom design : Composant carte recettes -->
+  <TwoColumns align="start" leftRatio="2/3">
+    <div slot="left" class="flex flex-col gap-6">
+      <Heading>Zoom design : Composant carte recettes</Heading>
+      <p class="text-sm leading-relaxed">
+        La section Recettes doit permettre d'<strong class="font-semibold"
+          >explorer rapidement un catalogue riche</strong
+        >, sans perdre de maîtrise.
+      </p>
+
+      <div class="flex flex-col gap-2">
+        <Heading size="xl">Intention du produit</Heading>
+        <p class="text-sm leading-relaxed">
+          L'objectif central n'était pas de proposer un moteur de recherche
+          avancé. L'objectif était de permettre une <strong
+            class="font-semibold">prise de décision simple</strong
+          >, à partir de <strong class="font-semibold">critères</strong> qui ont
+          du <strong class="font-semibold">sens pour les parents</strong> : âge,
+          texture, type de repas, contraintes alimentaires, contexte du moment.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <p class="text-sm font-semibold">
+          Fonctionnement de la section Recettes :
+        </p>
+        <ul class="flex list-disc flex-col gap-1 pl-5 text-sm leading-relaxed">
+          <li>une source d'inspiration</li>
+          <li>un outil de tri</li>
+          <li>
+            un point d'accès rapide à l'action (cuisiner, enregistrer,
+            planifier)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      slot="right"
+      class="flex aspect-[9/16] w-full items-center justify-center rounded-xl border border-dashed border-neutral-200 text-sm text-neutral-400"
+    >
+      Visuel carte recettes
+    </div>
+  </TwoColumns>
+
+  <!-- Contraintes rencontrées -->
+  <ScratchSection class="-mt-16">
+    <TwoColumns align="center" leftRatio="2/3">
+      <div slot="left" class="flex flex-col gap-4">
+        <h2
+          class="font-heading text-brand-100 text-[30px] leading-[40px] font-medium"
+        >
+          Contraintes rencontrées
+        </h2>
+        <ul
+          class="text-brand-200 flex list-disc flex-col gap-2 pl-5 text-sm leading-relaxed"
+        >
+          <li>
+            <strong>Densité</strong> : beaucoup de recettes à filtrer et beaucoup
+            de recettes au total
+          </li>
+          <li>
+            <strong>Variabilité</strong> : titres très longs, informations différentes
+            selon recettes
+          </li>
+          <li>
+            <strong>Multi-critères</strong> : le bon choix dépend de plusieurs paramètres
+            (âge, texture, type, ingrédients)
+          </li>
+          <li>
+            <strong>Mobile</strong> : interactions courtes, gestes simples, lisibilité
+            immédiate
+          </li>
+          <li>
+            <strong>Continuité</strong> : la liste doit préparer la fiche recette,
+            sans rupture
+          </li>
+        </ul>
+        <p class="text-brand-200 text-sm leading-relaxed">
+          Le risque principal était double :
+        </p>
+        <ul
+          class="text-brand-200 flex list-disc flex-col gap-2 pl-5 text-sm leading-relaxed"
+        >
+          <li>
+            Ou un catalogue trop "riche" visuellement, où on ne lit plus rien
+          </li>
+          <li>
+            Ou un système de filtres trop complexe, qui décourage l'exploration
+          </li>
+        </ul>
+      </div>
+      <div
+        slot="right"
+        class="border-brand-600 text-brand-400 flex aspect-square w-full items-center justify-center rounded-xl border border-dashed text-sm"
+      >
+        Illustration contraintes
+      </div>
+    </TwoColumns>
+  </ScratchSection>
+
+  <!-- Décisions clés -->
+  <TwoColumns align="start">
+    <div slot="left" class="flex flex-col gap-6">
+      <Heading size="3xl">Décisions clés</Heading>
+      <div class="flex flex-col gap-2">
+        <Heading size="xl"
+          >N°1 : La carte recette comme unité de lecture</Heading
+        >
+        <p class="text-sm leading-relaxed">
+          La carte recette est le composant qui porte <strong
+            class="font-semibold">l'essentiel de la compréhension</strong
+          >. Elle doit permettre trois actions mentales très rapides :
+        </p>
+        <ol
+          class="flex list-decimal flex-col gap-1 pl-5 text-sm leading-relaxed"
+        >
+          <li>Reconnaître l'idée (via l'image)</li>
+          <li>Comprendre le contenu (via le titre)</li>
+          <li>Valider l'adéquation (via l'âge)</li>
+        </ol>
+      </div>
+    </div>
+    <div slot="right" class="grid grid-cols-2 gap-4">
+      <FeatureCard
+        icon={LuCalendar}
+        title="Âge présent mais secondaire"
+        content="Visible, sans voler l'attention"
+      />
+      <FeatureCard
+        icon={LuType}
+        title="Titre optimisé"
+        content="Typographie, espace, nombre de lignes soigneusement pensés"
+      />
+      <FeatureCard
+        icon={LuImage}
+        title="Image dominante"
+        content="L'œil décide d'abord par le visuel, un parti pris rendu évident par la richesse et la qualité exceptionnelle des photos"
+      />
+    </div>
+  </TwoColumns>
+
+  <!-- N°2 : Les filtres comme levier principal -->
+  <TwoColumns align="start" leftRatio="2/3">
+    <div slot="left" class="flex flex-col gap-6">
+      <div class="flex flex-col gap-2">
+        <Heading size="xl"
+          >N°2 : Les filtres comme levier principal (et non un "plus")</Heading
+        >
+        <p class="text-sm leading-relaxed">
+          Dans cette application, les filtres ne sont pas une fonctionnalité
+          secondaire. Ils sont le mécanisme qui rend le catalogue utilisable au
+          quotidien.
+        </p>
+        <p class="text-sm leading-relaxed">
+          L'idée n'était pas "mettre beaucoup de filtres" mais plutôt de
+          proposer un système qui aide à réduire progressivement l'espace de
+          recherche sans exiger un effort mental important.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <p class="text-sm font-semibold">
+          Ce qui rendent les filtres efficaces :
+        </p>
+        <ul class="flex list-disc flex-col gap-1 pl-5 text-sm leading-relaxed">
+          <li>
+            <strong class="font-semibold">Catégorisation claire</strong> : on raisonne
+            par familles (régime, type, moment, saison, particularités)
+          </li>
+          <li><strong class="font-semibold">Sélection rapide</strong></li>
+          <li>
+            <strong class="font-semibold">Validation explicite</strong> : appuyer
+            quand on est prêt, plutôt que de déclencher des résultats à chaque micro-action
+          </li>
+          <li>
+            <strong class="font-semibold">Feedback immédiat</strong> : voir le nombre
+            de recettes trouvées évite l'impression "je filtre dans le vide"
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      slot="right"
+      class="flex aspect-[9/16] w-full items-center justify-center rounded-xl border border-dashed border-neutral-200 text-sm text-neutral-400"
+    >
+      Visuel filtres
+    </div>
+  </TwoColumns>
+
+  <!-- Une collaboration qui se construit dans la durée -->
+  <TwoColumns align="start" leftRatio="2/3">
+    <div slot="left" class="flex flex-col gap-6">
+      <Heading>Une collaboration qui se construit dans la durée</Heading>
+
+      <div class="flex flex-col gap-2">
+        <Heading size="3xl"
+          >Une collaboration fluide, rythmée par des échanges réguliers</Heading
+        >
+        <p class="text-sm leading-relaxed">
+          Depuis 2021, la collaboration entre BearStudio et Cuisinez pour Bébé
+          s'inscrit dans le temps, fondée sur la confiance, la réactivité et un
+          échange permanent autour du produit.
+        </p>
+        <p class="text-sm leading-relaxed">
+          L'équipe CPB alimente régulièrement la réflexion avec :
+        </p>
+        <ul class="flex list-disc flex-col gap-1 pl-5 text-sm leading-relaxed">
+          <li>des retours issus de sa communauté</li>
+          <li>de nouvelles idées</li>
+          <li>des conseils pour faire évoluer l'application</li>
+        </ul>
+        <p class="text-sm leading-relaxed">
+          Ces échanges prennent différentes formes : messages Slack, points
+          réguliers, ou encore des vidéos Loom pour détailler des attentes ou
+          proposer des pistes d'amélioration ou demander des conseils.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <Heading size="3xl">Une évolution continue du produit</Heading>
+        <p class="text-sm leading-relaxed">
+          Cette collaboration a permis de faire évoluer l'application bien
+          au-delà de sa première version.
+        </p>
+        <p class="text-sm leading-relaxed">
+          De nouvelles fonctionnalités structurantes ont émergé :
+        </p>
+        <ul class="flex list-disc flex-col gap-1 pl-5 text-sm leading-relaxed">
+          <li>la gestion de plusieurs enfants au sein d'un même compte</li>
+          <li>la mise en place de la liste de courses</li>
+        </ul>
+        <p class="text-sm leading-relaxed">
+          Des fonctionnalités existantes ont été améliorées :
+        </p>
+        <ul class="flex list-disc flex-col gap-1 pl-5 text-sm leading-relaxed">
+          <li>l'accès au contenu premium</li>
+          <li>écrans de conversion</li>
+        </ul>
+        <p class="text-sm leading-relaxed">
+          Avec un objectif constant : clarifier l'expérience et améliorer la
+          compréhension de l'offre.
+        </p>
+      </div>
+    </div>
+    <div
+      slot="right"
+      class="flex aspect-square w-full items-center justify-center rounded-xl border border-dashed border-neutral-200 text-sm text-neutral-400"
+    >
+      Illustration collaboration
+    </div>
+  </TwoColumns>
+
+  <!-- Ce que les utilisateurs en pensent -->
+  <ScratchSection>
+    <div class="flex flex-col gap-10">
+      <TwoColumns align="center">
+        <div slot="left" class="flex flex-col gap-4">
+          <h2
+            class="font-heading text-brand-100 text-4xl leading-[46px] font-medium"
+          >
+            Ce que les utilisateurs en pensent
+          </h2>
+          <p class="text-brand-200 text-sm leading-relaxed">
+            Au-delà des maquettes et des fonctionnalités développées,
+            l'indicateur le plus précieux reste la <strong
+              >satisfaction des utilisateurs</strong
+            >.
+          </p>
+          <p class="text-brand-200 text-sm leading-relaxed">
+            Depuis le lancement de l'application, les avis laissés sur les
+            stores et les messages adressés à CPB témoignent de son <strong
+              >impact dans le quotidien des parents</strong
+            >.
+          </p>
+          <p class="text-brand-200 text-sm leading-relaxed">
+            Les retours mettent en avant la <strong
+              >simplicité d'utilisation</strong
+            >, la <strong>clarté</strong> des recettes, le <strong
+              >gain de temps</strong
+            > dans l'organisation des repas et la <strong
+              >qualité du contenu</strong
+            > proposé.
+          </p>
+          <p class="text-brand-200 text-sm leading-relaxed">
+            Les avis sur le Play Store ou Google Play confirment que
+            l'application <strong>répond à un besoin réel</strong> : accompagner
+            les parents de manière fluide, intuitive et bienveillante. Ces retours
+            nourrissent également les évolutions futures en cours d'amélioration
+            continue.
+          </p>
+        </div>
+        <div slot="right" class="grid grid-cols-2 gap-4">
+          <StatCard value="4,8" label="1k notes">
+            <Fragment slot="visual">
+              <PiStarFill />
+              <PiStarFill />
+              <PiStarFill />
+              <PiStarFill />
+              <PiStarHalfFill />
+            </Fragment>
+          </StatCard>
+          <StatCard
+            value="+ 500 k"
+            title="Téléchargements"
+            label="Sur iOS & Android"
+          />
+          <StatCard
+            value="N°2"
+            title="Alimentation & Boissons"
+            label="Classement Google Play"
+          />
+          <StatCard
+            value="N°16"
+            title="Cuisine & Boissons"
+            label="Classement App Store"
+          />
+        </div>
+      </TwoColumns>
+
+      <TestimonialList>
+        <TestimonialCard
+          person={{ name: 'Marie Aladelle' }}
+          date="23/05/2025"
+          rating={5}
+          content="J'adore cette application très utile. Sans abonnement, accès à des multiples recettes, aux menus de la semaine, aux fiches aliments, aux guides pour réduire la diversification, à des articles pédagogiques. Et avec un abonnement, une mine d'or de recettes (Plus facile qui s'ont par âge, pour la famille, bien catégorisé les portions, etc.)."
+        />
+        <TestimonialCard
+          person={{ name: 'Sara Cookies' }}
+          date="14/03/2025"
+          rating={5}
+          content="Très contente de cette application qui est très complète pour la diversification de mon bébé. Si vous avez des questions, des applications répond. Mes Médecins sont également impressionnés. Il y a également de nombreuses recettes pour plus du choix de recettes mais le trouve sur la version gratuite beaucoup de bien soigneuses."
+        />
+        <TestimonialCard
+          person={{ name: 'Pau.' }}
+          date="01/01/2025"
+          rating={5}
+          content="J'apprécie les recettes adaptées à l'âge, les grandes figures disponibles et les conseils pratiques qui m'aident au quotidien."
+        />
+      </TestimonialList>
+    </div>
+  </ScratchSection>
+
+  <!-- Pour aller plus loin -->
+  <div class="flex w-2/3 flex-col gap-6">
+    <Heading>Pour aller plus loin</Heading>
+    <p class="text-sm leading-relaxed">
+      Cuisinez pour Bébé continue d'accompagner chaque jour des milliers de
+      parents grâce à son écosystème de contenus, son application et ses
+      ressources pédagogiques.
+    </p>
+    <p class="text-sm leading-relaxed">
+      Pour découvrir l'univers complet, voici où trouver la marque et suivre ses
+      dernières nouveautés :
+    </p>
+    <ul class="flex list-disc flex-col gap-4 pl-5 text-sm leading-relaxed">
+      <li>
+        <strong class="font-semibold">Site web officiel :</strong> Recettes, conseils,
+        batch cooking et guides pratiques<br />
+        <a
+          href="https://www.cuisinez-pour-bebe.fr/"
+          class="text-brand-600 underline underline-offset-2"
+          >https://www.cuisinez-pour-bebe.fr/</a
+        >
+      </li>
+      <li>
+        <strong class="font-semibold">Application mobile :</strong> Disponible sur
+        l'App Store et Google Play<br />
+        Accès aux menus hebdomadaires, filtres, favoris, liste de courses et fonctionnalités
+        premium
+      </li>
+      <li>
+        <strong class="font-semibold">Instagram :</strong> Partage de recettes, astuces,
+        vidéos pratiques, retours de la communauté<br />
+        <a
+          href="https://www.instagram.com/cuisinezpourbebe/"
+          class="text-brand-600 underline underline-offset-2"
+          >https://www.instagram.com/cuisinezpourbebe/</a
+        >
+      </li>
+      <li>
+        <strong class="font-semibold">Facebook :</strong> Communauté active, échanges
+        entre parents, lives et contenus exclusifs <a
+          href="https://www.facebook.com/cuisinezpourbebe/"
+          class="text-brand-600 underline underline-offset-2"
+          >https://www.facebook.com/cuisinezpourbebe/</a
+        >
+      </li>
+      <li>
+        <strong class="font-semibold">YouTube :</strong> Vidéos explicatives, recettes
+        filmées, ateliers et masterclass<br />
+        <a
+          href="https://www.youtube.com/cuisinezpourbebe"
+          class="text-brand-600 underline underline-offset-2"
+          >https://www.youtube.com/cuisinezpourbebe</a
+        >
+      </li>
+    </ul>
+    <p class="text-sm leading-relaxed">
+      Et n'hésitez pas à découvrir <a
+        href="#"
+        class="text-brand-600 underline underline-offset-2"
+        >notre précédente étude de cas sur Léa English</a
+      > !
+    </p>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+---
+interface Props {
+  size?: '4xl' | '3xl' | 'xl';
+  class?: string;
+}
+
+const { size = '4xl', class: className } = Astro.props;
+
+const styles = {
+  '4xl': 'text-4xl leading-[46px]',
+  '3xl': 'text-[30px] leading-[40px]',
+  xl: 'text-xl leading-[30px]',
+};
+---
+
+<h2
+  class:list={[
+    'font-heading text-foreground font-medium',
+    styles[size],
+    className,
+  ]}
+>
+  <slot />
+</h2>

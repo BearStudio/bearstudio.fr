@@ -11,6 +11,7 @@ import { getLink } from '@/lib/link';
 import { getPostsCollection, getPostSlugInOtherLocale } from '@/lib/posts';
 import { getSiteUrl } from '@/lib/site/get-site-url';
 import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
+import CuisinezPourBebeContent from '@/components/blog-post/cuisinez-pour-bebe-content.astro';
 import { breadcrumbEntries } from '@/components/breadcrumb/utils';
 import Container from '@/components/container.astro';
 import HeroContent from '@/components/hero/hero-content.astro';
@@ -175,9 +176,15 @@ const [slugFr, slugEn] = await Promise.all([
   </Hero>
   <Container>
     <PhotoSwipeImages>
-      <Prose>
-        <Content />
-      </Prose>
+      {
+        post.data._computed.slug === 'etude-de-cas-ux-cuisinez-pour-bebe' ? (
+          <CuisinezPourBebeContent />
+        ) : (
+          <Prose>
+            <Content />
+          </Prose>
+        )
+      }
     </PhotoSwipeImages>
     <div class="flex flex-col gap-0 pt-12 text-sm lg:flex-row lg:gap-1">
       <div>

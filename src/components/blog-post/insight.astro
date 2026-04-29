@@ -1,0 +1,33 @@
+---
+import type { IconType } from 'react-icons/lib';
+
+import { cn } from '@/lib/tailwind/utils';
+
+interface Props {
+  icon: IconType;
+  class?: string;
+}
+
+const { icon: Icon, class: className } = Astro.props;
+---
+
+<div
+  data-slot="insight"
+  class={cn(
+    'not-prose flex w-[340px] items-center gap-6 rounded-lg py-2',
+    className
+  )}
+>
+  <div
+    data-slot="insight-icon"
+    class="text-brand-300 flex shrink-0 items-center justify-center [&>svg]:size-[21px]"
+  >
+    <Icon />
+  </div>
+  <p
+    data-slot="insight-text"
+    class="text-brand-200 text-sm leading-[21px] font-normal"
+  >
+    <slot />
+  </p>
+</div>
