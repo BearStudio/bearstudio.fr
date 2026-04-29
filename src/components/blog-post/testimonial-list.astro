@@ -10,7 +10,16 @@ const { class: className } = Astro.props;
 
 <div
   data-slot="testimonial-list"
-  class={cn('not-prose flex gap-4 overflow-x-auto pb-2', className)}
+  class={cn('not-prose flex gap-4 overflow-x-auto', className)}
 >
   <slot />
 </div>
+
+<style>
+  [data-slot='testimonial-list'] {
+    scrollbar-width: none;
+  }
+  [data-slot='testimonial-list']::-webkit-scrollbar {
+    display: none;
+  }
+</style>
