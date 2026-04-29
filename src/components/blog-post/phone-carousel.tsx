@@ -79,7 +79,7 @@ export function PhoneCarousel({ slides, className }: PhoneCarouselProps) {
               aria-label={`Aller au slide ${i + 1}`}
               className={cn(
                 'h-1.5 rounded-full transition-all',
-                i === current ? 'w-4 bg-accent' : 'w-1.5 bg-brand-600'
+                i === current ? 'w-4 bg-brand-100' : 'w-1.5 bg-brand-700'
               )}
             />
           ))}
