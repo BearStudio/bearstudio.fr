@@ -4,6 +4,7 @@ import { PiStarFill, PiStarHalfFill } from 'react-icons/pi';
 
 import FeatureCard from '@/components/blog-post/feature-card.astro';
 import { PhoneCarousel } from '@/components/blog-post/phone-carousel';
+import ScratchSection from '@/components/blog-post/scratch-section.astro';
 import StatCard from '@/components/blog-post/stat-card.astro';
 import TestimonialCard from '@/components/blog-post/testimonial-card.astro';
 import TwoColumns from '@/components/blog-post/two-columns.astro';
@@ -153,6 +154,21 @@ import RootLayout from '@/layouts/root-layout.astro';
         />
       </div>
     </div>
+
+    <!-- Scratch Section -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Scratch Section</h2>
+    </div>
+
+    <ScratchSection>
+      <p class="font-heading text-brand-100 text-2xl font-semibold">
+        Titre de section
+      </p>
+      <p class="text-brand-300 mt-2 text-sm">
+        Contenu de la section sur fond sombre avec déchirures en haut et en bas.
+      </p>
+    </ScratchSection>
 
     <!-- Feature Card -->
 

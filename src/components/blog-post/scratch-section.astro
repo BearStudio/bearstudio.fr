@@ -1,0 +1,26 @@
+---
+import { cn } from '@/lib/tailwind/utils';
+import { ScratchFull } from '@/components/ui/scratch';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div
+  data-slot="scratch-section"
+  class={cn(
+    'not-prose relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen my-12',
+    className
+  )}
+>
+  <ScratchFull className="text-foreground" />
+  <div class="bg-foreground py-16">
+    <div class="container mx-auto px-8">
+      <slot />
+    </div>
+  </div>
+  <ScratchFull className="text-foreground rotate-180" />
+</div>
