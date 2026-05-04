@@ -27,7 +27,7 @@ Commencez par des concepts simples mais indispensables comme les théories/lois 
 
 Les éléments proches les uns des autres sont perçus comme appartenant à un même groupe. Si des éléments sont trop proches ou, au contraire, trop éloignés, on risque de mal associer les informations entre elles.
 
-![](images/slide-1024x576.png)
+![Comparaison d'ui avec et sans application de la loi de proximité](images/slide-1024x576.png)
 
 Exemple à gauche ici, si tout est espacé de la même façon, sauriez vous me dire si le prix est au dessus, ou en dessous de l’item qu’il concerne ? Avec les bons espacements, on voit que l’exemple de droite devient beaucoup plus clair.
 
@@ -37,7 +37,7 @@ Je vous invite à lire [cet article qui en parle plus en détails](/fr/blog/arti
 
  Les éléments qui se ressemblent (forme, couleur, taille) sont vus comme appartenant à un même ensemble. 
 
-![](images/slide-1-1024x576.png)
+![Comparaison d'ui avec et sans application de la loi de similarité](images/slide-1-1024x576.png)
 
 Ici, dans un formulaire avec des cases à cocher, si elles ne sont pas visuellement identiques, on ne les associera pas instinctivement, même si elles appartiennent au même champ.
 
@@ -47,13 +47,13 @@ Ces deux lois sont essentielles pour poser les bases, mais d’autres principes 
 
 Chaque action doit produire une réaction visible, compréhensible et immédiate. Que ce soit un toast indiquant le succès d’une action ( création, sauvegarde …), un loader pour montrer que c’est en cours de chargement ou encore l’invalidation d’un champ de formulaire, un bon feedback est essentiel à une bonne expérience utilisateur.
 
-![](images/slide-2-1024x576.png)
+![Exemple d'action possible pour rendre compte du status des actions faites par l'utilisateur](images/slide-2-1024x576.png)
 
 ### L’affordance
 
 Un design doit être compréhensible : chaque élément doit indiquer clairement son utilité. Par exemple, un bouton doit ressembler à un bouton.
 
-![](images/slide-6-1024x576.png)
+![Démonstration de plusieurs niveaux d'affordances](images/slide-6-1024x576.png)
 
 ### Apprentissage externe
 
@@ -61,7 +61,7 @@ Les utilisateurs ont des attentes basées sur leurs expériences passées. Une b
 
 Je ne dis pas qu’on ne peut pas innover, mais quand on n’est pas designer, autant rester dans les habitudes des utilisateurs.
 
-![](images/slide-3-1024x576.png)
+![Différents exemples de bars de recherche stylisées (google, amazon, X etc)](images/slide-3-1024x576.png)
 
 ### Apprentissage interne
 
@@ -71,7 +71,7 @@ De la même manière, un utilisateur va apprendre à utiliser l’application qu
 
 Tout ne doit pas être au même niveau ou à la même taille. L’information importante peut être mise en valeur avec une police plus grande, un gras plus prononcé, ou une couleur marquante. Si on ne veut pas diminuer la taille d’un élément pour pas qu’il ne devienne trop petit, utiliser une couleur plus claire par exemple peut permettre d’obtenir le même effet. Attention cependant à garder une cohérence visuelle entre les éléments de même type et de même importance.
 
-![](images/slide-5-1024x576.png)
+![Exmple de carte avec tout les textes à la même taille contre une carte avec des tailles de texte adaptée](images/slide-5-1024x576.png)
 
 En intégrant ces principes, il sera plus simple en tant que dev front de comprendre les choix faits par les designers, et encore mieux, pouvoir nous-même ajouter des fonctionnalités sans passer par l’étape designer (ou seulement pour qu’il valide), si celui-ci n’est pas disponible ou qu’il n’y en a pas pour le projet.
 

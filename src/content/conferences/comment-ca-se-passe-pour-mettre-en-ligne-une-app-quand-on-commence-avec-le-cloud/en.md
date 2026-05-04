@@ -28,6 +28,6 @@ Moreover, Gérard wants it to be done for yesterday!
 
 We will start with a quick overview of existing solutions, and then we will choose some of them to put online the combo: FRONT + API (+DTB). We will analyze the advantages, the drawbacks, and above all the cost of setting up solutions like AWS, CleverCloud, Heroku, Netlify, Gitlab pages…
 
-he purpose of this talk is not to determine which solution is the best, nor how to optimize its shipping. I just want to share my experience and I hope to save you a little time when you will be confronted against this type of issue.
+The purpose of this talk is not to determine which solution is the best, nor how to optimize its shipping. I just want to share my experience and I hope to save you a little time when you will be confronted against this type of issue.
 
 This lecture is mainly aimed at 3 types of profile: Full-stack developers or “jacks of all trades” Students who don’t know how to put an app online Managers who have to choose a provider but don’t know where to start

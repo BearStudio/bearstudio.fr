@@ -14,7 +14,7 @@ authors:
 
 Même si ça ne semble pas du tout naturel, il faut se forcer à mettre certains choses de côté pour prendre confiance et établir une ambiance de travail bienveillante. Attention, je ne prétends pas que ce sont là des vérités absolues ! Il est possible qu’à un moment donné vous soyez obligés de considérer l’un de ces points comme un problème, mais cela doit rester l’exception qui confirme la règle. 
 
-![](images/photo-1552664730-d307ca884978-11.08.22.jpeg)
+![Échnage d'idée en réunion autour de post-it collés sur un tableau](images/photo-1552664730-d307ca884978-11.08.22.jpeg)
 
 ### 1- Les horaires
 

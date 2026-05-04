@@ -80,7 +80,7 @@ Outstatic utilise GitHub pour l'authentification et la gestion des articles. Voi
 
 4. Une fois l'application créée, notez vos client ID et client secret.
 
-![](images/image-3-1021x1024-1.png)
+![Menu de création d'une application OAuth sur GitHub](images/image-3-1021x1024-1.png)
 
 ### Étape 3 : Intégrer Outstatic dans votre projet : 
 
@@ -111,7 +111,7 @@ OST_REPO_BRANCH=YOUR_GITHUB_REPOSITORY_BRANCH
 
 Depuis l'interface, vous pouvez créer une collection : par exemple pour un blog vous allez créer la collection “Articles” qui contiendra tous vos articles. Par défaut, chaque élément de la collection a un titre, une description, une image, un auteur, etc, mais vous pouvez également créer des champs personnalisés. Une fois l’article créé, il est sauvegardé dans votre dépôt GitHub sous forme de fichier Markdown dans le dossier défini (content par défaut).
 
-![](images/image-1024x731-1.png)
+![Menu de création d'une nouvelle collection](images/image-1024x731-1.png)
 
 ### Visualisation et récupération des articles : 
 
@@ -150,9 +150,9 @@ Dans mon cas, j’ai choisi d’utiliser Tailwind CSS et plus particulièrement 
 
 Lorsque vous écrivez un article sur l’interface administrateur, le style n’est pas le même que celui de la page ou vous allez afficher l’article pour vos utilisateurs. Voici par exemple l’interface d’Outstatic sur la première image, c’est ici que vous écrivez l’article, remplissez son titre, sa description etc… Sur la deuxième image, j’ai ajouté du style, et utilisé les propriétés “title”, “author” et “cover image” pour créer l'en-tête de l’article.
 
-![](images/image-1-1024x473-1.png)
+![Exemple d'article utilisant Outstatic vu du côté administrateur](images/image-1-1024x473-1.png)
 
-![](images/image-2-1024x584-1.png)
+![Exemple d'article utilisant Outstatic (avec un peu de style ajouté) vu du côté utilisateur](images/image-2-1024x584-1.png)
 
 ## Mon avis sur Outstatic
 

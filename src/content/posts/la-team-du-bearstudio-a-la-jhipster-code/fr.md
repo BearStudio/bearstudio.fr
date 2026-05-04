@@ -43,7 +43,7 @@ Ensuite, je suis passée sur la **création d’un nouveau personnage** pour l'a
 
 <figure>
 
-![](images/mochup-asceline-jhipster-1024x683-1.jpeg)
+![Aperçu des personnages proposés par Asceline Boullen](images/mochup-asceline-jhipster-1024x683-1.jpeg)
 
 <figcaption>
 
@@ -137,12 +137,12 @@ C’était extrêmement intéressant comme session de travail. D'abord sur l’a
 
 Bien entendu la journée s’est terminée avec un repas tous ensemble, très sympa pour créer du lien entre les contributeurs.
 
-- ![](images/14-1-1024x768-1.jpg)
-- ![](images/13-1-1024x768-1.jpg)
-- ![](images/2-1-1024x768-1.jpg)
-- ![](images/10-1-1024x768-1.jpg)
-- ![](images/untitled-design-1.png)
-- ![](images/8-1-768x1024-1.jpg)
+- ![Quentin Lerebours et Rudy Baer](images/14-1-1024x768-1.jpg)
+- ![Renan Decamps, Asceline Boullen et Nicolas Greverie](images/13-1-1024x768-1.jpg)
+- ![Couché de soleil](images/2-1-1024x768-1.jpg)
+- ![Renan Decamps et Quentin Lerebours](images/10-1-1024x768-1.jpg)
+- ![Photo de group du Bearstudio](images/untitled-design-1.png)
+- ![Renan Decamps](images/8-1-768x1024-1.jpg)
 
 ## Mon bilan
 

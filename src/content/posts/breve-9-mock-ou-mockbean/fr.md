@@ -25,7 +25,7 @@ Pour faire simple, je vais être réducteur et dire que **@Mock permet de mocker
 
 Disons que vous testiez unitairement la méthode _order_ de l’OrderService qui permet de passer une commande. Voilà à quoi ressemblerait le setup de votre test :
 
-![](images/code-1-847x1024.png)
+![Setup d'un test unitaire de la méthode order](images/code-1-847x1024.png)
 
 Dans un test unitaire, on _instancie_ nous même le service qu’on teste, grâce à son constructeur, ce qui nous permet de lui donner ses dépendances qu’on a mocké. C’est le cas simple, et on peut se servir du mock dans le test pour définir le comportement que la méthode doit avoir.
 
@@ -33,7 +33,7 @@ Dans un test unitaire, on _instancie_ nous même le service qu’on teste, grâc
 
 Disons maintenant que vous testiez la méthode _order_ de l’OrderService dans le cadre d’un test d’intégration, voilà globalement à quoi ressemblerait le setup de votre test :
 
-![](images/code-2-949x1024.png)
+![Setup d'un test d'intégration de la méthode order](images/code-2-949x1024.png)
 
 Ici, on voit bien que ce n’est pas nous qui créons l’instance de notre service (il n’y a pas de new OrderService()). C’est **Spring** qui va chercher à l’instancier lors du lancement de l’application de test. Par conséquent, **comment faire pour dire à Spring que nous souhaitons utiliser un mock**, et non une vraie instance du service ?
 
