@@ -1,0 +1,56 @@
+name: Knip
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  classic:
+    name: Knip (classic)
+    runs-on: ubuntu-24.04
+    steps:
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v6
+
+      - name: 🏗 Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 10
+
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+
+
+      - name: 📦 Install dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts
+
+      - name: 🤖 Run Knip
+        run: pnpm knip --reporter compact
+
+  production:
+    name: Knip (production)
+    runs-on: ubuntu-24.04
+    steps:
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v6
+      
+      - name: 🏗 Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 10
+      
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: 📦 Install dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts
+
+      - name: 🤖 Run Knip (production)
+        run: pnpm knip:production --reporter compact
