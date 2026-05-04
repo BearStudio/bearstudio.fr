@@ -29,6 +29,10 @@
   "article": {
     "on": "Le",
     "by": "par",
-    "published": "Publié le"
+    "published": "Publié le",
+    "outdated": {
+      "title": "Cet article est peut-être dépassé",
+      "description": "Les informations présentées ici ne sont plus forcément valables."
+    }
   }
 }
