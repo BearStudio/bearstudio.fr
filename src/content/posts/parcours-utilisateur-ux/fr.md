@@ -9,6 +9,8 @@ tags:
 heroImage: 'images/article-ux-miniature.png'
 metaDescription: "Bien comprendre le parcours utilisateur est essentiel pour créer un chemin fluide qui va permettre d'optimiser l'expérience de l'utilisateur"
 authors: ['emmanuel-gien']
+skills:
+  - 'ux'
 ---
 
 Le parcours utilisateur est défini par les différents chemins et interactions que l’utilisateur va rencontrer dans une application, un site web, un logiciel métier, etc.
