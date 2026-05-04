@@ -1,0 +1,168 @@
+---
+import { getImage, Image } from 'astro:assets';
+
+import { getTweet } from 'react-tweet/api';
+
+import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
+import XLogo from '@/components/ui/x-logo.astro';
+
+const { url } = Astro.props;
+const { t, locale } = getTranslationUtilities(Astro.currentLocale);
+
+const tweetId = url.match(/status\/(\d+)/)?.[1] ?? url;
+
+let tweet;
+try {
+  tweet = await getTweet(tweetId);
+} catch (error) {
+  console.error(`Failed to fetch tweet ${tweetId}:`, error);
+}
+
+// Use display_text_range to drop leading reply mentions; strip trailing media t.co URL
+const displayText = tweet
+  ? Array.from(tweet.text)
+      .slice(tweet.display_text_range[0], tweet.display_text_range[1])
+      .join('')
+      .replace(/\s*https:\/\/t\.co\/\w+$/, '')
+      .trim()
+  : '';
+
+const avatarSrc = tweet?.user.profile_image_url_https;
+
+const photos = tweet?.mediaDetails?.filter((m) => m.type === 'photo') ?? [];
+const video = tweet?.mediaDetails?.find(
+  (m) => m.type === 'video' || m.type === 'animated_gif'
+);
+const videoAspect =
+  video && 'video_info' in video
+    ? `${video.video_info.aspect_ratio[0]} / ${video.video_info.aspect_ratio[1]}`
+    : '16 / 9';
+const videoPoster = video
+  ? (
+      await getImage({
+        src: video.media_url_https,
+        width: 1200,
+        inferSize: true,
+      })
+    ).src
+  : undefined;
+---
+
+{
+  tweet ? (
+    <figure class="not-prose bg-card border-card-border group relative my-8 overflow-hidden rounded-md border border-b-3 transition-all hover:-translate-y-1.5 hover:shadow-xl">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="absolute inset-0 rounded-md focus:outline-none"
+        aria-label={t('blog.article.tweet.viewPostBy', {
+          name: tweet.user.name,
+        })}
+      />
+      <div class="pointer-events-none relative p-6">
+        <div class="mb-3 flex items-center gap-3">
+          {avatarSrc && (
+            <Image
+              src={avatarSrc}
+              alt=""
+              width={40}
+              height={40}
+              class="size-10 rounded-full"
+              loading="lazy"
+              inferSize
+            />
+          )}
+          <div class="flex flex-col leading-tight">
+            <span class="text-foreground text-sm font-semibold">
+              {tweet.user.name}
+            </span>
+            <span class="text-foreground/60 text-sm">
+              @{tweet.user.screen_name}
+            </span>
+          </div>
+          <XLogo class="text-foreground ml-auto size-5" />
+        </div>
+
+        {displayText && (
+          <p class="text-foreground mb-3 text-pretty whitespace-pre-wrap">
+            {displayText}
+          </p>
+        )}
+
+        {photos.length > 0 && (
+          <div
+            class:list={[
+              'mb-3 grid gap-1 overflow-hidden rounded-lg',
+              photos.length === 1 && 'grid-cols-1',
+              photos.length >= 2 && 'grid-cols-2',
+            ]}
+          >
+            {photos.map((photo, i) => (
+              <Image
+                src={photo.media_url_https}
+                alt=""
+                width={photo.original_info.width}
+                height={photo.original_info.height}
+                class:list={[
+                  'h-full w-full object-cover',
+                  photos.length === 3 && i === 0 && 'row-span-2',
+                ]}
+                loading="lazy"
+                inferSize
+              />
+            ))}
+          </div>
+        )}
+
+        {video && videoPoster && (
+          <div
+            class="relative mb-3 overflow-hidden rounded-lg"
+            style={`aspect-ratio: ${videoAspect};`}
+          >
+            <img
+              src={videoPoster}
+              alt=""
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/30">
+              <div class="flex size-16 items-center justify-center rounded-full bg-black/70 transition group-hover:scale-110 group-hover:bg-black/80">
+                <svg
+                  viewBox="0 0 24 24"
+                  class="ml-1 size-7 fill-white"
+                  aria-hidden="true"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+              <span class="rounded-full bg-black/70 px-3 py-1 text-sm font-medium text-white">
+                {t('blog.article.tweet.watchOnX')}
+              </span>
+            </div>
+          </div>
+        )}
+
+        <time datetime={tweet.created_at} class="text-foreground/60 text-sm">
+          {new Date(tweet.created_at).toLocaleDateString(locale, {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          })}
+        </time>
+      </div>
+    </figure>
+  ) : (
+    <div class="not-prose bg-card border-card-border text-foreground/60 my-8 rounded-md border border-b-3 p-6 text-sm">
+      {t('blog.article.tweet.unavailable')} —{' '}
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-brand-600 underline"
+      >
+        {t('blog.article.tweet.viewOnX')}
+      </a>
+    </div>
+  )
+}
