@@ -133,6 +133,10 @@ const [slugFr, slugEn] = await Promise.all([
     }}
     breadcrumb={breadcrumb}
     markdownUrl={`${Astro.url.pathname}.md`}
+    image={new URL(
+      Astro.url.pathname + '/assets/og-image.jpg',
+      Astro.site
+    ).toString()}
   />
   <Schema slot="ld+json" item={blogPostingSchema} />
   <Hero image={post.data.heroImage}>
