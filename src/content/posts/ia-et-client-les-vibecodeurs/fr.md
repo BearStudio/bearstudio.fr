@@ -1,11 +1,11 @@
 ---
 title: 'IA & Client : les "Vibecodeurs"'
-date: 2026-04-02
+date: 2026-05-12
 categories:
   - 'ia'
 tags:
   - 'ia'
-  - 'rex'
+  - 'temoignage'
   - 'vibe-coding'
   - 'collaboration'
 metaDescription: "Comment nous avons adapté nos processus pour collaborer avec des clients qui vibe codent leurs fonctionnalités avec l'IA."
@@ -19,13 +19,13 @@ authors:
 
 ## Dans l'article précédent
 
-Dans le premier article, j'ai présenté comment nos clients utilisent désormais l'IA pour prototyper leurs idées, transformant ces "shadow prototypes" en véritables spécifications.
+Dans le premier article sur [les clients "prototypeurs"](/fr/blog/articles/ia-et-client-les-prototypeurs), j'ai présenté comment nos clients utilisent désormais l'IA pour prototyper leurs idées, transformant ces "shadow prototypes" en véritables spécifications.
 
 Mais une nouvelle étape commence lorsque les clients ne se contentent plus de montrer... mais veulent **construire avec nous**.
 
 ## Faire face à la vague de clients "vibecodeurs" : comment on a dû s'adapter
 
-Le cas de Client A était une première étape : accepter l'IA comme un outil de spécification. Mais avec un autre client (appelons-les "Team B"), nous avons fait face à une réalité bien plus chaotique.
+Le cas de Client A était une première étape : accepter l'IA comme un outil de spécification. Mais avec un autre client (appelons-les "Client B"), nous avons fait face à une réalité bien plus chaotique.
 
 Ils évoluent avec les mêmes contraintes budgétaires, mais cherchent à livrer davantage de fonctionnalités en travaillant avec nous plutôt qu'en nous remplaçant. Leur objectif est de nous confier le travail lourd, transverse et orienté maintenance, tout en conservant l'autonomie nécessaire pour traiter eux-mêmes des tickets de backlog restés en attente. Cette approche leur permet d'adresser des sujets qu'ils ne pouvaient pas prioriser auparavant, tout en s'appuyant sur nous pour la revue et le cadrage lorsque nécessaire.
 
@@ -45,9 +45,9 @@ Il y a deux ans, notre réponse aurait été de fortement décourager cette appr
 
 Dans un modèle d'agence traditionnel, l'équipe de développement est en charge du code en production. Les contributions sont donc strictement contrôlées pour garantir cohérence, fiabilité et sécurité. Toute modification externe peut introduire des défauts ou des risques dont l'équipe reste responsable, rendant ce type de contribution difficilement viable.
 
-Mais comme le dit souvent Rudy : **« S'adapter ou disparaître. »**
+Mais comme le dit souvent [Rudy](/fr/equipe/rudy-baer) : **« S'adapter ou disparaître. »**
 
-Si nous avions refusé, Team B aurait simplement fait appel à un freelance peu regardant sur la qualité, ou aurait tout tenté de son côté... avec un crash probable quelques mois plus tard.
+Si nous avions refusé, Client B aurait simplement fait appel à un freelance peu regardant sur la qualité, ou aurait tout tenté de son côté... avec un crash probable quelques mois plus tard.
 
 ## Le nouveau processus : la stratégie des "guardrails"
 
@@ -57,7 +57,7 @@ Voici le workflow précis que nous avons mis en place pour survivre au "vibe cod
 
 ### 1. Le "pre-code check" (phase de planification)
 
-Team B utilise Claude Code avec la fonctionnalité de planification. Désormais, au lieu de coder immédiatement, ils génèrent un plan. Nous intervenons à ce moment-là. Nous analysons leur brief et le plan proposé par l'IA. Nous itérons sur la logique avant qu'une seule ligne de code ne soit produite. Si le plan est mauvais, le code le sera aussi. Nous corrigeons le plan, pas le produit fini : on simplifie l'architecture, on optimise les process, on vérifie les différents cas métiers etc.
+Client B utilise Claude Code avec la fonctionnalité de planification. Désormais, au lieu de coder immédiatement, ils génèrent un plan. Nous intervenons à ce moment-là. Nous analysons leur brief et le plan proposé par l'IA. Nous itérons sur la logique avant qu'une seule ligne de code ne soit produite. Si le plan est mauvais, le code le sera aussi. Nous corrigeons le plan, pas le produit fini : on simplifie l'architecture, on optimise les process, on vérifie les différents cas métiers etc.
 
 ### 2. Le contexte est roi (agents.md)
 
@@ -79,7 +79,7 @@ Nous avons mis en place une auto-revue par IA pour les bases avec l'utilisation 
 
 ### 5. Quand l'IA transforme la dette technique en accélérateur
 
-Un autre signal fort est apparu avec Team B : la question des mises à jour majeures.
+Un autre signal fort est apparu avec Client B : la question des mises à jour majeures.
 
 Depuis des années, nous recommandions une montée de version importante. Le projet a près de dix versions de node de retard. Comme souvent, ce sujet n'était jamais priorisé : aucun bénéfice visible, difficile à justifier côté business.
 
@@ -129,9 +129,9 @@ L'IA peine notoirement ici car elle ne peut pas facilement maintenir le modèle 
 
 ### Le triage en action
 
-Désormais, quand un client comme Team B veut utiliser son IA de planification, la première question que nous posons lors du "pre-code check" est : **Est-ce local ou transverse ?**
+Désormais, quand un client comme Client B veut utiliser son IA de planification, la première question que nous posons lors du "pre-code check" est : **Est-ce local ou transverse ?**
 
-Si un membre de Team B veut construire l'UI de sa nouvelle fonctionnalité de tchat, il peut le faire en 2 heures. Mais quand ce tchat doit gérer des connexions WebSocket en temps réel, persister les données de manière sécurisée vers la plateforme d'administration, et se synchroniser avec la base de données utilisateurs legacy, l'équipe BearStudio intervient.
+Si un membre de Client B veut construire l'UI de sa nouvelle fonctionnalité de tchat, il peut le faire en 2 heures. Mais quand ce tchat doit gérer des connexions WebSocket en temps réel, persister les données de manière sécurisée vers la plateforme d'administration, et se synchroniser avec la base de données utilisateurs legacy, l'équipe BearStudio intervient.
 
 Cette distinction est ce qui sauve le projet de l'effondrement sous le poids de la dette technique générée par l'IA. Elle donne au client le plaisir de construire des fonctionnalités visibles à grande vitesse, tandis que nous veillons silencieusement à ce que les fondations ne craquent jamais.
 
@@ -139,7 +139,7 @@ Cette distinction est ce qui sauve le projet de l'effondrement sous le poids de 
 
 ## Ce que cela change pour l'avenir
 
-Ce modèle hybride avec Team B n'était pas une simple expérience ponctuelle ; c'était un aperçu de l'avenir de notre industrie. Nous avons découvert que lorsque nous cessons de lutter contre le désir du client de coder, nous débloquons un gain d'efficacité massif.
+Ce modèle hybride avec Client B n'était pas une simple expérience ponctuelle ; c'était un aperçu de l'avenir de notre industrie. Nous avons découvert que lorsque nous cessons de lutter contre le désir du client de coder, nous débloquons un gain d'efficacité massif.
 
 - **Ils se sentent autonomes :** Ils peuvent modifier la couleur d'un bouton ou ajouter un champ texte en 10 minutes sans nous payer une heure de travail.
 - **Nous restons concentrés :** Libérés des modifications UI triviales, les développeurs se concentrent uniquement sur l'architecture de haut niveau et la logique complexe (le travail qui nécessite réellement une expertise humaine).
@@ -156,7 +156,7 @@ Si des outils comme ChatGPT ou Claude permettent à un fondateur de construire u
 
 **Tout le monde ne veut pas coder.** La plupart de nos clients sont des experts métier, pas des ingénieurs. Client A a apprécié l'exercice, mais il voulait finalement nous confier les clés pour se concentrer sur son business.
 
-**Le "vibe coding" a un plafond.** C'est efficace pour une fonctionnalité, mais ça devient vite le chaos. Comme nous l'avons vu avec Team B, sans "guardrails", l'IA génère de la dette technique à la vitesse de la lumière.
+**Le "vibe coding" a un plafond.** C'est efficace pour une fonctionnalité, mais ça devient vite le chaos. Comme nous l'avons vu avec Client B, sans "guardrails", l'IA génère de la dette technique à la vitesse de la lumière.
 
 Nous ne vivons pas une disparition. Nous vivons une **accélération**. La "valeur" que nous apportons ne réside plus dans la connaissance de la syntaxe d'une boucle for en Java. Elle réside dans le fait de savoir où placer cette boucle pour qu'elle ne fasse pas crasher le serveur pendant le Black Friday.
 
@@ -175,3 +175,14 @@ Ce que nous savons, en revanche, est simple :
 Alors, que vous ayez une idée, un prototype en 2 heures, ou une équipe prête à coder avec nous : venez, construisons la suite ensemble. Plus vite.
 
 Nous transformerons cette énergie en produit robuste, scalable et réel.
+
+## Pour aller plus loin
+
+Envie d'approfondir le sujet de l'IA côté technique ? Jetez un œil à notre article :
+
+- [Découvrir le MCP : une nouvelle approche pour vos agents IA](/fr/blog/articles/decouvrir-le-mcp-une-nouvelle-approche-pour-vos-agents-ia)
+
+Plutôt curieux de nos collaborations et de nos retours d'expérience client ? Voici deux études de cas à découvrir :
+
+- [Étude de cas UX : Cuisinez pour bébé](/fr/blog/articles/etude-de-cas-ux-cuisinez-pour-bebe)
+- [Lea English : étude de cas](/fr/blog/articles/lea-english-etude-de-cas)
