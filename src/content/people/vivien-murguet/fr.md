@@ -10,8 +10,6 @@ hidden: false
 order: 1000
 services:
   - web-development
-  - writer-assistant
-  - seo-helper
 ---
 
 Passionné d’informatique depuis l’adolescence, Vivien a commencé à développer sa créativité sur RPG Maker XP avant d’explorer de nombreuses évolutions technologiques. Ingénieur de recherche et biologiste de formation, il s’est reconverti dans le développement pour transformer une passion de longue date en métier. Curieux et polyvalent, il aime expérimenter différents langages et outils sur ses projets personnels. L'IA fait aussi partie de ses intérêts personnels et professionnels.
