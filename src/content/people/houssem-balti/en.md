@@ -1,7 +1,7 @@
 ---
 name: 'Houssem Balti'
 picture: './houssem.png'
-job: 'Junior Full-Stack Developer'
+job: 'Full-Stack Developer'
 socials:
   - type: 'linkedin'
     href: 'https://www.linkedin.com/in/houssem-balti/'

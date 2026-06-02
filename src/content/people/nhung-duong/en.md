@@ -1,7 +1,7 @@
 ---
 name: 'Nhung Duong'
 picture: './nhung.png'
-job: 'Project Manager & Business Developer'
+job: 'Head Of Operations'
 socials:
   - type: 'x'
     href: 'https://twitter.com/hnnhung_duong'

@@ -1,7 +1,7 @@
 ---
 name: 'Mariem Mkassmi'
 picture: './mariem.png'
-job: 'Junior Full-Stack Developer'
+job: 'Full-Stack Developer'
 socials:
   - type: 'linkedin'
     href: 'https://www.linkedin.com/in/mkassmi-meriem-6b1326169/'
