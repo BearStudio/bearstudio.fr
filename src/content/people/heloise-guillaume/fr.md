@@ -1,7 +1,7 @@
 ---
 name: 'Héloïse Guillaume'
 picture: './heloise.png'
-job: 'Junior Developer'
+job: 'Full-Stack Developer'
 socials:
   - type: 'linkedin'
     href: 'https://www.linkedin.com/in/h%C3%A9lo%C3%AFse-guillaume-a04382233/'
