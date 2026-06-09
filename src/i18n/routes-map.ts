@@ -29,6 +29,7 @@ export const ROUTE_MAPPINGS = {
   '/fr/blog/:page': { en: '/en/blog/:page' },
   '/fr/blog/articles': { en: '/en/blog/posts' },
   '/fr/mentions-legales': { en: '/en/legal-notice' },
+  '/fr/branding': { en: '/en/brand-assets' },
   '/fr/contact/processus-candidature-bearstudio': {
     en: '/en/contact/application-process-bearstudio',
   },

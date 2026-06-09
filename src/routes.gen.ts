@@ -20,6 +20,7 @@ const ROUTES_CONFIG = {
       },
       "rss.xml": {}
     },
+    "brand-assets": {},
     "contact": {
       "application-process-bearstudio": {}
     },
@@ -50,6 +51,7 @@ const ROUTES_CONFIG = {
       },
       "rss.xml": {}
     },
+    "branding": {},
     "contact": {
       "processus-candidature-bearstudio": {}
     },

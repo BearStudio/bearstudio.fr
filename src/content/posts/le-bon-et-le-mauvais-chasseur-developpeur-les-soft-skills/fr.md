@@ -7,7 +7,9 @@ tags:
   - 'developpement'
   - 'developpement-web'
   - 'developpeur'
-heroImage: 'images/format-blog-header.png'
+thumbnail:
+  image: 'images/thumbnail.jpeg'
+  alt: 'Comparaison entre du mauvais code avec des noms de variables génériques et du bon code avec des noms explicites'
 metaDescription: 'Bon ou mauvais développeur ? Découvrez comment les soft skills font toute la différence, au-delà du simple fait de savoir coder.'
 authors: ['hugo-perard']
 ---

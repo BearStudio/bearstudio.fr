@@ -3,7 +3,9 @@ title: 'Difference entre Class et Record en Java'
 date: 2025-01-20
 categories:
   - 'developpement'
-heroImage: 'images/header-class-record.png'
+thumbnail:
+  image: 'images/thumbnail.jpeg'
+  alt: 'Illustration comparant une Class et un Record en Java avec une icône VS entre les deux'
 metaDescription: 'Choisissez entre la flexibilité des Class et la simplicité des Record en Java pour optimiser votre code !'
 authors: ['zouhair-mkassmi']
 ---

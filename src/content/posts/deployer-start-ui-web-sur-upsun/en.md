@@ -9,7 +9,7 @@ tags:
   - 'deploiement'
   - 'PaaS'
   - 'Start UI'
-heroImage: 'images/blog-header.png'
+heroImage: 'images/thumbnail.jpeg'
 authors: ['heloise-guillaume']
 metaDescription: >
   Test Upsun to deploy a project without any experience in DevOps, using a Start UI instance as an example.

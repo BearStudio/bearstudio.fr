@@ -3,7 +3,9 @@ title: 'La checklist SEO technique pour lancer un site web'
 date: 2022-06-27
 categories:
   - 'developpement'
-heroImage: 'images/checklist-seo-technique-illustration.png'
+thumbnail:
+  image: 'images/thumbnail.jpeg'
+  alt: "Illustration d'une checklist avec des coches, un engrenage et une flèche montante symbolisant la performance SEO"
 metaDescription: 'Apprenez à créer un site web qui se positionne sur les moteurs de recherche grâce à une bonne base SEO technique !'
 authors: ['yohann-josselin']
 ---

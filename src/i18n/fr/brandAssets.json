@@ -1,0 +1,50 @@
+{
+  "root": {
+    "popover": {
+      "logoAssets": "Branding"
+    },
+    "modal": {
+      "title": "BearStudio Branding",
+      "description": "Téléchargez le logo et les éléments de branding en SVG, PNG et JPG.",
+      "copyright": "© {{year}} BearStudio"
+    },
+    "hero": {
+      "title": "BearStudio Branding",
+      "description": "Téléchargez le logo et les éléments de branding en SVG, PNG et JPG."
+    },
+    "sections": {
+      "logoWithoutBg": {
+        "title": "Logo sans fond",
+        "description": "Le logotype complet sur fond transparent.",
+        "usage": "Écrans, présentations, interfaces claires ou sombres."
+      },
+      "logoWithBg": {
+        "title": "Logo avec fond",
+        "description": "Variantes du logo avec fond uni.",
+        "usage": "Impression, signalétique, réseaux sociaux, documents sur fond coloré ou blanc."
+      },
+      "iconWithoutBg": {
+        "title": "Icône sans fond",
+        "description": "Le symbole au format carré, fond transparent.",
+        "usage": "Favicons, icônes d'applications, identité compacte."
+      },
+      "iconWithBg": {
+        "title": "Icône avec fond",
+        "description": "Le symbole avec fond uni.",
+        "usage": "Avatars sociaux, badges, impression."
+      }
+    },
+    "labels": {
+      "black": "Noir",
+      "white": "Blanc",
+      "blue": "Bleu",
+      "yellow": "Jaune"
+    },
+    "alts": {
+      "logo": "Logo BearStudio {{color}}, fond transparent, téléchargement SVG et PNG",
+      "logoWithBg": "Logo BearStudio {{color}} avec fond, téléchargement JPG",
+      "icon": "Icône BearStudio {{color}}, fond transparent, téléchargement SVG et PNG",
+      "iconWithBg": "Icône BearStudio {{color}} avec fond, téléchargement JPG"
+    }
+  }
+}

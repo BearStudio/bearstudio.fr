@@ -7,7 +7,9 @@ tags:
   - 'retour-dexperience'
   - 'team-building'
   - 'temoignage'
-heroImage: 'images/Format-Blog-Header.png'
+thumbnail:
+  image: 'images/thumbnail.jpeg'
+  alt: 'Trois mascottes ours BearStudio avec des accessoires Disney devant le château de Disneyland Paris'
 metaDescription: 'Les coulisses d’un teambuilding à Disneyland Paris : découvrez comment le BearStudio a organisé un week-end magique et fédérateur.'
 excerpt: 'Le dernier week end d’août 2025, le BearStudio a offert à tous ses salariés et leurs proches, un week end teambuilding à Disneyland Paris. Organiser un team building à Disney, c’est comme préparer un spectacle. Il faut un scénario, des acteurs motivés, [&hellip;]'
 authors:

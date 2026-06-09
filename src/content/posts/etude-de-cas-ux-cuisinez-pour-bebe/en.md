@@ -9,7 +9,9 @@ tags:
   - 'etude-de-cas'
   - 'experience-utilisateur'
   - 'ux'
-heroImage: 'images/og-image.jpg'
+thumbnail:
+  image: 'images/thumbnail.jpeg'
+  alt: 'Preview of the Cuisinez pour Bébé mobile app with recipe screens on a green background'
 authors: ['daryl-avila-bonnet']
 metaDescription: >
   How Cuisinez pour Bébé went from a blog to an everyday app: UX challenges, mobile design, and supporting parents.

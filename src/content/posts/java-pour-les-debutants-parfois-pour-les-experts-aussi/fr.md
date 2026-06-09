@@ -3,7 +3,9 @@ title: 'Java pour les débutants : parfois pour les experts aussi !'
 date: 2025-05-28
 categories:
   - 'developpement'
-heroImage: 'images/java-blogheader.png'
+thumbnail:
+  image: 'images/thumbnail.jpeg'
+  alt: "Illustration d'un ours blanc avec des engrenages et le logo Java"
 metaDescription: 'Évitez les erreurs Java fréquentes : NullPointerException, confusion ==/equals(), oubli de break, pièges courants.'
 authors: ['mariem-mkassmi']
 ---

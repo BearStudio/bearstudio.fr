@@ -66,6 +66,12 @@ export default defineConfig({
           disallow: ['/styleguide'],
         },
       ],
+      transform(content) {
+        return content.replace(
+          /^User-agent: \*$/m,
+          'User-agent: *\nContent-Signal: ai-train=no, search=yes, ai-input=no'
+        );
+      },
     }),
     bearstudioTypedRoutes(),
   ],

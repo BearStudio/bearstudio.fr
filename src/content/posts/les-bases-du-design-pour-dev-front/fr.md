@@ -8,7 +8,9 @@ tags:
   - 'developpeur'
   - 'digital'
   - 'ux'
-heroImage: 'images/les-bases-du-design-pour-les-dev-front-baniere.png'
+thumbnail:
+  image: 'images/blog-header.png'
+  alt: 'Illustration montrant la transition entre un wireframe et une interface web finalisée'
 metaDescription: 'Les bases du design pour dev front : que faut-il savoir ? Découvrez les principes UX/UI, hiérarchie visuelle, affordance et feedback.'
 authors: ['charlelise-fouasse']
 ---

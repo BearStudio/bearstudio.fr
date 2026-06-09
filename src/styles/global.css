@@ -194,6 +194,15 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/*
+ * Radix Dialog/Vaul Drawer change body scrollbar when open. This keeps the
+ * scrollbar visible to avoid layout shift
+ */
+html body[data-scroll-locked] {
+  overflow-y: scroll !important;
+  margin-right: 0 !important;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

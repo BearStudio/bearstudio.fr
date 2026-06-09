@@ -1,0 +1,50 @@
+{
+  "root": {
+    "popover": {
+      "logoAssets": "Brand Assets"
+    },
+    "modal": {
+      "title": "BearStudio Brand Assets",
+      "description": "Download the official logo and brand assets in SVG, PNG, and JPG.",
+      "copyright": "© {{year}} BearStudio"
+    },
+    "hero": {
+      "title": "BearStudio Brand Assets",
+      "description": "Download the official logo and brand assets in SVG, PNG, and JPG."
+    },
+    "sections": {
+      "logoWithoutBg": {
+        "title": "Logo without background",
+        "description": "The full wordmark with transparent background.",
+        "usage": "Digital screens, presentations, light or dark interfaces."
+      },
+      "logoWithBg": {
+        "title": "Logo with background",
+        "description": "Logo variants with solid background.",
+        "usage": "Print, signage, social media, documents on colored or white backgrounds."
+      },
+      "iconWithoutBg": {
+        "title": "Icon without background",
+        "description": "The bear symbol in square format, transparent background.",
+        "usage": "Favicons, app icons, compact branding."
+      },
+      "iconWithBg": {
+        "title": "Icon with background",
+        "description": "The bear symbol with solid background.",
+        "usage": "Social avatars, badges, print."
+      }
+    },
+    "labels": {
+      "black": "Black",
+      "white": "White",
+      "blue": "Blue",
+      "yellow": "Yellow"
+    },
+    "alts": {
+      "logo": "BearStudio logo in {{color}}, transparent background, SVG and PNG download",
+      "logoWithBg": "BearStudio logo in {{color}} with background, JPG download",
+      "icon": "BearStudio icon in {{color}}, transparent background, SVG and PNG download",
+      "iconWithBg": "BearStudio icon in {{color}} with background, JPG download"
+    }
+  }
+}

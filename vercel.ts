@@ -28,6 +28,11 @@ export const config: VercelConfig = {
         key: 'Referrer-Policy',
         value: 'strict-origin-when-cross-origin',
       },
+      {
+        key: 'Link',
+        value:
+          '</llms.txt>; rel="service-doc"; type="text/plain", </llms.txt>; rel="describedby"; type="text/plain", </sitemap-index.xml>; rel="sitemap"; type="application/xml"',
+      },
     ]),
   ],
 };
