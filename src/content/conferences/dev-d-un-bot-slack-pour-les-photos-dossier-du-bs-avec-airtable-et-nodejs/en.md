@@ -1,5 +1,5 @@
 ---
-title: 'Developpping a #Slack bot to share pictures with #Airtable and #Nodejs'
+title: 'Developing a #Slack bot to share pictures with #Airtable and #Nodejs'
 
 instances:
   - name: 'Twitch'
