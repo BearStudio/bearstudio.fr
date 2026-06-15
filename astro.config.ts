@@ -28,6 +28,10 @@ export default defineConfig({
     routing: 'manual',
   },
 
+  image: {
+    remotePatterns: [{ protocol: 'https', hostname: 'pbs.twimg.com' }],
+  },
+
   env: {
     schema: {
       ENV_NAME: envField.string({
