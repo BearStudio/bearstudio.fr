@@ -11,20 +11,20 @@
   {
     "id": "2",
     "title": {
-      "fr": "Rejoignez-nous à Fork it! Rouen 2026",
-      "en": "Join Us at Fork it! Rouen 2026"
+      "fr": "Rejoignez-nous à VivaTech 2026 (17-20 juin)",
+      "en": "Join Us at VivaTech 2026 (June 17-20)"
     },
-    "src": "./polaroid-forkit-rouen-2026.jpg",
-    "href": "https://www.forkit.community/events/2026-france-rouen?utm_source=bearstudio.fr"
+    "src": "./polaroid-vivatech-2026.png",
+    "href": "https://vivatechnology.com?utm_source=bearstudio.fr"
   },
   {
     "id": "3",
     "title": {
-      "fr": "On sera à React Paris 2026",
-      "en": "Join Us at React Paris 2026"
+      "fr": "On sera à API Platform Conf 2026 (17-18 sept.)",
+      "en": "Join Us at API Platform Con 2026 (Sept. 17-18th)"
     },
-    "src": "./polaroid-react-paris-2026.jpg",
-    "href": "https://react.paris?utm_source=bearstudio.fr"
+    "src": "./polaroid-api-platform-con-2026.jpg",
+    "href": "https://api-platform.com/con/2026/?utm_source=bearstudio.fr"
   },
   {
     "id": "4",
