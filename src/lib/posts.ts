@@ -3,6 +3,7 @@ import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 import { filter, isNonNullish } from 'remeda';
 
 import { personWithComputed, type PersonWithComputed } from '@/lib/people';
+import type { SkillWithComputed } from '@/lib/skills';
 import type { Locale } from '@/i18n/utils';
 
 const hasSpecificAuthor = (params: {
@@ -15,6 +16,15 @@ const hasSpecificAuthor = (params: {
 
   if (selectedPost) return selectedPost;
   return;
+};
+
+const hasSpecificSkill = (params: {
+  post: CollectionEntry<'posts'>;
+  skill: SkillWithComputed;
+}) => {
+  return (params.post.data?.skills ?? []).some(
+    (skill) => skill.id === params.skill.data._computed.slug
+  );
 };
 
 const sortByLatest = (
@@ -76,6 +86,17 @@ const postWithComputed = async (item: CollectionEntry<'posts'>) => {
     },
   };
 };
+
+export async function getPostsCollectionLinkedToSkill(params: {
+  limit?: number | undefined;
+  locale: Locale;
+  skill: SkillWithComputed;
+}) {
+  const posts = (await getPostsCollection({ locale: params.locale })).filter(
+    (post) => hasSpecificSkill({ post, skill: params.skill })
+  );
+  return posts.slice(0, params.limit);
+}
 
 export async function getPostsCollectionLinkedToPerson(params: {
   limit?: number | undefined;

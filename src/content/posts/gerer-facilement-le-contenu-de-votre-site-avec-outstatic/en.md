@@ -12,6 +12,8 @@ thumbnail:
   alt: 'Illustration of a laptop displaying the Outstatic logo with a bear mascot'
 metaDescription: 'Discover a new way to manage your website content, intuitive and database-free, with the Outstatic CMS.'
 authors: ['jeanne-grenet']
+skills:
+  - 'react'
 ---
 
 A while back, I worked on a landing page with a blog section. Two major constraints came up:

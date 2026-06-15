@@ -14,6 +14,11 @@ thumbnail:
 authors: ['daryl-avila-bonnet']
 metaDescription: >
   Comment Cuisinez pour Bébé est passé d’un blog à une application du quotidien : enjeux UX, design mobile et accompagnement des parents.
+skills:
+  - 'ux'
+  - 'wireframes'
+  - 'design-system'
+  - 'prototype'
 ---
 
 ## À propos de Cuisinez pour bébé

@@ -11,6 +11,10 @@ tags:
 heroImage: 'images/tailwindnext.js.png'
 metaDescription: 'Comment nos alternants ont créés un site web, du design au développement, en autonomie grâce à Tailwind et NextJS'
 authors: ['fabien-essid', 'delphin-batantou', 'yohann-josselin']
+skills:
+  - 'tailwind'
+  - 'react'
+  - 'typescript'
 ---
 
 _On a demandé à Maxime et Delphin, respectivement alternants à l’époque en UX design et en Front-end au BearStudio, de se faire la main en totale autonomie sur le site d’une amie du BS (RaCoon & Co)… Évidemment tout ne s’est pas passé comme prévu et ils en ont chi…sué !_

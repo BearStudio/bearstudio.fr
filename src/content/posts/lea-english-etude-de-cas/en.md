@@ -14,6 +14,11 @@ thumbnail:
   alt: 'Mockups of the Léa English mobile app showing lesson screens on smartphones'
 metaDescription: 'Discover how we co-designed LEA English, a mobile app for learning spoken English in an intuitive and effective way.'
 authors: ['alexandra-pituru']
+skills:
+  - 'ux'
+  - 'wireframes'
+  - 'design-system'
+  - 'prototype'
 ---
 
 ## Project Overview
