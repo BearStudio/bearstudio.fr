@@ -1,0 +1,11 @@
+---
+import Page, {
+  generateStaticPaths,
+} from '@/pages/fr/events/annee/[year]/index.astro';
+
+export async function getStaticPaths() {
+  return generateStaticPaths({ locale: 'en' });
+}
+---
+
+<Page {...Astro.props} />
