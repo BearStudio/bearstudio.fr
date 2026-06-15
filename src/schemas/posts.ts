@@ -16,4 +16,5 @@ export const zPost = ({ image }: SchemaContext) =>
     date: z.date(),
     tags: z.array(z.string()).optional(),
     categories: z.array(z.string()).optional(),
+    outdated: z.boolean().optional(),
   });
