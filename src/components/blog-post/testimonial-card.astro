@@ -1,0 +1,73 @@
+---
+import { PiStarFill } from 'react-icons/pi';
+
+import { cn } from '@/lib/tailwind/utils';
+
+interface Props {
+  person: {
+    name: string;
+    avatarUrl?: string;
+  };
+  date: string;
+  rating?: number;
+  content: string;
+  class?: string;
+}
+
+const { person, date, rating = 5, content, class: className } = Astro.props;
+
+const initials = person.name
+  .split(' ')
+  .map((n) => n[0])
+  .join('')
+  .slice(0, 2)
+  .toUpperCase();
+
+const filledStars = Math.min(5, Math.max(0, Math.round(rating)));
+const emptyStars = 5 - filledStars;
+---
+
+<div
+  data-slot="testimonial-card"
+  class={cn(
+    'not-prose inline-flex min-w-72 flex-col gap-3 self-stretch rounded-md border border-brand-600 bg-brand-700 px-8 py-6',
+    className
+  )}
+>
+  <div class="flex items-center gap-3">
+    {
+      person.avatarUrl ? (
+        <img
+          src={person.avatarUrl}
+          alt={person.name}
+          class="size-9 shrink-0 rounded-full object-cover"
+        />
+      ) : (
+        <div class="bg-brand-500 text-brand-100 flex size-9 shrink-0 items-center justify-center rounded-full text-xs font-semibold">
+          {initials}
+        </div>
+      )
+    }
+    <div class="flex flex-col gap-0.5">
+      <p class="text-brand-100 text-sm leading-none font-semibold">
+        {person.name}
+      </p>
+      <p class="text-brand-400 text-xs font-light">{date}</p>
+    </div>
+  </div>
+
+  <div class="text-accent flex gap-0.5 [&>svg]:size-4">
+    {
+      Array(filledStars)
+        .fill(null)
+        .map(() => <PiStarFill />)
+    }
+    {
+      Array(emptyStars)
+        .fill(null)
+        .map(() => <PiStarFill className="text-brand-600" />)
+    }
+  </div>
+
+  <p class="text-brand-200 text-xs leading-relaxed font-light">{content}</p>
+</div>

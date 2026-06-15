@@ -1,0 +1,23 @@
+---
+import { LuCalendar, LuImage, LuType } from 'react-icons/lu';
+
+import FeatureCard from './feature-card.astro';
+---
+
+<div class="grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-2">
+  <FeatureCard
+    icon={LuCalendar}
+    title="Âge présent mais secondaire"
+    content="Visible, sans voler l'attention"
+  />
+  <FeatureCard
+    icon={LuType}
+    title="Titre optimisé"
+    content="Typographie, espace, nombre de lignes soigneusement pensés"
+  />
+  <FeatureCard
+    icon={LuImage}
+    title="Image dominante"
+    content="L'œil décide d'abord par le visuel, et le cerveau suit."
+  />
+</div>
