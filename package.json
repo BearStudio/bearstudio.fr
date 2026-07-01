@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "astro dev --host",
     "build": "astro build",
+    "build:node": "astro build --node",
     "preview": "astro preview",
     "astro": "astro",
     "pretty": "prettier --write .",

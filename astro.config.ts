@@ -8,6 +8,7 @@ import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
 
+import { astroAssetsGeneration } from '@bearstudio/astro-assets-generation';
 import bearstudioTypedRoutes from '@bearstudio/astro-typed-routes';
 import tailwindcss from '@tailwindcss/vite';
 
@@ -91,24 +92,10 @@ export default defineConfig({
       },
     }),
     bearstudioTypedRoutes(),
+    astroAssetsGeneration(),
   ],
 
   vite: {
-    optimizeDeps: {
-      exclude: [
-        '@takumi-rs/image-response',
-        '@takumi-rs/core',
-        '@takumi-rs/helpers',
-      ],
-    },
-    ssr: {
-      noExternal: [
-        '@takumi-rs/image-response',
-        '@takumi-rs/core',
-        '@takumi-rs/helpers',
-        '@bearstudio/astro-assets-generation',
-      ],
-    },
     plugins: [tailwindcss()],
   },
 
