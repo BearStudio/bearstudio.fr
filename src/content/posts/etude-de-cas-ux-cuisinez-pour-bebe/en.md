@@ -176,7 +176,7 @@ In other words, the recipes section had to function as:
 
 ###### _The catalog is designed to be scanned in a few seconds: image, title, age._
 
-![](images/image-3-1024x971.png)
+![Planning of the meals for the week, and catalog of the recipes with two active filters](images/image-3-1024x971.png)
 
 #### Constraints Encountered
 
@@ -216,7 +216,7 @@ This requires a strict hierarchy:
 
 - **Age present but secondary**: visible, without stealing attention
 
-![](images/image-515x1024.png)
+![Focus on the two first recipes proposed in the catalog to notice the recipe card's organization](images/image-515x1024.png)
 
 #### Key Decision #2: Filters as the Main Lever (Not an "Extra")
 
@@ -234,7 +234,7 @@ The choices that make the filters effective:
 
 - **Immediate feedback**: seeing the number of recipes found prevents the feeling of "filtering into the void"
 
-![](images/image-2-1024x964.png)
+![Focus on the filter part of the catalog, showing most of the possible filters and the result](images/image-2-1024x964.png)
 
 ## A Collaboration Built Over Time
 

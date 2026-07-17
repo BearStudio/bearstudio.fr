@@ -175,7 +175,7 @@ Autrement dit, la section recettes devait fonctionner comme :
 
 ###### _Le catalogue est conçu pour être scanné en quelques secondes : image, titre, âge._
 
-![](images/image-3-1024x971.png)
+![Planification des repas de la semaine, et catalogie des recettes avec deux filtres actifs](images/image-3-1024x971.png)
 
 #### Contraintes rencontrées
 
@@ -215,7 +215,7 @@ Cela implique une hiérarchie stricte :
 
 - **Âge présent mais secondaire** : visible, sans voler l’attention
 
-![](images/image-515x1024.png)
+![Concentration sur les deux premières recettes proposée par le catague, pour constater la validité de la carte de recette](images/image-515x1024.png)
 
 #### Décision clé n°2 : les filtres comme levier principal (et non un “plus”)
 
@@ -233,7 +233,7 @@ Les choix qui rendent les filtres efficaces :
 
 - **Feedback immédiat** : voir le nombre de recettes trouvées évite l’impression “je filtre dans le vide”
 
-![](images/image-2-1024x964.png)
+![Concentrations sur l'affichage des filtres du catalogue, avec apparition de la majorité des filtres possibles, et du résultat](images/image-2-1024x964.png)
 
 ## Une collaboration qui se construit dans la durée
 

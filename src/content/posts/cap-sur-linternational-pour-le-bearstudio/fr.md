@@ -30,7 +30,7 @@ On sentait une certaine concurrence avec le trust indien qui propose les mêmes 
 
 <figure>
 
-![](images/stand.jpeg)
+![Rudy Baer présentant le stand du Bearstudio sur le salon Gitex Future Stars](images/stand.jpeg)
 
 <figcaption>
 

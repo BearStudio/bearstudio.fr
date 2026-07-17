@@ -81,7 +81,7 @@ Outstatic uses GitHub for authentication and article management. Here's how to c
 
 4. Once the app is created, note your client ID and client secret.
 
-![](images/image-3-1021x1024-1.png)
+![Creation menu for an OAuth app on GitHub](images/image-3-1021x1024-1.png)
 
 ### Step 3: Integrate Outstatic into Your Project:
 
@@ -112,7 +112,7 @@ OST_REPO_BRANCH=YOUR_GITHUB_REPOSITORY_BRANCH
 
 From the interface, you can create a collection: for example, for a blog you would create an "Articles" collection that will contain all your articles. By default, each collection item has a title, description, image, author, etc., but you can also create custom fields. Once the article is created, it is saved in your GitHub repository as a Markdown file in the defined folder (content by default).
 
-![](images/image-1024x731-1.png)
+![Menu for the creation of a new collection](images/image-1024x731-1.png)
 
 ### Viewing and Retrieving Articles:
 
@@ -151,9 +151,9 @@ In my case, I chose to use Tailwind CSS and specifically [Tailwind Typography](h
 
 When you write an article on the admin interface, the style is not the same as on the page where you'll display the article for your users. Here for example is the Outstatic interface in the first image — this is where you write the article, fill in its title, description, etc. In the second image, I've added styling and used the "title", "author", and "cover image" properties to create the article header.
 
-![](images/image-1-1024x473-1.png)
+![Article example using Outstatic from the admin side](images/image-1-1024x473-1.png)
 
-![](images/image-2-1024x584-1.png)
+![Article example using some styling from the user side](images/image-2-1024x584-1.png)
 
 ## My Opinion on Outstatic
 

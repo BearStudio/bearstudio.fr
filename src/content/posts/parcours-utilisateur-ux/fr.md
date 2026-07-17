@@ -92,9 +92,9 @@ Dans ce cas assez simple, nous avons plusieurs actions possibles depuis la page 
 
 Dans des cas plus complexes, il est possible d’indiquer des détails sur les userflows. Par exemple, dans le cas d’une inscription, nous pouvons indiquer quelles données sont demandées pour créer son compte. 
 
-![](images/details-userflow.png)
+![Détail du userflow dans le cas où le user n'est pas connecté, avec indication des informations nécessaires](images/details-userflow.png)
 
-Un userflow peut donc être dans les cas les plus simple un simple schéma des différentes actions que peut effectuer un utilisateur sur un produit. Mais ils peuvent être aussi une carte complète et détaillée de l’ensemble des différents parcours utilisateur et leurs informations. 
+Un userflow peut donc être dans les cas les plus simple un simple schéma des différentes actions que peut effectuer un utilisateur sur un produit. Mais ils peuvent être aussi une carte complète et détaillée de l’ensemble des différents parcours utilisateur et leurs informations.
 
 ## Et ensuite ? 
 

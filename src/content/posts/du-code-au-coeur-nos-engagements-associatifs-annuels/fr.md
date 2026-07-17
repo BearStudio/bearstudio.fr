@@ -38,9 +38,9 @@ C’est pourquoi, durant 2 ans, le BearStudio a versé le montant équivalent à
 
 [Atelier Sainte Claire](https://rouen.fr/associations/ateliers_sainte_claire) _est une association qui aide des adultes en situation de handicap psychique._ Ce don a permis l’installation de deux ruches dans les Ateliers Sainte Claire à Rouen. Ce qui a permis de récolter environ 20 kg de miel sur l’année.
 
-![](images/image-9-1024x682.png)
+![Récolte de miel à l'Atelier Sainte Claire de Rouen, financée par le don BearStudio ayant permis l'installation de deux ruches](images/image-9-1024x682.png)
 
-![](images/image-10-771x1024.png)
+![Une des ruches installées à l'Atelier Sainte Claire à Rouen grâce au don de BearStudio, avec deux pots de miel posés dessus](images/image-10-771x1024.png)
 
 ##### France Parrainage
 
@@ -55,27 +55,27 @@ Au Pérou dans la ville d’Abancay, [France Parrainage](https://www.france-parr
 [Association Delfina](https://www.associationdelfina.fr/) _a pour but de venir en aide aux populations défavorisées en Afrique._  
 Madagascar : Amélioration des locaux d’éducation du collège Marovantaza et également d’installer 6 panneaux solaires. Approfondissement du puits de Pont Banty pour atteindre le niveau de l’eau qui a baissé. Fourniture de livres de lecture, de matériels scolaires et d’équipements pour l’établissement scolaire.
 
-![](images/image-8-1024x723.png)
+![Carte de remerciement du directeur du collège Marovantaza à Madagascar, adressée aux donateurs de l'Association Delfina](images/image-8-1024x723.png)
 
-![](images/image-6-723x1024.png)
+![Affiche de l'Association Delfina composée de mots clés en forme de continent africain : aide, espoir, humanité et d'autres](images/image-6-723x1024.png)
 
 ##### Maromme Canteleu Volley
 
 [Maromme Canteleu Volley](https://mcv76.fr/) est le club de Volley-ball dans lequel [Soraya](/fr/equipe/soraya-benchakroune) a commencé sa “carrière” de Volleyeuse. Bénévole pendant de nombreuses années et évoluant dans ce club depuis plus de 3 ans. Elle a souhaité que le don du BearStudio serve à acheter des ballons et des accessoires pour l’organisation des séances d'entraînement. Ainsi permettre aux jeunes joueurs de pouvoir être le mieux encadrés.
 
-![](images/image-3-1024x768.png)
+![Équipe féminine de Maromme Canteleu Volley avec le stand BearStudio en arrière-plan, soutenue par un don en équipements](images/image-3-1024x768.png)
 
 ##### Rouen Handball
 
 Compétiteur né, Quentin reprend le Handball en dernière division après quelques années d’arrêt. Il reprend les armes au sein du club [Rouen Handball](https://www.rouen-handball.fr/) qui évolue jusqu’en N1 Féminine et Masculine. Quentin, souhaitant représenter le BearStudio jusque dans les gymnases, a  demandé un don qui a permis à son équipe de se fournir en équipements.
 
-![](images/image-2-1024x768.png)
+![Photo de l'équipe de Rouen Handball devant les buts, équipée grâce au don de BearStudio, avec Quentin parmi les joueurs](images/image-2-1024x768.png)
 
 ##### Foot Tourvilles sur Arques
 
 [Foot Tourvilles sur Arques](https://tourville-sur-arques.footeo.com/) est le club d’un de nos deux [Hugo](/fr/equipe/hugo-perard) préféré. Il y a évolué depuis l’âge de 6 ans (soit presque 18 ans), où il a pu se former au poste de défenseur. BearStudio a pu soutenir son club notamment dans l’achat de matériel et d’ensembles de survêtements.
 
-![](images/image-768x1024.png)
+![Joueurs du Foot Tourvilles sur Arques en survêtements BearStudio, achetés grâce au don soutenu par Hugo, défenseur du club](images/image-768x1024.png)
 
 ## L’impact de ces contributions
 

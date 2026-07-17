@@ -8,4 +8,4 @@ instances:
     replay: https://www.youtube.com/watch?v=oP2W8tMKGQY
 ---
 
-Yoann commence par de la veille sur JavaScript et React puis développe une application des gestions de messages Twitch pour Codeurs en Seine, une association de développeurs co-fondée par le BearStudio qui organise des conférences.
+Yoann commence par de la veille sur JavaScript et React puis développe une application de gestion de messages Twitch pour Codeurs en Seine, une association de développeurs co-fondée par le BearStudio qui organise des conférences.

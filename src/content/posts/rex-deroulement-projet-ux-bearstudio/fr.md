@@ -20,7 +20,7 @@ Zoom sur une **mission UX design** qui nous a été confiée par **One Prepaid**
 
 En tant que **logiciel de gestion à distance des systèmes de cartes prépayées**, One Prepaid s’adresse à des enseignes proposant ce type de système de paiement (Darty, Fnac, Yves Rocher etc.). La structure fait donc face à des impératifs très précis en termes d’**expérience utilisateur**.
 
-![](images/illustration-oneprepaid-systeme-1.png)
+![Illustration isométrique du système One Prepaid](images/illustration-oneprepaid-systeme-1.png)
 
 L’interface de One Prepaid existe depuis plus de 12 ans… Il est donc nécessaire de lui donner un coup de neuf et de **remettre au centre des préoccupations le client et son expérience** de la plateforme. Vous l’aurez deviné, c’est à nous qu’ils ont fait appel !
 
@@ -77,7 +77,7 @@ Ces interviews sont essentielles pour la refonte d’une plateforme ou applicati
 Revenons à nos moutons (_enfin nos ours_) : dans la lignée de l’**inventaire numérique** effectué en amont, notre **équipe UX** s’est focalisée sur la **[création des nouveaux userflows](/fr/blog/articles/parcours-utilisateur-ux)**.  
 Cette pratique consiste à retracer le **parcours de l’utilisateur** de la façon la plus claire possible, en n’oubliant aucune étape.
 
-![](images/oneprepaid-cartecadeau-revendeur-1.png)
+![Illustration isométrique du parcours revendeur One Prepaid](images/oneprepaid-cartecadeau-revendeur-1.png)
 
 C’est une phase indispensable avant d’effectuer la **modélisation sous la forme de [wireframes](/fr/prestations/ux-design)**, où les problématiques de style n'entrent pas encore précisément en jeu.  
 Les wireframes sont des **maquettes statiques** des futures pages présentes sur la plateforme et reprennent le parcours des **userflows**.
@@ -102,7 +102,7 @@ Mais ce n’est pas la première fois que nos experts ont affaire à une applica
 En revanche, un des aspects de ce chantier appelle à une grande vigilance de la part de nos ours : il s’agit de l’enjeu lié à la **sécurité du service** et plus précisément à la **sécurisation des transactions**.  
 En effet, **One Prepaid** se doit de **garantir la sécurité des fonds** présents sur les cartes cadeaux des utilisateurs.
 
-![](images/oneprepaid-cartecadeau-easyprepaid-1.png)
+![Illustration isométrique de la plateforme EasyPrepaid](images/oneprepaid-cartecadeau-easyprepaid-1.png)
 
 Par exemple, nous ne pouvions pas envisager une fuite des numéros de carte des utilisateurs dans nos requêtes, il fallait donc penser à une méthode sécurisée.
 

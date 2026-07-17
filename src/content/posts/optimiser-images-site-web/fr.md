@@ -59,7 +59,7 @@ Avant de trouver une solution, on faisait seulement une capture d’écran, mais
 
 Mais maintenant, on utilise un nouvel outil : [Carbon](https://carbon.now.sh/)
 
-![](images/carbon-2.png)
+![Interface de l'outil Carbon affichant un snippet JavaScript avec les options d'export : iFrame, URL et clipboard](images/carbon-2.png)
 
 Avec cet éditeur, il est possible de **personnaliser la police, la couleur du texte et la couleur du fond**. D’autres paramètres sont disponibles pour changer l’apparence du terminal.
 
@@ -67,4 +67,4 @@ L’image est ensuite téléchargeable en 2 formats : SVG et PNG. Une fois l’i
 
 _PS : il est aussi possible, au lieu de télécharger l’image, de générer un lien ou une iFrame (une balise HTML intégrant du contenu venu d’une autre page)._
 
-![](images/carbon2-3.png)
+![Capture de l'outil Carbon avec un snippet JavaScript affiché dans un terminal personnalisé sur fond sombre](images/carbon2-3.png)
