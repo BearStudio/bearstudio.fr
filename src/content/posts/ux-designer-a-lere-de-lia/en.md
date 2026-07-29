@@ -1,7 +1,7 @@
 ---
 title: 'UX/UI Designers in the Age of AI Agents: Why Staying on the Sidelines Is No Longer an Option'
 slug: 'ux-designer-in-the-age-of-ai'
-date: 2026-07-20
+date: 2026-07-31
 categories:
   - 'rex'
   - 'actualites-web-numerique'

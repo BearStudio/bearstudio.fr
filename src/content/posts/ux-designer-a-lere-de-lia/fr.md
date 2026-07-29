@@ -1,6 +1,6 @@
 ---
 title: 'UX/UI designer à l’ère des agents IA : Pourquoi rester sur le banc n’est plus une option'
-date: 2026-07-20
+date: 2026-07-31
 categories:
   - 'rex'
   - 'actualites-web-numerique'
