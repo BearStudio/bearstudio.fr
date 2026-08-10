@@ -1,7 +1,10 @@
 [
   {
     "id": "1",
-    "title": { "fr": "La tanière", "en": "The Den" },
+    "title": {
+      "fr": "La tanière",
+      "en": "The Den"
+    },
     "src": "./polaroid-taniere.jpg",
     "href": {
       "fr": "/fr/equipe",
@@ -11,11 +14,11 @@
   {
     "id": "2",
     "title": {
-      "fr": "Rejoignez-nous à VivaTech 2026 (17-20 juin)",
-      "en": "Join Us at VivaTech 2026 (June 17-20)"
+      "fr": "peinture.app : alignez vos équipes produit à l'ère de l'IA",
+      "en": "peinture.app: align your product teams in the AI era"
     },
-    "src": "./polaroid-vivatech-2026.png",
-    "href": "https://vivatechnology.com?utm_source=bearstudio.fr"
+    "src": "./polaroid-peinture.jpg",
+    "href": "https://www.peinture.app?utm_source=bearstudio.fr"
   },
   {
     "id": "3",
