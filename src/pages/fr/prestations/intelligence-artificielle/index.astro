@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+
+import { PiArrowSquareOut } from 'react-icons/pi';
 import { match } from 'ts-pattern';
 
 import { getLink } from '@/lib/link';
@@ -11,16 +14,19 @@ import HeroContent from '@/components/hero/hero-content.astro';
 import Hero from '@/components/hero/hero.astro';
 import { PeopleCarousel } from '@/components/people/people-carousel';
 import Prose from '@/components/prose.astro';
+import SectionScratched from '@/components/sections/section-scratched.astro';
 import SEO from '@/components/seo/index.astro';
 import { getAlternates } from '@/components/seo/utils';
 import ServiceOtherServices from '@/components/services/service-other-services.astro';
 import SubService from '@/components/services/sub-service.astro';
 import Accordion from '@/components/ui/accordion.astro';
+import { buttonVariants } from '@/components/ui/button';
 import MainLayout from '@/layouts/main-layout.astro';
 
 import imgBg from './_bg.jpg';
 import imgDevIa from './_dev-ia.jpg';
 import imgIntegrationIa from './_integration-ia.jpg';
+import imgPeintureApp from './_peinture-app.jpg';
 import imgUxIa from './_ux-ia.jpg';
 
 const { t, locale } = getTranslationUtilities(Astro.currentLocale);
@@ -311,6 +317,72 @@ const breadcrumb = breadcrumbEntries(locale)((entry) => [
     </Prose>
     <PeopleCarousel client:load people={people} locale={locale} />
   </Container>
+
+  <SectionScratched image={imgBg} class="my-12">
+    <Container class="flex-col-reverse items-center gap-8 py-20 sm:flex-row">
+      <div class="flex flex-2 flex-col gap-4">
+        <h2 class="font-heading text-accent text-2xl font-bold text-balance">
+          Peinture.app
+        </h2>
+        <p class="max-w-[70ch] text-sm text-balance">
+          {
+            match(locale)
+              .with('fr', () => (
+                <>
+                  <strong>Peinture</strong> est notre side-project né de notre
+                  propre approche du{' '}
+                  <strong>développement assisté par IA</strong> : aligner les
+                  équipes produit à l'ère de l'IA en permettant de{' '}
+                  <strong>prototyper, spécifier et livrer</strong> directement à
+                  partir de votre design system et de votre codebase, sans
+                  perdre le contrôle sur les décisions produit ni sur vos
+                  données sensibles.
+                </>
+              ))
+              .with('en', () => (
+                <>
+                  <strong>Peinture</strong> is our side project, born from our
+                  own approach to <strong>AI-assisted development</strong>:
+                  aligning product teams in the AI era by letting you{' '}
+                  <strong>prototype, specify and deliver</strong> straight from
+                  your design system and codebase, without losing control over
+                  product decisions or sensitive data.
+                </>
+              ))
+              .exhaustive()
+          }
+        </p>
+        <a
+          href="https://www.peinture.app?utm_source=bearstudio.fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={buttonVariants()}
+        >
+          {
+            match(locale)
+              .with('fr', () => 'Découvrir peinture.app')
+              .with('en', () => 'Discover peinture.app')
+              .exhaustive()
+          }
+          <PiArrowSquareOut />
+        </a>
+      </div>
+      <a
+        class="flex flex-2"
+        href="https://www.peinture.app?utm_source=bearstudio.fr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={imgPeintureApp}
+          width={640}
+          height={360}
+          alt="peinture.app preview"
+          class="shadow-brand-700 rounded-md shadow-2xl"
+        />
+      </a>
+    </Container>
+  </SectionScratched>
 
   <Container>
     <Prose>
