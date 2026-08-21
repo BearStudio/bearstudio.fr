@@ -7,6 +7,10 @@ socials:
     href: 'https://twitter.com/DecampsRenan'
   - type: 'linkedin'
     href: 'https://www.linkedin.com/in/decampsrenan/'
+  - type: 'github'
+    href: 'https://github.com/DecampsRenan'
+  - type: 'website'
+    href: 'https://renan.dcmps.fr'
 status: 'current'
 hidden: false
 order: 20
