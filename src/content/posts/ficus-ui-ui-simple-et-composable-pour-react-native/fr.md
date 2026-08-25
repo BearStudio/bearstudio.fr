@@ -12,6 +12,10 @@ thumbnail:
   alt: 'Deux écrans mobiles avec des composants UI verts et une feuille, représentant la librairie Ficus UI'
 metaDescription: 'Ficus UI est une librairie UI React Native open source, inspirée de Chakra UI, avec thème, style props et dark mode natif.'
 authors: ['nicolas-torion']
+skills:
+  - 'ficus-ui'
+  - 'react-native'
+  - 'expo'
 ---
 
 **La conception d’une librairie UI React Native cohérente et maintenable** est un enjeu central dans le développement d’applications mobiles modernes. Depuis de nombreuses années, nous utilisons React Native pour ses capacités cross-platform, qui permettent de cibler à la fois Android et iOS tout en conservant les avantages de React et du mobile natif.  

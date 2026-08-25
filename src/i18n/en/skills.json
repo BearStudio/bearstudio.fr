@@ -1,0 +1,16 @@
+{
+  "root": {
+    "breadcrumb": "Skills",
+    "title": "Our skills",
+    "description": "Discover the technologies and skills we master at BearStudio. From web and mobile development to design, including modern tools and frameworks.",
+    "metadata": {
+      "title": "BearStudio skills, web development studio in Rouen",
+      "description": "Discover BearStudio's technologies and skills: React, React Native, TypeScript, Tailwind, UX/UI design and much more."
+    }
+  },
+  "detail": {
+    "blog": {
+      "title": "Articles about {{name}}"
+    }
+  }
+}

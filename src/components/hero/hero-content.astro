@@ -29,13 +29,15 @@ const locale = parseAstroLocale(Astro.currentLocale);
     )
   }
   <div class="flex w-full flex-col gap-2">
-    {
-      !!title && (
-        <h1 class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl">
-          {title}
-        </h1>
-      )
-    }
+    <div class="flex items-center gap-4">
+      {
+        !!title && (
+          <h1 class="font-heading text-accent max-w-[20ch] text-4xl leading-tight font-bold text-balance md:text-5xl">
+            {title}
+          </h1>
+        )
+      }
+    </div>
     {
       !!description && (
         <p class="max-w-[60ch] text-sm text-balance opacity-80">

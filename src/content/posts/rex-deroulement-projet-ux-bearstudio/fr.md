@@ -6,6 +6,12 @@ categories:
 heroImage: 'images/illustration-oneprepaid-systeme-1.png'
 metaDescription: "Zoom sur le déroulement d'un projet UX design qui nous a été confiée par One Prepaid, leader des solutions de plateformes transactionnelles."
 authors: ['nhung-duong', 'asceline-boullen', 'fabien-essid', 'yohann-josselin']
+skills:
+  - 'ux'
+  - 'wireframes'
+  - 'prototypage'
+  - 'figma'
+  - 'design-system'
 ---
 
 ## Introduction
