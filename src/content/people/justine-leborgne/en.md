@@ -2,8 +2,7 @@
 name: 'Justine Leborgne'
 picture: './justine.png'
 job: 'Junior UX/UI Designer'
-status: 'current'
-hidden: false
+status: 'former'
 order: 2000
 services:
   - ux-design

@@ -5,8 +5,7 @@ job: 'Junior Developer'
 socials:
   - type: 'linkedin'
     href: 'https://www.linkedin.com/in/vivien-m-287baa142/'
-status: 'current'
-hidden: false
+status: 'former'
 order: 1000
 services:
   - web-development

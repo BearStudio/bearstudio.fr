@@ -7,8 +7,7 @@ socials:
     href: 'https://www.linkedin.com/in/jeanne-grenet/'
   - type: 'website'
     href: 'https://www.jeanne-grenet.fr/'
-status: 'current'
-hidden: false
+status: 'former'
 order: 500
 services:
   - web-development
