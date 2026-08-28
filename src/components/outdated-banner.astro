@@ -1,0 +1,16 @@
+---
+import { getTranslationUtilities } from '@/lib/site/get-translation-utilities';
+
+const { t } = getTranslationUtilities(Astro.currentLocale);
+---
+
+<div
+  class="mb-8 rounded-md border-l-4 border-yellow-400 bg-yellow-50 px-6 py-4 text-yellow-800"
+>
+  <p class="text-base font-semibold">
+    {t('blog.article.outdated.title')}
+  </p>
+  <p class="mt-1 text-sm">
+    {t('blog.article.outdated.description')}
+  </p>
+</div>
