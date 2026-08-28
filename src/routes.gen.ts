@@ -24,6 +24,12 @@ const ROUTES_CONFIG = {
     "contact": {
       "application-process-bearstudio": {}
     },
+    "events": {
+      ":id": {},
+      "year": {
+        ":year": {}
+      }
+    },
     "legal-notice": {},
     "services": {
       "artificial-intelligence": {},
@@ -33,6 +39,7 @@ const ROUTES_CONFIG = {
       "ux-design": {},
       "web-development": {}
     },
+    "streams": {},
     "team": {
       ":id": {}
     }
@@ -58,6 +65,12 @@ const ROUTES_CONFIG = {
     "equipe": {
       ":id": {}
     },
+    "events": {
+      ":id": {},
+      "annee": {
+        ":year": {}
+      }
+    },
     "mentions-legales": {},
     "prestations": {
       "accompagnement-cto": {},
@@ -66,7 +79,8 @@ const ROUTES_CONFIG = {
       "developpement-web": {},
       "intelligence-artificielle": {},
       "ux-design": {}
-    }
+    },
+    "streams": {}
   },
   "llms-full.txt": {},
   "llms.txt": {},
