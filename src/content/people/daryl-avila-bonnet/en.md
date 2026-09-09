@@ -5,8 +5,7 @@ job: 'UX/UI Designer'
 socials:
   - type: 'linkedin'
     href: https://www.linkedin.com/in/darylavilabonnet/
-status: 'current'
-hidden: false
+status: 'former'
 order: 74
 services:
   - ux-design
