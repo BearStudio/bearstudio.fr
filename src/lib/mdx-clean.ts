@@ -21,7 +21,7 @@ export const mdxToPlainText = async (mdx: string) => {
   return { text, mdast, hast };
 };
 
-export const stripJsx = (ast: Node) => {
+const stripJsx = (ast: Node) => {
   visit(
     ast,
     [

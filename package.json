@@ -14,7 +14,9 @@
     "lint": "run-p lint:*",
     "lint:astro": "astro check",
     "lint:eslint": "eslint ./src --fix",
-    "lint:ts": "tsc --noEmit"
+    "lint:ts": "tsc --noEmit",
+    "knip": "knip",
+    "knip:production": "knip --production"
   },
   "dependencies": {
     "@astro-community/astro-embed-twitter": "0.5.11",
@@ -41,7 +43,6 @@
     "embla-carousel-react": "8.6.0",
     "embla-carousel-wheel-gestures": "8.1.0",
     "hast-util-to-text": "4.0.2",
-    "motion": "12.34.0",
     "photoswipe": "5.4.4",
     "radix-ui": "1.4.3",
     "react": "19.2.4",
@@ -71,9 +72,9 @@
     "eslint": "9.35.0",
     "eslint-plugin-astro": "1.3.1",
     "eslint-plugin-react-hooks": "5.2.0",
-    "eslint-plugin-sonarjs": "3.0.5",
     "eslint-plugin-unicorn": "61.0.2",
     "globals": "16.4.0",
+    "knip": "6.4.1",
     "lefthook": "1.12.4",
     "npm-run-all": "4.1.5",
     "prettier": "3.6.2",
