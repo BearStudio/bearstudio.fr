@@ -29,6 +29,12 @@
   "article": {
     "on": "",
     "by": "by",
-    "published": "Published on"
+    "published": "Published on",
+    "tweet": {
+      "viewPostBy": "View post by {{name}} on X",
+      "unavailable": "Tweet unavailable",
+      "viewOnX": "view on X",
+      "watchOnX": "Watch on X"
+    }
   }
 }
