@@ -3,15 +3,33 @@
 import robotsTxt from 'astro-robots-txt';
 import { defineConfig, envField } from 'astro/config';
 import mdx from '@astrojs/mdx';
+import node from '@astrojs/node';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
+import vercel from '@astrojs/vercel';
 
+import { astroAssetsGeneration } from '@bearstudio/astro-assets-generation';
 import bearstudioTypedRoutes from '@bearstudio/astro-typed-routes';
 import tailwindcss from '@tailwindcss/vite';
 
 // Relative import is required
 import { defaultLocale, locales } from './src/i18n';
 import { getSiteUrl } from './src/lib/site/get-site-url';
+
+const adapter =
+  process.argv[3] === '--node' ||
+  process.argv[4] === '--node' ||
+  import.meta.env.DEV
+    ? node({ mode: 'standalone' })
+    : vercel({
+        isr: {
+          // TODO: Revert — exclude actions from ISR due to @astrojs/vercel bug:
+          // ISR entrypoint reconstructs POST body without `duplex: 'half'`, causing a TypeError.
+          // Excluding actions from ISR lets them go directly to the serverless function.
+          // Remove this once the bug is fixed in Astro/Vercel adapter.
+          exclude: [/^\/_actions\/.*/],
+        },
+      });
 
 // https://astro.build/config
 export default defineConfig({
@@ -74,9 +92,12 @@ export default defineConfig({
       },
     }),
     bearstudioTypedRoutes(),
+    astroAssetsGeneration(),
   ],
 
   vite: {
     plugins: [tailwindcss()],
   },
+
+  adapter,
 });

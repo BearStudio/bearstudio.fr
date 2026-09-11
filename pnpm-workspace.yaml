@@ -1,4 +1,10 @@
 packages: []
+# Hoist takumi (native OG-image renderer) into the top-level node_modules so the
+# built server output in .vercel/output — which lives outside pnpm's .pnpm store —
+# can resolve @takumi-rs/* and its native .node binding during Vercel's nft tracing
+# and at runtime. Without this, Vercel fails with "Cannot find native binding".
+publicHoistPattern:
+  - '@takumi-rs/*'
 allowBuilds:
   esbuild: true
   lefthook: true
