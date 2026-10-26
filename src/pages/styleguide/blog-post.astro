@@ -1,0 +1,358 @@
+---
+import { LuCalendar, LuImage, LuLayoutDashboard, LuType } from 'react-icons/lu';
+import { PiStarFill, PiStarHalfFill } from 'react-icons/pi';
+
+import FeatureCard from '@/components/blog-post/feature-card.astro';
+import { PhoneCarousel } from '@/components/blog-post/phone-carousel';
+import RoleCard from '@/components/blog-post/role-card.astro';
+import ScratchSection from '@/components/blog-post/scratch-section.astro';
+import StatCard from '@/components/blog-post/stat-card.astro';
+import TestimonialCard from '@/components/blog-post/testimonial-card.astro';
+import TestimonialList from '@/components/blog-post/testimonial-list.astro';
+import TwoColumns from '@/components/blog-post/two-columns.astro';
+import RootLayout from '@/layouts/root-layout.astro';
+---
+
+<RootLayout>
+  <div class="container mx-auto flex flex-col gap-12 p-8">
+    <div class="flex flex-col gap-1">
+      <a href="/styleguide" class="text-sm text-neutral-500 hover:underline"
+        >← Styleguide</a
+      >
+      <h1 class="font-heading text-4xl font-bold">Blog Post Components</h1>
+    </div>
+
+    <!-- Two Columns -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Two Columns</h2>
+
+      <p class="text-sm text-neutral-500">1/2 + 1/2 (défaut)</p>
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <TwoColumns>
+          <div slot="left" class="flex flex-col gap-2">
+            <p class="font-heading text-lg font-semibold">Colonne texte</p>
+            <p class="text-sm text-neutral-600">
+              Un paragraphe d'explication ou de description pour accompagner
+              l'illustration à droite.
+            </p>
+          </div>
+          <div
+            slot="right"
+            class="flex aspect-video w-full items-center justify-center rounded-lg bg-neutral-100 text-sm text-neutral-400"
+          >
+            Illustration
+          </div>
+        </TwoColumns>
+      </div>
+
+      <p class="text-sm text-neutral-500">
+        1/3 texte + 2/3 illustration, alignement centré
+      </p>
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <TwoColumns leftRatio="1/3" align="center">
+          <div slot="left" class="flex flex-col gap-2">
+            <p class="font-heading text-lg font-semibold">Texte étroit</p>
+            <p class="text-sm text-neutral-600">
+              Illustration dominante sur la droite.
+            </p>
+          </div>
+          <div
+            slot="right"
+            class="flex aspect-video w-full items-center justify-center rounded-lg bg-neutral-100 text-sm text-neutral-400"
+          >
+            Grande illustration
+          </div>
+        </TwoColumns>
+      </div>
+
+      <p class="text-sm text-neutral-500">
+        2/3 texte + 1/3 illustration, inversé (illustration à gauche)
+      </p>
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <TwoColumns leftRatio="2/3" reverse align="center">
+          <div slot="left" class="flex flex-col gap-2">
+            <p class="font-heading text-lg font-semibold">Texte dominant</p>
+            <p class="text-sm text-neutral-600">
+              L'illustration est visuellement à gauche grâce à <code
+                >reverse</code
+              >, mais le slot reste <code>right</code> dans le markup.
+            </p>
+          </div>
+          <div
+            slot="right"
+            class="flex aspect-square w-full items-center justify-center rounded-lg bg-neutral-100 text-sm text-neutral-400"
+          >
+            Miniature
+          </div>
+        </TwoColumns>
+      </div>
+
+      <p class="text-sm text-neutral-500">Sur fond sombre</p>
+      <div class="bg-foreground rounded-xl border border-neutral-200 p-8">
+        <TwoColumns align="center">
+          <div slot="left" class="flex flex-col gap-2">
+            <p class="font-heading text-brand-100 text-lg font-semibold">
+              Colonne texte
+            </p>
+            <p class="text-brand-300 text-sm">
+              Un paragraphe d'explication ou de description pour accompagner
+              l'illustration à droite.
+            </p>
+          </div>
+          <div
+            slot="right"
+            class="bg-brand-700 text-brand-400 flex aspect-video w-full items-center justify-center rounded-lg text-sm"
+          >
+            Illustration
+          </div>
+        </TwoColumns>
+      </div>
+    </div>
+
+    <!-- Phone Carousel -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Phone Carousel</h2>
+
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <PhoneCarousel
+          client:load
+          slides={[
+            {
+              src: 'https://placehold.co/440x956/e2e8f0/94a3b8?text=Screen+1',
+              alt: 'Écran 1',
+            },
+            {
+              src: 'https://placehold.co/440x956/dbeafe/60a5fa?text=Screen+2',
+              alt: 'Écran 2',
+            },
+            {
+              src: 'https://placehold.co/440x956/dcfce7/4ade80?text=Screen+3',
+              alt: 'Écran 3',
+            },
+          ]}
+        />
+      </div>
+
+      <div class="bg-foreground rounded-xl border border-neutral-200 p-8">
+        <PhoneCarousel
+          client:load
+          dark
+          slides={[
+            {
+              src: 'https://placehold.co/440x956/e2e8f0/94a3b8?text=Screen+1',
+              alt: 'Écran 1',
+            },
+            {
+              src: 'https://placehold.co/440x956/dbeafe/60a5fa?text=Screen+2',
+              alt: 'Écran 2',
+            },
+            {
+              src: 'https://placehold.co/440x956/dcfce7/4ade80?text=Screen+3',
+              alt: 'Écran 3',
+            },
+          ]}
+        />
+      </div>
+    </div>
+
+    <!-- Scratch Section -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Scratch Section</h2>
+    </div>
+
+    <ScratchSection>
+      <p class="font-heading text-brand-100 text-2xl font-semibold">
+        Titre de section
+      </p>
+      <p class="text-brand-300 mt-2 text-sm">
+        Contenu de la section sur fond sombre avec déchirures en haut et en bas.
+      </p>
+    </ScratchSection>
+
+    <!-- Role Card -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Role Card</h2>
+
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <RoleCard
+          icon={LuLayoutDashboard}
+          role="Product Design"
+          description="Notre équipe a participé à la conception de l'expérience mobile à partir de l'analyse des besoins utilisateurs. Et participe également à la structuration des parcours et réalisation de prototypes basse et haute fidélité, avec des itérations pour valider les choix de conception."
+          tags={['Figma', 'UX/UI', 'Maquettes']}
+          team={[
+            { name: 'Ivan D.', title: 'Lead Designer UX/UI', url: '#' },
+            { name: 'Daryl A.', title: 'UX/UI Designer', url: '#' },
+            { name: 'Dorian D.', title: 'UX/UI Designer' },
+          ]}
+        >
+          <div slot="visual" class="h-full w-full overflow-hidden rounded-md">
+            <img
+              src="https://placehold.co/800x500/1a3a42/4a9aaa?text=Illustration"
+              class="h-full w-full rounded-md object-cover"
+              alt=""
+            />
+          </div>
+        </RoleCard>
+      </div>
+    </div>
+
+    <!-- Feature Card -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Feature Card</h2>
+
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <div class="grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-2">
+          <FeatureCard
+            icon={LuCalendar}
+            title="Âge présent mais secondaire"
+            content="Visible, sans voler l'attention"
+          />
+          <FeatureCard
+            icon={LuType}
+            title="Titre optimisé"
+            content="Typographie, espace, nombre de lignes soigneusement pensés"
+          />
+          <FeatureCard
+            icon={LuImage}
+            title="Image dominante"
+            content="L'œil décide d'abord par le visuel, un parti pris rendu évident par la richesse et la qualité exceptionnelle des photos"
+          />
+        </div>
+      </div>
+      <div class="bg-foreground rounded-xl border border-neutral-200 p-8">
+        <div class="grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-2">
+          <FeatureCard
+            icon={LuCalendar}
+            title="Âge présent mais secondaire"
+            content="Visible, sans voler l'attention"
+          />
+          <FeatureCard
+            icon={LuType}
+            title="Titre optimisé"
+            content="Typographie, espace, nombre de lignes soigneusement pensés"
+          />
+          <FeatureCard
+            icon={LuImage}
+            title="Image dominante"
+            content="L'œil décide d'abord par le visuel, un parti pris rendu évident par la richesse et la qualité exceptionnelle des photos"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Stat Card -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Stat Card</h2>
+
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <div class="grid max-w-xl grid-cols-2 gap-4">
+          <StatCard value="4,8" label="1,1k notes">
+            <PiStarFill slot="visual" />
+          </StatCard>
+          <StatCard
+            value="+ 500 k"
+            title="Téléchargements"
+            label="Sur iOS & Android"
+          />
+          <StatCard
+            value="N°2"
+            title="Alimentation & Boissons"
+            label="Classement Google Play"
+          />
+          <StatCard
+            value="N°16"
+            title="Cuisine & Boissons"
+            label="Classement App Store"
+          />
+        </div>
+      </div>
+
+      <div class="bg-foreground rounded-xl border border-neutral-200 p-8">
+        <div class="grid max-w-xl grid-cols-2 gap-4">
+          <StatCard value="4,8" label="1,1k notes">
+            <Fragment slot="visual">
+              <PiStarFill />
+              <PiStarFill />
+              <PiStarFill />
+              <PiStarFill />
+              <PiStarHalfFill />
+            </Fragment>
+          </StatCard>
+          <StatCard
+            value="+ 500 k"
+            title="Téléchargements"
+            label="Sur iOS & Android"
+          />
+          <StatCard
+            value="N°2"
+            title="Alimentation & Boissons"
+            label="Classement Google Play"
+          />
+          <StatCard
+            value="N°16"
+            title="Cuisine & Boissons"
+            label="Classement App Store"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial Card -->
+
+    <div class="flex flex-col gap-4">
+      <h2 class="font-heading text-xl font-bold">Testimonial Card</h2>
+
+      <div class="rounded-xl border border-neutral-200 p-8">
+        <TestimonialList>
+          <TestimonialCard
+            person={{ name: 'Sara Cookies' }}
+            date="23/05/2025"
+            rating={5}
+            content="Très contente de cette application qui est très complète pour la diversification de mon bébé."
+          />
+          <TestimonialCard
+            person={{ name: 'Marc Dupont' }}
+            date="14/03/2025"
+            rating={4}
+            content="Très bonne application, les recettes sont variées et bien expliquées. Je recommande !"
+          />
+          <TestimonialCard
+            person={{ name: 'Julie M.' }}
+            date="01/01/2025"
+            rating={5}
+            content="Super application, je l'utilise tous les jours pour mes enfants."
+          />
+        </TestimonialList>
+      </div>
+
+      <div class="bg-foreground rounded-xl border border-neutral-200 p-8">
+        <TestimonialList>
+          <TestimonialCard
+            person={{ name: 'Sara Cookies' }}
+            date="23/05/2025"
+            rating={5}
+            content="Très contente de cette application qui est très complète pour la diversification de mon bébé."
+          />
+          <TestimonialCard
+            person={{ name: 'Marc Dupont' }}
+            date="14/03/2025"
+            rating={4}
+            content="Très bonne application, les recettes sont variées et bien expliquées. Je recommande !"
+          />
+          <TestimonialCard
+            person={{ name: 'Julie M.' }}
+            date="01/01/2025"
+            rating={5}
+            content="Super application, je l'utilise tous les jours pour mes enfants."
+          />
+        </TestimonialList>
+      </div>
+    </div>
+  </div>
+</RootLayout>
