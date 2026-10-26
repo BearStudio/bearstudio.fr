@@ -22,4 +22,5 @@ export const zConferenceInstance = () =>
     language: z.string().optional(),
     speakers: z.array(reference('people')).optional(),
     replay: z.url().optional(),
+    event: reference('events').optional(),
   });

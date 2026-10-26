@@ -2,6 +2,7 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 import { isNonNullish } from 'remeda';
 
+import type { EventWithComputed } from '@/lib/events';
 import type { PersonWithComputed } from '@/lib/people';
 import type { Locale } from '@/i18n/utils';
 
@@ -79,6 +80,21 @@ export const conferenceWithComputed = (
   };
 };
 
+export async function getConferencesCollectionByEvent(params: {
+  locale: Locale;
+  limit?: number | undefined;
+  event: EventWithComputed;
+}) {
+  return (await getConferencesCollection(params))
+    .filter((item) =>
+      (item.data?.instances ?? []).some(
+        (conference) =>
+          params.event.data._computed.slug === conference.event?.id
+      )
+    )
+    .filter(isNonNullish);
+}
+
 export async function getConferencesCollectionByPerson(params: {
   locale: Locale;
   limit?: number | undefined;
@@ -94,4 +110,53 @@ export async function getConferencesCollectionByPerson(params: {
       )
     )
     .filter(isNonNullish);
+}
+
+export async function getTwitchConferencesCollection(params: {
+  locale: Locale;
+  limit?: number | undefined;
+}) {
+  return (
+    (await getConferencesCollection(params))
+      .filter((item) =>
+        (item.data?.instances ?? []).find(
+          (conference) => conference.name === 'Twitch'
+        )
+      )
+      // Code dupliqué de la ligne 23, un util à faire
+      .sort((a, b) => {
+        const now = new Date();
+
+        // Get the closest instance date for each conference
+        const getClosestDate = (conference: ConferenceWithComputed) => {
+          const instances = conference.data.instances ?? [];
+          if (instances.length === 0) return null;
+
+          // Find the instance with the date closest to now (including past dates)
+          return instances.reduce((closest, instance) => {
+            const instanceTime = Math.abs(
+              now.getTime() - instance.date.getTime()
+            );
+            const closestTime = Math.abs(
+              now.getTime() - closest.date.getTime()
+            );
+            return instanceTime < closestTime ? instance : closest;
+          }).date;
+        };
+
+        const dateA = getClosestDate(a);
+        const dateB = getClosestDate(b);
+
+        // Conferences without dates go to the end
+        if (!dateA && !dateB) return 0;
+        if (!dateA) return 1;
+        if (!dateB) return -1;
+
+        // Sort by closest to now (smallest absolute difference from now)
+        const diffA = Math.abs(now.getTime() - dateA.getTime());
+        const diffB = Math.abs(now.getTime() - dateB.getTime());
+        return diffA - diffB;
+      })
+      .filter(isNonNullish)
+  );
 }

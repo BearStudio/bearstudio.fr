@@ -1,0 +1,50 @@
+---
+import { getTwitchConferencesCollection } from '@/lib/conferences';
+import { breadcrumbEntries } from '@/components/breadcrumb/utils';
+import Container from '@/components/container.astro';
+import HeroContent from '@/components/hero/hero-content.astro';
+import Hero from '@/components/hero/hero.astro';
+import SEO from '@/components/seo/index.astro';
+import { getAlternates } from '@/components/seo/utils';
+import { getTranslationFn, parseAstroLocale } from '@/i18n/utils';
+import MainLayout from '@/layouts/main-layout.astro';
+
+const locale = parseAstroLocale(Astro.currentLocale);
+const t = getTranslationFn(locale);
+
+const events = await getTwitchConferencesCollection({
+  locale,
+});
+
+const breadcrumb = breadcrumbEntries(locale)((entry) => [
+  entry({
+    label: t('events.root.breadcrumb'),
+    path: '/fr/streams',
+    params: {},
+  }),
+]);
+---
+
+<MainLayout>
+  <SEO
+    slot="seo"
+    title="Streams"
+    description="Description temporaire"
+    alternates={getAlternates('/fr/streams', {})}
+    breadcrumb={breadcrumb}
+  />
+
+  <Hero>
+    <HeroContent
+      breadcrumb={breadcrumb}
+      title={t('team.root.title')}
+      description={t('team.root.description')}
+    />
+  </Hero>
+
+  <Container class="gap-12">
+    <ul>
+      {events.map((event) => <li>{event.data.title}</li>)}
+    </ul>
+  </Container>
+</MainLayout>
