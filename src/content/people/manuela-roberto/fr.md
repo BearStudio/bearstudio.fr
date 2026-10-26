@@ -5,8 +5,7 @@ job: 'Office Manager'
 socials:
   - type: 'linkedin'
     href: https://www.linkedin.com/in/manuelaroberto?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
-status: 'current'
-hidden: false
+status: 'former'
 order: 85
 ---
 
